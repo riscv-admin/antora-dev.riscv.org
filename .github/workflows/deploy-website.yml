@@ -65,7 +65,7 @@ jobs:
         path: ./antora/build/
     - name: Deploy to GitHub Pages
       # run: yarn deploy
-      #uses: JamesIves/github-pages-deploy-action@v4
-      uses: actions/deploy-pages@v4
-      #with:
-      #  folder: antora/build # The folder the action should deploy.
+      uses: JamesIves/github-pages-deploy-action@v4
+      #uses: actions/deploy-pages@v4
+      with:
+        folder: antora/build # The folder the action should deploy.
