@@ -133,4 +133,5 @@ ui:
     contents: |
       static_files:
       - .nojekyll
+      - index.html
   - path: .nojekyll
