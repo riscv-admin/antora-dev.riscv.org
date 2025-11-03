@@ -66,4 +66,4 @@ jobs:
       if: ${{ always() }}
       with:
         name: Portal Snapshot
-        path: ./antora/build/reference/isa/
+        path: ./antora/build/
