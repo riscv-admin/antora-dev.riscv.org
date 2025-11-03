@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://docs.riscv.org/isa/v20240411/priv/svnapot.html">
-    <link rel="prev" href="supervisor.html">
-    <link rel="next" href="svpbmt.html">
-    <meta name="generator" content="Antora 3.1.14">
+    <title>RISC-V Reference Library :: RISC-V Ratified Specifications Library</title>
+    <link rel="canonical" href="https://docs.riscv.org/isa/index.html">
+    <link rel="next" href="unpriv/unpriv-index.html">
+    <meta name="generator" content="Antora 3.1.9">
     <script>
 !function (theme, navWidth) {
   if (theme === 'dark') document.documentElement.classList.add('dark-theme')
@@ -15,23 +14,23 @@
 }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
   localStorage && localStorage.getItem('nav-width'))
     </script>
-    <link rel="stylesheet" href="../../../_/css/site.css">
-    <link rel="stylesheet" href="../../../_/css/vendor/search.css">
-    <link rel="stylesheet" href="../../../_/css/vendor/page-search.css">
-    <link rel="stylesheet" href="../../../_/css/vendor/spring-tabs.css">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="322bc7dc884b3bc5f7b8c1391acd37f46892136a"> 
-    <meta name="version" content="v20240411">
+    <meta name="antora-ui-version" content="ebd6ea7cf24b107680a01d74adf1d29475ad44d4">
+    <meta name="version" content="v20250508">
     <meta name="component" content="isa">
-    <meta name="latest-version" content="false">
-    <link rel="icon" href="../../../_/img/favicon.ico" type="image/vnd.microsoft.icon">
+    <meta name="latest-version" content="true">
+    <link rel="icon" href="../_/img/favicon.ico" type="image/vnd.microsoft.icon">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img id="riscvlogo" src="../../../_/img/risc-v_logo.svg" alt="RISCV" />
+        <img id="riscvlogo" src="../_/img/risc-v_logo.svg" alt="RISCV" />
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -271,150 +270,147 @@
     }
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script><div class="body">
-<div class="nav-container" data-component="isa" data-version="v20240411">
+<div class="nav-container" data-component="isa" data-version="v20250508">
   <aside class="nav">
     <div class="panels">
       <div class="nav-panel-menu is-active" data-panel="menu">
         <nav class="nav-menu">
 <div class="context">
   <span class="title">ISA Specifications</span>
-  <button class="version" id="browse-version">Version: 20240411</button>
+  <button class="version" id="browse-version">Latest</button>
 </div><ul class="nav-list">
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/unpriv-index.html">Unprivileged Architecture</a>
+    <a class="nav-link"  href="unpriv/unpriv-index.html">Unprivileged Architecture</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/unpriv-contributors.html">Preamble</a>
+    <a class="nav-link"  href="unpriv/unpriv-contributors.html">Preamble</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/colophon.html">Preface</a>
+    <a class="nav-link"  href="unpriv/colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="unpriv/intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv32.html#sec:rv32">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="unpriv/rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv32e.html#sec:rv32e">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+    <a class="nav-link"  href="unpriv/rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv64.html">Chapter 4.RV64I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="unpriv/rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv128.html">Chapter 5. RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="unpriv/zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zifencei.html">Chapter 6. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+    <a class="nav-link"  href="unpriv/zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zicsr.html#zicsr">Chapter 7."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="unpriv/counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/counters.html#sec:counters">Chapter 8. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+    <a class="nav-link"  href="unpriv/zihintntl.html">Chapter 8. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zihintntl.html">Chapter 9. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+    <a class="nav-link"  href="unpriv/zihintpause.html">Chapter 9. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zihintpause.html">Chapter 10. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
+    <a class="nav-link"  href="unpriv/zimop.html">Chapter 10. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zimop.html">Chapter 11. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
+    <a class="nav-link"  href="unpriv/zicond.html">Chapter 11. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zicond.html">Chapter 12. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+    <a class="nav-link"  href="unpriv/m-st-ext.html">Chapter 12. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/m-st-ext.html">Chapter 13. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
+    <a class="nav-link"  href="unpriv/a-st-ext.html">Chapter 13. "A" Extension for Atomic Instructions, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/a-st-ext.html">Chapter 14. "A" Extension for Atomic Instructions, Version 2.1</a>
+    <a class="nav-link"  href="unpriv/zawrs.html">Chapter 14. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zawrs.html">Chapter 15. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+    <a class="nav-link"  href="unpriv/zacas.html">Chapter 15. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zacas.html">Chapter 16. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+    <a class="nav-link"  href="unpriv/zabha.html">Chapter 16. "Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
+    <a class="nav-link"  href="unpriv/rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
+    <a class="nav-link"  href="unpriv/ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+    <a class="nav-link"  href="unpriv/cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="unpriv/f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="unpriv/d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="unpriv/q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="unpriv/zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zfa.html">Chapter 24. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+    <a class="nav-link"  href="unpriv/bfloat16.html">Chapter 24. "BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zfinx.html">Chapter 25. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+    <a class="nav-link"  href="unpriv/zfa.html">Chapter 25. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/c-st-ext.html">Chapter 26. "C" Extension for Compressed Instructions, Version 2.0</a>
+    <a class="nav-link"  href="unpriv/zfinx.html">Chapter 26. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zc.html">Chapter 27. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+    <a class="nav-link"  href="unpriv/c-st-ext.html">Chapter 27. "C" Extension for Compressed Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/b-st-ext.html">Chapter 28. "B" Extension for Bit Manipulation, Version 1.0.0</a>
+    <a class="nav-link"  href="unpriv/zc.html">Chapter 28. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/j-st-ext.html">Chapter 29. "J" Extension for Dynamically Translated Languages, Version 1.0.0</a>
+    <a class="nav-link"  href="unpriv/b-st-ext.html">Chapter 29. "B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/p-st-ext.html">Chapter 30. "P" Extension for Packed SIMD Instructions, Version 1.0.0</a>
+    <a class="nav-link"  href="unpriv/v-st-ext.html">Chapter 30. "V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/v-st-ext.html">Chapter 31. "V" Standard Extension for Vector Operations, Version 1.0</a>
+    <a class="nav-link"  href="unpriv/scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/scalar-crypto.html">Chapter 32. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+    <a class="nav-link"  href="unpriv/vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/vector-crypto.html">Chapter 33.Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="unpriv/unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="unpriv/rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
+    <a class="nav-link"  href="unpriv/extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="unpriv/naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/history.html">Chapter 37. Document Revision History</a>
+    <a class="nav-link"  href="unpriv/history.html">Chapter 37. Document Revision History</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="unpriv/mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
+    <a class="nav-link"  href="unpriv/mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/vector-examples.html">Appendix C: Vector Assembly Code Examples</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/calling-convention.html">Appendix D: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="unpriv/calling-convention.html">Appendix C: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -423,73 +419,73 @@
     <span class="nav-text">Volume II: RISC-V Privileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-index.html">Privileged Architecture</a>
+    <a class="nav-link"  href="priv/priv-index.html">Privileged Architecture</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-contributors.html">Preamble</a>
+    <a class="nav-link"  href="priv/priv-contributors.html">Preamble</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-preface.html">Preface</a>
+    <a class="nav-link"  href="priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-intro.html">Introduction</a>
+    <a class="nav-link"  href="priv/priv-intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-csrs.html">Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="machine.html">Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="priv/machine.html">Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="priv/smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smepmp.html">"Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link"  href="priv/smepmp.html">"Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="supervisor.html">Supervisor-Level ISA, Version 1.13</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="svnapot.html">"Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a>
+    <a class="nav-link"  href="priv/smdbltrp.html">"Smdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="svpbmt.html">"Svpbmt" Extension for Page-Based Memory Types, Version 1.0</a>
+    <a class="nav-link"  href="priv/smctr.html">"Smctr" Control Transfer Records Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="svinval.html">"Svinval" Extension for Fine-Grained Address-Translation Cache Invalidation, Version 1.0</a>
+    <a class="nav-link"  href="priv/supervisor.html">Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="svadu.html">"Svadu" Extension for Hardware Updating of A/D Bits, Version 1.0</a>
+    <a class="nav-link"  href="priv/sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="svvptc.html">"Svvptc" Extension for Obviating Memory-Management Instructions after Marking PTEs Valid, Version 1.0</a>
+    <a class="nav-link"  href="priv/sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="priv/ssdbltrp.html">"Ssdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link"  href="priv/zpm.html">Pointer Masking Extensions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-history.html">History</a>
+    <a class="nav-link"  href="priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="priv/priv-history.html">History</a>
   </li>
 </ul>
   </li>
@@ -498,7 +494,7 @@
     <span class="nav-text">Bibliography</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../biblio/bibliography.html">Bibliography</a>
+    <a class="nav-link"  href="biblio/bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -509,7 +505,7 @@
         </nav>
       </div>
       <div class="nav-collapse">
-        <button id="nav-collapse-toggle"><span></span></button>        
+        <button id="nav-collapse-toggle"><span></span></button>
       </div>
     </div>
     <div class="nav-resize"></div>
@@ -530,7 +526,7 @@
   <div class="content">
     <div
       class="toc"
-      data-title=""
+      data-title="RISC-V Reference Library"
       data-levels="5"
     >
       <div class="toc-menu"></div>
@@ -555,8 +551,8 @@
             version="1.1"
             viewBox="0 0 512 512"
             width="512px"
-          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
-              ]]></style><g><path
+          ><style type="text/css"> .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              </style><g><path
                 class="st0"
                 d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
               ></path></g></svg>
@@ -571,8 +567,8 @@
             </svg>
           </a>
           <ul id="pdfDropdownMenu" class="dropdown-menu" hidden>
-              <li style="padding-left: 0px;"><a href="../v20240411/_attachments/riscv-unprivileged.pdf" class="dropdown-item" target="_blank" rel="noopener noreferrer" style="color: #003262;" download>Unprivileged ISA</a></li>
-              <li style="padding-left: 0px;"><a href="..//v20240411/_attachments/riscv-privileged.pdf" class="dropdown-item" target="_blank" rel="noopener noreferrer" style="color: #003262;" download>Privileged ISA</a></li>
+              <li style="padding-left: 0px;"><a href="https://docs.riscv.org/reference/isa/_attachments/riscv-unprivileged.pdf" class="dropdown-item" target="_blank" rel="noopener noreferrer" style="color: #003262;" download>Unprivileged ISA</a></li>
+              <li style="padding-left: 0px;"><a href="https://docs.riscv.org/reference/isa/_attachments/riscv-privileged.pdf" class="dropdown-item" target="_blank" rel="noopener noreferrer" style="color: #003262;" download>Privileged ISA</a></li>
           </ul>
         </div>
        <script>
@@ -614,253 +610,40 @@
 <div class="breadcrumbs-container">
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
-      <li><a href="../index.html">ISA Specifications</a></li>
-      <li>Volume II: RISC-V Privileged ISA Specification</li>
-      <li><a href="svnapot.html">"Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a></li>
+      <li><a href="index.html">ISA Specifications</a></li>
+      <li><a href="index.html">RISC-V Reference Library</a></li>
     </ul>
   </nav>
-</div><div class="admonitionblock important latest">
-  <table>
-    <tbody><tr>
-      <td class="icon">
-        <i class="fa icon-important" title="Important"></i>
-      </td>
-      <td class="content">
-        <div class="paragraph">
-          <p> For the latest stable version, please use <a href="../../index.html">ISA Specifications Latest</a>!</p>
-        </div>
-      </td>
-    </tr></tbody>
-  </table>
-</div>
-<div class="sect1">
-<h2 id="svnapot"><a class="anchor" href="#svnapot"></a>1. "Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</h2>
+</div><h1 id="page-title" class="page">RISC-V Reference Library</h1>
+<div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>In Sv39, Sv48, and Sv57, when a PTE has N=1, the PTE represents a
-translation that is part of a range of contiguous virtual-to-physical
-translations with the same values for PTE bits 5–0. Such ranges must be
-of a naturally aligned power-of-2 (NAPOT) granularity larger than the
-base page size.</p>
+<div id="riscvlogo" class="imageblock text-left">
+<div class="content">
+<img src="_images/risc-v_logo.svg" alt="RISCV" width="xs">
 </div>
-<div class="paragraph">
-<p>The Svnapot extension depends on Sv39.</p>
 </div>
-<table id="ptenapot" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 1. Page table entry encodings when <em>pte</em>.N=1</caption>
-<colgroup>
-<col>
-<col>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-center valign-top">i</th>
-<th class="tableblock halign-center valign-top"><em>pte</em>.<em>ppn</em>[<em>i</em>]</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-center valign-top"><em>pte</em>.<em>napot_bits</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">0<br>
-0<br>
-0<br>
-0<br>
-0<br>
-&#8805;1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>x xxxx xxx1</code><br>
-<code>x xxxx xx1x</code><br>
-<code>x xxxx x1xx</code><br>
-<code>x xxxx 1000</code><br>
-<code>x xxxx 0xxx</code><br>
-<code>x xxxx xxxx</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Reserved</em><br>
-<em>Reserved</em><br>
-<em>Reserved</em><br>
-64 KiB contiguous region<br>
-<em>Reserved</em><br>
-<em>Reserved</em></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">-<br>
--<br>
--<br>
-4<br>
--<br>
--</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>NAPOT PTEs behave identically to non-NAPOT PTEs within the
-address-translation algorithm in <a href="supervisor.html#sv32algorithm," class="xref page">Virtual Address Translation Process</a>
-except that:</p>
-</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">RISC-V ISA Manuals</div>
 <div class="ulist">
 <ul>
 <li>
-<p>If the encoding in <em>pte</em> is valid according to
-<a href="#ptenapot">Page table entry encodings when <em>pte</em>.N=1</a>, then instead of returning the original
-value of <em>pte</em>, implicit reads of a NAPOT PTE return a copy
-of <em>pte</em> in which <em>pte</em>.<em>ppn</em>[<em>i</em>][<em>pte</em>.<em>napot_bits</em>-1:0] is replaced by
-<em>vpn</em>[<em>i</em>][<em>pte</em>.<em>napot_bits</em>-1:0]. If the encoding in <em>pte</em> is reserved according to
-<a href="#ptenapot">Page table entry encodings when <em>pte</em>.N=1</a>, then a page-fault exception must be raised.</p>
+<p><a href="unpriv/unpriv-index.html" class="xref page">Volume I: Unprivileged Architecture</a></p>
 </li>
 <li>
-<p>Implicit reads of NAPOT page table entries may create
-address-translation cache entries mapping
-<em>a</em> + <em>j</em>×PTESIZE to a copy of <em>pte</em> in which <em>pte</em>.<em>ppn</em>[<em>i</em>][<em>pte</em>.<em>napot_bits</em>-1:0]
-is replaced by <em>vpn[i][pte.napot_bits</em>-1:0], for any or all <em>j</em> such that
-<em>j</em> &gt;&gt; <em>napot_bits</em> = <em>vpn</em>[<em>i</em>] &gt;&gt; <em>napot_bits</em>, all for the address space identified in <em>satp</em> as loaded by step 1.</p>
+<p><a href="priv/priv-index.html" class="xref page">Volume II: Privileged Architecture</a></p>
+</li>
+<li>
+<p><a href="biblio/bibliography.html" class="xref page">Bibliography</a></p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The motivation for a NAPOT PTE is that it can be cached in a TLB as one
-or more entries representing the contiguous region as if it were a
-single (large) page covered by a single translation. This compaction can
-help relieve TLB pressure in some scenarios. The encoding is designed to
-fit within the pre-existing Sv39, Sv48, and Sv57 PTE formats so as not
-to disrupt existing implementations or designs that choose not to
-implement the scheme. It is also designed so as not to complicate the
-definition of the address-translation algorithm.</p>
 </div>
-<div class="paragraph">
-<p>The address translation cache abstraction captures the behavior that
-would result from the creation of a single TLB entry covering the entire
-NAPOT region. It is also designed to be consistent with implementations
-that support NAPOT PTEs by splitting the NAPOT region into TLB entries
-covering any smaller power-of-two region sizes. For example, a 64 KiB
-NAPOT PTE might trigger the creation of 16 standard 4 KiB TLB entries,
-all with contents generated from the NAPOT PTE (even if the PTEs for the
-other 4 KiB regions have different contents).</p>
-</div>
-<div class="paragraph">
-<p>In typical usage scenarios, NAPOT PTEs in the same region will have the
-same attributes, same PPNs, and same values for bits 5-0. RSW remains
-reserved for supervisor software control. It is the responsibility of
-the OS and/or hypervisor to configure the page tables in such a way that
-there are no inconsistencies between NAPOT PTEs and other NAPOT or
-non-NAPOT PTEs that overlap the same address range. If an update needs
-to be made, the OS generally should first mark all of the PTEs invalid,
-then issue SFENCE.VMA instruction(s) covering all 4 KiB regions within
-the range (either via a single SFENCE.VMA with <em>rs1</em>=<code>x0</code>, or with
-multiple SFENCE.VMA instructions with <em>rs1</em>≠<code>x0</code>), then update the PTE(s), as described in <a href="supervisor.html#sfence.vma" class="xref page">Supervisor Memory-Management Fence Instruction</a>, unless any inconsistencies are known to be benign. If any inconsistencies do exist, then the effect is the same as when SFENCE.VMA
-is used incorrectly: one of the translations will be chosen, but the
-choice is unpredictable.</p>
-</div>
-<div class="paragraph">
-<p>If an implementation chooses to use a NAPOT PTE (or cached version
-thereof), it might not consult the PTE directly specified by the
-algorithm in <a href="supervisor.html#sv32algorithm" class="xref page">Virtual Address Translation Process</a> at all. Therefore, the D
-and A bits may not be identical across all mappings of the same address
-range even in typical use cases The operating system must query all
-NAPOT aliases of a page to determine whether that page has been accessed
-and/or is dirty. If the OS manually sets the A and/or D bits for a page,
-it is recommended that the OS also set the A and/or D bits for other
-NAPOT aliases as appropriate in order to avoid unnecessary traps.</p>
-</div>
-<div class="paragraph">
-<p>Just as with normal PTEs, TLBs are permitted to cache NAPOT PTEs whose V
-(Valid) bit is clear.</p>
-</div>
-<div class="paragraph">
-<p>Depending on need, the NAPOT scheme may be extended to other
-intermediate page sizes and/or to other levels of the page table in the
-future. The encoding is designed to accommodate other NAPOT sizes should
-that need arise. For example:</p>
-</div>
-<div class="paragraph">
-<p>__</p>
-</div>
-<table class="tableblock frame-all grid-all fit-content center">
-<colgroup>
-<col>
-<col>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-center valign-top">i</th>
-<th class="tableblock halign-center valign-top"><em>pte</em>.<em>ppn</em>[<em>i</em>]</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-center valign-top"><em>pte</em>.<em>napot_bits</em></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">0<br>
-0<br>
-0<br>
-0<br>
-0<br>
-&#8230;&#8203;<br>
-1<br>
-1<br>
-&#8230;&#8203;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>x xxxx xxx1</code><br>
-<code>x xxxx xx10</code><br>
-<code>x xxxx x100</code><br>
-<code>x xxxx 1000</code><br>
-<code>x xxx1 0000</code><br>
-&#8230;&#8203;<br>
-<code>x xxxx xxx1</code><br>
-<code>x xxxx xx10</code><br>
-&#8230;&#8203;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">8 KiB contiguous region<br>
-16 KiB contiguous region<br>
-32 KiB contiguous region<br>
-64 KiB contiguous region<br>
-128 KiB contiguous region<br>
-&#8230;&#8203;<br>
-4 MiB contiguous region<br>
-8 MiB contiguous region<br>
-&#8230;&#8203;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">1<br>
-2<br>
-3<br>
-4<br>
-5<br>
-&#8230;&#8203;<br>
-1<br>
-2<br>
-&#8230;&#8203;</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>In such a case, an implementation may or may not support all options.
-The discoverability mechanism for this extension would be extended to
-allow system software to determine which sizes are supported.</p>
-</div>
-<div class="paragraph">
-<p>Other sizes may remain deliberately excluded, so that PPN bits not being
-used to indicate a valid NAPOT region size (e.g., the least-significant
-bit of <em>pte</em>.<em>ppn</em>[<em>i</em>]) may be repurposed for other uses in the
-future.</p>
-</div>
-<div class="paragraph">
-<p>However, in case finer-grained intermediate page size support proves not
-to be useful, we have chosen to standardize only 64 KiB support as a
-first step.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="supervisor.html">Supervisor-Level ISA, Version 1.13</a></span>
-  <span class="next"><a href="svpbmt.html">"Svpbmt" Extension for Page-Based Memory Types, Version 1.0</a></span>
+  <span class="next"><a href="unpriv/unpriv-index.html">Unprivileged Architecture</a></span>
 </nav>
 </article>  </div>
 </main>
@@ -874,7 +657,7 @@ first step.</p>
                   <ul class="nav-versions">
                       <li class="component">
                         <div>
-                          <a class="title" href="../../index.html">ISA Specifications</a>
+                          <a class="title" href="index.html">ISA Specifications</a>
                         </div>                        <div class="version-item is-active">
                           <div>
                             <button class="version-toggle" type="button">
@@ -884,12 +667,12 @@ first step.</p>
                           </div>
                           <ul class="versions">
   <li class="version">
-    <a href="../../index.html">
+    <a href="index.html">
       Latest
     </a>
   </li>
   <li class="version">
-    <a href="svnapot.html">
+    <a href="v20240411/index.html">
       Version: 20240411
     </a>
   </li>
@@ -906,18 +689,18 @@ first step.</p>
     <div id="RISC-V footer">
         <p class="smallest antialiased">Copyright © 2025 - <script>var d = new Date();
         document.write(d.getFullYear());</script> This document is released under a Creative Commons Attribution 4.0 International License.<span id="teconsent"></span></p>
-    
+
     </div>
 
 </footer>
-<script src="../../../_/js/vendor/import.js"></script>
-<script src="../../../_/js/site.js"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
 <script async
-    src="../../../_/js/vendor/spring-tabs.js"
+    src="../_/js/vendor/spring-tabs.js"
     data-sync-storage-key="docs:preferred-tab"></script>
-<script src="../../../_/js/vendor/lunr.js"></script>
-<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
-<script async src="../../../search-index.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
   </body>
 </html>
