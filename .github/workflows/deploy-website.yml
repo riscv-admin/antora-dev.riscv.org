@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   deploy:
-    concurrency: ci-${{ github.ref }} 
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
 
     strategy:
@@ -42,15 +42,15 @@ jobs:
     - name: Build Antora
       continue-on-error: true
       run: |
-        cd antora 
+        cd antora
         npx antora antora-playbook.yml --stacktrace
-    
+
     - name: Manually Migrate Standalone PDFs
       continue-on-error: true
       run: |
         cd antora
         cp -a ./pdfs/. ./build/reference/
-      
+
     #- name: Build Docusaurus
       # continue-on-error: true
     #  run: yarn build
@@ -66,4 +66,4 @@ jobs:
       if: ${{ always() }}
       with:
         name: Portal Snapshot
-        path: ./antora/build/
+        path: ./antora/build/reference/isa/
