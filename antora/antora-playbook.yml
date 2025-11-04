@@ -1,7 +1,7 @@
 site:
   title: RISC-V Ratified Specifications Library
   url: https://docs.riscv.org
-  start_page: isa:ROOT::index.adoc
+  #start_page: isa:ROOT::index.adoc
   #keys:
   #  google_analytics: 'GTM-NXLCGZF4'
 urls:
