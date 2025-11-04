@@ -128,11 +128,16 @@ ui:
     #url: https://github.com/jjscheel/riscv-antora-only-ui/releases/download/tests/ui-bundle.zip
 
     snapshot: true
-  supplemental_files: ./supplemental-ui
-  #supplemental_files:
-  #- path: ui.yml
-  #  contents: |
-  #    static_files:
-  #    - .nojekyll
-  #    - index.html
-  #- path: .nojekyll
+  #supplemental_files: ./supplemental-ui
+  supplemental_files:
+  - path: ui.yml
+    contents: |
+      static_files:
+      - .nojekyll
+      - index.html
+  - path: .nojekyll
+    contents: ./supplemental-ui/.nojekyll
+  - path: favicon.ico
+    contents: ./supplemental-ui/favicon.ico
+  - path: index.html
+    contents: ./supplemental-ui/index.html
