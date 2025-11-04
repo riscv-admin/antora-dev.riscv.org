@@ -134,8 +134,11 @@ ui:
     contents: ./supplemental-ui/.nojekyll
   - path: index.html
     contents: ./supplemental-ui/index.html
+  - path: favicon.ico
+    contents: ./supplemental-ui/favicon.ico
   - path: ui.yml
     contents: |
       static_files:
-      - .nojekyll
-      - index.html
+        - .nojekyll
+        - index.html
+        - favicon.ico
