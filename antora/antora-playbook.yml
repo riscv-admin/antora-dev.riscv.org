@@ -137,14 +137,10 @@ ui:
   #supplemental_files: ./supplemental-ui
   supplemental_files:
   - path: .nojekyll
-    contents: ./supplemental-ui/.nojekyll
   - path: index.html
-    contents: ./supplemental-ui/index.html
-  - path: favicon.ico
-    contents: ./supplemental-ui/favicon.ico
+    #contents: ./supplemental-ui/index.html
   - path: ui.yml
     contents: |
       static_files:
         - .nojekyll
         - index.html
-        - favicon.ico
