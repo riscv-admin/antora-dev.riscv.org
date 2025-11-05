@@ -69,4 +69,4 @@ jobs:
       #uses: actions/deploy-pages@v4
       with:
         #folder: antora/build/ # The folder the action should deploy.
-        folder: antora/build/reference/
+        folder: antora/build/
