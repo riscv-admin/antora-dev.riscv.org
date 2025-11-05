@@ -138,7 +138,7 @@ ui:
   supplemental_files:
   - path: .nojekyll
   - path: index.html
-    #contents: ./supplemental-ui/index.html
+    contents: supplemental-ui/index.html
   - path: ui.yml
     contents: |
       static_files:
