@@ -1,6 +1,7 @@
 site:
   title: RISC-V Ratified Specifications Library
-  url: https://docs.riscv.org
+  #url: https://docs.riscv.org
+  url: https://riscv-admin.github.io/antora-dev.riscv.org/
   #start_page: isa:ROOT::index.adoc
   #keys:
   #  google_analytics: 'GTM-NXLCGZF4'
