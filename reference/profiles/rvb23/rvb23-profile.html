@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>RVB23 Profiles :: RISC-V Ratified Specifications Library</title>
+    <link rel="canonical" href="https://riscv-admin.github.io/antora-dev.riscv.org/profiles/rvb23/rvb23-profile.html">
+    <link rel="prev" href="rvb23-index.html">
+    <link rel="next" href="../riscv/riscv-index.html">
+    <meta name="description" content="Short, text description of spect…">
+    <meta name="generator" content="Antora 3.1.14">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
+
+    <meta name="antora-ui-version" content="322bc7dc884b3bc5f7b8c1391acd37f46892136a"> 
+    <meta name="version" content="latest">
+    <meta name="component" content="profiles">
+    <meta name="latest-version" content="false">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/vnd.microsoft.icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://riscv.org">
+        <img id="riscvlogo" src="../../_/img/risc-v_logo.svg" alt="RISCV" />
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item home">
+          <a class="navbar-link"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/16154769/RISC-V+Technical+Specifications"
+            aria-label="Library">
+            Library</a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">ISA</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805601287/The+RISC-V+Instruction+Set+Manual+Volume+I+Unprivileged+ISA">Unprivileged
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805568665">Privileged <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">Profiles</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805240860/RVA23+Profile">RVA23 Profile <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805568757/RVB23+Profile">RVB23 Profile <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806289411/RISC-V+Profiles">RISC-V Profiles <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">Non-ISA Hardware</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806289428/RISC-V+Advanced+Interrupt+Architecture">Advanced
+            Interrupt Architecture <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806617089/RISC-V+IOMMU+Architecture">IOMMU
+            Architecture <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806617106/RISC-V+Platform-Level+Interrupt+Controller">Platform-Level
+            Interrupt Controller <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806617123/RISC-V+Server+SOC">Server
+            SOC <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">Debug, Trace, RAS</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926657/Efficient+Trace+for+RISC-V">Efficient
+            Trace
+            < <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+              </svg>
+          </a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809697292/RISC-V+Capacity+and+Bandwidth+QoS+Register+Interface">QoS
+            Register Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926674/The+RISC-V+Debug">Debug <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926691/RISC-V+N-Trace+Nexus-based+Trace">N-Trace
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809697310/RISC-V+RERI+Architecture">RERI
+            Architecture
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057729/RISC-V+Trace+Connectors">Trace Connectors
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057747/RISC-V+Trace+Control+Interface">Trace
+            Control Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057766/Unformatted+Trace+Diagnostic+Data+Packet+Encapsulation+for+RISC-V">Unformatted
+            Trace and Diagnostic Data Packet
+            Encapsulation <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">Platform Software</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926709/RISC-V+Boot+and+Runtime+Services+BRS">Boot
+            and Runtime Services <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057786/RISC-V+Functional+Fixed+Hardware">Functional
+            Fixed Hardware <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926726/RISC-V+IO+Mapping+Table">IO Mapping Table
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057803/RISC-V+Platform+Management+Interface+RPMI">Platform
+            Management Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057820/RISC-V+Semihosting">Semihosting <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057837/RISC-V+Supervisor+Binary+Interface">Supervisor
+            Binary Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057854/RISC-V+UEFI+Protocol">UEFI Protocol <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">App Enablement</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057873/RISC-V+ABIs">Application Binary Interface
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926743/RISC-V+Vector+C+Intrinsic">Vector C
+            Intrinsic <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs" >
+        </div>
+        <div class="navbar-item" style="padding-left: 0;">
+          <label class="theme-toggler">
+            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
+                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor"
+                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                </path>
+              </svg>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
+                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+                </path>
+              </svg></span>
+            <span class="text">light</span>
+          </label>
+        </div>
+      </div>
+  </nav>
+</header>
+<script>
+  !function (theme) {
+    if (theme === 'dark') {
+      document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+    }
+  }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script><div class="body">
+<div class="nav-container" data-component="profiles" data-version="latest">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">RISC-V Profiles</span>
+  <button class="version" id="browse-version">Latest</button>
+</div><ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">RVA23 Profile</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../rva23/rva23-index.html">RVA23 Profile Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../rva23/rva-profile-overview-body.html">RVA Profiles Rationale</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../rva23/rv-profile-defined-extensions.html">Profile-Defined Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../rva23/rva-profile-body.html">RVA Profile</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">RVB23 Profile</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="rvb23-index.html">RVB23 Profile Overview</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link"  href="rvb23-profile.html">RVB23 Profile</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">RISC-V Profiles</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../riscv/riscv-index.html">RISC-V Profiles Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../riscv/profiles.html">RISC-V Profiles</a>
+  </li>
+</ul>
+  </li>
+</ul>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button id="nav-toggle-1" class="nav-toggle"></button>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div
+      class="toc"
+      data-title="RVB23 Profiles"
+      data-levels="5"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="https://github.com/riscv/riscv-profiles/issues/new" target="_blank" title="Issues">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Report a Problem
+        </a>
+        <a href="https://github.com/riscv/riscv-profiles" target="_blank" title="GitHub">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          GitHub Project
+        </a>
+
+        <div class="dropdown-toc">
+          <a id="pdfDropdownButton" aria-haspopup="true" aria-expanded="false" class="sidebar-link" download>
+            <span>Download PDFs</span>
+            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+          <ul id="pdfDropdownMenu" class="dropdown-menu" hidden>
+              <li style="padding-left: 0px;"><a href="../profiles/_attachments/rva23-profile.pdf" class="dropdown-item" target="_blank" rel="noopener noreferrer" style="color: #003262;" download>RVA23 Profile</a></li>
+              <li style="padding-left: 0px;"><a href="../_attachments/rvb23-profile.pdf" class="dropdown-item" target="_blank" rel="noopener noreferrer" style="color: #003262;" download>RVB23 Profile</a></li>
+              <li style="padding-left: 0px;"><a href="../_attachments/RISC-V_Profiles.pdf" class="dropdown-item" target="_blank" rel="noopener noreferrer" style="color: #003262;" download>RISC-V Profile</a></li>
+          </ul>
+        </div>
+       <script>
+  (function() {
+    const btn = document.getElementById('pdfDropdownButton');
+    const menu = document.getElementById('pdfDropdownMenu');
+
+    // Toggle dropdown on button click
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      menu.hidden = expanded;
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        btn.setAttribute('aria-expanded', 'false');
+        menu.hidden = true;
+        btn.focus(); // return focus to button
+      }
+    });
+
+    // Close dropdown on Escape key press
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' || e.key === 'Esc') {
+        btn.setAttribute('aria-expanded', 'false');
+        menu.hidden = true;
+        btn.focus();
+      }
+    });
+  })();
+</script>
+    </div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">RISC-V Profiles</a></li>
+      <li>RVB23 Profile</li>
+      <li><a href="rvb23-profile.html">RVB23 Profile</a></li>
+    </ul>
+  </nav>
+</div><h1 id="page-title" class="page">RVB23 Profiles</h1>
+<div class="sect1">
+<h2 id="introduction"><a class="anchor" href="#introduction"></a>1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document specifies the RVB23 profile
+family. RVB23 is the first major release of the RVB
+series of RISC-V Application Processor Profile.</p>
+</div>
+<div class="paragraph">
+<p>RVB profiles are intended to be used for customized 64-bit application
+processors that will run rich OS stacks, but usually as a custom build
+of standard OS source-code distributions.  The approach is to provide
+a large guaranteed set of relatively inexpensive and/or widely
+beneficial features but allow optionality for more expensive and/or
+more targeted extensions.</p>
+</div>
+<div class="paragraph">
+<p>Unlike the RVA profiles, it is explicitly a non-goal of RVB profiles
+to provide a single standard ISA interface supporting a wide variety
+of binary kernel and binary application software distributions.
+However, individual software ecosystems may build upon RVB profiles to
+produce a more targeted standard interface for a certain market.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="profile-defined-extensions"><a class="anchor" href="#profile-defined-extensions"></a>2. Profile-Defined Extensions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>RVB23 has been ratified alongside RVA23, and the same set of new
+profile-defined extensions defined in RVA23 are present in RVB23.
+These profile-defined extensions will soon move to the combined ISA manual.
+Future releases of RVA and RVB profiles might not
+proceed through ratification at the same time, and future
+profile-defined extensions will be presented as an edit to the
+combined ISA manual.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="rvb23-profiles"><a class="anchor" href="#rvb23-profiles"></a>3. RVB23 Profiles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Only user-mode (RVB23U64) and supervisor-mode (RVB23S64) profiles are
+specified in this family.</p>
+</div>
+<div class="sect2">
+<h3 id="rvb23u64-profile"><a class="anchor" href="#rvb23u64-profile"></a>3.1. RVB23U64 Profile</h3>
+<div class="paragraph">
+<p>The RVB23U64 profile specifies the ISA features available to user-mode
+execution environments in 64-bit RVB applications processors.</p>
+</div>
+<div class="sect3">
+<h4 id="rvb23u64-mandatory-base"><a class="anchor" href="#rvb23u64-mandatory-base"></a>3.1.1. RVB23U64 Mandatory Base</h4>
+<div class="paragraph">
+<p>RV64I is the mandatory base ISA for RVB23U64 and is little-endian.  As
+per the unprivileged architecture specification, the <code>ECALL</code>
+instruction causes a requested trap to the execution environment.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="rvb23u64-mandatory-extensions"><a class="anchor" href="#rvb23u64-mandatory-extensions"></a>3.1.2. RVB23U64 Mandatory Extensions</h4>
+<div class="paragraph">
+<p>The following mandatory extensions in RVB23U64 were also mandatory in
+RVA22U64.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>M</strong> Integer multiplication and division.</p>
+</li>
+<li>
+<p><strong>A</strong> Atomic instructions.</p>
+</li>
+<li>
+<p><strong>F</strong> Single-precision floating-point instructions.</p>
+</li>
+<li>
+<p><strong>D</strong> Double-precision floating-point instructions.</p>
+</li>
+<li>
+<p><strong>C</strong> Compressed instructions.</p>
+</li>
+<li>
+<p><strong>B</strong> Bit-manipulation instructions.</p>
+</li>
+<li>
+<p><strong>Zicsr</strong>  CSR instructions.  These are implied by presence of F.</p>
+</li>
+<li>
+<p><strong>Zicntr</strong> Base counters and timers.</p>
+</li>
+<li>
+<p><strong>Zihpm</strong> Hardware performance counters.</p>
+</li>
+<li>
+<p><strong>Ziccif</strong> Main memory regions with both the cacheability and
+coherence PMAs must support instruction fetch, and any instruction
+fetches of naturally aligned power-of-2 sizes up to min(ILEN,XLEN)
+(i.e., 32 bits for RVB23) are atomic.</p>
+</li>
+<li>
+<p><strong>Ziccrse</strong> Main memory regions with both the cacheability and coherence PMAs must support RsrvEventual.</p>
+</li>
+<li>
+<p><strong>Ziccamoa</strong>  Main memory regions with both the cacheability and coherence PMAs must support all atomics in A.</p>
+</li>
+<li>
+<p><strong>Zicclsm</strong> Misaligned loads and stores to main memory regions with both the
+cacheability and coherence PMAs must be supported.</p>
+</li>
+<li>
+<p><strong>Za64rs</strong> Reservation sets are contiguous, naturally aligned, and a
+maximum of 64 bytes.</p>
+</li>
+<li>
+<p><strong>Zihintpause</strong> Pause hint.</p>
+</li>
+<li>
+<p><strong>Zic64b</strong> Cache blocks must be 64 bytes in size, naturally aligned in the
+address space.</p>
+</li>
+<li>
+<p><strong>Zicbom</strong> Cache-block management instructions.</p>
+</li>
+<li>
+<p><strong>Zicbop</strong> Cache-block prefetch instructions.</p>
+</li>
+<li>
+<p><strong>Zicboz</strong> Cache-block zero instructions.</p>
+</li>
+<li>
+<p><strong>Zkt</strong> Data-independent execution latency.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following mandatory extensions are also present in RVA23U64:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zihintntl</strong> Non-temporal locality hints.</p>
+</li>
+<li>
+<p><strong>Zicond</strong> Integer conditional operations.</p>
+</li>
+<li>
+<p><strong>Zimop</strong> May-be-operations.</p>
+</li>
+<li>
+<p><strong>Zcmop</strong> Compressed may-be-operations.</p>
+</li>
+<li>
+<p><strong>Zcb</strong> Additional compressed instructions.</p>
+</li>
+<li>
+<p><strong>Zfa</strong> Additional floating-point instructions.</p>
+</li>
+<li>
+<p><strong>Zawrs</strong> Wait-on-reservation-set instructions.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="rvb23u64-optional-extensions"><a class="anchor" href="#rvb23u64-optional-extensions"></a>3.1.3. RVB23U64 Optional Extensions</h4>
+<div class="paragraph">
+<p>RVB23U64 has 18 profile options listed below.</p>
+</div>
+<div class="sect4">
+<h5 id="localized-options"><a class="anchor" href="#localized-options"></a>3.1.3.1. Localized Options</h5>
+<div class="paragraph">
+<p>The following extensions are localized options in both RVA23U64 and RVB23U64:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zvkng</strong> Vector crypto NIST Algorithms with GCM.</p>
+</li>
+<li>
+<p><strong>Zvksg</strong> Vector crypto ShangMi Algorithms with GCM.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following extensions options are localized options in RVB23U64 but
+are not present in RVA23U64:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zvkg</strong> Vector GCM/GMAC instructions.</p>
+</li>
+<li>
+<p><strong>Zvknc</strong> Vector crypto NIST algorithms with carryless multiply.</p>
+</li>
+<li>
+<p><strong>Zvksc</strong> Vector crypto ShangMi algorithms with carryless multiply.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+RVA profiles mandate the higher-performing but more expensive
+GHASH options when adding vector crypto.  To reduce implementation cost, RVB
+profiles also allow these carryless multiply options (Zvknc and Zvksc)
+to implement GCM efficiently, with GHASH available as a separate
+option.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zkn</strong> Scalar crypto NIST algorithms.</p>
+</li>
+<li>
+<p><strong>Zks</strong> Scalar crypto ShangMi algorithms.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+RVA23 profiles drop support for scalar crypto as an option, as
+the vector extension is now mandatory in RVA23.  RVB23 profiles
+support scalar crypto, as the vector extension is optional in RVB23.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="development-options"><a class="anchor" href="#development-options"></a>3.1.3.2. Development Options</h5>
+<div class="paragraph">
+<p>The following are new development options intended to become mandatory in a later RVB profile:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zabha</strong> Byte and halfword atomic memory operations.</p>
+</li>
+<li>
+<p><strong>Zacas</strong> Compare-and-Swap instructions.</p>
+</li>
+<li>
+<p><strong>Ziccamoc</strong> Main memory regions with both the cacheability and coherence PMAs
+must provide <code>AMOCASQ</code> level PMA support.</p>
+</li>
+<li>
+<p><strong>Zama16b</strong> Misaligned loads, stores, and AMOs to main memory regions that do not cross a naturally aligned 16-byte boundary are atomic.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="expansion-options"><a class="anchor" href="#expansion-options"></a>3.1.3.3. Expansion Options</h5>
+<div class="paragraph">
+<p>The following are expansion options in RVB23U64, but are mandatory in
+RVA23U64.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zfhmin</strong> Half-precision floating-point.</p>
+</li>
+<li>
+<p><strong>V</strong> Vector extension.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Unclear if other Zve* extensions should also be supported in RVB.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zvfhmin</strong> Vector minimal half-precision floating-point.</p>
+</li>
+<li>
+<p><strong>Zvbb</strong> Vector basic bit-manipulation instructions.</p>
+</li>
+<li>
+<p><strong>Zvkt</strong> Vector data-independent execution latency.</p>
+</li>
+<li>
+<p><strong>Supm</strong> Pointer masking, with the execution environment providing a means to
+select PMLEN=0 and PMLEN=7 at minimum.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following extensions are expansion options in both RVA23U64 and RVB23U64:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zfh</strong> Scalar half-precision floating-point.</p>
+</li>
+<li>
+<p><strong>Zbc</strong> Scalar carryless multiplication.</p>
+</li>
+<li>
+<p><strong>Zicfilp</strong> Landing Pads.</p>
+</li>
+<li>
+<p><strong>Zicfiss</strong> Shadow Stack.</p>
+</li>
+<li>
+<p><strong>Zvfh</strong> Vector half-precision floating-point.</p>
+</li>
+<li>
+<p><strong>Zfbfmin</strong> Scalar BF16 converts.</p>
+</li>
+<li>
+<p><strong>Zvfbfmin</strong> Vector BF16 converts.</p>
+</li>
+<li>
+<p><strong>Zvfbfwma</strong> Vector BF16 widening mul-add.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following are expansion options for RVB23U64 as they are not
+intended to be made mandatory in future RVB profiles, but are listed
+as RVA23U64 development options as they are intended to become
+mandatory in future RVA profiles.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zvbc</strong> Vector carryless multiplication.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="transitory-options"><a class="anchor" href="#transitory-options"></a>3.1.3.4. Transitory Options</h5>
+<div class="paragraph">
+<p>There are no transitory options in RVB23U64.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="rvb23u64-recommendations"><a class="anchor" href="#rvb23u64-recommendations"></a>3.1.4. RVB23U64 Recommendations</h4>
+<div class="paragraph">
+<p>Implementations are strongly recommended to raise illegal-instruction
+exceptions on attempts to execute unimplemented opcodes.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="rvb23s64-profile"><a class="anchor" href="#rvb23s64-profile"></a>3.2. RVB23S64 Profile</h3>
+<div class="paragraph">
+<p>The RVB23S64 profile specifies the ISA features available to a
+supervisor-mode execution environment in 64-bit applications
+processors.  RVB23S64 is based on privileged architecture version
+1.13.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Priv 1.13 is still being defined.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="rvb23s64-mandatory-base"><a class="anchor" href="#rvb23s64-mandatory-base"></a>3.2.1. RVB23S64 Mandatory Base</h4>
+<div class="paragraph">
+<p>RV64I is the mandatory base ISA for RVB23S64 and is little-endian.
+The <code>ECALL</code> instruction operates as per the unprivileged architecture
+specification.  An <code>ECALL</code> in user mode causes a contained trap to
+supervisor mode.  An <code>ECALL</code> in supervisor mode causes a requested
+trap to the execution environment.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="rvb23s64-mandatory-extensions"><a class="anchor" href="#rvb23s64-mandatory-extensions"></a>3.2.2. RVB23S64 Mandatory Extensions</h4>
+<div class="paragraph">
+<p>The following unprivileged extensions are mandatory:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The RVB23S64 mandatory unprivileged extensions include all the
+mandatory unprivileged extensions in RVB23U64.</p>
+</li>
+<li>
+<p><strong>Zifencei</strong>  Instruction-Fetch Fence.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Zifencei is mandated as it is the only standard way to support
+instruction-cache coherence in RVB23 application processors.  A new
+instruction-cache coherence mechanism is under development
+(tentatively named Zjid) which might be added as an option in the
+future.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following privileged extensions are mandatory, and are also
+mandatory in RVA23S64.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Ss1p13</strong>  Supervisor architecture version 1.13.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Ss1p13 supersedes Ss1p12 but is not yet ratified.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Svnapot</strong> NAPOT translation contiguity.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Svnapot is very low cost to provide, so is made mandatory even
+in RVB.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Svbare</strong> The <code>satp</code> mode Bare must be supported.</p>
+</li>
+<li>
+<p><strong>Sv39</strong> Page-Based 39-bit Virtual-Memory System.</p>
+</li>
+<li>
+<p><strong>Svade</strong> Page-fault exceptions are raised when a page is accessed
+when A bit is clear, or written when D bit is clear.</p>
+</li>
+<li>
+<p><strong>Ssccptr</strong> Main memory regions with both the cacheability and
+coherence PMAs must support hardware page-table reads.</p>
+</li>
+<li>
+<p><strong>Sstvecd</strong> <code>stvec.MODE</code> must be capable of holding the value 0
+(Direct).  When <code>stvec.MODE=Direct</code>, <code>stvec.BASE</code> must be capable of
+holding any valid four-byte-aligned address.</p>
+</li>
+<li>
+<p><strong>Sstvala</strong> <code>stval</code> must be written with the faulting virtual address
+for load, store, and instruction page-fault, access-fault, and
+misaligned exceptions, and for breakpoint exceptions other than
+those caused by execution of the <code>EBREAK</code> or <code>C.EBREAK</code> instructions.
+For virtual-instruction and illegal-instruction exceptions, <code>stval</code> must be written with the
+faulting instruction.</p>
+</li>
+<li>
+<p><strong>Sscounterenw</strong> For any <code>hpmcounter</code> that is not read-only zero, the
+corresponding bit in <code>scounteren</code> must be writable.</p>
+</li>
+<li>
+<p><strong>Svpbmt</strong> Page-based memory types.</p>
+</li>
+<li>
+<p><strong>Svinval</strong> Fine-grained address-translation cache invalidation.</p>
+</li>
+<li>
+<p><strong>Sstc</strong> supervisor-mode timer interrupts.</p>
+</li>
+<li>
+<p><strong>Sscofpmf</strong> Count overflow and mode-based filtering.</p>
+</li>
+<li>
+<p><strong>Ssu64xl</strong> <code>sstatus.UXL</code> must be capable of holding the value 2
+(i.e., UXLEN=64 must be supported).</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="rvb23s64-optional-extensions"><a class="anchor" href="#rvb23s64-optional-extensions"></a>3.2.3. RVB23S64 Optional Extensions</h4>
+<div class="paragraph">
+<p>RVB23S64 has the same unprivileged options as RVB23U64,</p>
+</div>
+<div class="paragraph">
+<p>The privileged options in RVB23S64 are listed in the following
+sections.</p>
+</div>
+<div class="sect4">
+<h5 id="localized-options-2"><a class="anchor" href="#localized-options-2"></a>3.2.3.1. Localized Options</h5>
+<div class="paragraph">
+<p>There are no privileged localized options in RVB23S64.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="development-options-2"><a class="anchor" href="#development-options-2"></a>3.2.3.2. Development Options</h5>
+<div class="paragraph">
+<p>There are no privileged development options in RVB23S64.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="expansion-options-2"><a class="anchor" href="#expansion-options-2"></a>3.2.3.3. Expansion Options</h5>
+<div class="paragraph">
+<p>The following are privileged expansion options in RVB23S64, but are
+mandatory in RVA23S64:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Ssnpm</strong> Pointer masking, with <code>senvcfg.PMM</code> supporting at minimum,
+settings PMLEN=0 and PMLEN=7.</p>
+</li>
+<li>
+<p><strong>Sha</strong> The augmented hypervisor extension.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When the hypervisor extension is implemented, the following are also mandatory:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the hypervisor extension is implemented and pointer masking
+(Ssnpm) is supported then <code>henvcfg.PMM</code> must support at minimum,
+settings PMLEN=0 and PMLEN=7.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following are privileged expansion options in RVB23S64 that are
+also privileged expansion options in RVA23S64:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sv48</strong> Page-based 48-bit virtual-memory system.</p>
+</li>
+<li>
+<p><strong>Sv57</strong> Page-based 57-bit virtual-memory system.</p>
+</li>
+<li>
+<p><strong>Svadu</strong> Hardware A/D bit updates.</p>
+</li>
+<li>
+<p><strong>Zkr</strong>  Entropy CSR.</p>
+</li>
+<li>
+<p><strong>Sdtrig</strong> Debug triggers.</p>
+</li>
+<li>
+<p><strong>Ssstrict</strong> No non-conforming extensions are present.  Attempts to
+execute unimplemented opcodes or access unimplemented CSRs in the
+standard or reserved encoding spaces raises an illegal instruction
+exception that results in a contained trap to the supervisor-mode
+trap handler.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Ssstrict does not prescribe behavior for the custom encoding
+spaces or CSRs.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Ssstrict definition applies to the execution environment
+claiming to be RVA23-compatible, which must have the hypervisor
+extension. That execution environment will take a contained trap to
+supervisor-mode (however that trap is implemented, including, but not
+limited to, emulation/delegation in the outer execution
+environment). Ssstrict (and all the other RVA23 mandates and options)
+do not apply to any guest VMs run by a hypervisor. An RVA23 hypervisor
+can provide guest VMs that are also RVA23-compatible but with an
+expanded set of emulated standard instructions. An RVA23 hypervisor
+can also choose to implement guest VMs that are not RVA23 compatible
+(e.g., lacking H, or only RVA20).
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Svvptc</strong> Transitions from invalid to valid PTEs will be visible in
+bounded time without an explicit memory-management fence.</p>
+</li>
+<li>
+<p><strong>Sspm</strong> Supervisor-mode pointer masking, with the supervisor execution
+environment providing a means to select PMLEN=0 and PMLEN=7 at minimum.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="rvb23s64-recommendations"><a class="anchor" href="#rvb23s64-recommendations"></a>3.2.4. RVB23S64 Recommendations</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Implementations are strongly recommended to raise illegal-instruction
+exceptions when attempting to execute unimplemented opcodes.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="glossary-of-isa-extensions"><a class="anchor" href="#glossary-of-isa-extensions"></a>4. Glossary of ISA Extensions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following unprivileged ISA extensions are defined in Volume I
+of the <a href="https://github.com/riscv/riscv-isa-manual">RISC-V Instruction Set Manual</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>M Extension for Integer Multiplication and Division</p>
+</li>
+<li>
+<p>A Extension for Atomic Memory Instructions</p>
+</li>
+<li>
+<p>F Extension for Single-Precision Floating-Point</p>
+</li>
+<li>
+<p>D Extension for Double-Precision Floating-Point</p>
+</li>
+<li>
+<p>H Hypervisor Extension</p>
+</li>
+<li>
+<p>Q Extension for Quad-Precision Floating-Point</p>
+</li>
+<li>
+<p>C Extension for Compressed Instructions</p>
+</li>
+<li>
+<p>B Extension for Bit Manipulation</p>
+</li>
+<li>
+<p>V Extension for Vector Computation</p>
+</li>
+<li>
+<p>Zifencei Instruction-Fetch Fence Extension</p>
+</li>
+<li>
+<p>Zicsr Extension for Control and Status Register Access</p>
+</li>
+<li>
+<p>Zicntr Extension for Basic Performance Counters</p>
+</li>
+<li>
+<p>Zihpm Extension for Hardware Performance Counters</p>
+</li>
+<li>
+<p>Zihintpause Pause Hint Extension</p>
+</li>
+<li>
+<p>Zfh Extension for Half-Precision Floating-Point</p>
+</li>
+<li>
+<p>Zfhmin Minimal Extension for Half-Precision Floating-Point</p>
+</li>
+<li>
+<p>Zfinx Extension for Single-Precision Floating-Point in x-registers</p>
+</li>
+<li>
+<p>Zdinx Extension for Double-Precision Floating-Point in x-registers</p>
+</li>
+<li>
+<p>Zhinx Extension for Half-Precision Floating-Point in x-registers</p>
+</li>
+<li>
+<p>Zhinxmin Minimal Extension for Half-Precision Floating-Point in x-registers</p>
+</li>
+<li>
+<p>Zba Address Computation Extension</p>
+</li>
+<li>
+<p>Zbb Bit Manipulation Extension</p>
+</li>
+<li>
+<p>Zbc Carryless Multiplication Extension</p>
+</li>
+<li>
+<p>Zbs Single-Bit Manipulation Extension</p>
+</li>
+<li>
+<p>Zk Standard Scalar Cryptography Extension</p>
+</li>
+<li>
+<p>Zkn NIST Cryptography Extension</p>
+</li>
+<li>
+<p>Zknd AES Decryption Extension</p>
+</li>
+<li>
+<p>Zkne AES Encryption Extension</p>
+</li>
+<li>
+<p>Zknh SHA2 Hashing Extension</p>
+</li>
+<li>
+<p>Zkr Entropy Source Extension</p>
+</li>
+<li>
+<p>Zks ShangMi Cryptography Extension</p>
+</li>
+<li>
+<p>Zksed SM4 Block Cypher Extension</p>
+</li>
+<li>
+<p>Zksh SM3 Hashing Extension</p>
+</li>
+<li>
+<p>Zkt Extension for Data-Independent Execution Latency</p>
+</li>
+<li>
+<p>Zicbom Extension for Cache-Block Management</p>
+</li>
+<li>
+<p>Zicbop Extension for Cache-Block Prefetching</p>
+</li>
+<li>
+<p>Zicboz Extension for Cache-Block Zeroing</p>
+</li>
+<li>
+<p>Zawrs Wait-on-reservation-set instructions</p>
+</li>
+<li>
+<p>Zacas Extension for Atomic Compare-and-Swap (CAS) instructions</p>
+</li>
+<li>
+<p>Zabha Extension for Byte and Halfword Atomic Memory Operations</p>
+</li>
+<li>
+<p>Zbkb Extension for Bit Manipulation for Cryptography</p>
+</li>
+<li>
+<p>Zbkc Extension for Carryless Multiplication for Cryptography</p>
+</li>
+<li>
+<p>Zbkx Crossbar Permutation Extension</p>
+</li>
+<li>
+<p>Zvbb - Vector Basic Bit-manipulation</p>
+</li>
+<li>
+<p>Zvbc - Vector Carryless Multiplication</p>
+</li>
+<li>
+<p>Zvkng - NIST Algorithm Suite with GCM</p>
+</li>
+<li>
+<p>Zvksg - ShangMi Algorithm Suite with GCM</p>
+</li>
+<li>
+<p>Zvkt - Vector Data-Independent Execution Latency</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following privileged ISA extensions are defined in Volume II
+of the <a href="https://github.com/riscv/riscv-isa-manual">RISC-V Instruction Set Manual</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sv32 Page-based Virtual Memory Extension, 32-bit</p>
+</li>
+<li>
+<p>Sv39 Page-based Virtual Memory Extension, 39-bit</p>
+</li>
+<li>
+<p>Sv48 Page-based Virtual Memory Extension, 48-bit</p>
+</li>
+<li>
+<p>Sv57 Page-based Virtual Memory Extension, 57-bit</p>
+</li>
+<li>
+<p>Svpbmt, Page-Based Memory Types</p>
+</li>
+<li>
+<p>Svnapot, NAPOT Translation Contiguity</p>
+</li>
+<li>
+<p>Svinval, Fine-Grained Address-Translation Cache Invalidation</p>
+</li>
+<li>
+<p>Hypervisor Extension</p>
+</li>
+<li>
+<p>Sm1p11, Machine Architecture v1.11</p>
+</li>
+<li>
+<p>Sm1p12, Machine Architecture v1.12</p>
+</li>
+<li>
+<p>Ss1p11, Supervisor Architecture v1.11</p>
+</li>
+<li>
+<p>Ss1p12, Supervisor Architecture v1.12</p>
+</li>
+<li>
+<p>Ss1p13, Supervisor Architecture v1.13</p>
+</li>
+<li>
+<p>Sstc Extension for Supervisor-mode Timer Interrupts</p>
+</li>
+<li>
+<p>Sscofpmf Extension for Count Overflow and Mode-Based Filtering</p>
+</li>
+<li>
+<p>Smstateen/Ssstateen Extension for State-enable</p>
+</li>
+<li>
+<p>Svvptc Obviating Memory-management Instructions after Marking PTEs valid</p>
+</li>
+<li>
+<p>Svadu Hardware Updating of A/D Bits</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following extensions have not yet been incorporated into the RISC-V
+Instruction Set Manual; the hyperlinks lead to their separate specifications.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/riscv/riscv-v-spec">Zve32x Extension for Embedded Vector Computation (32-bit integer)</a></p>
+</li>
+<li>
+<p><a href="https://github.com/riscv/riscv-v-spec">Zve32f Extension for Embedded Vector Computation (32-bit integer, 32-bit FP)</a></p>
+</li>
+<li>
+<p><a href="https://github.com/riscv/riscv-v-spec">Zve32d Extension for Embedded Vector Computation (32-bit integer, 64-bit FP)</a></p>
+</li>
+<li>
+<p><a href="https://github.com/riscv/riscv-v-spec">Zve64x Extension for Embedded Vector Computation (64-bit integer)</a></p>
+</li>
+<li>
+<p><a href="https://github.com/riscv/riscv-v-spec">Zve64f Extension for Embedded Vector Computation (64-bit integer, 32-bit FP)</a></p>
+</li>
+<li>
+<p><a href="https://github.com/riscv/riscv-v-spec">Zve64d Extension for Embedded Vector Computation (64-bit integer, 64-bit FP)</a></p>
+</li>
+<li>
+<p><strong>Ziccif</strong>: Main memory supports instruction fetch with atomicity requirement</p>
+</li>
+<li>
+<p><strong>Ziccrse</strong>: Main memory supports forward progress on LR/SC sequences</p>
+</li>
+<li>
+<p><strong>Ziccamoa</strong>: Main memory supports all atomics in A</p>
+</li>
+<li>
+<p><strong>Ziccamoc</strong> Main memory supports atomics in Zacas</p>
+</li>
+<li>
+<p><strong>Zicclsm</strong>: Main memory supports misaligned loads/stores</p>
+</li>
+<li>
+<p><strong>Zama16b</strong>: Misaligned loads, stores, and AMOs to main memory regions that do not cross a naturally aligned 16-byte boundary are atomic.</p>
+</li>
+<li>
+<p><strong>Za64rs</strong>: Reservation set size of at most 64 bytes</p>
+</li>
+<li>
+<p><strong>Za128rs</strong>: Reservation set size of at most 128 bytes</p>
+</li>
+<li>
+<p><strong>Zic64b</strong>: Cache block size is 64 bytes</p>
+</li>
+<li>
+<p><strong>Svbare</strong>: Bare mode virtual-memory translation supported</p>
+</li>
+<li>
+<p><strong>Svade</strong>: Raise exceptions on improper A/D bits</p>
+</li>
+<li>
+<p><strong>Ssccptr</strong>: Main memory supports page table reads</p>
+</li>
+<li>
+<p><strong>Sscounterenw</strong>: Support writeable enables for any supported counter</p>
+</li>
+<li>
+<p><strong>Sstvecd</strong>: <code>stvec</code> supports Direct mode</p>
+</li>
+<li>
+<p><strong>Sstvala</strong>: <code>stval</code> provides all needed values</p>
+</li>
+<li>
+<p><strong>Ssu64xl</strong>: UXLEN=64 must be supported</p>
+</li>
+<li>
+<p><strong>Sha</strong>: Augmented hypervisor extension</p>
+</li>
+<li>
+<p><strong>Shcounterenw</strong>: Support writeable enables for any supported counter</p>
+</li>
+<li>
+<p><strong>Shvstvala</strong>:  <code>vstval</code> provides all needed values</p>
+</li>
+<li>
+<p><strong>Shtvala</strong>:  <code>htval</code> provides all needed values</p>
+</li>
+<li>
+<p><strong>Shvstvecd</strong>: <code>vstvec</code> supports Direct mode</p>
+</li>
+<li>
+<p><strong>Shvsatpa</strong>: <code>vsatp</code> supports all modes supported by <code>satp</code></p>
+</li>
+<li>
+<p><strong>Shgatpa</strong>: SvNNx4 mode supported for all modes supported by <code>satp</code>, as well as Bare</p>
+</li>
+<li>
+<p><strong>Ssstrict</strong>: Unimplemented reserved encodings raise illegal instruction exceptions and no non-conforming extension are present</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="rvb23-index.html">RVB23 Profile Overview</a></span>
+  <span class="next"><a href="../riscv/riscv-index.html">RISC-V Profiles Overview</a></span>
+</nav>
+</article>  </div>
+</main>
+<div class="modal micromodal-slide" id="modal-versions" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+            <main class="modal__content" id="modal-versions-content">
+              <button data-micromodal-close class="modal-versions-close">
+                <svg width="10px" height="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1h{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1h" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1h" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+              </button>
+                  <ul class="nav-versions">
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../../isa/index.html">ISA Specifications</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Published
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../../isa/index.html">
+      Latest
+    </a>
+  </li>
+  <li class="version">
+    <a href="../../isa/v20240411/index.html">
+      Version: 20240411
+    </a>
+  </li>
+</ul>                        </div>
+                      </li>
+                      <li class="component">
+                        <div>
+                          <a class="title" href="../index.html">RISC-V Profiles</a>
+                        </div>                        <div class="version-item is-active">
+                          <div>
+                            <button class="version-toggle" type="button">
+                              <span></span>
+                              Published
+                            </button>
+                          </div>
+                          <ul class="versions">
+  <li class="version">
+    <a href="../index.html">
+      Latest
+    </a>
+  </li>
+</ul>                        </div>
+                      </li>
+                  </ul>
+            </main>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer flex">
+    <div id="RISC-V footer">
+        <p class="smallest antialiased">Copyright © 2025 - <script>var d = new Date();
+        document.write(d.getFullYear());</script> This document is released under a Creative Commons Attribution 4.0 International License.<span id="teconsent"></span></p>
+    
+    </div>
+
+</footer>
+<script src="../../_/js/vendor/import.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async
+    src="../../_/js/vendor/spring-tabs.js"
+    data-sync-storage-key="docs:preferred-tab"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>
