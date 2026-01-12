@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>RV64I Base Integer Instruction Set, Version 2.1 :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://riscv-admin.github.io/antora-dev.riscv.org/isa/unpriv/rv64.html">
+    <link rel="canonical" href="https://docs.riscv.org/isa/unpriv/rv64.html">
     <link rel="prev" href="rv32e.html#sec:rv32e">
     <link rel="next" href="rv128.html">
     <meta name="generator" content="Antora 3.1.14">
@@ -20,20 +20,20 @@
     <link rel="stylesheet" href="../../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="4dad22af931922564b42095647c1499b126a4498"> 
+    <meta name="antora-ui-version" content="e4a784d1e135d8d3c687a46f0e5a735e0d6f3a3e"> 
     <meta name="version" content="v20240411">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
-    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="../../../_/img/favicon.ico">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-NXLCGZF4"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','GTM-NXLCGZF4')</script>
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/vnd.microsoft.icon">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img class="riscvlogo riscvlogo--light" src="../../../_/img/risc-v_logo.svg" alt="RISCV" />
-        <img class="riscvlogo riscvlogo--dark" src="../../../_/img/risc-v_logo_white.svg" alt="RISCV" />
+        <img id="riscvlogo" src="../../../_/img/risc-v_logo.svg" alt="RISCV" />
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -296,127 +296,127 @@
     <a class="nav-link"  href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html#sec:rv32">RV32I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="rv32.html#sec:rv32">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32e.html#sec:rv32e">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+    <a class="nav-link"  href="rv32e.html#sec:rv32e">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="rv64.html">RV64I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="rv128.html">Chapter 5. RV128I Base Integer Instruction Set, Version 1.7</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+    <a class="nav-link"  href="zifencei.html">Chapter 6. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html#zicsr">"Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html#zicsr">Chapter 7. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="counters.html#sec:counters">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+    <a class="nav-link"  href="counters.html#sec:counters">Chapter 8. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintntl.html">"Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+    <a class="nav-link"  href="zihintntl.html">Chapter 9. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintpause.html">"Zihintpause" Extension for Pause Hint, Version 2.0</a>
+    <a class="nav-link"  href="zihintpause.html">Chapter 10. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a>
+    <a class="nav-link"  href="zimop.html">Chapter 11. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+    <a class="nav-link"  href="zicond.html">Chapter 12. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a>
+    <a class="nav-link"  href="m-st-ext.html">Chapter 13. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a>
+    <a class="nav-link"  href="a-st-ext.html">Chapter 14. "A" Extension for Atomic Instructions, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zawrs.html">"Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+    <a class="nav-link"  href="zawrs.html">Chapter 15. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zacas.html">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+    <a class="nav-link"  href="zacas.html">Chapter 16. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rvwmo.html">RVWMO Memory Consistency Model, Version 2.0</a>
+    <a class="nav-link"  href="rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a>
+    <a class="nav-link"  href="ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+    <a class="nav-link"  href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+    <a class="nav-link"  href="zfa.html">Chapter 24. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+    <a class="nav-link"  href="zfinx.html">Chapter 25. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a>
+    <a class="nav-link"  href="c-st-ext.html">Chapter 26. "C" Extension for Compressed Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+    <a class="nav-link"  href="zc.html">Chapter 27. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
+    <a class="nav-link"  href="b-st-ext.html">Chapter 28. "B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="j-st-ext.html">"J" Extension for Dynamically Translated Languages, Version 1.0.0</a>
+    <a class="nav-link"  href="j-st-ext.html">Chapter 29. "J" Extension for Dynamically Translated Languages, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="p-st-ext.html">"P" Extension for Packed SIMD Instructions, Version 1.0.0</a>
+    <a class="nav-link"  href="p-st-ext.html">Chapter 30. "P" Extension for Packed SIMD Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
+    <a class="nav-link"  href="v-st-ext.html">Chapter 31. "V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+    <a class="nav-link"  href="scalar-crypto.html">Chapter 32. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 33. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Appendix: Extending the RISC-V ISA</a>
+    <a class="nav-link"  href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">Document Revision History</a>
+    <a class="nav-link"  href="history.html">Chapter 37. Document Revision History</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-eplan.html">RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-formal.html">Formal Memory Model Specifications, Version 0.1</a>
+    <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-examples.html">Vector Assembly Code Examples</a>
+    <a class="nav-link"  href="vector-examples.html">Appendix C. Vector Assembly Code Examples</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="calling-convention.html">Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="calling-convention.html">Appendix D. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -434,64 +434,64 @@
     <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-intro.html">Introduction</a>
+    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smepmp.html">"Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/supervisor.html">Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/supervisor.html">Chapter 10. Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svnapot.html">"Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a>
+    <a class="nav-link"  href="../priv/svnapot.html">Chapter 11. "Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svpbmt.html">"Svpbmt" Extension for Page-Based Memory Types, Version 1.0</a>
+    <a class="nav-link"  href="../priv/svpbmt.html">Chapter 12. "Svpbmt" Extension for Page-Based Memory Types, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svinval.html">"Svinval" Extension for Fine-Grained Address-Translation Cache Invalidation, Version 1.0</a>
+    <a class="nav-link"  href="../priv/svinval.html">Chapter 13. "Svinval" Extension for Fine-Grained Address-Translation Cache Invalidation, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svadu.html">"Svadu" Extension for Hardware Updating of A/D Bits, Version 1.0</a>
+    <a class="nav-link"  href="../priv/svadu.html">Chapter 14. "Svadu" Extension for Hardware Updating of A/D Bits, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svvptc.html">"Svvptc" Extension for Obviating Memory-Management Instructions after Marking PTEs Valid, Version 1.0</a>
+    <a class="nav-link"  href="../priv/svvptc.html">Chapter 15. "Svvptc" Extension for Obviating Memory-Management Instructions after Marking PTEs Valid, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sstc.html">Chapter 16. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 17. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 18. "H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-history.html">History</a>
+    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
   </li>
 </ul>
   </li>
@@ -618,7 +618,7 @@
     <ul>
       <li><a href="../index.html">ISA Specifications</a></li>
       <li>Volume I: RISC-V Unprivileged ISA Specification</li>
-      <li><a href="rv64.html">RV64I Base Integer Instruction Set, Version 2.1</a></li>
+      <li><a href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a></li>
     </ul>
   </nav>
 </div><div class="admonitionblock important latest">
@@ -647,7 +647,7 @@ in conjunction with the earlier chapter.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="sec:reg-state"><a class="anchor" href="#sec:reg-state"></a>1. Register State</h2>
+<h2 id="sec:reg-state"><a class="anchor" href="#sec:reg-state"></a>4.1. Register State</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>RV64I widens the integer registers and supported user address space to
@@ -656,7 +656,7 @@ in conjunction with the earlier chapter.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="sec:int-comp-instr"><a class="anchor" href="#sec:int-comp-instr"></a>2. Integer Computational Instructions</h2>
+<h2 id="sec:int-comp-instr"><a class="anchor" href="#sec:int-comp-instr"></a>4.2. Integer Computational Instructions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Most integer computational instructions operate on XLEN-bit values.
@@ -695,10 +695,10 @@ ensure reasonable performance for 32-bit values.</p>
 </p>
 </div>
 <div class="sect2">
-<h3 id="sec:int-reg-imm"><a class="anchor" href="#sec:int-reg-imm"></a>2.1. Integer Register-Immediate Instructions</h3>
+<h3 id="sec:int-reg-imm"><a class="anchor" href="#sec:int-reg-imm"></a>4.2.1. Integer Register-Immediate Instructions</h3>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqNzrEOgjAQBuCdp7itS0lsK8F0M2FhILo5EAak1TAUSHsOhvDulggUN8dr_--_G61-SigjgPHeopOQUoCuNloC6YemV5r4B4Aa0focSf1ILtc4L4pYcFJRwPfgw6eJho4kdFj19fuOZO5Q2mHgfM9F4I9X16BYKlY_z-ScZfntj_2ObQf87He2Cfq414zTVbfGlIzJQ-XFqhmfeR77P63aGvWS2MrEFFXTB7SyXcE=" alt="svg">
+<img src="_images/svg-0b957d609cd3d81f45005e23d428cdacb1df5a4d.svg" alt="svg">
 </div>
 </div>
 <div id="rv64i-base-int" class="paragraph">
@@ -711,7 +711,7 @@ register <em>rd</em> (assembler pseudoinstruction SEXT.W).</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqNkD8PgjAQxXc-xW1dMAERMN0cSSAaHQkDQlWGAmnrYAjf3bYGKPgndnl3177fvbRj5IohtQC6cyU4htAGqHNKMKCmLZqSIDkAyIVg8h0KZYv2h1WUJB-rzAbxaKV729sT1J-grHwBTaivACXh4k1H3NrEeRPucq8L4c0zqhad4jjSehx0F_2RjrtjvFk6zoqFjKyNyQomVkVp6mMnU8CBFWj3LadiuPrejQu8HwtcFwfKOFvg6LOoXF0ZP2Bl_RNX4Ief" alt="svg">
+<img src="_images/svg-884b9ec40f8811867290d9556f4f0ba47644b777.svg" alt="svg">
 </div>
 </div>
 <div id="rv64i-slli" class="paragraph">
@@ -730,7 +730,7 @@ copied into the vacated upper bits).
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqFkDsPgjAUhXd-xd26QEJ5mm6OJBCNDg6EAQGVgUegDobw320xlBZfHXrP6eO7px264kog1gCGc0l7Ar4OUKdVQQA1bdbkBWILACmlHTuHfGbRbm8EUWTY1g-T6EAfLcNsRn2huwu9y19kme5yRl709K0KnCXj7AV3udcZtdWw3KJjGAanSRyE2DLxP2CPRUIlYN9lqyJYzhdWWVWxQ8yEA1XWLa3ovPXdiQa23AAvDWI3Ud_OsyNTmj4jPDUjxsTjoJniTXensVJ4UtInasn4BCygmpI=" alt="svg">
+<img src="_images/svg-d2e030aeb0b2dffd32f0fee09cfc4acab3c46753.svg" alt="svg">
 </div>
 </div>
 <div id="rv64i-slliw" class="paragraph">
@@ -757,7 +757,7 @@ are marked as reserved. This is a backwards-compatible change.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKAEFiSUkRUKG6OZCv7hPqCaIcQz0DnNVjdRRKKguAGixqdRDmmCLMKUqBmoFsjinIgJTU4hI4DTfHCNkcIwMdmDmZubnRxoZWhkaxQD0wc4wMQAaE6gIlU1MyE0tSEUqwicItMa7liq0FAGMpRjI=" alt="svg">
+<img src="_images/svg-87b68428372b7bc6efb428957c4bb0f6faa2daf2.svg" alt="svg">
 </div>
 </div>
 <div id="rv64_lui-auipc" class="paragraph">
@@ -792,10 +792,10 @@ with LD, AUIPC with JALR, etc. in RV64I is
 </div>
 </div>
 <div class="sect2">
-<h3 id="sec:int-reg-reg-ops"><a class="anchor" href="#sec:int-reg-reg-ops"></a>2.2. Integer Register-Register Operations</h3>
+<h3 id="sec:int-reg-reg-ops"><a class="anchor" href="#sec:int-reg-reg-ops"></a>4.2.2. Integer Register-Register Operations</h3>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56v4ByKSusREWRqyOQkllAdAYi1odhOmmCNOLUiAmI5tuCtKfklpcQpCGG2-EbLwxwvi00rzkEmNUx4O46sE-PvrBQT5gZpAjiHJ0cQmHyoSDpCCcUCcQxzGcCJ8UG8K9guKT4qJkQ4I03HgTnMYb4TTeiCCN3XhztIAyxxLLBmAAZhnCWQZYWBBZpGDiiq0FAHkrmak=" alt="svg">
+<img src="_images/svg-58b6a0bce3669edb6bbaeff1991406b9cfe5d48d.svg" alt="svg">
 </div>
 </div>
 <div id="int_reg-reg" class="paragraph">
@@ -824,7 +824,7 @@ results to 64 bits. The shift amount is given by <em>rs2[4:0]</em>.
 </div>
 </div>
 <div class="sect1">
-<h2 id="sec:ld-store-instr"><a class="anchor" href="#sec:ld-store-instr"></a>3. Load and Store Instructions</h2>
+<h2 id="sec:ld-store-instr"><a class="anchor" href="#sec:ld-store-instr"></a>4.3. Load and Store Instructions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>RV64I extends the address space to 64 bits. The execution environment
@@ -832,12 +832,12 @@ will define what portions of the address space are legal to access.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqNzb0OwiAQB_Ddp7iNhUGKTQ2biaOJD9Aw0EKVgbaBM8Y0fXchsUKc3O7j_7tbvLkJaHcAS2cxCGgowKicEUCmuZ-0IXEAoBB9zJEmtuRyPZ2JpICvOeaOK828ztzrmN1cnZw2AbOrSsezGx5jj7ywqSZPq_H-x9PAfr92KpgMDyVkFd2gda5lTOxlwVmV_DQMweBn-b3D4x25vgE2ZFoY" alt="svg">
+<img src="_images/svg-0a5660ed42ee90370a27fafaaf8c9252fda37bf5.svg" alt="svg">
 </div>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqFkD0PgjAQhnd_xW1dGMTS1HR3NkE3wlBKqwx8pD1jDOG_W0K0lYS43dfz3r03Wn0TUOwAxqpBJ4AnAJ1stQDSD6qvNfEFkIjWjxHuM3K5nvMTKRPA1-DnjlMScBbwpm2LTOxLj3xwNuO9MU7j0vqK0FiEBhHz6BTSSGKOybOp8f7_AuvS9fJKOh3AbBM8rEFn1QbnPxY5TlPBYss8srz0fjyX0xvqh22d" alt="svg">
+<img src="_images/svg-20ee8dfe204839a6183661e0b904f73cd1d9e876.svg" alt="svg">
 </div>
 </div>
 <div id="load_store" class="paragraph">
@@ -857,7 +857,7 @@ register <em>rs2</em> to memory respectively.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="sec:rv64i-hint-instr"><a class="anchor" href="#sec:rv64i-hint-instr"></a>4. HINT Instructions</h2>
+<h2 id="sec:rv64i-hint-instr"><a class="anchor" href="#sec:rv64i-hint-instr"></a>4.4. HINT Instructions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>All instructions that are microarchitectural HINTs in RV32I (see
@@ -1087,8 +1087,8 @@ no standard HINTs will ever be defined in this subspace.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="rv32e.html#sec:rv32e">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a></span>
-  <span class="next"><a href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a></span>
+  <span class="prev"><a href="rv32e.html#sec:rv32e">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a></span>
+  <span class="next"><a href="rv128.html">Chapter 5. RV128I Base Integer Instruction Set, Version 1.7</a></span>
 </nav>
 </article>  </div>
 </main>
@@ -1119,24 +1119,6 @@ no standard HINTs will ever be defined in this subspace.</p>
   <li class="version">
     <a href="rv64.html">
       Version: 20240411
-    </a>
-  </li>
-</ul>                        </div>
-                      </li>
-                      <li class="component">
-                        <div>
-                          <a class="title" href="../../../profiles/index.html">RISC-V Profiles</a>
-                        </div>                        <div class="version-item is-active">
-                          <div>
-                            <button class="version-toggle" type="button">
-                              <span></span>
-                              Published
-                            </button>
-                          </div>
-                          <ul class="versions">
-  <li class="version">
-    <a href="../../../profiles/index.html">
-      Latest
     </a>
   </li>
 </ul>                        </div>

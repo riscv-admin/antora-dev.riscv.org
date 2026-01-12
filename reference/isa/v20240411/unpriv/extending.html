@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Extending RISC-V :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://riscv-admin.github.io/antora-dev.riscv.org/isa/unpriv/extending.html">
+    <link rel="canonical" href="https://docs.riscv.org/isa/unpriv/extending.html">
     <link rel="prev" href="rv-32-64g.html">
     <link rel="next" href="naming.html">
     <meta name="generator" content="Antora 3.1.14">
@@ -20,20 +20,20 @@
     <link rel="stylesheet" href="../../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="4dad22af931922564b42095647c1499b126a4498"> 
+    <meta name="antora-ui-version" content="e4a784d1e135d8d3c687a46f0e5a735e0d6f3a3e"> 
     <meta name="version" content="v20240411">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
-    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="../../../_/img/favicon.ico">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-NXLCGZF4"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','GTM-NXLCGZF4')</script>
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/vnd.microsoft.icon">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img class="riscvlogo riscvlogo--light" src="../../../_/img/risc-v_logo.svg" alt="RISCV" />
-        <img class="riscvlogo riscvlogo--dark" src="../../../_/img/risc-v_logo_white.svg" alt="RISCV" />
+        <img id="riscvlogo" src="../../../_/img/risc-v_logo.svg" alt="RISCV" />
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -296,127 +296,127 @@
     <a class="nav-link"  href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html#sec:rv32">RV32I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="rv32.html#sec:rv32">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32e.html#sec:rv32e">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+    <a class="nav-link"  href="rv32e.html#sec:rv32e">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv64.html">RV64I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="rv128.html">Chapter 5. RV128I Base Integer Instruction Set, Version 1.7</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+    <a class="nav-link"  href="zifencei.html">Chapter 6. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html#zicsr">"Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html#zicsr">Chapter 7. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="counters.html#sec:counters">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+    <a class="nav-link"  href="counters.html#sec:counters">Chapter 8. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintntl.html">"Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+    <a class="nav-link"  href="zihintntl.html">Chapter 9. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintpause.html">"Zihintpause" Extension for Pause Hint, Version 2.0</a>
+    <a class="nav-link"  href="zihintpause.html">Chapter 10. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a>
+    <a class="nav-link"  href="zimop.html">Chapter 11. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+    <a class="nav-link"  href="zicond.html">Chapter 12. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a>
+    <a class="nav-link"  href="m-st-ext.html">Chapter 13. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a>
+    <a class="nav-link"  href="a-st-ext.html">Chapter 14. "A" Extension for Atomic Instructions, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zawrs.html">"Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+    <a class="nav-link"  href="zawrs.html">Chapter 15. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zacas.html">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+    <a class="nav-link"  href="zacas.html">Chapter 16. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rvwmo.html">RVWMO Memory Consistency Model, Version 2.0</a>
+    <a class="nav-link"  href="rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a>
+    <a class="nav-link"  href="ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+    <a class="nav-link"  href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+    <a class="nav-link"  href="zfa.html">Chapter 24. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+    <a class="nav-link"  href="zfinx.html">Chapter 25. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a>
+    <a class="nav-link"  href="c-st-ext.html">Chapter 26. "C" Extension for Compressed Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+    <a class="nav-link"  href="zc.html">Chapter 27. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
+    <a class="nav-link"  href="b-st-ext.html">Chapter 28. "B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="j-st-ext.html">"J" Extension for Dynamically Translated Languages, Version 1.0.0</a>
+    <a class="nav-link"  href="j-st-ext.html">Chapter 29. "J" Extension for Dynamically Translated Languages, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="p-st-ext.html">"P" Extension for Packed SIMD Instructions, Version 1.0.0</a>
+    <a class="nav-link"  href="p-st-ext.html">Chapter 30. "P" Extension for Packed SIMD Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
+    <a class="nav-link"  href="v-st-ext.html">Chapter 31. "V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+    <a class="nav-link"  href="scalar-crypto.html">Chapter 32. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 33. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="extending.html">Appendix: Extending the RISC-V ISA</a>
+    <a class="nav-link"  href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">Document Revision History</a>
+    <a class="nav-link"  href="history.html">Chapter 37. Document Revision History</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-eplan.html">RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-formal.html">Formal Memory Model Specifications, Version 0.1</a>
+    <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-examples.html">Vector Assembly Code Examples</a>
+    <a class="nav-link"  href="vector-examples.html">Appendix C. Vector Assembly Code Examples</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="calling-convention.html">Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="calling-convention.html">Appendix D. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -434,64 +434,64 @@
     <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-intro.html">Introduction</a>
+    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smepmp.html">"Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/supervisor.html">Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/supervisor.html">Chapter 10. Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svnapot.html">"Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a>
+    <a class="nav-link"  href="../priv/svnapot.html">Chapter 11. "Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svpbmt.html">"Svpbmt" Extension for Page-Based Memory Types, Version 1.0</a>
+    <a class="nav-link"  href="../priv/svpbmt.html">Chapter 12. "Svpbmt" Extension for Page-Based Memory Types, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svinval.html">"Svinval" Extension for Fine-Grained Address-Translation Cache Invalidation, Version 1.0</a>
+    <a class="nav-link"  href="../priv/svinval.html">Chapter 13. "Svinval" Extension for Fine-Grained Address-Translation Cache Invalidation, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svadu.html">"Svadu" Extension for Hardware Updating of A/D Bits, Version 1.0</a>
+    <a class="nav-link"  href="../priv/svadu.html">Chapter 14. "Svadu" Extension for Hardware Updating of A/D Bits, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svvptc.html">"Svvptc" Extension for Obviating Memory-Management Instructions after Marking PTEs Valid, Version 1.0</a>
+    <a class="nav-link"  href="../priv/svvptc.html">Chapter 15. "Svvptc" Extension for Obviating Memory-Management Instructions after Marking PTEs Valid, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sstc.html">Chapter 16. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 17. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 18. "H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-history.html">History</a>
+    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
   </li>
 </ul>
   </li>
@@ -618,7 +618,7 @@
     <ul>
       <li><a href="../index.html">ISA Specifications</a></li>
       <li>Volume I: RISC-V Unprivileged ISA Specification</li>
-      <li><a href="extending.html">Appendix: Extending the RISC-V ISA</a></li>
+      <li><a href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a></li>
     </ul>
   </nav>
 </div><div class="admonitionblock important latest">
@@ -659,14 +659,14 @@ for supervisor-level extensions described in the second volume.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="extension-terminology"><a class="anchor" href="#extension-terminology"></a>1. Extension Terminology</h2>
+<h2 id="35-1-extension-terminology"><a class="anchor" href="#35-1-extension-terminology"></a>35.1. Extension Terminology</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section defines some standard terminology for describing RISC-V
 extensions.</p>
 </div>
 <div class="sect2">
-<h3 id="standard-versus-non-standard-extension"><a class="anchor" href="#standard-versus-non-standard-extension"></a>1.1. Standard versus Non-Standard Extension</h3>
+<h3 id="35-1-1-standard-versus-non-standard-extension"><a class="anchor" href="#35-1-1-standard-versus-non-standard-extension"></a>35.1.1. Standard versus Non-Standard Extension</h3>
 <div class="paragraph">
 <p>Any RISC-V processor implementation must support a base integer ISA
 (RV32I, RV32E, RV64I, RV64E, or RV128I). In addition, an implementation may
@@ -691,7 +691,7 @@ some eventually being promoted to standard extensions.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="instruction-encoding-spaces-and-prefixes"><a class="anchor" href="#instruction-encoding-spaces-and-prefixes"></a>1.2. Instruction Encoding Spaces and Prefixes</h3>
+<h3 id="35-1-2-instruction-encoding-spaces-and-prefixes"><a class="anchor" href="#35-1-2-instruction-encoding-spaces-and-prefixes"></a>35.1.2. Instruction Encoding Spaces and Prefixes</h3>
 <div class="paragraph">
 <p>An instruction encoding space is some number of instruction bits within
 which a base ISA or ISA extension is encoded. RISC-V supports varying
@@ -843,7 +843,7 @@ extensions into a single global encoding.
 </table>
 </div>
 <div class="sect2">
-<h3 id="greenfield-versus-brownfield-extensions"><a class="anchor" href="#greenfield-versus-brownfield-extensions"></a>1.3. Greenfield versus Brownfield Extensions</h3>
+<h3 id="35-1-3-greenfield-versus-brownfield-extensions"><a class="anchor" href="#35-1-3-greenfield-versus-brownfield-extensions"></a>35.1.3. Greenfield versus Brownfield Extensions</h3>
 <div class="paragraph">
 <p>We use the term <em>greenfield extension</em> to describe an extension that
 begins populating a new instruction encoding space, and hence can only
@@ -911,7 +911,7 @@ complete base encoding.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="standard-compatible-global-encodings"><a class="anchor" href="#standard-compatible-global-encodings"></a>1.4. Standard-Compatible Global Encodings</h3>
+<h3 id="35-1-4-standard-compatible-global-encodings"><a class="anchor" href="#35-1-4-standard-compatible-global-encodings"></a>35.1.4. Standard-Compatible Global Encodings</h3>
 <div class="paragraph">
 <p>A complete or <em>global</em> encoding of an ISA for an actual RISC-V
 implementation must allocate a unique non-conflicting prefix for every
@@ -934,7 +934,7 @@ any RISC-V standard-compatible global encoding.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="guaranteed-non-standard-encoding-space"><a class="anchor" href="#guaranteed-non-standard-encoding-space"></a>1.5. Guaranteed Non-Standard Encoding Space</h3>
+<h3 id="35-1-5-guaranteed-non-standard-encoding-space"><a class="anchor" href="#35-1-5-guaranteed-non-standard-encoding-space"></a>35.1.5. Guaranteed Non-Standard Encoding Space</h3>
 <div class="paragraph">
 <p>To support development of proprietary custom extensions, portions of the
 encoding space are guaranteed to never be used by standard extensions.</p>
@@ -943,7 +943,7 @@ encoding space are guaranteed to never be used by standard extensions.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="risc-v-extension-design-philosophy"><a class="anchor" href="#risc-v-extension-design-philosophy"></a>2. RISC-V Extension Design Philosophy</h2>
+<h2 id="35-2-risc-v-extension-design-philosophy"><a class="anchor" href="#35-2-risc-v-extension-design-philosophy"></a>35.2. RISC-V Extension Design Philosophy</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>We intend to support a large number of independently developed
@@ -996,7 +996,7 @@ development.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="fix32b"><a class="anchor" href="#fix32b"></a>3. Extensions within fixed-width 32-bit instruction format</h2>
+<h2 id="fix32b"><a class="anchor" href="#fix32b"></a>35.3. Extensions within fixed-width 32-bit instruction format</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, we discuss adding extensions to implementations that
@@ -1018,7 +1018,7 @@ for many restricted accelerators and research prototypes.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="available-30-bit-instruction-encoding-spaces"><a class="anchor" href="#available-30-bit-instruction-encoding-spaces"></a>3.1. Available 30-bit instruction encoding spaces</h3>
+<h3 id="35-3-1-available-30-bit-instruction-encoding-spaces"><a class="anchor" href="#35-3-1-available-30-bit-instruction-encoding-spaces"></a>35.3.1. Available 30-bit instruction encoding spaces</h3>
 <div class="paragraph">
 <p>In the standard encoding, three of the available 30-bit instruction
 encoding spaces (those with 2-bit prefixes <code>00</code>, <code>01</code>, and <code>10</code>) are used to
@@ -1029,7 +1029,7 @@ available encoding space within the 32-bit format.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="available-25-bit-instruction-encoding-spaces"><a class="anchor" href="#available-25-bit-instruction-encoding-spaces"></a>3.2. Available 25-bit instruction encoding spaces</h3>
+<h3 id="35-3-2-available-25-bit-instruction-encoding-spaces"><a class="anchor" href="#35-3-2-available-25-bit-instruction-encoding-spaces"></a>35.3.2. Available 25-bit instruction encoding spaces</h3>
 <div class="paragraph">
 <p>A 25-bit instruction encoding space corresponds to a major opcode in the
 base and standard extension encodings.</p>
@@ -1065,7 +1065,7 @@ to 16 available for extensions.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="available-22-bit-instruction-encoding-spaces"><a class="anchor" href="#available-22-bit-instruction-encoding-spaces"></a>3.3. Available 22-bit instruction encoding spaces</h3>
+<h3 id="35-3-3-available-22-bit-instruction-encoding-spaces"><a class="anchor" href="#35-3-3-available-22-bit-instruction-encoding-spaces"></a>35.3.3. Available 22-bit instruction encoding spaces</h3>
 <div class="paragraph">
 <p>A 22-bit encoding space corresponds to a funct3 minor opcode space in
 the base and standard extension encodings. Several major opcodes have a
@@ -1080,7 +1080,7 @@ decoding.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="other-spaces"><a class="anchor" href="#other-spaces"></a>3.4. Other spaces</h3>
+<h3 id="35-3-4-other-spaces"><a class="anchor" href="#35-3-4-other-spaces"></a>35.3.4. Other spaces</h3>
 <div class="paragraph">
 <p>Smaller spaces are available under certain major opcodes, and not all
 minor opcodes are entirely filled.</p>
@@ -1089,7 +1089,7 @@ minor opcodes are entirely filled.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="adding-aligned-64-bit-instruction-extensions"><a class="anchor" href="#adding-aligned-64-bit-instruction-extensions"></a>4. Adding aligned 64-bit instruction extensions</h2>
+<h2 id="35-4-adding-aligned-64-bit-instruction-extensions"><a class="anchor" href="#35-4-adding-aligned-64-bit-instruction-extensions"></a>35.4. Adding aligned 64-bit instruction extensions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The simplest approach to provide space for extensions that are too large
@@ -1128,7 +1128,7 @@ variable-length instruction encodings.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="supporting-vliw-encodings"><a class="anchor" href="#supporting-vliw-encodings"></a>5. Supporting VLIW encodings</h2>
+<h2 id="35-5-supporting-vliw-encodings"><a class="anchor" href="#35-5-supporting-vliw-encodings"></a>35.5. Supporting VLIW encodings</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Although RISC-V was not designed as a base for a pure VLIW machine, VLIW
@@ -1137,7 +1137,7 @@ approaches. In all cases, the base 32-bit encoding has to be supported
 to allow use of any standard software tools.</p>
 </div>
 <div class="sect2">
-<h3 id="fixed-size-instruction-group"><a class="anchor" href="#fixed-size-instruction-group"></a>5.1. Fixed-size instruction group</h3>
+<h3 id="35-5-1-fixed-size-instruction-group"><a class="anchor" href="#35-5-1-fixed-size-instruction-group"></a>35.5.1. Fixed-size instruction group</h3>
 <div class="paragraph">
 <p>The simplest approach is to define a single large naturally aligned
 instruction format (e.g., 128 bits) within which VLIW operations are
@@ -1148,7 +1148,7 @@ VLIW code size expansion to VLIW-accelerated functions.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encoded-length-groups"><a class="anchor" href="#encoded-length-groups"></a>5.2. Encoded-Length Groups</h3>
+<h3 id="35-5-2-encoded-length-groups"><a class="anchor" href="#35-5-2-encoded-length-groups"></a>35.5.2. Encoded-Length Groups</h3>
 <div class="paragraph">
 <p>Another approach is to use the standard length encoding from
 <a href="intro.html#instlengthcode" class="xref page">RISC-V instruction length encoding</a> to encode parallel
@@ -1170,7 +1170,7 @@ virtual memory pages).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="fixed-size-instruction-bundles"><a class="anchor" href="#fixed-size-instruction-bundles"></a>5.3. Fixed-Size Instruction Bundles</h3>
+<h3 id="35-5-3-fixed-size-instruction-bundles"><a class="anchor" href="#35-5-3-fixed-size-instruction-bundles"></a>35.5.3. Fixed-Size Instruction Bundles</h3>
 <div class="paragraph">
 <p>Another approach, similar to Itanium, is to use a larger naturally
 aligned fixed instruction bundle size (e.g., 128 bits) across which
@@ -1181,7 +1181,7 @@ to be supported.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="end-of-group-bits-in-prefix"><a class="anchor" href="#end-of-group-bits-in-prefix"></a>5.4. End-of-Group bits in Prefix</h3>
+<h3 id="35-5-4-end-of-group-bits-in-prefix"><a class="anchor" href="#35-5-4-end-of-group-bits-in-prefix"></a>35.5.4. End-of-Group bits in Prefix</h3>
 <div class="paragraph">
 <p>None of the above approaches retains the RISC-V encoding for the
 individual operations within a VLIW instruction. Yet another approach is
@@ -1203,8 +1203,8 @@ registers in the standard 30-bit encoding space.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="rv-32-64g.html">RV32/64G Instruction Set Listings</a></span>
-  <span class="next"><a href="naming.html">ISA Extension Naming Conventions</a></span>
+  <span class="prev"><a href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a></span>
+  <span class="next"><a href="naming.html">Chapter 36. ISA Extension Naming Conventions</a></span>
 </nav>
 </article>  </div>
 </main>
@@ -1235,24 +1235,6 @@ registers in the standard 30-bit encoding space.</p>
   <li class="version">
     <a href="extending.html">
       Version: 20240411
-    </a>
-  </li>
-</ul>                        </div>
-                      </li>
-                      <li class="component">
-                        <div>
-                          <a class="title" href="../../../profiles/index.html">RISC-V Profiles</a>
-                        </div>                        <div class="version-item is-active">
-                          <div>
-                            <button class="version-toggle" type="button">
-                              <span></span>
-                              Published
-                            </button>
-                          </div>
-                          <ul class="versions">
-  <li class="version">
-    <a href="../../../profiles/index.html">
-      Latest
     </a>
   </li>
 </ul>                        </div>

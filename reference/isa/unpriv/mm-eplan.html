@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>RVWMO Explanatory Material, Version 0.1 :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://riscv-admin.github.io/antora-dev.riscv.org/isa/unpriv/mm-eplan.html">
+    <link rel="canonical" href="https://docs.riscv.org/isa/unpriv/mm-eplan.html">
     <link rel="prev" href="history.html">
     <link rel="next" href="mm-formal.html">
     <meta name="generator" content="Antora 3.1.14">
@@ -20,20 +20,20 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="4dad22af931922564b42095647c1499b126a4498"> 
+    <meta name="antora-ui-version" content="e4a784d1e135d8d3c687a46f0e5a735e0d6f3a3e"> 
     <meta name="version" content="v20250508">
     <meta name="component" content="isa">
     <meta name="latest-version" content="true">
-    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="../../_/img/favicon.ico">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-NXLCGZF4"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','GTM-NXLCGZF4')</script>
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/vnd.microsoft.icon">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img class="riscvlogo riscvlogo--light" src="../../_/img/risc-v_logo.svg" alt="RISCV" />
-        <img class="riscvlogo riscvlogo--dark" src="../../_/img/risc-v_logo_white.svg" alt="RISCV" />
+        <img id="riscvlogo" src="../../_/img/risc-v_logo.svg" alt="RISCV" />
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -296,124 +296,124 @@
     <a class="nav-link"  href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">RV32I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+    <a class="nav-link"  href="rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv64.html">RV64I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+    <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">"Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="counters.html">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+    <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintntl.html">"Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+    <a class="nav-link"  href="zihintntl.html">Chapter 8. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintpause.html">"Zihintpause" Extension for Pause Hint, Version 2.0</a>
+    <a class="nav-link"  href="zihintpause.html">Chapter 9. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a>
+    <a class="nav-link"  href="zimop.html">Chapter 10. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+    <a class="nav-link"  href="zicond.html">Chapter 11. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a>
+    <a class="nav-link"  href="m-st-ext.html">Chapter 12. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a>
+    <a class="nav-link"  href="a-st-ext.html">Chapter 13. "A" Extension for Atomic Instructions, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zawrs.html">"Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+    <a class="nav-link"  href="zawrs.html">Chapter 14. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zacas.html">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+    <a class="nav-link"  href="zacas.html">Chapter 15. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zabha.html">"Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
+    <a class="nav-link"  href="zabha.html">Chapter 16. "Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rvwmo.html">RVWMO Memory Consistency Model, Version 2.0</a>
+    <a class="nav-link"  href="rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a>
+    <a class="nav-link"  href="ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+    <a class="nav-link"  href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="bfloat16.html">"BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="bfloat16.html">Chapter 24. "BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+    <a class="nav-link"  href="zfa.html">Chapter 25. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+    <a class="nav-link"  href="zfinx.html">Chapter 26. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a>
+    <a class="nav-link"  href="c-st-ext.html">Chapter 27. "C" Extension for Compressed Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+    <a class="nav-link"  href="zc.html">Chapter 28. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
+    <a class="nav-link"  href="b-st-ext.html">Chapter 29. "B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
+    <a class="nav-link"  href="v-st-ext.html">Chapter 30. "V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+    <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="unpriv-cfi.html">Control-flow Integrity (CFI)</a>
+    <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Appendix: Extending the RISC-V ISA</a>
+    <a class="nav-link"  href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">Document Revision History</a>
+    <a class="nav-link"  href="history.html">Chapter 37. Document Revision History</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="mm-eplan.html">RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-formal.html">Formal Memory Model Specifications, Version 0.1</a>
+    <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="calling-convention.html">Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -431,64 +431,64 @@
     <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-intro.html">Introduction</a>
+    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smepmp.html">"Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smdbltrp.html">"Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smctr.html">"Smctr" Control Transfer Records Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/supervisor.html">Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
+    <a class="nav-link"  href="../priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/ssdbltrp.html">"Ssdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/zpm.html">Pointer Masking Extensions, Version 1.0.0</a>
+    <a class="nav-link"  href="../priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-history.html">History</a>
+    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
   </li>
 </ul>
   </li>
@@ -615,7 +615,7 @@
     <ul>
       <li><a href="../index.html">ISA Specifications</a></li>
       <li>Volume I: RISC-V Unprivileged ISA Specification</li>
-      <li><a href="mm-eplan.html">RVWMO Explanatory Material, Version 0.1</a></li>
+      <li><a href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a></li>
     </ul>
   </nav>
 </div><h1 id="page-title" class="page">RVWMO Explanatory Material, Version 0.1</h1>
@@ -635,7 +635,7 @@ other discrepancies are unintentional.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="whyrvwmo"><a class="anchor" href="#whyrvwmo"></a>1. Why RVWMO?</h2>
+<h2 id="whyrvwmo"><a class="anchor" href="#whyrvwmo"></a>Why RVWMO?</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Memory consistency models fall along a loose spectrum from weak to
@@ -682,7 +682,7 @@ code if compatibility with non-Ztso implementations is desired.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="litmustests"><a class="anchor" href="#litmustests"></a>2. Litmus Tests</h2>
+<h2 id="litmustests"><a class="anchor" href="#litmustests"></a>Litmus Tests</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The explanations in this chapter make use of <em>litmus tests</em>, or small
@@ -936,14 +936,14 @@ use as part of the RISC-V compliance test suite as well.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="explaining-the-rvwmo-rules"><a class="anchor" href="#explaining-the-rvwmo-rules"></a>3. Explaining the RVWMO Rules</h2>
+<h2 id="explaining-the-rvwmo-rules"><a class="anchor" href="#explaining-the-rvwmo-rules"></a>Explaining the RVWMO Rules</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In this section, we provide explanation and examples for all of the
 RVWMO rules and axioms.</p>
 </div>
 <div class="sect2">
-<h3 id="preserved-program-order-and-global-memory-order"><a class="anchor" href="#preserved-program-order-and-global-memory-order"></a>3.1. Preserved Program Order and Global Memory Order</h3>
+<h3 id="preserved-program-order-and-global-memory-order"><a class="anchor" href="#preserved-program-order-and-global-memory-order"></a>Preserved Program Order and Global Memory Order</h3>
 <div class="paragraph">
 <p>Preserved program order represents the subset of program order that must
 be respected within the global memory order. Conceptually, events from
@@ -985,7 +985,7 @@ described below.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="loadvalueaxiom"><a class="anchor" href="#loadvalueaxiom"></a>3.2. Load value axiom</h3>
+<h3 id="loadvalueaxiom"><a class="anchor" href="#loadvalueaxiom"></a>Load value axiom</h3>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -1326,7 +1326,7 @@ correct</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="atomicityaxiom"><a class="anchor" href="#atomicityaxiom"></a>3.3. Atomicity axiom</h3>
+<h3 id="atomicityaxiom"><a class="anchor" href="#atomicityaxiom"></a>Atomicity axiom</h3>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -1432,7 +1432,7 @@ store may simply fall onto the same cache line.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="mm-progress"><a class="anchor" href="#mm-progress"></a>3.4. Progress axiom</h3>
+<h3 id="mm-progress"><a class="anchor" href="#mm-progress"></a>Progress axiom</h3>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -1472,7 +1472,7 @@ harts.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="mm-overlap"><a class="anchor" href="#mm-overlap"></a>3.5. Overlapping-Address Orderings (<a href="#overlapping-ordering">Rules 1-3</a>)</h3>
+<h3 id="mm-overlap"><a class="anchor" href="#mm-overlap"></a>Overlapping-Address Orderings (<a href="#overlapping-ordering">Rules 1-3</a>)</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1804,7 +1804,7 @@ rules apply to each of the component memory accesses independently.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="mm-fence"><a class="anchor" href="#mm-fence"></a>3.6. Fences (<a href="#overlapping-ordering">Rule 4</a>)</h3>
+<h3 id="mm-fence"><a class="anchor" href="#mm-fence"></a>Fences (<a href="#overlapping-ordering">Rule 4</a>)</h3>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -1876,7 +1876,7 @@ memory models that are not multi-copy atomic.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sec:memory:acqrel"><a class="anchor" href="#sec:memory:acqrel"></a>3.7. Explicit Synchronization (<a href="#overlapping-ordering">Rules 5-8</a>)</h3>
+<h3 id="sec:memory:acqrel"><a class="anchor" href="#sec:memory:acqrel"></a>Explicit Synchronization (<a href="#overlapping-ordering">Rules 5-8</a>)</h3>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -2008,7 +2008,7 @@ about "cumulativity" when analyzing ordering annotations.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sec:memory:dependencies"><a class="anchor" href="#sec:memory:dependencies"></a>3.8. Syntactic Dependencies (<a href="#overlapping-ordering">Rules 9-11</a>)</h3>
+<h3 id="sec:memory:dependencies"><a class="anchor" href="#sec:memory:dependencies"></a>Syntactic Dependencies (<a href="#overlapping-ordering">Rules 9-11</a>)</h3>
 <div id="ppo-addr" class="admonitionblock important">
 <table>
 <tr>
@@ -2263,7 +2263,7 @@ flag in question.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="memory-ppopipeline"><a class="anchor" href="#memory-ppopipeline"></a>3.9. Pipeline Dependencies (<a href="#overlapping-ordering">Rules 12-13</a>)</h3>
+<h3 id="memory-ppopipeline"><a class="anchor" href="#memory-ppopipeline"></a>Pipeline Dependencies (<a href="#overlapping-ordering">Rules 12-13</a>)</h3>
 <div id="addrdatarfi" class="admonitionblock important">
 <table>
 <tr>
@@ -2559,7 +2559,7 @@ addresses do indeed overlap.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="beyond-main-memory"><a class="anchor" href="#beyond-main-memory"></a>4. Beyond Main Memory</h2>
+<h2 id="beyond-main-memory"><a class="anchor" href="#beyond-main-memory"></a>Beyond Main Memory</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>RVWMO does not currently attempt to formally describe how FENCE.I,
@@ -2571,7 +2571,7 @@ Privileged Architecture Manual, and the behavior of I/O fences and the
 effects of PMAs are described below.</p>
 </div>
 <div class="sect2">
-<h3 id="coherence-and-cacheability"><a class="anchor" href="#coherence-and-cacheability"></a>4.1. Coherence and Cacheability</h3>
+<h3 id="coherence-and-cacheability"><a class="anchor" href="#coherence-and-cacheability"></a>Coherence and Cacheability</h3>
 <div class="paragraph">
 <p>The RISC-V Privileged ISA defines Physical Memory Attributes (PMAs)
 which specify, among other things, whether portions of the address space
@@ -2618,7 +2618,7 @@ legal. This distinction does not affect the memory model.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="io-ordering"><a class="anchor" href="#io-ordering"></a>4.2. I/O Ordering</h3>
+<h3 id="io-ordering"><a class="anchor" href="#io-ordering"></a>I/O Ordering</h3>
 <div class="paragraph">
 <p>For I/O, the load value axiom and atomicity axiom in general do not
 apply, as both reads and writes might have device-specific side effects
@@ -2731,7 +2731,7 @@ those external devices and buses.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="memory_porting"><a class="anchor" href="#memory_porting"></a>5. Code Porting and Mapping Guidelines</h2>
+<h2 id="memory_porting"><a class="anchor" href="#memory_porting"></a>Code Porting and Mapping Guidelines</h2>
 <div class="sectionbody">
 <table id="tsomappings" class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 11. Mappings from TSO operations to RISC-V operations</caption>
@@ -3406,7 +3406,7 @@ require platform-specific SW (e.g., memory-mapped I/O).</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="implementation-guidelines"><a class="anchor" href="#implementation-guidelines"></a>6. Implementation Guidelines</h2>
+<h2 id="implementation-guidelines"><a class="anchor" href="#implementation-guidelines"></a>Implementation Guidelines</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The RVWMO and RVTSO memory models by no means preclude
@@ -3692,7 +3692,7 @@ cases be legal, if for example there were no data dependency between (d)
 and (e).</p>
 </div>
 <div class="sect2">
-<h3 id="possible-future-extensions"><a class="anchor" href="#possible-future-extensions"></a>6.1. Possible Future Extensions</h3>
+<h3 id="possible-future-extensions"><a class="anchor" href="#possible-future-extensions"></a>Possible Future Extensions</h3>
 <div class="paragraph">
 <p>We expect that any or all of the following possible future extensions
 would be compatible with the RVWMO memory model:</p>
@@ -3720,10 +3720,10 @@ would be compatible with the RVWMO memory model:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="discrepancies"><a class="anchor" href="#discrepancies"></a>7. Known Issues</h2>
+<h2 id="discrepancies"><a class="anchor" href="#discrepancies"></a>Known Issues</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="mixedrsw"><a class="anchor" href="#mixedrsw"></a>7.1. Mixed-size RSW</h3>
+<h3 id="mixedrsw"><a class="anchor" href="#mixedrsw"></a>Mixed-size RSW</h3>
 <table id="rsw1" class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 18. Mixed-size discrepancy (permitted by axiomatic models, forbidden by operational model)</caption>
 <colgroup>
@@ -3930,8 +3930,8 @@ of this rule to RVWMO.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="history.html">Document Revision History</a></span>
-  <span class="next"><a href="mm-formal.html">Formal Memory Model Specifications, Version 0.1</a></span>
+  <span class="prev"><a href="history.html">Chapter 37. Document Revision History</a></span>
+  <span class="next"><a href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a></span>
 </nav>
 </article>  </div>
 </main>
@@ -3962,24 +3962,6 @@ of this rule to RVWMO.</p>
   <li class="version">
     <a href="../v20240411/unpriv/mm-eplan.html">
       Version: 20240411
-    </a>
-  </li>
-</ul>                        </div>
-                      </li>
-                      <li class="component">
-                        <div>
-                          <a class="title" href="../../profiles/index.html">RISC-V Profiles</a>
-                        </div>                        <div class="version-item is-active">
-                          <div>
-                            <button class="version-toggle" type="button">
-                              <span></span>
-                              Published
-                            </button>
-                          </div>
-                          <ul class="versions">
-  <li class="version">
-    <a href="../../profiles/index.html">
-      Latest
     </a>
   </li>
 </ul>                        </div>

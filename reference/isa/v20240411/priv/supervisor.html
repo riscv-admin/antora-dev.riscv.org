@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Supervisor-Level ISA, Version 1.13 :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://riscv-admin.github.io/antora-dev.riscv.org/isa/priv/supervisor.html">
+    <link rel="canonical" href="https://docs.riscv.org/isa/priv/supervisor.html">
     <link rel="prev" href="smcdeleg.html">
     <link rel="next" href="svnapot.html">
     <meta name="generator" content="Antora 3.1.14">
@@ -20,20 +20,20 @@
     <link rel="stylesheet" href="../../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="4dad22af931922564b42095647c1499b126a4498"> 
+    <meta name="antora-ui-version" content="e4a784d1e135d8d3c687a46f0e5a735e0d6f3a3e"> 
     <meta name="version" content="v20240411">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
-    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="../../../_/img/favicon.ico">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-NXLCGZF4"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','GTM-NXLCGZF4')</script>
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/vnd.microsoft.icon">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img class="riscvlogo riscvlogo--light" src="../../../_/img/risc-v_logo.svg" alt="RISCV" />
-        <img class="riscvlogo riscvlogo--dark" src="../../../_/img/risc-v_logo_white.svg" alt="RISCV" />
+        <img id="riscvlogo" src="../../../_/img/risc-v_logo.svg" alt="RISCV" />
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -296,127 +296,127 @@
     <a class="nav-link"  href="../unpriv/colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/intro.html">Introduction</a>
+    <a class="nav-link"  href="../unpriv/intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv32.html#sec:rv32">RV32I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="../unpriv/rv32.html#sec:rv32">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv32e.html#sec:rv32e">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/rv32e.html#sec:rv32e">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv64.html">RV64I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="../unpriv/rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv128.html">RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link"  href="../unpriv/rv128.html">Chapter 5. RV128I Base Integer Instruction Set, Version 1.7</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/zifencei.html">Chapter 6. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zicsr.html#zicsr">"Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/zicsr.html#zicsr">Chapter 7. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/counters.html#sec:counters">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/counters.html#sec:counters">Chapter 8. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zihintntl.html">"Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/zihintntl.html">Chapter 9. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zihintpause.html">"Zihintpause" Extension for Pause Hint, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/zihintpause.html">Chapter 10. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/zimop.html">Chapter 11. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+    <a class="nav-link"  href="../unpriv/zicond.html">Chapter 12. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/m-st-ext.html">Chapter 13. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a>
+    <a class="nav-link"  href="../unpriv/a-st-ext.html">Chapter 14. "A" Extension for Atomic Instructions, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zawrs.html">"Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+    <a class="nav-link"  href="../unpriv/zawrs.html">Chapter 15. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zacas.html">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+    <a class="nav-link"  href="../unpriv/zacas.html">Chapter 16. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rvwmo.html">RVWMO Memory Consistency Model, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+    <a class="nav-link"  href="../unpriv/cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="../unpriv/f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="../unpriv/d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="../unpriv/q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/zfa.html">Chapter 24. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/zfinx.html">Chapter 25. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/c-st-ext.html">Chapter 26. "C" Extension for Compressed Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+    <a class="nav-link"  href="../unpriv/zc.html">Chapter 27. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
+    <a class="nav-link"  href="../unpriv/b-st-ext.html">Chapter 28. "B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/j-st-ext.html">"J" Extension for Dynamically Translated Languages, Version 1.0.0</a>
+    <a class="nav-link"  href="../unpriv/j-st-ext.html">Chapter 29. "J" Extension for Dynamically Translated Languages, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/p-st-ext.html">"P" Extension for Packed SIMD Instructions, Version 1.0.0</a>
+    <a class="nav-link"  href="../unpriv/p-st-ext.html">Chapter 30. "P" Extension for Packed SIMD Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/v-st-ext.html">Chapter 31. "V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+    <a class="nav-link"  href="../unpriv/scalar-crypto.html">Chapter 32. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/vector-crypto.html">Chapter 33. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv-32-64g.html">RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="../unpriv/rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/extending.html">Appendix: Extending the RISC-V ISA</a>
+    <a class="nav-link"  href="../unpriv/extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/naming.html">ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="../unpriv/naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/history.html">Document Revision History</a>
+    <a class="nav-link"  href="../unpriv/history.html">Chapter 37. Document Revision History</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/mm-eplan.html">RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="../unpriv/mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/mm-formal.html">Formal Memory Model Specifications, Version 0.1</a>
+    <a class="nav-link"  href="../unpriv/mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/vector-examples.html">Vector Assembly Code Examples</a>
+    <a class="nav-link"  href="../unpriv/vector-examples.html">Appendix C. Vector Assembly Code Examples</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/calling-convention.html">Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="../unpriv/calling-convention.html">Appendix D. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -434,64 +434,64 @@
     <a class="nav-link"  href="priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-intro.html">Introduction</a>
+    <a class="nav-link"  href="priv-intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-csrs.html">Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="machine.html">Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smepmp.html">"Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link"  href="smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="supervisor.html">Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="supervisor.html">Chapter 10. Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="svnapot.html">"Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a>
+    <a class="nav-link"  href="svnapot.html">Chapter 11. "Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="svpbmt.html">"Svpbmt" Extension for Page-Based Memory Types, Version 1.0</a>
+    <a class="nav-link"  href="svpbmt.html">Chapter 12. "Svpbmt" Extension for Page-Based Memory Types, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="svinval.html">"Svinval" Extension for Fine-Grained Address-Translation Cache Invalidation, Version 1.0</a>
+    <a class="nav-link"  href="svinval.html">Chapter 13. "Svinval" Extension for Fine-Grained Address-Translation Cache Invalidation, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="svadu.html">"Svadu" Extension for Hardware Updating of A/D Bits, Version 1.0</a>
+    <a class="nav-link"  href="svadu.html">Chapter 14. "Svadu" Extension for Hardware Updating of A/D Bits, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="svvptc.html">"Svvptc" Extension for Obviating Memory-Management Instructions after Marking PTEs Valid, Version 1.0</a>
+    <a class="nav-link"  href="svvptc.html">Chapter 15. "Svvptc" Extension for Obviating Memory-Management Instructions after Marking PTEs Valid, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="sstc.html">Chapter 16. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="sscofpmf.html">Chapter 17. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="hypervisor.html">Chapter 18. "H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link"  href="priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-history.html">History</a>
+    <a class="nav-link"  href="priv-history.html">Chapter 20. History</a>
   </li>
 </ul>
   </li>
@@ -618,7 +618,7 @@
     <ul>
       <li><a href="../index.html">ISA Specifications</a></li>
       <li>Volume II: RISC-V Privileged ISA Specification</li>
-      <li><a href="supervisor.html">Supervisor-Level ISA, Version 1.13</a></li>
+      <li><a href="supervisor.html">Chapter 10. Supervisor-Level ISA, Version 1.13</a></li>
     </ul>
   </nav>
 </div><div class="admonitionblock important latest">
@@ -668,7 +668,7 @@ some other implementation-defined mechanism.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="supervisor-csrs"><a class="anchor" href="#supervisor-csrs"></a>1. Supervisor CSRs</h2>
+<h2 id="10-1-supervisor-csrs"><a class="anchor" href="#10-1-supervisor-csrs"></a>10.1. Supervisor CSRs</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A number of CSRs are provided for the supervisor.</p>
@@ -697,7 +697,7 @@ supervisor-level CSR descriptions.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="sstatus"><a class="anchor" href="#sstatus"></a>1.1. Supervisor Status Register (<code>sstatus</code>)</h3>
+<h3 id="sstatus"><a class="anchor" href="#sstatus"></a>10.1.1. Supervisor Status Register (<code>sstatus</code>)</h3>
 <div class="paragraph">
 <p>The <code>sstatus</code> register is an SXLEN-bit read/write register formatted as
 shown in <a href="#sstatusreg-rv32">Supervisor-mode status register (<code>sstatus</code>) when SXLEN=32.</a> when SXLEN=32
@@ -706,23 +706,23 @@ register keeps track of the processor&#8217;s current operating state.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNqtkk9rg0AQxe_5FMOelLLgn5CknkuhB6GklBZKD2tco3TdlXVK0ga_e1cSk2iqlbanZd_8ZkbfPivmCUPUJQSFYJmEl8O5CxIlkSYsz8QHkPAK3AJumRARW70R2FfL7JODN61e7YllBoFWG5rybJ0iTB1oiSzmmiYSZCYOuuAJ0pzptdnmOw1cN1-okdrykhZmghkGvmdPjK7ZhppCPdF8bVkwCTMIIqXNphJ2VWWfQcR3SUN5A5RzpKYQIN8iZXKVKg2kRKaR9Ld6_a1cxgON7vWx0R-gFqOo-QjqzLB5B_rJ1u6-h5uTq62KVRsA5Ol-eUeaLG32ySCREnE3QXYzZtFeED4vT3_U2f0Y9pR-vdzv88k98ylAVTRX-i41Fwx5XCuIKv-uUif9Uu99lNkfH2VU0t0TtRigRoXuv6CBYH4BM3SFoA==" alt="Diagram">
+<img src="_images/diag-40956e1f7dd608f05519cabcd530b07faf223d68.svg" alt="Diagram">
 </div>
 </div>
 <div id="sstatusreg-rv32" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrNlE1rwkAQhu_-imFPhrKQr37lWFDwUJBKP6B42JiNhq67YbNFW8l_7wZNNbHaodjSU8jMM_MOLzvTTXjKjNEFRLlgmYTnzXcVpUoamrJ5Jt6A3J6Bl0OfCRGzyQuBdbbI3jn4YTl2Ol3bCLRa0BnPpjMDoQuNIEu4pqkEmYlNXPDU0DnTU6sWuDVcFe9FY7XkBc1tB9sMAt_p2LhmC2oTVUc7bZEzCR5EsdJWqYBVWTo7EPEuSE35R6hzFBWiqABF-SjKQ1EuhrrGQFcY6BIDoXxH2d5w3fCloUxOZkoDKQzThhyu3HrstSq5TI7UoVw_bPr3jzQyKq9_6avUXDDDkypijJrvZ1rST6NnL3LHnwOE0Mz32_lGuls5AeRxeDcg9b4v1ttLYiWS9pY7X7chD0dVyGg43Dp0mgGabcj9Te-AghUf9E6tHrQkTq_glz-4cP7OM_gvEO5s_S20PcvBb8l9ACsIWaI=?id=sstatusreg-rv32" alt="Supervisor-mode status register (`sstatus`) when SXLEN=32.">
+<img src="_images/diag-194bf8b2262c36f408debe86eafd15fa3bb73dc3.svg" alt="Supervisor-mode status register (`sstatus`) when SXLEN=32.">
 </div>
 <div class="title">Figure 1. Supervisor-mode status register (<code>sstatus</code>) when SXLEN=32.</div>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNq1VF1rwjAUffdXXPJkGYEmLZvr8xgMJgxFJsgeUptqWUxKmqGb-N-Xol1bXbu6uafAveeecz_Tj3jMjNEZBKlgiYTZ4d0GsZIGx2yViHdAwysgKdwzIUI2f0Ww92bJBwfq716cXt8SgVZrvOTJYmnAd6FmZBHXOJYgE3GwCx4bvGJ6YdU8twDnwSfWUG14hlPLYMnAo07P2jVbY-vIGW22Wcok-BCESlulDLa7nVMBoWsPFSjagqKowmX4xmAm50ulAWWGaYOaQz2_MZTLqC2wzIw0oipFkhYqirqgSLUVZxVJ3cbQ9iLJbZf2k0En1E0H1L5hP3fzeGXOXqzxXZlNzdPP2wPo-Wn0gIpzWu-PA4VKRMdH5BQ0g7rAZPo4I4H78iXjXUbGr8sMp6OGQtB4Mrx0jbRtWIFRadFw_CY1F8zwKLcYo1bfefK_5NT-f0MnXfaUljs_aEGVc23Rq_1Lf8rqYqBfX9gnHHUatg==" alt="Diagram">
+<img src="_images/diag-f3610963f10f46694b435739ab2699643cb8edee.svg" alt="Diagram">
 </div>
 </div>
 <div id="sstatusreg" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrNlE1rwkAQhu_-imFPhrKQr37lWFDwUJBKP6B42JiNhq67YbNFW8l_7wZNNbHaodjSU8jMM_MOLzvTTXjKjNEFRLlgmYTnzXcVpUoamrJ5Jt6A3J6Bl0OfCRGzyQuBdbbI3jn4YTl2Ol3bCLRa0BnPpjMDoQuNIEu4pqkEmYlNXPDU0DnTU6sWuDVcFe9FY7XkBc1tB9sMAt_p2LhmC2oTVUc7bZEzCR5EsdJWqYBVWTo7EPEuSE35R6hzFBWiqABF-SjKQ1EuhrrGQFcY6BIDoXxH2d5w3fCloUxOZkoDKQzThhyu3HrstSq5TI7UoVw_bPr3jzQyKq9_6avUXDDDkypijJrvZ1rST6NnL3LHnwOE0Mz32_lGuls5AeRxeDcg9b4v1ttLYiWS9pY7X7chD0dVyGg43Dp0mgGabcj9Te-AghUf9E6tHrQkTq_glz-4cP7OM_gvEO5s_S20PcvBb8l9ACsIWaI=?id=sstatusreg" alt="Supervisor-mode status register (`sstatus`) when SXLEN=64.">
+<img src="_images/diag-56f74f547ece809fc3a5ea0c92ec82b5168eb3cb.svg" alt="Supervisor-mode status register (`sstatus`) when SXLEN=64.">
 </div>
 <div class="title">Figure 2. Supervisor-mode status register (<code>sstatus</code>) when SXLEN=64.</div>
 </div>
@@ -768,7 +768,7 @@ is executed, SIE is set to SPIE, then SPIE is set to 1.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="base-isa-control-in-sstatus-register"><a class="anchor" href="#base-isa-control-in-sstatus-register"></a>1.1.1. Base ISA Control in <code>sstatus</code> Register</h4>
+<h4 id="10-1-1-1-base-isa-control-in-sstatus-register"><a class="anchor" href="#10-1-1-1-base-isa-control-in-sstatus-register"></a>10.1.1.1. Base ISA Control in <code>sstatus</code> Register</h4>
 <div class="paragraph">
 <p>The UXL field controls the value of XLEN for U-mode, termed <em>UXLEN</em>,
 which may differ from the value of XLEN for S-mode, termed <em>SXLEN</em>. The
@@ -795,7 +795,7 @@ user-mode memory accesses reference the lowest 4 GiB of the address space.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sum"><a class="anchor" href="#sum"></a>1.1.2. Memory Privilege in <code>sstatus</code> Register</h4>
+<h4 id="sum"><a class="anchor" href="#sum"></a>10.1.1.2. Memory Privilege in <code>sstatus</code> Register</h4>
 <div class="paragraph">
 <p>The MXR (Make eXecutable Readable) bit modifies the privilege with which
 loads access virtual memory. When MXR=0, only loads from pages marked
@@ -854,7 +854,7 @@ the alternate mapping.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="endianness-control-in-sstatus-register"><a class="anchor" href="#endianness-control-in-sstatus-register"></a>1.1.3. Endianness Control in <code>sstatus</code> Register</h4>
+<h4 id="10-1-1-3-endianness-control-in-sstatus-register"><a class="anchor" href="#10-1-1-3-endianness-control-in-sstatus-register"></a>10.1.1.3. Endianness Control in <code>sstatus</code> Register</h4>
 <div class="paragraph">
 <p>The UBE bit is a <strong>WARL</strong> field that controls the endianness of explicit memory
 accesses made from U-mode, which may differ from the endianness of
@@ -895,7 +895,7 @@ endianness.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="supervisor-trap-vector-base-address-register-stvec"><a class="anchor" href="#supervisor-trap-vector-base-address-register-stvec"></a>1.2. Supervisor Trap Vector Base Address Register (<code>stvec</code>)</h3>
+<h3 id="10-1-2-supervisor-trap-vector-base-address-register-stvec"><a class="anchor" href="#10-1-2-supervisor-trap-vector-base-address-register-stvec"></a>10.1.2. Supervisor Trap Vector Base Address Register (<code>stvec</code>)</h3>
 <div class="paragraph">
 <p>The <code>stvec</code> register is an SXLEN-bit read/write register that holds trap
 vector configuration, consisting of a vector base address (BASE) and a
@@ -903,7 +903,7 @@ vector mode (MODE).</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrNU8FqwkAQvfsVw54SykJMxMLeLE1P2kI9tCAeNmajoetu2EzRVvz3bpoEa21ClEJ7WnZm3rzhzRsnFglHNDmwTPJUwax6dyzRCmnC16l8AzK5gn4Gd1zKiC9eCJTZPH0X4A_2c7fn2EZg9IauRLpcIQw8OAryWBiaKFCprOJSJEjX3CwtW-DVxQX4JBrprchpZjvYZhD4bs_GDd9Qmyg62mnzjCsYAou0sUw57PZ790sRmT6Pw3vaJ3XpNTAUW6RcLVbaAMmRGyTNeL8RKVTcgjswBmcyeo3IVsYWOc4W7WY0DWeVcsyfd5WAoc7qL31VRkiOIgZWbPyneKQR9fo0czyNU1ACcZ5Gj2OX1AbdlHYjkZbxd1u6nZfdNPGnHS8fmUwebsOua_x3qgV_pNpvOrg07-F4-4MuJz684Lo-AB6FyME=" alt="Supervisor trap vector base address register (`stvec`).">
+<img src="_images/diag-efe1113b8cf503c82d16fdf049c4d92c5c01cdb6.svg" alt="Supervisor trap vector base address register (`stvec`).">
 </div>
 <div class="title">Figure 3. Supervisor trap vector base address register (<code>stvec</code>).</div>
 </div>
@@ -955,25 +955,25 @@ impose a stricter alignment constraint on BASE.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="supervisor-interrupt-registers-sip-and-sie"><a class="anchor" href="#supervisor-interrupt-registers-sip-and-sie"></a>1.3. Supervisor Interrupt Registers (<code>sip</code> and <code>sie</code>)</h3>
+<h3 id="10-1-3-supervisor-interrupt-registers-sip-and-sie"><a class="anchor" href="#10-1-3-supervisor-interrupt-registers-sip-and-sie"></a>10.1.3. Supervisor Interrupt Registers (<code>sip</code> and <code>sie</code>)</h3>
 <div class="paragraph">
 <p>The <code>sip</code> register is an SXLEN-bit read/write register containing
 information on pending interrupts, while <code>sie</code> is the corresponding
 SXLEN-bit read/write register containing interrupt enable bits.
 Interrupt cause number <em>i</em> (as reported in CSR <code>scause</code>,
-<a href="#scause">Supervisor Cause Register (<code>scause</code>)</a>) corresponds with bit <em>i</em> in both <code>sip</code> and
+<a href="#scause">10.1.8. Supervisor Cause Register (<code>scause</code>)</a>) corresponds with bit <em>i</em> in both <code>sip</code> and
 <code>sie</code>. Bits 15:0 are allocated to standard interrupt causes only, while
 bits 16 and above are designated for platform use.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNqVUT1rwzAU3PMrHppsisAfoYO3Di0E0g7t0ELp8BzLsYksCekFpw3-75WbuMRxA-kkdE9373QXFKJEIusgMxJrBe_Hc5-VWhEvsanlJ7DHG4gNPKCUOa42DA5TV38JSObdRzgLvBBY3fJK1OuKYB7BCMRCWF4qULU84lKUxBu0a78tjYbHPXmC5nonHDdewYtBmoQzj1tsuR8Ae3lb3j_xmHnPzqCC-BYyEjviqFaVtsAcoSXvOdfWu3Cw77rwVCC6TBWqOCeeMheKhLVbQ-5qiYy0Ga58q6yQSKKArI_jLzzXRLqZTsZ_CPqVwILXu-dlyIb22kMXLNeyOO8svD6uS5Z_yvqv50lzv8mlyTjpb_Nt4AQ=" alt="Supervisor interrupt-pending register (`sip`).">
+<img src="_images/diag-b33254286a615a4c40783f32b57dae1d76549bb4.svg" alt="Supervisor interrupt-pending register (`sip`).">
 </div>
 <div class="title">Figure 4. Supervisor interrupt-pending register (<code>sip</code>).</div>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNqVUT1rwzAU3PMrHppsisAfoYO3Di0E0g7t0ELp8BzLsYksCekFpw3-75WbuMRxA-kkdE9373QXFKJEIusgMxJrBe_Hc5-VWhEvsanlJ7DHG4gNPKCUOa42DA5TV38JSObdRzgLvBBY3fJK1OuKYB7BCMRCWF4qULU84lKUxBu0a78tjYbHPXmC5nonHDdewYtBmoQzj1tsuR8Ae3lb3j_xmHnPzqCC-BYyEjviqFaVtsAcoSXvOdfWu3Cw77rwVCC6TBWqOCeeMheKhLVbQ-5qiYy0Ga58q6yQSKKArI_jLzzXRLqZTsZ_CPqVwILXu-dlyIb22kMXLNeyOO8svD6uS5Z_yvqv50lzv8mlyTjpb_Nt4AQ=" alt="Supervisor interrupt-enable register (`sie`).">
+<img src="_images/diag-b33254286a615a4c40783f32b57dae1d76549bb4.svg" alt="Supervisor interrupt-enable register (`sie`).">
 </div>
 <div class="title">Figure 5. Supervisor interrupt-enable register (<code>sie</code>).</div>
 </div>
@@ -1014,13 +1014,13 @@ and <a href="#siereg-standard">Standard portion (bits 15:0) of <code>sie</code>.
 </div>
 <div id="sipreg-standard" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrdk8FLwzAUxu_7Kx45rUigTTudvYoDQVGYN_HwuqZrMUtLEth09H83tStuzpVm4MVT4b3v-_JL-t445RkaozTElcBCwsvuu42zUhqa4aoQ70AeLiCoYIZCJLh4I9B2dfHBgUX1qzca2yBQ5ZrmvFjmBiIfDoqYckUzCbIQu7rgmaErVEt7Wuh34sZ8VE3KDde0sgk2DELmjWxd4ZraRpNoaXWFEq4gTkplT9KwrWtvT0SCCbEqwzeGolzkpQKiDSpDeizRkYXLtM8Qko6E9aiYO4nvSHI9BGTqzHHpiDEZghE5YzDX_zIE4-uJTzT3Rmz6I8F5EP1vmIPGuLkQkPubx9ndE-n2r90wv_Z-N51MI_PbNsXN9HyOad5n-qtnZINWbYgo_NdJwVlj_QmxN_bw?id=sipreg-standard" alt="Standard portion (bits 15:0) of `sip`.">
+<img src="_images/diag-d4ff8af3924ac6455f101b40509ed274c3bbf7cc.svg" alt="Standard portion (bits 15:0) of `sip`.">
 </div>
 <div class="title">Figure 6. Standard portion (bits 15:0) of <code>sip</code>.</div>
 </div>
 <div id="siereg-standard" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrdk8FLwzAUxu_7Kx45tUigTTudvcoGguJh3sTD65quxSwtSWDT0f_d1K24OVeagRdPhfe-78sv6XtexnM0RmlIaoGlhJf9d5vklTQ0x1Up3oE8XkFYwwyFSHHxRmDX1eUHBxY3r_7Is0GgqjUteLksDMQBHBUx44rmEmQp9nXBc0NXqJb2tCjoxK35pJpWG65pbRNsGETMH9m6wjW1jTbR0uoaJdxAklbKnqRh2zT-gYiEY2JVhm8MRbkoKgVEG1SG9FjiEwuXWZ8hIh0J61Exd5LAkeR2CMjEmePaEWM8BCN2xmCu_2UIxtcTn2kejNjkR4LzIAbfMEcNr70QkIe7p9n9lHT7t9uwoPF_N51NI_PpLsXN9HyJad5n-qtnZINWbYgo-tdJ4UVj_QlS5vbE?id=siereg-standard" alt="Standard portion (bits 15:0) of `sie`.">
+<img src="_images/diag-bdd8f9144ff139ccde485f890014176740dbd614.svg" alt="Standard portion (bits 15:0) of `sie`.">
 </div>
 <div class="title">Figure 7. Standard portion (bits 15:0) of <code>sie</code>.</div>
 </div>
@@ -1106,7 +1106,7 @@ handled in the following decreasing priority order: SEI, SSI, STI, LCOFI.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="supervisor-timers-and-performance-counters"><a class="anchor" href="#supervisor-timers-and-performance-counters"></a>1.4. Supervisor Timers and Performance Counters</h3>
+<h3 id="10-1-4-supervisor-timers-and-performance-counters"><a class="anchor" href="#10-1-4-supervisor-timers-and-performance-counters"></a>10.1.4. Supervisor Timers and Performance Counters</h3>
 <div class="paragraph">
 <p>Supervisor software uses the same hardware performance monitoring
 facility as user-mode software, including the <code>time</code>, <code>cycle</code>, and
@@ -1119,10 +1119,10 @@ interrupts in terms of the real-time counter, <code>time</code>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="counter-enable-register-scounteren"><a class="anchor" href="#counter-enable-register-scounteren"></a>1.5. Counter-Enable Register (<code>scounteren</code>)</h3>
+<h3 id="10-1-5-counter-enable-register-scounteren"><a class="anchor" href="#10-1-5-counter-enable-register-scounteren"></a>10.1.5. Counter-Enable Register (<code>scounteren</code>)</h3>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNq9kkFLwzAUx-_7FI-cViSlTarTXgXRQ0HEi4iHdE3XYpaWJLDp6Hc3xTkbSmoP6inwfr__e-Ely4KXzBilIW0FqyU8H89DWjbS4JJta_EGKDuDuIUbJkTO1q8IPqmu3zmQpHsJFkvbCFSzwxWvN5WBJAKnyAqucClB1uJYF7w0eMvUxk6j0Zfch0fVvNlzjVvbwTYDSoKFrSu2wxYAojGy19UtswlI80bZURoOXRc4VjTHIlezrMuTtYLU8L3BTK6rRgHShimD_NELb5LLYiJ3fsoRv5TMkegcifSSD8ZTMBrBIb29z4bP5UZ7GE3A4eO4MAzDE4qTUXCwvBFLJhj1sbuH73Euecx85PrJIaOF_vTpfk8idLCsOb3I_0rxX0kf0ECNRQ==" alt="Counter-enable register (`scounteren`)">
+<img src="_images/diag-4f3e88c89fe616d4c5c6fead328f65267e7bbf37.svg" alt="Counter-enable register (`scounteren`)">
 </div>
 <div class="title">Figure 8. Counter-enable register (<code>scounteren</code>)</div>
 </div>
@@ -1163,7 +1163,7 @@ access a counter if the corresponding bits in <code>scounteren</code> and
 </div>
 </div>
 <div class="sect2">
-<h3 id="supervisor-scratch-register-sscratch"><a class="anchor" href="#supervisor-scratch-register-sscratch"></a>1.6. Supervisor Scratch Register (<code>sscratch</code>)</h3>
+<h3 id="10-1-6-supervisor-scratch-register-sscratch"><a class="anchor" href="#10-1-6-supervisor-scratch-register-sscratch"></a>10.1.6. Supervisor Scratch Register (<code>sscratch</code>)</h3>
 <div class="paragraph">
 <p>The <code>sscratch</code> register is an SXLEN-bit read/write register, dedicated
 for use by the supervisor. Typically, <code>sscratch</code> is used to hold a
@@ -1173,13 +1173,13 @@ with a user register to provide an initial working register.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNp1jstqwzAQRff5ikGrmCLwI3Thfbtqu-mmULoY21IsokhmNJAX_vdMSFKcJl0Jzp17dOedschMCerBowvwfXkPtY2BtcW18ztQ709QDPCK3jfYrhSc0-T2BsrF-JPN5iICihvdG7fsGRY53EDsDGkbIDh_4d5Y1mukpfxW5dfjU_mONnFrkh7EIDKoymwmnHCjJQD1-fX28qELJZvTgAGKZ6jZbFljaPtIoBIjsWxuIsmKBIdxzKaC_P-qCd3f4rSZUkvIbf8rqMrxwbhJfCs7AtmmewQ=" alt="Supervisor Scratch Register">
+<img src="_images/diag-34cfa3adb3a239400e2c15dbf150614b44e17cf5.svg" alt="Supervisor Scratch Register">
 </div>
 <div class="title">Figure 9. Supervisor Scratch Register</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="supervisor-exception-program-counter-sepc"><a class="anchor" href="#supervisor-exception-program-counter-sepc"></a>1.7. Supervisor Exception Program Counter (<code>sepc</code>)</h3>
+<h3 id="10-1-7-supervisor-exception-program-counter-sepc"><a class="anchor" href="#10-1-7-supervisor-exception-program-counter-sepc"></a>10.1.7. Supervisor Exception Program Counter (<code>sepc</code>)</h3>
 <div class="paragraph">
 <p><code>sepc</code> is an SXLEN-bit read/write register formatted as shown in
 <a href="#epcreg">Supervisor exception program counter register.</a>. The low bit of <code>sepc</code> (<code>sepc[0]</code>) is always zero. On implementations that support only IALIGN=32, the two low bits (<code>sepc[1:0]</code>) are always zero.</p>
@@ -1206,13 +1206,13 @@ though it may be explicitly written by software.</p>
 </div>
 <div id="epcreg" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNp1jrtqAzEQRXt_xaDKSxDsw6TYPq6cNGkCxsXs7sgrLEtCGrATs_-eCXHCOo9KcO-co7scyCBzytBGh9bD9vpeWhM8a4NH615BPd5BFWGNznXYHxR8ttm-EdSraVcsliKCFE56JLsfGVYl3IQ4UNLGg7fumjsyrI-Y9vJbU34df8C_0i6cKesoBpFBUxcLyROetBSgnl82D0-6UrI5R_RQ3UPLdGaNvh9DApUZE8vmLiRZkeEyTcVcUP6Pkh9-gnMyU-y_4aae_hg2q29F79YneVQ=?id=epcreg" alt="Supervisor exception program counter register.">
+<img src="_images/diag-770d37cd4c46dfb59cb1d81b0b7b7cc8d673c7b7.svg" alt="Supervisor exception program counter register.">
 </div>
 <div class="title">Figure 10. Supervisor exception program counter register.</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="scause"><a class="anchor" href="#scause"></a>1.8. Supervisor Cause Register (<code>scause</code>)</h3>
+<h3 id="scause"><a class="anchor" href="#scause"></a>10.1.8. Supervisor Cause Register (<code>scause</code>)</h3>
 <div class="paragraph">
 <p>The <code>scause</code> register is an SXLEN-bit read-write register formatted as
 shown in <a href="#scausereg">Supervisor Cause register <code>scause</code>.</a>. When a trap is taken into
@@ -1231,7 +1231,7 @@ guaranteed to hold supported exception codes.</p>
 </div>
 <div id="scausereg" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNqdUk1Pg0AQvfdXTPYEMZsAJR64mpqYVA960MR4WMrQEpfdzTJNUcJ_d7HFtlAO9UTy5n3tMF6GuSCyFSRGikLB--HbJLlWxHNRFvIL2OMNhAbuhZSpWH0y2E-r4hshitsPf-Y5I7B6xzdYrDcEcQBnoMjQ8lyBKuQBl5gTL4Vdu7R50JM78QhNdY0VN87BmcE88mcOt2LH3QDYy9ty8cRD5jpXRii4hSTV1uVV0LStP6ZGf9QwgoSwJi7UaqMtsIqEJTZtEByl8UCKKhsKT5UPitDaraFjz3PrRb1CQ4VWcKcznK7Y5fQxTULa9KF8qyxKQZh1CJEuL026tY_x82d6XSAw73X5vPRZfwu7_Z9lqZbZ8AL8ybUMNvqPxr83cbny6f6uOIAjNRpyfwBzUQWL?id=scausereg" alt="Supervisor Cause register `scause`.">
+<img src="_images/diag-4a4b41b5284beb2d109d680b16f80bb7dd7b4ab0.svg" alt="Supervisor Cause register `scause`.">
 </div>
 <div class="title">Figure 11. Supervisor Cause register <code>scause</code>.</div>
 </div>
@@ -1354,7 +1354,7 @@ Hardware error<br>
 </table>
 </div>
 <div class="sect2">
-<h3 id="supervisor-trap-value-stval-register"><a class="anchor" href="#supervisor-trap-value-stval-register"></a>1.9. Supervisor Trap Value (<code>stval</code>) Register</h3>
+<h3 id="10-1-9-supervisor-trap-value-stval-register"><a class="anchor" href="#10-1-9-supervisor-trap-value-stval-register"></a>10.1.9. Supervisor Trap Value (<code>stval</code>) Register</h3>
 <div class="paragraph">
 <p>The <code>stval</code> register is an SXLEN-bit read-write register formatted as
 shown in <a href="#stvalreg">Supervisor Trap Value register.</a>. When a trap is taken into
@@ -1374,7 +1374,7 @@ faulting virtual address.</p>
 </div>
 <div id="stvalreg" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNp1jjtPwzAUhff-iiNPjZClPCqG7DBBly5IiOGmsRsL147sK1qo8t-5iIJSHpOlc-73-Sx7Y4k5ZbSjJxfweH5PrY2BtaW9869Q91eoRtyS9x1tnxU-2-zeDOrV9FQsliJCigc9GLcbGKsSFyH1JmkbEJw_595Y1ntKO_mtKb-OP-BfaRePJutRDCJDUxcLyRMdtBRQm4e7m7WulGzOIwVU12jZHFlT2A4xQWWmxLK5i0lWZJymqZgLyv9RE_qf4JzM_EL-m27q6Y9ls_rS9A5a0XnT?id=stvalreg" alt="Supervisor Trap Value register.">
+<img src="_images/diag-9c289a0641ce933ae2952c317b4ad77c3916d086.svg" alt="Supervisor Trap Value register.">
 </div>
 <div class="title">Figure 12. Supervisor Trap Value register.</div>
 </div>
@@ -1431,7 +1431,7 @@ of SXLEN and ILEN.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="supervisor-environment-configuration-register-senvcfg"><a class="anchor" href="#supervisor-environment-configuration-register-senvcfg"></a>1.10. Supervisor Environment Configuration Register (<code>senvcfg</code>)</h3>
+<h3 id="10-1-10-supervisor-environment-configuration-register-senvcfg"><a class="anchor" href="#10-1-10-supervisor-environment-configuration-register-senvcfg"></a>10.1.10. Supervisor Environment Configuration Register (<code>senvcfg</code>)</h3>
 <div class="paragraph">
 <p>The <code>senvcfg</code> CSR is an SXLEN-bit read/write register, formatted as
 shown in <a href="#senvcfg">Supervisor environment configuration register (<code>senvcfg</code>).</a>, that controls certain
@@ -1439,7 +1439,7 @@ characteristics of the U-mode execution environment.</p>
 </div>
 <div id="senvcfg" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNqlVMFugkAQvfsVkz1Bmk2AxbZ6rNHEpLSmPdS06WGRRUnXhSybaGv4964REbSI2BPJzHvz3sA8jICFVCmZQj_hNBLwkT83_TAWCod0GfFvQN4N2AmMKOc-nX0h2HXT6IeB42afZsfQg0DGK7xg0XyhwLWgUqQBkzgUICKe1zkLFV5SOddqxNqDt-STqh-vWYoTPUEPA-KYHV2XdIV1A9Dr9HH4hG2kPacJFdCFvmJrhamYLWIJKFVUKm3Zj6U2kcImy8wyn7i1VCaCc0RSEJ22mk5BtdtpXr_nfcF0W0nelbesA91eAupuQa08uyeMhtfTWsFuqWDVLlpCGduBgN4mL2O0j1Ieljw6q11MkB_zAGVmcQxWVW3ieYUeqbSuluhVFQYP78PDSse9wehMc1zX-8tbxc3R_8OskRiNn72KxGnsS-G1rfqvdogbOQM6zOo1HEzTpV8Eci4Bkf_J_QK-S-Je?id=senvcfg" alt="Supervisor environment configuration register (`senvcfg`).">
+<img src="_images/diag-ba411ab1e301f55ab0fb120713f1e60e9a62f6b9.svg" alt="Supervisor environment configuration register (`senvcfg`).">
 </div>
 <div class="title">Figure 13. Supervisor environment configuration register (<code>senvcfg</code>).</div>
 </div>
@@ -1551,7 +1551,7 @@ ratification of that extension.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="satp"><a class="anchor" href="#satp"></a>1.11. Supervisor Address Translation and Protection (<code>satp</code>) Register</h3>
+<h3 id="satp"><a class="anchor" href="#satp"></a>10.1.11. Supervisor Address Translation and Protection (<code>satp</code>) Register</h3>
 <div class="paragraph">
 <p>The <code>satp</code> register is an SXLEN-bit read/write register, formatted as
 shown in <a href="#rv32satp">Supervisor address translation and protection register <code>satp</code> when SXLEN=32.</a> for SXLEN=32 and
@@ -1566,7 +1566,7 @@ register are described in <a href="machine.html#virt-control" class="xref page">
 </div>
 <div id="rv32satp" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrtVE1Lw0AQvfdXDHtKkIV8VKm5FaogWC168CAeNs2mDW53w2Yk1ZL_7sY2JUkbTS_iwdOSN-_NTN4-1op4zBB1BkEqWCLheXduglhJpDFbJeIdyPQM3BSumRAhm78S2Faz5IODNyxe7IFlGoFWOV3yZLFEGDrQAFnENY0lyETscMFjpCumF2aa71TkUnyAhmrNM5qaDqYZ-J49MLhmOTUFIL5LzLpZyiSMIAiVNqMy2BSF3WA5e5YPAfI1UibnS6WBZMg0km6p5-2l5y0pl9F3wsZmJ810OpVHRtaF0_vJVeeftrQBqrT6pG9Sc8GQRyWCqFbHKuWlHeLN3a1yJBDrafxwa5MqSfk2FyRUImrnx-6y98Cl0zf-StRPK5Px483k37VTXZvN7vrG9M-ZNvpV0-qu9XquLvuQag8TuBdN3idgN_t2?id=rv32satp" alt="Supervisor address translation and protection register `satp` when SXLEN=32.">
+<img src="_images/diag-cf2342eda91ed518cf259a8b38fa84ecda4ac327.svg" alt="Supervisor address translation and protection register `satp` when SXLEN=32.">
 </div>
 <div class="title">Figure 14. Supervisor address translation and protection register <code>satp</code> when SXLEN=32.</div>
 </div>
@@ -1593,7 +1593,7 @@ corresponding to main memory be representable.</p>
 </div>
 <div id="rv64satp" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrtVMFOg0AQvfcrJnuCmE2gUBK5NakmJlYbPXgwHpaytMTtLlnGUG34dxdbarFFaQ_GgyfCm3nzHsPLWDFPGKLOIcwESyU8bp6rMFESacIWqXgFMj4DN4NLJkTEps8E1tU8fePQ98snu2eZQaBVQec8nc0RfAcaIIu5pokEmYoNLniCdMH0zKh5Tt1ckffQSC15TjMzwQwDr2_3DK5ZQU0BSOARYzfPmIQBhMiXSJmczpUGkiPTaNxGShv9HFZlaTeoTiuVy_gb4uD8ZE3fP1HT__zO4EhNp5V5QHKXOL4dXXS1G6LK6lf6IjUXDHlcIYhqcahSRWAfb3q3Kkkg1sPw7tomdS6LdcpIpET8NY125z9zvOOPfP5kmQzvr0b_Wzt2a5PJTdeY_rmlBb-6tMZV2O7MddoPgBt0atu5TW6_2fYO46MVuw==?id=rv64satp" alt="Supervisor address translation and protection register `satp` when SXLEN=64, for MODE values Bare, Sv39, Sv48, and Sv57.">
+<img src="_images/diag-074dc5fbd1ea1c221bf077c8cfa6f508fbbb791c.svg" alt="Supervisor address translation and protection register `satp` when SXLEN=64, for MODE values Bare, Sv39, Sv48, and Sv57.">
 </div>
 <div class="title">Figure 15. Supervisor address translation and protection register <code>satp</code> when SXLEN=64, for MODE values Bare, Sv39, Sv48, and Sv57.</div>
 </div>
@@ -1654,12 +1654,12 @@ have already been allocated.</p>
 </div>
 <div class="paragraph">
 <p>When SXLEN=32, the only other valid setting for MODE is Sv32, a paged
-virtual-memory scheme described in <a href="#sec:sv32">Sv32: Page-Based 32-bit Virtual-Memory Systems</a>.</p>
+virtual-memory scheme described in <a href="#sec:sv32">10.3. Sv32: Page-Based 32-bit Virtual-Memory Systems</a>.</p>
 </div>
 <div class="paragraph">
 <p>When SXLEN=64, three paged virtual-memory schemes are defined: Sv39,
-Sv48, and Sv57, described in <a href="#sec:sv39">Sv39: Page-Based 39-bit Virtual-Memory System</a>, <a href="#sec:sv48">Sv48: Page-Based 48-bit Virtual-Memory System</a>,
-and <a href="#sv57">Sv57: Page-Based 57-bit Virtual-Memory System</a>, respectively. One additional scheme, Sv64, will be
+Sv48, and Sv57, described in <a href="#sec:sv39">10.4. Sv39: Page-Based 39-bit Virtual-Memory System</a>, <a href="#sec:sv48">10.5. Sv48: Page-Based 48-bit Virtual-Memory System</a>,
+and <a href="#sv57">10.6. Sv57: Page-Based 57-bit Virtual-Memory System</a>, respectively. One additional scheme, Sv64, will be
 defined in a later version of this specification. The remaining MODE
 settings are reserved for future use and may define different
 interpretations of the other fields in <code>satp</code>.</p>
@@ -1704,7 +1704,7 @@ and Sv57.</p>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Bare<br>
 Sv32</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No translation or protection.<br>
-Page-based 32-bit virtual addressing (see <a href="#sec:sv32">Sv32: Page-Based 32-bit Virtual-Memory Systems</a>).</p></td>
+Page-based 32-bit virtual addressing (see <a href="#sec:sv32">10.3. Sv32: Page-Based 32-bit Virtual-Memory Systems</a>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" colspan="3"><p class="tableblock"><strong>SXLEN=64</strong></p></td>
@@ -1733,9 +1733,9 @@ Sv64<br>
 -</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No translation or protection.<br>
 <em>Reserved for standard use</em><br>
-Page-based 39-bit virtual addressing (see <a href="#sec:sv39">Sv39: Page-Based 39-bit Virtual-Memory System</a>).<br>
-Page-based 48-bit virtual addressing (see <a href="#sec:sv48">Sv48: Page-Based 48-bit Virtual-Memory System</a>).<br>
-Page-based 57-bit virtual addressing (see <a href="#sv57">Sv57: Page-Based 57-bit Virtual-Memory System</a>).<br>
+Page-based 39-bit virtual addressing (see <a href="#sec:sv39">10.4. Sv39: Page-Based 39-bit Virtual-Memory System</a>).<br>
+Page-based 48-bit virtual addressing (see <a href="#sec:sv48">10.5. Sv48: Page-Based 48-bit Virtual-Memory System</a>).<br>
+Page-based 57-bit virtual addressing (see <a href="#sv57">10.6. Sv57: Page-Based 57-bit Virtual-Memory System</a>).<br>
 <em>Reserved for page-based 64-bit virtual addressing.</em><br>
 <em>Reserved for standard use</em><br>
 <em>Designated for custom use</em></p></td>
@@ -1823,16 +1823,16 @@ sufficiently large ASID space.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="supervisor-instructions"><a class="anchor" href="#supervisor-instructions"></a>2. Supervisor Instructions</h2>
+<h2 id="10-2-supervisor-instructions"><a class="anchor" href="#10-2-supervisor-instructions"></a>10.2. Supervisor Instructions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In addition to the SRET instruction defined in <a href="machine.html#otherpriv" class="xref page">Other Privileged Instructions</a>, one new supervisor-level instruction is provided.</p>
 </div>
 <div class="sect2 vma">
-<h3 id="sfence"><a class="anchor" href="#sfence"></a>2.1. Supervisor Memory-Management Fence Instruction</h3>
+<h3 id="sfence"><a class="anchor" href="#sfence"></a>10.2.1. Supervisor Memory-Management Fence Instruction</h3>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVddRSCwpKQIqUjcHstWDI4NDXH3VY3UUSioLgMosanUQuk0RuotSkHSagnQaIDQZIWsyRmhKK81LLjFG0ghiqwcEeYYRYWGxIbqNZYkpKUUInSY4dRqh60wszkzBodEczbnmGCHk5urn7KoX5uuI6ujYWgDCkGaa" alt="svg">
+<img src="_images/svg-c0bc413fc04b358c8b4ea3633a5f55840e83aadf.svg" alt="svg">
 </div>
 </div>
 <div class="paragraph">
@@ -1847,7 +1847,7 @@ implicit references by subsequent instructions in that hart to the
 memory-management data structures. The specific set of operations
 ordered by SFENCE.VMA is determined by <em>rs1</em> and <em>rs2</em>, as described
 below. SFENCE.VMA is also used to invalidate entries in the
-address-translation cache associated with a hart (see <a href="#sv32algorithm">Virtual Address Translation Process</a>). Further details on the behavior of this instruction are described in <a href="machine.html#virt-control" class="xref page">Virtualization Support in <code>mstatus</code> Register</a> and <a href="machine.html#pmp-vmem" class="xref page">Physical Memory Protection and Paging</a>.</p>
+address-translation cache associated with a hart (see <a href="#sv32algorithm">10.3.2. Virtual Address Translation Process</a>). Further details on the behavior of this instruction are described in <a href="machine.html#virt-control" class="xref page">Virtualization Support in <code>mstatus</code> Register</a> and <a href="machine.html#pmp-vmem" class="xref page">Physical Memory Protection and Paging</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1914,7 +1914,7 @@ spaces.</p>
 <p>If <em>rs1</em>=<code>x0</code> and <em>rs2</em>&#8800;<code>x0</code>, the fence orders all
 reads and writes made to any level of the page tables, but only for the
 address space identified by integer register <em>rs2</em>. Accesses to <em>global</em>
-mappings (see <a href="#translation">Addressing and Memory Protection</a>) are not ordered. The
+mappings (see <a href="#translation">10.3.1. Addressing and Memory Protection</a>) are not ordered. The
 fence also invalidates all address-translation cache entries matching
 the address space identified by integer register <em>rs2</em>, except for
 entries containing global mappings.</p>
@@ -2131,11 +2131,11 @@ illegal-instruction exception.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="sec:sv32"><a class="anchor" href="#sec:sv32"></a>3. Sv32: Page-Based 32-bit Virtual-Memory Systems</h2>
+<h2 id="sec:sv32"><a class="anchor" href="#sec:sv32"></a>10.3. Sv32: Page-Based 32-bit Virtual-Memory Systems</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>When Sv32 is written to the MODE field in the <code>satp</code> register (see
-<a href="#satp">Supervisor Address Translation and Protection (<code>satp</code>) Register</a>), the supervisor operates in a 32-bit paged
+<a href="#satp">10.1.11. Supervisor Address Translation and Protection (<code>satp</code>) Register</a>), the supervisor operates in a 32-bit paged
 virtual-memory system. In this mode, supervisor and user virtual
 addresses are translated into supervisor physical addresses by
 traversing a radix-tree page table. Sv32 is supported when SXLEN=32 and
@@ -2172,7 +2172,7 @@ permit such behavior to be architecturally exposed.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="translation"><a class="anchor" href="#translation"></a>3.1. Addressing and Memory Protection</h3>
+<h3 id="translation"><a class="anchor" href="#translation"></a>10.3.1. Addressing and Memory Protection</h3>
 <div class="paragraph">
 <p>Sv32 implementations support a 32-bit virtual address space, divided
 into pages. An Sv32 virtual address is partitioned into a virtual page
@@ -2210,7 +2210,7 @@ address.</p>
 </div>
 <div id="sv32va" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNqdj01PwyAYx-_7FE84rTEkQKeHfgBvmp12WXZ4ukJLZECAZNOl310Wp2vVLroTyf_t9zBvpMKUQoTKG9QW1uf3WClnE1W40-YVyNMdcA-PaEyN2xcCH27UbxLEot8Us3keguD2tJO67RIsGIxEbGSgyoLV5qwbqRLdYWgzrWSf4VP5h1q7g4zU54U8BqUoZlkPuKfZAFJyks-NHi3cQ5XkIVG0284FIDFhSPna2oXMj3Ds-2JYFWKyKm1zrXg7k9_K5Bfmwz-ZbLL5C3JYXC2f13zz1eZsvHuy2bTtsZXglIoyXTLiG4KzQf_K7_8YEwPSOPYOzqDvOw==?id=sv32va" alt="Sv32 virtual address.">
+<img src="_images/diag-0b0370ea601159a45ba879d869b04ba6d96d6e06.svg" alt="Sv32 virtual address.">
 </div>
 <div class="title">Figure 16. Sv32 virtual address.</div>
 </div>
@@ -2222,13 +2222,13 @@ of the root page table is stored in the <code>satp</code> register.</p>
 </div>
 <div id="sv32pa" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNqdkE1vwiAYx-9-iiecbBYSoG6HfoDdtng3Hp5aaMkQCJDoNP3uYuZmu61m80Tyf_sB80YqTClEqLxBbWF1OY-VcjZRhVtt3oG8PAD38IzG1Lh5I_DhRn2QIBb9upjN8xAEt6Od1G2XYMFgJGIjA1UWrDYX3UiV6BZDm2kl-wyfyz_U2u1lpD4v5DEoRTHLesAdzQaQsiT5utGjhUeoktwninbTuQAkJgwp37Z2IfMjHPu-GFaFmKxK29wq8ruZ_F4mvzKf_slkk81fkMPicvm64uuvNmfj3bPNpm2PrQSnVJTpmhHfEIP_4OzG69nfYoM1MY6dAMro7zM=?id=sv32pa" alt="SV32 physical address.">
+<img src="_images/diag-56ce50f06ec4156b2f5f13100e1b507fc55df492.svg" alt="SV32 physical address.">
 </div>
 <div class="title">Figure 17. SV32 physical address.</div>
 </div>
 <div id="sec:sv32pte" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrVksFLwzAUxu_7Kx45rUggabupvQmiJ2VMdMLYIV3TtZilJQlsOvq_m7mtNI4G9eYpfO-X7315jwwznjNjlIakFqyUMD-euySvpME5W5fiHdDDBdAa7pgQKVu-IThQXX5wCONmEQyGthGoaoMLXq4KAzEBp8gyrnAuQZbiWBc8N3jN1MqmReR0eW8-q6bVlmtc2w62GURhMLB1xTbYAkARRfa5umYSxpAYvjWYyWVRKUDaMGXsa9NK2XwNu6YJutaQ9Fq5zDxGet0aR7_MpKTX6s_8iuyDVz546YNjHxz5YOyDkQ-GPkh9kJzBLp1MHud00e6Xhq55j0kHExdPn2Yt--a8RY68ceW9K59d-erKmSunrnxB7kQ07Ezzo09FCfj3fpgP_rb_fw4_ARA9kWI=?id=sec%3Asv32pte" alt="Sv32 page table entry.">
+<img src="_images/diag-de618a60e83c7825c98fe751ff409ce3bb328316.svg" alt="Sv32 page table entry.">
 </div>
 <div class="title">Figure 18. Sv32 page table entry.</div>
 </div>
@@ -2340,7 +2340,7 @@ code on pages with U=1.</p>
 <div class="paragraph">
 <p>An alternative PTE format would support different permissions for
 supervisor and user. We omitted this feature because it would be largely
-redundant with the SUM mechanism (see <a href="#sum">Memory Privilege in <code>sstatus</code> Register</a>) and would require more encoding space in the PTE.</p>
+redundant with the SUM mechanism (see <a href="#sum">10.1.1.2. Memory Privilege in <code>sstatus</code> Register</a>) and would require more encoding space in the PTE.</p>
 </div>
 </td>
 </tr>
@@ -2521,7 +2521,7 @@ in RV32D), even when the store address is naturally aligned.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sv32algorithm"><a class="anchor" href="#sv32algorithm"></a>3.2. Virtual Address Translation Process</h3>
+<h3 id="sv32algorithm"><a class="anchor" href="#sv32algorithm"></a>10.3.2. Virtual Address Translation Process</h3>
 <div class="paragraph">
 <p>A virtual address <em>va</em> is translated into a physical address <em>pa</em> as follows:</p>
 </div>
@@ -2664,7 +2664,7 @@ but the behavior is otherwise well defined.</p>
 <div class="paragraph">
 <p>Implementations may also execute the address-translation algorithm
 speculatively at any time, for any virtual address, as long as <code>satp</code> is
-active (as defined in <a href="#satp">Supervisor Address Translation and Protection (<code>satp</code>) Register</a>). Such speculative
+active (as defined in <a href="#satp">10.1.11. Supervisor Address Translation and Protection (<code>satp</code>) Register</a>). Such speculative
 executions have the effect of pre-populating the address-translation
 cache.</p>
 </div>
@@ -2730,7 +2730,7 @@ bits for implementations with narrower physical addresses.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="sec:sv39"><a class="anchor" href="#sec:sv39"></a>4. Sv39: Page-Based 39-bit Virtual-Memory System</h2>
+<h2 id="sec:sv39"><a class="anchor" href="#sec:sv39"></a>10.4. Sv39: Page-Based 39-bit Virtual-Memory System</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section describes a simple paged virtual-memory system for
@@ -2761,7 +2761,7 @@ even further.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="addressing-and-memory-protection"><a class="anchor" href="#addressing-and-memory-protection"></a>4.1. Addressing and Memory Protection</h3>
+<h3 id="addressing-and-memory-protection"><a class="anchor" href="#addressing-and-memory-protection"></a>10.4.1. Addressing and Memory Protection</h3>
 <div class="paragraph">
 <p>Sv39 implementations support a 39-bit virtual address space, divided
 into pages. An Sv39 address is partitioned as shown in
@@ -2793,19 +2793,19 @@ supervisor address regions.</p>
 </div>
 <div id="sv39va" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNqtkc9LwzAUx-_7Kx49rUggScvU_gHeFE9exg6va9IGsyQkgU1H_3cznNuqdmDxFPj-eJ8X3rwREmP0ASqnURlYHt99Ja2JROJG6TfIHm-AOXhArWtcv2bw6Qb1LoCX_SqfzdMg8HZLOqHaLkJJYSBiIzyRBozSR10LGckGfZtoBf0KH8o_1NruRCAuTUjDoOD5LOketyQZkBV3WVo3OEwNqKLYRYJm3VkPWYjoY9q2tj7xA-z7Ph9U6WhVmOZKkd9PZnI2lUknMxmfyGTnZW__yKSjzV-Ql8WX56clX53ai-HYg8uuunTUddgKsFIGEU8RVn7Dny-7GP_c_4UuTsPKYewDBL8pCA==?id=sv39va" alt="Sv39 virtual address.">
+<img src="_images/diag-1abc9a2fed5d17636919fb7e458b6ce8b3ba4073.svg" alt="Sv39 virtual address.">
 </div>
 <div class="title">Figure 19. Sv39 virtual address.</div>
 </div>
 <div id="sv39pa" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNqtUU9LwzAUv-9TPHJakUCSduL6Abwpu48dXtekLWZJSQKbjn53M5zaKh0YPAV-f997WdZSYQjOQ9lr7Axsr--5VNYEqvDQ6VcgT3fAe3hErSvcvxD4YH33JkEUwy5bLGMQOHukreyaNkDBYAJiLR1VBkynr7iWKtADuia25exTfDH_Qit7kp72MSGGQS6yRcQdHmkkgKxWJI7rezRQQBnkKVA0-9Y6ID6gC3HayrrY7-E8DNnYmrNZqzT1DaNYJ3cKntrJkju5SOzkPLnzT6cdGzeb563YfbkfprEXlt9k2SzbYyPBKuVlmEgmV77_puaXW_-baPQ1P1Tv2mco1g==?id=sv39pa" alt="Sv39 physical address.">
+<img src="_images/diag-30f0b3822fd96cece4635639eca58633f7b7138e.svg" alt="Sv39 physical address.">
 </div>
 <div class="title">Figure 20. Sv39 physical address.</div>
 </div>
 <div id="sv39pte" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrVk0tvwjAMx-98CisnqilSk5bnbdO0nUCIPZiEOASa0mqlrZJosCG--4J4LUMNKDvtVNk_23_HtesRj5lSQkK3zFiaw3j_XXfjIlc4Zos0-wTUuwFSwgPLsimbvSPYUZl-caDhZuLV6roQiGKJE57OEwWhD4aTRVzgOIc8zfb-jMcKL5iYa7XAPwRvk8-802LFJS51BV0MAurVtF-wJdYAUDNAut1pIbSEhPVm4xmUWimxUn9LZcl0L9BVfKUwy2dJIQBJxYTSc6hKbYTHVPorleeRLTGoTLykSduOmrTlrEk6jpqk7a7pO2p2nCVdJ9uyrpcNNmwwtEHrOVivwXoM_hn8SfvICB7c9Z5PIzMLDbnk4oNHR94w-WDQH9PJkYbnlFipX0mHT6MqdG_2f2uaj6b5YppvpjkyzaFpviJzcOTi3zqsnXXHdoO0nHjz9PJrDuSvQfSaIOK8jP8AfgO4H1ip?id=sv39pte" alt="Sv39 page table entry.">
+<img src="_images/diag-beed6ade106087e4449846ecba47afe435ea5c8f.svg" alt="Sv39 page table entry.">
 </div>
 <div class="title">Figure 21. Sv39 page table entry.</div>
 </div>
@@ -2855,13 +2855,13 @@ supports 2 MiB <em>megapages</em> and 1 GiB <em>gigapages</em>, each of which mu
 </div>
 <div class="paragraph">
 <p>The algorithm for virtual-to-physical address translation is the same as
-in <a href="#sv32algorithm">Virtual Address Translation Process</a>, except LEVELS equals 3 and PTESIZE equals 8.</p>
+in <a href="#sv32algorithm">10.3.2. Virtual Address Translation Process</a>, except LEVELS equals 3 and PTESIZE equals 8.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="sec:sv48"><a class="anchor" href="#sec:sv48"></a>5. Sv48: Page-Based 48-bit Virtual-Memory System</h2>
+<h2 id="sec:sv48"><a class="anchor" href="#sec:sv48"></a>10.5. Sv48: Page-Based 48-bit Virtual-Memory System</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section describes a simple paged virtual-memory system for
@@ -2891,7 +2891,7 @@ that assumes Sv39.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="addressing-and-memory-protection-1"><a class="anchor" href="#addressing-and-memory-protection-1"></a>5.1. Addressing and Memory Protection</h3>
+<h3 id="addressing-and-memory-protection-1"><a class="anchor" href="#addressing-and-memory-protection-1"></a>10.5.1. Addressing and Memory Protection</h3>
 <div class="paragraph">
 <p>Sv48 implementations support a 48-bit virtual address space, divided
 into pages. An Sv48 address is partitioned as shown in
@@ -2903,19 +2903,19 @@ the 12-bit page offset is untranslated.</p>
 </div>
 <div id="sv48va" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrNkrFqwzAQhvc8xaEppggs2biNH6BbQ6YuIcM5lmxTRTKSIGmD370KTdqUYENFhk6C___vvpN081pI9N46KHuFnYb1-TyW0mhPJe469Q7k5QFYD8-oVIXbNwJfrus-BPB82CSzeWgE1uxpK7qm9ZCn8EvEWlgqNehOnXUlpKc7tE2gZeklfCq-UStzEI72oUNoBhlPZkG3uKfBOHUM07oeNTAoK2MDycFxGJKrEMkfySWVQenFwVPU29ZYIM6j9WS8NFuMlgpdTxU-xTPTSCZfRDM5i2Wm0UzGI5mMRTMjn3Ziz_68ja-r5TrbfM9R3Lp80mWTbjrq9tgIMFI64Uci97zlzyoW_yZ0tXBFxFd_ApK8rv8=?id=sv48va" alt="Sv48 virtual address.">
+<img src="_images/diag-78365ce07def203a46c5d41e86fe44b2b82fee68.svg" alt="Sv48 virtual address.">
 </div>
 <div class="title">Figure 22. Sv48 virtual address.</div>
 </div>
 <div id="sv48pa" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNq9kkFuwjAQRfecYpQVUWUpdgKFHKC7VuwRiwmxk6jGjmxL0KLcvUalJClKJLJgZWn-__PGY89zLtA5YyGtJVYKttfznAqtHBF4qOQXBO8vQGt4Qykz3H8G8Kva6psDS5pdOJv7RmD0kZS8KkoHSQS9IubcEKFAVfJal1w4ckBTeFoc_Zkv4btqpk_cktp38M0gZuHM1w0eiRcgWCwCP66tUUECqeMnR1DtS20gsA6N89Nm2ni-hXPThN1ovB6McpWPBVe3YPwoMxqMjjPZejKT0anMaDKTsolMSiczH1ptN7jZfGzj3S296re9qKxVl_cqHVWjQbXGgoMWwnLXs_T28drONXz19nMsn2HqvO4_1w9b-2N_?id=sv48pa" alt="Sv48 physical address.">
+<img src="_images/diag-90d0c94fee3eaf80b936cf9ee110021c4b79f4a0.svg" alt="Sv48 physical address.">
 </div>
 <div class="title">Figure 23. Sv48 physical address.</div>
 </div>
 <div id="sv48pte" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrVk0tvwjAMx-_7FFZPoKlSm5TnbdO0nUCIPZiEOASaQrWSVkk02BDffUG8lqEalp12quyf_7bj2pWYJ0xrqaBdZCwVMNx9V-0kF9pP2DzNPsDrXENYwD3LsjGbvHmwpSr95ECi9ah6VTGJQOYLf8bT6UxDFIDlZDGXfiJApNnOn_FE-3Mmp6YaDfbBG_GJd5wvufILk8EkA0qqV8Yv2cI3ALw69Uy741yaEgpW63XVogSlIUqDDVUFE0CgrflS-0xMZrkET2kmtZlDmbQWHaThDykXMSakpcJzNWmjtF28Jq071yRNx5qk4TzbsOUubbpLA8eXunfrOtsGutQYrGEwwiB6hOgNoicYnMDvtOtZwb3bztNxZHaiPldcvvP4wKnNe73ukI4wSlAaHml0SoNS2n8clKE7-3U3tvlgm8-2-WqbA9vs2-aLZ481PPsv90uJbuB2VMhFXRTV-l1Q9McgcklQ6LzP_wB-AUcalEU=?id=sv48pte" alt="Sv48 page table entry.">
+<img src="_images/diag-cf758c77a8c18632ce647d2932269d694a5c030d.svg" alt="Sv48 page table entry.">
 </div>
 <div class="title">Figure 24. Sv48 page table entry.</div>
 </div>
@@ -2929,14 +2929,14 @@ exception is raised if the physical address is insufficiently aligned.</p>
 </div>
 <div class="paragraph">
 <p>The algorithm for virtual-to-physical address translation is the same as
-in <a href="#sv32algorithm">Virtual Address Translation Process</a>, except LEVELS equals 4 and
+in <a href="#sv32algorithm">10.3.2. Virtual Address Translation Process</a>, except LEVELS equals 4 and
 PTESIZE equals 8.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="sv57"><a class="anchor" href="#sv57"></a>6. Sv57: Page-Based 57-bit Virtual-Memory System</h2>
+<h2 id="sv57"><a class="anchor" href="#sv57"></a>10.6. Sv57: Page-Based 57-bit Virtual-Memory System</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section describes a simple paged virtual-memory system designed for
@@ -2966,7 +2966,7 @@ that assumes Sv48.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="addressing-and-memory-protection-2"><a class="anchor" href="#addressing-and-memory-protection-2"></a>6.1. Addressing and Memory Protection</h3>
+<h3 id="addressing-and-memory-protection-2"><a class="anchor" href="#addressing-and-memory-protection-2"></a>10.6.1. Addressing and Memory Protection</h3>
 <div class="paragraph">
 <p>Sv57 implementations support a 57-bit virtual address space, divided
 into pages. An Sv57 address is partitioned as shown in
@@ -2978,19 +2978,19 @@ the 12-bit page offset is untranslated.</p>
 </div>
 <div id="sv57va" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrNksFqwzAQRO_5isWnmCKwZaeO_QG9tfTUS8hhHUu2qSIZSZC0wf9ehaaJnRJDdMpJsLMzb1g0rxhHa7WBohPYSlid3kPBlbSE47YVXxC8PkHcwQsKUeLmM4Bf1bTfDGjar8PZ3AWBVjvSsLZuLKQRjIZYMU24BNmK01wwbskWde1oSfS3fDT_m5ZqzwzpXIILg4SGMzfXuCNOgGDxHLi6pkPngMKyvSUoN43SEBiL2rq2pdKOb-DQ9-HQmi7PVnplZbKaMmbezCT3ZCZLf2bkyaS5N5PGvszImxlTT2Z8Kbu4k3nXaYfGj_e3Vbq-cMexRzWZVOmkGk-q0U21w5qB4twwe17Jrprnw2PdussjLg3-Rzbe-gHK654Z?id=sv57va" alt="Sv57 virtual address.">
+<img src="_images/diag-974886df6158fc60f28ef5296c6420d172094f4c.svg" alt="Sv57 virtual address.">
 </div>
 <div class="title">Figure 25. Sv57 virtual address.</div>
 </div>
 <div id="sv57pa" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrFkkFvwiAYhu_-ii892SwkQFtn-wN22-LdeKAW2mYIDZDoZvrfh5nT1sVmctmJ5Hvf53sIYV5xwZwzFopOslbB-nweC6GVQ4LtWvkB0esTkA5emJQl275H8J3a9pMDTftNPJv7RWD0HjW8rRsHKYbRkFXcIKFAtfI8l1w4tGOm9rYE_5RP8K9pqQ_cos5v8MsgofHMzw3bIx9AlGWRv67tmCegcPzgEFPbRhuIrGPG-duW2ni_hWPfx0M0XV5QeoNyVU2Bz8HOJA90JstwJw500jzYSUmoEwc7Cb2LTjsJCXbiR5RDcLV6W6ebC52N157SZDKlkymZTPE1XYzTjtUctBCWu1Fl2Ll-xOz-u-T_VVr86X_ctL4Anp6d-Q==?id=sv57pa" alt="Sv57 physical address.">
+<img src="_images/diag-fd261849fbb4176194c52fd8848cae2f0a6e2e34.svg" alt="Sv57 physical address.">
 </div>
 <div class="title">Figure 26. Sv57 physical address.</div>
 </div>
 <div id="sv57pte" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/bytefield/svg/eNrVlU1vwjAMhu_8Cqsn0FSpSUMp3DZN2wmE2AeTEIdAU6hW2iqNBhvivy8I1hFYQ4l22E6V_dh5Y8t16gELqRA8h04W0yiB0f677oRpIuyQLqL4HazuFaAM7mgcT-j01YIdzaMPBphsxo1aXR4EPF3acxbN5gKIA4qTBozbYQJJFO_9MQuFvaB8JtVc5yt4m3zinaQrltuZPEEeBi5u1KSf06UtAViea8nrTlIuJXJYbzYNhWItRVrqbGme0QQIdARbCZsm03nKwcoF5UL2oSy1SYpU9yiVJYEu0TXWRI6hZttY0jdUbGnbroNNHSQ6qB0T7ZRoh8Q5gYe0ZynB_ZvuY9EyrB40YDnjbywoeEvl_X6vDA0ehmXoVr3AtWreq-aTar6o5lA1B6r5bKmVo7Pt3jXhzJDsaioPIqRKFK4ShIxn4B_AAyp3cPHXHrf_5zCv0r7CFy4P4pWm6rcHaRprui1DTdcz1sS-oSZuGWuitqEm8s01HTNNzaBdPI5ySY7I-Ps9O6WulmItRVrqlNHfLNA_fKsrPeh_I0hT3Sc8aWCe?id=sv57pte" alt="Sv57 page table entry.">
+<img src="_images/diag-b4890c1ecb7d8e0dfdf4aa235ff3950218acb682.svg" alt="Sv57 page table entry.">
 </div>
 <div class="title">Figure 27. Sv57 page table entry.</div>
 </div>
@@ -3005,15 +3005,15 @@ aligned.</p>
 </div>
 <div class="paragraph">
 <p>The algorithm for virtual-to-physical address translation is the same as
-in <a href="#sv32algorithm">Virtual Address Translation Process</a>, except LEVELS equals 5 and
+in <a href="#sv32algorithm">10.3.2. Virtual Address Translation Process</a>, except LEVELS equals 5 and
 PTESIZE equals 8.</p>
 </div>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a></span>
-  <span class="next"><a href="svnapot.html">"Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a></span>
+  <span class="prev"><a href="smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a></span>
+  <span class="next"><a href="svnapot.html">Chapter 11. "Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a></span>
 </nav>
 </article>  </div>
 </main>
@@ -3044,24 +3044,6 @@ PTESIZE equals 8.</p>
   <li class="version">
     <a href="supervisor.html">
       Version: 20240411
-    </a>
-  </li>
-</ul>                        </div>
-                      </li>
-                      <li class="component">
-                        <div>
-                          <a class="title" href="../../../profiles/index.html">RISC-V Profiles</a>
-                        </div>                        <div class="version-item is-active">
-                          <div>
-                            <button class="version-toggle" type="button">
-                              <span></span>
-                              Published
-                            </button>
-                          </div>
-                          <ul class="versions">
-  <li class="version">
-    <a href="../../../profiles/index.html">
-      Latest
     </a>
   </li>
 </ul>                        </div>

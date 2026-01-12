@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>"F" Extension for Single-Precision Floating-Point, Version 2.2 :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://riscv-admin.github.io/antora-dev.riscv.org/isa/unpriv/f-st-ext.html">
+    <link rel="canonical" href="https://docs.riscv.org/isa/unpriv/f-st-ext.html">
     <link rel="prev" href="cmo.html">
     <link rel="next" href="d-st-ext.html">
     <meta name="generator" content="Antora 3.1.14">
@@ -20,20 +20,20 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="4dad22af931922564b42095647c1499b126a4498"> 
+    <meta name="antora-ui-version" content="e4a784d1e135d8d3c687a46f0e5a735e0d6f3a3e"> 
     <meta name="version" content="v20250508">
     <meta name="component" content="isa">
     <meta name="latest-version" content="true">
-    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="../../_/img/favicon.ico">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-NXLCGZF4"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','GTM-NXLCGZF4')</script>
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/vnd.microsoft.icon">
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img class="riscvlogo riscvlogo--light" src="../../_/img/risc-v_logo.svg" alt="RISCV" />
-        <img class="riscvlogo riscvlogo--dark" src="../../_/img/risc-v_logo_white.svg" alt="RISCV" />
+        <img id="riscvlogo" src="../../_/img/risc-v_logo.svg" alt="RISCV" />
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -296,124 +296,124 @@
     <a class="nav-link"  href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">RV32I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32e.html">RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+    <a class="nav-link"  href="rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv64.html">RV64I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zifencei.html">"Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+    <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">"Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="counters.html">"Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+    <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintntl.html">"Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+    <a class="nav-link"  href="zihintntl.html">Chapter 8. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintpause.html">"Zihintpause" Extension for Pause Hint, Version 2.0</a>
+    <a class="nav-link"  href="zihintpause.html">Chapter 9. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zimop.html">"Zimop" Extension for May-Be-Operations, Version 1.0</a>
+    <a class="nav-link"  href="zimop.html">Chapter 10. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicond.html">"Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+    <a class="nav-link"  href="zicond.html">Chapter 11. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="m-st-ext.html">"M" Extension for Integer Multiplication and Division, Version 2.0</a>
+    <a class="nav-link"  href="m-st-ext.html">Chapter 12. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="a-st-ext.html">"A" Extension for Atomic Instructions, Version 2.1</a>
+    <a class="nav-link"  href="a-st-ext.html">Chapter 13. "A" Extension for Atomic Instructions, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zawrs.html">"Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+    <a class="nav-link"  href="zawrs.html">Chapter 14. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zacas.html">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+    <a class="nav-link"  href="zacas.html">Chapter 15. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zabha.html">"Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
+    <a class="nav-link"  href="zabha.html">Chapter 16. "Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rvwmo.html">RVWMO Memory Consistency Model, Version 2.0</a>
+    <a class="nav-link"  href="rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ztso-st-ext.html">"Ztso" Extension for Total Store Ordering, Version 1.0</a>
+    <a class="nav-link"  href="ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+    <a class="nav-link"  href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="q-st-ext.html">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfh.html">"Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="bfloat16.html">"BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="bfloat16.html">Chapter 24. "BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfa.html">"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+    <a class="nav-link"  href="zfa.html">Chapter 25. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfinx.html">"Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+    <a class="nav-link"  href="zfinx.html">Chapter 26. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="c-st-ext.html">"C" Extension for Compressed Instructions, Version 2.0</a>
+    <a class="nav-link"  href="c-st-ext.html">Chapter 27. "C" Extension for Compressed Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zc.html">"Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+    <a class="nav-link"  href="zc.html">Chapter 28. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="b-st-ext.html">"B" Extension for Bit Manipulation, Version 1.0.0</a>
+    <a class="nav-link"  href="b-st-ext.html">Chapter 29. "B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="v-st-ext.html">"V" Standard Extension for Vector Operations, Version 1.0</a>
+    <a class="nav-link"  href="v-st-ext.html">Chapter 30. "V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="scalar-crypto.html">Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+    <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="unpriv-cfi.html">Control-flow Integrity (CFI)</a>
+    <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv-32-64g.html">RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Appendix: Extending the RISC-V ISA</a>
+    <a class="nav-link"  href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="naming.html">ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">Document Revision History</a>
+    <a class="nav-link"  href="history.html">Chapter 37. Document Revision History</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-eplan.html">RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-formal.html">Formal Memory Model Specifications, Version 0.1</a>
+    <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="calling-convention.html">Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -431,64 +431,64 @@
     <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-intro.html">Introduction</a>
+    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smepmp.html">"Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smdbltrp.html">"Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smctr.html">"Smctr" Control Transfer Records Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/supervisor.html">Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
+    <a class="nav-link"  href="../priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/ssdbltrp.html">"Ssdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/zpm.html">Pointer Masking Extensions, Version 1.0.0</a>
+    <a class="nav-link"  href="../priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-history.html">History</a>
+    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
   </li>
 </ul>
   </li>
@@ -615,7 +615,7 @@
     <ul>
       <li><a href="../index.html">ISA Specifications</a></li>
       <li>Volume I: RISC-V Unprivileged ISA Specification</li>
-      <li><a href="f-st-ext.html">"F" Extension for Single-Precision Floating-Point, Version 2.2</a></li>
+      <li><a href="f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a></li>
     </ul>
   </nav>
 </div><h1 id="page-title" class="page">"F" Extension for Single-Precision Floating-Point, Version 2.2</h1>
@@ -630,7 +630,7 @@ with the IEEE 754-2008 arithmetic standard [<a href="../biblio/bibliography.html
 </div>
 </div>
 <div class="sect1">
-<h2 id="f-register-state"><a class="anchor" href="#f-register-state"></a>1. F Register State</h2>
+<h2 id="20-1-f-register-state"><a class="anchor" href="#20-1-f-register-state"></a>20.1. F Register State</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The F extension adds 32 floating-point registers, <code>f0-f31</code>, each 32
@@ -797,7 +797,7 @@ floating-point register file state can reduce context-switch overhead.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="floating-point-control-and-status-register"><a class="anchor" href="#floating-point-control-and-status-register"></a>2. Floating-Point Control and Status Register</h2>
+<h2 id="20-2-floating-point-control-and-status-register"><a class="anchor" href="#20-2-floating-point-control-and-status-register"></a>20.2. Floating-Point Control and Status Register</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The floating-point control and status register, <code>fcsr</code>, is a RISC-V
@@ -807,7 +807,7 @@ operations and holds the accrued exception flags, as shown in <a href="#fcsr">Fl
 </div>
 <div id="fcsr" class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDUUVDIS8xNtVJQ94tQ11FILCkpAipQN1SPrdXBqizUjShl_sQpc4kiSplfGG5lxghlQfmleSmZeekKvvkpqTAd0erGqBqMTHTgGlKLU4vKUlMQao1MwIpjdRSS8_PSMoGhVZ2Wn1dSnFkFVG9oUFsLAOmfXK0=?id=fcsr&reftext=Floating-Point%20Control%20and%20Status%20Register" alt="Floating-point control and status register">
+<img src="_images/svg-d8d44280be96d2c9e63647e23490430b5e9b9689.svg" alt="Floating-point control and status register">
 </div>
 <div class="title">Figure 1. Floating-point control and status register</div>
 </div>
@@ -994,7 +994,7 @@ ultimately chose to omit these instructions to keep the ISA simple.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="nan-generation-and-propagation"><a class="anchor" href="#nan-generation-and-propagation"></a>3. NaN Generation and Propagation</h2>
+<h2 id="20-3-nan-generation-and-propagation"><a class="anchor" href="#20-3-nan-generation-and-propagation"></a>20.3. NaN Generation and Propagation</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Except when otherwise stated, if the result of a floating-point
@@ -1050,7 +1050,7 @@ provide exceptional default values.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="subnormal-arithmetic"><a class="anchor" href="#subnormal-arithmetic"></a>4. Subnormal Arithmetic</h2>
+<h2 id="20-4-subnormal-arithmetic"><a class="anchor" href="#20-4-subnormal-arithmetic"></a>20.4. Subnormal Arithmetic</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Operations on subnormal numbers are handled in accordance with the IEEE 754-2008 standard.
@@ -1079,19 +1079,19 @@ signals.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="single-precision-load-and-store-instructions"><a class="anchor" href="#single-precision-load-and-store-instructions"></a>5. Single-Precision Load and Store Instructions</h2>
+<h2 id="20-5-single-precision-load-and-store-instructions"><a class="anchor" href="#20-5-single-precision-load-and-store-instructions"></a>20.5. Single-Precision Load and Store Instructions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Floating-point loads and stores use the same base+offset addressing mode as the integer base ISAs, with a base address in register <em>rs1</em> and a 12-bit signed byte offset. The FLW instruction loads a single-precision floating-point value from memory into floating-point register <em>rd</em>. FSW stores a single-precision value from floating-point register <em>rs2</em> to memory.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56j7-ji66bgHqsbU6CI2mCI1FKRBNyBpNQRpTUotLUHUZI3SVZ6aUZEA1wnQZg3SF47ao2BBuE4pFSYnFqai6DI10YLoyc3OjDQ2tDGKBKmG6DI1A2vLT0opTS6CSIO2xtQATj03u" alt="svg">
+<img src="_images/svg-b1405edeb4ff8b7ab07b482ce34f8b796fe6be30.svg" alt="svg">
 </div>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUVDIS8xNtVJQzy9Izk9JVQcKKCgklpQUAdWpmwO56sEh_kGuum4B6rG1Ogidpgidmbm50SZWBrEgvTCdpiCd-WlpxaklEDkUzcYIzeWZKSUZEFvhmo1BmsNx2ldUbAjVgGZfUmJxKh5dRth1FRclo2oCBgqSzwwNrUxBXkMJE6jPIHIgzbG1AAeNXvY=" alt="svg">
+<img src="_images/svg-f7d67df7551d0016696f007c8c3cb46f075b853d.svg" alt="svg">
 </div>
 </div>
 <div id="sp-ldst" class="paragraph">
@@ -1107,7 +1107,7 @@ address is naturally aligned.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="single-float-compute"><a class="anchor" href="#single-float-compute"></a>6. Single-Precision Floating-Point Computational Instructions</h2>
+<h2 id="single-float-compute"><a class="anchor" href="#single-float-compute"></a>20.6. Single-Precision Floating-Point Computational Instructions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Floating-point arithmetic instructions with one or two source operands
@@ -1188,7 +1188,7 @@ handling of signaling NaNs.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNp1kcELgjAUxu_9Fbu9y8RSRPBmyEDIMs0IwoPpjA5q6DqJ_3ubpU7QHd7b99j34-OtrenTQvcNQu3jxRoLmRiVSUEtBNU7rTIKGCWM1fwNmIDh5CvEX-1xhyeSMZLqjFPEGUgGd2S0YcttRtEnSiEoA0LnrwOPT6QKnntUPfu2mqPZ_YLIOZo6FVO5j3KVoy1ytL-x79tRzCjaSMkLNqdwG4TCJZeVCPmnTJkhfY64A7EdRyVhtO-FFx1U4rjXXoTn4ML5hK9IGVYUd1_oFoe_" alt="svg">
+<img src="_images/svg-82f3317405ae2175569142bab65592e5c23ca2f7.svg" alt="svg">
 </div>
 </div>
 <div id="spfloat" class="paragraph">
@@ -1238,7 +1238,7 @@ compared to ARM.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUXeL9ov1dXRx0QczgkOd1GNrdRC6TeG6i1KAOkEAptsUqDsltbgEVYMxQkMumgZjoIYgX5zmFxtC1CObX1yUbIhbgxFWDUaoGozgGtJyS1A1APWrB-M23hgpqKBmG4NVx9YCAOtaYsI=" alt="svg">
+<img src="_images/svg-21dafd4b911a505659437ee1391f723f638bee90.svg" alt="svg">
 </div>
 </div>
 <div id="fnmaddsub" class="admonitionblock note">
@@ -1282,7 +1282,7 @@ invalid exception for the operation <span class="steminline"> <svg style="vertic
 </div>
 </div>
 <div class="sect1">
-<h2 id="single-precision-floating-point-conversion-and-move-instructions"><a class="anchor" href="#single-precision-floating-point-conversion-and-move-instructions"></a>7. Single-Precision Floating-Point Conversion and Move Instructions</h2>
+<h2 id="20-7-single-precision-floating-point-conversion-and-move-instructions"><a class="anchor" href="#20-7-single-precision-floating-point-conversion-and-move-instructions"></a>20.7. Single-Precision Floating-Point Conversion and Move Instructions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Floating-point-to-integer and integer-to-floating-point conversion
@@ -1377,7 +1377,7 @@ Invalid exception flag is not set.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNp1kLsKgzAUhvc-xdmypJYqIri2OLVUeh3EwWosDmpJ0kl8955j6o1i4Fw53_9DGilePkQrgOZZaOWDx6FKSuEDq99pnQnGIdFa4g3zGGencB2EuPs1cctH1B1QmeEJvR51Ec2E0kR2dQY6I1gS2FMOUuejSUtOamuspk5KpmREZRGz_7FHdIs3B0x7oodprmEPGnmp5xooyS5dLLjmnyrV7uRHyTXY3a9WUWnL6JkZe9p1QnH7BXTVdGc=" alt="svg">
+<img src="_images/svg-e4adff38ca86222298ea2566f276a274fd9adc0f.svg" alt="svg">
 </div>
 </div>
 <div id="fcvt" class="paragraph">
@@ -1395,7 +1395,7 @@ ry</em>).</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5TIF89JbW4BFWHMUJHLkgHTLkx0AKvaL9Yfa8InFYUG0LsQLJCvbgo2RC3BiOsGoxQNRjBNaTllqBqAOpXD8ZlfFppXnKJKVIggYx3C3b38wLriK0FAN_rYYw=" alt="svg">
+<img src="_images/svg-2591776373d7209c5d709f100045f2f7c2465330.svg" alt="svg">
 </div>
 </div>
 <div id="inj" class="admonitionblock note">
@@ -1440,7 +1440,7 @@ preserved.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULgNOxtToInaZwnUUpQF0gANNpCtSRklpcAqNQ9Bkj9OWi6TMGajAwMACKgilc1hUbQvQhW1dclAwlceoywtRlAMYoOozgOtJyS1B1AA1QDwZjHHakleYll5giBSHIDjffML0IvXAoK1wvAqw7thYA4ghqEw==" alt="svg">
+<img src="_images/svg-f43dbe8c77818963355ae63ce6f5989bf5a77511.svg" alt="svg">
 </div>
 </div>
 <div id="spfloat-mv" class="admonitionblock note">
@@ -1462,7 +1462,7 @@ representing integer values in the floating-point registers by defining conversi
 </div>
 </div>
 <div class="sect1">
-<h2 id="single-precision-floating-point-compare-instructions"><a class="anchor" href="#single-precision-floating-point-compare-instructions"></a>8. Single-Precision Floating-Point Compare Instructions</h2>
+<h2 id="20-8-single-precision-floating-point-compare-instructions"><a class="anchor" href="#20-8-single-precision-floating-point-compare-instructions"></a>20.8. Single-Precision Floating-Point Compare Instructions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Floating-point compare instructions (FEQ.S, FLT.S, FLE.S) perform the
@@ -1481,7 +1481,7 @@ comparison: it only sets the invalid operation exception flag if either input is
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5ToI6U1OISVA3GCA25IA0w1cZA1a6BQBF1nxAw6YrTomJDiE3IFhUXJRvi1mCEVYMRqgYjuIa03BJUDUD96sG4jE8rzUsuMUUKKpDxbs6-kJCKrQUAFNNh9A==" alt="svg">
+<img src="_images/svg-f47c9efb18a201eaac373e9194bf1b6416895153.svg" alt="svg">
 </div>
 </div>
 <div id="spfloat-comp" class="admonitionblock note">
@@ -1505,7 +1505,7 @@ but it is nevertheless an unfortunate incongruity in the ISA.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="single-precision-floating-point-classify-instruction"><a class="anchor" href="#single-precision-floating-point-classify-instruction"></a>9. Single-Precision Floating-Point Classify Instruction</h2>
+<h2 id="20-9-single-precision-floating-point-classify-instruction"><a class="anchor" href="#20-9-single-precision-floating-point-classify-instruction"></a>20.9. Single-Precision Floating-Point Classify Instruction</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The FCLASS.S instruction examines the value in floating-point register
@@ -1519,7 +1519,7 @@ FCLASS.S does not set the floating-point exception flags.
 </div>
 <div class="imageblock kroki">
 <div class="content">
-<img src="https://kroki.io/wavedrom/svg/eNqrLkpNt1KI5lJQqE7KLCm2UjDXUchLzE21UlDPL0jOT0lV11FILCkpAqpRN1fXUfcP0HULUI-t1UHoMIXrKEoBqgYBmA5ToI6U1OISVA3GCA25aBqMgRoMDAxxWlBsCNGAbEFxUTJu9UaY6g1QVRvBVafllqCqBmpWD8ZldlppXnKJKVLwgMx2c_ZxDIZoia0FAD87XwU=" alt="svg">
+<img src="_images/svg-d11bade1f026be22713c4cc93baf3dc133764e37.svg" alt="svg">
 </div>
 </div>
 <table id="fclass" class="tableblock frame-all grid-all fit-content center">
@@ -1580,8 +1580,8 @@ FCLASS.S does not set the floating-point exception flags.
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="cmo.html">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a></span>
-  <span class="next"><a href="d-st-ext.html">"D" Extension for Double-Precision Floating-Point, Version 2.2</a></span>
+  <span class="prev"><a href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a></span>
+  <span class="next"><a href="d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a></span>
 </nav>
 </article>  </div>
 </main>
@@ -1612,24 +1612,6 @@ FCLASS.S does not set the floating-point exception flags.
   <li class="version">
     <a href="../v20240411/unpriv/f-st-ext.html">
       Version: 20240411
-    </a>
-  </li>
-</ul>                        </div>
-                      </li>
-                      <li class="component">
-                        <div>
-                          <a class="title" href="../../profiles/index.html">RISC-V Profiles</a>
-                        </div>                        <div class="version-item is-active">
-                          <div>
-                            <button class="version-toggle" type="button">
-                              <span></span>
-                              Published
-                            </button>
-                          </div>
-                          <ul class="versions">
-  <li class="version">
-    <a href="../../profiles/index.html">
-      Latest
     </a>
   </li>
 </ul>                        </div>
