@@ -4,6 +4,9 @@
 <loc>https://docs.riscv.org/sitemap-aia.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://docs.riscv.org/sitemap-brs.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://docs.riscv.org/sitemap-etrace.xml</loc>
 </sitemap>
 <sitemap>
@@ -23,6 +26,9 @@
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/sitemap-reri.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.riscv.org/sitemap-rimt.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/sitemap-semihost.xml</loc>
