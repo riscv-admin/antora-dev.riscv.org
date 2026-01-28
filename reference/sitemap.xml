@@ -7,6 +7,9 @@
 <loc>https://docs.riscv.org/sitemap-brs.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://docs.riscv.org/sitemap-docs-guide.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://docs.riscv.org/sitemap-etrace.xml</loc>
 </sitemap>
 <sitemap>
@@ -44,5 +47,8 @@
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/sitemap-techtrace.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.riscv.org/sitemap-uefi.xml</loc>
 </sitemap>
 </sitemapindex>

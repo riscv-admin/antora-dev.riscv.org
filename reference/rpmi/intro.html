@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="b961b0438be0470cd24e43b1883353b11dc21289"> 
+    <meta name="antora-ui-version" content="a6f3216d39a44514285938826264237648fec7cb"> 
     <meta name="version" content="v1.0">
     <meta name="component" content="rpmi">
     <meta name="latest-version" content="false">
@@ -643,6 +643,44 @@
 </ul>
               </div>
         </div>
+        <div class="nav-trees" data-component="uefi">
+          <div class="version-box">
+            <select data-component="uefi" class="select-version">
+                <option
+                  value="../uefi/index.html"
+                  data-version="v1.0.0"
+                  
+                  >
+                  v1.0.0
+                </option>
+            </select>
+          </div>
+              <div data-component="uefi" data-version="v1.0.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">RISC-V UEFI PROTOCOL Specification</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../uefi/index.html">Chapter 1. RISC-V UEFI PROTOCOL Specification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../uefi/contributors.html">Chapter 2. Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../uefi/intro.html">Chapter 3. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../uefi/boot_protocol.html">Chapter 4. RISCV_EFI_BOOT_PROTOCOL</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../uefi/bibliography.html">Chapter 5. Bibliography</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
           <div class="toggle-sm">
             <button id="nav-toggle-2" class="nav-toggle"></button>
           </div>
@@ -725,7 +763,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="intro"><a class="anchor" href="#intro"></a>4.1. Introduction</h2>
+<h2 id="intro"><a class="anchor" href="#intro"></a>3.1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Today&#8217;s platforms pose challenges in terms of manageability and controllability,
@@ -754,7 +792,7 @@ discoverable at runtime which allows adding new capabilities and services
 in the future.</p>
 </div>
 <div class="sect2">
-<h3 id="4-1-1-rpmi-abstractions"><a class="anchor" href="#4-1-1-rpmi-abstractions"></a>4.1.1. RPMI Abstractions</h3>
+<h3 id="3-1-1-rpmi-abstractions"><a class="anchor" href="#3-1-1-rpmi-abstractions"></a>3.1.1. RPMI Abstractions</h3>
 <div class="paragraph">
 <p><strong>RPMI Transport</strong>: An RPMI transport represents the mechanism by which the
 messages are exchanged between the application processor and the platform
