@@ -22,6 +22,9 @@
 <loc>https://docs.riscv.org/sitemap-reri.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://docs.riscv.org/sitemap-rimt.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://docs.riscv.org/sitemap-semihost.xml</loc>
 </sitemap>
 <sitemap>

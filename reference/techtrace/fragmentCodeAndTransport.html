@@ -296,55 +296,58 @@
                 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Efficient Trace for RISC-V</span>
+    <span class="nav-text">Efficient Trace</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="index.html">Efficient Trace for RISC-V</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="preface.html">Preface</a>
+    <a class="nav-link"  href="preamble.html">Copyright and license information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="introduction.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="preface.html">Chapter 1. Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="control.html">Chapter 2. Control Interface</a>
+    <a class="nav-link"  href="introduction.html">Chapter 2. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="branchTrace.html">Chapter 3. Branch Trace</a>
+    <a class="nav-link"  href="control.html">Chapter 3. Control Interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ingressPort.html">Chapter 4. Ingress Port Requirements</a>
+    <a class="nav-link"  href="branchTrace.html">Chapter 4. Branch Trace</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="filtering.html">Chapter 5. Filtering</a>
+    <a class="nav-link"  href="ingressPort.html">Chapter 5. Ingress Port Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="timestamping.html">Chapter 6. Timestamping</a>
+    <a class="nav-link"  href="filtering.html">Chapter 6. Filtering</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="payload.html">Chapter 7. Trace Payload Format</a>
+    <a class="nav-link"  href="timestamping.html">Chapter 7. Timestamping</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="dataTracePayload.html">Chapter 8. Data Trace Payload Format</a>
+    <a class="nav-link"  href="payload.html">Chapter 8. Trace Payload Format</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="exampleAlgorithm.html">Chapter 9. Example Reference Encoding Algorithm</a>
+    <a class="nav-link"  href="dataTracePayload.html">Chapter 9. Data Trace Payload Format</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="discovery.html">Chapter 10. Trace Discovery and Configuration</a>
+    <a class="nav-link"  href="exampleAlgorithm.html">Chapter 10. Example Reference Encoding Algorithm</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="decoder.html">Chapter 11. Example Trace Decoder</a>
+    <a class="nav-link"  href="discovery.html">Chapter 11. Trace Discovery and Configuration</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="exampleCodeSnippets.html">Chapter 12. Example Code Snippets</a>
+    <a class="nav-link"  href="decoder.html">Chapter 12. Example Trace Decoder</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="exampleCodeSnippets.html">Chapter 13. Example Code Snippets</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="fragmentCodeAndTransport.html">Chapter 13. Fragment Code and Transport</a>
+    <a class="nav-link"  href="fragmentCodeAndTransport.html">Chapter 14. Fragment Code and Transport</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="future.html">Chapter 14. Future Work</a>
+    <a class="nav-link"  href="future.html">Future Work</a>
   </li>
 </ul>
   </li>
@@ -555,12 +558,13 @@
 <div class="breadcrumbs-container">
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
-      <li>Efficient Trace for RISC-V</li>
-      <li><a href="fragmentCodeAndTransport.html">Chapter 13. Fragment Code and Transport</a></li>
+      <li><a href="index.html">Efficient Trace for RISC-V</a></li>
+      <li>Efficient Trace</li>
+      <li><a href="fragmentCodeAndTransport.html">Chapter 14. Fragment Code and Transport</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="fragments"><a class="anchor" href="#fragments"></a>13.1. Code fragment and transport</h2>
+<h2 id="fragments"><a class="anchor" href="#fragments"></a>14.1. Code fragment and transport</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section shows fragments of code, and associated data from one of
@@ -572,7 +576,7 @@ is being executed. In order to give some context to the fragment of
 interest, code prior to and after the fragment is also given.</p>
 </div>
 <div class="sect2">
-<h3 id="13-1-1-illegal-opcode-test"><a class="anchor" href="#13-1-1-illegal-opcode-test"></a>13.1.1. Illegal Opcode test</h3>
+<h3 id="14-1-1-illegal-opcode-test"><a class="anchor" href="#14-1-1-illegal-opcode-test"></a>14.1.1. Illegal Opcode test</h3>
 <div class="paragraph">
 <p>In this example the test executes an illegal opcode (at line labelled
 14) and traps. We show the output from the patched spike execution in
@@ -583,7 +587,7 @@ Lines labelled 53, 56 and 59 show the packets output from the encoder
 for this fragment.</p>
 </div>
 <div class="sect3">
-<h4 id="13-1-1-1-code-fragment"><a class="anchor" href="#13-1-1-1-code-fragment"></a>13.1.1.1. Code fragment</h4>
+<h4 id="14-1-1-1-code-fragment"><a class="anchor" href="#14-1-1-1-code-fragment"></a>14.1.1.1. Code fragment</h4>
 <div class="literalblock">
 <div class="content">
 <pre>1: *************************************************************************************
@@ -658,7 +662,7 @@ for this fragment.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="13-1-1-2-packet-data"><a class="anchor" href="#13-1-1-2-packet-data"></a>13.1.1.2. Packet data</h4>
+<h4 id="14-1-1-2-packet-data"><a class="anchor" href="#14-1-1-2-packet-data"></a>14.1.1.2. Packet data</h4>
 <div class="paragraph">
 <p>The output from the encoder for the fragment of interest is given in
 line 56. The least significant byte is output first, this means 32 is
@@ -666,7 +670,7 @@ byte 0, 04 is byte 1 and and the final value 02 is byte 4.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="13-1-1-3-siemens-transport"><a class="anchor" href="#13-1-1-3-siemens-transport"></a>13.1.1.3. Siemens transport</h4>
+<h4 id="14-1-1-3-siemens-transport"><a class="anchor" href="#14-1-1-3-siemens-transport"></a>14.1.1.3. Siemens transport</h4>
 <div class="paragraph">
 <p>The packet is encapsulated according to the <a href="https://github.com/riscv-non-isa/e-trace-encap/releases/latest/">Unformatted Trace &amp; Diagnostic Data Packet Encapsulation for RISC-V Specification</a>, with the following attributes:</p>
 </div>
@@ -697,7 +701,7 @@ byte 0, 04 is byte 1 and and the final value 02 is byte 4.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="13-1-1-4-atb-transport"><a class="anchor" href="#13-1-1-4-atb-transport"></a>13.1.1.4. ATB transport</h4>
+<h4 id="14-1-1-4-atb-transport"><a class="anchor" href="#14-1-1-4-atb-transport"></a>14.1.1.4. ATB transport</h4>
 <div class="paragraph">
 <p>The packet is encapsulated according to the <a href="https://github.com/riscv-non-isa/e-trace-encap/releases/latest/">Unformatted Trace &amp; Diagnostic Data Packet Encapsulation for RISC-V Specification</a>, with the following attributes:</p>
 </div>
@@ -730,9 +734,9 @@ byte 0, 04 is byte 1 and and the final value 02 is byte 4.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="13-1-2-timer-long-loop"><a class="anchor" href="#13-1-2-timer-long-loop"></a>13.1.2. Timer Long Loop</h3>
+<h3 id="14-1-2-timer-long-loop"><a class="anchor" href="#14-1-2-timer-long-loop"></a>14.1.2. Timer Long Loop</h3>
 <div class="sect3">
-<h4 id="13-1-2-1-code-fragment"><a class="anchor" href="#13-1-2-1-code-fragment"></a>13.1.2.1. Code fragment</h4>
+<h4 id="14-1-2-1-code-fragment"><a class="anchor" href="#14-1-2-1-code-fragment"></a>14.1.2.1. Code fragment</h4>
 <div class="literalblock">
 <div class="content">
 <pre>1: **************************************************************************************
@@ -810,7 +814,7 @@ byte 0, 04 is byte 1 and and the final value 02 is byte 4.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="13-1-2-2-packet-data"><a class="anchor" href="#13-1-2-2-packet-data"></a>13.1.2.2. Packet data</h4>
+<h4 id="14-1-2-2-packet-data"><a class="anchor" href="#14-1-2-2-packet-data"></a>14.1.2.2. Packet data</h4>
 <div class="paragraph">
 <p>The output from the encoder for the fragment of interest is given in
 line 61. The least significant byte is output first, this means 77 is
@@ -818,7 +822,7 @@ byte 0, 00 is byte 1 and and the final value 20 is byte 9.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="13-1-2-3-siemens-transport"><a class="anchor" href="#13-1-2-3-siemens-transport"></a>13.1.2.3. Siemens transport</h4>
+<h4 id="14-1-2-3-siemens-transport"><a class="anchor" href="#14-1-2-3-siemens-transport"></a>14.1.2.3. Siemens transport</h4>
 <div class="paragraph">
 <p>The packet is encapsulated according to the <a href="https://github.com/riscv-non-isa/e-trace-encap/releases/latest/Unformatted" class="bare">https://github.com/riscv-non-isa/e-trace-encap/releases/latest/Unformatted</a> Trace &amp; Diagnostic Data Packet Encapsulation for RISC-V Specification], with the following attributes:</p>
 </div>
@@ -846,7 +850,7 @@ byte 0, 00 is byte 1 and and the final value 20 is byte 9.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="13-1-2-4-atb-transport"><a class="anchor" href="#13-1-2-4-atb-transport"></a>13.1.2.4. ATB transport</h4>
+<h4 id="14-1-2-4-atb-transport"><a class="anchor" href="#14-1-2-4-atb-transport"></a>14.1.2.4. ATB transport</h4>
 <div class="paragraph">
 <p>The packet is encapsulated according to the <a href="https://github.com/riscv-non-isa/e-trace-encap/releases/latest/">Unformatted Trace &amp; Diagnostic Data Packet Encapsulation for RISC-V Specification</a>, with the following attributes:</p>
 </div>
@@ -879,9 +883,9 @@ byte 0, 00 is byte 1 and and the final value 20 is byte 9.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="13-1-3-startup-xrle"><a class="anchor" href="#13-1-3-startup-xrle"></a>13.1.3. Startup xrle</h3>
+<h3 id="14-1-3-startup-xrle"><a class="anchor" href="#14-1-3-startup-xrle"></a>14.1.3. Startup xrle</h3>
 <div class="sect3">
-<h4 id="13-1-3-1-code-fragment"><a class="anchor" href="#13-1-3-1-code-fragment"></a>13.1.3.1. Code fragment</h4>
+<h4 id="14-1-3-1-code-fragment"><a class="anchor" href="#14-1-3-1-code-fragment"></a>14.1.3.1. Code fragment</h4>
 <div class="literalblock">
 <div class="content">
 <pre>1: ***********************************************************************************
@@ -941,7 +945,7 @@ byte 0, 00 is byte 1 and and the final value 20 is byte 9.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="13-1-3-2-packet-data"><a class="anchor" href="#13-1-3-2-packet-data"></a>13.1.3.2. Packet data</h4>
+<h4 id="14-1-3-2-packet-data"><a class="anchor" href="#14-1-3-2-packet-data"></a>14.1.3.2. Packet data</h4>
 <div class="paragraph">
 <p>The output from the encoder for the fragment of interest is given in
 line 45. The least significant byte is output first, this means 73 is
@@ -949,7 +953,7 @@ byte 0, 00 is byte 1 and and the final value 10 is byte 8.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="13-1-3-3-siemens-transport"><a class="anchor" href="#13-1-3-3-siemens-transport"></a>13.1.3.3. Siemens transport</h4>
+<h4 id="14-1-3-3-siemens-transport"><a class="anchor" href="#14-1-3-3-siemens-transport"></a>14.1.3.3. Siemens transport</h4>
 <div class="paragraph">
 <p>The packet is encapsulated according to the <a href="https://github.com/riscv-non-isa/e-trace-encap/releases/latest/">Unformatted Trace &amp; Diagnostic Data Packet Encapsulation for RISC-V Specification</a>, with the following attributes:</p>
 </div>
@@ -977,7 +981,7 @@ byte 0, 00 is byte 1 and and the final value 10 is byte 8.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="13-1-3-4-atb-transport"><a class="anchor" href="#13-1-3-4-atb-transport"></a>13.1.3.4. ATB transport</h4>
+<h4 id="14-1-3-4-atb-transport"><a class="anchor" href="#14-1-3-4-atb-transport"></a>14.1.3.4. ATB transport</h4>
 <div class="paragraph">
 <p>The packet is encapsulated according to the <a href="https://github.com/riscv-non-isa/e-trace-encap/releases/latest/">Unformatted Trace &amp; Diagnostic Data Packet Encapsulation for RISC-V Specification</a>, with the following attributes:</p>
 </div>
@@ -1013,8 +1017,8 @@ byte 0, 00 is byte 1 and and the final value 10 is byte 8.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="exampleCodeSnippets.html">Chapter 12. Example Code Snippets</a></span>
-  <span class="next"><a href="future.html">Chapter 14. Future Work</a></span>
+  <span class="prev"><a href="exampleCodeSnippets.html">Chapter 13. Example Code Snippets</a></span>
+  <span class="next"><a href="future.html">Future Work</a></span>
 </nav>
 </article>  </div>
 </main>

@@ -296,55 +296,58 @@
                 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Efficient Trace for RISC-V</span>
+    <span class="nav-text">Efficient Trace</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="index.html">Efficient Trace for RISC-V</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="preface.html">Preface</a>
+    <a class="nav-link"  href="preamble.html">Copyright and license information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="introduction.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="preface.html">Chapter 1. Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="control.html">Chapter 2. Control Interface</a>
+    <a class="nav-link"  href="introduction.html">Chapter 2. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="branchTrace.html">Chapter 3. Branch Trace</a>
+    <a class="nav-link"  href="control.html">Chapter 3. Control Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="branchTrace.html">Chapter 4. Branch Trace</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="ingressPort.html">Chapter 4. Ingress Port Requirements</a>
+    <a class="nav-link"  href="ingressPort.html">Chapter 5. Ingress Port Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="filtering.html">Chapter 5. Filtering</a>
+    <a class="nav-link"  href="filtering.html">Chapter 6. Filtering</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="timestamping.html">Chapter 6. Timestamping</a>
+    <a class="nav-link"  href="timestamping.html">Chapter 7. Timestamping</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="payload.html">Chapter 7. Trace Payload Format</a>
+    <a class="nav-link"  href="payload.html">Chapter 8. Trace Payload Format</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="dataTracePayload.html">Chapter 8. Data Trace Payload Format</a>
+    <a class="nav-link"  href="dataTracePayload.html">Chapter 9. Data Trace Payload Format</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="exampleAlgorithm.html">Chapter 9. Example Reference Encoding Algorithm</a>
+    <a class="nav-link"  href="exampleAlgorithm.html">Chapter 10. Example Reference Encoding Algorithm</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="discovery.html">Chapter 10. Trace Discovery and Configuration</a>
+    <a class="nav-link"  href="discovery.html">Chapter 11. Trace Discovery and Configuration</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="decoder.html">Chapter 11. Example Trace Decoder</a>
+    <a class="nav-link"  href="decoder.html">Chapter 12. Example Trace Decoder</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="exampleCodeSnippets.html">Chapter 12. Example Code Snippets</a>
+    <a class="nav-link"  href="exampleCodeSnippets.html">Chapter 13. Example Code Snippets</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="fragmentCodeAndTransport.html">Chapter 13. Fragment Code and Transport</a>
+    <a class="nav-link"  href="fragmentCodeAndTransport.html">Chapter 14. Fragment Code and Transport</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="future.html">Chapter 14. Future Work</a>
+    <a class="nav-link"  href="future.html">Future Work</a>
   </li>
 </ul>
   </li>
@@ -555,15 +558,16 @@
 <div class="breadcrumbs-container">
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
-      <li>Efficient Trace for RISC-V</li>
-      <li><a href="ingressPort.html">Chapter 4. Ingress Port Requirements</a></li>
+      <li><a href="index.html">Efficient Trace for RISC-V</a></li>
+      <li>Efficient Trace</li>
+      <li><a href="ingressPort.html">Chapter 5. Ingress Port Requirements</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="Interface"><a class="anchor" href="#Interface"></a>4.1. Hart to encoder interface</h2>
+<h2 id="Interface"><a class="anchor" href="#Interface"></a>5.1. Hart to encoder interface</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="sec:InstructionInterfaceRequirements"><a class="anchor" href="#sec:InstructionInterfaceRequirements"></a>4.1.1. Instruction Trace Interface requirements</h3>
+<h3 id="sec:InstructionInterfaceRequirements"><a class="anchor" href="#sec:InstructionInterfaceRequirements"></a>5.1.1. Instruction Trace Interface requirements</h3>
 <div class="paragraph">
 <p>This section describes in general terms the information which must be
 passed from the RISC-V hart to the trace encoder for the purposes of
@@ -746,7 +750,7 @@ instruction which loads the target into a register have been traced.</p>
 </ul>
 </div>
 <div class="sect3">
-<h4 id="JumpClasses"><a class="anchor" href="#JumpClasses"></a>4.1.1.1. Jump classification and target inference</h4>
+<h4 id="JumpClasses"><a class="anchor" href="#JumpClasses"></a>5.1.1.1. Jump classification and target inference</h4>
 <div class="paragraph">
 <p>Jumps are classified as <em>inferable</em>, or <em>uninferable</em>. An <em>inferable</em>
 jump has a target which can be deduced from the binary executable or
@@ -883,7 +887,7 @@ and rd != x5.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sec:relationship"><a class="anchor" href="#sec:relationship"></a>4.1.1.2. Relationship between RISC-V core and the encoder</h4>
+<h4 id="sec:relationship"><a class="anchor" href="#sec:relationship"></a>5.1.1.2. Relationship between RISC-V core and the encoder</h4>
 <div class="paragraph">
 <p>The encoder is intended to encode the instructions executed on a single
 hart.</p>
@@ -917,11 +921,11 @@ so this configuration is not recommended.)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sec:InstructionTraceInterface"><a class="anchor" href="#sec:InstructionTraceInterface"></a>4.1.2. Instruction Trace Interface</h3>
+<h3 id="sec:InstructionTraceInterface"><a class="anchor" href="#sec:InstructionTraceInterface"></a>5.1.2. Instruction Trace Interface</h3>
 <div class="paragraph">
 <p>This section describes the interface between a RISC-V hart and the trace
 encoder that conveys the information described in the section
-<a href="#sec:InstructionInterfaceRequirements">4.1.1. Instruction Trace Interface requirements</a>. Signals are assigned to one
+<a href="#sec:InstructionInterfaceRequirements">5.1.1. Instruction Trace Interface requirements</a>. Signals are assigned to one
 of the following groups:</p>
 </div>
 <div class="ulist">
@@ -950,7 +954,7 @@ interface must include SR group signals instead.</p>
 <li>
 <p>SR: Single, may be replicated. Mandatory for harts that can only
 retire one instruction in a block. Replication as per OR (see
-<a href="#sec:alt-multi">4.1.2.2. Alternative multiple-retirement interface configurations</a>). If omitted, the interface must include
+<a href="#sec:alt-multi">5.1.2.2. Alternative multiple-retirement interface configurations</a>). If omitted, the interface must include
 BR group signals instead.</p>
 </li>
 </ul>
@@ -977,7 +981,7 @@ BR group signals instead.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>itype</strong>[<em>itype_width_p</em>-1:0]</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">MR</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Termination type of the instruction
-block. Encoding given in <a href="#tab:itype">Instruction Type (<strong>itype</strong>) encoding</a> (see <a href="#JumpClasses">4.1.1.1. Jump classification and target inference</a> for definitions of codes 6 - 15).</p></td>
+block. Encoding given in <a href="#tab:itype">Instruction Type (<strong>itype</strong>) encoding</a> (see <a href="#JumpClasses">5.1.1.1. Jump classification and target inference</a> for definitions of codes 6 - 15).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cause</strong>[<em>ecause_width_p</em>-1:0]</p></td>
@@ -1043,7 +1047,7 @@ interface designed to efficiently support retirement of multiple
 instructions per cycle. The following discussion describes the
 multiple-retirement behavior. However, for harts that can only retire
 one instruction at a time, the signalling can be simplified, and this is
-discussed subsequently in <a href="#sec:single-retire">4.1.2.1. Simplifications for single-retirement</a>.</p>
+discussed subsequently in <a href="#sec:single-retire">5.1.2.1. Simplifications for single-retirement</a>.</p>
 </div>
 <table id="tab:multi-ingress" class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 2. Instruction interface signals - multiple retirement per block</caption>
@@ -1311,7 +1315,7 @@ setting <strong>context</strong> to the CSR number and value when a CSR is writt
 </li>
 <li>
 <p>In cases where a single encoder is being shared amongst multiple harts
-(see <a href="#sec:relationship">4.1.1.2. Relationship between RISC-V core and the encoder</a>), it could also be used to
+(see <a href="#sec:relationship">5.1.1.2. Relationship between RISC-V core and the encoder</a>), it could also be used to
 indicate the hart ID, in cases where the hart ID can be changed
 dynamically.</p>
 </li>
@@ -1375,7 +1379,7 @@ Treated the same as an exception.</p></td>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="sec:single-retire"><a class="anchor" href="#sec:single-retire"></a>4.1.2.1. Simplifications for single-retirement</h4>
+<h4 id="sec:single-retire"><a class="anchor" href="#sec:single-retire"></a>5.1.2.1. Simplifications for single-retirement</h4>
 <div class="paragraph">
 <p>For harts that can only retire one instruction at a time, the interface
 can be simplified to the signals listed in
@@ -1402,7 +1406,7 @@ the appropriate interpretation of <strong>iretire</strong>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sec:alt-multi"><a class="anchor" href="#sec:alt-multi"></a>4.1.2.2. Alternative multiple-retirement interface configurations</h4>
+<h4 id="sec:alt-multi"><a class="anchor" href="#sec:alt-multi"></a>5.1.2.2. Alternative multiple-retirement interface configurations</h4>
 <div class="paragraph">
 <p>For a hart that can retire multiple instructions per cycle, but no more
 than one branch, the preferred solution is to use one instance of
@@ -1419,7 +1423,7 @@ and OR.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-2-3-optional-sideband-signals"><a class="anchor" href="#4-1-2-3-optional-sideband-signals"></a>4.1.2.3. Optional sideband signals</h4>
+<h4 id="5-1-2-3-optional-sideband-signals"><a class="anchor" href="#5-1-2-3-optional-sideband-signals"></a>5.1.2.3. Optional sideband signals</h4>
 <div class="paragraph">
 <p>Optional sideband signals may be included to provide additional
 functionality, as described in
@@ -1459,7 +1463,7 @@ signals. A typical use for these would be for filtering (see
 <td class="tableblock halign-left valign-top"><p class="tableblock">A pulse on bit 0 will cause the
 encoder to start tracing, and continue until further notice, subject to
 other filtering criteria also being met. A pulse on bit 1 will cause the
-encoder to stop tracing until further notice. See <a href="#sec:trigger">4.1.2.4. Using trigger outputs from the Debug Module</a>).</p></td>
+encoder to stop tracing until further notice. See <a href="#sec:trigger">5.1.2.4. Using trigger outputs from the Debug Module</a>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>halted</strong></p></td>
@@ -1511,7 +1515,7 @@ infrastructure).</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="sec:trigger"><a class="anchor" href="#sec:trigger"></a>4.1.2.4. Using trigger outputs from the Debug Module</h4>
+<h4 id="sec:trigger"><a class="anchor" href="#sec:trigger"></a>5.1.2.4. Using trigger outputs from the Debug Module</h4>
 <div class="paragraph">
 <p>The debug module of the RISC-V hart may have a trigger unit. This
 defines a match control register (<strong><em>mcontrol</em></strong>) containing a 4-bit
@@ -1578,7 +1582,7 @@ is sometimes known as a watchpoint.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-2-5-example-retirement-sequences"><a class="anchor" href="#4-1-2-5-example-retirement-sequences"></a>4.1.2.5. Example retirement sequences</h4>
+<h4 id="5-1-2-5-example-retirement-sequences"><a class="anchor" href="#5-1-2-5-example-retirement-sequences"></a>5.1.2.5. Example retirement sequences</h4>
 <table class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 10. Example 1 : 9 Instructions retired over four cycles, 2 branches</caption>
 <colgroup>
@@ -1618,7 +1622,7 @@ is sometimes known as a watchpoint.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sec:DataInterfaceRequirements"><a class="anchor" href="#sec:DataInterfaceRequirements"></a>4.1.3. Data Trace Interface requirements</h3>
+<h3 id="sec:DataInterfaceRequirements"><a class="anchor" href="#sec:DataInterfaceRequirements"></a>5.1.3. Data Trace Interface requirements</h3>
 <div class="paragraph">
 <p>This section describes in general terms the information which must be
 passed from the RISC-V hart to the trace encoder for the purposes of
@@ -1627,7 +1631,7 @@ optional.</p>
 </div>
 <div class="paragraph">
 <p>If Data Trace is not needed in a system then there is no requirement for
-the RISC-V hart to supply any of the signals in <a href="#sec:DataTraceInterface">4.1.4. Data Trace Interface</a>.</p>
+the RISC-V hart to supply any of the signals in <a href="#sec:DataTraceInterface">5.1.4. Data Trace Interface</a>.</p>
 </div>
 <div class="paragraph">
 <p>Data trace supports up to four data access types: load, store, atomic
@@ -1688,7 +1692,7 @@ stack. They assume a RISC-V to encoder interface that can report a block
 of 1 or more retired instructions and one load or store per cycle. Each
 comprises 4 elements, and shows the instruction information reported for
 each load and store. As detailed in section
-<a href="#sec:InstructionTraceInterface">4.1.2. Instruction Trace Interface</a>, this takes the form of the address
+<a href="#sec:InstructionTraceInterface">5.1.2. Instruction Trace Interface</a>, this takes the form of the address
 of an instruction, the length of the block (1 for a single instruction)
 and the type of the last instruction in the block. In each element,
 ’Block’ indicates a block of 1 or more instructions (i.e. could also be
@@ -1765,11 +1769,11 @@ normal way when all associated loads or stores complete successfully.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sec:DataTraceInterface"><a class="anchor" href="#sec:DataTraceInterface"></a>4.1.4. Data Trace Interface</h3>
+<h3 id="sec:DataTraceInterface"><a class="anchor" href="#sec:DataTraceInterface"></a>5.1.4. Data Trace Interface</h3>
 <div class="paragraph">
 <p>This section describes the interface between a RISC-V hart and the trace
 encoder that conveys the information described in the
-<a href="#sec:DataInterfaceRequirements">4.1.3. Data Trace Interface requirements</a>. Signals are assigned to one
+<a href="#sec:DataInterfaceRequirements">5.1.3. Data Trace Interface requirements</a>. Signals are assigned to one
 of the following groups:</p>
 </div>
 <div class="ulist">
@@ -2073,8 +2077,8 @@ on.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="branchTrace.html">Chapter 3. Branch Trace</a></span>
-  <span class="next"><a href="filtering.html">Chapter 5. Filtering</a></span>
+  <span class="prev"><a href="branchTrace.html">Chapter 4. Branch Trace</a></span>
+  <span class="next"><a href="filtering.html">Chapter 6. Filtering</a></span>
 </nav>
 </article>  </div>
 </main>
