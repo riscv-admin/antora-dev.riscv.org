@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://docs.riscv.org/semihost/binary-interface.html">
-    <link rel="prev" href="intro.html">
+    <link rel="canonical" href="https://docs.riscv.org/brs/smbios.html">
+    <link rel="prev" href="acpi.html">
+    <link rel="next" href="bibliography.html">
     <meta name="generator" content="Antora 3.1.14">
     <script>
 !function (theme, navWidth) {
@@ -21,7 +22,7 @@
 
     <meta name="antora-ui-version" content="4358d718f6b837ac0a2541aa1ff35e998bbb0d26"> 
     <meta name="version" content="v1.0">
-    <meta name="component" content="semihost">
+    <meta name="component" content="brs">
     <meta name="latest-version" content="false">
     <link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../_/img/favicon.ico">
@@ -272,7 +273,7 @@
     }
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script><div class="body">
-<div class="nav-container" data-component="semihost" data-version="v1.0">
+<div class="nav-container" data-component="brs" data-version="v1.0">
   <aside class="nav">
     <div class="panels">
       <div class="nav-panel-menu is-active" data-panel="menu">
@@ -283,7 +284,7 @@
           <div class="version-box">
             <select data-component="brs" class="select-version">
                 <option
-                  value="../brs/index.html"
+                  value="index.html"
                   data-version="v1.0"
                   
                   selected>
@@ -298,34 +299,34 @@
     <span class="nav-text">Boot and Runtime Services</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../brs/index.html">Boot and Runtime Services</a>
+    <a class="nav-link"  href="index.html">Boot and Runtime Services</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../brs/contributors.html">Contributors</a>
+    <a class="nav-link"  href="contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../brs/intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../brs/recipes.html">Chapter 2. Recipes</a>
+    <a class="nav-link"  href="recipes.html">Chapter 2. Recipes</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../brs/hart.html">Chapter 3. Hart Requirements</a>
+    <a class="nav-link"  href="hart.html">Chapter 3. Hart Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../brs/sbi.html">Chapter 4. SBI Requirements</a>
+    <a class="nav-link"  href="sbi.html">Chapter 4. SBI Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../brs/uefi.html">Chapter 5. BRS-I UEFI Requirements</a>
+    <a class="nav-link"  href="uefi.html">Chapter 5. BRS-I UEFI Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../brs/acpi.html">Chapter 6. BRS-I ACPI Requirements</a>
+    <a class="nav-link"  href="acpi.html">Chapter 6. BRS-I ACPI Requirements</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link"  href="smbios.html">Chapter 7. BRS-I SMBIOS Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../brs/smbios.html">Chapter 7. BRS-I SMBIOS Requirements</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../brs/bibliography.html">Bibliography</a>
+    <a class="nav-link"  href="bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -336,7 +337,7 @@
           <div class="version-box">
             <select data-component="semihost" class="select-version">
                 <option
-                  value="index.html"
+                  value="../semihost/index.html"
                   data-version="v1.0"
                   
                   selected>
@@ -351,16 +352,16 @@
     <span class="nav-text">RISC-V Semihosting</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="index.html">RISC-V Semihosting</a>
+    <a class="nav-link"  href="../semihost/index.html">RISC-V Semihosting</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="contributors.html">Contributors</a>
+    <a class="nav-link"  href="../semihost/contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../semihost/intro.html">Chapter 1. Introduction</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="binary-interface.html">Chapter 2. Semihosting Binary Interface</a>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../semihost/binary-interface.html">Chapter 2. Semihosting Binary Interface</a>
   </li>
 </ul>
   </li>
@@ -410,7 +411,7 @@
       <div class="toc-menu"></div>
     </div>
     <div class="sidebar-links">
-        <a href="https://github.com/riscv-non-isa/riscv-semihosting/issues/new" target="_blank" title="Issues">
+        <a href="https://github.com/riscv-non-isa/riscv-brs/issues/new" target="_blank" title="Issues">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24"
@@ -421,7 +422,7 @@
             ></path></svg>
           Report a Problem
         </a>
-        <a href="https://github.com/riscv-non-isa/riscv-semihosting" target="_blank" title="GitHub">
+        <a href="https://github.com/riscv-non-isa/riscv-brs" target="_blank" title="GitHub">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="512px"
@@ -437,7 +438,7 @@
           GitHub Project
         </a>
 
-          <a href="https://github.com/riscv/docs.riscv.org/blob/main/static/pdf/riscv-semihosting.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
+          <a href="https://github.com/riscv/docs.riscv.org/blob/main/static/pdf/riscv-interrupts.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
             <span>Download PDF</span>
             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path d="M10 14a5 5 0 0 1 7.07 0l3.54 3.54a5 5 0 0 1-7.07 7.07l-3.54-3.54a5 5 0 0 1 0-7.07z"/>
@@ -451,54 +452,30 @@
 <div class="breadcrumbs-container">
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
-      <li>RISC-V Semihosting</li>
-      <li><a href="binary-interface.html">Chapter 2. Semihosting Binary Interface</a></li>
+      <li>Boot and Runtime Services</li>
+      <li><a href="smbios.html">Chapter 7. BRS-I SMBIOS Requirements</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="2-1-risc-v-semihosting-binary-interface"><a class="anchor" href="#2-1-risc-v-semihosting-binary-interface"></a>2.1. RISC-V Semihosting Binary Interface</h2>
+<h2 id="smbios"><a class="anchor" href="#smbios"></a>7.1. BRS-I SMBIOS Requirements</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The RISC-V semihosting binary interface consist of a breakpoint instruction
-sequence and a mechanism to pass parameters which are defined by the
-following sub-sections.</p>
-</div>
-<div class="sect2">
-<h3 id="2-1-1-semihosting-breakpoint-instruction-sequence"><a class="anchor" href="#2-1-1-semihosting-breakpoint-instruction-sequence"></a>2.1.1. Semihosting Breakpoint Instruction Sequence</h3>
-<div class="paragraph">
-<p>Semihosting operations are requested using a sequence of instructions
-including <code>EBREAK</code>. Because the RISC-V base ISA does not provide more than
-one <code>EBREAK</code> instruction, RISC-V semihosting uses a special sequence of
-instructions to distinguish a semihosting <code>EBREAK</code> from a debugger inserted
-<code>EBREAK</code>. The <a href="#breakpoint_insns">RISC-V Semihosting Breakpoint Sequence</a> shows the instruction sequence used to
-invoke a semihosting operation.</p>
-</div>
-<div id="breakpoint_insns" class="listingblock">
-<div class="title">RISC-V Semihosting Breakpoint Sequence</div>
-<div class="content">
-<pre>slli x0, x0, 0x1f   # 0x01f01013   Entry NOP
-ebreak              # 0x00100073   Break to debugger
-srai x0, x0, 7      # 0x40705013   Exit NOP</pre>
-</div>
+<p>The <em>System Management BIOS (SMBIOS) Reference Specification</em> defines a standard format for presenting management information about an implementation, mostly focusing on hardware components.</p>
 </div>
 <div class="paragraph">
-<p>These three instructions must be 32-bit wide instructions. This sequence is
-applicable to all RISC-V base ISAs. If address translation and protection is
-enabled for the semihosting caller then the semihosting instruction sequence
-and data passed via memory must be paged in else the behavior of the semihosting
-call is UNSPECIFIED.</p>
+<p>This section defines the BRS-I mandatory and optional SMBIOS requirements
+on top of existing cite:[SMBIOS] specification requirements. Additional
+non-normative guidance may be found in the <a href="#smbios-guidance">firmware
+implementation guidance</a> section.</p>
 </div>
-<div class="admonitionblock note">
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-The <code>SLLI</code>, <code>EBREAK</code>, and <code>SRAI</code> instructions are part of the ratified
-RV32E, RV32I, RV64E and RV64I (aka Base Integer Instruction Set) specifications
-cite:[RISCVUnprivRef] hence these instructions are present on almost all RISC-V
-platforms.
+All content in this section is optional and recommended for BRS-B.
 </td>
 </tr>
 </table>
@@ -510,28 +487,227 @@ platforms.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The <code>SLLI</code> and <code>SRAI</code> instruction based NOPs which serve as semihosting
-marker have been randomly selected from the Base Integer Instruction Set since
-these are designated for custom use and unlikely to appear in real life code.
+The structures and fields in this section are defined in a manner consistent with the DMTF specification language (cite:[SMBIOS]).
 </td>
 </tr>
 </table>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID#</th>
+<th class="tableblock halign-center valign-top">Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SMBIOS_010</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A Baseboard/Module Information (Type 02) structure SHOULD be implemented.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>This relaxes the SMBIOS specification requirement.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SMBIOS_020</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Processor Information (Type 04) structures, meeting the additional <a href="#smbios-type04">7.1.1. Type 04 Processor Information</a> clarifications, MUST be implemented.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>This supersedes the RISC-V specific language in the SMBIOS specification (cite:[SMBIOS], Section 7.5.3.5).</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SMBIOS_030</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Port Connector Information (Type 08) structures SHOULD be implemented.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SMBIOS_040</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BIOS Language Information (Type 13) structures SHOULD be implemented.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SMBIOS_050</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An IPMI Device Information (Type 38) structure MUST be implemented, when an IPMIv1.0 host interface is present.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SMBIOS_060</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System Power Supply (Type 39) structures SHOULD be implemented.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SMBIOS_070</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Onboard Devices Extended Information (Type 41) structures SHOULD be implemented.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SMBIOS_080</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A Redfish Host Interface (Type 42) structure MUST be implemented, when a Redfish host interface is present.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SMBIOS_090</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A TPM Device (Type 43) structure MUST be implemented, when a TPM is present.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SMBIOS_100</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Processor Additional Information (Type 44) structures MUST be implemented.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>See the <a href="#smbios-type44">structure definitions below</a></em>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SMBIOS_110</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Firmware Inventory Information (Type 45) structures SHOULD be implemented.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="smbios-type04"><a class="anchor" href="#smbios-type04"></a>7.1.1. Type 04 Processor Information</h3>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The information in this section supersedes the definitions in (cite:[SMBIOS], Section 7.5.3.4).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A processor is a grouping of harts in a physical package. In modern designs this MAY mean an SoC.</p>
+</div>
+<div class="paragraph">
+<p>For RISC-V class CPUs, the <code>Processor ID</code> field contains two <code>DWORD</code>-formatted values describing
+the overall physical processor package vendor and version. For some implementations
+this may also be known as the SoC ID. The first <code>DWORD</code> (offsets 08h-0Bh) is the JEP-106 code for
+the vendor, where bits 6:0 is the ID without the parity and bits 31:7 represent the number of continuation codes. The second <code>DWORD</code> (offsets 0Ch-0Fh) reflects vendor-specific part versioning.</p>
+</div>
+<div class="paragraph">
+<p>For hart-specific vendor and revision information, please see <a href="#smbios-type44">7.1.2. Type 44 Processor-Specific Data</a>.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="2-1-2-semihosting-parameters"><a class="anchor" href="#2-1-2-semihosting-parameters"></a>2.1.2. Semihosting Parameters</h3>
+<h3 id="smbios-type44"><a class="anchor" href="#smbios-type44"></a>7.1.2. Type 44 Processor-Specific Data</h3>
 <div class="paragraph">
-<p>The type of semihosting operation and its parameters are specified using
-general purpose registers. The OPERATION NUMBER is specified in the <code>a0</code>
-register, and the PARAMETER is specified in the <code>a1</code> register, whereas the
-RETURN VALUE is available in the <code>a0</code> register. All registers and data block
-fields are XLEN wide.</p>
+<p>The processor-specific data structure fields are defined to follow the standard Processor-Specific Block fields (cite:[SMBIOS], Section 7.45.1).</p>
 </div>
+<div class="paragraph">
+<p>The structure is valid for processors declared with <code>Processor Type</code> 07h (64-bit RISC-V) only.</p>
+</div>
+<div class="paragraph">
+<p>A Type 44 structure needs to be provided for every hart meeting <a href="#hart">[hart]</a> requirements.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 95%;">
+<colgroup>
+<col style="width: 13.3333%;">
+<col style="width: 13.3333%;">
+<col style="width: 20%;">
+<col style="width: 13.3333%;">
+<col style="width: 13.3333%;">
+<col style="width: 26.6668%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Offset</th>
+<th class="tableblock halign-left valign-top">Version</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Length</th>
+<th class="tableblock halign-left valign-top">Value</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">00h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0100h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Revision</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WORD</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Varies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See <a href="#smbios-psd-ver">7.1.3. Processor-Specific Data Structure Versioning</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0100h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Hart ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>QWORD</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Varies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ID of this RISC-V hart.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0Ah</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0100h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Machine Vendor ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>QWORD</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Varies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The vendor ID of this
+RISC-V hart.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0100h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Machine Architecture ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>QWORD</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Varies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base
+microarchitecture of the hart. Value of 0 is possible to indicate the field is
+not implemented. The combination of <code>Machine Architecture ID</code> and <code>Machine Vendor
+ID</code> should uniquely identify the type of hart microarchitecture that is implemented.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1Ah</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0100h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Machine Implementation ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>QWORD</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Varies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique encoding
+of the version of the processor implementation.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="smbios-psd-ver"><a class="anchor" href="#smbios-psd-ver"></a>7.1.3. Processor-Specific Data Structure Versioning</h3>
+<div class="paragraph">
+<p>The processor-specific data structure begins with a revision field to allow for future extensibility in a backwards-compatible manner.</p>
+</div>
+<div class="paragraph">
+<p>The minor revision is to be incremented anytime new fields are added in a backwards-compatible manner. The major revision is to be incremented on backwards-incompatible changes.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 95%;">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 42.8572%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Version</th>
+<th class="tableblock halign-left valign-top">Bits 15:8+
+Major revision</th>
+<th class="tableblock halign-left valign-top">Bits 7:0+
+Minor revision</th>
+<th class="tableblock halign-left valign-top">Combined</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">v1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">00h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0100h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First BRS-defined definition</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="intro.html">Chapter 1. Introduction</a></span>
+  <span class="prev"><a href="acpi.html">Chapter 6. BRS-I ACPI Requirements</a></span>
+  <span class="next"><a href="bibliography.html">Bibliography</a></span>
 </nav>
 </article>  </div>
 </main>
