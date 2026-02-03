@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: RISC-V Ratified Specifications Library</title>
+    <link rel="canonical" href="https://docs.riscv.org/rpmi/srvgrp-base.html">
+    <link rel="prev" href="service-groups.html">
+    <link rel="next" href="srvgrp-system-msi.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
+
+    <meta name="antora-ui-version" content="4358d718f6b837ac0a2541aa1ff35e998bbb0d26"> 
+    <meta name="version" content="v1.0">
+    <meta name="component" content="rpmi">
+    <meta name="latest-version" content="false">
+    <link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../_/img/favicon.ico">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://riscv.org">
+        <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV" />
+        <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV" />
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item home">
+          <a class="navbar-link"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/16154769/RISC-V+Technical+Specifications"
+            aria-label="Library">
+            Library</a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">ISA</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805601287/The+RISC-V+Instruction+Set+Manual+Volume+I+Unprivileged+ISA">Unprivileged
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805568665">Privileged <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">Profiles</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805240860/RVA23+Profile">RVA23 Profile <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805568757/RVB23+Profile">RVB23 Profile <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806289411/RISC-V+Profiles">RISC-V Profiles <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">Non-ISA Hardware</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806289428/RISC-V+Advanced+Interrupt+Architecture">Advanced
+            Interrupt Architecture <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806617089/RISC-V+IOMMU+Architecture">IOMMU
+            Architecture <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806617106/RISC-V+Platform-Level+Interrupt+Controller">Platform-Level
+            Interrupt Controller <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806617123/RISC-V+Server+SOC">Server
+            SOC <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">Debug, Trace, RAS</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926657/Efficient+Trace+for+RISC-V">Efficient
+            Trace
+            < <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+              </svg>
+          </a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809697292/RISC-V+Capacity+and+Bandwidth+QoS+Register+Interface">QoS
+            Register Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926674/The+RISC-V+Debug">Debug <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926691/RISC-V+N-Trace+Nexus-based+Trace">N-Trace
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809697310/RISC-V+RERI+Architecture">RERI
+            Architecture
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057729/RISC-V+Trace+Connectors">Trace Connectors
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057747/RISC-V+Trace+Control+Interface">Trace
+            Control Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057766/Unformatted+Trace+Diagnostic+Data+Packet+Encapsulation+for+RISC-V">Unformatted
+            Trace and Diagnostic Data Packet
+            Encapsulation <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">Platform Software</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926709/RISC-V+Boot+and+Runtime+Services+BRS">Boot
+            and Runtime Services <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057786/RISC-V+Functional+Fixed+Hardware">Functional
+            Fixed Hardware <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926726/RISC-V+IO+Mapping+Table">IO Mapping Table
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057803/RISC-V+Platform+Management+Interface+RPMI">Platform
+            Management Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057820/RISC-V+Semihosting">Semihosting <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057837/RISC-V+Supervisor+Binary+Interface">Supervisor
+            Binary Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057854/RISC-V+UEFI+Protocol">UEFI Protocol <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">App Enablement</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057873/RISC-V+ABIs">Application Binary Interface
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926743/RISC-V+Vector+C+Intrinsic">Vector C
+            Intrinsic <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs" >
+        </div>
+        <div class="navbar-item" style="padding-left: 0;">
+          <label class="theme-toggler">
+            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
+                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor"
+                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                </path>
+              </svg>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
+                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+                </path>
+              </svg></span>
+            <span class="text">light</span>
+          </label>
+        </div>
+      </div>
+  </nav>
+</header>
+<script>
+  !function (theme) {
+    if (theme === 'dark') {
+      document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+    }
+  }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script><div class="body">
+<div class="nav-container" data-component="rpmi" data-version="v1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Platform Software</span>
+</div>        <div class="nav-trees" data-component="brs">
+          <div class="version-box">
+            <select data-component="brs" class="select-version">
+                <option
+                  value="../brs/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="brs" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Boot and Runtime Services</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../brs/index.html">Boot and Runtime Services</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../brs/contributors.html">Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../brs/intro.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../brs/recipes.html">Chapter 2. Recipes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../brs/hart.html">Chapter 3. Hart Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../brs/sbi.html">Chapter 4. SBI Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../brs/uefi.html">Chapter 5. BRS-I UEFI Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../brs/acpi.html">Chapter 6. BRS-I ACPI Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../brs/smbios.html">Chapter 7. BRS-I SMBIOS Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../brs/bibliography.html">Bibliography</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="rimt">
+          <div class="version-box">
+            <select data-component="rimt" class="select-version">
+                <option
+                  value="../rimt/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="rimt" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">IO Mapping Table</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../rimt/index.html">IO Mapping Table</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../rimt/contributors.html">Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../rimt/changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../rimt/terms.html">Terms and Abbreviations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../rimt/intro.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../rimt/rimt-main.html">Chapter 2. RISC-V IO Mapping Table (RIMT)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../rimt/mapping-example.html">Chapter 3. ID Mapping Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../rimt/bibliography.html">Chapter 4. Bibliography</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="rpmi">
+          <div class="version-box">
+            <select data-component="rpmi" class="select-version">
+                <option
+                  value="index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="rpmi" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Platform Management Interface (RPMI)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="index.html">Platform Management Interface (RPMI)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="contributors.html">Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="terms.html">Terms and Abbreviations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="transport.html">Chapter 2. Transport</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="message-protocol.html">Chapter 3. Messaging Protocol</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="service-groups.html">Chapter 4. Service Groups</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link"  href="srvgrp-base.html">Chapter 5. Service Group: BASE (SERVICEGROUP_ID: 0x0001)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="srvgrp-system-msi.html">Chapter 6. Service Group - SYSTEM_MSI (SERVICEGROUP_ID: 0x0002)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="srvgrp-system-reset.html">Chapter 7. Service Group - SYSTEM_RESET (SERVICEGROUP_ID: 0x0003)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="srvgrp-system-suspend.html">Chapter 8. Service Group - SYSTEM_SUSPEND (SERVICEGROUP_ID: 0x0004)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="srvgrp-hart-state-management.html">Chapter 9. Service Group - HART_STATE_MANAGEMENT (SERVICEGROUP_ID: 0x0005)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="srvgrp-cppc.html">Chapter 10. Service Group - CPPC (SERVICEGROUP_ID: 0x0006)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="srvgrp-voltage.html">Chapter 11. Service Group - VOLTAGE (SERVICEGROUP_ID: 0x0007)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="srvgrp-clock.html">Chapter 12. Service Group - CLOCK (SERVICEGROUP_ID: 0x0008)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="srvgrp-device-power.html">Chapter 13. Service Group - DEVICE_POWER (SERVICEGROUP_ID: 0x0009)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="srvgrp-performance.html">Chapter 14. Service Group - PERFORMANCE (SERVICEGROUP_ID: 0x000A)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="srvgrp-management.html">Chapter 15. Service Group - MANAGEMENT_MODE (SERVICEGROUP_ID: 0x000B)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="srvgrp-ras-agent.html">Chapter 16. Service Group - RAS_AGENT (SERVICEGROUP_ID: 0x000C)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="srvgrp-request-forward.html">Chapter 17. Service Group - REQUEST_FORWARD (SERVICEGROUP_ID: 0x000D)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="rpmi-mpxy.html">Chapter 18. Integration with SBI MPXY Extension</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="bibliography.html">Bibliography</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="semihost">
+          <div class="version-box">
+            <select data-component="semihost" class="select-version">
+                <option
+                  value="../semihost/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="semihost" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">RISC-V Semihosting</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../semihost/index.html">RISC-V Semihosting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../semihost/contributors.html">Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../semihost/intro.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../semihost/binary-interface.html">Chapter 2. Semihosting Binary Interface</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button id="nav-toggle-1" class="nav-toggle"></button>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div class="tag-toggle-container">
+      <button
+        class="tag-toggle-btn"
+        type="button"
+        onclick="document.documentElement.classList.toggle('tag-highlight-enabled');"
+      >
+        <div class="tag-toggle-switch"></div>
+        <span id="tag-toggle-label">Highlight Tags</span>
+      </button>
+    </div>
+    <div
+      class="toc"
+      data-title=""
+      data-levels="5"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="https://github.com/riscv-non-isa/riscv-rpmi/issues/new" target="_blank" title="Issues">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Report a Problem
+        </a>
+        <a href="https://github.com/riscv-non-isa/riscv-rpmi" target="_blank" title="GitHub">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          GitHub Project
+        </a>
+
+    </div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+      <li>Platform Management Interface (RPMI)</li>
+      <li><a href="srvgrp-base.html">Chapter 5. Service Group: BASE (SERVICEGROUP_ID: 0x0001)</a></li>
+    </ul>
+  </nav>
+</div><div class="sect2">
+<h3 id="5-1-service-group-base-servicegroup_id-0x0001"><a class="anchor" href="#5-1-service-group-base-servicegroup_id-0x0001"></a>5.1. Service Group: BASE (SERVICEGROUP_ID: 0x0001)</h3>
+<div class="paragraph">
+<p>The BASE service group is mandatory and provides the following services:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Initial handshaking between the application processor and the platform
+microcontroller.</p>
+</li>
+<li>
+<p>Discovering the RPMI implementation version information.</p>
+</li>
+<li>
+<p>Discovering the implementation of a service group.</p>
+</li>
+<li>
+<p>Discovering platform specific information.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following table lists the services in the BASE service group:</p>
+</div>
+<table id="table_base_services" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. BASE Services</caption>
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 50%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Service ID</th>
+<th class="tableblock halign-left valign-top">Service Name</th>
+<th class="tableblock halign-left valign-top">Request Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BASE_ENABLE_NOTIFICATION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NORMAL_REQUEST</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x02</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BASE_GET_IMPLEMENTATION_VERSION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NORMAL_REQUEST</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BASE_GET_IMPLEMENTATION_ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NORMAL_REQUEST</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x04</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BASE_GET_SPEC_VERSION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NORMAL_REQUEST</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x05</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BASE_GET_PLATFORM_INFO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NORMAL_REQUEST</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BASE_PROBE_SERVICE_GROUP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NORMAL_REQUEST</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BASE_GET_ATTRIBUTES</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NORMAL_REQUEST</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="5-1-1-rpmi-implementation-ids"><a class="anchor" href="#5-1-1-rpmi-implementation-ids"></a>5.1.1. RPMI Implementation IDs</h4>
+<div class="paragraph">
+<p>The RPMI specification defines space for standard implementation IDs and for
+experimental implementation IDs. The experimental implementation IDs can be used
+by the implementations until a standard implementation ID is assigned to it.</p>
+</div>
+<div class="paragraph">
+<p>The RPMI implementations that have been assigned a standard implementation ID
+are listed in the table below.</p>
+</div>
+<table id="table_base_rpmi_impl_id" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. RPMI Implementation IDs</caption>
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Implementation ID</th>
+<th class="tableblock halign-left valign-top">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x00000000</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>libRPMI cite:[libRPMI]</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x00000001 - 0x7FFFFFFF</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><em>Reserved for Future Use</em></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x80000000 - 0xFFFFFFFF</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><em>Experimental Implementation IDs</em></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="base-notifications"><a class="anchor" href="#base-notifications"></a>5.1.2. Notifications</h4>
+<div class="paragraph">
+<p>This service is used by the platform microcontroller to send the asynchronous
+message of type notification to the application processor. The message
+transfers the events defined by this service group. The events defined are
+listed in the below table.</p>
+</div>
+<table id="table_base_srvgroup_events" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. BASE Service Group Events</caption>
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 36.3636%;">
+<col style="width: 18.1818%;">
+<col style="width: 36.3637%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Event ID</th>
+<th class="tableblock halign-left valign-top">Event Name</th>
+<th class="tableblock halign-left valign-top">Event Data</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">REQUEST_HANDLE_ERROR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This event indicates that the platform microcontroller is unable to serve the
+message requests and acknowledgements are not guaranteed.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="5-1-3-service-base_enable_notification-service_id-0x01"><a class="anchor" href="#5-1-3-service-base_enable_notification-service_id-0x01"></a>5.1.3. Service: BASE_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
+<div class="paragraph">
+<p>This service allows the application processor to subscribe to <code>BASE</code>
+service group notifications. The platform may optionally support notifications
+for events that may occur. The platform microcontroller can send these
+notification messages to the application processor if they are implemented and
+the application processor has subscribed to them. The supported events are
+described in <a href="#base-notifications">5.1.2. Notifications</a>.</p>
+</div>
+<table id="table_base_ennotification_request_data" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. Request Data</caption>
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 18.1818%;">
+<col style="width: 9.0909%;">
+<col style="width: 63.6364%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Word</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EVENT_ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The event to be subscribed for notification.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">REQ_STATE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Requested event notification state.<br>
+Change or query the current state of <code>EVENT_ID</code> notification.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>0: Disable.
+1: Enable.
+2: Return current state.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Any other values of <code>REQ_STATE</code> field other than the defined ones are reserved
+for future use.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="table_base_ennotification_response_data" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. Response Data</caption>
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 18.1818%;">
+<col style="width: 9.0909%;">
+<col style="width: 63.6364%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Word</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STATUS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Return error code.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 54.5454%;">
+<col style="width: 45.4546%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error Code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RPMI_SUCCESS</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Event is subscribed successfully.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RPMI_ERR_INVALID_PARAM</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>EVENT_ID</code> or <code>REQ_STATE</code> is invalid.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RPMI_ERR_NOT_SUPPORTED</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Notification for the <code>EVENT_ID</code> is not supported.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Other errors <a href="#table_error_codes">[table_error_codes]</a>.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CURRENT_STATE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Current <code>EVENT_ID</code> notification state.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>0: Notification is disabled.
+1: Notification is enabled.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In case of <code>REQ_STATE = 0</code> or <code>1</code>, the <code>CURRENT_STATE</code> will return the requested
+state.<br>
+In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="5-1-4-service-base_get_implementation_version-service_id-0x02"><a class="anchor" href="#5-1-4-service-base_get_implementation_version-service_id-0x02"></a>5.1.4. Service: BASE_GET_IMPLEMENTATION_VERSION (SERVICE_ID: 0x02)</h4>
+<div class="paragraph">
+<p>This service is used to get the RPMI implementation version of the platform
+microcontroller. The version returned is a 32-bit composite number containing
+the <code>MAJOR</code> and <code>MINOR</code> version numbers.</p>
+</div>
+<table id="table_base_getimplversion_request_data" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 6. Request Data</caption>
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">NA</th>
+</tr>
+</thead>
+</table>
+<table id="table_base_getimplversion_response_data" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 7. Response Data</caption>
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 18.1818%;">
+<col style="width: 9.0909%;">
+<col style="width: 63.6364%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Word</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STATUS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Return error code.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 71.4286%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error Code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RPMI_SUCCESS</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>RPMI implementation version returned successfully.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Other errors <a href="#table_error_codes">[table_error_codes]</a>.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IMPL_VERSION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Implementation version.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 71.4286%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Bits</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[31:16]</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>MAJOR</code> number.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[15:0]</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>MINOR</code> number.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="5-1-5-service-base_get_implementation_id-service_id-0x03"><a class="anchor" href="#5-1-5-service-base_get_implementation_id-service_id-0x03"></a>5.1.5. Service: BASE_GET_IMPLEMENTATION_ID (SERVICE_ID: 0x03)</h4>
+<div class="paragraph">
+<p>This service is used to get a 32-bit RPMI implementation ID assigned to the
+software that implements the RPMI specification. Every implementation ID is
+unique and listed in the <a href="#table_base_rpmi_impl_id">RPMI Implementation IDs</a>.</p>
+</div>
+<table id="table_base_getimplid_request_data" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 8. Request Data</caption>
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">NA</th>
+</tr>
+</thead>
+</table>
+<table id="table_base_getimplid_response_data" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 9. Response Data</caption>
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 18.1818%;">
+<col style="width: 9.0909%;">
+<col style="width: 63.6364%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Word</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STATUS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Return error code.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 71.4286%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error Code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RPMI_SUCCESS</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>RPMI implementation ID returned successfully.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Other errors <a href="#table_error_codes">[table_error_codes]</a>.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IMPL_ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Implementation ID.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="5-1-6-service-base_get_spec_version-service_id-0x04"><a class="anchor" href="#5-1-6-service-base_get_spec_version-service_id-0x04"></a>5.1.6. Service: BASE_GET_SPEC_VERSION (SERVICE_ID: 0x04)</h4>
+<div class="paragraph">
+<p>This service is used to get the implemented RPMI specification version. The
+version returned is a 32-bit composite number containing the <code>MAJOR</code> and
+<code>MINOR</code> version numbers.</p>
+</div>
+<table id="table_base_getspecversion_request_data" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 10. Request Data</caption>
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">NA</th>
+</tr>
+</thead>
+</table>
+<table id="table_base_getspecversion_response_data" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 11. Response Data</caption>
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 18.1818%;">
+<col style="width: 9.0909%;">
+<col style="width: 63.6364%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Word</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STATUS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Return error code.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 71.4286%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error Code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RPMI_SUCCESS</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>RPMI specification version returned successfully.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Other errors <a href="#table_error_codes">[table_error_codes]</a></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SPEC_VERSION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>RPMI specification version.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 71.4286%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Bits</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[31:16]</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>MAJOR</code> number.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[15:0]</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>MINOR</code> number.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="5-1-7-service-base_get_platform_info-service_id-0x05"><a class="anchor" href="#5-1-7-service-base_get_platform_info-service_id-0x05"></a>5.1.7. Service: BASE_GET_PLATFORM_INFO (SERVICE_ID: 0x05)</h4>
+<div class="paragraph">
+<p>This service is used to get additional platform information if available.</p>
+</div>
+<table id="table_base_getplatinfo_request_data" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 12. Request Data</caption>
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">NA</th>
+</tr>
+</thead>
+</table>
+<table id="table_base_getplatinfo_response_data" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 13. Response Data</caption>
+<colgroup>
+<col style="width: 7.1428%;">
+<col style="width: 21.4285%;">
+<col style="width: 28.5714%;">
+<col style="width: 42.8573%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Word</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STATUS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Return error code.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error Code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RPMI_SUCCESS</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Platform information returned successfully.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Other errors <a href="#table_error_codes">[table_error_codes]</a>.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PLATFORM_ID_LEN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Platform Identifier field length in bytes.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PLATFORM_ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint8[<code>PLATFORM_ID_LEN</code>]</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Platform Identifier.<br>
+Up to <code>PLATFORM_ID_LEN</code> bytes NULL terminated ASCII string.
+The use and interpretation of this field is implementation-defined. It can be
+used to convey details such as the vendor ID, vendor name, specific product
+model, revision, or configuration of the hardware.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="5-1-8-service-base_probe_service_group-service_id-0x06"><a class="anchor" href="#5-1-8-service-base_probe_service_group-service_id-0x06"></a>5.1.8. Service: BASE_PROBE_SERVICE_GROUP (SERVICE_ID: 0x06)</h4>
+<div class="paragraph">
+<p>This service is used to probe the implementation of a service group and to
+obtain the implemented service group version. The service group version is a
+32-bit composite number containing the <code>MAJOR</code> and <code>MINOR</code> numbers.</p>
+</div>
+<div class="paragraph">
+<p>If the service group is successfully probed then the implemented service group
+version is returned in the <code>SERVICE_GROUP_VERSION</code> field. Otherwise it returns
+<code>0</code>.</p>
+</div>
+<table id="table_base_probesrvgrp_request_data" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 14. Request Data</caption>
+<colgroup>
+<col style="width: 8.3333%;">
+<col style="width: 25%;">
+<col style="width: 8.3333%;">
+<col style="width: 58.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Word</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SERVICEGROUP_ID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Service group ID.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="table_base_probesrvgrp_response_data" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 15. Response Data</caption>
+<colgroup>
+<col style="width: 8.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Word</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STATUS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Return error code.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 42.8571%;">
+<col style="width: 57.1429%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error Code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RPMI_SUCCESS</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Service probed successfully.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Other errors <a href="#table_error_codes">[table_error_codes]</a></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SERVICE_GROUP_VERSION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Service group version.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 71.4286%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Bits</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[31:16]</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>MAJOR</code> number.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[15:0]</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>MINOR</code> number.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="5-1-9-service-base_get_attributes-service_id-0x07"><a class="anchor" href="#5-1-9-service-base_get_attributes-service_id-0x07"></a>5.1.9. Service: BASE_GET_ATTRIBUTES (SERVICE_ID: 0x07)</h4>
+<div class="paragraph">
+<p>This service is used to discover additional features supported by the BASE
+service group.</p>
+</div>
+<table id="table_base_getbaseattrs_request_data" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 16. Request Data</caption>
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">NA</th>
+</tr>
+</thead>
+</table>
+<table id="table_base_getbaseattrs_response_data" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 17. Response Data</caption>
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 18.1818%;">
+<col style="width: 9.0909%;">
+<col style="width: 63.6364%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Word</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STATUS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Return error code.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 71.4286%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error Code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RPMI_SUCCESS</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Attributes returned successfully.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>Other errors <a href="#table_error_codes">[table_error_codes]</a>.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FLAGS0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18.1818%;">
+<col style="width: 81.8182%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Bits</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[31:2]</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><em>Reserved</em> and must be <code>0</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[1]</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>RPMI context privilege level.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>0b1: M-mode.
+0b0: S-mode.</pre>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[0]</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Event notification support in platform.<br></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>0b1: Supported.
+0b0: Not supported.</pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FLAGS1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><em>Reserved</em> and must be <code>0</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FLAGS2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><em>Reserved</em> and must be <code>0</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FLAGS3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><em>Reserved</em> and must be <code>0</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="service-groups.html">Chapter 4. Service Groups</a></span>
+  <span class="next"><a href="srvgrp-system-msi.html">Chapter 6. Service Group - SYSTEM_MSI (SERVICEGROUP_ID: 0x0002)</a></span>
+</nav>
+</article>  </div>
+</main>
+</div>
+<footer class="footer flex">
+    <div id="RISC-V footer">
+        <p class="smallest antialiased">Copyright © 2025 - <script>var d = new Date();
+        document.write(d.getFullYear());</script> This document is released under a Creative Commons Attribution 4.0 International License.<span id="teconsent"></span></p>
+    
+    </div>
+
+</footer>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async
+    src="../_/js/vendor/spring-tabs.js"
+    data-sync-storage-key="docs:preferred-tab"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>
