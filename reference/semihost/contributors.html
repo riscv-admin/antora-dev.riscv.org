@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://docs.riscv.org/aia/index.html">
-    <link rel="next" href="contributors.html">
+    <link rel="canonical" href="https://docs.riscv.org/semihost/contributors.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="intro.html">
     <meta name="generator" content="Antora 3.1.14">
     <script>
 !function (theme, navWidth) {
@@ -21,7 +22,7 @@
 
     <meta name="antora-ui-version" content="4358d718f6b837ac0a2541aa1ff35e998bbb0d26"> 
     <meta name="version" content="v1.0">
-    <meta name="component" content="aia">
+    <meta name="component" content="semihost">
     <meta name="latest-version" content="false">
     <link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../_/img/favicon.ico">
@@ -272,16 +273,16 @@
     }
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script><div class="body">
-<div class="nav-container" data-component="aia" data-version="v1.0">
+<div class="nav-container" data-component="semihost" data-version="v1.0">
   <aside class="nav">
     <div class="panels">
       <div class="nav-panel-menu is-active" data-panel="menu">
         <nav class="nav-menu">
 <div class="context">
-  <span class="title">Non-ISA Hardware</span>
-</div>        <div class="nav-trees" data-component="aia">
+  <span class="title">Platform Software</span>
+</div>        <div class="nav-trees" data-component="semihost">
           <div class="version-box">
-            <select data-component="aia" class="select-version">
+            <select data-component="semihost" class="select-version">
                 <option
                   value="index.html"
                   data-version="v1.0"
@@ -291,141 +292,23 @@
                 </option>
             </select>
           </div>
-              <div data-component="aia" data-version="v1.0" class="nav-version-group">
+              <div data-component="semihost" data-version="v1.0" class="nav-version-group">
                 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Advanced Interrupt Architecture</span>
+    <span class="nav-text">RISC-V Semihosting</span>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="index.html">RISC-V Semihosting</a>
+  </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="index.html">Advanced Interrupt Architecture</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="contributors.html">Contributors</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="CSRs.html">Chapter 2. Control and Status Registers (CSRs) Added to Harts</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="IMSIC.html">Chapter 3. Incoming MSI Controller (IMSIC)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="AdvPLIC.html">Chapter 4. Advanced Platform-Level Interrupt Controller (APLIC)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="MSLevel.html">Chapter 5. Interrupts for Machine and Supervisor Levels</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="VSLevel.html">Chapter 6. Interrupts for Virtual Machines (VS Level)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="IPIs.html">Chapter 7. Interprocessor Interrupts (IPIs)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="IOMMU.html">Chapter 8. IOMMU Support for MSIs to Virtual Machines</a>
-  </li>
-</ul>
-  </li>
-</ul>
-              </div>
-        </div>
-        <div class="nav-trees" data-component="iommu">
-          <div class="version-box">
-            <select data-component="iommu" class="select-version">
-                <option
-                  value="../iommu/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
-                  v1.0
-                </option>
-            </select>
-          </div>
-              <div data-component="iommu" data-version="v1.0" class="nav-version-group">
-                <ul class="nav-list">
-  <li class="nav-item" data-depth="5">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">IOMMU Architecture</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/index.html">IOMMU Architecture</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/preamble.html">Preamble</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/contributors.html">Chapter 1. Contributors</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_preface.html">Chapter 2. Preface</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_intro.html">Chapter 3. Introduction</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_data_structures.html">Chapter 4. Data Structures</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_in_memory_queues.html">Chapter 5. In-memory queue interface</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_debug.html">Chapter 6. Debug support</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_registers.html">Chapter 7. Memory-mapped register interface</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_sw_guidelines.html">Chapter 8. Software guidelines</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_hw_guidelines.html">Chapter 9. Hardware guidelines</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_extensions.html">IOMMU Extensions</a>
-  </li>
-</ul>
-  </li>
-</ul>
-              </div>
-        </div>
-        <div class="nav-trees" data-component="soc">
-          <div class="version-box">
-            <select data-component="soc" class="select-version">
-                <option
-                  value="../soc/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
-                  v1.0
-                </option>
-            </select>
-          </div>
-              <div data-component="soc" data-version="v1.0" class="nav-version-group">
-                <ul class="nav-list">
-  <li class="nav-item" data-depth="5">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Server SoC Specification</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/index.html">Server SoC Specification</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_preamble.html">Preamble</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_contributors.html">Contributors</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_intro.html">Chapter 1. Introduction</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
+    <a class="nav-link"  href="binary-interface.html">Chapter 2. Semihosting Binary Interface</a>
   </li>
 </ul>
   </li>
@@ -475,7 +358,7 @@
       <div class="toc-menu"></div>
     </div>
     <div class="sidebar-links">
-        <a href="https://github.com/riscv/riscv-aia/issues/new" target="_blank" title="Issues">
+        <a href="https://github.com/riscv-non-isa/riscv-semihosting/issues/new" target="_blank" title="Issues">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24"
@@ -486,7 +369,7 @@
             ></path></svg>
           Report a Problem
         </a>
-        <a href="https://github.com/riscv/riscv-aia" target="_blank" title="GitHub">
+        <a href="https://github.com/riscv-non-isa/riscv-semihosting" target="_blank" title="GitHub">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="512px"
@@ -502,7 +385,7 @@
           GitHub Project
         </a>
 
-          <a href="../aia/_attachments/riscv-interrupts.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
+          <a href="https://github.com/riscv/docs.riscv.org/blob/main/static/pdf/riscv-semihosting.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
             <span>Download PDF</span>
             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path d="M10 14a5 5 0 0 1 7.07 0l3.54 3.54a5 5 0 0 1-7.07 7.07l-3.54-3.54a5 5 0 0 1 0-7.07z"/>
@@ -516,32 +399,46 @@
 <div class="breadcrumbs-container">
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
-      <li>Advanced Interrupt Architecture</li>
-      <li><a href="index.html">Advanced Interrupt Architecture</a></li>
+      <li>RISC-V Semihosting</li>
+      <li><a href="contributors.html">Contributors</a></li>
     </ul>
   </nav>
-</div><div id="preamble">
-<div class="sectionbody">
-<div class="imageblock">
-<div class="content">
-<img src="_images/risc-v_logo.svg" alt="risc v logo">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="the-risc-v-advanced-interrupt-architecture"><a class="anchor" href="#the-risc-v-advanced-interrupt-architecture"></a>The RISC-V Advanced Interrupt Architecture</h2>
+</div><div class="sect1">
+<h2 id="contributors"><a class="anchor" href="#contributors"></a>Contributors</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Editors: John Hauser, <a href="mailto:jh.riscv@jhauser.us">jh.riscv@jhauser.us</a></p>
+<p>This RISC-V specification has been contributed to directly or indirectly by:</p>
 </div>
-<div class="paragraph">
-<p>Version 1.0, Revised 20250312</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Krste Asanovic &lt;<a href="mailto:krste@sifive.com">krste@sifive.com</a>&gt;</p>
+</li>
+<li>
+<p>Palmer Dabbelt &lt;<a href="mailto:palmer@dabbelt.com">palmer@dabbelt.com</a>&gt;</p>
+</li>
+<li>
+<p>Liviu Ionescu &lt;<a href="mailto:ilg@livius.net">ilg@livius.net</a>&gt;</p>
+</li>
+<li>
+<p>Keith Packard &lt;<a href="mailto:keith.packard@sifive.com">keith.packard@sifive.com</a>&gt;</p>
+</li>
+<li>
+<p>Megan Wachs &lt;<a href="mailto:megan@sifive.com">megan@sifive.com</a>&gt;</p>
+</li>
+<li>
+<p>Anup Patel &lt;<a href="mailto:apatel@ventanamicro.com">apatel@ventanamicro.com</a>&gt;</p>
+</li>
+<li>
+<p>Ved Shanbhogue &lt;<a href="mailto:ved@rivosinc.com">ved@rivosinc.com</a>&gt;</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="next"><a href="contributors.html">Contributors</a></span>
+  <span class="prev"><a href="index.html">RISC-V Semihosting</a></span>
+  <span class="next"><a href="intro.html">Chapter 1. Introduction</a></span>
 </nav>
 </article>  </div>
 </main>
