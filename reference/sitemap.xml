@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <sitemap>
+<loc>https://docs.riscv.org/sitemap-abi.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://docs.riscv.org/sitemap-aia.xml</loc>
 </sitemap>
 <sitemap>
@@ -8,6 +11,9 @@
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/sitemap-etrace.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.riscv.org/sitemap-intrinsic.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/sitemap-iommu.xml</loc>
