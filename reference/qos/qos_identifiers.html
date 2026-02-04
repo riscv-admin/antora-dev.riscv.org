@@ -408,28 +408,34 @@
     <span class="nav-text">RISC-V Capacity and Bandwidth Controller QoS Register Interface</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="qos_contributors.html">Contributors</a>
+    <a class="nav-link"  href="index.html">QoS Register Interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="qos_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="qos_preamble.html">Chapter 1. Preamble</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="qos_contributors.html">Chapter 2. Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="qos_intro.html">Chapter 3. Introduction</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="qos_identifiers.html">Chapter 2. QoS Identifiers</a>
+    <a class="nav-link"  href="qos_identifiers.html">Chapter 4. QoS Identifiers</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="qos_capacity.html">Chapter 3. Capacity-controller QoS Register Interface</a>
+    <a class="nav-link"  href="qos_capacity.html">Chapter 5. Capacity-controller QoS Register Interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="qos_bandwidth.html">Chapter 4. Bandwidth-controller QoS Register Interface</a>
+    <a class="nav-link"  href="qos_bandwidth.html">Chapter 6. Bandwidth-controller QoS Register Interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="qos_iommu.html">Chapter 5. IOMMU Extension for QoS ID</a>
+    <a class="nav-link"  href="qos_iommu.html">Chapter 7. IOMMU Extension for QoS ID</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="qos_hw_guidelines.html">Chapter 6. Hardware Guidelines</a>
+    <a class="nav-link"  href="qos_hw_guidelines.html">Hardware Guidelines</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="qos_sw_guidelines.html">Chapter 7. Software Guidelines</a>
+    <a class="nav-link"  href="qos_sw_guidelines.html">Software Guidelines</a>
   </li>
 </ul>
   </li>
@@ -560,11 +566,11 @@
     <ul>
       <li><a href="index.html">RISC-V Capacity and Bandwidth QoS Register Interface</a></li>
       <li>RISC-V Capacity and Bandwidth Controller QoS Register Interface</li>
-      <li><a href="qos_identifiers.html">Chapter 2. QoS Identifiers</a></li>
+      <li><a href="qos_identifiers.html">Chapter 4. QoS Identifiers</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="QOS_ID"><a class="anchor" href="#QOS_ID"></a>2.1. QoS Identifiers</h2>
+<h2 id="QOS_ID"><a class="anchor" href="#QOS_ID"></a>4.1. QoS Identifiers</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Monitoring or allocation of resources requires a way to identify the originator
@@ -592,7 +598,7 @@ differentiated IDs for monitoring. All supported <code>RCID</code> and <code>MCI
 actively used in the system at any instance.</p>
 </div>
 <div class="sect2">
-<h3 id="EMCID"><a class="anchor" href="#EMCID"></a>2.1.1. Associating <code>RCID</code> and <code>MCID</code> with requests</h3>
+<h3 id="EMCID"><a class="anchor" href="#EMCID"></a>4.1.1. Associating <code>RCID</code> and <code>MCID</code> with requests</h3>
 <div class="paragraph">
 <p>The <code>RCID</code> in the request is used by the resource controllers to determine the
 resource allocations (for example, cache occupancy limits, memory bandwidth limits,
@@ -613,7 +619,7 @@ register of the controller. Software should use the effective <code>MCID</code> 
 <code>MCID</code> operand to the controller for operations on the monitoring counters.</p>
 </div>
 <div class="sect3">
-<h4 id="2-1-1-1-risc-v-hart-initiated-requests-ssqosid"><a class="anchor" href="#2-1-1-1-risc-v-hart-initiated-requests-ssqosid"></a>2.1.1.1. RISC-V hart initiated requests (Ssqosid)</h4>
+<h4 id="4-1-1-1-risc-v-hart-initiated-requests-ssqosid"><a class="anchor" href="#4-1-1-1-risc-v-hart-initiated-requests-ssqosid"></a>4.1.1.1. RISC-V hart initiated requests (Ssqosid)</h4>
 <div class="paragraph">
 <p>The Ssqosid extension cite:[SSQOSID] introduces a read/write S/HS-mode register
 (<code>srmcfg</code>) to configure QoS Identifiers to be used with requests made by the
@@ -623,7 +629,7 @@ of <code>mstateen0</code> controls access to <code>srmcfg</code> from privilege 
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="2-1-1-2-device-initiated-requests"><a class="anchor" href="#2-1-1-2-device-initiated-requests"></a>2.1.1.2. Device initiated requests</h4>
+<h4 id="4-1-1-2-device-initiated-requests"><a class="anchor" href="#4-1-1-2-device-initiated-requests"></a>4.1.1.2. Device initiated requests</h4>
 <div class="paragraph">
 <p>A RISC-V IOMMU cite:[IOMMU] extension to support configuring QoS identifiers is
 specified in <a href="#QOS_IOMMU">[QOS_IOMMU]</a>. If the system supports an IOMMU with this extension,
@@ -656,7 +662,7 @@ a shim is <code>UNSPECIFIED</code>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="2-1-2-access-type-at"><a class="anchor" href="#2-1-2-access-type-at"></a>2.1.2. Access type (<code>AT</code>)</h3>
+<h3 id="4-1-2-access-type-at"><a class="anchor" href="#4-1-2-access-type-at"></a>4.1.2. Access type (<code>AT</code>)</h3>
 <div class="paragraph">
 <p>In some usages, in addition to providing differentiated service among workloads,
 the ability to differentiate between resource usage for accesses made by the
@@ -717,8 +723,8 @@ allocation and monitoring for each <code>AT</code>.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="qos_intro.html">Chapter 1. Introduction</a></span>
-  <span class="next"><a href="qos_capacity.html">Chapter 3. Capacity-controller QoS Register Interface</a></span>
+  <span class="prev"><a href="qos_intro.html">Chapter 3. Introduction</a></span>
+  <span class="next"><a href="qos_capacity.html">Chapter 5. Capacity-controller QoS Register Interface</a></span>
 </nav>
 </article>  </div>
 </main>

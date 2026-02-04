@@ -407,28 +407,34 @@
     <span class="nav-text">RISC-V Capacity and Bandwidth Controller QoS Register Interface</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="qos_contributors.html">Contributors</a>
+    <a class="nav-link"  href="index.html">QoS Register Interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="qos_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="qos_preamble.html">Chapter 1. Preamble</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="qos_identifiers.html">Chapter 2. QoS Identifiers</a>
+    <a class="nav-link"  href="qos_contributors.html">Chapter 2. Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="qos_capacity.html">Chapter 3. Capacity-controller QoS Register Interface</a>
+    <a class="nav-link"  href="qos_intro.html">Chapter 3. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="qos_bandwidth.html">Chapter 4. Bandwidth-controller QoS Register Interface</a>
+    <a class="nav-link"  href="qos_identifiers.html">Chapter 4. QoS Identifiers</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="qos_iommu.html">Chapter 5. IOMMU Extension for QoS ID</a>
+    <a class="nav-link"  href="qos_capacity.html">Chapter 5. Capacity-controller QoS Register Interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="qos_hw_guidelines.html">Chapter 6. Hardware Guidelines</a>
+    <a class="nav-link"  href="qos_bandwidth.html">Chapter 6. Bandwidth-controller QoS Register Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="qos_iommu.html">Chapter 7. IOMMU Extension for QoS ID</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="qos_hw_guidelines.html">Hardware Guidelines</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="qos_sw_guidelines.html">Chapter 7. Software Guidelines</a>
+    <a class="nav-link"  href="qos_sw_guidelines.html">Software Guidelines</a>
   </li>
 </ul>
   </li>
@@ -559,14 +565,14 @@
     <ul>
       <li><a href="index.html">RISC-V Capacity and Bandwidth QoS Register Interface</a></li>
       <li>RISC-V Capacity and Bandwidth Controller QoS Register Interface</li>
-      <li><a href="qos_sw_guidelines.html">Chapter 7. Software Guidelines</a></li>
+      <li><a href="qos_sw_guidelines.html">Software Guidelines</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="QOS_SW_GUIDE"><a class="anchor" href="#QOS_SW_GUIDE"></a>7.1. Software Guidelines</h2>
+<h2 id="QOS_SW_GUIDE"><a class="anchor" href="#QOS_SW_GUIDE"></a>Software Guidelines</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="7-1-1-reporting-capacity-and-bandwidth-controllers"><a class="anchor" href="#7-1-1-reporting-capacity-and-bandwidth-controllers"></a>7.1.1. Reporting Capacity and Bandwidth Controllers</h3>
+<h3 id="reporting-capacity-and-bandwidth-controllers"><a class="anchor" href="#reporting-capacity-and-bandwidth-controllers"></a>Reporting Capacity and Bandwidth Controllers</h3>
 <div class="paragraph">
 <p>The capability and bandwidth controllers that are present in the system should
 be reported to operating systems using methods such as ACPI and/or device tree.
@@ -605,7 +611,7 @@ or bandwidth blocks per RCID.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="7-1-2-context-switching-qos-identifiers"><a class="anchor" href="#7-1-2-context-switching-qos-identifiers"></a>7.1.2. Context Switching QoS Identifiers</h3>
+<h3 id="context-switching-qos-identifiers"><a class="anchor" href="#context-switching-qos-identifiers"></a>Context Switching QoS Identifiers</h3>
 <div class="paragraph">
 <p>Typically, the contents of the <code>srmcfg</code> CSR are updated with a new <code>RCID</code>
 and/or <code>MCID</code> by the HS/S-mode scheduler if the <code>RCID</code> and/or <code>MCID</code> of the
@@ -631,7 +637,7 @@ for the duration of such execution.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="7-1-3-qos-configurations-for-virtual-machines"><a class="anchor" href="#7-1-3-qos-configurations-for-virtual-machines"></a>7.1.3. QoS Configurations for Virtual Machines</h3>
+<h3 id="qos-configurations-for-virtual-machines"><a class="anchor" href="#qos-configurations-for-virtual-machines"></a>QoS Configurations for Virtual Machines</h3>
 <div class="paragraph">
 <p>Usually for virtual machines the resource allocations are configured by the
 hypervisor. Usually the Guest OS in a virtual machine does not participate in
@@ -664,7 +670,7 @@ a set of HS mode CSRs.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="7-1-4-qos-identifiers-for-supervisor-and-machine-mode"><a class="anchor" href="#7-1-4-qos-identifiers-for-supervisor-and-machine-mode"></a>7.1.4. QoS Identifiers for Supervisor and Machine Mode</h3>
+<h3 id="qos-identifiers-for-supervisor-and-machine-mode"><a class="anchor" href="#qos-identifiers-for-supervisor-and-machine-mode"></a>QoS Identifiers for Supervisor and Machine Mode</h3>
 <div class="paragraph">
 <p>The <code>RCID</code> and <code>MCID</code> configured in <code>srmcfg</code> also apply to execution in
 S/HS-mode, but this is typically not an issue. Usually, S/HS-mode execution
@@ -694,7 +700,7 @@ privilege mode operation might not have a significant statistical impact.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="qos_hw_guidelines.html">Chapter 6. Hardware Guidelines</a></span>
+  <span class="prev"><a href="qos_hw_guidelines.html">Hardware Guidelines</a></span>
 </nav>
 </article>  </div>
 </main>
