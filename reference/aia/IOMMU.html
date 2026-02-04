@@ -304,6 +304,9 @@
     <a class="nav-link"  href="contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="copyright.html">Copyright and License</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -357,40 +360,40 @@
     <a class="nav-link"  href="../iommu/index.html">IOMMU Architecture</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/preamble.html">Preamble</a>
+    <a class="nav-link"  href="../iommu/preamble.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/contributors.html">Chapter 1. Contributors</a>
+    <a class="nav-link"  href="../iommu/contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_preface.html">Chapter 2. Preface</a>
+    <a class="nav-link"  href="../iommu/iommu_preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_intro.html">Chapter 3. Introduction</a>
+    <a class="nav-link"  href="../iommu/iommu_intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_data_structures.html">Chapter 4. Data Structures</a>
+    <a class="nav-link"  href="../iommu/iommu_data_structures.html">Chapter 2. Data Structures</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_in_memory_queues.html">Chapter 5. In-memory queue interface</a>
+    <a class="nav-link"  href="../iommu/iommu_in_memory_queues.html">Chapter 3. In-memory queue interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_debug.html">Chapter 6. Debug support</a>
+    <a class="nav-link"  href="../iommu/iommu_debug.html">Chapter 4. Debug support</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_registers.html">Chapter 7. Memory-mapped register interface</a>
+    <a class="nav-link"  href="../iommu/iommu_registers.html">Chapter 5. Memory-mapped register interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_sw_guidelines.html">Chapter 8. Software guidelines</a>
+    <a class="nav-link"  href="../iommu/iommu_sw_guidelines.html">Chapter 6. Software guidelines</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_hw_guidelines.html">Chapter 9. Hardware guidelines</a>
+    <a class="nav-link"  href="../iommu/iommu_hw_guidelines.html">Chapter 7. Hardware guidelines</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_extensions.html">IOMMU Extensions</a>
+    <a class="nav-link"  href="../iommu/iommu_extensions.html">Chapter 8. IOMMU Extensions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/bibliography.html">Bibliography</a>
+    <a class="nav-link"  href="../iommu/bibliography.html">Chapter 9. Bibliography</a>
   </li>
 </ul>
   </li>
@@ -419,7 +422,7 @@
     <a class="nav-link"  href="../soc/index.html">Server SoC Specification</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_preamble.html">Preamble</a>
+    <a class="nav-link"  href="../soc/server_soc_preamble.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../soc/server_soc_contributors.html">Contributors</a>
@@ -527,7 +530,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="IOMMU"><a class="anchor" href="#IOMMU"></a>8.1. IOMMU Support for MSIs to Virtual Machines</h2>
+<h2 id="IOMMU"><a class="anchor" href="#IOMMU"></a>IOMMU Support for MSIs to Virtual Machines</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The existence of an IOMMU in a system makes it possible for a guest
@@ -585,7 +588,7 @@ multiple separate device drivers, each sub-device is referred to here as
 one device.</p>
 </div>
 <div class="sect2">
-<h3 id="IOMMU-deviceContexts"><a class="anchor" href="#IOMMU-deviceContexts"></a>8.1.1. Device contexts at an IOMMU</h3>
+<h3 id="IOMMU-deviceContexts"><a class="anchor" href="#IOMMU-deviceContexts"></a>Device contexts at an IOMMU</h3>
 <div class="paragraph">
 <p>The following assumptions are made about the IOMMUs in a system:</p>
 </div>
@@ -638,7 +641,7 @@ translation and/or conversion of MSIs from the device.</p>
 <p>The MSI address mask and address pattern are each unsigned integers with
 the same width as guest physical page numbers, i.e., 12 bits narrower
 than the maximum supported width of a guest physical address. Their use
-is explained in <a href="#IOMMU-identIncomingMSIs">8.1.4. Identification of page addresses of a VM&#8217;s interrupt files</a>.</p>
+is explained in <a href="#IOMMU-identIncomingMSIs">Identification of page addresses of a VM&#8217;s interrupt files</a>.</p>
 </div>
 <div class="paragraph">
 <p>A device context&#8217;s MSI page table is separate from the usual
@@ -679,9 +682,9 @@ components concerned with regular address translation.</p>
 <div class="paragraph">
 <p>Second, specifying a separate MSI page table facilitates the use of
 <em>memory-resident interrupt files</em> (MRIFs), which are introduced in
-<a href="#IOMMU-MRIFs">8.1.3. Memory-resident interrupt files</a>. A dedicated MSI page table can easily
+<a href="#IOMMU-MRIFs">Memory-resident interrupt files</a>. A dedicated MSI page table can easily
 support a special table entry format for MRIFs
-(<a href="#IOMMU-MSIPTE-MRIF">8.1.5.2. MSI PTE, MRIF mode</a>) that would be entirely foreign
+(<a href="#IOMMU-MSIPTE-MRIF">MSI PTE, MRIF mode</a>) that would be entirely foreign
 and difficult to retrofit to any other address-translation data
 structures.</p>
 </div>
@@ -691,7 +694,7 @@ structures.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="8-1-2-translation-of-addresses-for-msis-from-devices"><a class="anchor" href="#8-1-2-translation-of-addresses-for-msis-from-devices"></a>8.1.2. Translation of addresses for MSIs from devices</h3>
+<h3 id="translation-of-addresses-for-msis-from-devices"><a class="anchor" href="#translation-of-addresses-for-msis-from-devices"></a>Translation of addresses for MSIs from devices</h3>
 <div class="paragraph">
 <p>To support the delivery of MSIs from I/O devices directly to RISC-V virtual
 machines without hypervisor intervention, an IOMMU must be able to
@@ -717,7 +720,7 @@ address of the write. If an IOMMU determines that a 32-bit write is to
 the location of a (virtual) interrupt file in the relevant virtual
 machine, the write is considered an MSI within the VM, else not. The
 exact formula for recognizing MSIs is documented in
-<a href="#IOMMU-identIncomingMSIs">8.1.4. Identification of page addresses of a VM&#8217;s interrupt files</a>.</p>
+<a href="#IOMMU-identIncomingMSIs">Identification of page addresses of a VM&#8217;s interrupt files</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -742,7 +745,7 @@ interpret the table properly.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="IOMMU-MRIFs"><a class="anchor" href="#IOMMU-MRIFs"></a>8.1.3. Memory-resident interrupt files</h3>
+<h3 id="IOMMU-MRIFs"><a class="anchor" href="#IOMMU-MRIFs"></a>Memory-resident interrupt files</h3>
 <div class="paragraph">
 <p>An IOMMU may optionally support memory-resident interrupt files (MRIFs).
 If implemented, the use of memory-resident interrupt files can greatly
@@ -852,7 +855,7 @@ support is possible without AMOs, relying solely on basic memory reads
 and writes.</p>
 </div>
 <div class="sect3">
-<h4 id="IOMMU-MRIFFormat"><a class="anchor" href="#IOMMU-MRIFFormat"></a>8.1.3.1. Format of a memory-resident interrupt file</h4>
+<h4 id="IOMMU-MRIFFormat"><a class="anchor" href="#IOMMU-MRIFFormat"></a>Format of a memory-resident interrupt file</h4>
 <div class="paragraph">
 <p>A memory-resident interrupt file occupies 512 bytes of memory, naturally
 aligned to a 512-byte address boundary. The 512 bytes are organized as
@@ -1009,7 +1012,7 @@ indicating an invalid interrupt identity of zero.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="8-1-3-2-recording-of-incoming-msis-to-memory-resident-interrupt-files"><a class="anchor" href="#8-1-3-2-recording-of-incoming-msis-to-memory-resident-interrupt-files"></a>8.1.3.2. Recording of incoming MSIs to memory-resident interrupt files</h4>
+<h4 id="recording-of-incoming-msis-to-memory-resident-interrupt-files"><a class="anchor" href="#recording-of-incoming-msis-to-memory-resident-interrupt-files"></a>Recording of incoming MSIs to memory-resident interrupt files</h4>
 <div class="paragraph">
 <p>The data component of an MSI write specifies the interrupt identity to
 raise in the destination interrupt file. (Recall
@@ -1034,7 +1037,7 @@ for the MRIF.</p>
 </div>
 <div class="paragraph">
 <p>The exact process of storing an MSI to an MRIF is specified more
-precisely in <a href="#IOMMU-MSIPTE-MRIF">8.1.5.2. MSI PTE, MRIF mode</a>, which covers MSI
+precisely in <a href="#IOMMU-MSIPTE-MRIF">MSI PTE, MRIF mode</a>, which covers MSI
 page table entries configured in <em>MRIF mode</em>.</p>
 </div>
 <div class="admonitionblock note">
@@ -1058,11 +1061,11 @@ the interrupt identity is zero.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="8-1-3-3-use-of-memory-resident-interrupt-files-with-atomic-update"><a class="anchor" href="#8-1-3-3-use-of-memory-resident-interrupt-files-with-atomic-update"></a>8.1.3.3. Use of memory-resident interrupt files with atomic update</h4>
+<h4 id="use-of-memory-resident-interrupt-files-with-atomic-update"><a class="anchor" href="#use-of-memory-resident-interrupt-files-with-atomic-update"></a>Use of memory-resident interrupt files with atomic update</h4>
 <div class="paragraph">
 <p>To make use of a memory-resident interrupt file with support for atomic
 update, software must have memory locations to save an IMSIC interrupt
-file&#8217;s <code>eidelivery</code> and <code>eithreshold</code> registers, in addition to the MRIF structure itself from <a href="#IOMMU-MRIFFormat">8.1.3.1. Format of a memory-resident interrupt file</a>.</p>
+file&#8217;s <code>eidelivery</code> and <code>eithreshold</code> registers, in addition to the MRIF structure itself from <a href="#IOMMU-MRIFFormat">Format of a memory-resident interrupt file</a>.</p>
 </div>
 <div class="paragraph">
 <p>Moving a virtual hart&#8217;s interrupt file from an IMSIC into an MRIF
@@ -1155,7 +1158,7 @@ the interrupt-enable bits from the MRIF to the IMSIC interrupt file&#8217;s <cod
 </div>
 </div>
 <div class="sect3">
-<h4 id="8-1-3-4-use-of-memory-resident-interrupt-files-without-atomic-update"><a class="anchor" href="#8-1-3-4-use-of-memory-resident-interrupt-files-without-atomic-update"></a>8.1.3.4. Use of memory-resident interrupt files without atomic update</h4>
+<h4 id="use-of-memory-resident-interrupt-files-without-atomic-update"><a class="anchor" href="#use-of-memory-resident-interrupt-files-without-atomic-update"></a>Use of memory-resident interrupt files without atomic update</h4>
 <div class="paragraph">
 <p>Without support for atomic update, the use of memory-resident interrupt
 files is similar to the atomic-update case of the previous subsection,
@@ -1249,7 +1252,7 @@ file&#8217;s <code>eie</code> array.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="8-1-3-5-allocation-of-guest-interrupt-files-for-receiving-notice-msis"><a class="anchor" href="#8-1-3-5-allocation-of-guest-interrupt-files-for-receiving-notice-msis"></a>8.1.3.5. Allocation of guest interrupt files for receiving notice MSIs</h4>
+<h4 id="allocation-of-guest-interrupt-files-for-receiving-notice-msis"><a class="anchor" href="#allocation-of-guest-interrupt-files-for-receiving-notice-msis"></a>Allocation of guest interrupt files for receiving notice MSIs</h4>
 <div class="paragraph">
 <p>The processing a hypervisor does in response to notice MSIs can be
 minimized by assigning a separate interrupt identity for each MRIF, so
@@ -1280,7 +1283,7 @@ does not police exactly how they are used by software.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="IOMMU-identIncomingMSIs"><a class="anchor" href="#IOMMU-identIncomingMSIs"></a>8.1.4. Identification of page addresses of a VM&#8217;s interrupt files</h3>
+<h3 id="IOMMU-identIncomingMSIs"><a class="anchor" href="#IOMMU-identIncomingMSIs"></a>Identification of page addresses of a VM&#8217;s interrupt files</h3>
 <div class="paragraph">
 <p>When an I/O device is configured directly by a guest operating system,
 MSIs from the device are expected to be targeted to virtual IMSICs
@@ -1305,7 +1308,7 @@ a virtual IMSIC within the VM.</p>
 </div>
 <div class="paragraph">
 <p>The MSI address mask and address pattern specified in a device context
-(<a href="#IOMMU-deviceContexts">8.1.1. Device contexts at an IOMMU</a>) are used to identify the 4-KiB
+(<a href="#IOMMU-deviceContexts">Device contexts at an IOMMU</a>) are used to identify the 4-KiB
 pages of virtual interrupt files in the guest physical address space of
 the relevant VM. An incoming 32-bit write made by a device is recognized
 as an MSI write to a virtual interrupt file if the destination guest
@@ -1352,7 +1355,7 @@ and <span class="steminline"> <svg style="vertical-align: -0.464ex; overflow: vi
 </div>
 </div>
 <div class="sect2">
-<h3 id="8-1-5-msi-page-tables"><a class="anchor" href="#8-1-5-msi-page-tables"></a>8.1.5. MSI page tables</h3>
+<h3 id="msi-page-tables"><a class="anchor" href="#msi-page-tables"></a>MSI page tables</h3>
 <div class="paragraph">
 <p>When an IOMMU determines that a memory access is to a virtual interrupt
 file as specified in the previous section, the access is translated or
@@ -1418,7 +1421,7 @@ interpretation of an MSI PTE for each of the two defined modes is
 detailed further in the next two subsections.</p>
 </div>
 <div class="sect3">
-<h4 id="8-1-5-1-msi-pte-basic-translate-mode"><a class="anchor" href="#8-1-5-1-msi-pte-basic-translate-mode"></a>8.1.5.1. MSI PTE, basic translate mode</h4>
+<h4 id="msi-pte-basic-translate-mode"><a class="anchor" href="#msi-pte-basic-translate-mode"></a>MSI PTE, basic translate mode</h4>
 <div class="paragraph">
 <p>When an MSI PTE has fields V = 1, C = 0, and M = 3 (basic translate
 mode), the PTE&#8217;s complete format is:</p>
@@ -1517,7 +1520,7 @@ must be treated differently.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="IOMMU-MSIPTE-MRIF"><a class="anchor" href="#IOMMU-MSIPTE-MRIF"></a>8.1.5.2. MSI PTE, MRIF mode</h4>
+<h4 id="IOMMU-MSIPTE-MRIF"><a class="anchor" href="#IOMMU-MSIPTE-MRIF"></a>MSI PTE, MRIF mode</h4>
 <div class="paragraph">
 <p>If memory-resident interrupt files are supported and an MSI PTE has
 fields V = 1, C = 0, and M = 1 (MRIF mode), the PTE&#8217;s complete format

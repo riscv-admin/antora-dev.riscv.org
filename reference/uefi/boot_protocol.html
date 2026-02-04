@@ -633,13 +633,16 @@
     <a class="nav-link"  href="index.html">RISC-V UEFI PROTOCOL Specification</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="contributors.html">Chapter 1. Contributors</a>
+    <a class="nav-link"  href="copyright.html">Chapter 1. Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Chapter 2. Introduction</a>
+    <a class="nav-link"  href="contributors.html">Chapter 2. Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="intro.html">Chapter 3. Introduction</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="boot_protocol.html">Chapter 3. RISCV_EFI_BOOT_PROTOCOL</a>
+    <a class="nav-link"  href="boot_protocol.html">RISCV_EFI_BOOT_PROTOCOL</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="bibliography.html">Bibliography</a>
@@ -733,12 +736,13 @@
 <div class="breadcrumbs-container">
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
+      <li><a href="index.html">UEFI PROTOCOL</a></li>
       <li>RISC-V UEFI PROTOCOL Specification</li>
-      <li><a href="boot_protocol.html">Chapter 3. RISCV_EFI_BOOT_PROTOCOL</a></li>
+      <li><a href="boot_protocol.html">RISCV_EFI_BOOT_PROTOCOL</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="boot_protocol"><a class="anchor" href="#boot_protocol"></a>3.1. RISCV_EFI_BOOT_PROTOCOL</h2>
+<h2 id="boot_protocol"><a class="anchor" href="#boot_protocol"></a>RISCV_EFI_BOOT_PROTOCOL</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Either Device Tree (DT) or Advanced Configuration and Power Interface (ACPI)
@@ -771,7 +775,7 @@ Systems.</p>
 of the specification breaks backwards compatibility, a new GUID must be defined.</p>
 </div>
 <div class="sect2">
-<h3 id="3-1-1-guid"><a class="anchor" href="#3-1-1-guid"></a>3.1.1. GUID</h3>
+<h3 id="guid"><a class="anchor" href="#guid"></a>GUID</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-C" data-lang="C">#define RISCV_EFI_BOOT_PROTOCOL_GUID \
@@ -781,7 +785,7 @@ of the specification breaks backwards compatibility, a new GUID must be defined.
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-1-2-revision-number"><a class="anchor" href="#3-1-2-revision-number"></a>3.1.2. Revision Number</h3>
+<h3 id="revision-number"><a class="anchor" href="#revision-number"></a>Revision Number</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-C" data-lang="C">#define RISCV_EFI_BOOT_PROTOCOL_REVISION 0x00010000
@@ -791,7 +795,7 @@ of the specification breaks backwards compatibility, a new GUID must be defined.
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-1-3-protocol-interface-structure"><a class="anchor" href="#3-1-3-protocol-interface-structure"></a>3.1.3. Protocol Interface Structure</h3>
+<h3 id="protocol-interface-structure"><a class="anchor" href="#protocol-interface-structure"></a>Protocol Interface Structure</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-C" data-lang="C">typedef struct _RISCV_EFI_BOOT_PROTOCOL {
@@ -801,12 +805,12 @@ of the specification breaks backwards compatibility, a new GUID must be defined.
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-1-3-1-riscv_efi_boot_protocol-getboothartid"><a class="anchor" href="#3-1-3-1-riscv_efi_boot_protocol-getboothartid"></a>3.1.3.1. RISCV_EFI_BOOT_PROTOCOL.GetBootHartId</h4>
+<h4 id="riscv_efi_boot_protocol-getboothartid"><a class="anchor" href="#riscv_efi_boot_protocol-getboothartid"></a>RISCV_EFI_BOOT_PROTOCOL.GetBootHartId</h4>
 <div class="paragraph">
 <p>This interface provides the hartid of the boot cpu.</p>
 </div>
 <div class="sect4">
-<h5 id="3-1-3-1-1-prototype"><a class="anchor" href="#3-1-3-1-1-prototype"></a>3.1.3.1.1. Prototype</h5>
+<h5 id="prototype"><a class="anchor" href="#prototype"></a>Prototype</h5>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-C" data-lang="C">typedef EFI_STATUS
@@ -818,7 +822,7 @@ of the specification breaks backwards compatibility, a new GUID must be defined.
 </div>
 </div>
 <div class="sect4">
-<h5 id="3-1-3-1-2-parameters"><a class="anchor" href="#3-1-3-1-2-parameters"></a>3.1.3.1.2. Parameters</h5>
+<h5 id="parameters"><a class="anchor" href="#parameters"></a>Parameters</h5>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. GetBootHartId Parameters</caption>
 <colgroup>
@@ -844,7 +848,7 @@ of the specification breaks backwards compatibility, a new GUID must be defined.
 </table>
 </div>
 <div class="sect4">
-<h5 id="3-1-3-1-3-status-codes-returned"><a class="anchor" href="#3-1-3-1-3-status-codes-returned"></a>3.1.3.1.3. Status Codes Returned</h5>
+<h5 id="status-codes-returned"><a class="anchor" href="#status-codes-returned"></a>Status Codes Returned</h5>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 2. GetBootHartId Return Value</caption>
 <colgroup>
@@ -878,7 +882,7 @@ of the specification breaks backwards compatibility, a new GUID must be defined.
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="intro.html">Chapter 2. Introduction</a></span>
+  <span class="prev"><a href="intro.html">Chapter 3. Introduction</a></span>
   <span class="next"><a href="bibliography.html">Bibliography</a></span>
 </nav>
 </article>  </div>
