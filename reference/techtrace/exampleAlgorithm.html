@@ -579,7 +579,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="Algorithm"><a class="anchor" href="#Algorithm"></a>10.1. Reference Compressed Branch Trace Algorithm</h2>
+<h2 id="Algorithm"><a class="anchor" href="#Algorithm"></a>9.1. Reference Compressed Branch Trace Algorithm</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The contents of this chapter are informative only.</p>
@@ -649,15 +649,15 @@ predictor disabled or not present);</p>
 </li>
 <li>
 <p><em>resync count.</em> A counter used to keep track of when it is necessary
-to send a synchronization packet (see <a href="#sec:resync">10.1.2. Resynchronisation</a>);</p>
+to send a synchronization packet (see <a href="#sec:resync">9.1.2. Resynchronisation</a>);</p>
 </li>
 <li>
 <p><em>resync2_br.</em> The resync FSM is in state 2 and
 there are entries in the branch map that have not yet been output (see
-<a href="#sec:resync">10.1.2. Resynchronisation</a>).</p>
+<a href="#sec:resync">9.1.2. Resynchronisation</a>).</p>
 </li>
 <li>
-<p><em>resync3.</em> The resync FSM is in state 3  (see <a href="#sec:resync">10.1.2. Resynchronisation</a>);</p>
+<p><em>resync3.</em> The resync FSM is in state 3  (see <a href="#sec:resync">9.1.2. Resynchronisation</a>);</p>
 </li>
 </ul>
 </div>
@@ -714,7 +714,7 @@ packet.</p>
 <div class="title">Figure 1. Instruction delta trace algorithm</div>
 </div>
 <div class="sect2">
-<h3 id="10-1-1-format-selection"><a class="anchor" href="#10-1-1-format-selection"></a>10.1.1. Format selection</h3>
+<h3 id="9-1-1-format-selection"><a class="anchor" href="#9-1-1-format-selection"></a>9.1.1. Format selection</h3>
 <div class="paragraph">
 <p>In all cases but two, the packet format is determined only by a 'yes'
 outcome from the associated decision.</p>
@@ -766,7 +766,7 @@ efficiency. See <a href="#packets">[packets]</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sec:resync"><a class="anchor" href="#sec:resync"></a>10.1.2. Resynchronisation</h3>
+<h3 id="sec:resync"><a class="anchor" href="#sec:resync"></a>9.1.2. Resynchronisation</h3>
 <div class="paragraph">
 <p>Per <a href="#sec:synchronization">[sec:synchronization]</a>, a format 3
 synchronisation packet must be output after "a prolonged period of
@@ -806,7 +806,7 @@ will be generated if the branch map is not empty.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="rec:multiretcon"><a class="anchor" href="#rec:multiretcon"></a>10.1.3. Multiple retirement considerations</h3>
+<h3 id="rec:multiretcon"><a class="anchor" href="#rec:multiretcon"></a>9.1.3. Multiple retirement considerations</h3>
 <div class="paragraph">
 <p>As noted earlier in this section, for a single-retirement system the
 reference algorithm is applied to each retired instruction. When
