@@ -590,7 +590,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="5-1-in-memory-queue-interface"><a class="anchor" href="#5-1-in-memory-queue-interface"></a>5.1. In-memory queue interface</h2>
+<h2 id="3-1-in-memory-queue-interface"><a class="anchor" href="#3-1-in-memory-queue-interface"></a>3.1. In-memory queue interface</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Software and IOMMU interact using 3 in-memory queue data structures.</p>
@@ -660,7 +660,7 @@ in the queue.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="5-1-1-command-queue-cq"><a class="anchor" href="#5-1-1-command-queue-cq"></a>5.1.1. Command-Queue (CQ)</h3>
+<h3 id="3-1-1-command-queue-cq"><a class="anchor" href="#3-1-1-command-queue-cq"></a>3.1.1. Command-Queue (CQ)</h3>
 <div class="paragraph">
 <p>Command queue is used by software to queue commands to be processed by the
 IOMMU. Each command is 16 bytes.</p>
@@ -770,7 +770,7 @@ the command-queue. To re-enable command processing software should clear the
 <code>cmd_ill</code> bit by writing 1 to it.</p>
 </div>
 <div class="sect3">
-<h4 id="5-1-1-1-iommu-page-table-cache-invalidation-commands"><a class="anchor" href="#5-1-1-1-iommu-page-table-cache-invalidation-commands"></a>5.1.1.1. IOMMU Page-Table cache invalidation commands</h4>
+<h4 id="3-1-1-1-iommu-page-table-cache-invalidation-commands"><a class="anchor" href="#3-1-1-1-iommu-page-table-cache-invalidation-commands"></a>3.1.1.1. IOMMU Page-Table cache invalidation commands</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-ae32292a3a7975698aecbf21cacf6467bcd0bfea.svg" alt="Diagram">
@@ -1038,7 +1038,7 @@ when only some of the partial stores have taken effect.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="5-1-1-2-iommu-command-queue-fence-commands"><a class="anchor" href="#5-1-1-2-iommu-command-queue-fence-commands"></a>5.1.1.2. IOMMU Command-queue Fence commands</h4>
+<h4 id="3-1-1-2-iommu-command-queue-fence-commands"><a class="anchor" href="#3-1-1-2-iommu-command-queue-fence-commands"></a>3.1.1.2. IOMMU Command-queue Fence commands</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-311ba9da75bf724864e5f1da4e83b5e8d1c10e7f.svg" alt="Diagram">
@@ -1170,7 +1170,7 @@ memory indicating command completion.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="5-1-1-3-iommu-directory-cache-invalidation-commands"><a class="anchor" href="#5-1-1-3-iommu-directory-cache-invalidation-commands"></a>5.1.1.3. IOMMU directory cache invalidation commands</h4>
+<h4 id="3-1-1-3-iommu-directory-cache-invalidation-commands"><a class="anchor" href="#3-1-1-3-iommu-directory-cache-invalidation-commands"></a>3.1.1.3. IOMMU directory cache invalidation commands</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-2907d0b1d5506609160eb00d0a58c0a8273ad9f6.svg" alt="Diagram">
@@ -1242,7 +1242,7 @@ caches.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="5-1-1-4-iommu-pcie-ats-commands"><a class="anchor" href="#5-1-1-4-iommu-pcie-ats-commands"></a>5.1.1.4. IOMMU PCIe ATS commands</h4>
+<h4 id="3-1-1-4-iommu-pcie-ats-commands"><a class="anchor" href="#3-1-1-4-iommu-pcie-ats-commands"></a>3.1.1.4. IOMMU PCIe ATS commands</h4>
 <div class="paragraph">
 <p>This command is supported if <code>capabilities.ATS</code> is set to 1.</p>
 </div>
@@ -1345,7 +1345,7 @@ in Flit Mode, the Segment number is sometimes included in the ID of a Function.<
 </div>
 </div>
 <div class="sect2">
-<h3 id="FAULT_QUEUE"><a class="anchor" href="#FAULT_QUEUE"></a>5.1.2. Fault/Event-Queue (<code>FQ</code>)</h3>
+<h3 id="FAULT_QUEUE"><a class="anchor" href="#FAULT_QUEUE"></a>3.1.2. Fault/Event-Queue (<code>FQ</code>)</h3>
 <div class="paragraph">
 <p>Fault/Event queue is an in-memory queue data structure used to report events
 and faults raised when processing transactions. Each fault record is 32 bytes.</p>
@@ -1707,7 +1707,7 @@ the fault for a subset, including one, of requests.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="PRQ"><a class="anchor" href="#PRQ"></a>5.1.3. Page-Request-Queue (<code>PQ</code>)</h3>
+<h3 id="PRQ"><a class="anchor" href="#PRQ"></a>3.1.3. Page-Request-Queue (<code>PQ</code>)</h3>
 <div class="paragraph">
 <p>Page-request queue is an in-memory queue data structure used to report PCIe
 ATS “Page Request” and "Stop Marker" messages cite:[PCI] to software. The base PPN of

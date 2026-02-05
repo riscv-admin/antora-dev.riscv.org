@@ -590,7 +590,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="7-1-memory-mapped-register-interface"><a class="anchor" href="#7-1-memory-mapped-register-interface"></a>7.1. Memory-mapped register interface</h2>
+<h2 id="5-1-memory-mapped-register-interface"><a class="anchor" href="#5-1-memory-mapped-register-interface"></a>5.1. Memory-mapped register interface</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The IOMMU provides a memory-mapped programming interface. The memory-mapped
@@ -652,7 +652,7 @@ register bit being 0, then a read from the memory-mapped register offset of
 the register returns 0 and writes to that offset are ignored.</p>
 </div>
 <div class="sect2">
-<h3 id="7-1-1-register-layout"><a class="anchor" href="#7-1-1-register-layout"></a>7.1.1. Register layout</h3>
+<h3 id="5-1-1-register-layout"><a class="anchor" href="#5-1-1-register-layout"></a>5.1.1. Register layout</h3>
 <table class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 1. IOMMU Memory-mapped register layout</caption>
 <colgroup>
@@ -909,7 +909,7 @@ the register returns 0 and writes to that offset are ignored.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="7-1-2-reset-behavior"><a class="anchor" href="#7-1-2-reset-behavior"></a>7.1.2. Reset behavior</h3>
+<h3 id="5-1-2-reset-behavior"><a class="anchor" href="#5-1-2-reset-behavior"></a>5.1.2. Reset behavior</h3>
 <div class="paragraph">
 <p>The reset value is 0 for the following registers fields.</p>
 </div>
@@ -967,7 +967,7 @@ the register returns 0 and writes to that offset are ignored.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="CAP"><a class="anchor" href="#CAP"></a>7.1.3. IOMMU capabilities (<code>capabilities</code>)</h3>
+<h3 id="CAP"><a class="anchor" href="#CAP"></a>5.1.3. IOMMU capabilities (<code>capabilities</code>)</h3>
 <div class="paragraph">
 <p>The <code>capabilities</code> register is a read-only register reporting features supported
 by the IOMMU. Each field if not clear indicates the presence of that feature in
@@ -1334,7 +1334,7 @@ specifications.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="FCTRL"><a class="anchor" href="#FCTRL"></a>7.1.4. Features-control register (<code>fctl</code>)</h3>
+<h3 id="FCTRL"><a class="anchor" href="#FCTRL"></a>5.1.4. Features-control register (<code>fctl</code>)</h3>
 <div class="paragraph">
 <p>This register must be readable in any implementation. An implementation may
 allow one or more fields in the register to be writable to support enabling
@@ -1413,7 +1413,7 @@ are enabled (i.e. <code>cqcsr.cqon/cqen == 1</code>, <code>fqcsr.fqon/cqen == 1<
 </table>
 </div>
 <div class="sect2">
-<h3 id="DDTP"><a class="anchor" href="#DDTP"></a>7.1.5. Device-directory-table pointer (<code>ddtp</code>)</h3>
+<h3 id="DDTP"><a class="anchor" href="#DDTP"></a>5.1.5. Device-directory-table pointer (<code>ddtp</code>)</h3>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-3eaf67e68c91e42b695cf84917d75a0b2e5e7cc0.svg" alt="Device-directory-table pointer register fields">
@@ -1603,7 +1603,7 @@ entries.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="CQB"><a class="anchor" href="#CQB"></a>7.1.6. Command-queue base (<code>cqb</code>)</h3>
+<h3 id="CQB"><a class="anchor" href="#CQB"></a>5.1.6. Command-queue base (<code>cqb</code>)</h3>
 <div class="paragraph">
 <p>This 64-bit register (RW) holds the PPN of the root page of the command-queue
 and number of entries in the queue. Each command is 16 bytes.</p>
@@ -1700,7 +1700,7 @@ assume a valid but otherwise <code>UNSPECIFIED</code> value.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="CQH"><a class="anchor" href="#CQH"></a>7.1.7. Command-queue head (<code>cqh</code>)</h3>
+<h3 id="CQH"><a class="anchor" href="#CQH"></a>5.1.7. Command-queue head (<code>cqh</code>)</h3>
 <div class="paragraph">
 <p>This 32-bit register (RO) holds the index into the command-queue where
 the IOMMU will fetch the next command.</p>
@@ -1738,7 +1738,7 @@ the IOMMU will fetch the next command.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="CQT"><a class="anchor" href="#CQT"></a>7.1.8. Command-queue tail (<code>cqt</code>)</h3>
+<h3 id="CQT"><a class="anchor" href="#CQT"></a>5.1.8. Command-queue tail (<code>cqt</code>)</h3>
 <div class="paragraph">
 <p>This 32-bit register (RW) holds the index into the command-queue where
 the software queues the next command for the IOMMU.</p>
@@ -1777,7 +1777,7 @@ the software queues the next command for the IOMMU.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="FQB"><a class="anchor" href="#FQB"></a>7.1.9. Fault queue base (<code>fqb</code>)</h3>
+<h3 id="FQB"><a class="anchor" href="#FQB"></a>5.1.9. Fault queue base (<code>fqb</code>)</h3>
 <div class="paragraph">
 <p>This 64-bit register (RW) holds the PPN of the root page of the fault-queue
 and number of entries in the queue. Each fault record is 32 bytes.</p>
@@ -1872,7 +1872,7 @@ assume a valid but otherwise <code>UNSPECIFIED</code> value.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="FQH"><a class="anchor" href="#FQH"></a>7.1.10. Fault queue head (<code>fqh</code>)</h3>
+<h3 id="FQH"><a class="anchor" href="#FQH"></a>5.1.10. Fault queue head (<code>fqh</code>)</h3>
 <div class="paragraph">
 <p>This 32-bit register (RW) holds the index into the fault-queue where the
 software will fetch the next fault record.</p>
@@ -1911,7 +1911,7 @@ software will fetch the next fault record.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="FQT"><a class="anchor" href="#FQT"></a>7.1.11. Fault queue tail (<code>fqt</code>)</h3>
+<h3 id="FQT"><a class="anchor" href="#FQT"></a>5.1.11. Fault queue tail (<code>fqt</code>)</h3>
 <div class="paragraph">
 <p>This 32-bit register (RO) holds the index into the fault-queue where the
 IOMMU queues the next fault record.</p>
@@ -1949,7 +1949,7 @@ IOMMU queues the next fault record.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="PQB"><a class="anchor" href="#PQB"></a>7.1.12. Page-request-queue base (<code>pqb</code>)</h3>
+<h3 id="PQB"><a class="anchor" href="#PQB"></a>5.1.12. Page-request-queue base (<code>pqb</code>)</h3>
 <div class="paragraph">
 <p>This 64-bit register (WARL) holds the PPN of the root page of the
 page-request-queue and number of entries in the queue. Each "Page Request"
@@ -2044,7 +2044,7 @@ assume a valid but otherwise <code>UNSPECIFIED</code> value.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="PQH"><a class="anchor" href="#PQH"></a>7.1.13. Page-request-queue head (<code>pqh</code>)</h3>
+<h3 id="PQH"><a class="anchor" href="#PQH"></a>5.1.13. Page-request-queue head (<code>pqh</code>)</h3>
 <div class="paragraph">
 <p>This 32-bit register (RW) holds the index into the page-request-queue where
 software will fetch the next page-request.</p>
@@ -2083,7 +2083,7 @@ software will fetch the next page-request.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="PQT"><a class="anchor" href="#PQT"></a>7.1.14. Page-request-queue tail (<code>pqt</code>)</h3>
+<h3 id="PQT"><a class="anchor" href="#PQT"></a>5.1.14. Page-request-queue tail (<code>pqt</code>)</h3>
 <div class="paragraph">
 <p>This 32-bit register (RO) holds the index into the page-request-queue
 where the IOMMU writes the next page-request.</p>
@@ -2122,7 +2122,7 @@ where the IOMMU writes the next page-request.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="CSR"><a class="anchor" href="#CSR"></a>7.1.15. Command-queue CSR (<code>cqcsr</code>)</h3>
+<h3 id="CSR"><a class="anchor" href="#CSR"></a>5.1.15. Command-queue CSR (<code>cqcsr</code>)</h3>
 <div class="paragraph">
 <p>This 32-bit register (RW) is used to control the operations and report the
 status of the command-queue.</p>
@@ -2332,7 +2332,7 @@ turning off the command-queue.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="FQCSR"><a class="anchor" href="#FQCSR"></a>7.1.16. Fault queue CSR (<code>fqcsr</code>)</h3>
+<h3 id="FQCSR"><a class="anchor" href="#FQCSR"></a>5.1.16. Fault queue CSR (<code>fqcsr</code>)</h3>
 <div class="paragraph">
 <p>This 32-bit register (RW) is used to control the operations and report the
 status of the fault-queue.</p>
@@ -2467,7 +2467,7 @@ status of the fault-queue.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="PQCSR"><a class="anchor" href="#PQCSR"></a>7.1.17. Page-request-queue CSR (<code>pqcsr</code>)</h3>
+<h3 id="PQCSR"><a class="anchor" href="#PQCSR"></a>5.1.17. Page-request-queue CSR (<code>pqcsr</code>)</h3>
 <div class="paragraph">
 <p>This 32-bit register (RW) is used to control the operations and report the
 status of the page-request-queue.</p>
@@ -2627,7 +2627,7 @@ status of the page-request-queue.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="IPSR"><a class="anchor" href="#IPSR"></a>7.1.18. Interrupt pending status register (<code>ipsr</code>)</h3>
+<h3 id="IPSR"><a class="anchor" href="#IPSR"></a>5.1.18. Interrupt pending status register (<code>ipsr</code>)</h3>
 <div class="paragraph">
 <p>This 32-bit register (RW1C) reports the pending interrupts which require
 software service. Each interrupt-pending bit in the register corresponds to
@@ -2777,7 +2777,7 @@ they occur after the bit is cleared then that bit transitions again from 0&#8594
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="OVF"><a class="anchor" href="#OVF"></a>7.1.19. Performance-monitoring counter overflow status (<code>iocountovf</code>)</h3>
+<h3 id="OVF"><a class="anchor" href="#OVF"></a>5.1.19. Performance-monitoring counter overflow status (<code>iocountovf</code>)</h3>
 <div class="paragraph">
 <p>The performance-monitoring counter overflow status is a 32-bit read-only
 register that contains shadow copies of the OF bits in the <code>iohpmevt1-31</code>
@@ -2826,7 +2826,7 @@ determine which counter(s) have overflowed.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="INH"><a class="anchor" href="#INH"></a>7.1.20. Performance-monitoring counter inhibits (<code>iocountinh</code>)</h3>
+<h3 id="INH"><a class="anchor" href="#INH"></a>5.1.20. Performance-monitoring counter inhibits (<code>iocountinh</code>)</h3>
 <div class="paragraph">
 <p>The performance-monitoring counter inhibits is a 32-bit WARL register
 that contains bits to inhibit the corresponding counters from counting. Bit X
@@ -2897,7 +2897,7 @@ after the register has been programmed with the desired value.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="CYC"><a class="anchor" href="#CYC"></a>7.1.21. Performance-monitoring cycles counter (<code>iohpmcycles</code>)</h3>
+<h3 id="CYC"><a class="anchor" href="#CYC"></a>5.1.21. Performance-monitoring cycles counter (<code>iohpmcycles</code>)</h3>
 <div class="paragraph">
 <p>This 64-bit register is a free running clock cycle counter.
 There is no associated <code>iohpmevt0</code>.</p>
@@ -2954,7 +2954,7 @@ the <code>OF</code> bit also functions as a count overflow interrupt disable for
 </div>
 </div>
 <div class="sect2">
-<h3 id="CTR"><a class="anchor" href="#CTR"></a>7.1.22. Performance-monitoring event counters (<code>iohpmctr1-31</code>)</h3>
+<h3 id="CTR"><a class="anchor" href="#CTR"></a>5.1.22. Performance-monitoring event counters (<code>iohpmctr1-31</code>)</h3>
 <div class="paragraph">
 <p>These registers are 64-bit WARL counter registers.</p>
 </div>
@@ -2990,7 +2990,7 @@ the <code>OF</code> bit also functions as a count overflow interrupt disable for
 </table>
 </div>
 <div class="sect2">
-<h3 id="EVT"><a class="anchor" href="#EVT"></a>7.1.23. Performance-monitoring event selectors (<code>iohpmevt1-31</code>)</h3>
+<h3 id="EVT"><a class="anchor" href="#EVT"></a>5.1.23. Performance-monitoring event selectors (<code>iohpmevt1-31</code>)</h3>
 <div class="paragraph">
 <p>These performance-monitoring event registers are 64-bit RW registers. When a
 transaction processed by the IOMMU causes an event that is programmed to count
@@ -3388,7 +3388,7 @@ recommended to support seven programmable counters.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="TRR_IOVA"><a class="anchor" href="#TRR_IOVA"></a>7.1.24. Translation-request IOVA (<code>tr_req_iova</code>)</h3>
+<h3 id="TRR_IOVA"><a class="anchor" href="#TRR_IOVA"></a>5.1.24. Translation-request IOVA (<code>tr_req_iova</code>)</h3>
 <div class="paragraph">
 <p>The <code>tr_req_iova</code> is a 64-bit register used to implement a
 translation-request interface for debug. This register is present when
@@ -3432,7 +3432,7 @@ translation-request interface for debug. This register is present when
 </table>
 </div>
 <div class="sect2">
-<h3 id="TRR_CTRL"><a class="anchor" href="#TRR_CTRL"></a>7.1.25. Translation-request control (<code>tr_req_ctl</code>)</h3>
+<h3 id="TRR_CTRL"><a class="anchor" href="#TRR_CTRL"></a>5.1.25. Translation-request control (<code>tr_req_ctl</code>)</h3>
 <div class="paragraph">
 <p>The <code>tr_req_ctl</code> is a 64-bit WARL register used to implement a
 translation-request interface for debug. This register is present when
@@ -3565,7 +3565,7 @@ low half, which includes the <code>Go/Busy</code> bit, to initiate a translation
 </div>
 </div>
 <div class="sect2">
-<h3 id="TRR_RSP"><a class="anchor" href="#TRR_RSP"></a>7.1.26. Translation-response (<code>tr_response</code>)</h3>
+<h3 id="TRR_RSP"><a class="anchor" href="#TRR_RSP"></a>5.1.26. Translation-response (<code>tr_response</code>)</h3>
 <div class="paragraph">
 <p>The <code>tr_response</code> is a 64-bit RO register used to hold the results
 of a translation requested using the translation-request interface.
@@ -3733,7 +3733,7 @@ size configured in the page tables.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="IOQOSID"><a class="anchor" href="#IOQOSID"></a>7.1.27. IOMMU QoS ID (<code>iommu_qosid</code>)</h3>
+<h3 id="IOQOSID"><a class="anchor" href="#IOQOSID"></a>5.1.27. IOMMU QoS ID (<code>iommu_qosid</code>)</h3>
 <div class="paragraph">
 <p>The <code>iommu_qosid</code> register fields are defined as follows:</p>
 </div>
@@ -3814,7 +3814,7 @@ associated with the QoS IDs configured in the <code>iommu_qosid</code> register.
 </div>
 </div>
 <div class="sect2">
-<h3 id="ICVEC"><a class="anchor" href="#ICVEC"></a>7.1.28. Interrupt-cause-to-vector register (<code>icvec</code>)</h3>
+<h3 id="ICVEC"><a class="anchor" href="#ICVEC"></a>5.1.28. Interrupt-cause-to-vector register (<code>icvec</code>)</h3>
 <div class="paragraph">
 <p>Interrupt-cause-to-vector register maps a cause to a vector.  All causes can
 be mapped to the same vector or a cause can be given a unique vector.</p>
@@ -3915,7 +3915,7 @@ supported then only bit 0 for each cause could be writable.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="MSI"><a class="anchor" href="#MSI"></a>7.1.29. MSI configuration table (<code>msi_cfg_tbl</code>)</h3>
+<h3 id="MSI"><a class="anchor" href="#MSI"></a>5.1.29. MSI configuration table (<code>msi_cfg_tbl</code>)</h3>
 <div class="paragraph">
 <p>An IOMMU that supports generating IOMMU-originated interrupts
 (i.e., <code>capabilities.IGS == MSI</code> or <code>capabilities.IGS == BOTH</code>) as MSIs

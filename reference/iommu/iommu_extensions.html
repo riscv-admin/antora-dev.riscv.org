@@ -590,7 +590,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="extensions"><a class="anchor" href="#extensions"></a>IOMMU Extensions</h2>
+<h2 id="extensions"><a class="anchor" href="#extensions"></a>8.1. IOMMU Extensions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This chapter specifies the following standard extensions to the IOMMU Base
@@ -628,7 +628,7 @@ Architecture:</p>
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="QOSID"><a class="anchor" href="#QOSID"></a>Quality-of-Service (QoS) Identifiers Extension, Version 1.0</h3>
+<h3 id="QOSID"><a class="anchor" href="#QOSID"></a>8.1.1. Quality-of-Service (QoS) Identifiers Extension, Version 1.0</h3>
 <div class="paragraph">
 <p>Quality of Service (QoS) is defined as the minimal end-to-end performance
 guaranteed in advance by a service level agreement (SLA) to a workload.
@@ -682,7 +682,7 @@ extended with two fields, <code>RCID</code> and <code>MCID</code>, to configure 
 associate with requests originated by the devices.</p>
 </div>
 <div class="sect3">
-<h4 id="reset-behavior"><a class="anchor" href="#reset-behavior"></a>Reset Behavior</h4>
+<h4 id="8-1-1-1-reset-behavior"><a class="anchor" href="#8-1-1-1-reset-behavior"></a>8.1.1.1. Reset Behavior</h4>
 <div class="paragraph">
 <p>If the reset value for <code>ddtp.iommu_mode</code> field is <code>Bare</code>, then the
 <code>iommu_qosid.RCID</code> field must have a reset value of 0.</p>
@@ -708,7 +708,7 @@ the mode to allow DMA.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="sizing-qos-identifiers"><a class="anchor" href="#sizing-qos-identifiers"></a>Sizing QoS Identifiers</h4>
+<h4 id="8-1-1-2-sizing-qos-identifiers"><a class="anchor" href="#8-1-1-2-sizing-qos-identifiers"></a>8.1.1.2. Sizing QoS Identifiers</h4>
 <div class="paragraph">
 <p>The size (or width) of <code>RCID</code> and <code>MCID</code>, as fields in registers or in data
 structures, supported by the IOMMU must be at least as large as that supported
@@ -716,7 +716,7 @@ by any RISC-V application processor hart in the system.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="iommu-atc-capacity-allocation-and-monitoring"><a class="anchor" href="#iommu-atc-capacity-allocation-and-monitoring"></a>IOMMU ATC Capacity Allocation and Monitoring</h4>
+<h4 id="8-1-1-3-iommu-atc-capacity-allocation-and-monitoring"><a class="anchor" href="#8-1-1-3-iommu-atc-capacity-allocation-and-monitoring"></a>8.1.1.3. IOMMU ATC Capacity Allocation and Monitoring</h4>
 <div class="paragraph">
 <p>Some IOMMUs might support capacity allocation and usage monitoring in the IOMMU
 address translation cache (IOATC) by implementing the capacity controller
@@ -733,7 +733,7 @@ allocation.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="NLINV"><a class="anchor" href="#NLINV"></a>Non-leaf PTE Invalidation Extension, Version 1.0</h3>
+<h3 id="NLINV"><a class="anchor" href="#NLINV"></a>8.1.2. Non-leaf PTE Invalidation Extension, Version 1.0</h3>
 <div class="paragraph">
 <p>The RISC-V IOMMU Version 1.0 specification provides commands to invalidate
 leaf page table entries from address translation caches when performing an
@@ -770,7 +770,7 @@ translation caches.</p>
 operand applies to the address range determined by the <code>ADDR</code> and <code>S</code> operands.</p>
 </div>
 <div class="sect3">
-<h4 id="non-leaf-pte-invalidation-by-iotinval-vma"><a class="anchor" href="#non-leaf-pte-invalidation-by-iotinval-vma"></a>Non-leaf PTE Invalidation by <code>IOTINVAL.VMA</code></h4>
+<h4 id="8-1-2-1-non-leaf-pte-invalidation-by-iotinval-vma"><a class="anchor" href="#8-1-2-1-non-leaf-pte-invalidation-by-iotinval-vma"></a>8.1.2.1. Non-leaf PTE Invalidation by <code>IOTINVAL.VMA</code></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -817,7 +817,7 @@ operands, except for entries containing global mappings.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="non-leaf-pte-invalidation-by-iotinval-gvma"><a class="anchor" href="#non-leaf-pte-invalidation-by-iotinval-gvma"></a>Non-leaf PTE Invalidation by <code>IOTINVAL.GVMA</code></h4>
+<h4 id="8-1-2-2-non-leaf-pte-invalidation-by-iotinval-gvma"><a class="anchor" href="#8-1-2-2-non-leaf-pte-invalidation-by-iotinval-gvma"></a>8.1.2.2. Non-leaf PTE Invalidation by <code>IOTINVAL.GVMA</code></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -854,7 +854,7 @@ the VM address spaces identified by the <code>GSCID</code> operand.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="ARINV"><a class="anchor" href="#ARINV"></a>Address Range Invalidation Extension, Version 1.0</h3>
+<h3 id="ARINV"><a class="anchor" href="#ARINV"></a>8.1.3. Address Range Invalidation Extension, Version 1.0</h3>
 <div class="paragraph">
 <p>The address range invalidation extension enables specifying a range of addresses
 in an IOMMU ATC invalidation command, reducing the number of commands queued to

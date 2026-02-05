@@ -590,7 +590,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="DATA_STRUCTURES"><a class="anchor" href="#DATA_STRUCTURES"></a>4.1. Data Structures</h2>
+<h2 id="DATA_STRUCTURES"><a class="anchor" href="#DATA_STRUCTURES"></a>2.1. Data Structures</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A data structure called device-context (<code>DC</code>) is used by the IOMMU to associate
@@ -675,11 +675,11 @@ allowed to use the PCIe defined Address Translation Service (ATS) cite:[PCI].</p
 <ul>
 <li>
 <p><strong>Base Format</strong> - is 32-bytes in size used when the special treatment of MSI
-as specified in <a href="#MSI_TRANS">4.1.3.3. Process to translate addresses of MSIs</a> is not supported by the IOMMU.</p>
+as specified in <a href="#MSI_TRANS">2.1.3.3. Process to translate addresses of MSIs</a> is not supported by the IOMMU.</p>
 </li>
 <li>
 <p><strong>Extended Format</strong> - is 64-bytes in size and extends the base format <code>DC</code> with
-additional fields to translate MSIs as specified in <a href="#MSI_TRANS">4.1.3.3. Process to translate addresses of MSIs</a>.</p>
+additional fields to translate MSIs as specified in <a href="#MSI_TRANS">2.1.3.3. Process to translate addresses of MSIs</a>.</p>
 </li>
 </ul>
 </div>
@@ -753,7 +753,7 @@ is not prohibited by this specification.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="4-1-1-device-directory-table-ddt"><a class="anchor" href="#4-1-1-device-directory-table-ddt"></a>4.1.1. Device-Directory-Table (DDT)</h3>
+<h3 id="2-1-1-device-directory-table-ddt"><a class="anchor" href="#2-1-1-device-directory-table-ddt"></a>2.1.1. Device-Directory-Table (DDT)</h3>
 <div class="paragraph">
 <p>The DDT is a 1, 2, or 3-level radix-tree indexed using the device directory
 index (DDI) bits of the <code>device_id</code> to locate a <code>DC</code>.</p>
@@ -784,7 +784,7 @@ next device-directory-table.</p>
 <div class="title">Figure 5. Three, two and single-level device directory with base format <code>DC</code></div>
 </div>
 <div class="sect3">
-<h4 id="4-1-1-1-non-leaf-ddt-entry"><a class="anchor" href="#4-1-1-1-non-leaf-ddt-entry"></a>4.1.1.1. Non-leaf DDT entry</h4>
+<h4 id="2-1-1-1-non-leaf-ddt-entry"><a class="anchor" href="#2-1-1-1-non-leaf-ddt-entry"></a>2.1.1.1. Non-leaf DDT entry</h4>
 <div class="paragraph">
 <p>A valid (<code>V==1</code>) non-leaf DDT entry provides the PPN of the next level DDT.</p>
 </div>
@@ -797,7 +797,7 @@ next device-directory-table.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="4-1-1-2-leaf-ddt-entry"><a class="anchor" href="#4-1-1-2-leaf-ddt-entry"></a>4.1.1.2. Leaf DDT entry</h4>
+<h4 id="2-1-1-2-leaf-ddt-entry"><a class="anchor" href="#2-1-1-2-leaf-ddt-entry"></a>2.1.1.2. Leaf DDT entry</h4>
 <div class="paragraph">
 <p>The leaf DDT page is indexed by <code>DDI[0]</code> and holds the device-context (<code>DC</code>).</p>
 </div>
@@ -825,9 +825,9 @@ order.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-1-3-device-context-fields"><a class="anchor" href="#4-1-1-3-device-context-fields"></a>4.1.1.3. Device-context fields</h4>
+<h4 id="2-1-1-3-device-context-fields"><a class="anchor" href="#2-1-1-3-device-context-fields"></a>2.1.1.3. Device-context fields</h4>
 <div class="sect4">
-<h5 id="4-1-1-3-1-translation-control-tc"><a class="anchor" href="#4-1-1-3-1-translation-control-tc"></a>4.1.1.3.1. Translation control (<code>tc</code>)</h5>
+<h5 id="2-1-1-3-1-translation-control-tc"><a class="anchor" href="#2-1-1-3-1-translation-control-tc"></a>2.1.1.3.1. Translation control (<code>tc</code>)</h5>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-d786cb86384281b3fe97fb7ca7672d7fe38d8828.svg" alt="Translation control (`tc`) field">
@@ -1045,7 +1045,7 @@ original access type occurs if the incoming GPA has bits beyond bit 33 set to 1.
 </div>
 </div>
 <div class="sect4">
-<h5 id="4-1-1-3-2-io-hypervisor-guest-address-translation-and-protection-iohgatp"><a class="anchor" href="#4-1-1-3-2-io-hypervisor-guest-address-translation-and-protection-iohgatp"></a>4.1.1.3.2. IO hypervisor guest address translation and protection (<code>iohgatp</code>)</h5>
+<h5 id="2-1-1-3-2-io-hypervisor-guest-address-translation-and-protection-iohgatp"><a class="anchor" href="#2-1-1-3-2-io-hypervisor-guest-address-translation-and-protection-iohgatp"></a>2.1.1.3.2. IO hypervisor guest address translation and protection (<code>iohgatp</code>)</h5>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-6d7c372d1fb41a60f328cfe61fa707206b05d14d.svg" alt="IO hypervisor guest address translation and protection (`iohgatp`) field">
@@ -1180,7 +1180,7 @@ expected behaviors.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="DC_TA"><a class="anchor" href="#DC_TA"></a>4.1.1.3.3. Translation attributes (<code>ta</code>)</h5>
+<h5 id="DC_TA"><a class="anchor" href="#DC_TA"></a>2.1.1.3.3. Translation attributes (<code>ta</code>)</h5>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-880135da2d406ecb2acf0b90f093c2a29c25cf1f.svg" alt="Translation attributes (`ta`) field">
@@ -1226,7 +1226,7 @@ with device-initiated requests.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="4-1-1-3-4-first-stage-context-fsc"><a class="anchor" href="#4-1-1-3-4-first-stage-context-fsc"></a>4.1.1.3.4. First-Stage context (<code>fsc</code>)</h5>
+<h5 id="2-1-1-3-4-first-stage-context-fsc"><a class="anchor" href="#2-1-1-3-4-first-stage-context-fsc"></a>2.1.1.3.4. First-Stage context (<code>fsc</code>)</h5>
 <div class="paragraph">
 <p>If <code>DC.tc.PDTV</code> is 0, the <code>DC.fsc</code> field holds the <code>iosatp</code> that provides
 the controls for first-stage address translation and protection.</p>
@@ -1416,7 +1416,7 @@ first-stage page table with a <code>process_id</code>.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="4-1-1-3-5-msi-page-table-pointer-msiptp"><a class="anchor" href="#4-1-1-3-5-msi-page-table-pointer-msiptp"></a>4.1.1.3.5. MSI page table pointer (<code>msiptp</code>)</h5>
+<h5 id="2-1-1-3-5-msi-page-table-pointer-msiptp"><a class="anchor" href="#2-1-1-3-5-msi-page-table-pointer-msiptp"></a>2.1.1.3.5. MSI page table pointer (<code>msiptp</code>)</h5>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-a25509c120a23fbda2a8aefe812e0f6ffd0215db.svg" alt="MSI page table pointer (`msiptp`) field">
@@ -1473,7 +1473,7 @@ defined by the Advanced Interrupt Architecture specification.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="MSI_ID"><a class="anchor" href="#MSI_ID"></a>4.1.1.3.6. MSI address mask (<code>msi_addr_mask</code>) and pattern (<code>msi_addr_pattern</code>)</h5>
+<h5 id="MSI_ID"><a class="anchor" href="#MSI_ID"></a>2.1.1.3.6. MSI address mask (<code>msi_addr_mask</code>) and pattern (<code>msi_addr_pattern</code>)</h5>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-97cb2ee3c09f4011236452190129741366bd2bbb.svg" alt="MSI address mask (`msi_addr_mask`) field">
@@ -1507,7 +1507,7 @@ the address mask.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="DC_MISCONFIG"><a class="anchor" href="#DC_MISCONFIG"></a>4.1.1.4. Device-context configuration checks</h4>
+<h4 id="DC_MISCONFIG"><a class="anchor" href="#DC_MISCONFIG"></a>2.1.1.4. Device-context configuration checks</h4>
 <div class="paragraph">
 <p>A <code>DC</code> with <code>DC.tc.V=1</code> is considered as misconfigured if any of the following
 conditions are true. If misconfigured then, stop and report "DDT entry
@@ -1677,7 +1677,7 @@ the access.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-2-process-directory-table-pdt"><a class="anchor" href="#4-1-2-process-directory-table-pdt"></a>4.1.2. Process-Directory-Table (PDT)</h3>
+<h3 id="2-1-2-process-directory-table-pdt"><a class="anchor" href="#2-1-2-process-directory-table-pdt"></a>2.1.2. Process-Directory-Table (PDT)</h3>
 <div class="paragraph">
 <p>The PDT is a 1, 2, or 3-level radix-tree indexed using the process directory
 index (<code>PDI</code>) bits of the <code>process_id</code>.</p>
@@ -1696,7 +1696,7 @@ process-directory-table entry holds the process-context (<code>PC</code>).</p>
 <div class="title">Figure 17. Three, two and single-level process directory</div>
 </div>
 <div class="sect3">
-<h4 id="4-1-2-1-non-leaf-pdt-entry"><a class="anchor" href="#4-1-2-1-non-leaf-pdt-entry"></a>4.1.2.1. Non-leaf PDT entry</h4>
+<h4 id="2-1-2-1-non-leaf-pdt-entry"><a class="anchor" href="#2-1-2-1-non-leaf-pdt-entry"></a>2.1.2.1. Non-leaf PDT entry</h4>
 <div class="paragraph">
 <p>A valid (<code>V==1</code>) non-leaf PDT entry holds the PPN of the next-level PDT.</p>
 </div>
@@ -1708,7 +1708,7 @@ process-directory-table entry holds the process-context (<code>PC</code>).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-2-2-leaf-pdt-entry"><a class="anchor" href="#4-1-2-2-leaf-pdt-entry"></a>4.1.2.2. Leaf PDT entry</h4>
+<h4 id="2-1-2-2-leaf-pdt-entry"><a class="anchor" href="#2-1-2-2-leaf-pdt-entry"></a>2.1.2.2. Leaf PDT entry</h4>
 <div class="paragraph">
 <p>The leaf PDT page is indexed by <code>PDI[0]</code> and holds the 16-byte process-context
 (<code>PC</code>).</p>
@@ -1726,9 +1726,9 @@ determined by <code>DC.tc.SBE</code>. The IOMMU may read the <code>PC</code> fie
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-2-3-process-context-fields"><a class="anchor" href="#4-1-2-3-process-context-fields"></a>4.1.2.3. Process-context fields</h4>
+<h4 id="2-1-2-3-process-context-fields"><a class="anchor" href="#2-1-2-3-process-context-fields"></a>2.1.2.3. Process-context fields</h4>
 <div class="sect4">
-<h5 id="4-1-2-3-1-translation-attributes-ta"><a class="anchor" href="#4-1-2-3-1-translation-attributes-ta"></a>4.1.2.3.1. Translation attributes (<code>ta</code>)</h5>
+<h5 id="2-1-2-3-1-translation-attributes-ta"><a class="anchor" href="#2-1-2-3-1-translation-attributes-ta"></a>2.1.2.3.1. Translation attributes (<code>ta</code>)</h5>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-0311d31280abd3cfc335cc8a56a5809e999274dc.svg" alt="Translation attributes (`ta`) field">
@@ -1762,7 +1762,7 @@ first-stage address translation is not Bare.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="4-1-2-3-2-first-stage-context-fsc"><a class="anchor" href="#4-1-2-3-2-first-stage-context-fsc"></a>4.1.2.3.2. First-Stage context (<code>fsc</code>)</h5>
+<h5 id="2-1-2-3-2-first-stage-context-fsc"><a class="anchor" href="#2-1-2-3-2-first-stage-context-fsc"></a>2.1.2.3.2. First-Stage context (<code>fsc</code>)</h5>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-a25509c120a23fbda2a8aefe812e0f6ffd0215db.svg" alt="Process First-Stage context">
@@ -1810,7 +1810,7 @@ behaviors.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="PC_MISCONFIG"><a class="anchor" href="#PC_MISCONFIG"></a>4.1.2.4. Process-context configuration checks</h4>
+<h4 id="PC_MISCONFIG"><a class="anchor" href="#PC_MISCONFIG"></a>2.1.2.4. Process-context configuration checks</h4>
 <div class="paragraph">
 <p>A <code>PC</code> with <code>PC.ta.V=1</code> is considered as misconfigured if any of the following
 conditions are true. If misconfigured then stop and report "PDT entry
@@ -1879,14 +1879,14 @@ may detect access-violation faults in the process of making the access.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="P2IOVA"><a class="anchor" href="#P2IOVA"></a>4.1.3. Process to translate an IOVA</h3>
+<h3 id="P2IOVA"><a class="anchor" href="#P2IOVA"></a>2.1.3. Process to translate an IOVA</h3>
 <div class="paragraph">
 <p>The process to translate an IOVA uses the hardware IDs (<code>device_id</code> and
 <code>process_id</code>) to locate the Device-Context and the Process-Context. The
 Device-context and Process-context provide the root PPN of the page tables,
 <code>PSCID</code>, <code>GSCID</code>, and other control parameters that affect the address
 translation and protection process. When address translation caches
-(<a href="#CACHING">4.1.8. Caching in-memory data structures</a>) are implemented, the translation process may use the <code>GSCID</code> and
+(<a href="#CACHING">2.1.8. Caching in-memory data structures</a>) are implemented, the translation process may use the <code>GSCID</code> and
 <code>PSCID</code> to associate the cached translations with their address spaces.</p>
 </div>
 <div class="paragraph">
@@ -1938,7 +1938,7 @@ disallowed" (cause = 260).</p>
 </li>
 <li>
 <p>Use <code>device_id</code> to then locate the device-context (<code>DC</code>) as specified in
-<a href="#GET_DC">4.1.3.1. Process to locate the Device-context</a>.</p>
+<a href="#GET_DC">2.1.3.1. Process to locate the Device-context</a>.</p>
 </li>
 <li>
 <p>If any of the following conditions hold then stop and report
@@ -2057,7 +2057,7 @@ information:</p>
 </div>
 </li>
 <li>
-<p>Locate the process-context (<code>PC</code>) as specified in <a href="#GET_PC">4.1.3.2. Process to locate the Process-context</a>.</p>
+<p>Locate the process-context (<code>PC</code>) as specified in <a href="#GET_PC">2.1.3.2. Process to locate the Process-context</a>.</p>
 </li>
 <li>
 <p>if any of the following conditions hold then stop and report
@@ -2099,7 +2099,7 @@ successfully then let <code>A</code> be the translated GPA.</p>
 <li>
 <p>If MSI address translations using MSI page tables is enabled
 (i.e., <code>DC.msiptp.MODE != Off</code>) then the MSI address translation process
-specified in <a href="#MSI_TRANS">4.1.3.3. Process to translate addresses of MSIs</a> is invoked. If the GPA <code>A</code> is not determined to be
+specified in <a href="#MSI_TRANS">2.1.3.3. Process to translate addresses of MSIs</a> is invoked. If the GPA <code>A</code> is not determined to be
 the address of a virtual interrupt file then the process continues at step 19.
 If a fault is detected by the MSI address translation process then stop and
 report the fault else the process continues at step 20.</p>
@@ -2133,10 +2133,10 @@ reporting mechanism and fault record formats specified in <a href="#FAULT_QUEUE"
 <p>If the fault was detected by a PCIe ATS Translation Request then the IOMMU may
 provide a PCIe protocol defined response instead of reporting fault to software
 or causing an abort. The handling of faulting PCIe ATS Translation Requests is
-specified in <a href="#ATS_FAULTS">4.1.6. PCIe ATS translation request handling</a>.</p>
+specified in <a href="#ATS_FAULTS">2.1.6. PCIe ATS translation request handling</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="GET_DC"><a class="anchor" href="#GET_DC"></a>4.1.3.1. Process to locate the Device-context</h4>
+<h4 id="GET_DC"><a class="anchor" href="#GET_DC"></a>2.1.3.1. Process to locate the Device-context</h4>
 <div class="paragraph">
 <p>The process to locate the Device-context for transaction using its <code>device_id</code>
 is as follows:</p>
@@ -2184,7 +2184,7 @@ corruption (a.k.a. poisoned data), then stop and report "DDT data corruption"
 </li>
 <li>
 <p>If the <code>DC</code> is misconfigured as determined by rules outlined in
-<a href="#DC_MISCONFIG">4.1.1.4. Device-context configuration checks</a> then stop and report "DDT entry misconfigured" (cause = 259).</p>
+<a href="#DC_MISCONFIG">2.1.1.4. Device-context configuration checks</a> then stop and report "DDT entry misconfigured" (cause = 259).</p>
 </li>
 <li>
 <p>The device-context has been successfully located.</p>
@@ -2193,7 +2193,7 @@ corruption (a.k.a. poisoned data), then stop and report "DDT data corruption"
 </div>
 </div>
 <div class="sect3">
-<h4 id="GET_PC"><a class="anchor" href="#GET_PC"></a>4.1.3.2. Process to locate the Process-context</h4>
+<h4 id="GET_PC"><a class="anchor" href="#GET_PC"></a>2.1.3.2. Process to locate the Process-context</h4>
 <div class="paragraph">
 <p>The device-context provides the PDT root page PPN (<code>pdtp.ppn</code>).  When
 <code>DC.iohgatp.mode</code> is not <code>Bare</code>, <code>pdtp.PPN</code> as well as <code>pdte.PPN</code> are Guest
@@ -2254,7 +2254,7 @@ fault" (cause = 265). If <code>PC</code> access detects a data corruption
 </li>
 <li>
 <p>If the <code>PC</code> is misconfigured as determined by rules outlined in
-<a href="#PC_MISCONFIG">4.1.2.4. Process-context configuration checks</a> then stop and report "PDT entry misconfigured" (cause = 267).</p>
+<a href="#PC_MISCONFIG">2.1.2.4. Process-context configuration checks</a> then stop and report "PDT entry misconfigured" (cause = 267).</p>
 </li>
 <li>
 <p>The Process-context has been successfully located.</p>
@@ -2263,7 +2263,7 @@ fault" (cause = 265). If <code>PC</code> access detects a data corruption
 </div>
 </div>
 <div class="sect3">
-<h4 id="MSI_TRANS"><a class="anchor" href="#MSI_TRANS"></a>4.1.3.3. Process to translate addresses of MSIs</h4>
+<h4 id="MSI_TRANS"><a class="anchor" href="#MSI_TRANS"></a>2.1.3.3. Process to translate addresses of MSIs</h4>
 <div class="paragraph">
 <p>When an I/O device is configured directly by a guest operating system, MSIs
 from the device are expected to be targeted to virtual IMSICs within the guest
@@ -2296,11 +2296,11 @@ file and translating the address using the MSI page table is as follows:</p>
 </li>
 <li>
 <p>Let <code>DC</code> be the device-context located using the <code>device_id</code> of the device
-using the process outlined in <a href="#GET_DC">4.1.3.1. Process to locate the Device-context</a>.</p>
+using the process outlined in <a href="#GET_DC">2.1.3.1. Process to locate the Device-context</a>.</p>
 </li>
 <li>
 <p>Determine if the address <code>A</code> is an access to a virtual interrupt file as
-specified in <a href="#MSI_ID">4.1.1.3.6. MSI address mask (<code>msi_addr_mask</code>) and pattern (<code>msi_addr_pattern</code>)</a>.</p>
+specified in <a href="#MSI_ID">2.1.1.3.6. MSI address mask (<code>msi_addr_mask</code>) and pattern (<code>msi_addr_pattern</code>)</a>.</p>
 </li>
 <li>
 <p>If the address is not determined to be that of a virtual interrupt file then
@@ -2437,7 +2437,7 @@ operations may be performed by the I/O bridge.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-4-iommu-updating-of-pte-accessed-a-and-dirty-d-updates"><a class="anchor" href="#4-1-4-iommu-updating-of-pte-accessed-a-and-dirty-d-updates"></a>4.1.4. IOMMU updating of PTE accessed (A) and dirty (D) updates</h3>
+<h3 id="2-1-4-iommu-updating-of-pte-accessed-a-and-dirty-d-updates"><a class="anchor" href="#2-1-4-iommu-updating-of-pte-accessed-a-and-dirty-d-updates"></a>2.1.4. IOMMU updating of PTE accessed (A) and dirty (D) updates</h3>
 <div class="paragraph">
 <p>When <code>capabilities.AMO_HWAD</code> is 1, the IOMMU supports updating the A and D bits in
 PTEs atomically. When updating of A and D bits in second-stage PTEs is enabled
@@ -2480,7 +2480,7 @@ set them to 1 in the PTE to improve performance.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-5-faults-from-virtual-address-translation-process"><a class="anchor" href="#4-1-5-faults-from-virtual-address-translation-process"></a>4.1.5. Faults from virtual address translation process</h3>
+<h3 id="2-1-5-faults-from-virtual-address-translation-process"><a class="anchor" href="#2-1-5-faults-from-virtual-address-translation-process"></a>2.1.5. Faults from virtual address translation process</h3>
 <div class="paragraph">
 <p>Faults detected during the two-stage address translation specified in the RISC-V
 Privileged specification cite:[PRIV] cause the IOVA translation process to stop
@@ -2488,7 +2488,7 @@ and report the detected fault.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="ATS_FAULTS"><a class="anchor" href="#ATS_FAULTS"></a>4.1.6. PCIe ATS translation request handling</h3>
+<h3 id="ATS_FAULTS"><a class="anchor" href="#ATS_FAULTS"></a>2.1.6. PCIe ATS translation request handling</h3>
 <div class="paragraph">
 <p>ATS cite:[PCI] translation requests that encounter a configuration error results
 in a Completer Abort (CA) response to the requester. The following cause codes
@@ -2611,7 +2611,7 @@ reporting mechanism.</p>
 </div>
 <div class="paragraph">
 <p>If the translation request has an address determined to be an MSI address using
-the rules defined by the <a href="#MSI_ID">4.1.1.3.6. MSI address mask (<code>msi_addr_mask</code>) and pattern (<code>msi_addr_pattern</code>)</a> but the MSI PTE is configured in MRIF
+the rules defined by the <a href="#MSI_ID">2.1.1.3.6. MSI address mask (<code>msi_addr_mask</code>) and pattern (<code>msi_addr_pattern</code>)</a> but the MSI PTE is configured in MRIF
 mode then a Success response is generated with R, W, and U bit set to 1. The U
 bit being set to 1 in the response instructs the device that it must only use
 Untranslated requests to access the implied 4 KiB memory range.</p>
@@ -2731,7 +2731,7 @@ not be invoked for translating addresses in CXL.cache transactions.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="ATS_PRI"><a class="anchor" href="#ATS_PRI"></a>4.1.7. PCIe ATS Page Request handling</h3>
+<h3 id="ATS_PRI"><a class="anchor" href="#ATS_PRI"></a>2.1.7. PCIe ATS Page Request handling</h3>
 <div class="paragraph">
 <p>To process a "Page Request" or "Stop Marker" message cite:[PCI], the IOMMU first locates
 the device-context to determine if ATS and PRI are enabled for the requester.
@@ -2887,7 +2887,7 @@ the following conditions:</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="CACHING"><a class="anchor" href="#CACHING"></a>4.1.8. Caching in-memory data structures</h3>
+<h3 id="CACHING"><a class="anchor" href="#CACHING"></a>2.1.8. Caching in-memory data structures</h3>
 <div class="paragraph">
 <p>To speed up Direct Memory Access (DMA) translations, the IOMMU may make use of
 translation caches to hold entries from device-directory-table,
@@ -2965,7 +2965,7 @@ group of entries.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="4-1-9-updating-in-memory-data-structure-entries"><a class="anchor" href="#4-1-9-updating-in-memory-data-structure-entries"></a>4.1.9. Updating in-memory data structure entries</h3>
+<h3 id="2-1-9-updating-in-memory-data-structure-entries"><a class="anchor" href="#2-1-9-updating-in-memory-data-structure-entries"></a>2.1.9. Updating in-memory data structure entries</h3>
 <div class="paragraph">
 <p>The RISC-V memory model requires memory access from a hart to be single-copy
 atomic. When RV32 is implemented the size of a single-copy atomic memory access
@@ -3000,12 +3000,12 @@ supported by an IOMMU.<br></p>
 <li>
 <p>If the update to a field will make the field inconsistent with another field
 of the entry then software must first set the <code>V</code> field to 0 and use the commands
-outlined in <a href="#CACHING">4.1.8. Caching in-memory data structures</a> to invalidate any previous copies of that entry that
+outlined in <a href="#CACHING">2.1.8. Caching in-memory data structures</a> to invalidate any previous copies of that entry that
 may be in IOMMU caches before updating other fields of that entry.<br></p>
 </li>
 <li>
 <p>The IOMMU is not required to immediately observe the software update to an
-entry. Software must use the commands outlined in <a href="#CACHING">4.1.8. Caching in-memory data structures</a> to invalidate
+entry. Software must use the commands outlined in <a href="#CACHING">2.1.8. Caching in-memory data structures</a> to invalidate
 any previous copies of that entry that may be in IOMMU caches to synchronize
 the updates to the entry with the operation of the IOMMU.</p>
 </li>
@@ -3021,7 +3021,7 @@ the updates to the entry with the operation of the IOMMU.</p>
 <div class="paragraph">
 <p>If a data structure entry is changed, the IOMMU may use the old value of the
 entry or the new value of the entry and the choice is unpredictable until
-software uses the commands outlined in <a href="#CACHING">4.1.8. Caching in-memory data structures</a> to invalidate any previous
+software uses the commands outlined in <a href="#CACHING">2.1.8. Caching in-memory data structures</a> to invalidate any previous
 copies of that entry that may be in IOMMU caches to synchronize updates to the
 entry with the operation of the IOMMU. These are the only behaviors expected.</p>
 </div>
@@ -3031,7 +3031,7 @@ entry with the operation of the IOMMU. These are the only behaviors expected.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-10-endianness-of-in-memory-data-structures"><a class="anchor" href="#4-1-10-endianness-of-in-memory-data-structures"></a>4.1.10. Endianness of in-memory data structures</h3>
+<h3 id="2-1-10-endianness-of-in-memory-data-structures"><a class="anchor" href="#2-1-10-endianness-of-in-memory-data-structures"></a>2.1.10. Endianness of in-memory data structures</h3>
 <div class="paragraph">
 <p>The RISC-V memory model specifies byte-invariance for the entire address space.
 When mixed-endian mode of operation is supported, the IO bridge and the IOMMU

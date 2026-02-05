@@ -590,7 +590,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="intro"><a class="anchor" href="#intro"></a>3.1. Introduction</h2>
+<h2 id="intro"><a class="anchor" href="#intro"></a>1.1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Input-Output Memory Management Unit (IOMMU), sometimes referred to as a
@@ -758,7 +758,7 @@ and to be translated using a MSI address translation table configured by softwar
 in the device context.</p>
 </div>
 <div class="sect2">
-<h3 id="3-1-1-glossary"><a class="anchor" href="#3-1-1-glossary"></a>3.1.1. Glossary</h3>
+<h3 id="1-1-1-glossary"><a class="anchor" href="#1-1-1-glossary"></a>1.1.1. Glossary</h3>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 1. Terms and definitions</caption>
 <colgroup>
@@ -1035,9 +1035,9 @@ in the device context.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="3-1-2-usage-models"><a class="anchor" href="#3-1-2-usage-models"></a>3.1.2. Usage models</h3>
+<h3 id="1-1-2-usage-models"><a class="anchor" href="#1-1-2-usage-models"></a>1.1.2. Usage models</h3>
 <div class="sect3">
-<h4 id="3-1-2-1-non-virtualized-os"><a class="anchor" href="#3-1-2-1-non-virtualized-os"></a>3.1.2.1. Non-virtualized OS</h4>
+<h4 id="1-1-2-1-non-virtualized-os"><a class="anchor" href="#1-1-2-1-non-virtualized-os"></a>1.1.2.1. Non-virtualized OS</h4>
 <div class="paragraph">
 <p>A non-virtualized OS may use the IOMMU for the following significant system-level
 functionalities:</p>
@@ -1103,7 +1103,7 @@ second-stage may be set to Bare.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-1-2-2-hypervisor"><a class="anchor" href="#3-1-2-2-hypervisor"></a>3.1.2.2. Hypervisor</h4>
+<h4 id="1-1-2-2-hypervisor"><a class="anchor" href="#1-1-2-2-hypervisor"></a>1.1.2.2. Hypervisor</h4>
 <div class="paragraph">
 <p>IOMMU makes it possible for a guest operating system, running in a virtual
 machine, to be given direct control of an I/O device with only minimal
@@ -1147,7 +1147,7 @@ address, the same as supported by regular RISC-V page-based address translation.
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-1-2-3-guest-os"><a class="anchor" href="#3-1-2-3-guest-os"></a>3.1.2.3. Guest OS</h4>
+<h4 id="1-1-2-3-guest-os"><a class="anchor" href="#1-1-2-3-guest-os"></a>1.1.2.3. Guest OS</h4>
 <div class="paragraph">
 <p>The hypervisor may provide a virtual IOMMU facility, through hardware
 emulation or by enlightening the guest OS to use a software interface with
@@ -1192,7 +1192,7 @@ protection function for device D3 and the second-stage is set to Bare.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-1-3-placement-and-data-flow"><a class="anchor" href="#3-1-3-placement-and-data-flow"></a>3.1.3. Placement and data flow</h3>
+<h3 id="1-1-3-placement-and-data-flow"><a class="anchor" href="#1-1-3-placement-and-data-flow"></a>1.1.3. Placement and data flow</h3>
 <div class="paragraph">
 <p><a href="#fig:example-soc-with-iommu">Example of IOMMUs integration in SoC.</a> shows an example of a typical system on a chip
 (SOC) with RISC-V hart(s). The SOC incorporates memory controllers and several
@@ -1454,7 +1454,7 @@ perform such authentication.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-1-4-iommu-features"><a class="anchor" href="#3-1-4-iommu-features"></a>3.1.4. IOMMU features</h3>
+<h3 id="1-1-4-iommu-features"><a class="anchor" href="#1-1-4-iommu-features"></a>1.1.4. IOMMU features</h3>
 <div class="paragraph">
 <p>Version 1.0 of the RISC-V IOMMU specification supports the following
 features:</p>
