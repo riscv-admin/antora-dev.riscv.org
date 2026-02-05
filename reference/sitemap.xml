@@ -10,6 +10,9 @@
 <loc>https://docs.riscv.org/sitemap-brs.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://docs.riscv.org/sitemap-connectors.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://docs.riscv.org/sitemap-etrace.xml</loc>
 </sitemap>
 <sitemap>
@@ -47,6 +50,9 @@
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/sitemap-soc.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.riscv.org/sitemap-tci.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/sitemap-techtrace.xml</loc>
