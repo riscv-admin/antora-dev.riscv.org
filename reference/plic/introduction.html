@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: RISC-V Ratified Specifications Library</title>
+    <link rel="canonical" href="https://docs.riscv.org/plic/introduction.html">
+    <link rel="prev" href="contributor.html">
+    <link rel="next" href="plic-op-parms.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
+
+    <meta name="antora-ui-version" content="4358d718f6b837ac0a2541aa1ff35e998bbb0d26"> 
+    <meta name="version" content="v1.0.0">
+    <meta name="component" content="plic">
+    <meta name="latest-version" content="false">
+    <link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../_/img/favicon.ico">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://riscv.org">
+        <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV" />
+        <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV" />
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item home">
+          <a class="navbar-link"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/16154769/RISC-V+Technical+Specifications"
+            aria-label="Library">
+            Library</a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">ISA</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805601287/The+RISC-V+Instruction+Set+Manual+Volume+I+Unprivileged+ISA">Unprivileged
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805568665">Privileged <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">Profiles</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805240860/RVA23+Profile">RVA23 Profile <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805568757/RVB23+Profile">RVB23 Profile <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806289411/RISC-V+Profiles">RISC-V Profiles <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">Non-ISA Hardware</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806289428/RISC-V+Advanced+Interrupt+Architecture">Advanced
+            Interrupt Architecture <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806617089/RISC-V+IOMMU+Architecture">IOMMU
+            Architecture <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806617106/RISC-V+Platform-Level+Interrupt+Controller">Platform-Level
+            Interrupt Controller <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806617123/RISC-V+Server+SOC">Server
+            SOC <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">Debug, Trace, RAS</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926657/Efficient+Trace+for+RISC-V">Efficient
+            Trace
+            < <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+              </svg>
+          </a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809697292/RISC-V+Capacity+and+Bandwidth+QoS+Register+Interface">QoS
+            Register Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926674/The+RISC-V+Debug">Debug <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926691/RISC-V+N-Trace+Nexus-based+Trace">N-Trace
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809697310/RISC-V+RERI+Architecture">RERI
+            Architecture
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057729/RISC-V+Trace+Connectors">Trace Connectors
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057747/RISC-V+Trace+Control+Interface">Trace
+            Control Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057766/Unformatted+Trace+Diagnostic+Data+Packet+Encapsulation+for+RISC-V">Unformatted
+            Trace and Diagnostic Data Packet
+            Encapsulation <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">Platform Software</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926709/RISC-V+Boot+and+Runtime+Services+BRS">Boot
+            and Runtime Services <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057786/RISC-V+Functional+Fixed+Hardware">Functional
+            Fixed Hardware <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926726/RISC-V+IO+Mapping+Table">IO Mapping Table
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057803/RISC-V+Platform+Management+Interface+RPMI">Platform
+            Management Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057820/RISC-V+Semihosting">Semihosting <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057837/RISC-V+Supervisor+Binary+Interface">Supervisor
+            Binary Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057854/RISC-V+UEFI+Protocol">UEFI Protocol <svg
+              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">App Enablement</a>
+        <div class="navbar-dropdown" style="min-width: 280px">
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057873/RISC-V+ABIs">Application Binary Interface
+            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
+            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926743/RISC-V+Vector+C+Intrinsic">Vector C
+            Intrinsic <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
+             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs" >
+        </div>
+        <div class="navbar-item" style="padding-left: 0;">
+          <label class="theme-toggler">
+            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
+                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor"
+                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                </path>
+              </svg>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
+                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+                </path>
+              </svg></span>
+            <span class="text">light</span>
+          </label>
+        </div>
+      </div>
+  </nav>
+</header>
+<script>
+  !function (theme) {
+    if (theme === 'dark') {
+      document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+    }
+  }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script><div class="body">
+<div class="nav-container" data-component="plic" data-version="v1.0.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
+  <span class="title">Non-ISA Hardware</span>
+</div>        <div class="nav-trees" data-component="aia">
+          <div class="version-box">
+            <select data-component="aia" class="select-version">
+                <option
+                  value="../aia/index.html"
+                  data-version="v1.0"
+                  
+                  >
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="aia" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Advanced Interrupt Architecture</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../aia/index.html">Advanced Interrupt Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../aia/contributors.html">Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../aia/copyright.html">Copyright and License</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../aia/colophon.html">Preface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../aia/intro.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../aia/CSRs.html">Chapter 2. Control and Status Registers (CSRs) Added to Harts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../aia/IMSIC.html">Chapter 3. Incoming MSI Controller (IMSIC)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../aia/AdvPLIC.html">Chapter 4. Advanced Platform-Level Interrupt Controller (APLIC)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../aia/MSLevel.html">Chapter 5. Interrupts for Machine and Supervisor Levels</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../aia/VSLevel.html">Chapter 6. Interrupts for Virtual Machines (VS Level)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../aia/IPIs.html">Chapter 7. Interprocessor Interrupts (IPIs)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../aia/IOMMU.html">Chapter 8. IOMMU Support for MSIs to Virtual Machines</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="iommu">
+          <div class="version-box">
+            <select data-component="iommu" class="select-version">
+                <option
+                  value="../iommu/index.html"
+                  data-version="v1.0"
+                  
+                  >
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="iommu" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">IOMMU Architecture</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../iommu/index.html">IOMMU Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../iommu/preamble.html">Copyright and License</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../iommu/contributors.html">Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../iommu/iommu_preface.html">Preface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../iommu/iommu_intro.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../iommu/iommu_data_structures.html">Chapter 2. Data Structures</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../iommu/iommu_in_memory_queues.html">Chapter 3. In-memory queue interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../iommu/iommu_debug.html">Chapter 4. Debug support</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../iommu/iommu_registers.html">Chapter 5. Memory-mapped register interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../iommu/iommu_sw_guidelines.html">Chapter 6. Software guidelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../iommu/iommu_hw_guidelines.html">Chapter 7. Hardware guidelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../iommu/iommu_extensions.html">Chapter 8. IOMMU Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../iommu/bibliography.html">Chapter 9. Bibliography</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="plic">
+          <div class="version-box">
+            <select data-component="plic" class="select-version">
+                <option
+                  value="index.html"
+                  data-version="v1.0.0"
+                  
+                  selected>
+                  v1.0.0
+                </option>
+            </select>
+          </div>
+              <div data-component="plic" data-version="v1.0.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Platform-Level Interrupt Controller</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="index.html">Platform-Level Interrupt Controller</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="licensing.html">Copyright and license</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="contributor.html">Contributors</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link"  href="introduction.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="plic-memory-map.html">Chapter 3. Memory Map</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="plic-priority.html">Chapter 4. Interrupt Priorities</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="plic-interrupts.html">Chapter 5. Interrupt Pending Bits</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="plic-enables.html">Chapter 6. Interrupt Enables</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="plic-claims.html">Chapter 7. Interrupt Claim Process</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="plic-completion.html">Chapter 8. Interrupt Completion</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="soc">
+          <div class="version-box">
+            <select data-component="soc" class="select-version">
+                <option
+                  value="../soc/index.html"
+                  data-version="v1.0"
+                  
+                  >
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="soc" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Server SoC Specification</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../soc/index.html">Server SoC Specification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../soc/server_soc_preamble.html">Copyright and License</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../soc/server_soc_contributors.html">Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../soc/server_soc_intro.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../soc/server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../soc/server_soc_bibliography.html">Bibliography</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
+<div class="toolbar" role="navigation">
+  <button id="nav-toggle-1" class="nav-toggle"></button>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div class="tag-toggle-container">
+      <button
+        class="tag-toggle-btn"
+        type="button"
+        onclick="document.documentElement.classList.toggle('tag-highlight-enabled');"
+      >
+        <div class="tag-toggle-switch"></div>
+        <span id="tag-toggle-label">Highlight Tags</span>
+      </button>
+    </div>
+    <div
+      class="toc"
+      data-title=""
+      data-levels="5"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="https://github.com/riscv/riscv-plic-spec/issues/new" target="_blank" title="Issues">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Report a Problem
+        </a>
+        <a href="https://github.com/riscv/riscv-plic-spec" target="_blank" title="GitHub">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          GitHub Project
+        </a>
+
+          <a href="https://github.com/riscv/docs.riscv.org/blob/main/static/pdf/riscv-plic-1.0.0.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
+            <span>Download PDF</span>
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M10 14a5 5 0 0 1 7.07 0l3.54 3.54a5 5 0 0 1-7.07 7.07l-3.54-3.54a5 5 0 0 1 0-7.07z"/>
+              <line x1="8" y1="8" x2="16" y2="16"/>
+            </svg>
+          </a>
+    </div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="index.html">RISC-V Platform-Level Interrupt Controller</a></li>
+      <li>Platform-Level Interrupt Controller</li>
+      <li><a href="introduction.html">Chapter 1. Introduction</a></li>
+    </ul>
+  </nav>
+</div><div class="sect1">
+<h2 id="1-1-introduction"><a class="anchor" href="#1-1-introduction"></a>1.1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This specification delineates the operation parameters according the general PLIC
+architecture defined in the RISC-V platform-level interrupt controller (PLIC)
+specification (was removed from <a href="https://github.com/riscv/riscv-isa-manual/releases/download/draft-20181201-5449851/riscv-privileged.pdf">RISC-V Privileged Spec v1.11-draft</a>)
+to work in the context of RISC-V systems.<br>
+The PLIC multiplexes various device interrupts onto the external interrupt lines
+of Hart contexts, with hardware support for interrupt priorities. PLIC supports
+up-to 1023 interrupts (0 is reserved) and 15872 contexts, but the actual number of
+interrupts and context depends on the PLIC implementation. However, the implementation
+must adhere to the offset of each register within the PLIC operation parameters.
+The PLIC which claimed as PLIC-Compliant standard PLIC should follow the
+implementations mentioned in sections below.</p>
+</div>
+<div class="sect2">
+<h3 id="1-1-1-interrupt-targets-and-hart-contexts"><a class="anchor" href="#1-1-1-interrupt-targets-and-hart-contexts"></a>1.1.1. Interrupt Targets and Hart Contexts</h3>
+<div class="paragraph">
+<p>Interrupt targets are usually hart contexts, where a hart context is a given
+privilege mode on a given hart (though there are other possible interrupt targets,
+such as DMA engines). For example, in an 4-core system with 2-way SMT, you have 8
+harts and probably at least two privilege modes per hart: machine mode and
+supervisor mode (<a href="https://github.com/torvalds/linux/blob/5bfc75d92efd494db37f5c4c173d3639d4772966/Documentation/devicetree/bindings/interrupt-controller/sifive%2Cplic-1.0.0.yaml">Ref</a>).<br>
+Not all hart contexts need be interrupt targets, in
+particular, if a processor core does not support delegating external interrupts to
+lower-privilege modes, then the lower-privilege hart contexts will not be interrupt
+targets. Interrupt notifications generated by the PLIC appear in the meip/seip bits
+of the mip/sip registers for M/S modes respectively.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Previous versions of this specification indicated that the PLIC
+supports U-mode interrupts.  This text was removed because the
+privileged architecture does not define U-mode interrupts.  If a
+future privileged architecture specifies U-mode interrupts, this PLIC
+specification can be straightforwardly extended to support them.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The notification only appear in lower-privilege xip registers if external interrupts
+have been delegated to the lower-privilege modes.<br>
+Each processor core must define a
+policy on how simultaneous active interrupts are taken by multiple hart contexts
+on the core. For the simple case of a single stack of hart contexts, one for each
+supported privileged mode, interrupts for higher-privilege contexts can preempt
+execution of interrupt handlers for lower-privilege contexts. A multithreaded
+processor core could run multiple independent interrupt handlers on different hart
+contexts at the same time. A processor core could also provide hart contexts that
+are only used for interrupt handling to reduce interrupt service latency, and
+these might preempt interrupt handlers for other harts on the same core.<br>
+The PLIC treats each interrupt target independently and does not take into account
+any interrupt prioritization scheme used by a component that contains multiple
+interrupt targets. As a result, the PLIC provides no concept of interrupt
+preemption or nesting so this must be handled by the cores hosting multiple
+interrupt target contexts.</p>
+</div>
+<div class="paragraph">
+<div class="title">RISC-V PLIC Interrupt Architecture Block Diagram</div>
+<p><span class="image"><img src="_images/PLIC.jpg" alt="400" width="432"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="1-1-2-interrupt-gateways"><a class="anchor" href="#1-1-2-interrupt-gateways"></a>1.1.2. Interrupt Gateways</h3>
+<div class="paragraph">
+<p>The interrupt gateways are responsible for converting global interrupt signals
+into a common interrupt request format, and for controlling the flow of interrupt
+requests to the PLIC core. At most one interrupt request per interrupt source can
+be pending in the PLIC core at any time, indicated by setting the source&#8217;s IP bit.
+The gateway only forwards a new interrupt request to the PLIC core after receiving
+notification that the interrupt handler servicing the previous interrupt request
+from the same source has completed.<br>
+If the global interrupt source uses level-sensitive interrupts, the gateway will
+convert the first assertion of the interrupt level into an interrupt request, but
+thereafter the gateway will not forward an additional interrupt request until it
+receives an interrupt completion message. On receiving an interrupt completion
+message, if the interrupt is level-triggered and the interrupt is still asserted, a
+new interrupt request will be forwarded to the PLIC core. The gateway does not
+have the facility to retract an interrupt request once forwarded to the PLIC core.
+If a level-sensitive interrupt source deasserts the interrupt after the PLIC core
+accepts the request and before the interrupt is serviced, the interrupt request
+remains present in the IP bit of the PLIC core and will be serviced by a handler,
+which will then have to determine that the interrupt device no longer requires
+service.<br>
+If the global interrupt source was edge-triggered, the gateway will convert the
+first matching signal edge into an interrupt request. Depending on the design of
+the device and the interrupt handler, in between sending an interrupt request and
+receiving notice of its handler&#8217;s completion, the gateway might either ignore
+additional matching edges or increment a counter of pending interrupts. In either
+case, the next interrupt request will not be forwarded to the PLIC core until the
+previous completion message has been received. If the gateway has a pending
+interrupt counter, the counter will be decremented when the interrupt request is
+accepted by the PLIC core. Unlike dedicated-wire interrupt signals,
+message-signalled interrupts (MSIs) are sent over the system interconnect via a
+message packet that describes which interrupt is being asserted. The message
+is decoded to select an interrupt gateway, and the relevant gateway then handles
+the MSI similar to an edge-triggered interrupt.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="1-1-3-interrupt-notifications"><a class="anchor" href="#1-1-3-interrupt-notifications"></a>1.1.3. Interrupt Notifications</h3>
+<div class="paragraph">
+<p>Each interrupt target has an external interrupt pending (EIP) bit in the PLIC core
+that indicates that the corresponding target has a pending interrupt waiting for
+service. The value in EIP can change as a result of changes to state in the PLIC
+core, brought on by interrupt sources, interrupt targets, or other agents
+manipulating register values in the PLIC. The value in EIP is communicated
+to the destination target as an interrupt notification. If the target is a RISC-V
+hart context, the interrupt notifications arrive on the meip/seip bits
+depending on the privilege level of the hart context.<br>
+(<em>In simple systems, the
+interrupt notifications will be simple wires connected to the processor
+implementing a hart. In more complex platforms, the notifications might be routed
+as messages across a system interconnect.</em>)<br></p>
+</div>
+<div class="paragraph">
+<p>The PLIC hardware only supports multicasting of interrupts, such that all enabled
+targets will receive interrupt notifications for a given active interrupt.<br>
+(<em>Multicasting provides rapid response since the fastest responder claims the
+interrupt, but can be wasteful in high-interrupt-rate scenarios if multiple harts
+take a trap for an interrupt that only one can successfully claim. Software can
+modulate the PLIC IE bits as part of each interrupt handler to provide alternate
+policies, such as interrupt affinity or round-robin unicasting.</em>)<br></p>
+</div>
+<div class="paragraph">
+<p>Depending on the platform architecture and the method used to transport interrupt
+notifications, these might take some time to be received at the targets. The PLIC
+is guaranteed to eventually deliver all state changes in EIP to all targets,
+provided there is no intervening activity in the PLIC core.<br>
+(<em>The value in an interrupt notification is only guaranteed to hold an EIP value
+that was valid at some point in the past. In particular, a second target can
+respond and claim an interrupt while a notification to the first target is still in
+flight, such that when the first target tries to claim the interrupt it finds it has
+no active interrupts in the PLIC core.</em>)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="1-1-4-interrupt-identifiers-ids"><a class="anchor" href="#1-1-4-interrupt-identifiers-ids"></a>1.1.4. Interrupt Identifiers (IDs)</h3>
+<div class="paragraph">
+<p>Global interrupt sources are assigned small unsigned integer identifiers, beginning
+at the value 1. An interrupt ID of 0 is reserved to mean “no interrupt”.<br>
+Interrupt identifiers are also used to break ties when two or more interrupt
+sources have the same assigned priority. Smaller values of interrupt ID take precedence over larger values of interrupt ID.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="1-1-5-interrupt-flow"><a class="anchor" href="#1-1-5-interrupt-flow"></a>1.1.5. Interrupt Flow</h3>
+<div class="paragraph">
+<p>Below figure shows the messages flowing between agents when handling interrupts
+via the PLIC.<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Global interrupts are sent from their source to an interrupt gateway that
+processes the interrupt signal from each source</p>
+</li>
+<li>
+<p>Interrupt gateway then sends a single interrupt request to the PLIC core, which
+latches these in the core interrupt pending bits (IP).</p>
+</li>
+<li>
+<p>The PLIC core forwards an interrupt notification to one or more targets if
+the targets have any pending interrupts enabled, and the priority of the pending
+interrupts exceeds a per-target threshold.</p>
+</li>
+<li>
+<p>When the target takes the external interrupt, it sends an interrupt claim
+request to retrieve the identifier of the highest priority global interrupt
+source pending for that target from the PLIC core.</p>
+</li>
+<li>
+<p>PLIC core then clears the corresponding interrupt source pending bit.</p>
+</li>
+<li>
+<p>After the target has serviced the interrupt, it sends the associated interrupt
+gateway an interrupt completion message</p>
+</li>
+<li>
+<p>The interrupt gateway can now forward another interrupt request for the same
+source to the PLIC.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">PLIC Interrupt Flow</div>
+<p><span class="image"><img src="_images/PLICInterruptFlow.jpg" alt="PLICInterruptFlow"></span></p>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="contributor.html">Contributors</a></span>
+  <span class="next"><a href="plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a></span>
+</nav>
+</article>  </div>
+</main>
+</div>
+<footer class="footer flex">
+    <div id="RISC-V footer">
+        <p class="smallest antialiased">Copyright © 2025 - <script>var d = new Date();
+        document.write(d.getFullYear());</script> This document is released under a Creative Commons Attribution 4.0 International License.<span id="teconsent"></span></p>
+    
+    </div>
+
+</footer>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async
+    src="../_/js/vendor/spring-tabs.js"
+    data-sync-storage-key="docs:preferred-tab"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>
