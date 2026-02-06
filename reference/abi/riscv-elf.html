@@ -280,18 +280,20 @@
         <nav class="nav-menu">
 <div class="context">
   <span class="title">App Enablement</span>
-</div>    <div class="version-box">
-      <select data-component="abi" class="select-version">
-          <option
-            value="index.html"
-            data-version="v1.0"
-            
-            selected>
-            v1.0
-          </option>
-      </select>
-    </div>
-    <ul class="nav-list">
+</div>        <div class="nav-trees" data-component="abi">
+          <div class="version-box">
+            <select data-component="abi" class="select-version">
+                <option
+                  value="index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="abi" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">RISC-V ABI Specifications</span>
@@ -300,27 +302,187 @@
     <a class="nav-link"  href="index.html">RISC-V ABI</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="introduction.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="copyright.html">Chapter 1. Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-cc.html">Chapter 2. Calling Conventions</a>
+    <a class="nav-link"  href="contributors.html">Chapter 2. Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="introduction.html">Chapter 3. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="riscv-cc.html">Chapter 4. Calling Conventions</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="riscv-elf.html">Chapter 3. ELF Specification</a>
+    <a class="nav-link"  href="riscv-elf.html">Chapter 5. ELF Specification</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-dwarf.html">Chapter 4. DWARF Specification</a>
+    <a class="nav-link"  href="riscv-dwarf.html">Chapter 6. DWARF Specification</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-rtabi.html">Chapter 5. Runtime ABI</a>
+    <a class="nav-link"  href="riscv-rtabi.html">Runtime ABI</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-atomic.html">Chapter 6. Atomic Operations</a>
+    <a class="nav-link"  href="riscv-atomic.html">Atomic Operations</a>
   </li>
 </ul>
   </li>
 </ul>
-            <div class="toggle-sm">
+              </div>
+        </div>
+        <div class="nav-trees" data-component="intrinsic">
+          <div class="version-box">
+            <select data-component="intrinsic" class="select-version">
+                <option
+                  value="../intrinsic/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="intrinsic" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">RISC-V Vector C Intrinsic Specification Document</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/index.html">Chapter 1. RISC-V Vector C Intrinsic</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/preface.html">Chapter 2. Copyright and license information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/rvv-intrinsic-spec.html">Chapter 3. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/vector-bfloat16-spec.html">Chapter 4. Intrinsics for BFloat16</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/references.html">Chapter 5. References</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/rvv-intrinsic-examples.html">Chapter 6. Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/00_vector_loads_and_stores_intrinsics.html">Chapter 7. Vector Loads and Stores Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.html">Chapter 8. Vector Loads and Stores Segment Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.html">Chapter 9. Vector Integer Arithmetic Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/03_vector_fixed-point_arithmetic_intrinsics.html">Chapter 10. Vector Fixed-Point Arithmetic Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/04_vector_floating-point_intrinsics.html">Chapter 11. Vector Floating-Point Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/05_vector_reduction_operations.html">Chapter 12. Vector Reduction Operations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/06_vector_mask_intrinsics.html">Chapter 13. Vector Mask Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/07_vector_permutation_intrinsics.html">Chapter 14. Vector Permutation Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.html">Chapter 15. Miscellaneous Vector Utility Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/00_vector_loads_and_stores_intrinsics.html">Chapter 16. Vector Loads and Stores Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.html">Chapter 17. Vector Loads and Stores Segment Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.html">Chapter 18. Vector Integer Arithmetic Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/03_vector_fixed-point_arithmetic_intrinsics.html">Chapter 19. Vector Fixed-Point Arithmetic Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/04_vector_floating-point_intrinsics.html">Chapter 20. Vector Floating-Point Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/05_vector_reduction_operations.html">Chapter 21. Vector Reduction Operations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/06_vector_mask_intrinsics.html">Chapter 22. Vector Mask Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/07_vector_permutation_intrinsics.html">Chapter 23. Vector Permutation Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.html">Chapter 24. Miscellaneous Vector Utility Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/00_vector_loads_and_stores_intrinsics.html">Chapter 25. Vector Loads and Stores Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.html">Chapter 26. Vector Loads and Stores Segment Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.html">Chapter 27. Vector Integer Arithmetic Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/03_vector_fixed-point_arithmetic_intrinsics.html">Chapter 28. Vector Fixed-Point Arithmetic Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/04_vector_floating-point_intrinsics.html">Chapter 29. Vector Floating-Point Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/05_vector_reduction_operations.html">Chapter 30. Vector Reduction Operations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/06_vector_mask_intrinsics.html">Chapter 31. Vector Mask Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/07_vector_permutation_intrinsics.html">Chapter 32. Vector Permutation Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.html">Chapter 33. Miscellaneous Vector Utility Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/00_vector_loads_and_stores_intrinsics.html">Chapter 34. Vector Loads and Stores Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.html">Chapter 35. Vector Loads and Stores Segment Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.html">Chapter 36. Vector Integer Arithmetic Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/03_vector_fixed-point_arithmetic_intrinsics.html">Chapter 37. Vector Fixed-Point Arithmetic Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/04_vector_floating-point_intrinsics.html">Chapter 38. Vector Floating-Point Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/05_vector_reduction_operations.html">Chapter 39. Vector Reduction Operations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/06_vector_mask_intrinsics.html">Chapter 40. Vector Mask Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/07_vector_permutation_intrinsics.html">Chapter 41. Vector Permutation Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.html">Chapter 42. Miscellaneous Vector Utility Intrinsics</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../intrinsic/bibliography.html">Chapter 43. Bibliography</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+          <div class="toggle-sm">
             <button id="nav-toggle-2" class="nav-toggle"></button>
           </div>
         </nav>
@@ -406,12 +568,12 @@
     <ul>
       <li><a href="index.html">ABI Specification</a></li>
       <li>RISC-V ABI Specifications</li>
-      <li><a href="riscv-elf.html">Chapter 3. ELF Specification</a></li>
+      <li><a href="riscv-elf.html">Chapter 5. ELF Specification</a></li>
     </ul>
   </nav>
 </div><h1 id="page-title" class="page">RISC-V ELF Specification</h1>
 <div class="sect1">
-<h2 id="3-1-code-models"><a class="anchor" href="#3-1-code-models"></a>3.1. Code Models</h2>
+<h2 id="5-1-code-models"><a class="anchor" href="#5-1-code-models"></a>5.1. Code Models</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The RISC-V architecture constrains the addressing of positions in the
@@ -428,7 +590,7 @@ raise an error if it cannot adjust the instructions to access the target address
 in the current code model.</p>
 </div>
 <div class="sect2">
-<h3 id="3-1-1-medium-low-code-model"><a class="anchor" href="#3-1-1-medium-low-code-model"></a>3.1.1. Medium Low Code Model</h3>
+<h3 id="5-1-1-medium-low-code-model"><a class="anchor" href="#5-1-1-medium-low-code-model"></a>5.1.1. Medium Low Code Model</h3>
 <div class="paragraph">
 <p>The medium low code model, or <code>medlow</code>, allows the code to address the whole RV32
 address space or the lower 2 GiB and highest 2 GiB of the RV64 address space
@@ -483,7 +645,7 @@ addi a0, a0, -0x800 # a0 = a0 + -2048 = 0xFFFFFFFF7FFFF800</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-1-2-medium-any-code-model"><a class="anchor" href="#3-1-2-medium-any-code-model"></a>3.1.2. Medium Any Code Model</h3>
+<h3 id="5-1-2-medium-any-code-model"><a class="anchor" href="#5-1-2-medium-any-code-model"></a>5.1.2. Medium Any Code Model</h3>
 <div class="paragraph">
 <p>The medium any code model, or <code>medany</code>, allows the code to address the range
 between -2 GiB and +2 GiB from its position.  By using <code>auipc</code>
@@ -561,7 +723,7 @@ The address space of RV64ILP32* ABIs is not continuous in the middle.
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-1-3-medium-position-independent-code-model"><a class="anchor" href="#3-1-3-medium-position-independent-code-model"></a>3.1.3. Medium Position Independent Code Model</h3>
+<h3 id="5-1-3-medium-position-independent-code-model"><a class="anchor" href="#5-1-3-medium-position-independent-code-model"></a>5.1.3. Medium Position Independent Code Model</h3>
 <div class="paragraph">
 <p>This model is similar to the medium any code model, but uses the
 <a href="#Global Offset Table">global offset table</a> (GOT) for non-local symbol addresses.</p>
@@ -587,7 +749,7 @@ The address space of RV64ILP32* ABIs is not continuous in the middle.
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-1-4-large-code-model"><a class="anchor" href="#3-1-4-large-code-model"></a>3.1.4. Large Code Model</h3>
+<h3 id="5-1-4-large-code-model"><a class="anchor" href="#5-1-4-large-code-model"></a>5.1.4. Large Code Model</h3>
 <div class="paragraph">
 <p>The <code>large</code> code model allows the code to address the whole RV64 address space.
 Thus, this model is only available for RV64. By putting object addresses
@@ -694,7 +856,7 @@ usage purposes in the future.
 </div>
 </div>
 <div class="sect1">
-<h2 id="3-2-dynamic-linking"><a class="anchor" href="#3-2-dynamic-linking"></a>3.2. Dynamic Linking</h2>
+<h2 id="5-2-dynamic-linking"><a class="anchor" href="#5-2-dynamic-linking"></a>5.2. Dynamic Linking</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Any functions that use registers in a way that is incompatible with
@@ -721,7 +883,7 @@ any vector registers.
 </div>
 </div>
 <div class="sect1">
-<h2 id="3-3-c-name-mangling"><a class="anchor" href="#3-3-c-name-mangling"></a>3.3. C&#43;&#43; Name Mangling</h2>
+<h2 id="5-3-c-name-mangling"><a class="anchor" href="#5-3-c-name-mangling"></a>5.3. C&#43;&#43; Name Mangling</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>C&#43;&#43; name mangling for RISC-V follows
@@ -735,7 +897,7 @@ for more detail on how to mangle types. Note that <code>__bf16</code> is mangled
 same way as <code>std::bfloat16_t</code>.</p>
 </div>
 <div class="sect2">
-<h3 id="3-3-1-name-mangling-for-vector-data-types-vector-mask-types-and-vector-tuple-types"><a class="anchor" href="#3-3-1-name-mangling-for-vector-data-types-vector-mask-types-and-vector-tuple-types"></a>3.3.1. Name Mangling for Vector Data Types, Vector Mask Types and Vector Tuple Types.</h3>
+<h3 id="5-3-1-name-mangling-for-vector-data-types-vector-mask-types-and-vector-tuple-types"><a class="anchor" href="#5-3-1-name-mangling-for-vector-data-types-vector-mask-types-and-vector-tuple-types"></a>5.3.1. Name Mangling for Vector Data Types, Vector Mask Types and Vector Tuple Types.</h3>
 <div class="paragraph">
 <p>The vector data types and vector mask types, as defined in the section
 <a href="#Vector Type Sizes and Alignments">[Vector Type Sizes and Alignments]</a>, are treated as vendor-extended types in
@@ -776,7 +938,7 @@ identifier-char = identifier-nondigit / "_"</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="3-4-elf-object-files"><a class="anchor" href="#3-4-elf-object-files"></a>3.4. ELF Object Files</h2>
+<h2 id="5-4-elf-object-files"><a class="anchor" href="#5-4-elf-object-files"></a>5.4. ELF Object Files</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The ELF object file format for RISC-V follows the
@@ -784,7 +946,7 @@ identifier-char = identifier-nondigit / "_"</code></pre>
 ("gABI"); this specification only describes RISC-V-specific definitions.</p>
 </div>
 <div class="sect2">
-<h3 id="3-4-1-file-header"><a class="anchor" href="#3-4-1-file-header"></a>3.4.1. File Header</h3>
+<h3 id="5-4-1-file-header"><a class="anchor" href="#5-4-1-file-header"></a>5.4.1. File Header</h3>
 <div class="paragraph">
 <p>The section below lists the defined RISC-V-specific values for several ELF
 header fields; any fields not listed in this section have no RISC-V-specific
@@ -1007,7 +1169,7 @@ different syscall ABI.
 </table>
 </div>
 <div class="paragraph">
-<p>==== 3.4.1.1. Policy for Merge Objects with Different File Headers</p>
+<p>==== 5.4.1.1. Policy for Merge Objects with Different File Headers</p>
 </div>
 <div class="paragraph">
 <p>This section describe the behavior when the inputs files come with different
@@ -1071,13 +1233,13 @@ sections.
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-4-2-string-tables"><a class="anchor" href="#3-4-2-string-tables"></a>3.4.2. String Tables</h3>
+<h3 id="5-4-2-string-tables"><a class="anchor" href="#5-4-2-string-tables"></a>5.4.2. String Tables</h3>
 <div class="paragraph">
 <p>There are no RISC-V specific definitions relating to ELF string tables.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-4-3-symbol-table"><a class="anchor" href="#3-4-3-symbol-table"></a>3.4.3. Symbol Table</h3>
+<h3 id="5-4-3-symbol-table"><a class="anchor" href="#5-4-3-symbol-table"></a>5.4.3. Symbol Table</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">st_other</dt>
@@ -1120,7 +1282,7 @@ executables if there are any GP-relative accesses present in the executable.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-4-4-relocations"><a class="anchor" href="#3-4-4-relocations"></a>3.4.4. Relocations</h3>
+<h3 id="5-4-4-relocations"><a class="anchor" href="#5-4-4-relocations"></a>5.4.4. Relocations</h3>
 <div class="paragraph">
 <p>RISC-V is a classical RISC architecture that has densely packed non-word
 sized instruction immediate values. While the linker can make relocations on
@@ -1844,7 +2006,7 @@ The linker must not alter the length of the ULEB128-encoded value.
 </table>
 </div>
 <div class="sect3">
-<h4 id="3-4-4-1-nonstandard-relocations-a-k-a-vendor-specific-relocations"><a class="anchor" href="#3-4-4-1-nonstandard-relocations-a-k-a-vendor-specific-relocations"></a>3.4.4.1. Nonstandard Relocations (a.k.a. Vendor-Specific Relocations)</h4>
+<h4 id="5-4-4-1-nonstandard-relocations-a-k-a-vendor-specific-relocations"><a class="anchor" href="#5-4-4-1-nonstandard-relocations-a-k-a-vendor-specific-relocations"></a>5.4.4.1. Nonstandard Relocations (a.k.a. Vendor-Specific Relocations)</h4>
 <div class="paragraph">
 <p>Nonstandard extensions are free to use relocation numbers 192-255 for any
 purpose. These vendor-specific relocations must be preceded by a
@@ -1881,7 +2043,7 @@ be shown.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-4-4-2-calculation-symbols"><a class="anchor" href="#3-4-4-2-calculation-symbols"></a>3.4.4.2. Calculation Symbols</h4>
+<h4 id="5-4-4-2-calculation-symbols"><a class="anchor" href="#5-4-4-2-calculation-symbols"></a>5.4.4.2. Calculation Symbols</h4>
 <div class="paragraph">
 <p><a href="#var-reloc-calc">Variables used in relocation calculation</a> provides details on the variables used in relocation
 calculation:</p>
@@ -1947,7 +2109,7 @@ of the <code>__global_pointer$</code> symbol into register <code>gp</code> (aka 
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-4-4-3-field-symbols"><a class="anchor" href="#3-4-4-3-field-symbols"></a>3.4.4.3. Field Symbols</h4>
+<h4 id="5-4-4-3-field-symbols"><a class="anchor" href="#5-4-4-3-field-symbols"></a>5.4.4.3. Field Symbols</h4>
 <div class="paragraph">
 <p><a href="#var-reloc-field">Variables used in relocation fields</a> provides details on the variables used in relocation fields:</p>
 </div>
@@ -2032,7 +2194,7 @@ of the <code>__global_pointer$</code> symbol into register <code>gp</code> (aka 
 </table>
 </div>
 <div class="sect3">
-<h4 id="3-4-4-4-constants"><a class="anchor" href="#3-4-4-4-constants"></a>3.4.4.4. Constants</h4>
+<h4 id="5-4-4-4-constants"><a class="anchor" href="#5-4-4-4-constants"></a>5.4.4.4. Constants</h4>
 <div class="paragraph">
 <p><a href="#const-reloc-field">Constants used in relocation fields</a> provides details on the constants used in relocation fields:</p>
 </div>
@@ -2057,7 +2219,7 @@ of the <code>__global_pointer$</code> symbol into register <code>gp</code> (aka 
 </table>
 </div>
 <div class="sect3">
-<h4 id="3-4-4-5-absolute-addresses"><a class="anchor" href="#3-4-4-5-absolute-addresses"></a>3.4.4.5. Absolute Addresses</h4>
+<h4 id="5-4-4-5-absolute-addresses"><a class="anchor" href="#5-4-4-5-absolute-addresses"></a>5.4.4.5. Absolute Addresses</h4>
 <div class="paragraph">
 <p>32-bit absolute addresses in position dependent code are loaded with a pair
 of instructions which have an associated pair of relocations:
@@ -2118,7 +2280,7 @@ identical, a condition met when the symbol is sufficiently aligned.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-4-4-6-global-offset-table"><a class="anchor" href="#3-4-4-6-global-offset-table"></a>3.4.4.6. Global Offset Table</h4>
+<h4 id="5-4-4-6-global-offset-table"><a class="anchor" href="#5-4-4-6-global-offset-table"></a>5.4.4.6. Global Offset Table</h4>
 <div class="paragraph">
 <p>For position independent code in dynamically linked objects, each shared
 object contains a GOT (Global Offset Table), which contains addresses of
@@ -2135,7 +2297,7 @@ a slightly higher runtime overhead for access to extern objects and functions.</
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-4-4-7-procedure-linkage-table"><a class="anchor" href="#3-4-4-7-procedure-linkage-table"></a>3.4.4.7. Procedure Linkage Table</h4>
+<h4 id="5-4-4-7-procedure-linkage-table"><a class="anchor" href="#5-4-4-7-procedure-linkage-table"></a>5.4.4.7. Procedure Linkage Table</h4>
 <div class="paragraph">
 <p>The PLT (Procedure Linkage Table) exists to allow function calls between
 dynamically linked shared objects. Each dynamic object has its own
@@ -2180,7 +2342,7 @@ and fills in the GOT entry for subsequent calls to the function:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-4-4-8-procedure-calls"><a class="anchor" href="#3-4-4-8-procedure-calls"></a>3.4.4.8. Procedure Calls</h4>
+<h4 id="5-4-4-8-procedure-calls"><a class="anchor" href="#5-4-4-8-procedure-calls"></a>5.4.4.8. Procedure Calls</h4>
 <div class="paragraph">
 <p><code>R_RISCV_CALL</code> and <code>R_RISCV_CALL_PLT</code> relocations are associated with
 pairs of instructions (<code>AUIPC+JALR</code>) generated by the <code>CALL</code> or <code>TAIL</code>
@@ -2228,7 +2390,7 @@ to the <code>JAL</code> instruction when the procedure or PLT entry is within (-
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-4-4-9-pc-relative-jumps-and-branches"><a class="anchor" href="#3-4-4-9-pc-relative-jumps-and-branches"></a>3.4.4.9. PC-Relative Jumps and Branches</h4>
+<h4 id="5-4-4-9-pc-relative-jumps-and-branches"><a class="anchor" href="#5-4-4-9-pc-relative-jumps-and-branches"></a>5.4.4.9. PC-Relative Jumps and Branches</h4>
 <div class="paragraph">
 <p>Unconditional jump (J-Type) instructions have a <code>R_RISCV_JAL</code> relocation
 that can represent an even signed 21-bit offset (-1MiB to +1MiB-2).</p>
@@ -2239,7 +2401,7 @@ can represent an even signed 13-bit offset (-4096 to +4094).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-4-4-10-pc-relative-symbol-addresses"><a class="anchor" href="#3-4-4-10-pc-relative-symbol-addresses"></a>3.4.4.10. PC-Relative Symbol Addresses</h4>
+<h4 id="5-4-4-10-pc-relative-symbol-addresses"><a class="anchor" href="#5-4-4-10-pc-relative-symbol-addresses"></a>5.4.4.10. PC-Relative Symbol Addresses</h4>
 <div class="paragraph">
 <p>32-bit PC-relative relocations for symbol addresses on sequences of
 instructions such as the <code>AUIPC+ADDI</code> instruction pair expanded from
@@ -2322,7 +2484,7 @@ the symbol.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-4-4-11-relocation-for-alignment"><a class="anchor" href="#3-4-4-11-relocation-for-alignment"></a>3.4.4.11. Relocation for Alignment</h4>
+<h4 id="5-4-4-11-relocation-for-alignment"><a class="anchor" href="#5-4-4-11-relocation-for-alignment"></a>5.4.4.11. Relocation for Alignment</h4>
 <div class="paragraph">
 <p>The relocation type <code>R_RISCV_ALIGN</code> marks a location that must be aligned to
 <code>N</code>-bytes, where <code>N</code> is the smallest power of two that is greater than the value
@@ -2420,7 +2582,7 @@ def align(addend):
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-4-5-thread-local-storage"><a class="anchor" href="#3-4-5-thread-local-storage"></a>3.4.5. Thread Local Storage</h3>
+<h3 id="5-4-5-thread-local-storage"><a class="anchor" href="#5-4-5-thread-local-storage"></a>5.4.5. Thread Local Storage</h3>
 <div class="paragraph">
 <p>RISC-V adopts the ELF Thread Local Storage Model in which ELF objects define
 <code>.tbss</code> and <code>.tdata</code> sections and <code>PT_TLS</code> program headers that contain the
@@ -2490,7 +2652,7 @@ of dynamic TLS allocate TLS offsets for storage of thread local variables.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="3-4-5-1-local-exec"><a class="anchor" href="#3-4-5-1-local-exec"></a>3.4.5.1. Local Exec</h4>
+<h4 id="5-4-5-1-local-exec"><a class="anchor" href="#5-4-5-1-local-exec"></a>5.4.5.1. Local Exec</h4>
 <div class="paragraph">
 <p>Local exec is a form of static thread local storage. This model is used
 when static linking as the TLS offsets are resolved during program linking.</p>
@@ -2523,7 +2685,7 @@ to associate the <code>R_RISCV_TPREL_ADD</code> relocation with the <code>add</c
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-4-5-2-initial-exec"><a class="anchor" href="#3-4-5-2-initial-exec"></a>3.4.5.2. Initial Exec</h4>
+<h4 id="5-4-5-2-initial-exec"><a class="anchor" href="#5-4-5-2-initial-exec"></a>5.4.5.2. Initial Exec</h4>
 <div class="paragraph">
 <p>Initial exec is is a form of static thread local storage that can be used in
 shared libraries that use thread local storage. TLS relocations are performed
@@ -2576,7 +2738,7 @@ be resolved at load time. This model uses the GOT to resolve TLS offsets.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-4-5-3-global-dynamic"><a class="anchor" href="#3-4-5-3-global-dynamic"></a>3.4.5.3. Global Dynamic</h4>
+<h4 id="5-4-5-3-global-dynamic"><a class="anchor" href="#5-4-5-3-global-dynamic"></a>5.4.5.3. Global Dynamic</h4>
 <div class="paragraph">
 <p>RISC-V local dynamic and global dynamic TLS models generate equivalent object code.
 The Global dynamic thread local storage model is used for PIC Shared libraries and
@@ -2647,7 +2809,7 @@ In the global dynamic model, application code calls the dynamic linker function
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-4-5-4-tls-descriptors"><a class="anchor" href="#3-4-5-4-tls-descriptors"></a>3.4.5.4. TLS Descriptors</h4>
+<h4 id="5-4-5-4-tls-descriptors"><a class="anchor" href="#5-4-5-4-tls-descriptors"></a>5.4.5.4. TLS Descriptors</h4>
 <div class="paragraph">
 <p>TLS Descriptors (TLSDESC) are an alternative implementation of the Global Dynamic model
 that allows the dynamic linker to achieve performance close to that
@@ -2722,9 +2884,9 @@ to associate the <code>R_RISCV_TLSDESC_CALL</code> relocation with the <code>jal
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-4-6-sections"><a class="anchor" href="#3-4-6-sections"></a>3.4.6. Sections</h3>
+<h3 id="5-4-6-sections"><a class="anchor" href="#5-4-6-sections"></a>5.4.6. Sections</h3>
 <div class="sect3">
-<h4 id="3-4-6-1-section-types"><a class="anchor" href="#3-4-6-1-section-types"></a>3.4.6.1. Section Types</h4>
+<h4 id="5-4-6-1-section-types"><a class="anchor" href="#5-4-6-1-section-types"></a>5.4.6.1. Section Types</h4>
 <div class="paragraph">
 <p>The defined processor-specific section types are listed in <a href="#rv-section-type">RISC-V-specific section types</a>.</p>
 </div>
@@ -2752,7 +2914,7 @@ to associate the <code>R_RISCV_TLSDESC_CALL</code> relocation with the <code>jal
 </table>
 </div>
 <div class="sect3">
-<h4 id="3-4-6-2-special-sections"><a class="anchor" href="#3-4-6-2-special-sections"></a>3.4.6.2. Special Sections</h4>
+<h4 id="5-4-6-2-special-sections"><a class="anchor" href="#5-4-6-2-special-sections"></a>5.4.6.2. Special Sections</h4>
 <div class="paragraph">
 <p><a href="#rv-section">RISC-V-specific sections</a> lists the special sections defined by this ABI.</p>
 </div>
@@ -2801,7 +2963,7 @@ target addresses. The minimum alignment of this section is 64 bytes.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-4-7-program-header-table"><a class="anchor" href="#3-4-7-program-header-table"></a>3.4.7. Program Header Table</h3>
+<h3 id="5-4-7-program-header-table"><a class="anchor" href="#5-4-7-program-header-table"></a>5.4.7. Program Header Table</h3>
 <div class="paragraph">
 <p>The defined processor-specific segment types are listed in <a href="#rv-seg-type">RISC-V-specific segment types</a>.</p>
 </div>
@@ -2846,13 +3008,13 @@ described by <code>PT_RISCV_ATTRIBUTES</code> is present.
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-4-8-note-sections"><a class="anchor" href="#3-4-8-note-sections"></a>3.4.8. Note Sections</h3>
+<h3 id="5-4-8-note-sections"><a class="anchor" href="#5-4-8-note-sections"></a>5.4.8. Note Sections</h3>
 <div class="paragraph">
 <p>There are no RISC-V specific definitions relating to ELF note sections.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-4-9-dynamic-section"><a class="anchor" href="#3-4-9-dynamic-section"></a>3.4.9. Dynamic Section</h3>
+<h3 id="5-4-9-dynamic-section"><a class="anchor" href="#5-4-9-dynamic-section"></a>5.4.9. Dynamic Section</h3>
 <div class="paragraph">
 <p>The defined processor-specific dynamic array tags are listed in <a href="#rv-dyn-tag">RISC-V-specific dynamic array tags</a>.</p>
 </div>
@@ -2895,13 +3057,13 @@ in favour of <code>DT_PREINIT_ARRAY</code>, <code>DT_INIT_ARRAY</code> and <code
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-4-10-hash-table"><a class="anchor" href="#3-4-10-hash-table"></a>3.4.10. Hash Table</h3>
+<h3 id="5-4-10-hash-table"><a class="anchor" href="#5-4-10-hash-table"></a>5.4.10. Hash Table</h3>
 <div class="paragraph">
 <p>There are no RISC-V specific definitions relating to ELF hash tables.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-4-11-attributes"><a class="anchor" href="#3-4-11-attributes"></a>3.4.11. Attributes</h3>
+<h3 id="5-4-11-attributes"><a class="anchor" href="#5-4-11-attributes"></a>5.4.11. Attributes</h3>
 <div class="paragraph">
 <p>Attributes are used to record information about an object file/binary that a
 linker or runtime loader needs to check compatibility.</p>
@@ -2932,7 +3094,7 @@ modulo 128 is greater than or equal to 64 (<code>(N % 128) &gt;= 64</code>), the
 </ul>
 </div>
 <div class="sect3">
-<h4 id="3-4-11-1-layout-of-riscv-attributes-section"><a class="anchor" href="#3-4-11-1-layout-of-riscv-attributes-section"></a>3.4.11.1. Layout of .riscv.attributes Section</h4>
+<h4 id="5-4-11-1-layout-of-riscv-attributes-section"><a class="anchor" href="#5-4-11-1-layout-of-riscv-attributes-section"></a>5.4.11.1. Layout of .riscv.attributes Section</h4>
 <div class="paragraph">
 <p>The attributes section start with a format-version (uint8 = 'A') followed by
 vendor specific sub-section(s). A sub-section starts with sub-section length
@@ -2951,7 +3113,7 @@ non-standard ABI extensions.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-4-11-2-list-of-attributes"><a class="anchor" href="#3-4-11-2-list-of-attributes"></a>3.4.11.2. List of Attributes</h4>
+<h4 id="5-4-11-2-list-of-attributes"><a class="anchor" href="#5-4-11-2-list-of-attributes"></a>5.4.11.2. List of Attributes</h4>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 12. RISC-V attributes</caption>
 <colgroup>
@@ -3027,16 +3189,16 @@ non-standard ABI extensions.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="3-4-11-3-detailed-attribute-description"><a class="anchor" href="#3-4-11-3-detailed-attribute-description"></a>3.4.11.3. Detailed Attribute Description</h4>
+<h4 id="5-4-11-3-detailed-attribute-description"><a class="anchor" href="#5-4-11-3-detailed-attribute-description"></a>5.4.11.3. Detailed Attribute Description</h4>
 <div class="sect4">
-<h5 id="3-4-11-3-1-how-does-this-specification-describe-public-attributes"><a class="anchor" href="#3-4-11-3-1-how-does-this-specification-describe-public-attributes"></a>3.4.11.3.1. How does this specification describe public attributes?</h5>
+<h5 id="5-4-11-3-1-how-does-this-specification-describe-public-attributes"><a class="anchor" href="#5-4-11-3-1-how-does-this-specification-describe-public-attributes"></a>5.4.11.3.1. How does this specification describe public attributes?</h5>
 <div class="paragraph">
 <p>Each attribute is described in the following structure:
 <code>&lt;Tag name&gt;, &lt;Value&gt;, &lt;Parameter type 1&gt;=&lt;Parameter name 1&gt;[, &lt;Parameter type 2&gt;=&lt;Parameter name 2&gt;]</code></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="3-4-11-3-2-tag_riscv_stack_align-4-uleb128value"><a class="anchor" href="#3-4-11-3-2-tag_riscv_stack_align-4-uleb128value"></a>3.4.11.3.2. Tag_RISCV_stack_align, 4, uleb128=value</h5>
+<h5 id="5-4-11-3-2-tag_riscv_stack_align-4-uleb128value"><a class="anchor" href="#5-4-11-3-2-tag_riscv_stack_align-4-uleb128value"></a>5.4.11.3.2. Tag_RISCV_stack_align, 4, uleb128=value</h5>
 <div class="paragraph">
 <p>Tag_RISCV_stack_align records the N-byte stack alignment for this object. The
 default value is 16 for RV32I or RV64I, and 4 for RV32E.</p>
@@ -3051,7 +3213,7 @@ default value is 16 for RV32I or RV64I, and 4 for RV32E.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="3-4-11-3-3-tag_riscv_arch-5-ntbssubarch"><a class="anchor" href="#3-4-11-3-3-tag_riscv_arch-5-ntbssubarch"></a>3.4.11.3.3. Tag_RISCV_arch, 5, NTBS=subarch</h5>
+<h5 id="5-4-11-3-3-tag_riscv_arch-5-ntbssubarch"><a class="anchor" href="#5-4-11-3-3-tag_riscv_arch-5-ntbssubarch"></a>5.4.11.3.3. Tag_RISCV_arch, 5, NTBS=subarch</h5>
 <div class="paragraph">
 <p>Tag_RISCV_arch contains a string for the target architecture taken from
 the option <code>-march</code>. Different architectures will be integrated into a superset
@@ -3144,7 +3306,7 @@ be merged into <code>RV32IFZfinx</code>, which is an invalid architecture since 
 </div>
 </div>
 <div class="sect4">
-<h5 id="3-4-11-3-4-tag_riscv_unaligned_access-6-uleb128value"><a class="anchor" href="#3-4-11-3-4-tag_riscv_unaligned_access-6-uleb128value"></a>3.4.11.3.4. Tag_RISCV_unaligned_access, 6, uleb128=value</h5>
+<h5 id="5-4-11-3-4-tag_riscv_unaligned_access-6-uleb128value"><a class="anchor" href="#5-4-11-3-4-tag_riscv_unaligned_access-6-uleb128value"></a>5.4.11.3.4. Tag_RISCV_unaligned_access, 6, uleb128=value</h5>
 <div class="paragraph">
 <p>Tag_RISCV_unaligned_access denotes the code generation policy for this object
 file. Its values are defined as follows:</p>
@@ -3185,15 +3347,15 @@ been set.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="3-4-11-3-5-tag_riscv_priv_spec-8-uleb128version"><a class="anchor" href="#3-4-11-3-5-tag_riscv_priv_spec-8-uleb128version"></a>3.4.11.3.5. Tag_RISCV_priv_spec, 8, uleb128=version</h5>
+<h5 id="5-4-11-3-5-tag_riscv_priv_spec-8-uleb128version"><a class="anchor" href="#5-4-11-3-5-tag_riscv_priv_spec-8-uleb128version"></a>5.4.11.3.5. Tag_RISCV_priv_spec, 8, uleb128=version</h5>
 
 </div>
 <div class="sect4">
-<h5 id="3-4-11-3-6-tag_riscv_priv_spec_minor-10-uleb128version"><a class="anchor" href="#3-4-11-3-6-tag_riscv_priv_spec_minor-10-uleb128version"></a>3.4.11.3.6. Tag_RISCV_priv_spec_minor, 10, uleb128=version</h5>
+<h5 id="5-4-11-3-6-tag_riscv_priv_spec_minor-10-uleb128version"><a class="anchor" href="#5-4-11-3-6-tag_riscv_priv_spec_minor-10-uleb128version"></a>5.4.11.3.6. Tag_RISCV_priv_spec_minor, 10, uleb128=version</h5>
 
 </div>
 <div class="sect4">
-<h5 id="3-4-11-3-7-tag_riscv_priv_spec_revision-12-uleb128version"><a class="anchor" href="#3-4-11-3-7-tag_riscv_priv_spec_revision-12-uleb128version"></a>3.4.11.3.7. Tag_RISCV_priv_spec_revision, 12, uleb128=version</h5>
+<h5 id="5-4-11-3-7-tag_riscv_priv_spec_revision-12-uleb128version"><a class="anchor" href="#5-4-11-3-7-tag_riscv_priv_spec_revision-12-uleb128version"></a>5.4.11.3.7. Tag_RISCV_priv_spec_revision, 12, uleb128=version</h5>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -3223,7 +3385,7 @@ specification versions are merged.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="3-4-11-3-8-tag_riscv_atomic_abi-14-uleb128version"><a class="anchor" href="#3-4-11-3-8-tag_riscv_atomic_abi-14-uleb128version"></a>3.4.11.3.8. Tag_RISCV_atomic_abi, 14, uleb128=version</h5>
+<h5 id="5-4-11-3-8-tag_riscv_atomic_abi-14-uleb128version"><a class="anchor" href="#5-4-11-3-8-tag_riscv_atomic_abi-14-uleb128version"></a>5.4.11.3.8. Tag_RISCV_atomic_abi, 14, uleb128=version</h5>
 <div class="paragraph">
 <p>Tag_RISCV_atomic_abi denotes the atomic ABI used within this object
 file. Its values are defined as follows:</p>
@@ -3348,7 +3510,7 @@ may be defined in the future.
 </div>
 </div>
 <div class="sect4">
-<h5 id="3-4-11-3-9-tag_riscv_x3_reg_usage-16-uleb128value"><a class="anchor" href="#3-4-11-3-9-tag_riscv_x3_reg_usage-16-uleb128value"></a>3.4.11.3.9. Tag_RISCV_x3_reg_usage, 16, uleb128=value</h5>
+<h5 id="5-4-11-3-9-tag_riscv_x3_reg_usage-16-uleb128value"><a class="anchor" href="#5-4-11-3-9-tag_riscv_x3_reg_usage-16-uleb128value"></a>5.4.11.3.9. Tag_RISCV_x3_reg_usage, 16, uleb128=value</h5>
 <div class="paragraph">
 <p>Tag_RISCV_x3_reg_usage indicates the usage of <code>x3</code>/<code>gp</code> register. <code>x3</code>/<code>gp</code> could be used for
 global pointer relaxation, as a reserved platform register, or as a temporary register.</p>
@@ -3423,7 +3585,7 @@ value. After the merge, the resulting value will be the non-zero one.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-4-12-program-property"><a class="anchor" href="#3-4-12-program-property"></a>3.4.12. Program Property</h3>
+<h3 id="5-4-12-program-property"><a class="anchor" href="#5-4-12-program-property"></a>5.4.12. Program Property</h3>
 <div class="paragraph">
 <p>Program properties are used to record information about an object file or binary
 that a linker or runtime loader needs to check for compatibility.</p>
@@ -3434,7 +3596,7 @@ issue warnings or errors.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="3-4-13-mapping-symbol"><a class="anchor" href="#3-4-13-mapping-symbol"></a>3.4.13. Mapping Symbol</h3>
+<h3 id="5-4-13-mapping-symbol"><a class="anchor" href="#5-4-13-mapping-symbol"></a>5.4.13. Mapping Symbol</h3>
 <div class="paragraph">
 <p>The section can have a mixture of code and data or code with different ISAs.
 A number of symbols, named mapping symbols, describe the boundaries.</p>
@@ -3518,7 +3680,7 @@ mapping symbols helps the disassembler to disassemble instructions correctly.
 </div>
 </div>
 <div class="sect1">
-<h2 id="3-5-linker-relaxation"><a class="anchor" href="#3-5-linker-relaxation"></a>3.5. Linker Relaxation</h2>
+<h2 id="5-5-linker-relaxation"><a class="anchor" href="#5-5-linker-relaxation"></a>5.5. Linker Relaxation</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>At link time, when all the memory objects have been resolved, the code sequence
@@ -3552,7 +3714,7 @@ linker should report errors if the length of ULEB128 byte sequence is more
 extended than the current byte sequence.</p>
 </div>
 <div class="sect2">
-<h3 id="3-5-1-linker-relaxation-types"><a class="anchor" href="#3-5-1-linker-relaxation-types"></a>3.5.1. Linker Relaxation Types</h3>
+<h3 id="5-5-1-linker-relaxation-types"><a class="anchor" href="#5-5-1-linker-relaxation-types"></a>5.5.1. Linker Relaxation Types</h3>
 <div class="paragraph">
 <p>The purpose of this section is to describe all types of linker relaxation,
 the linker may implement a part of linker relaxation type, and can be skipped
@@ -3592,7 +3754,7 @@ which made the load instruction reference to an unspecified address.
 </table>
 </div>
 <div class="sect3">
-<h4 id="3-5-1-1-function-call-relaxation"><a class="anchor" href="#3-5-1-1-function-call-relaxation"></a>3.5.1.1. Function Call Relaxation</h4>
+<h4 id="5-5-1-1-function-call-relaxation"><a class="anchor" href="#5-5-1-1-function-call-relaxation"></a>5.5.1.1. Function Call Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -3666,7 +3828,7 @@ symbol.
 </div>
 </div>
 <div class="sect3">
-<h4 id="compress-func-call-relax"><a class="anchor" href="#compress-func-call-relax"></a>3.5.1.2. Compressed Function Call Relaxation</h4>
+<h4 id="compress-func-call-relax"><a class="anchor" href="#compress-func-call-relax"></a>5.5.1.2. Compressed Function Call Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -3728,7 +3890,7 @@ location of relocation and target symbol.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="compress-tailcall-relax"><a class="anchor" href="#compress-tailcall-relax"></a>3.5.1.3. Compressed Tail Call Relaxation</h4>
+<h4 id="compress-tailcall-relax"><a class="anchor" href="#compress-tailcall-relax"></a>5.5.1.3. Compressed Tail Call Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -3790,7 +3952,7 @@ location of relocation and target symbol.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="gp-relax"><a class="anchor" href="#gp-relax"></a>3.5.1.4. Global-Pointer Relaxation</h4>
+<h4 id="gp-relax"><a class="anchor" href="#gp-relax"></a>5.5.1.4. Global-Pointer Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -3953,7 +4115,7 @@ Tag_RISCV_x3_reg_usage is treated as 0 if it is not present.
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-5-1-5-got-load-relaxation"><a class="anchor" href="#3-5-1-5-got-load-relaxation"></a>3.5.1.5. GOT Load Relaxation</h4>
+<h4 id="5-5-1-5-got-load-relaxation"><a class="anchor" href="#5-5-1-5-got-load-relaxation"></a>5.5.1.5. GOT Load Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -4064,7 +4226,7 @@ to use <code>c.li</code>):</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-5-1-6-zero-page-relaxation"><a class="anchor" href="#3-5-1-6-zero-page-relaxation"></a>3.5.1.6. Zero-Page Relaxation</h4>
+<h4 id="5-5-1-6-zero-page-relaxation"><a class="anchor" href="#5-5-1-6-zero-page-relaxation"></a>5.5.1.6. Zero-Page Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -4126,7 +4288,7 @@ relaxed into x0-relative access.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-5-1-7-compressed-lui-relaxation"><a class="anchor" href="#3-5-1-7-compressed-lui-relaxation"></a>3.5.1.7. Compressed LUI Relaxation</h4>
+<h4 id="5-5-1-7-compressed-lui-relaxation"><a class="anchor" href="#5-5-1-7-compressed-lui-relaxation"></a>5.5.1.7. Compressed LUI Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -4187,7 +4349,7 @@ unchanged.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-5-1-8-thread-pointer-relaxation"><a class="anchor" href="#3-5-1-8-thread-pointer-relaxation"></a>3.5.1.8. Thread-Pointer Relaxation</h4>
+<h4 id="5-5-1-8-thread-pointer-relaxation"><a class="anchor" href="#5-5-1-8-thread-pointer-relaxation"></a>5.5.1.8. Thread-Pointer Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -4250,7 +4412,7 @@ can be replaced with a thread-pointer-relative access instruction.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-5-1-9-tls-descriptors-initial-exec-relaxation"><a class="anchor" href="#3-5-1-9-tls-descriptors-initial-exec-relaxation"></a>3.5.1.9. TLS Descriptors &#8594; Initial Exec Relaxation</h4>
+<h4 id="5-5-1-9-tls-descriptors-initial-exec-relaxation"><a class="anchor" href="#5-5-1-9-tls-descriptors-initial-exec-relaxation"></a>5.5.1.9. TLS Descriptors &#8594; Initial Exec Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -4319,7 +4481,7 @@ can be replaced with a thread-pointer-relative access instruction.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-5-1-10-tls-descriptors-local-exec-relaxation"><a class="anchor" href="#3-5-1-10-tls-descriptors-local-exec-relaxation"></a>3.5.1.10. TLS Descriptors &#8594; Local Exec Relaxation</h4>
+<h4 id="5-5-1-10-tls-descriptors-local-exec-relaxation"><a class="anchor" href="#5-5-1-10-tls-descriptors-local-exec-relaxation"></a>5.5.1.10. TLS Descriptors &#8594; Local Exec Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -4402,7 +4564,7 @@ can be replaced with a thread-pointer-relative access instruction.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="3-5-1-11-table-jump-relaxation"><a class="anchor" href="#3-5-1-11-table-jump-relaxation"></a>3.5.1.11. Table Jump Relaxation</h4>
+<h4 id="5-5-1-11-table-jump-relaxation"><a class="anchor" href="#5-5-1-11-table-jump-relaxation"></a>5.5.1.11. Table Jump Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -4543,7 +4705,7 @@ instructions. It is recommended to initialize <code>jvt</code> CSR immediately a
 </div>
 </div>
 <div class="sect1">
-<h2 id="3-6-references"><a class="anchor" href="#3-6-references"></a>3.6. References</h2>
+<h2 id="5-6-references"><a class="anchor" href="#5-6-references"></a>5.6. References</h2>
 <div class="sectionbody">
 <div class="ulist bibliography">
 <ul class="bibliography">
@@ -4586,8 +4748,8 @@ RISC-V International.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="riscv-cc.html">Chapter 2. Calling Conventions</a></span>
-  <span class="next"><a href="riscv-dwarf.html">Chapter 4. DWARF Specification</a></span>
+  <span class="prev"><a href="riscv-cc.html">Chapter 4. Calling Conventions</a></span>
+  <span class="next"><a href="riscv-dwarf.html">Chapter 6. DWARF Specification</a></span>
 </nav>
 </article>  </div>
 </main>
