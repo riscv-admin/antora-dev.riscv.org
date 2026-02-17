@@ -368,9 +368,83 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+/* ===== Dark Mode ===== */
+/* Colour values taken from the live RISC-V Antora UI site.css
+   (html.dark-theme block).  Key tokens:
+     --link-font-color:      #0094ff   (content links)
+     --link_hover-font-color: #e5e5e5  (hover)
+     --body-font-color:      #bbbcbe   (body text)
+     --body-font-dark-color: #cecfd1   (headings)
+     --body-background-color:#1b1f23   (page bg)
+     --color-accent-1:       #272c33   (panel bg)
+     --nav-muted-color:      #aaa      (muted text)
+     Nav hover bg in site.css: #262a2d
+     Nav current-page bg/fg:  #e5e5e5 bg + white text
+*/
+.dark-theme .nav-panel-global {
+  border-bottom-color: hsla(0, 0%, 100%, 0.2); /* matches --nav-panel-divider-color */
+}
+/* Section headings (e.g. "Core Architecture", "Hardware") */
+.dark-theme .global-nav-title {
+  color: #cecfd1; /* --body-font-dark-color */
+}
+.dark-theme .global-nav-title a {
+  color: #cecfd1;
+}
+.dark-theme .global-nav-title a:hover {
+  color: #0094ff; /* --link-font-color */
+}
+/* Navigation links */
+.dark-theme .global-nav-list .nav-link {
+  color: #bbbcbe; /* --body-font-color */
+}
+.dark-theme .global-nav-list .nav-link:hover {
+  background-color: #262a2d; /* matches .dark-theme .nav-link:hover */
+  color: #0094ff; /* --link-font-color */
+}
+.dark-theme .global-nav-list .nav-item.is-current-page > .nav-link {
+  border-left-color: #0094ff;
+  color: #fff;
+  font-weight: 600;
+  background-color: #e5e5e5; /* --selected-background-color */
+  color: #1b1f23; /* dark text on light bg, matches site current-page style */
+}
+/* Unlinked text labels */
+.dark-theme .global-nav-list .nav-text {
+  color: #aaa; /* --nav-muted-color */
+}
+/* Nested nav items */
+.dark-theme .global-nav-list .nav-list .nav-link {
+  color: #bbbcbe;
+}
+/* Component nav toggle in dark mode */
+.dark-theme .nav-panel-toggle {
+  background: #272c33; /* --color-accent-1 */
+  border-color: hsla(0, 0%, 100%, 0.2);
+  color: #cecfd1;
+}
+.dark-theme .nav-panel-toggle:hover {
+  background: #434d5c; /* --color-accent-1-hover */
+}
+/* Component-specific nav links in dark mode */
+.dark-theme .component-nav-menu .nav-link {
+  color: #bbbcbe;
+}
+.dark-theme .component-nav-menu .nav-link:hover {
+  background-color: #262a2d;
+  color: #0094ff;
+}
+.dark-theme .component-nav-menu .nav-item.is-current-page > .nav-link {
+  background-color: #e5e5e5;
+  color: #1b1f23;
+}
+.dark-theme .component-nav-menu .nav-title {
+  color: #cecfd1;
+}
 </style>
 
-<aside class="nav">
+<aside class="nav" data-component-title="Platform Management Interface (RPMI)">
   <div class="panels">
     <div class="nav-panel-global" data-panel="global">
       <nav class="nav-menu global-nav-menu">
@@ -492,6 +566,18 @@
         if (panel) panel.classList.toggle('is-collapsed')
       })
     })
+    // Fix "Untitled" browser tab titles.
+    // Pages whose AsciiDoc source uses == (section heading) instead of
+    // = (document title) have no page.title, so Antora falls back to
+    // "Untitled".  Replace it with the component title from antora.yml.
+    var title = document.title
+    if (title && /^Untitled\b/.test(title)) {
+      var nav = document.querySelector('aside.nav[data-component-title]')
+      var componentTitle = nav && nav.getAttribute('data-component-title')
+      if (componentTitle) {
+        document.title = title.replace(/^Untitled/, componentTitle)
+      }
+    }
   })
 })()
 </script>
