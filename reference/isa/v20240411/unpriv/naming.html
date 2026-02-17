@@ -273,274 +273,230 @@
     }
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script><div class="body">
-<div class="nav-container" data-component="isa" data-version="v20240411">
-  <aside class="nav">
-    <div class="panels">
-      <div class="nav-panel-menu is-active" data-panel="menu">
-        <nav class="nav-menu">
-<div class="context">
+<style>
+/* ===== Global Navigation Sidebar ===== */
+.nav-panel-global {
+  border-bottom: 2px solid var(--nav-border-color, #e1e1e1);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+.global-nav-menu { padding: 0; }
+.global-nav-title {
+  color: var(--nav-heading-font-color, #333);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0.75rem 0 0.25rem 0;
+  padding: 0.25rem 0.75rem;
+}
+.global-nav-title a { color: inherit; text-decoration: none; }
+.global-nav-title a:hover { color: var(--link-font-color, #1565c0); }
+.global-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0.25rem 0;
+}
+.global-nav-list .nav-item { margin: 0; padding: 0; }
+.global-nav-list .nav-link {
+  display: block;
+  padding: 0.2rem 0.75rem 0.2rem 1.25rem;
+  color: var(--nav-font-color, #333);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.global-nav-list .nav-link:hover {
+  background-color: var(--nav-hover-background-color, #f0f0f0);
+  color: var(--link-font-color, #1565c0);
+}
+.global-nav-list .nav-item.is-current-page > .nav-link {
+  border-left-color: var(--nav-current-border-color, #1565c0);
+  color: var(--link-font-color, #1565c0);
+  font-weight: 600;
+  background-color: var(--nav-current-background-color, #e8f0fe);
+}
+.global-nav-list .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.global-nav-list .nav-list .nav-link {
+  padding-left: 2rem;
+  font-size: 0.82rem;
+}
+.global-nav-list .nav-text {
+  display: block;
+  padding: 0.2rem 0.75rem 0.2rem 1.25rem;
+  color: var(--nav-muted-color, #666);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+/* ===== Component Nav Toggle ===== */
+.nav-panel-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: calc(100% - 1rem);
+  background: var(--nav-toggle-background, #f5f5f5);
+  border: 1px solid var(--nav-border-color, #e1e1e1);
+  border-radius: 4px;
+  padding: 0.4rem 0.75rem;
+  margin: 0.5rem 0.5rem 0.25rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--nav-heading-font-color, #333);
+  transition: background-color 0.15s ease;
+}
+.nav-panel-toggle:hover {
+  background: var(--nav-hover-background-color, #e8e8e8);
+}
+.nav-panel-toggle svg {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+.nav-panel-menu.is-collapsed .nav-panel-toggle svg {
+  transform: rotate(-90deg);
+}
+.nav-panel-menu.is-collapsed .component-nav-menu {
+  display: none;
+}
+.component-nav-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+</style>
+
+<aside class="nav">
+  <div class="panels">
+    <div class="nav-panel-global" data-panel="global">
+      <nav class="nav-menu global-nav-menu">
+        <h3 class="nav-title global-nav-title">
+          RISC-V Specifications
+        </h3>
+        <ul class="nav-list global-nav-list">
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../home/index.html">Home</a>
+          </li>
+        </ul>
+        <h3 class="nav-title global-nav-title">
+          Core Architecture
+        </h3>
+        <ul class="nav-list global-nav-list">
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../index.html">ISA Manual</a>
+          </li>
+        </ul>
+        <h3 class="nav-title global-nav-title">
+          Hardware
+        </h3>
+        <ul class="nav-list global-nav-list">
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../aia/index.html">AIA</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../iommu/index.html">IOMMU</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../plic/index.html">PLIC</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../soc/index.html">Server SoC</a>
+          </li>
+        </ul>
+        <h3 class="nav-title global-nav-title">
+          Debug &amp; Trace
+        </h3>
+        <ul class="nav-list global-nav-list">
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../techtrace/index.html">Efficient Trace</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../ntrace/index.html">N-Trace</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../connectors/index.html">Connectors</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../tci/index.html">TCI</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../etrace/index.html">E-Trace</a>
+          </li>
+        </ul>
+        <h3 class="nav-title global-nav-title">
+          Quality of Service
+        </h3>
+        <ul class="nav-list global-nav-list">
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="#qos:ROOT:intro.adoc">CBQRI</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../reri/index.html">RERI</a>
+          </li>
+        </ul>
+        <h3 class="nav-title global-nav-title">
+          Platform Software
+        </h3>
+        <ul class="nav-list global-nav-list">
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../sbi/index.html">SBI</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../rpmi/index.html">RPMI</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../brs/index.html">BRS</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../uefi/index.html">UEFI</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../rimt/index.html">RIMT</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../semihost/index.html">Semihosting</a>
+          </li>
+        </ul>
+        <h3 class="nav-title global-nav-title">
+          Application Interface
+        </h3>
+        <ul class="nav-list global-nav-list">
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../../../abi/index.html">psABI</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="#instrinsic:ROOT:index.adoc">Vector Intrinsics</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-panel-explore" data-panel="explore">
+      <div class="context">
   <span class="title">ISA Specifications</span>
-</div>    <div class="version-box">
-      <select data-component="isa" class="select-version">
-          <option
-            value="../../index.html"
-            data-version="v20250508"
-            
-            >
-            Latest
-          </option>
-          <option
-            value="../index.html"
-            data-version="v20240411"
-            
-            selected>
-            Version: 20240411
-          </option>
-      </select>
-    </div>
-    <ul class="nav-list">
-  <li class="nav-item" data-depth="5">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="unpriv-index.html">Unprivileged Architecture</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="unpriv-contributors.html">Preamble</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="colophon.html">Preface</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html#sec:rv32">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32e.html#sec:rv32e">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv128.html">Chapter 5. RV128I Base Integer Instruction Set, Version 1.7</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zifencei.html">Chapter 6. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html#zicsr">Chapter 7. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="counters.html#sec:counters">Chapter 8. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintntl.html">Chapter 9. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintpause.html">Chapter 10. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zimop.html">Chapter 11. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicond.html">Chapter 12. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="m-st-ext.html">Chapter 13. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="a-st-ext.html">Chapter 14. "A" Extension for Atomic Instructions, Version 2.1</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zawrs.html">Chapter 15. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zacas.html">Chapter 16. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfa.html">Chapter 24. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfinx.html">Chapter 25. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="c-st-ext.html">Chapter 26. "C" Extension for Compressed Instructions, Version 2.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zc.html">Chapter 27. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="b-st-ext.html">Chapter 28. "B" Extension for Bit Manipulation, Version 1.0.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="j-st-ext.html">Chapter 29. "J" Extension for Dynamically Translated Languages, Version 1.0.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="p-st-ext.html">Chapter 30. "P" Extension for Packed SIMD Instructions, Version 1.0.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="v-st-ext.html">Chapter 31. "V" Standard Extension for Vector Operations, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="scalar-crypto.html">Chapter 32. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 33. Cryptography Extensions: Vector Instructions, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">Chapter 37. Document Revision History</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-examples.html">Appendix C. Vector Assembly Code Examples</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="calling-convention.html">Appendix D. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="5">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Volume II: RISC-V Privileged ISA Specification</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-index.html">Privileged Architecture</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-contributors.html">Preamble</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/supervisor.html">Chapter 10. Supervisor-Level ISA, Version 1.13</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svnapot.html">Chapter 11. "Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svpbmt.html">Chapter 12. "Svpbmt" Extension for Page-Based Memory Types, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svinval.html">Chapter 13. "Svinval" Extension for Fine-Grained Address-Translation Cache Invalidation, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svadu.html">Chapter 14. "Svadu" Extension for Hardware Updating of A/D Bits, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svvptc.html">Chapter 15. "Svvptc" Extension for Obviating Memory-Management Instructions after Marking PTEs Valid, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sstc.html">Chapter 16. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 17. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 18. "H" Extension for Hypervisor Support, Version 1.0</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="5">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Bibliography</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../biblio/bibliography.html">Bibliography</a>
-  </li>
-</ul>
-  </li>
-</ul>
-            <div class="toggle-sm">
-            <button id="nav-toggle-2" class="nav-toggle"></button>
-          </div>
-        </nav>
-      </div>
-      <div class="nav-collapse">
-        <button id="nav-collapse-toggle"><span></span></button>        
-      </div>
-    </div>
-    <div class="nav-resize"></div>
-  </aside>
-</div>
+</div>    </div>
+  </div>
+</aside>
+
 <script>
-!function (sidebar) {
-  if (sidebar) {
-    document.body.classList.add('nav-sm')
-  }
-}(localStorage && localStorage.getItem('sidebar') === 'close')
-</script><main class="article">
+;(function () {
+  'use strict'
+  document.addEventListener('DOMContentLoaded', function () {
+    var toggleButtons = document.querySelectorAll('.nav-panel-toggle')
+    toggleButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var panel = btn.closest('.nav-panel-menu')
+        if (panel) panel.classList.toggle('is-collapsed')
+      })
+    })
+  })
+})()
+</script>
+<main class="article">
 <div class="toolbar" role="navigation">
   <button id="nav-toggle-1" class="nav-toggle"></button>
 </div>

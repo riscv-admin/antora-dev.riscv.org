@@ -273,207 +273,230 @@
     }
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script><div class="body">
-<div class="nav-container" data-component="iommu" data-version="v1.0">
-  <aside class="nav">
-    <div class="panels">
-      <div class="nav-panel-menu is-active" data-panel="menu">
-        <nav class="nav-menu">
-<div class="context">
-  <span class="title">Non-ISA Hardware</span>
-</div>        <div class="nav-trees" data-component="aia">
-          <div class="version-box">
-            <select data-component="aia" class="select-version">
-                <option
-                  value="../aia/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
-                  v1.0
-                </option>
-            </select>
-          </div>
-        </div>
-        <div class="nav-trees" data-component="iommu">
-          <div class="version-box">
-            <select data-component="iommu" class="select-version">
-                <option
-                  value="index.html"
-                  data-version="v1.0"
-                  
-                  selected>
-                  v1.0
-                </option>
-            </select>
-          </div>
-              <div data-component="iommu" data-version="v1.0" class="nav-version-group">
-                <ul class="nav-list">
-  <li class="nav-item" data-depth="5">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">IOMMU Architecture</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="index.html">IOMMU Architecture</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="preamble.html">Copyright and License</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="contributors.html">Contributors</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="iommu_preface.html">Preface</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="iommu_intro.html">Chapter 1. Introduction</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="iommu_data_structures.html">Chapter 2. Data Structures</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="iommu_in_memory_queues.html">Chapter 3. In-memory queue interface</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="iommu_debug.html">Chapter 4. Debug support</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="iommu_registers.html">Chapter 5. Memory-mapped register interface</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="iommu_sw_guidelines.html">Chapter 6. Software guidelines</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="iommu_hw_guidelines.html">Chapter 7. Hardware guidelines</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="iommu_extensions.html">Chapter 8. IOMMU Extensions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="bibliography.html">Chapter 9. Bibliography</a>
-  </li>
-</ul>
-  </li>
-</ul>
-              </div>
-        </div>
-        <div class="nav-trees" data-component="plic">
-          <div class="version-box">
-            <select data-component="plic" class="select-version">
-                <option
-                  value="../plic/index.html"
-                  data-version="v1.0.0"
-                  
-                  >
-                  v1.0.0
-                </option>
-            </select>
-          </div>
-              <div data-component="plic" data-version="v1.0.0" class="nav-version-group">
-                <ul class="nav-list">
-  <li class="nav-item" data-depth="5">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Platform-Level Interrupt Controller</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/index.html">Platform-Level Interrupt Controller</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/changelog.html">Changelog</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/licensing.html">Copyright and license</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/contributor.html">Contributors</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/introduction.html">Chapter 1. Introduction</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-memory-map.html">Chapter 3. Memory Map</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-priority.html">Chapter 4. Interrupt Priorities</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-interrupts.html">Chapter 5. Interrupt Pending Bits</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-enables.html">Chapter 6. Interrupt Enables</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-claims.html">Chapter 7. Interrupt Claim Process</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-completion.html">Chapter 8. Interrupt Completion</a>
-  </li>
-</ul>
-  </li>
-</ul>
-              </div>
-        </div>
-        <div class="nav-trees" data-component="soc">
-          <div class="version-box">
-            <select data-component="soc" class="select-version">
-                <option
-                  value="../soc/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
-                  v1.0
-                </option>
-            </select>
-          </div>
-              <div data-component="soc" data-version="v1.0" class="nav-version-group">
-                <ul class="nav-list">
-  <li class="nav-item" data-depth="5">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Server SoC Specification</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/index.html">Server SoC Specification</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_preamble.html">Copyright and License</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_contributors.html">Contributors</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_intro.html">Chapter 1. Introduction</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_bibliography.html">Bibliography</a>
-  </li>
-</ul>
-  </li>
-</ul>
-              </div>
-        </div>
-          <div class="toggle-sm">
-            <button id="nav-toggle-2" class="nav-toggle"></button>
-          </div>
-        </nav>
-      </div>
-      <div class="nav-collapse">
-        <button id="nav-collapse-toggle"><span></span></button>        
-      </div>
+<style>
+/* ===== Global Navigation Sidebar ===== */
+.nav-panel-global {
+  border-bottom: 2px solid var(--nav-border-color, #e1e1e1);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+.global-nav-menu { padding: 0; }
+.global-nav-title {
+  color: var(--nav-heading-font-color, #333);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0.75rem 0 0.25rem 0;
+  padding: 0.25rem 0.75rem;
+}
+.global-nav-title a { color: inherit; text-decoration: none; }
+.global-nav-title a:hover { color: var(--link-font-color, #1565c0); }
+.global-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0.25rem 0;
+}
+.global-nav-list .nav-item { margin: 0; padding: 0; }
+.global-nav-list .nav-link {
+  display: block;
+  padding: 0.2rem 0.75rem 0.2rem 1.25rem;
+  color: var(--nav-font-color, #333);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.global-nav-list .nav-link:hover {
+  background-color: var(--nav-hover-background-color, #f0f0f0);
+  color: var(--link-font-color, #1565c0);
+}
+.global-nav-list .nav-item.is-current-page > .nav-link {
+  border-left-color: var(--nav-current-border-color, #1565c0);
+  color: var(--link-font-color, #1565c0);
+  font-weight: 600;
+  background-color: var(--nav-current-background-color, #e8f0fe);
+}
+.global-nav-list .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.global-nav-list .nav-list .nav-link {
+  padding-left: 2rem;
+  font-size: 0.82rem;
+}
+.global-nav-list .nav-text {
+  display: block;
+  padding: 0.2rem 0.75rem 0.2rem 1.25rem;
+  color: var(--nav-muted-color, #666);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+/* ===== Component Nav Toggle ===== */
+.nav-panel-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: calc(100% - 1rem);
+  background: var(--nav-toggle-background, #f5f5f5);
+  border: 1px solid var(--nav-border-color, #e1e1e1);
+  border-radius: 4px;
+  padding: 0.4rem 0.75rem;
+  margin: 0.5rem 0.5rem 0.25rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--nav-heading-font-color, #333);
+  transition: background-color 0.15s ease;
+}
+.nav-panel-toggle:hover {
+  background: var(--nav-hover-background-color, #e8e8e8);
+}
+.nav-panel-toggle svg {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+.nav-panel-menu.is-collapsed .nav-panel-toggle svg {
+  transform: rotate(-90deg);
+}
+.nav-panel-menu.is-collapsed .component-nav-menu {
+  display: none;
+}
+.component-nav-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+</style>
+
+<aside class="nav">
+  <div class="panels">
+    <div class="nav-panel-global" data-panel="global">
+      <nav class="nav-menu global-nav-menu">
+        <h3 class="nav-title global-nav-title">
+          RISC-V Specifications
+        </h3>
+        <ul class="nav-list global-nav-list">
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../home/index.html">Home</a>
+          </li>
+        </ul>
+        <h3 class="nav-title global-nav-title">
+          Core Architecture
+        </h3>
+        <ul class="nav-list global-nav-list">
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../isa/index.html">ISA Manual</a>
+          </li>
+        </ul>
+        <h3 class="nav-title global-nav-title">
+          Hardware
+        </h3>
+        <ul class="nav-list global-nav-list">
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../aia/index.html">AIA</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="index.html">IOMMU</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../plic/index.html">PLIC</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../soc/index.html">Server SoC</a>
+          </li>
+        </ul>
+        <h3 class="nav-title global-nav-title">
+          Debug &amp; Trace
+        </h3>
+        <ul class="nav-list global-nav-list">
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../techtrace/index.html">Efficient Trace</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../ntrace/index.html">N-Trace</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../connectors/index.html">Connectors</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../tci/index.html">TCI</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../etrace/index.html">E-Trace</a>
+          </li>
+        </ul>
+        <h3 class="nav-title global-nav-title">
+          Quality of Service
+        </h3>
+        <ul class="nav-list global-nav-list">
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="#qos:ROOT:intro.adoc">CBQRI</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../reri/index.html">RERI</a>
+          </li>
+        </ul>
+        <h3 class="nav-title global-nav-title">
+          Platform Software
+        </h3>
+        <ul class="nav-list global-nav-list">
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../sbi/index.html">SBI</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../rpmi/index.html">RPMI</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../brs/index.html">BRS</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../uefi/index.html">UEFI</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../rimt/index.html">RIMT</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../semihost/index.html">Semihosting</a>
+          </li>
+        </ul>
+        <h3 class="nav-title global-nav-title">
+          Application Interface
+        </h3>
+        <ul class="nav-list global-nav-list">
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="../abi/index.html">psABI</a>
+          </li>
+          <li class="nav-item" data-depth="0">
+            <a class="nav-link" href="#instrinsic:ROOT:index.adoc">Vector Intrinsics</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <div class="nav-resize"></div>
-  </aside>
-</div>
+    <div class="nav-panel-explore" data-panel="explore">
+      <div class="context">
+  <span class="title">Non-ISA Hardware</span>
+</div>    </div>
+  </div>
+</aside>
+
 <script>
-!function (sidebar) {
-  if (sidebar) {
-    document.body.classList.add('nav-sm')
-  }
-}(localStorage && localStorage.getItem('sidebar') === 'close')
-</script><main class="article">
+;(function () {
+  'use strict'
+  document.addEventListener('DOMContentLoaded', function () {
+    var toggleButtons = document.querySelectorAll('.nav-panel-toggle')
+    toggleButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var panel = btn.closest('.nav-panel-menu')
+        if (panel) panel.classList.toggle('is-collapsed')
+      })
+    })
+  })
+})()
+</script>
+<main class="article">
 <div class="toolbar" role="navigation">
   <button id="nav-toggle-1" class="nav-toggle"></button>
 </div>
