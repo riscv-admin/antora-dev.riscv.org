@@ -273,316 +273,433 @@
     }
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script><div class="body">
-<style>
-/* ===== Global Navigation Sidebar ===== */
-.nav-panel-global {
-  border-bottom: 2px solid var(--nav-border-color, #e1e1e1);
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.25rem;
-}
-.global-nav-menu { padding: 0; }
-.global-nav-title {
-  color: var(--nav-heading-font-color, #333);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin: 0.75rem 0 0.25rem 0;
-  padding: 0.25rem 0.75rem;
-}
-.global-nav-title a { color: inherit; text-decoration: none; }
-.global-nav-title a:hover { color: var(--link-font-color, #1565c0); }
-.global-nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0 0 0.25rem 0;
-}
-.global-nav-list .nav-item { margin: 0; padding: 0; }
-.global-nav-list .nav-link {
-  display: block;
-  padding: 0.2rem 0.75rem 0.2rem 1.25rem;
-  color: var(--nav-font-color, #333);
-  font-size: 0.85rem;
-  line-height: 1.4;
-  text-decoration: none;
-  border-left: 3px solid transparent;
-  transition: background-color 0.15s ease, border-color 0.15s ease;
-}
-.global-nav-list .nav-link:hover {
-  background-color: var(--nav-hover-background-color, #f0f0f0);
-  color: var(--link-font-color, #1565c0);
-}
-.global-nav-list .nav-item.is-current-page > .nav-link {
-  border-left-color: var(--nav-current-border-color, #1565c0);
-  color: var(--link-font-color, #1565c0);
-  font-weight: 600;
-  background-color: var(--nav-current-background-color, #e8f0fe);
-}
-.global-nav-list .nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.global-nav-list .nav-list .nav-link {
-  padding-left: 2rem;
-  font-size: 0.82rem;
-}
-.global-nav-list .nav-text {
-  display: block;
-  padding: 0.2rem 0.75rem 0.2rem 1.25rem;
-  color: var(--nav-muted-color, #666);
-  font-size: 0.85rem;
-  line-height: 1.4;
-}
-/* ===== Component Nav Toggle ===== */
-.nav-panel-toggle {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  width: calc(100% - 1rem);
-  background: var(--nav-toggle-background, #f5f5f5);
-  border: 1px solid var(--nav-border-color, #e1e1e1);
-  border-radius: 4px;
-  padding: 0.4rem 0.75rem;
-  margin: 0.5rem 0.5rem 0.25rem;
-  cursor: pointer;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--nav-heading-font-color, #333);
-  transition: background-color 0.15s ease;
-}
-.nav-panel-toggle:hover {
-  background: var(--nav-hover-background-color, #e8e8e8);
-}
-.nav-panel-toggle svg {
-  transition: transform 0.2s ease;
-  flex-shrink: 0;
-}
-.nav-panel-menu.is-collapsed .nav-panel-toggle svg {
-  transform: rotate(-90deg);
-}
-.nav-panel-menu.is-collapsed .component-nav-menu {
-  display: none;
-}
-.component-nav-label {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-/* ===== Dark Mode ===== */
-/* Colour values taken from the live RISC-V Antora UI site.css
-   (html.dark-theme block).  Key tokens:
-     --link-font-color:      #0094ff   (content links)
-     --link_hover-font-color: #e5e5e5  (hover)
-     --body-font-color:      #bbbcbe   (body text)
-     --body-font-dark-color: #cecfd1   (headings)
-     --body-background-color:#1b1f23   (page bg)
-     --color-accent-1:       #272c33   (panel bg)
-     --nav-muted-color:      #aaa      (muted text)
-     Nav hover bg in site.css: #262a2d
-     Nav current-page bg/fg:  #e5e5e5 bg + white text
-*/
-.dark-theme .nav-panel-global {
-  border-bottom-color: hsla(0, 0%, 100%, 0.2); /* matches --nav-panel-divider-color */
-}
-/* Section headings (e.g. "Core Architecture", "Hardware") */
-.dark-theme .global-nav-title {
-  color: #cecfd1; /* --body-font-dark-color */
-}
-.dark-theme .global-nav-title a {
-  color: #cecfd1;
-}
-.dark-theme .global-nav-title a:hover {
-  color: #0094ff; /* --link-font-color */
-}
-/* Navigation links */
-.dark-theme .global-nav-list .nav-link {
-  color: #bbbcbe; /* --body-font-color */
-}
-.dark-theme .global-nav-list .nav-link:hover {
-  background-color: #262a2d; /* matches .dark-theme .nav-link:hover */
-  color: #0094ff; /* --link-font-color */
-}
-.dark-theme .global-nav-list .nav-item.is-current-page > .nav-link {
-  border-left-color: #0094ff;
-  color: #fff;
-  font-weight: 600;
-  background-color: #e5e5e5; /* --selected-background-color */
-  color: #1b1f23; /* dark text on light bg, matches site current-page style */
-}
-/* Unlinked text labels */
-.dark-theme .global-nav-list .nav-text {
-  color: #aaa; /* --nav-muted-color */
-}
-/* Nested nav items */
-.dark-theme .global-nav-list .nav-list .nav-link {
-  color: #bbbcbe;
-}
-/* Component nav toggle in dark mode */
-.dark-theme .nav-panel-toggle {
-  background: #272c33; /* --color-accent-1 */
-  border-color: hsla(0, 0%, 100%, 0.2);
-  color: #cecfd1;
-}
-.dark-theme .nav-panel-toggle:hover {
-  background: #434d5c; /* --color-accent-1-hover */
-}
-/* Component-specific nav links in dark mode */
-.dark-theme .component-nav-menu .nav-link {
-  color: #bbbcbe;
-}
-.dark-theme .component-nav-menu .nav-link:hover {
-  background-color: #262a2d;
-  color: #0094ff;
-}
-.dark-theme .component-nav-menu .nav-item.is-current-page > .nav-link {
-  background-color: #e5e5e5;
-  color: #1b1f23;
-}
-.dark-theme .component-nav-menu .nav-title {
-  color: #cecfd1;
-}
-</style>
-
-<aside class="nav" data-component-title="RISC-V N-Trace">
-  <div class="panels">
-    <div class="nav-panel-global" data-panel="global">
-      <nav class="nav-menu global-nav-menu">
-        <h3 class="nav-title global-nav-title">
-          RISC-V Specifications
-        </h3>
-        <ul class="nav-list global-nav-list">
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../home/index.html">Home</a>
-          </li>
-        </ul>
-        <h3 class="nav-title global-nav-title">
-          Core Architecture
-        </h3>
-        <ul class="nav-list global-nav-list">
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../isa/index.html">ISA Manual</a>
-          </li>
-        </ul>
-        <h3 class="nav-title global-nav-title">
-          Hardware
-        </h3>
-        <ul class="nav-list global-nav-list">
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../aia/index.html">AIA</a>
-          </li>
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../iommu/index.html">IOMMU</a>
-          </li>
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../plic/index.html">PLIC</a>
-          </li>
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../soc/index.html">Server SoC</a>
-          </li>
-        </ul>
-        <h3 class="nav-title global-nav-title">
-          Debug &amp; Trace
-        </h3>
-        <ul class="nav-list global-nav-list">
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../techtrace/index.html">Efficient Trace</a>
-          </li>
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="index.html">N-Trace</a>
-          </li>
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../connectors/index.html">Connectors</a>
-          </li>
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../tci/index.html">TCI</a>
-          </li>
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../etrace/index.html">E-Trace</a>
-          </li>
-        </ul>
-        <h3 class="nav-title global-nav-title">
-          Quality of Service
-        </h3>
-        <ul class="nav-list global-nav-list">
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="#qos:ROOT:intro.adoc">CBQRI</a>
-          </li>
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../reri/index.html">RERI</a>
-          </li>
-        </ul>
-        <h3 class="nav-title global-nav-title">
-          Platform Software
-        </h3>
-        <ul class="nav-list global-nav-list">
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../sbi/index.html">SBI</a>
-          </li>
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../rpmi/index.html">RPMI</a>
-          </li>
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../brs/index.html">BRS</a>
-          </li>
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../uefi/index.html">UEFI</a>
-          </li>
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../rimt/index.html">RIMT</a>
-          </li>
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../semihost/index.html">Semihosting</a>
-          </li>
-        </ul>
-        <h3 class="nav-title global-nav-title">
-          Application Interface
-        </h3>
-        <ul class="nav-list global-nav-list">
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="../abi/index.html">psABI</a>
-          </li>
-          <li class="nav-item" data-depth="0">
-            <a class="nav-link" href="#instrinsic:ROOT:index.adoc">Vector Intrinsics</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="nav-panel-explore" data-panel="explore">
-      <div class="context">
+<div class="nav-container" data-component="ntrace" data-version="v1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+<div class="context">
   <span class="title">Debug, Trace, RAS</span>
-</div>    </div>
-  </div>
-</aside>
-
+</div>        <div class="nav-trees" data-component="techtrace">
+          <div class="version-box">
+            <select data-component="techtrace" class="select-version">
+                <option
+                  value="../techtrace/index.html"
+                  data-version="v2.0"
+                  
+                  >
+                  v2.0
+                </option>
+            </select>
+          </div>
+              <div data-component="techtrace" data-version="v2.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Efficient Trace</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/index.html">Efficient Trace for RISC-V</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/preamble.html">Copyright and license information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/preface.html">Preface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/introduction.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/control.html">Chapter 2. Control Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/branchTrace.html">Chapter 3. Branch Trace</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/ingressPort.html">Chapter 4. Ingress Port Requirements</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/filtering.html">Chapter 5. Filtering</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/timestamping.html">Chapter 6. Timestamping</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/payload.html">Chapter 7. Trace Payload Format</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/dataTracePayload.html">Chapter 8. Data Trace Payload Format</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/exampleAlgorithm.html">Chapter 9. Example Reference Encoding Algorithm</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/discovery.html">Chapter 10. Trace Discovery and Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/decoder.html">Chapter 11. Example Trace Decoder</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/exampleCodeSnippets.html">Chapter 12. Example Code Snippets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/fragmentCodeAndTransport.html">Chapter 13. Fragment Code and Transport</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../techtrace/future.html">Chapter 14. Future Work</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="reri">
+          <div class="version-box">
+            <select data-component="reri" class="select-version">
+                <option
+                  value="../reri/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="reri" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">RERI Architecture</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../reri/index.html">RERI Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../reri/reri_copyright.html">Copyright and License Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../reri/reri_contributors.html">Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../reri/reri_intro.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../reri/reri_err_reporting.html">Chapter 2. Error Reporting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../reri/reri_bibliography.html">Chapter 3. Bibliography</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="qos">
+          <div class="version-box">
+            <select data-component="qos" class="select-version">
+                <option
+                  value="../qos/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="qos" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">RISC-V Capacity and Bandwidth Controller QoS Register Interface</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../qos/index.html">QoS Register Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../qos/qos_preamble.html">Copyright and license information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../qos/qos_contributors.html">Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../qos/qos_intro.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../qos/qos_identifiers.html">Chapter 2. QoS Identifiers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../qos/qos_capacity.html">Chapter 3. Capacity-controller QoS Register Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../qos/qos_bandwidth.html">Chapter 4. Bandwidth-controller QoS Register Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../qos/qos_iommu.html">Chapter 5. IOMMU Extension for QoS ID</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../qos/qos_hw_guidelines.html">Chapter 6. Hardware Guidelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../qos/qos_sw_guidelines.html">Chapter 7. Software Guidelines</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="ntrace">
+          <div class="version-box">
+            <select data-component="ntrace" class="select-version">
+                <option
+                  value="index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="ntrace" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">RISC-V N-Trace</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="index.html">N-Trace</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_changelog.html">Change Log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_copyright.html">Copyright and License</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_contributors.html">Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_introduction.html">Chapter 1. Introduction to N-Trace</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_ingress_port.html">Chapter 2. Trace Ingress Port</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_transmission.html">Chapter 3. Transmission Protocol</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link"  href="ntrace_controls.html">Chapter 4. Trace Controls</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_modes.html">Chapter 5. Trace Modes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_messages_overview.html">Chapter 6. Messages Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_messages_details.html">Chapter 7. Messages Details</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_field_encoding.html">Chapter 8. Field Encoding</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_optimizations.html">Chapter 9. Optimization Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_generation_rules.html">Chapter 10. Message Generation Rules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_decoding.html">Chapter 11. Decoding Guidelines</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_nexus_compliance.html">Chapter 12. Nexus Compliance</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="ntrace_additional.html">Chapter 13. Additional Material</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="connectors">
+          <div class="version-box">
+            <select data-component="connectors" class="select-version">
+                <option
+                  value="../connectors/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="connectors" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Trace Connectors</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../connectors/index.html">Trace Connectors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../connectors/connectors_changelog.html">Change Log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../connectors/connectors_copyright.html">Copyright and License</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../connectors/connectors_contributors.html">Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../connectors/connectors_debug_trace.html">Chapter 1. Debug and Trace Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../connectors/connectors_mipi20.html">Chapter 2. MIPI20 Connector</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../connectors/connectors_mictor38.html">Chapter 3. Mictor-38 Connector</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../connectors/connectors_adapters.html">Chapter 4. Adapters and On-Board Debug</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../connectors/connectors_rationale.html">Chapter 5. Rationale and Standards</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="tci">
+          <div class="version-box">
+            <select data-component="tci" class="select-version">
+                <option
+                  value="../tci/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="tci" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Trace Control Interface</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/index.html">Trace Control Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/tci_changelog.html">Change Log</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/tci_copyright.html">Copyright and License</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/tci_contributors.html">Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/tci_introduction.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/tci_protocols.html">Chapter 2. Trace Protocols and Control</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/tci_system_overview.html">Chapter 3. Trace System Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/tci_control_interface.html">Chapter 4. Trace Control Interface Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/tci_versioning.html">Chapter 5. Versioning of Components</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/tci_encoder_control.html">Chapter 6. Trace Encoder Control Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/tci_ram_sink.html">Chapter 7. Trace RAM Sink</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/tci_funnel.html">Chapter 8. Trace Funnel</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/tci_pib_sink.html">Chapter 9. Trace PIB Sink</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/tci_atb_bridge.html">Chapter 10. Trace ATB Bridge</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../tci/tci_additional.html">Chapter 11. Additional Material</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="etrace">
+          <div class="version-box">
+            <select data-component="etrace" class="select-version">
+                <option
+                  value="../etrace/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="etrace" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Unformatted Trace &amp; Diagnostic Data Packet Encapsulation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../etrace/index.html">Unformatted Trace &amp; Diagnostic Data Packet Encapsulation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../etrace/etrace-copyright.html">Copyright</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../etrace/intro.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../etrace/contributors.html">Chapter 2. Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../etrace/encapsulation.html">Chapter 3. Encapsulation Format</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../etrace/e-trace-specifics.html">Chapter 4. E-Trace Specifics</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>        
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
 <script>
-;(function () {
-  'use strict'
-  document.addEventListener('DOMContentLoaded', function () {
-    var toggleButtons = document.querySelectorAll('.nav-panel-toggle')
-    toggleButtons.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var panel = btn.closest('.nav-panel-menu')
-        if (panel) panel.classList.toggle('is-collapsed')
-      })
-    })
-    // Fix "Untitled" browser tab titles.
-    // Pages whose AsciiDoc source uses == (section heading) instead of
-    // = (document title) have no page.title, so Antora falls back to
-    // "Untitled".  Replace it with the component title from antora.yml.
-    var title = document.title
-    if (title && /^Untitled\b/.test(title)) {
-      var nav = document.querySelector('aside.nav[data-component-title]')
-      var componentTitle = nav && nav.getAttribute('data-component-title')
-      if (componentTitle) {
-        document.title = title.replace(/^Untitled/, componentTitle)
-      }
-    }
-  })
-})()
-</script>
-<main class="article">
+!function (sidebar) {
+  if (sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script><main class="article">
 <div class="toolbar" role="navigation">
   <button id="nav-toggle-1" class="nav-toggle"></button>
 </div>
