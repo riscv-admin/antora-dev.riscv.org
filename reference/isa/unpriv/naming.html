@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>ISA Extension Naming Conventions :: RISC-V Ratified Specifications Library</title>
+    <title>Untitled :: RISC-V Ratified Specifications Library</title>
     <link rel="canonical" href="https://docs.riscv.org/isa/unpriv/naming.html">
-    <link rel="prev" href="extending.html">
-    <link rel="next" href="history.html">
+    <link rel="prev" href="rv-32-64g.html">
+    <link rel="next" href="mm-eplan.html">
     <meta name="generator" content="Antora 3.1.14">
     <script>
 !function (theme, navWidth) {
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
     <meta name="antora-ui-version" content="7c7bd9946ded257ce7e3474127cd0623096613e3"> 
-    <meta name="version" content="v20250508">
+    <meta name="version" content="v20260120">
     <meta name="component" content="isa">
     <meta name="latest-version" content="true">
     <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -273,7 +273,7 @@
     }
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script><div class="body">
-<div class="nav-container" data-component="isa" data-version="v20250508">
+<div class="nav-container" data-component="isa" data-version="v20260120">
   <aside class="nav">
     <div class="panels">
       <div class="nav-panel-menu is-active" data-panel="menu">
@@ -284,10 +284,17 @@
       <select data-component="isa" class="select-version">
           <option
             value="../index.html"
-            data-version="v20250508"
+            data-version="v20260120"
             
             selected>
             Latest
+          </option>
+          <option
+            value="../v20250508/index.html"
+            data-version="v20250508"
+            
+            >
+            Version: 20250508
           </option>
           <option
             value="../v20240411/index.html"
@@ -328,7 +335,7 @@
     <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -406,7 +413,7 @@
     <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
@@ -414,23 +421,17 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
-  </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">Chapter 37. Document Revision History</a>
+    <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="calling-convention.html">Appendix C: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -448,64 +449,64 @@
     <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../priv/priv-intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smepmp.html">"Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smdbltrp.html">"Smdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smctr.html">"Smctr" Control Transfer Records Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/supervisor.html">Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
+    <a class="nav-link"  href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/ssdbltrp.html">"Ssdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
+    <a class="nav-link"  href="../priv/zpm.html">Pointer Masking Extensions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link"  href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
+    <a class="nav-link"  href="../priv/priv-history.html">History</a>
   </li>
 </ul>
   </li>
@@ -556,7 +557,7 @@
     </div>
     <div
       class="toc"
-      data-title="ISA Extension Naming Conventions"
+      data-title=""
       data-levels="5"
     >
       <div class="toc-menu"></div>
@@ -645,8 +646,8 @@
       <li><a href="naming.html">Chapter 36. ISA Extension Naming Conventions</a></li>
     </ul>
   </nav>
-</div><h1 id="page-title" class="page">ISA Extension Naming Conventions</h1>
-<div id="preamble">
+</div><div class="sect1">
+<h2 id="naming"><a class="anchor" href="#naming"></a>ISA Extension Naming Conventions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This chapter describes the RISC-V ISA extension naming scheme that is
@@ -670,29 +671,22 @@ an organized naming scheme simplifies software tools and documentation.</p>
 </tr>
 </table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="36-1-case-sensitivity"><a class="anchor" href="#36-1-case-sensitivity"></a>36.1. Case Sensitivity</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="case-sensitivity"><a class="anchor" href="#case-sensitivity"></a>Case Sensitivity</h3>
 <div class="paragraph">
 <p>The ISA naming strings are case insensitive.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="36-2-base-integer-isa"><a class="anchor" href="#36-2-base-integer-isa"></a>36.2. Base Integer ISA</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="base-integer-isa"><a class="anchor" href="#base-integer-isa"></a>Base Integer ISA</h3>
 <div class="paragraph">
 <p>RISC-V ISA strings begin with either RV32I, RV32E, RV64I, or RV64E,
 indicating the supported address space size in bits for the base integer
 ISA.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="36-3-instruction-set-extension-names"><a class="anchor" href="#36-3-instruction-set-extension-names"></a>36.3. Instruction-Set Extension Names</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="instruction-set-extension-names"><a class="anchor" href="#instruction-set-extension-names"></a>Instruction-Set Extension Names</h3>
 <div class="paragraph">
 <p>Standard ISA extensions are given a name consisting of a single letter.
 For example, the first four standard extensions to the integer bases
@@ -720,25 +714,21 @@ may be implicit in the ISA name: for example, RV32IF is equivalent to
 RV32IFZicsr, and RV32ID is equivalent to RV32IFD and RV32IFDZicsr.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="36-4-underscores"><a class="anchor" href="#36-4-underscores"></a>36.4. Underscores</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="underscores"><a class="anchor" href="#underscores"></a>Underscores</h3>
 <div class="paragraph">
 <p>Underscores "_" may be used to separate ISA extensions to improve
 readability and to provide disambiguation, e.g., "RV32I2_M2_A2".</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="36-5-additional-standard-unprivileged-extension-names"><a class="anchor" href="#36-5-additional-standard-unprivileged-extension-names"></a>36.5. Additional Standard Unprivileged Extension Names</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="additional-standard-unprivileged-extension-names"><a class="anchor" href="#additional-standard-unprivileged-extension-names"></a>Additional Standard Unprivileged Extension Names</h3>
 <div class="paragraph">
-<p>Standard extensions can also be named using a single "Z" followed by
-an alphabetical name and an optional version number. For example,
-"Zifencei" names the instruction-fetch fence extension described in
-<a href="zifencei.html" class="xref page">"Zifencei" Extension for Instruction-Fetch Fence</a>; "Zifencei2" and
-"Zifencei2p0" name version 2.0 of same.</p>
+<p>Standard unprivileged extensions can also be named by using a single "Z" followed by an
+alphanumeric name. The name must end with an alphabetical character.
+The second letter from the end cannot be numeric if the
+last letter is "p". For example, "Zifencei" names the instruction-fetch fence extension
+described in <a href="#zifencei">[zifencei]</a>.</p>
 </div>
 <div class="paragraph">
 <p>The first letter following the "Z" conventionally indicates the most
@@ -755,10 +745,8 @@ separated from other multi-letter extensions by an underscore, e.g.,
 "RV32IMACZicsr_Zifencei".</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="36-6-supervisor-level-instruction-set-extension-names"><a class="anchor" href="#36-6-supervisor-level-instruction-set-extension-names"></a>36.6. Supervisor-level Instruction-Set Extension Names</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="supervisor-level-instruction-set-extension-names"><a class="anchor" href="#supervisor-level-instruction-set-extension-names"></a>Supervisor-level Instruction-Set Extension Names</h3>
 <div class="paragraph">
 <p>Standard extensions that extend the supervisor-level virtual-memory
 architecture are prefixed with the letters "Sv", followed by an alphanumeric
@@ -779,10 +767,8 @@ separated from other multi-letter extensions by an underscore. If multiple
 supervisor-level extensions are listed, they should be ordered alphabetically.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="36-7-hypervisor-level-instruction-set-extension-names"><a class="anchor" href="#36-7-hypervisor-level-instruction-set-extension-names"></a>36.7. Hypervisor-level Instruction-Set Extension Names</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="hypervisor-level-instruction-set-extension-names"><a class="anchor" href="#hypervisor-level-instruction-set-extension-names"></a>Hypervisor-level Instruction-Set Extension Names</h3>
 <div class="paragraph">
 <p>Standard extensions that extend the hypervisor-level architecture are prefixed
 with the letters "Sh".
@@ -806,10 +792,8 @@ supervisor-visible effects.
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="36-8-machine-level-instruction-set-extension-names"><a class="anchor" href="#36-8-machine-level-instruction-set-extension-names"></a>36.8. Machine-level Instruction-Set Extension Names</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="machine-level-instruction-set-extension-names"><a class="anchor" href="#machine-level-instruction-set-extension-names"></a>Machine-level Instruction-Set Extension Names</h3>
 <div class="paragraph">
 <p>Standard machine-level instruction-set extensions are prefixed with the
 letters "Sm".</p>
@@ -821,10 +805,8 @@ separated from other multi-letter extensions by an underscore. If multiple
 machine-level extensions are listed, they should be ordered alphabetically.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="36-9-non-standard-extension-names"><a class="anchor" href="#36-9-non-standard-extension-names"></a>36.9. Non-Standard Extension Names</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="non-standard-extension-names"><a class="anchor" href="#non-standard-extension-names"></a>Non-Standard Extension Names</h3>
 <div class="paragraph">
 <p>Non-standard extensions are named by using a single "X" followed by the alphanumeric
 name. The name must end with an alphabetic character. The
@@ -845,10 +827,8 @@ alphabetically. Like other multi-letter extensions, they should be
 separated from other multi-letter extensions by an underscore.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="36-10-version-numbers"><a class="anchor" href="#36-10-version-numbers"></a>36.10. Version Numbers</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="version-numbers"><a class="anchor" href="#version-numbers"></a>Version Numbers</h3>
 <div class="paragraph">
 <p>Recognizing that instruction sets may expand or alter over time, we
 encode extension version numbers following the extension name. Version
@@ -879,10 +859,8 @@ version present at that time, e.g., "RV32I" is equivalent to
 "RV32I2".</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="36-11-subset-naming-convention"><a class="anchor" href="#36-11-subset-naming-convention"></a>36.11. Subset Naming Convention</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="subset-naming-convention"><a class="anchor" href="#subset-naming-convention"></a>Subset Naming Convention</h3>
 <div class="paragraph">
 <p><a href="#isanametable">Standard ISA extension names.</a> summarizes the standardized extension
 names. The table also defines the canonical
@@ -1022,9 +1000,10 @@ e.g., RV32IMACV is legal, whereas RV32IMAVC is not.</p>
 </table>
 </div>
 </div>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a></span>
-  <span class="next"><a href="history.html">Chapter 37. Document Revision History</a></span>
+  <span class="prev"><a href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a></span>
+  <span class="next"><a href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a></span>
 </nav>
 </article>  </div>
 </main>

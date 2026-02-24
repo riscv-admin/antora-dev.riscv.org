@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Control and Status Registers (CSRs) :: RISC-V Ratified Specifications Library</title>
+    <title>Untitled :: RISC-V Ratified Specifications Library</title>
     <link rel="canonical" href="https://docs.riscv.org/isa/priv/priv-csrs.html">
     <link rel="prev" href="priv-intro.html">
     <link rel="next" href="machine.html">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
     <meta name="antora-ui-version" content="7c7bd9946ded257ce7e3474127cd0623096613e3"> 
-    <meta name="version" content="v20250508">
+    <meta name="version" content="v20260120">
     <meta name="component" content="isa">
     <meta name="latest-version" content="true">
     <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -273,7 +273,7 @@
     }
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script><div class="body">
-<div class="nav-container" data-component="isa" data-version="v20250508">
+<div class="nav-container" data-component="isa" data-version="v20260120">
   <aside class="nav">
     <div class="panels">
       <div class="nav-panel-menu is-active" data-panel="menu">
@@ -284,10 +284,17 @@
       <select data-component="isa" class="select-version">
           <option
             value="../index.html"
-            data-version="v20250508"
+            data-version="v20260120"
             
             selected>
             Latest
+          </option>
+          <option
+            value="../v20250508/index.html"
+            data-version="v20250508"
+            
+            >
+            Version: 20250508
           </option>
           <option
             value="../v20240411/index.html"
@@ -328,7 +335,7 @@
     <a class="nav-link"  href="../unpriv/zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -406,7 +413,7 @@
     <a class="nav-link"  href="../unpriv/scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
@@ -415,22 +422,16 @@
     <a class="nav-link"  href="../unpriv/rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/history.html">Chapter 37. Document Revision History</a>
+    <a class="nav-link"  href="../unpriv/mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="../unpriv/mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="../unpriv/calling-convention.html">Appendix C: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -448,64 +449,64 @@
     <a class="nav-link"  href="priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="priv-intro.html">Introduction</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="priv-csrs.html">Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="machine.html">Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link"  href="smepmp.html">"Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="smdbltrp.html">"Smdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
+    <a class="nav-link"  href="smctr.html">"Smctr" Control Transfer Records Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="supervisor.html">Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
+    <a class="nav-link"  href="priv-cfi.html">Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="ssdbltrp.html">"Ssdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
+    <a class="nav-link"  href="zpm.html">Pointer Masking Extensions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link"  href="priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-history.html">Chapter 20. History</a>
+    <a class="nav-link"  href="priv-history.html">History</a>
   </li>
 </ul>
   </li>
@@ -556,7 +557,7 @@
     </div>
     <div
       class="toc"
-      data-title="Control and Status Registers (CSRs)"
+      data-title=""
       data-levels="5"
     >
       <div class="toc-menu"></div>
@@ -642,11 +643,11 @@
     <ul>
       <li><a href="../index.html">ISA Specifications</a></li>
       <li>Volume II: RISC-V Privileged ISA Specification</li>
-      <li><a href="priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a></li>
+      <li><a href="priv-csrs.html">Control and Status Registers (CSRs)</a></li>
     </ul>
   </nav>
-</div><h1 id="page-title" class="page">Control and Status Registers (CSRs)</h1>
-<div id="preamble">
+</div><div class="sect1">
+<h2 id="priv-csrs"><a class="anchor" href="#priv-csrs"></a>Control and Status Registers (CSRs)</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The SYSTEM major opcode is used to encode all privileged instructions in
@@ -665,23 +666,21 @@ in Volume I. In this chapter, we map out the CSR address space. The
 following chapters describe the function of each of the CSRs according
 to privilege level, as well as the other privileged instructions which
 are generally closely associated with a particular privilege level. Note
-that although CSRs and instructions are associated with one privilege
-level, they are also accessible at all higher privilege levels.</p>
+that <span id="norm:Zicsr_higher_priv">although CSRs and instructions are associated with one privilege
+level, they are also accessible at all higher privilege levels.</span></p>
 </div>
 <div class="paragraph">
 <p>Standard CSRs do not have side effects on reads but may have side
 effects on writes.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="2-1-csr-address-mapping-conventions"><a class="anchor" href="#2-1-csr-address-mapping-conventions"></a>2.1. CSR Address Mapping Conventions</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="csr-address-mapping-conventions"><a class="anchor" href="#csr-address-mapping-conventions"></a>CSR Address Mapping Conventions</h3>
 <div class="paragraph">
 <p>The standard RISC-V ISA sets aside a 12-bit encoding space (csr[11:0])
 for up to 4,096 CSRs. By convention, the upper 4 bits of the CSR address
 (csr[11:8]) are used to encode the read and write accessibility of the
-CSRs according to privilege level as shown in <a href="#csrrwpriv">Table 1</a>. The top two bits (csr[11:10]) indicate whether the register is read/write (<code>00</code>,<code>01</code>, or <code>10</code>) or read-only (<code>11</code>). The next two bits (csr[9:8]) encode the lowest privilege level that can access the CSR.</p>
+CSRs according to privilege level as shown in <a href="#csrrwpriv">Allocation of RISC-V CSR address ranges.</a>. <span id="norm:Zicsr_rw">The top two bits (csr[11:10]) indicate whether the register is read/write (<code>00</code>,<code>01</code>, or <code>10</code>) or read-only (<code>11</code>).</span>
+<span id="norm:Zicsr_access">The next two bits (csr[9:8]) encode the lowest privilege level that can access the CSR, with the pattern <code>10</code> representing hypervisor CSRs.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -708,15 +707,15 @@ less-privileged software.</p>
 </div>
 <div class="paragraph">
 <p>Instructions that access a non-existent CSR are reserved.
-Attempts to access a CSR without appropriate privilege level
+<span id="norm:Zicsr_illegal_mode">Attempts to access a CSR without appropriate privilege level
 raise illegal-instruction exceptions or, as described in
-<a href="hypervisor.html#sec:hcauses" class="xref page">Trap Cause Codes</a>, virtual-instruction exceptions.
-Attempts to write a read-only register raise illegal-instruction exceptions.
-A read/write register might also contain some bits that are
-read-only, in which case writes to the read-only bits are ignored.</p>
+<a href="#sec:hcauses">[sec:hcauses]</a>, virtual-instruction exceptions.</span>
+<span id="norm:Zicsr_illegal_acc">Attempts to write a read-only register raise illegal-instruction exceptions.</span>
+<span id="norm:Zicwr_write_ro">A read/write register might also contain some bits that are
+read-only, in which case writes to the read-only bits are ignored.</span></p>
 </div>
 <div class="paragraph">
-<p><a href="#csrrwpriv">Table 1</a> also indicates the convention to
+<p><a href="#csrrwpriv">Allocation of RISC-V CSR address ranges.</a> also indicates the convention to
 allocate CSR addresses between standard and custom uses. The CSR
 addresses designated for custom uses will not be redefined by future
 standard extensions.</p>
@@ -724,9 +723,10 @@ standard extensions.</p>
 <div class="paragraph">
 <p>Machine-mode standard read-write CSRs <code>0x7A0</code>-<code>0x7BF</code> are reserved for
 use by the debug system. Of these CSRs, <code>0x7A0</code>-<code>0x7AF</code> are accessible
-to machine mode, whereas <code>0x7B0</code>-<code>0x7BF</code> are only visible to debug mode.
+to machine mode, whereas
+<span id="norm:Zicsr_debug-illegal"><code>0x7B0</code>-<code>0x7BF</code> are only visible to debug mode.
 Implementations should raise illegal-instruction exceptions on
-machine-mode access to the latter set of registers.</p>
+machine-mode access to the latter set of registers.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -738,7 +738,7 @@ machine-mode access to the latter set of registers.</p>
 <div class="paragraph">
 <p>Effective virtualization requires that as many instructions run natively
 as possible inside a virtualized environment, while any privileged
-accesses trap to the virtual machine monitor. [<a href="../biblio/bibliography.html#bib-goldbergvm" class="xref page">91</a>] CSRs that are read-only
+accesses trap to the virtual machine monitor. [<a href="../biblio/bibliography.html#bib-goldbergvm" class="xref page">85</a>] CSRs that are read-only
 at some lower privilege level are shadowed into separate CSR addresses
 if they are made read-write at a higher privilege level. This avoids
 trapping permitted lower-privilege accesses while still causing traps on
@@ -747,18 +747,6 @@ illegal accesses. Currently, the counters are the only shadowed CSRs.</p>
 </td>
 </tr>
 </table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="2-2-csr-listing"><a class="anchor" href="#2-2-csr-listing"></a>2.2. CSR Listing</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="#ucsrnames">Table 2</a>-<a href="#mcsrnames1">Table 6</a> list the CSRs that
-have currently been allocated CSR addresses. The timers, counters, and
-floating-point CSRs are standard unprivileged CSRs. The other registers
-are used by privileged code, as described in the following chapters.
-Note that not all registers are required on all implementations.</p>
 </div>
 <table id="csrrwpriv" class="tableblock frame-all grid-all fit-content center monofont">
 <caption class="title">Table 1. Allocation of RISC-V CSR address ranges.</caption>
@@ -1064,6 +1052,18 @@ Note that not all registers are required on all implementations.</p>
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="csr-listing"><a class="anchor" href="#csr-listing"></a>CSR Listing</h3>
+<div class="paragraph">
+<p><a href="#ucsrnames">Currently allocated RISC-V unprivileged CSR addresses.</a>-<a href="#mcsrnames">Currently allocated RISC-V machine-level CSR addresses.</a> list the CSRs that
+have currently been allocated CSR addresses. The timers, counters, and
+floating-point CSRs are standard unprivileged CSRs. The other registers
+are used by privileged code, as described in the following chapters.
+Note that not all registers are required on all implementations.</p>
+</div>
+<div class="sect3">
+<h4 id="currently-allocated-risc-v-unprivileged-csr-addresses"><a class="anchor" href="#currently-allocated-risc-v-unprivileged-csr-addresses"></a>Currently allocated RISC-V unprivileged CSR addresses</h4>
 <table id="ucsrnames" class="tableblock frame-all grid-all stretch center">
 <caption class="title">Table 2. Currently allocated RISC-V unprivileged CSR addresses.</caption>
 <colgroup>
@@ -1195,14 +1195,14 @@ URO</p></td>
 <code>instret</code><br>
 <code>hpmcounter3</code><br>
 <code>hpmcounter4</code><br>
-&#8942;<br>
+⋮<br>
 <code>hpmcounter31</code><br>
 <code>cycleh</code><br>
 <code>timeh</code><br>
 <code>instreth</code><br>
 <code>hpmcounter3h</code><br>
 <code>hpmcounter4h</code><br>
-&#8942;<br>
+⋮<br>
 <code>hpmcounter31h</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Cycle counter for RDCYCLE instruction.<br>
 Timer for RDTIME instruction.<br>
@@ -1222,6 +1222,9 @@ Upper 32 bits of <code>hpmcounter31</code>, RV32 only.</p></td>
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="currently-allocated-risc-v-supervisor-level-csr-addresses"><a class="anchor" href="#currently-allocated-risc-v-supervisor-level-csr-addresses"></a>Currently allocated RISC-V supervisor-level CSR addresses</h4>
 <table id="scsrnames" class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 3. Currently allocated RISC-V supervisor-level CSR addresses.</caption>
 <colgroup>
@@ -1308,6 +1311,39 @@ Supervisor interrupt pending.<br>
 Supervisor count overflow.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Supervisor Indirect</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0x150</code><br>
+<code>0x151</code><br>
+<code>0x152</code><br>
+<code>0x153</code><br>
+<code>0x155</code><br>
+<code>0x156</code><br>
+<code>0x157</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SRW<br>
+SRW<br>
+SRW<br>
+SRW<br>
+SRW<br>
+SRW<br>
+SRW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>siselect</code><br>
+<code>sireg</code><br>
+<code>sireg2</code><br>
+<code>sireg3</code><br>
+<code>sireg4</code><br>
+<code>sireg5</code><br>
+<code>sireg6</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supervisor indirect register select.<br>
+Supervisor indirect register alias.<br>
+Supervisor indirect register alias 2.<br>
+Supervisor indirect register alias 3.<br>
+Supervisor indirect register alias 4.<br>
+Supervisor indirect register alias 5.<br>
+Supervisor indirect register alias 6.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Supervisor Protection and Translation</p></td>
 </tr>
 <tr>
@@ -1317,6 +1353,19 @@ Supervisor count overflow.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Supervisor address translation and protection.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Supervisor Timer Compare</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0x14D</code><br>
+<code>0x15D</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SRW<br>
+SRW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stimecmp</code><br>
+<code>stimecmph</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supervisor timer compare.<br>
+Upper 32 bits of <code>stimecmp</code>, RV32 only.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Debug/Trace Registers</p></td>
 </tr>
 <tr>
@@ -1324,6 +1373,15 @@ Supervisor count overflow.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SRW</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>scontext</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Supervisor-mode context register.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Supervisor Resource Management Configuration</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0x181</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SRW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>srmcfg</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supervisor Resource Management Configuration.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Supervisor State Enable Registers</p></td>
@@ -1346,9 +1404,29 @@ Supervisor count overflow.</p></td>
  Supervisor State Enable 2 Register.<br>
  Supervisor State Enable 3 Register.</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Supervisor Control Transfer Records Configuration</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0x14E</code><br>
+ <code>0x14F</code><br>
+ <code>0x15F</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SRW<br>
+ SRW<br>
+ SRW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sctrctl</code><br>
+ <code>sctrstatus</code><br>
+ <code>sctrdepth</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supervisor Control Transfer Records Control Register.<br>
+ Supervisor Control Transfer Records Status Register.<br>
+ Supervisor Control Transfer Records Depth Register.</p></td>
+</tr>
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="currently-allocated-risc-v-hypervisor-and-vs-csr-addresses"><a class="anchor" href="#currently-allocated-risc-v-hypervisor-and-vs-csr-addresses"></a>Currently allocated RISC-V hypervisor and VS CSR addresses</h4>
 <table id="hcsrnames" class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 4. Currently allocated RISC-V hypervisor and VS CSR addresses.</caption>
 <colgroup>
@@ -1546,10 +1624,68 @@ Virtual supervisor trap value.<br>
 Virtual supervisor interrupt pending.<br>
 Virtual supervisor address translation and protection.</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Virtual Supervisor Indirect</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0x250</code><br>
+<code>0x251</code><br>
+<code>0x252</code><br>
+<code>0x253</code><br>
+<code>0x255</code><br>
+<code>0x256</code><br>
+<code>0x257</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HRW<br>
+HRW<br>
+HRW<br>
+HRW<br>
+HRW<br>
+HRW<br>
+HRW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>vsiselect</code><br>
+<code>vsireg</code><br>
+<code>vsireg2</code><br>
+<code>vsireg3</code><br>
+<code>vsireg4</code><br>
+<code>vsireg5</code><br>
+<code>vsireg6</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Virtual supervisor indirect register select.<br>
+Virtual supervisor indirect register alias.<br>
+Virtual supervisor indirect register alias 2.<br>
+Virtual supervisor indirect register alias 3.<br>
+Virtual supervisor indirect register alias 4.<br>
+Virtual supervisor indirect register alias 5.<br>
+Virtual supervisor indirect register alias 6.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Virtual Supervisor Timer Compare</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0x24D</code><br>
+<code>0x25D</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HRW<br>
+HRW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>vstimecmp</code><br>
+<code>vstimecmph</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Virtual supervisor timer compare.<br>
+Upper 32 bits of <code>vstimecmp</code>, RV32 only.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Virtual Supervisor Control Transfer Records Configuration</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0x24E</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HRW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>vsctrctl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Virtual Supervisor Control Transfer Records Control Register.</p></td>
+</tr>
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
-<table id="mcsrnames0" class="tableblock frame-all grid-all fit-content center monocell">
+</div>
+<div class="sect3">
+<h4 id="currently-allocated-risc-v-machine-level-csr-addresses"><a class="anchor" href="#currently-allocated-risc-v-machine-level-csr-addresses"></a>Currently allocated RISC-V machine-level CSR addresses</h4>
+<table id="mcsrnames" class="tableblock frame-all grid-all fit-content center monocell">
 <caption class="title">Table 5. Currently allocated RISC-V machine-level CSR addresses.</caption>
 <colgroup>
 <col>
@@ -1666,6 +1802,39 @@ Machine trap instruction (transformed).<br>
 Machine second trap value.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Machine Indirect</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0x350</code><br>
+<code>0x351</code><br>
+<code>0x352</code><br>
+<code>0x353</code><br>
+<code>0x355</code><br>
+<code>0x356</code><br>
+<code>0x357</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MRW<br>
+MRW<br>
+MRW<br>
+MRW<br>
+MRW<br>
+MRW<br>
+MRW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>miselect</code><br>
+<code>mireg</code><br>
+<code>mireg2</code><br>
+<code>mireg3</code><br>
+<code>mireg4</code><br>
+<code>mireg5</code><br>
+<code>mireg6</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machine indirect register select.<br>
+Machine indirect register alias.<br>
+Machine indirect register alias 2.<br>
+Machine indirect register alias 3.<br>
+Machine indirect register alias 4.<br>
+Machine indirect register alias 5.<br>
+Machine indirect register alias 6.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Machine Configuration</p></td>
 </tr>
 <tr>
@@ -1716,12 +1885,12 @@ MRW</p></td>
 <code>pmpcfg1</code><br>
 <code>pmpcfg2</code><br>
 <code>pmpcfg3</code><br>
-&#8943;<br>
+…<br>
 <code>pmpcfg14</code><br>
 <code>pmpcfg15</code><br>
 <code>pmpaddr0</code><br>
 <code>pmpaddr1</code><br>
-&#8943;<br>
+…<br>
 <code>pmpaddr63</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Physical memory protection configuration.<br>
 Physical memory protection configuration, RV32 only.<br>
@@ -1772,26 +1941,6 @@ Physical memory protection address register.</p></td>
  Upper 32 bits of Machine State Enable 2 Register, RV32 only.<br>
  Upper 32 bits of Machine State Enable 3 Register, RV32 only.</p></td>
 </tr>
-</tbody>
-</table>
-<div style="page-break-after: always;"></div>
-<table id="mcsrnames1" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 6. Currently allocated RISC-V machine-level CSR addresses.</caption>
-<colgroup>
-<col>
-<col>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Number</th>
-<th class="tableblock halign-left valign-top">Privilege</th>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Machine Non-Maskable Interrupt Handling</p></td>
 </tr>
@@ -1845,13 +1994,13 @@ MRW<br></p></td>
 <code>minstret</code><br>
 <code>mhpmcounter3</code><br>
 <code>mhpmcounter4</code><br>
-&#8942;<br>
+⋮<br>
 <code>mhpmcounter31</code><br>
 <code>mcycleh</code><br>
 <code>minstreth</code><br>
 <code>mhpmcounter3h</code><br>
 <code>mhpmcounter4h</code><br>
-&#8942;
+⋮<br>
 <code>mhpmcounter31h</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Machine cycle counter.<br>
 Machine instructions-retired counter.<br>
@@ -1871,10 +2020,14 @@ Upper 32 bits of <code>mhpmcounter31</code>, RV32 only.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>0x320</code><br>
+<code>0x321</code><br>
+<code>0x322</code><br>
 <code>0x323</code><br>
 <code>0x324</code><br>
 &#160;<br>
 <code>0x33F</code><br>
+<code>0x721</code><br>
+<code>0x722</code><br>
 <code>0x723</code><br>
 <code>0x724</code><br>
 &#160;<br>
@@ -1882,30 +2035,51 @@ Upper 32 bits of <code>mhpmcounter31</code>, RV32 only.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">MRW<br>
 MRW<br>
 MRW<br>
+MRW<br>
+MRW<br>
 &#160;<br>
+MRW<br>
+MRW<br>
 MRW<br>
 MRW<br>
 MRW<br>
 &#160;<br>
 MRW</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>mcountinhibit</code><br>
+<code>mcyclecfg</code><br>
+<code>minstretcfg</code><br>
 <code>mhpmevent3</code><br>
 <code>mhpmevent4</code><br>
-&#8942;<br>
+⋮<br>
 <code>mhpmevent31</code><br>
+<code>mcyclecfgh</code><br>
+<code>minstretcfgh</code><br>
 <code>mhpmevent3h</code><br>
 <code>mhpmevent4h</code><br>
-&#8942;<br>
+⋮<br>
 <code>mhpmevent31h</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Machine counter-inhibit register.<br>
+Machine cycle counter configuration register.<br>
+Machine instret counter configuration register.<br>
 Machine performance-monitoring event selector.<br>
 Machine performance-monitoring event selector.<br>
 &#160;<br>
 Machine performance-monitoring event selector.<br>
+Upper 32 bits of <code>mcyclecfg</code>, RV32 only.<br>
+Upper 32 bits of <code>minstretcfg</code>, RV32 only.<br>
 Upper 32 bits of <code>mhpmevent3</code>, RV32 only.<br>
 Upper 32 bits of <code>mhpmevent4</code>, RV32 only.<br>
 &#160;<br>
 Upper 32 bits of <code>mhpmevent31</code>, RV32 only.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Machine Control Transfer Records Configuration</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>0x34E</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MRW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mctrctl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machine Control Transfer Records Control Register.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">Debug/Trace Registers (shared with Debug Mode)</p></td>
@@ -1955,24 +2129,615 @@ Debug scratch register 1.</p></td>
 </tr>
 </tbody>
 </table>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="currently-allocated-risc-v-indirect-csr-smcsrind-mappings"><a class="anchor" href="#currently-allocated-risc-v-indirect-csr-smcsrind-mappings"></a>Currently allocated RISC-V indirect CSR (Smcsrind) mappings</h4>
+<table id="indcsrs-m" class="tableblock frame-all grid-all stretch center">
+<caption class="title">Table 6. Currently allocated RISC-V indirect CSR (Smcsrind) mappings - M-mode</caption>
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>miselect</code></th>
+<th class="tableblock halign-left valign-top"><code>mireg</code></th>
+<th class="tableblock halign-left valign-top"><code>mireg2</code></th>
+<th class="tableblock halign-left valign-top"><code>mireg3</code></th>
+<th class="tableblock halign-left valign-top"><code>mireg4</code></th>
+<th class="tableblock halign-left valign-top"><code>mireg5</code></th>
+<th class="tableblock halign-left valign-top"><code>mireg6</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iprio0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x3F</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iprio15</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x70</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eidelivery</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x72</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eithreshold</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x73</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x7F</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x80</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eip0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xBF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eip63</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xC0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eie0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xFF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eie63</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+</tbody>
+</table>
+<table id="indcsrs-s" class="tableblock frame-all grid-all stretch center">
+<caption class="title">Table 7. Currently allocated RISC-V indirect CSR (Smcsrind/Sscsrind) mappings - S-mode</caption>
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>siselect</code></th>
+<th class="tableblock halign-left valign-top"><code>sireg</code></th>
+<th class="tableblock halign-left valign-top"><code>sireg2</code></th>
+<th class="tableblock halign-left valign-top"><code>sireg3</code></th>
+<th class="tableblock halign-left valign-top"><code>sireg4</code></th>
+<th class="tableblock halign-left valign-top"><code>sireg5</code></th>
+<th class="tableblock halign-left valign-top"><code>sireg6</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iprio0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x3F</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iprio15</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cycle</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cyclecfg</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cycleh</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cyclecfgh</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x42</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>instret</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>instretcfg</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>instreth</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>instretcfgh</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x43</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hpmcounter3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hpmevent3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hpmcounter3h</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hpmevent3h</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x5F</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hpmcounter31</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hpmevent31</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hpmcounter31h</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hpmevent31h</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x70</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eidelivery</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x72</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eithreshold</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x73</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x7F</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x80</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eip0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xBF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eip63</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xC0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eie0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xFF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eie63</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ctrsource0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ctrtarget0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ctrdata0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x2FF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ctrsource255</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ctrtarget255</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ctrdata255</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+</tr>
+</tbody>
+</table>
+<table id="indcsrs-vs" class="tableblock frame-all grid-all stretch center">
+<caption class="title">Table 8. Currently allocated RISC-V indirect CSR (Smcsrind/Sscsrind) mappings - VS-mode</caption>
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>vsiselect</code></th>
+<th class="tableblock halign-left valign-top"><code>vsireg</code></th>
+<th class="tableblock halign-left valign-top"><code>vsireg2</code></th>
+<th class="tableblock halign-left valign-top"><code>vsireg3</code></th>
+<th class="tableblock halign-left valign-top"><code>vsireg4</code></th>
+<th class="tableblock halign-left valign-top"><code>vsireg5</code></th>
+<th class="tableblock halign-left valign-top"><code>vsireg6</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iprio0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x3F</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iprio15</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x70</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eidelivery</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x72</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eithreshold</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x73</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x7F</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x80</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eip0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xBF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eip63</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xC0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eie0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0xFF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>eie63</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ctrsource0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ctrtarget0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ctrdata0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0x2FF</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ctrsource255</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ctrtarget255</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ctrdata255</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-<div class="sect1">
-<h2 id="2-3-csr-field-specifications"><a class="anchor" href="#2-3-csr-field-specifications"></a>2.3. CSR Field Specifications</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="csr-field-specifications"><a class="anchor" href="#csr-field-specifications"></a>CSR Field Specifications</h3>
 <div class="paragraph">
 <p>The following definitions and abbreviations are used in specifying the
 behavior of fields within the CSRs.</p>
 </div>
-<div class="sect2">
-<h3 id="2-3-1-reserved-writes-preserve-values-reads-ignore-values-wpri"><a class="anchor" href="#2-3-1-reserved-writes-preserve-values-reads-ignore-values-wpri"></a>2.3.1. Reserved Writes Preserve Values, Reads Ignore Values (WPRI)</h3>
+<div class="sect3">
+<h4 id="reserved-writes-preserve-values-reads-ignore-values-wpri"><a class="anchor" href="#reserved-writes-preserve-values-reads-ignore-values-wpri"></a>Reserved Writes Preserve Values, Reads Ignore Values (WPRI)</h4>
 <div class="paragraph">
 <p>Some whole read/write fields are reserved for future use. Software
 should ignore the values read from these fields, and should preserve the
 values held in these fields when writing values to other fields of the
-same register. For forward compatibility, implementations that do not
+same register. <span id="norm:Zicsr_wpri_roz">For forward compatibility, implementations that do not
 furnish these fields must make them read-only zero. These fields are
-labeled <strong>WPRI</strong> in the register descriptions.</p>
+labeled <strong>WPRI</strong> in the register descriptions.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1995,16 +2760,17 @@ general that can be problematic if intermediate values are not legal.</p>
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="2-3-2-writeread-only-legal-values-wlrl"><a class="anchor" href="#2-3-2-writeread-only-legal-values-wlrl"></a>2.3.2. Write/Read Only Legal Values (WLRL)</h3>
+<div class="sect3">
+<h4 id="writeread-only-legal-values-wlrl"><a class="anchor" href="#writeread-only-legal-values-wlrl"></a>Write/Read Only Legal Values (WLRL)</h4>
 <div class="paragraph">
 <p>Some read/write CSR fields specify behavior for only a subset of
-possible bit encodings, with other bit encodings reserved. Software
+possible bit encodings, with other bit encodings reserved.
+<span id="norm:Zicsr_wlrl">Software
 should not write anything other than legal values to such a field, and
 should not assume a read will return a legal value unless the last write
 was of a legal value, or the register has not been written since another
 operation (e.g., reset) set the register to a legal value. These fields
-are labeled <strong>WLRL</strong> in the register descriptions.</p>
+are labeled <strong>WLRL</strong> in the register descriptions.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2023,16 +2789,17 @@ complete specified bit-encoding of any supported value when read.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Implementations are permitted but not required to raise an
+<p><span id="norm:Zicsr_wlrl_exception_param">Implementations are permitted but not required to raise an
 illegal-instruction exception if an instruction attempts to write a
-non-supported value to a <strong>WLRL</strong> field. Implementations can return arbitrary
+non-supported value to a <strong>WLRL</strong> field.</span>
+Implementations can return arbitrary
 bit patterns on the read of a <strong>WLRL</strong> field when the last write was of an
 illegal value, but the value returned should deterministically depend on
 the illegal written value and the value of the field prior to the write.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="2-3-3-write-any-values-reads-legal-values-warl"><a class="anchor" href="#2-3-3-write-any-values-reads-legal-values-warl"></a>2.3.3. Write Any Values, Reads Legal Values (WARL)</h3>
+<div class="sect3">
+<h4 id="write-any-values-reads-legal-values-warl"><a class="anchor" href="#write-any-values-reads-legal-values-warl"></a>Write Any Values, Reads Legal Values (WARL)</h4>
 <div class="paragraph">
 <p>Some read/write CSR fields are only defined for a subset of bit
 encodings, but allow any value to be written while guaranteeing to
@@ -2042,18 +2809,16 @@ attempting to write a desired setting then reading to see if the value
 was retained. These fields are labeled <strong>WARL</strong> in the register descriptions.</p>
 </div>
 <div class="paragraph">
-<p>Implementations will not raise an exception on writes of unsupported
-values to a <strong>WARL</strong> field. Implementations can return any legal value on the
+<p><span id="norm:Zicsr_warl">Implementations will not raise an exception on writes of unsupported
+values to a <strong>WARL</strong> field.</span> Implementations can return any legal value on the
 read of a <strong>WARL</strong> field when the last write was of an illegal value, but the
 legal value returned should deterministically depend on the illegal
 written value and the architectural state of the hart.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="2-4-csr-field-modulation"><a class="anchor" href="#2-4-csr-field-modulation"></a>2.4. CSR Field Modulation</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="csr-field-modulation"><a class="anchor" href="#csr-field-modulation"></a>CSR Field Modulation</h3>
 <div class="paragraph">
 <p>If a write to one CSR changes the set of legal values allowed for a
 field of a second CSR, then unless specified otherwise, the second CSR&#8217;s
@@ -2091,10 +2856,8 @@ affected CSR and thus does not trigger any side effects specified for
 that CSR.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="2-5-implicit-reads-of-csrs"><a class="anchor" href="#2-5-implicit-reads-of-csrs"></a>2.5. Implicit Reads of CSRs</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="implicit-reads-of-csrs"><a class="anchor" href="#implicit-reads-of-csrs"></a>Implicit Reads of CSRs</h3>
 <div class="paragraph">
 <p>Implementations sometimes perform <em>implicit</em> reads of CSRs. (For
 example, all S-mode instruction fetches implicitly read the <code>satp</code> CSR.)
@@ -2104,13 +2867,11 @@ of the CSR, using a CSR-access instruction in a sufficient privilege
 mode.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="csrwidthmodulation"><a class="anchor" href="#csrwidthmodulation"></a>2.6. CSR Width Modulation</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="csrwidthmodulation"><a class="anchor" href="#csrwidthmodulation"></a>CSR Width Modulation</h3>
 <div class="paragraph">
 <p>If the width of a CSR is changed (for example, by changing SXLEN or
-UXLEN, as described in <a href="machine.html#xlen-control" class="xref page">Base ISA Control in <code>mstatus</code> Register</a>), the
+UXLEN, as described in <a href="#xlen-control">[xlen-control]</a>), the
 values of the <em>writable</em> fields and bits of the new-width CSR are,
 unless specified otherwise, determined from the previous-width CSR as
 though by this algorithm:</p>
@@ -2144,10 +2905,8 @@ at the same positions in the temporary register.</p>
 does not trigger any side effects.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="2-7-explicit-accesses-to-csrs-wider-than-xlen"><a class="anchor" href="#2-7-explicit-accesses-to-csrs-wider-than-xlen"></a>2.7. Explicit Accesses to CSRs Wider than XLEN</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="explicit-accesses-to-csrs-wider-than-xlen"><a class="anchor" href="#explicit-accesses-to-csrs-wider-than-xlen"></a>Explicit Accesses to CSRs Wider than XLEN</h3>
 <div class="paragraph">
 <p>If a standard CSR is wider than XLEN bits, then an explicit read
 of the CSR returns the register&#8217;s least-significant XLEN bits,
@@ -2173,9 +2932,10 @@ typically raises an illegal-instruction exception.</p>
 </div>
 </div>
 </div>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="priv-intro.html">Chapter 1. Introduction</a></span>
-  <span class="next"><a href="machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a></span>
+  <span class="prev"><a href="priv-intro.html">Introduction</a></span>
+  <span class="next"><a href="machine.html">Machine-Level ISA, Version 1.13</a></span>
 </nav>
 </article>  </div>
 </main>

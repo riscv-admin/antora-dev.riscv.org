@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>"B" Extension for Bit Manipulation, Version 1.0.0 :: RISC-V Ratified Specifications Library</title>
+    <title>Untitled :: RISC-V Ratified Specifications Library</title>
     <link rel="canonical" href="https://docs.riscv.org/isa/unpriv/b-st-ext.html">
     <link rel="prev" href="zc.html">
     <link rel="next" href="v-st-ext.html">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
     <meta name="antora-ui-version" content="7c7bd9946ded257ce7e3474127cd0623096613e3"> 
-    <meta name="version" content="v20250508">
+    <meta name="version" content="v20260120">
     <meta name="component" content="isa">
     <meta name="latest-version" content="true">
     <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -273,7 +273,7 @@
     }
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script><div class="body">
-<div class="nav-container" data-component="isa" data-version="v20250508">
+<div class="nav-container" data-component="isa" data-version="v20260120">
   <aside class="nav">
     <div class="panels">
       <div class="nav-panel-menu is-active" data-panel="menu">
@@ -284,10 +284,17 @@
       <select data-component="isa" class="select-version">
           <option
             value="../index.html"
-            data-version="v20250508"
+            data-version="v20260120"
             
             selected>
             Latest
+          </option>
+          <option
+            value="../v20250508/index.html"
+            data-version="v20250508"
+            
+            >
+            Version: 20250508
           </option>
           <option
             value="../v20240411/index.html"
@@ -328,7 +335,7 @@
     <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -406,7 +413,7 @@
     <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
@@ -415,22 +422,16 @@
     <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">Chapter 37. Document Revision History</a>
+    <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="calling-convention.html">Appendix C: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -448,64 +449,64 @@
     <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../priv/priv-intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smepmp.html">"Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smdbltrp.html">"Smdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smctr.html">"Smctr" Control Transfer Records Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/supervisor.html">Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
+    <a class="nav-link"  href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/ssdbltrp.html">"Ssdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
+    <a class="nav-link"  href="../priv/zpm.html">Pointer Masking Extensions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link"  href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
+    <a class="nav-link"  href="../priv/priv-history.html">History</a>
   </li>
 </ul>
   </li>
@@ -556,7 +557,7 @@
     </div>
     <div
       class="toc"
-      data-title=""B" Extension for Bit Manipulation, Version 1.0.0"
+      data-title=""
       data-levels="5"
     >
       <div class="toc-menu"></div>
@@ -645,79 +646,61 @@
       <li><a href="b-st-ext.html">Chapter 29. "B" Extension for Bit Manipulation, Version 1.0.0</a></li>
     </ul>
   </nav>
-</div><h1 id="page-title" class="page">"B" Extension for Bit Manipulation, Version 1.0.0</h1>
-<div id="preamble">
+</div><div class="sect1">
+<h2 id="bits"><a class="anchor" href="#bits"></a>Bit Manipulation Extensions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The B standard extension comprises instructions provided by the Zba, Zbb, and
-Zbs extensions.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="preface"><a class="anchor" href="#preface"></a>29.1. Zb* Overview</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The bit-manipulation (bitmanip) extension collection is comprised of several component extensions to the base RISC-V architecture that are intended to provide some combination of code size reduction, performance improvement, and energy reduction.
-While the instructions are intended to have general use, some instructions are more useful in some domains than others.
+<p>The bit-manipulation (bitmanip) extension collection is comprised of several component extensions to the base RISC-V architecture that are intended to provide some combination of code-size reduction, performance improvement, and energy reduction.
+While the instructions are intended for general use, some instructions are more useful in certain domains than in others.
 Hence, several smaller bitmanip extensions are provided. Each of these smaller extensions is grouped by common function and use case, and each has its own Zb*-extension name.</p>
 </div>
 <div class="paragraph">
-<p>Each bitmanip extension includes a group of several bitmanip instructions that have similar purposes and that can often share the same logic. Some instructions are available in only one extension while others are available in several.
+<p>Each bitmanip extension includes a group of several bitmanip instructions that have similar purposes and can often share the same logic. Some instructions are available in only one extension, while others are available in several.
 The instructions have mnemonics and encodings that are independent of the extensions in which they appear.
 Thus, when implementing extensions with overlapping instructions, there is no redundancy in logic or encoding.</p>
 </div>
 <div class="paragraph">
-<p>The bitmanip extensions are defined for RV32 and RV64.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="29-2-word-instructions"><a class="anchor" href="#29-2-word-instructions"></a>29.2. Word Instructions</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The bitmanip extension follows the convention in RV64 that <em>w</em>-suffixed instructions (without a dot before the <em>w</em>) ignore the upper 32 bits of their inputs, operate on the least-significant 32-bits as signed values and produce a 32-bit signed result that is sign-extended to XLEN.</p>
+<p><span id="norm:bitmanip_rv32_rv64">The bitmanip extensions are defined for RV32 and RV64.</span></p>
 </div>
 <div class="paragraph">
-<p>Bitmanip instructions with the suffix <em>.uw</em> have one operand that is an unsigned 32-bit value that is extracted from the least significant 32 bits of the specified register.  Other than that, these perform full XLEN operations.</p>
+<p><span id="norm:bitmanip_w_suffix_semantics">The bitmanip extension follows the convention in RV64 that <em>w</em>-suffixed instructions (without a dot before the <em>w</em>) ignore the upper 32 bits of their inputs, operate on the least-significant 32 bits as signed values, and produce a 32-bit signed result that is sign-extended to XLEN.</span></p>
 </div>
 <div class="paragraph">
-<p>Bitmanip instructions with the suffix <em>.b</em>, <em>.h</em> and <em>.w</em> only look at the least significant 8-bits, 16-bits and 32-bits of the input (respectively) and produce an XLEN-wide result that is sign-extended or zero-extended, based on the specific instruction.</p>
+<p><span id="norm:bitmanip_uw_suffix_semantics">Bitmanip instructions with the suffix <em>.uw</em> have one operand that is an unsigned 32-bit value that is extracted from the least-significant 32 bits of the specified register.  Other than that, these perform full-XLEN operations.</span></p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="29-3-pseudocode-for-instruction-semantics"><a class="anchor" href="#29-3-pseudocode-for-instruction-semantics"></a>29.3. Pseudocode for instruction semantics</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>The semantics of each instruction in <a href="#insns-b">Instructions (in alphabetical order)</a> is expressed in a SAIL-like syntax.</p>
+<p><span id="norm:bitmanip_bhw_suffix_semantics">Bitmanip instructions with the suffixes <em>.b</em>, <em>.h</em>, and <em>.w</em> only look at the least-significant 8 bits, 16 bits, and 32 bits of the input (respectively) and produce an XLEN-wide result that is sign-extended or zero-extended, based on the specific instruction.</span></p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="29-4-extensions"><a class="anchor" href="#29-4-extensions"></a>29.4. Extensions</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>The first group of bitmanip extensions to be released for Public Review are:</p>
+<p>The bit-manipulation instructions comprise the following extensions:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#zba">Address generation instructions</a></p>
+<p>Zba: <a href="#zba">Address generation instructions</a></p>
 </li>
 <li>
-<p><a href="#zbb">Basic bit-manipulation</a></p>
+<p>Zbb: <a href="#zbb">Basic bit-manipulation</a></p>
 </li>
 <li>
-<p><a href="#zbc">Carry-less multiplication</a></p>
+<p>Zbs: <a href="#zbs">Single-bit instructions</a></p>
 </li>
 <li>
-<p><a href="#zbs">Single-bit instructions</a></p>
+<p>Zbc: <a href="#zbc">Carry-less multiplication</a></p>
+</li>
+<li>
+<p>Zbkb: <a href="#zbkb">Bit-manipulation for Cryptography</a></p>
+</li>
+<li>
+<p>Zbkc: <a href="#zbkc">Carry-less multiplication for Cryptography</a></p>
+</li>
+<li>
+<p>Zbkx: <a href="#zbkx">Crossbar permutations</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Below is a list of all of the instructions that are included in these extensions
+<p>Below is a list of all of the instructions that are included in these extensions,
 along with their specific mapping:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -737,447 +720,504 @@ along with their specific mapping:</p>
 <th class="tableblock halign-center valign-top">RV64</th>
 <th class="tableblock halign-left valign-top">Mnemonic</th>
 <th class="tableblock halign-left valign-top">Instruction</th>
-<th class="tableblock halign-center valign-top">Zba</th>
 <th class="tableblock halign-center valign-top">Zbb</th>
+<th class="tableblock halign-center valign-top">Zbkb</th>
 <th class="tableblock halign-center valign-top">Zbc</th>
+<th class="tableblock halign-center valign-top">Zbkc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">andn <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-andn">AND with inverted operand</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">brev8 <em>rd</em>, <em>rs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-brev8">Reverse bits in bytes</a></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clmul <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clmul">Carry-less multiply (low-part)</a></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clmulh <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clmulh">Carry-less multiply (high-part)</a></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clmulr <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clmulr">Carry-less multiply (reversed)</a></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clz <em>rd</em>, <em>rs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clz">Count leading zero bits</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clzw <em>rd</em>, <em>rs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clzw">Count leading zero bits in word</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cpop <em>rd</em>, <em>rs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-cpop">Count set bits</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cpopw <em>rd</em>, <em>rs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-cpopw">Count set bits in word</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ctz <em>rd</em>, <em>rs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-ctz">Count trailing zero bits</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ctzw <em>rd</em>, <em>rs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-ctzw">Count trailing zero bits in word</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">max <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-max">Maximum</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maxu <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-maxu">Unsigned maximum</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">min <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-min">Minimum</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">minu <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-minu">Unsigned minimum</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">orc.b <em>rd</em>, <em>rs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-orc_b">Bitwise OR-Combine, byte granule</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">orn <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-orn">OR with inverted operand</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pack <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-pack">Pack low halves of registers</a></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">packh <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-packh">Pack low bytes of registers</a></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">packw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-packw">Pack low 16-bits of registers (RV64)</a></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rev8 <em>rd</em>, <em>rs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rev8">Byte-reverse register</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rol <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rol">Rotate left (Register)</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rolw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rolw">Rotate Left Word (Register)</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ror <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-ror">Rotate right (Register)</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rori <em>rd</em>, <em>rs1</em>, <em>shamt</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rori">Rotate right (Immediate)</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">roriw <em>rd</em>, <em>rs1</em>, <em>shamt</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-roriw">Rotate right Word (Immediate)</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rorw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rorw">Rotate right Word (Register)</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sext.b <em>rd</em>, <em>rs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sext_b">Sign-extend byte</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sext.h <em>rd</em>, <em>rs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sext_h">Sign-extend halfword</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">unzip <em>rd</em>, <em>rs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-unzip">Bit deinterleave</a></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xnor <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-xnor">Exclusive NOR</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">zext.h <em>rd</em>, <em>rs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-zext_h">Zero-extend halfword</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">zip <em>rd</em>, <em>rs</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-zip">Bit interleave</a></p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 27.7777%;">
+<col style="width: 44.4444%;">
+<col style="width: 5.5555%;">
+<col style="width: 5.5558%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">RV32</th>
+<th class="tableblock halign-center valign-top">RV64</th>
+<th class="tableblock halign-left valign-top">Mnemonic</th>
+<th class="tableblock halign-left valign-top">Instruction</th>
+<th class="tableblock halign-center valign-top">Zba</th>
 <th class="tableblock halign-center valign-top">Zbs</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add.uw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-add_uw">Add unsigned word</a></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-center valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">andn <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-andn">AND with inverted operand</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">clmul <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clmul">Carry-less multiply (low-part)</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">clmulh <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clmulh">Carry-less multiply (high-part)</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">clmulr <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clmulr">Carry-less multiply (reversed)</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">clz <em>rd</em>, <em>rs</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clz">Count leading zero bits</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">clzw <em>rd</em>, <em>rs</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clzw">Count leading zero bits in word</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">cpop <em>rd</em>, <em>rs</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-cpop">Count set bits</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">cpopw <em>rd</em>, <em>rs</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-cpopw">Count set bits in word</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ctz <em>rd</em>, <em>rs</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-ctz">Count trailing zero bits</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ctzw <em>rd</em>, <em>rs</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-ctzw">Count trailing zero bits in word</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">max <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-max">Maximum</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">maxu <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-maxu">Unsigned maximum</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">min <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-min">Minimum</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">minu <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-minu">Unsigned minimum</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">orc.b <em>rd</em>, <em>rs</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-orc_b">Bitwise OR-Combine, byte granule</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">orn <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-orn">OR with inverted operand</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rev8 <em>rd</em>, <em>rs</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rev8">Byte-reverse register</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rol <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rol">Rotate left (Register)</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rolw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rolw">Rotate Left Word (Register)</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ror <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-ror">Rotate right (Register)</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rori <em>rd</em>, <em>rs1</em>, <em>shamt</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rori">Rotate right (Immediate)</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">roriw <em>rd</em>, <em>rs1</em>, <em>shamt</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-roriw">Rotate right Word (Immediate)</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rorw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rorw">Rotate right Word (Register)</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bclr <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-bclr">Single-Bit Clear (Register)</a></p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bclri <em>rd</em>, <em>rs1</em>, <em>imm</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-bclri">Single-Bit Clear (Immediate)</a></p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bext <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-bext">Single-Bit Extract (Register)</a></p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bexti <em>rd</em>, <em>rs1</em>, <em>imm</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-bexti">Single-Bit Extract (Immediate)</a></p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">binv <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-binv">Single-Bit Invert (Register)</a></p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">binvi <em>rd</em>, <em>rs1</em>, <em>imm</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-binvi">Single-Bit Invert (Immediate)</a></p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bset <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-bset">Single-Bit Set (Register)</a></p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bseti <em>rd</em>, <em>rs1</em>, <em>imm</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-bseti">Single-Bit Set (Immediate)</a></p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sext.b <em>rd</em>, <em>rs</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sext_b">Sign-extend byte</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sext.h <em>rd</em>, <em>rs</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sext_h">Sign-extend halfword</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sh1add <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sh1add">Shift left by 1 and add</a></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-center valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sh1add.uw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sh1add_uw">Shift unsigned word left by 1 and add</a></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-center valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sh2add <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sh2add">Shift left by 2 and add</a></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-center valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sh2add.uw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sh2add_uw">Shift unsigned word left by 2 and add</a></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-center valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sh3add <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sh3add">Shift left by 3 and add</a></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-center valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sh3add.uw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sh3add_uw">Shift unsigned word left by 3 and add</a></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-center valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">slli.uw <em>rd</em>, <em>rs1</em>, <em>imm</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-slli_uw">Shift-left unsigned word (Immediate)</a></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">xnor <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-xnor">Exclusive NOR</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">zext.h <em>rd</em>, <em>rs</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-zext_h">Zero-extend halfword</a></p></td>
-<td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-center valign-top"></td>
 </tr>
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="zba"><a class="anchor" href="#zba"></a>29.4.1. Zba: Address generation</h3>
+<h3 id="b-extension-for-bit-manipulation-version-1-0-0"><a class="anchor" href="#b-extension-for-bit-manipulation-version-1-0-0"></a>"B" Extension for Bit Manipulation, Version 1.0.0</h3>
+<div class="paragraph">
+<p><span id="norm:b_extension_composition">The B standard extension comprises instructions provided by the Zba, Zbb, and
+Zbs extensions.</span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="zba"><a class="anchor" href="#zba"></a>Zba: Extension for Address generation, Version 1.0.0</h3>
 <div class="paragraph">
 <p>The Zba instructions can be used to accelerate the generation of addresses that index into arrays of basic types (halfword, word, doubleword) using both unsigned word-sized and XLEN-sized indices: a shifted index is added to a base address.</p>
 </div>
@@ -1185,7 +1225,7 @@ along with their specific mapping:</p>
 <p>The shift and add instructions do a left shift of 1, 2, or 3 because these are commonly found in real-world code and because they can be implemented with a minimal amount of additional hardware beyond that of the simple adder. This avoids lengthening the critical path in implementations.</p>
 </div>
 <div class="paragraph">
-<p>While the shift and add instructions are limited to a maximum left shift of 3, the slli instruction (from the base ISA) can be used to perform similar shifts for indexing into arrays of wider elements. The slli.uw&#8201;&#8212;&#8201;added in this extension&#8201;&#8212;&#8201;can be used when the index is to be interpreted as an unsigned word.</p>
+<p><span id="norm:zba_slli_uw_function">While the shift and add instructions are limited to a maximum left shift of 3, the slli instruction (from the base ISA) can be used to perform similar shifts for indexing into arrays of wider elements. The slli.uw&#8201;&#8212;&#8201;added in this extension&#8201;&#8212;&#8201;can be used when the index is to be interpreted as an unsigned word.</span></p>
 </div>
 <div class="paragraph">
 <p>The following instructions comprise the Zba extension:</p>
@@ -1208,49 +1248,49 @@ along with their specific mapping:</p>
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add.uw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-add_uw">Add unsigned word</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sh1add <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sh1add">Shift left by 1 and add</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sh1add.uw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sh1add_uw">Shift unsigned word left by 1 and add</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sh2add <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sh2add">Shift left by 2 and add</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sh2add.uw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sh2add_uw">Shift unsigned word left by 2 and add</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sh3add <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sh3add">Shift left by 3 and add</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sh3add.uw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sh3add_uw">Shift unsigned word left by 3 and add</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">slli.uw <em>rd</em>, <em>rs1</em>, <em>imm</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-slli_uw">Shift-left unsigned word (Immediate)</a></p></td>
 </tr>
@@ -1258,9 +1298,9 @@ along with their specific mapping:</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="zbb"><a class="anchor" href="#zbb"></a>29.4.2. Zbb: Basic bit-manipulation</h3>
+<h3 id="zbb"><a class="anchor" href="#zbb"></a>Zbb: Extension for Basic bit-manipulation, Version 1.0.0</h3>
 <div class="sect3">
-<h4 id="29-4-2-1-logical-with-negate"><a class="anchor" href="#29-4-2-1-logical-with-negate"></a>29.4.2.1. Logical with negate</h4>
+<h4 id="logical-with-negate"><a class="anchor" href="#logical-with-negate"></a>Logical with negate</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 7.1428%;">
@@ -1278,20 +1318,20 @@ along with their specific mapping:</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">andn <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-andn">AND with inverted operand</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">orn <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-orn">OR with inverted operand</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xnor <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-xnor">Exclusive NOR</a></p></td>
 </tr>
@@ -1315,7 +1355,7 @@ In some implementations, the inverter on rs2 used for subtraction can be reused 
 </div>
 </div>
 <div class="sect3">
-<h4 id="29-4-2-2-count-leadingtrailing-zero-bits"><a class="anchor" href="#29-4-2-2-count-leadingtrailing-zero-bits"></a>29.4.2.2. Count leading/trailing zero bits</h4>
+<h4 id="count-leadingtrailing-zero-bits"><a class="anchor" href="#count-leadingtrailing-zero-bits"></a>Count leading/trailing zero bits</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 7.1428%;">
@@ -1333,26 +1373,26 @@ In some implementations, the inverter on rs2 used for subtraction can be reused 
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">clz <em>rd</em>, <em>rs</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clz">Count leading zero bits</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">clzw <em>rd</em>, <em>rs</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clzw">Count leading zero bits in word</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ctz <em>rd</em>, <em>rs</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-ctz">Count trailing zero bits</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ctzw <em>rd</em>, <em>rs</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-ctzw">Count trailing zero bits in word</a></p></td>
 </tr>
@@ -1360,7 +1400,7 @@ In some implementations, the inverter on rs2 used for subtraction can be reused 
 </table>
 </div>
 <div class="sect3">
-<h4 id="29-4-2-3-count-population"><a class="anchor" href="#29-4-2-3-count-population"></a>29.4.2.3. Count population</h4>
+<h4 id="count-population"><a class="anchor" href="#count-population"></a>Count population</h4>
 <div class="paragraph">
 <p>These instructions count the number of set bits (1-bits). This is also
 commonly referred to as population count.</p>
@@ -1382,14 +1422,14 @@ commonly referred to as population count.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">cpop <em>rd</em>, <em>rs</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-cpop">Count set bits</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">cpopw <em>rd</em>, <em>rs</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-cpopw">Count set bits in word</a></p></td>
 </tr>
@@ -1397,7 +1437,7 @@ commonly referred to as population count.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="29-4-2-4-integer-minimummaximum"><a class="anchor" href="#29-4-2-4-integer-minimummaximum"></a>29.4.2.4. Integer minimum/maximum</h4>
+<h4 id="integer-minimummaximum"><a class="anchor" href="#integer-minimummaximum"></a>Integer minimum/maximum</h4>
 <div class="paragraph">
 <p>The integer minimum/maximum instructions are arithmetic R-type
 instructions that return the smaller/larger of two operands.</p>
@@ -1419,26 +1459,26 @@ instructions that return the smaller/larger of two operands.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">max <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-max">Maximum</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">maxu <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-maxu">Unsigned maximum</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">min <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-min">Minimum</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">minu <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-minu">Unsigned minimum</a></p></td>
 </tr>
@@ -1446,9 +1486,9 @@ instructions that return the smaller/larger of two operands.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="29-4-2-5-sign-extension-and-zero-extension"><a class="anchor" href="#29-4-2-5-sign-extension-and-zero-extension"></a>29.4.2.5. Sign extension and zero extension</h4>
+<h4 id="sign-extension-and-zero-extension"><a class="anchor" href="#sign-extension-and-zero-extension"></a>Sign extension and zero extension</h4>
 <div class="paragraph">
-<p>These instructions perform the sign extension or zero extension of the least significant 8 bits or 16 bits of the source register.</p>
+<p><span id="norm:zbb_sign_zero_extension_function">These instructions perform the sign extension or zero extension of the least-significant 8 bits or 16 bits of the source register.</span></p>
 </div>
 <div class="paragraph">
 <p>These instructions replace the generalized idioms <code>slli rd,rs,(XLEN-&lt;size&gt;) + srai</code> (for sign extension of 8-bit and 16-bit quantities) and <code>slli + srli</code> (for zero extension of 16-bit quantities).</p>
@@ -1470,20 +1510,20 @@ instructions that return the smaller/larger of two operands.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sext.b <em>rd</em>, <em>rs</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sext_b">Sign-extend byte</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">sext.h <em>rd</em>, <em>rs</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-sext_h">Sign-extend halfword</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">zext.h <em>rd</em>, <em>rs</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-zext_h">Zero-extend halfword</a></p></td>
 </tr>
@@ -1491,10 +1531,10 @@ instructions that return the smaller/larger of two operands.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="29-4-2-6-bitwise-rotation"><a class="anchor" href="#29-4-2-6-bitwise-rotation"></a>29.4.2.6. Bitwise rotation</h4>
+<h4 id="bitwise-rotation"><a class="anchor" href="#bitwise-rotation"></a>Bitwise rotation</h4>
 <div class="paragraph">
-<p>Bitwise rotation instructions are similar to the shift-logical operations from the base spec. However, where the shift-logical
-instructions shift in zeros, the rotate instructions shift in the bits that were shifted out of the other side of the value.
+<p>Bitwise rotation instructions are similar to the shift-logical operations from the base spec. However, <span id="norm:zbb_rotate_semantics">where the shift-logical
+instructions shift in zeros, the rotate instructions shift in the bits that were shifted out of the other side of the value.</span>
 Such operations are also referred to as ‘circular shifts’.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -1514,38 +1554,38 @@ Such operations are also referred to as ‘circular shifts’.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rol <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rol">Rotate left (Register)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rolw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rolw">Rotate Left Word (Register)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ror <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-ror">Rotate right (Register)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rori <em>rd</em>, <em>rs1</em>, <em>shamt</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rori">Rotate right (Immediate)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">roriw <em>rd</em>, <em>rs1</em>, <em>shamt</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-roriw">Rotate right Word (Immediate)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rorw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rorw">Rotate right Word (Register)</a></p></td>
 </tr>
@@ -1569,9 +1609,9 @@ four-instruction sequence to achieve the same effect (neg; sll/srl; srl/sll; or)
 </div>
 </div>
 <div class="sect3">
-<h4 id="29-4-2-7-or-combine"><a class="anchor" href="#29-4-2-7-or-combine"></a>29.4.2.7. OR Combine</h4>
+<h4 id="or-combine"><a class="anchor" href="#or-combine"></a>OR Combine</h4>
 <div class="paragraph">
-<p><strong>orc.b</strong> sets the bits of each byte in the result <em>rd</em> to all zeros if no bit within the respective byte of <em>rs</em> is set, or to all ones if any bit within the respective byte of <em>rs</em> is set.</p>
+<p><span id="norm:zbb_orc_b_semantics"><strong>orc.b</strong> sets the bits of each byte in the result <em>rd</em> to all zeros if no bit within the respective byte of <em>rs</em> is set, or to all ones if any bit within the respective byte of <em>rs</em> is set.</span></p>
 </div>
 <div class="paragraph">
 <p>One use-case is string-processing functions, such as <strong>strlen</strong> and <strong>strcpy</strong>, which can use <strong>orc.b</strong> to test for the terminating zero byte by counting the set bits in leading non-zero bytes in a word.</p>
@@ -1593,8 +1633,8 @@ four-instruction sequence to achieve the same effect (neg; sll/srl; srl/sll; or)
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">orc.b <em>rd</em>, <em>rs</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-orc_b">Bitwise OR-Combine, byte granule</a></p></td>
 </tr>
@@ -1602,7 +1642,7 @@ four-instruction sequence to achieve the same effect (neg; sll/srl; srl/sll; or)
 </table>
 </div>
 <div class="sect3">
-<h4 id="29-4-2-8-byte-reverse"><a class="anchor" href="#29-4-2-8-byte-reverse"></a>29.4.2.8. Byte-reverse</h4>
+<h4 id="byte-reverse"><a class="anchor" href="#byte-reverse"></a>Byte-reverse</h4>
 <div class="paragraph">
 <p><strong>rev8</strong> reverses the byte-ordering of <em>rs</em>.</p>
 </div>
@@ -1623,8 +1663,8 @@ four-instruction sequence to achieve the same effect (neg; sll/srl; srl/sll; or)
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rev8 <em>rd</em>, <em>rs</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rev8">Byte-reverse register</a></p></td>
 </tr>
@@ -1633,15 +1673,15 @@ four-instruction sequence to achieve the same effect (neg; sll/srl; srl/sll; or)
 </div>
 </div>
 <div class="sect2">
-<h3 id="zbc"><a class="anchor" href="#zbc"></a>29.4.3. Zbc: Carry-less multiplication</h3>
+<h3 id="zbc"><a class="anchor" href="#zbc"></a>Zbc: Extension for Carry-less multiplication, Version 1.0.0</h3>
 <div class="paragraph">
 <p>Carry-less multiplication is the multiplication in the polynomial ring over GF(2).</p>
 </div>
 <div class="paragraph">
-<p><strong>clmul</strong> produces the lower half of the carry-less product and <strong>clmulh</strong> produces the upper half of the 2&#x2715;XLEN carry-less product.</p>
+<p><span id="norm:zbc_clmul_clmulh_results"><strong>clmul</strong> produces the lower half of the carry-less product and <strong>clmulh</strong> produces the upper half of the 2×XLEN carry-less product.</span></p>
 </div>
 <div class="paragraph">
-<p><strong>clmulr</strong> produces bits 2&#x2715;XLEN−2:XLEN-1 of the 2&#x2715;XLEN carry-less product.</p>
+<p><span id="norm:zbc_clmulr_results"><strong>clmulr</strong> produces bits 2×XLEN−2:XLEN-1 of the 2×XLEN carry-less product.</span></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1660,20 +1700,20 @@ four-instruction sequence to achieve the same effect (neg; sll/srl; srl/sll; or)
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">clmul <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clmul">Carry-less multiply (low-part)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">clmulh <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clmulh">Carry-less multiply (high-part)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">clmulr <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clmulr">Carry-less multiply (reversed)</a></p></td>
 </tr>
@@ -1681,10 +1721,10 @@ four-instruction sequence to achieve the same effect (neg; sll/srl; srl/sll; or)
 </table>
 </div>
 <div class="sect2">
-<h3 id="zbs"><a class="anchor" href="#zbs"></a>29.4.4. Zbs: Single-bit instructions</h3>
+<h3 id="zbs"><a class="anchor" href="#zbs"></a>Zbs: Extension for Single-bit instructions, Version 1.0.0</h3>
 <div class="paragraph">
-<p>The single-bit instructions provide a mechanism to set, clear, invert, or extract
-a single bit in a register. The bit is specified by its index.</p>
+<p><span id="norm:zbs_single_bit_functionality">The single-bit instructions provide a mechanism to set, clear, invert, or extract
+a single bit in a register. The bit is specified by its index.</span></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1703,50 +1743,50 @@ a single bit in a register. The bit is specified by its index.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bclr <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-bclr">Single-Bit Clear (Register)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bclri <em>rd</em>, <em>rs1</em>, <em>imm</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-bclri">Single-Bit Clear (Immediate)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bext <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-bext">Single-Bit Extract (Register)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bexti <em>rd</em>, <em>rs1</em>, <em>imm</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-bexti">Single-Bit Extract (Immediate)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">binv <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-binv">Single-Bit Invert (Register)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">binvi <em>rd</em>, <em>rs1</em>, <em>imm</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-binvi">Single-Bit Invert (Immediate)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bset <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-bset">Single-Bit Set (Register)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">bseti <em>rd</em>, <em>rs1</em>, <em>imm</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-bseti">Single-Bit Set (Immediate)</a></p></td>
 </tr>
@@ -1754,7 +1794,7 @@ a single bit in a register. The bit is specified by its index.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="zbkb"><a class="anchor" href="#zbkb"></a>29.4.5. Zbkb: Bit-manipulation for Cryptography</h3>
+<h3 id="zbkb"><a class="anchor" href="#zbkb"></a>Zbkb: Extension for Bit-manipulation for Cryptography, Version 1.0.0</h3>
 <div class="paragraph">
 <p>This extension contains instructions essential for implementing
 common operations in cryptographic workloads.</p>
@@ -1776,97 +1816,97 @@ common operations in cryptographic workloads.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rol</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rol">Rotate left (Register)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rolw</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rolw">Rotate Left Word (Register)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ror</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-ror">Rotate right (Register)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rori</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rori">Rotate right (Immediate)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">roriw</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-roriw">Rotate right Word (Immediate)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rorw</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rorw">Rotate right Word (Register)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">andn</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-andn">AND with inverted operand</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">orn</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-orn">OR with inverted operand</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xnor</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-xnor">Exclusive NOR</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">pack</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-pack">Pack low halves of registers</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">packh</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-packh">Pack low bytes of registers</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">packw</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-packw">Pack low 16-bits of registers (RV64)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">brev8</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-brev8">Reverse bits in bytes</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rev8</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-rev8">Byte-reverse register</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">zip</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-zip">Bit interleave</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">unzip</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-unzip">Bit deinterleave</a></p></td>
@@ -1875,7 +1915,7 @@ common operations in cryptographic workloads.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="zbkc"><a class="anchor" href="#zbkc"></a>29.4.6. Zbkc: Carry-less multiplication for Cryptography</h3>
+<h3 id="zbkc"><a class="anchor" href="#zbkc"></a>Zbkc: Extension for Carry-less multiplication for Cryptography, Version 1.0.0</h3>
 <div class="paragraph">
 <p>Carry-less multiplication is the multiplication in the polynomial ring over
 GF(2). This is a critical operation in some cryptographic workloads,
@@ -1900,14 +1940,14 @@ efficiently implement the GHASH operation, which is part of this workload.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">clmul <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clmul">Carry-less multiply (low-part)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">clmulh <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-clmulh">Carry-less multiply (high-part)</a></p></td>
 </tr>
@@ -1915,14 +1955,14 @@ efficiently implement the GHASH operation, which is part of this workload.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="zbkx"><a class="anchor" href="#zbkx"></a>29.4.7. Zbkx: Crossbar permutations</h3>
+<h3 id="zbkx"><a class="anchor" href="#zbkx"></a>Zbkx: Extension for Crossbar permutations, Version 1.0.0</h3>
 <div class="paragraph">
-<p>These instructions implement a "lookup table" for 4 and 8 bit elements
-inside the general purpose registers.
+<p><span id="norm:zbkx_lookup_table_model">These instructions implement a "lookup table" for 4 and 8 bit elements
+inside the general purpose registers.</span>
 <em>rs1</em> is used as a vector of N-bit words, and <em>rs2</em> as a vector of N-bit
 indices into <em>rs1</em>.
-Elements in <em>rs1</em> are replaced by the indexed element in <em>rs2</em>, or zero
-if the index into <em>rs2</em> is out of bounds.</p>
+<span id="norm:zbkx_indexing_behavior">Elements in <em>rs1</em> are replaced by the indexed element in <em>rs2</em>, or zero
+if the index into <em>rs2</em> is out of bounds.</span></p>
 </div>
 <div class="paragraph">
 <p>These instructions are useful for expressing N-bit to N-bit boolean
@@ -1947,14 +1987,14 @@ latency does not depend on the (secret) data being operated on.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xperm4 <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-xperm4">Crossbar permutation (nibbles)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">xperm8 <em>rd</em>, <em>rs1</em>, <em>rs2</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-xperm8">Crossbar permutation (bytes)</a></p></td>
 </tr>
@@ -1962,13 +2002,13 @@ latency does not depend on the (secret) data being operated on.</p>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="insns-b"><a class="anchor" href="#insns-b"></a>29.5. Instructions (in alphabetical order)</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="insns-add_uw"><a class="anchor" href="#insns-add_uw"></a>29.5.1. add.uw</h3>
+<h3 id="insns-b"><a class="anchor" href="#insns-b"></a>Instructions (in alphabetical order)</h3>
+<div class="paragraph">
+<p>The semantics of each instruction is expressed in a SAIL-like syntax.</p>
+</div>
+<div class="sect3">
+<h4 id="insns-add_uw"><a class="anchor" href="#insns-add_uw"></a>add.uw</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -1981,8 +2021,12 @@ latency does not depend on the (secret) data being operated on.</p>
 </dd>
 <dt class="hdlist1">Pseudoinstructions</dt>
 <dd>
-<p>zext.w <em>rd</em>, <em>rs1</em> &#8594; add.uw <em>rd</em>, <em>rs1</em>, zero</p>
+<p>zext.w <em>rd</em>, <em>rs1</em> → add.uw <em>rd</em>, <em>rs1</em>, zero</p>
 </dd>
+</dl>
+</div>
+<div id="norm:add_uw_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -1997,6 +2041,10 @@ latency does not depend on the (secret) data being operated on.</p>
 <dd>
 <p>This instruction performs an XLEN-wide addition between <em>rs2</em> and the zero-extended least-significant word of <em>rs1</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:add_uw_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -2036,8 +2084,8 @@ X(rd) = base + index;</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-andn"><a class="anchor" href="#insns-andn"></a>29.5.2. andn</h3>
+<div class="sect3">
+<h4 id="insns-andn"><a class="anchor" href="#insns-andn"></a>andn</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2048,6 +2096,10 @@ X(rd) = base + index;</code></pre>
 <dd>
 <p>andn <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:andn_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -2062,6 +2114,10 @@ X(rd) = base + index;</code></pre>
 <dd>
 <p>This instruction performs the bitwise logical AND operation between <em>rs1</em> and the bitwise inversion of <em>rs2</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:andn_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -2103,8 +2159,8 @@ X(rd) = base + index;</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-bclr"><a class="anchor" href="#insns-bclr"></a>29.5.3. bclr</h3>
+<div class="sect3">
+<h4 id="insns-bclr"><a class="anchor" href="#insns-bclr"></a>bclr</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2115,6 +2171,10 @@ X(rd) = base + index;</code></pre>
 <dd>
 <p>bclr <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:bclr_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -2130,6 +2190,10 @@ X(rd) = base + index;</code></pre>
 <p>This instruction returns <em>rs1</em> with a single bit cleared at the index specified in <em>rs2</em>.
 The index is read from the lower log2(XLEN) bits of <em>rs2</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:bclr_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -2167,8 +2231,8 @@ X(rd) = X(rs1) &amp; ~(1 &lt;&lt; index)</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-bclri"><a class="anchor" href="#insns-bclri"></a>29.5.4. bclri</h3>
+<div class="sect3">
+<h4 id="insns-bclri"><a class="anchor" href="#insns-bclri"></a>bclri</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2179,6 +2243,10 @@ X(rd) = X(rs1) &amp; ~(1 &lt;&lt; index)</code></pre>
 <dd>
 <p>bclri <em>rd</em>, <em>rs1</em>, <em>shamt</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:bclri_rv32_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding (RV32)</dt>
 </dl>
 </div>
@@ -2187,7 +2255,7 @@ X(rd) = X(rs1) &amp; ~(1 &lt;&lt; index)</code></pre>
 <img src="_images/svg-02e365d64002b0b09a8e4e574f7f4867993515a9.svg" alt="svg">
 </div>
 </div>
-<div class="dlist">
+<div id="norm:bclri_rv64_enc" class="dlist">
 <dl>
 <dt class="hdlist1">Encoding (RV64)</dt>
 </dl>
@@ -2203,8 +2271,12 @@ X(rd) = X(rs1) &amp; ~(1 &lt;&lt; index)</code></pre>
 <dd>
 <p>This instruction returns <em>rs1</em> with a single bit cleared at the index specified in <em>shamt</em>.
 The index is read from the lower log2(XLEN) bits of <em>shamt</em>.
-For RV32, the encodings corresponding to shamt[5]=1 are reserved.</p>
+<span id="norm:bclri_shamt_rsv_rv32">For RV32, the encodings corresponding to shamt[5]=1 are reserved.</span></p>
 </dd>
+</dl>
+</div>
+<div id="norm:bclri_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -2242,8 +2314,8 @@ X(rd) = X(rs1) &amp; ~(1 &lt;&lt; index)</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-bext"><a class="anchor" href="#insns-bext"></a>29.5.5. bext</h3>
+<div class="sect3">
+<h4 id="insns-bext"><a class="anchor" href="#insns-bext"></a>bext</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2254,6 +2326,10 @@ X(rd) = X(rs1) &amp; ~(1 &lt;&lt; index)</code></pre>
 <dd>
 <p>bext <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:bext_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -2269,6 +2345,10 @@ X(rd) = X(rs1) &amp; ~(1 &lt;&lt; index)</code></pre>
 <p>This instruction returns a single bit extracted from <em>rs1</em> at the index specified in <em>rs2</em>.
 The index is read from the lower log2(XLEN) bits of <em>rs2</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:bext_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -2306,8 +2386,8 @@ X(rd) = (X(rs1) &gt;&gt; index) &amp; 1;</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-bexti"><a class="anchor" href="#insns-bexti"></a>29.5.6. bexti</h3>
+<div class="sect3">
+<h4 id="insns-bexti"><a class="anchor" href="#insns-bexti"></a>bexti</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2318,6 +2398,10 @@ X(rd) = (X(rs1) &gt;&gt; index) &amp; 1;</code></pre>
 <dd>
 <p>bexti <em>rd</em>, <em>rs1</em>, <em>shamt</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:bexti_rv32_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding (RV32)</dt>
 </dl>
 </div>
@@ -2326,7 +2410,7 @@ X(rd) = (X(rs1) &gt;&gt; index) &amp; 1;</code></pre>
 <img src="_images/svg-aae56a19005d8ff5b81c52a0de91cb7fe8a54f16.svg" alt="svg">
 </div>
 </div>
-<div class="dlist">
+<div id="norm:bexti_rv64_enc" class="dlist">
 <dl>
 <dt class="hdlist1">Encoding (RV64)</dt>
 </dl>
@@ -2342,8 +2426,12 @@ X(rd) = (X(rs1) &gt;&gt; index) &amp; 1;</code></pre>
 <dd>
 <p>This instruction returns a single bit extracted from <em>rs1</em> at the index specified in <em>shamt</em>.
 The index is read from the lower log2(XLEN) bits of <em>shamt</em>.
-For RV32, the encodings corresponding to shamt[5]=1 are reserved.</p>
+<span id="norm:bexti_shamt_rsv_rv32">For RV32, the encodings corresponding to shamt[5]=1 are reserved.</span></p>
 </dd>
+</dl>
+</div>
+<div id="norm:bexti_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -2381,8 +2469,8 @@ X(rd) = (X(rs1) &gt;&gt; index) &amp; 1;</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-binv"><a class="anchor" href="#insns-binv"></a>29.5.7. binv</h3>
+<div class="sect3">
+<h4 id="insns-binv"><a class="anchor" href="#insns-binv"></a>binv</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2393,6 +2481,10 @@ X(rd) = (X(rs1) &gt;&gt; index) &amp; 1;</code></pre>
 <dd>
 <p>binv <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:binv_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -2408,6 +2500,10 @@ X(rd) = (X(rs1) &gt;&gt; index) &amp; 1;</code></pre>
 <p>This instruction returns <em>rs1</em> with a single bit inverted at the index specified in <em>rs2</em>.
 The index is read from the lower log2(XLEN) bits of <em>rs2</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:binv_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -2445,8 +2541,8 @@ X(rd) = X(rs1) ^ (1 &lt;&lt; index)</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-binvi"><a class="anchor" href="#insns-binvi"></a>29.5.8. binvi</h3>
+<div class="sect3">
+<h4 id="insns-binvi"><a class="anchor" href="#insns-binvi"></a>binvi</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2457,6 +2553,10 @@ X(rd) = X(rs1) ^ (1 &lt;&lt; index)</code></pre>
 <dd>
 <p>binvi <em>rd</em>, <em>rs1</em>, <em>shamt</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:binvi_rv32_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding (RV32)</dt>
 </dl>
 </div>
@@ -2465,7 +2565,7 @@ X(rd) = X(rs1) ^ (1 &lt;&lt; index)</code></pre>
 <img src="_images/svg-10d898da03c5334ffe8e910ac5b665e4f2dea43d.svg" alt="svg">
 </div>
 </div>
-<div class="dlist">
+<div id="norm:binvi_rv64_enc" class="dlist">
 <dl>
 <dt class="hdlist1">Encoding (RV64)</dt>
 </dl>
@@ -2481,8 +2581,12 @@ X(rd) = X(rs1) ^ (1 &lt;&lt; index)</code></pre>
 <dd>
 <p>This instruction returns <em>rs1</em> with a single bit inverted at the index specified in <em>shamt</em>.
 The index is read from the lower log2(XLEN) bits of <em>shamt</em>.
-For RV32, the encodings corresponding to shamt[5]=1 are reserved.</p>
+<span id="norm:binvi_shamt_rsv_rv32">For RV32, the encodings corresponding to shamt[5]=1 are reserved.</span></p>
 </dd>
+</dl>
+</div>
+<div id="norm:binvi_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -2520,8 +2624,8 @@ X(rd) = X(rs1) ^ (1 &lt;&lt; index)</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-bset"><a class="anchor" href="#insns-bset"></a>29.5.9. bset</h3>
+<div class="sect3">
+<h4 id="insns-bset"><a class="anchor" href="#insns-bset"></a>bset</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2532,6 +2636,10 @@ X(rd) = X(rs1) ^ (1 &lt;&lt; index)</code></pre>
 <dd>
 <p>bset <em>rd</em>, <em>rs1</em>,<em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:bset_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -2547,6 +2655,10 @@ X(rd) = X(rs1) ^ (1 &lt;&lt; index)</code></pre>
 <p>This instruction returns <em>rs1</em> with a single bit set at the index specified in <em>rs2</em>.
 The index is read from the lower log2(XLEN) bits of <em>rs2</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:bset_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -2584,8 +2696,8 @@ X(rd) = X(rs1) | (1 &lt;&lt; index)</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-bseti"><a class="anchor" href="#insns-bseti"></a>29.5.10. bseti</h3>
+<div class="sect3">
+<h4 id="insns-bseti"><a class="anchor" href="#insns-bseti"></a>bseti</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2596,6 +2708,10 @@ X(rd) = X(rs1) | (1 &lt;&lt; index)</code></pre>
 <dd>
 <p>bseti <em>rd</em>, <em>rs1</em>,<em>shamt</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:bseti_rv32_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding (RV32)</dt>
 </dl>
 </div>
@@ -2604,7 +2720,7 @@ X(rd) = X(rs1) | (1 &lt;&lt; index)</code></pre>
 <img src="_images/svg-a3d3088a9efd3af4ca4a17cfa5f6ddd012677760.svg" alt="svg">
 </div>
 </div>
-<div class="dlist">
+<div id="norm:bseti_rv64_enc" class="dlist">
 <dl>
 <dt class="hdlist1">Encoding (RV64)</dt>
 </dl>
@@ -2620,8 +2736,12 @@ X(rd) = X(rs1) | (1 &lt;&lt; index)</code></pre>
 <dd>
 <p>This instruction returns <em>rs1</em> with a single bit set at the index specified in <em>shamt</em>.
 The index is read from the lower log2(XLEN) bits of <em>shamt</em>.
-For RV32, the encodings corresponding to shamt[5]=1 are reserved.</p>
+<span id="norm:bseti_shamt_rsv_rv32">For RV32, the encodings corresponding to shamt[5]=1 are reserved.</span></p>
 </dd>
+</dl>
+</div>
+<div id="norm:bseti_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -2659,8 +2779,8 @@ X(rd) = X(rs1) | (1 &lt;&lt; index)</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-clmul"><a class="anchor" href="#insns-clmul"></a>29.5.11. clmul</h3>
+<div class="sect3">
+<h4 id="insns-clmul"><a class="anchor" href="#insns-clmul"></a>clmul</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2671,6 +2791,10 @@ X(rd) = X(rs1) | (1 &lt;&lt; index)</code></pre>
 <dd>
 <p>clmul <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:clmul_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -2685,6 +2809,10 @@ X(rd) = X(rs1) | (1 &lt;&lt; index)</code></pre>
 <dd>
 <p>clmul produces the lower half of the 2·XLEN carry-less product.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:clmul_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -2736,8 +2864,8 @@ X[rd] = output</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-clmulh"><a class="anchor" href="#insns-clmulh"></a>29.5.12. clmulh</h3>
+<div class="sect3">
+<h4 id="insns-clmulh"><a class="anchor" href="#insns-clmulh"></a>clmulh</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2748,6 +2876,10 @@ X[rd] = output</code></pre>
 <dd>
 <p>clmulh <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:clmulh_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -2762,6 +2894,10 @@ X[rd] = output</code></pre>
 <dd>
 <p>clmulh produces the upper half of the 2·XLEN carry-less product.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:clmulh_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -2813,8 +2949,8 @@ X[rd] = output</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-clmulr"><a class="anchor" href="#insns-clmulr"></a>29.5.13. clmulr</h3>
+<div class="sect3">
+<h4 id="insns-clmulr"><a class="anchor" href="#insns-clmulr"></a>clmulr</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2825,6 +2961,10 @@ X[rd] = output</code></pre>
 <dd>
 <p>clmulr <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:clmulr_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -2840,6 +2980,10 @@ X[rd] = output</code></pre>
 <p><strong>clmulr</strong> produces bits 2·XLEN−2:XLEN-1 of the 2·XLEN carry-less
 product.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:clmulr_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -2904,8 +3048,8 @@ a <strong>clmul</strong>, then bit-reversing the output.</p>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-clz"><a class="anchor" href="#insns-clz"></a>29.5.14. clz</h3>
+<div class="sect3">
+<h4 id="insns-clz"><a class="anchor" href="#insns-clz"></a>clz</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2916,6 +3060,10 @@ a <strong>clmul</strong>, then bit-reversing the output.</p>
 <dd>
 <p>clz <em>rd</em>, <em>rs</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:clz_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -2930,6 +3078,10 @@ a <strong>clmul</strong>, then bit-reversing the output.</p>
 <dd>
 <p>This instruction counts the number of 0&#8217;s before the first 1, starting at the most-significant bit (i.e., XLEN-1) and progressing to bit 0. Accordingly, if the input is 0, the output is XLEN, and if the most-significant bit of the input is a 1, the output is 0.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:clz_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -2975,8 +3127,8 @@ X[rd] = (xlen - 1) - HighestSetBit(rs);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-clzw"><a class="anchor" href="#insns-clzw"></a>29.5.15. clzw</h3>
+<div class="sect3">
+<h4 id="insns-clzw"><a class="anchor" href="#insns-clzw"></a>clzw</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2987,6 +3139,10 @@ X[rd] = (xlen - 1) - HighestSetBit(rs);</code></pre>
 <dd>
 <p>clzw <em>rd</em>, <em>rs</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:clzw_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -3002,6 +3158,10 @@ X[rd] = (xlen - 1) - HighestSetBit(rs);</code></pre>
 <p>This instruction counts the number of 0&#8217;s before the first 1 starting at bit 31 and progressing to bit 0.
 Accordingly, if the least-significant word is 0, the output is 32, and if the most-significant bit of the word (i.e., bit 31) is a 1, the output is 0.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:clzw_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -3047,8 +3207,8 @@ X[rd] = 31 - HighestSetBit(rs);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-cpop"><a class="anchor" href="#insns-cpop"></a>29.5.16. cpop</h3>
+<div class="sect3">
+<h4 id="insns-cpop"><a class="anchor" href="#insns-cpop"></a>cpop</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -3059,6 +3219,10 @@ X[rd] = 31 - HighestSetBit(rs);</code></pre>
 <dd>
 <p>cpop <em>rd</em>, <em>rs</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:cpop_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -3073,6 +3237,10 @@ X[rd] = 31 - HighestSetBit(rs);</code></pre>
 <dd>
 <p>This instructions counts the number of 1&#8217;s (i.e., set bits) in the source register.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:cpop_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -3096,7 +3264,7 @@ X[rd] = bitcount</code></pre>
 <td class="content">
 <div class="title">Software Hint</div>
 <div class="paragraph">
-<p>This operations is known as population count, popcount, sideways sum, bit summation, or Hamming weight.</p>
+<p>This operation is known as population count, popcount, sideways sum, bit summation, or Hamming weight.</p>
 </div>
 <div class="paragraph">
 <p>The GCC builtin function <code>__builtin_popcount (unsigned int x)</code> is implemented by cpop on RV32 and by <strong>cpopw</strong> on RV64.
@@ -3134,8 +3302,8 @@ The GCC builtin function <code>__builtin_popcountl (unsigned long x)</code> for 
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-cpopw"><a class="anchor" href="#insns-cpopw"></a>29.5.17. cpopw</h3>
+<div class="sect3">
+<h4 id="insns-cpopw"><a class="anchor" href="#insns-cpopw"></a>cpopw</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -3146,6 +3314,10 @@ The GCC builtin function <code>__builtin_popcountl (unsigned long x)</code> for 
 <dd>
 <p>cpopw <em>rd</em>, <em>rs</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:cpopw_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -3160,6 +3332,10 @@ The GCC builtin function <code>__builtin_popcountl (unsigned long x)</code> for 
 <dd>
 <p>This instructions counts the number of 1&#8217;s (i.e., set bits) in the least-significant word of the source register.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:cpopw_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -3202,8 +3378,8 @@ X[rd] = bitcount</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-ctz"><a class="anchor" href="#insns-ctz"></a>29.5.18. ctz</h3>
+<div class="sect3">
+<h4 id="insns-ctz"><a class="anchor" href="#insns-ctz"></a>ctz</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -3214,6 +3390,10 @@ X[rd] = bitcount</code></pre>
 <dd>
 <p>ctz <em>rd</em>, <em>rs</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:ctz_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -3229,6 +3409,10 @@ X[rd] = bitcount</code></pre>
 <p>This instruction counts the number of 0&#8217;s before the first 1, starting at the least-significant bit (i.e., 0) and progressing to the most-significant bit (i.e., XLEN-1).
 Accordingly, if the input is 0, the output is XLEN, and if the least-significant bit of the input is a 1, the output is 0.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:ctz_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -3274,8 +3458,8 @@ X[rd] = LowestSetBit(rs);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-ctzw"><a class="anchor" href="#insns-ctzw"></a>29.5.19. ctzw</h3>
+<div class="sect3">
+<h4 id="insns-ctzw"><a class="anchor" href="#insns-ctzw"></a>ctzw</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -3286,6 +3470,10 @@ X[rd] = LowestSetBit(rs);</code></pre>
 <dd>
 <p>ctzw <em>rd</em>, <em>rs</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:ctzw_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -3300,6 +3488,10 @@ X[rd] = LowestSetBit(rs);</code></pre>
 <dd>
 <p>This instruction counts the number of 0&#8217;s before the first 1, starting at the least-significant bit (i.e., 0) and progressing to the most-significant bit of the least-significant word (i.e., 31). Accordingly, if the least-significant word is 0, the output is 32, and if the least-significant bit of the input is a 1, the output is 0.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:ctzw_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -3345,8 +3537,8 @@ X[rd] = LowestSetBit32(rs);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-max"><a class="anchor" href="#insns-max"></a>29.5.20. max</h3>
+<div class="sect3">
+<h4 id="insns-max"><a class="anchor" href="#insns-max"></a>max</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -3357,6 +3549,10 @@ X[rd] = LowestSetBit32(rs);</code></pre>
 <dd>
 <p>max <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:max_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -3371,6 +3567,10 @@ X[rd] = LowestSetBit32(rs);</code></pre>
 <dd>
 <p>This instruction returns the larger of two signed integers.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:max_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -3433,8 +3633,8 @@ implementations that are so optimized can fuse them together.</p>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-maxu"><a class="anchor" href="#insns-maxu"></a>29.5.21. maxu</h3>
+<div class="sect3">
+<h4 id="insns-maxu"><a class="anchor" href="#insns-maxu"></a>maxu</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -3445,6 +3645,10 @@ implementations that are so optimized can fuse them together.</p>
 <dd>
 <p>maxu <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:maxu_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -3459,6 +3663,10 @@ implementations that are so optimized can fuse them together.</p>
 <dd>
 <p>This instruction returns the larger of two unsigned integers.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:maxu_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -3502,8 +3710,8 @@ X(rd) = result;</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-min"><a class="anchor" href="#insns-min"></a>29.5.22. min</h3>
+<div class="sect3">
+<h4 id="insns-min"><a class="anchor" href="#insns-min"></a>min</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -3514,6 +3722,10 @@ X(rd) = result;</code></pre>
 <dd>
 <p>min <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:min_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -3528,6 +3740,10 @@ X(rd) = result;</code></pre>
 <dd>
 <p>This instruction returns the smaller of two signed integers.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:min_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -3571,8 +3787,8 @@ X(rd) = result;</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-minu"><a class="anchor" href="#insns-minu"></a>29.5.23. minu</h3>
+<div class="sect3">
+<h4 id="insns-minu"><a class="anchor" href="#insns-minu"></a>minu</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -3583,6 +3799,10 @@ X(rd) = result;</code></pre>
 <dd>
 <p>minu <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:minu_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -3597,6 +3817,10 @@ X(rd) = result;</code></pre>
 <dd>
 <p>This instruction returns the smaller of two unsigned integers.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:minu_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -3640,8 +3864,8 @@ X(rd) = result;</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-orc_b"><a class="anchor" href="#insns-orc_b"></a>29.5.24. orc.b</h3>
+<div class="sect3">
+<h4 id="insns-orc_b"><a class="anchor" href="#insns-orc_b"></a>orc.b</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -3652,6 +3876,10 @@ X(rd) = result;</code></pre>
 <dd>
 <p>orc.b <em>rd</em>, <em>rs</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:orc_b_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -3667,6 +3895,10 @@ X(rd) = result;</code></pre>
 <p>Combines the bits within each byte using bitwise logical OR.
 This sets the bits of each byte in the result <em>rd</em> to all zeros if no bit within the respective byte of <em>rs</em> is set, or to all ones if any bit within the respective byte of <em>rs</em> is set.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:orc_b_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -3712,8 +3944,8 @@ X[rd] = output;</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-orn"><a class="anchor" href="#insns-orn"></a>29.5.25. orn</h3>
+<div class="sect3">
+<h4 id="insns-orn"><a class="anchor" href="#insns-orn"></a>orn</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -3724,6 +3956,10 @@ X[rd] = output;</code></pre>
 <dd>
 <p>orn <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:orn_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -3738,6 +3974,10 @@ X[rd] = output;</code></pre>
 <dd>
 <p>This instruction performs the bitwise logical OR operation between <em>rs1</em> and the bitwise inversion of <em>rs2</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:orn_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -3779,8 +4019,8 @@ X[rd] = output;</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-pack"><a class="anchor" href="#insns-pack"></a>29.5.26. pack</h3>
+<div class="sect3">
+<h4 id="insns-pack"><a class="anchor" href="#insns-pack"></a>pack</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -3791,6 +4031,10 @@ X[rd] = output;</code></pre>
 <dd>
 <p>pack <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:pack_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -3806,6 +4050,10 @@ X[rd] = output;</code></pre>
 <p>The pack instruction packs the XLEN/2-bit lower halves of <em>rs1</em> and <em>rs2</em> into
 <em>rd</em>, with <em>rs1</em> in the lower half and <em>rs2</em> in the upper half.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:pack_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -3861,8 +4109,8 @@ extensions are implemented).
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-packh"><a class="anchor" href="#insns-packh"></a>29.5.27. packh</h3>
+<div class="sect3">
+<h4 id="insns-packh"><a class="anchor" href="#insns-packh"></a>packh</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -3873,6 +4121,10 @@ extensions are implemented).
 <dd>
 <p>packh <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:packh_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -3889,6 +4141,10 @@ extensions are implemented).
 <em>rs1</em> and <em>rs2</em> into the 16 least-significant bits of <em>rd</em>,
 zero extending the rest of <em>rd</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:packh_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -3927,8 +4183,8 @@ X(rd) = EXTZ(hi_half @ lo_half);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-packw"><a class="anchor" href="#insns-packw"></a>29.5.28. packw</h3>
+<div class="sect3">
+<h4 id="insns-packw"><a class="anchor" href="#insns-packw"></a>packw</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -3939,6 +4195,10 @@ X(rd) = EXTZ(hi_half @ lo_half);</code></pre>
 <dd>
 <p>packw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:packw_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -3956,6 +4216,10 @@ X(rd) = EXTZ(hi_half @ lo_half);</code></pre>
 sign extending the 32-bit result to the rest of <em>rd</em>.
 This instruction only exists on RV64 based systems.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:packw_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -4011,8 +4275,8 @@ extensions are implemented).
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-rev8"><a class="anchor" href="#insns-rev8"></a>29.5.29. rev8</h3>
+<div class="sect3">
+<h4 id="insns-rev8"><a class="anchor" href="#insns-rev8"></a>rev8</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -4023,6 +4287,10 @@ extensions are implemented).
 <dd>
 <p>rev8 <em>rd</em>, <em>rs</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:rev8_rv32_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding (RV32)</dt>
 </dl>
 </div>
@@ -4031,7 +4299,7 @@ extensions are implemented).
 <img src="_images/svg-693d173289db88cf4b8d29c9a4c08f5ecbe7f7e2.svg" alt="svg">
 </div>
 </div>
-<div class="dlist">
+<div id="norm:rev8_rv64_enc" class="dlist">
 <dl>
 <dt class="hdlist1">Encoding (RV64)</dt>
 </dl>
@@ -4047,6 +4315,10 @@ extensions are implemented).
 <dd>
 <p>This instruction reverses the order of the bytes in <em>rs</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:rev8_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -4130,8 +4402,8 @@ XLEN-32 and XLEN-16, respectively.</p>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-brev8"><a class="anchor" href="#insns-brev8"></a>29.5.30. brev8</h3>
+<div class="sect3">
+<h4 id="insns-brev8"><a class="anchor" href="#insns-brev8"></a>brev8</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -4142,6 +4414,10 @@ XLEN-32 and XLEN-16, respectively.</p>
 <dd>
 <p>brev8 <em>rd</em>, <em>rs</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:brev8_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -4156,6 +4432,10 @@ XLEN-32 and XLEN-16, respectively.</p>
 <dd>
 <p>This instruction reverses the order of the bits in every byte of a register.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:brev8_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -4196,8 +4476,8 @@ X(rd) = result;</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-rol"><a class="anchor" href="#insns-rol"></a>29.5.31. rol</h3>
+<div class="sect3">
+<h4 id="insns-rol"><a class="anchor" href="#insns-rol"></a>rol</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -4208,6 +4488,10 @@ X(rd) = result;</code></pre>
 <dd>
 <p>rol <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:rol_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -4222,6 +4506,10 @@ X(rd) = result;</code></pre>
 <dd>
 <p>This instruction performs a rotate left of <em>rs1</em> by the amount in least-significant log2(XLEN) bits of <em>rs2</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:rol_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -4268,8 +4556,8 @@ X(rd) = result;</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-rolw"><a class="anchor" href="#insns-rolw"></a>29.5.32. rolw</h3>
+<div class="sect3">
+<h4 id="insns-rolw"><a class="anchor" href="#insns-rolw"></a>rolw</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -4280,6 +4568,10 @@ X(rd) = result;</code></pre>
 <dd>
 <p>rolw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:rolw_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -4295,6 +4587,10 @@ X(rd) = result;</code></pre>
 <p>This instruction performs a rotate left on the least-significant word of  <em>rs1</em> by the amount in least-significant 5 bits of <em>rs2</em>.
 The resulting word value is sign-extended by copying bit 31 to all of the more-significant bits.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:rolw_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -4339,8 +4635,8 @@ X(rd) = EXTS(result[31..0]);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-ror"><a class="anchor" href="#insns-ror"></a>29.5.33. ror</h3>
+<div class="sect3">
+<h4 id="insns-ror"><a class="anchor" href="#insns-ror"></a>ror</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -4351,6 +4647,10 @@ X(rd) = EXTS(result[31..0]);</code></pre>
 <dd>
 <p>ror <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:ror_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -4365,6 +4665,10 @@ X(rd) = EXTS(result[31..0]);</code></pre>
 <dd>
 <p>This instruction performs a rotate right of <em>rs1</em> by the amount in least-significant log2(XLEN) bits of <em>rs2</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:ror_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -4411,8 +4715,8 @@ X(rd) = result;</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-rori"><a class="anchor" href="#insns-rori"></a>29.5.34. rori</h3>
+<div class="sect3">
+<h4 id="insns-rori"><a class="anchor" href="#insns-rori"></a>rori</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -4423,6 +4727,10 @@ X(rd) = result;</code></pre>
 <dd>
 <p>rori <em>rd</em>, <em>rs1</em>, <em>shamt</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:rori_rv32_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding (RV32)</dt>
 </dl>
 </div>
@@ -4431,7 +4739,7 @@ X(rd) = result;</code></pre>
 <img src="_images/svg-938fcfa9f20d5623c60b26ec22337b55fe5692e6.svg" alt="svg">
 </div>
 </div>
-<div class="dlist">
+<div id="norm:rori_rv64_enc" class="dlist">
 <dl>
 <dt class="hdlist1">Encoding (RV64)</dt>
 </dl>
@@ -4448,6 +4756,10 @@ X(rd) = result;</code></pre>
 <p>This instruction performs a rotate right of <em>rs1</em> by the amount in the least-significant log2(XLEN) bits of <em>shamt</em>.
 For RV32, the encodings corresponding to shamt[5]=1 are reserved.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:rori_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -4494,8 +4806,8 @@ X(rd) = result;</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-roriw"><a class="anchor" href="#insns-roriw"></a>29.5.35. roriw</h3>
+<div class="sect3">
+<h4 id="insns-roriw"><a class="anchor" href="#insns-roriw"></a>roriw</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -4506,6 +4818,10 @@ X(rd) = result;</code></pre>
 <dd>
 <p>roriw <em>rd</em>, <em>rs1</em>, <em>shamt</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:roriw_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -4524,6 +4840,10 @@ of <em>rs1</em> by the amount in the least-significant log2(XLEN) bits of
 The resulting word value is sign-extended by copying bit 31 to all of
 the more-significant bits.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:roriw_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -4567,8 +4887,8 @@ X(rd) = EXTS(result[31..0]);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-rorw"><a class="anchor" href="#insns-rorw"></a>29.5.36. rorw</h3>
+<div class="sect3">
+<h4 id="insns-rorw"><a class="anchor" href="#insns-rorw"></a>rorw</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -4579,6 +4899,10 @@ X(rd) = EXTS(result[31..0]);</code></pre>
 <dd>
 <p>rorw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:rorw_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -4594,6 +4918,10 @@ X(rd) = EXTS(result[31..0]);</code></pre>
 <p>This instruction performs a rotate right on the least-significant word of  <em>rs1</em> by the amount in least-significant 5 bits of <em>rs2</em>.
 The resultant word is sign-extended by copying bit 31 to all of the more-significant bits.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:rorw_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -4638,8 +4966,8 @@ X(rd) = EXTS(result);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-sext_b"><a class="anchor" href="#insns-sext_b"></a>29.5.37. sext.b</h3>
+<div class="sect3">
+<h4 id="insns-sext_b"><a class="anchor" href="#insns-sext_b"></a>sext.b</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -4650,6 +4978,10 @@ X(rd) = EXTS(result);</code></pre>
 <dd>
 <p>sext.b <em>rd</em>, <em>rs</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:sext_b_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -4664,6 +4996,10 @@ X(rd) = EXTS(result);</code></pre>
 <dd>
 <p>This instruction sign-extends the least-significant byte in the source to XLEN by copying the most-significant bit in the byte (i.e., bit 7) to all of the more-significant bits.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:sext_b_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -4700,8 +5036,8 @@ X(rd) = EXTS(result);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-sext_h"><a class="anchor" href="#insns-sext_h"></a>29.5.38. sext.h</h3>
+<div class="sect3">
+<h4 id="insns-sext_h"><a class="anchor" href="#insns-sext_h"></a>sext.h</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -4712,6 +5048,10 @@ X(rd) = EXTS(result);</code></pre>
 <dd>
 <p>sext.h <em>rd</em>, <em>rs</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:sext_h_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -4726,6 +5066,10 @@ X(rd) = EXTS(result);</code></pre>
 <dd>
 <p>This instruction sign-extends the least-significant halfword in <em>rs</em> to XLEN by copying the most-significant bit in the halfword (i.e., bit 15) to all of the more-significant bits.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:sext_h_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -4762,8 +5106,8 @@ X(rd) = EXTS(result);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-sh1add"><a class="anchor" href="#insns-sh1add"></a>29.5.39. sh1add</h3>
+<div class="sect3">
+<h4 id="insns-sh1add"><a class="anchor" href="#insns-sh1add"></a>sh1add</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -4774,6 +5118,10 @@ X(rd) = EXTS(result);</code></pre>
 <dd>
 <p>sh1add <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:sh1add_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -4788,6 +5136,10 @@ X(rd) = EXTS(result);</code></pre>
 <dd>
 <p>This instruction shifts <em>rs1</em> to the left by 1 bit and adds it to <em>rs2</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:sh1add_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -4824,8 +5176,8 @@ X(rd) = EXTS(result);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-sh1add_uw"><a class="anchor" href="#insns-sh1add_uw"></a>29.5.40. sh1add.uw</h3>
+<div class="sect3">
+<h4 id="insns-sh1add_uw"><a class="anchor" href="#insns-sh1add_uw"></a>sh1add.uw</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -4836,6 +5188,10 @@ X(rd) = EXTS(result);</code></pre>
 <dd>
 <p>sh1add.uw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:sh1add_uw_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -4851,6 +5207,10 @@ X(rd) = EXTS(result);</code></pre>
 <p>This instruction performs an XLEN-wide addition of two addends.
 The first addend is <em>rs2</em>. The second addend is the unsigned value formed by extracting the least-significant word of <em>rs1</em> and shifting it left by 1 place.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:sh1add_uw_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -4890,8 +5250,8 @@ X(rd) = base + (index &lt;&lt; 1);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-sh2add"><a class="anchor" href="#insns-sh2add"></a>29.5.41. sh2add</h3>
+<div class="sect3">
+<h4 id="insns-sh2add"><a class="anchor" href="#insns-sh2add"></a>sh2add</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -4902,6 +5262,10 @@ X(rd) = base + (index &lt;&lt; 1);</code></pre>
 <dd>
 <p>sh2add <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:sh2add_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -4916,6 +5280,10 @@ X(rd) = base + (index &lt;&lt; 1);</code></pre>
 <dd>
 <p>This instruction shifts <em>rs1</em> to the left by 2 places and adds it to <em>rs2</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:sh2add_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -4952,8 +5320,8 @@ X(rd) = base + (index &lt;&lt; 1);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-sh2add_uw"><a class="anchor" href="#insns-sh2add_uw"></a>29.5.42. sh2add.uw</h3>
+<div class="sect3">
+<h4 id="insns-sh2add_uw"><a class="anchor" href="#insns-sh2add_uw"></a>sh2add.uw</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -4964,6 +5332,10 @@ X(rd) = base + (index &lt;&lt; 1);</code></pre>
 <dd>
 <p>sh2add.uw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:sh2add_uw_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -4980,6 +5352,10 @@ X(rd) = base + (index &lt;&lt; 1);</code></pre>
 The first addend is <em>rs2</em>.
 The second addend is the unsigned value formed by extracting the least-significant word of <em>rs1</em> and shifting it left by 2 places.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:sh2add_uw_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -5019,8 +5395,8 @@ X(rd) = base + (index &lt;&lt; 2);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-sh3add"><a class="anchor" href="#insns-sh3add"></a>29.5.43. sh3add</h3>
+<div class="sect3">
+<h4 id="insns-sh3add"><a class="anchor" href="#insns-sh3add"></a>sh3add</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -5031,6 +5407,10 @@ X(rd) = base + (index &lt;&lt; 2);</code></pre>
 <dd>
 <p>sh3add <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:sh3add_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -5045,6 +5425,10 @@ X(rd) = base + (index &lt;&lt; 2);</code></pre>
 <dd>
 <p>This instruction shifts <em>rs1</em> to the left by 3 places and adds it to <em>rs2</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:sh3add_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -5081,8 +5465,8 @@ X(rd) = base + (index &lt;&lt; 2);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-sh3add_uw"><a class="anchor" href="#insns-sh3add_uw"></a>29.5.44. sh3add.uw</h3>
+<div class="sect3">
+<h4 id="insns-sh3add_uw"><a class="anchor" href="#insns-sh3add_uw"></a>sh3add.uw</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -5093,6 +5477,10 @@ X(rd) = base + (index &lt;&lt; 2);</code></pre>
 <dd>
 <p>sh3add.uw <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:sh3add_uw_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -5107,6 +5495,10 @@ X(rd) = base + (index &lt;&lt; 2);</code></pre>
 <dd>
 <p>This instruction performs an XLEN-wide addition of two addends. The first addend is <em>rs2</em>. The second addend is the unsigned value formed by extracting the least-significant word of <em>rs1</em> and shifting it left by 3 places.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:sh3add_uw_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -5146,8 +5538,8 @@ X(rd) = base + (index &lt;&lt; 3);</code></pre>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-slli_uw"><a class="anchor" href="#insns-slli_uw"></a>29.5.45. slli.uw</h3>
+<div class="sect3">
+<h4 id="insns-slli_uw"><a class="anchor" href="#insns-slli_uw"></a>slli.uw</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -5158,6 +5550,10 @@ X(rd) = base + (index &lt;&lt; 3);</code></pre>
 <dd>
 <p>slli.uw <em>rd</em>, <em>rs1</em>, <em>shamt</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:slli_uw_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -5172,6 +5568,10 @@ X(rd) = base + (index &lt;&lt; 3);</code></pre>
 <dd>
 <p>This instruction takes the least-significant word of <em>rs1</em>, zero-extends it, and shifts it left by the immediate.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:slli_uw_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -5223,8 +5623,8 @@ X(rd) = base + (index &lt;&lt; 3);</code></pre>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-unzip"><a class="anchor" href="#insns-unzip"></a>29.5.46. unzip</h3>
+<div class="sect3">
+<h4 id="insns-unzip"><a class="anchor" href="#insns-unzip"></a>unzip</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -5236,6 +5636,10 @@ the destination register, respectively.</p>
 <dd>
 <p>unzip <em>rd</em>, <em>rs</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:unzip_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -5253,6 +5657,10 @@ the high and low halves of a destination word.
 It is the inverse of the <a href="#insns-zip-sc">zip</a> instruction.
 This instruction is available only on RV32.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:unzip_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -5310,8 +5718,8 @@ directly.</p>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-xnor"><a class="anchor" href="#insns-xnor"></a>29.5.47. xnor</h3>
+<div class="sect3">
+<h4 id="insns-xnor"><a class="anchor" href="#insns-xnor"></a>xnor</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -5322,6 +5730,10 @@ directly.</p>
 <dd>
 <p>xnor <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:xnor_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -5336,6 +5748,10 @@ directly.</p>
 <dd>
 <p>This instruction performs the bit-wise exclusive-NOR operation on <em>rs1</em> and <em>rs2</em>.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:xnor_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -5377,8 +5793,8 @@ directly.</p>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-xperm8"><a class="anchor" href="#insns-xperm8"></a>29.5.48. xperm8</h3>
+<div class="sect3">
+<h4 id="insns-xperm8"><a class="anchor" href="#insns-xperm8"></a>xperm8</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -5389,6 +5805,10 @@ directly.</p>
 <dd>
 <p>xperm8 <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:xperm8_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -5407,6 +5827,10 @@ The <em>rs2</em> register contains a vector of XLEN/8 8-bit indexes.
 The result is each element in <em>rs2</em> replaced by the indexed element in <em>rs1</em>,
 or zero if the index into <em>rs2</em> is out of bounds.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:xperm8_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -5455,8 +5879,8 @@ function clause execute ( XPERM8 (rs2,rs1,rd)) = {
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-xperm4"><a class="anchor" href="#insns-xperm4"></a>29.5.49. xperm4</h3>
+<div class="sect3">
+<h4 id="insns-xperm4"><a class="anchor" href="#insns-xperm4"></a>xperm4</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -5467,6 +5891,10 @@ function clause execute ( XPERM8 (rs2,rs1,rd)) = {
 <dd>
 <p>xperm4 <em>rd</em>, <em>rs1</em>, <em>rs2</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:xperm4_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -5485,6 +5913,10 @@ The <em>rs2</em> register contains a vector of XLEN/4 4-bit indexes.
 The result is each element in <em>rs2</em> replaced by the indexed element in <em>rs1</em>,
 or zero if the index into <em>rs2</em> is out of bounds.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:xperm4_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -5533,8 +5965,8 @@ function clause execute ( XPERM4 (rs2,rs1,rd)) = {
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-zext_h"><a class="anchor" href="#insns-zext_h"></a>29.5.50. zext.h</h3>
+<div class="sect3">
+<h4 id="insns-zext_h"><a class="anchor" href="#insns-zext_h"></a>zext.h</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -5545,6 +5977,10 @@ function clause execute ( XPERM4 (rs2,rs1,rd)) = {
 <dd>
 <p>zext.h <em>rd</em>, <em>rs</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:zext_h_rv32_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding (RV32)</dt>
 </dl>
 </div>
@@ -5553,7 +5989,7 @@ function clause execute ( XPERM4 (rs2,rs1,rd)) = {
 <img src="_images/svg-e5193b2f300435576a16ceede38c54a2c68bb137.svg" alt="svg">
 </div>
 </div>
-<div class="dlist">
+<div id="norm:zext_h_rv64_enc" class="dlist">
 <dl>
 <dt class="hdlist1">Encoding (RV64)</dt>
 </dl>
@@ -5569,6 +6005,10 @@ function clause execute ( XPERM4 (rs2,rs1,rd)) = {
 <dd>
 <p>This instruction zero-extends the least-significant halfword of the source to XLEN by inserting 0&#8217;s into all of the bits more significant than 15.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:zext_h_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -5620,8 +6060,8 @@ function clause execute ( XPERM4 (rs2,rs1,rd)) = {
 </table>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="insns-zip"><a class="anchor" href="#insns-zip"></a>29.5.51. zip</h3>
+<div class="sect3">
+<h4 id="insns-zip"><a class="anchor" href="#insns-zip"></a>zip</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -5633,6 +6073,10 @@ bits of the destination register, respectively.</p>
 <dd>
 <p>zip <em>rd</em>, <em>rs</em></p>
 </dd>
+</dl>
+</div>
+<div id="norm:zip_enc" class="dlist">
+<dl>
 <dt class="hdlist1">Encoding</dt>
 </dl>
 </div>
@@ -5650,6 +6094,10 @@ word into odd/even bit positions in the destination word.
 It is the inverse of the <a href="#insns-unzip-sc">unzip</a> instruction.
 This instruction is available only on RV32.</p>
 </dd>
+</dl>
+</div>
+<div id="norm:zip_op" class="dlist">
+<dl>
 <dt class="hdlist1">Operation</dt>
 </dl>
 </div>
@@ -5705,162 +6153,6 @@ directly.</p>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="29-6-software-optimization-guide"><a class="anchor" href="#29-6-software-optimization-guide"></a>29.6. Software optimization guide</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="29-6-1-strlen"><a class="anchor" href="#29-6-1-strlen"></a>29.6.1. strlen</h3>
-<div class="paragraph">
-<p>The <strong>orc.b</strong> instruction allows for the efficient detection of <strong>NUL</strong> bytes in an XLEN-sized chunk of data:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>the result of <strong>orc.b</strong> on a chunk that does not contain any <strong>NUL</strong> bytes will be all-ones, and</p>
-</li>
-<li>
-<p>after a bitwise-negation of the result of <strong>orc.b</strong>, the number of data bytes before the  first <strong>NUL</strong> byte (if any) can be detected by <strong>ctz</strong>/<strong>clz</strong> (depending on the endianness of data).</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>A full example of a <strong>strlen</strong> function, which uses these techniques and also demonstrates the use of it for unaligned/partial data, is the following:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">#include &lt;sys/asm.h&gt;
-
-    .text
-    .globl strlen
-    .type  strlen, @function
-strlen:
-    andi    a3, a0, (SZREG-1)   // offset
-    andi    a1, a0, -SZREG      // align pointer
-.Lprologue:
-    li      a4, SZREG
-    sub     a4, a4, a3          // XLEN - offset
-    slli    a3, a3, 3           // offset * 8
-    REG_L   a2, 0(a1)           // chunk
-    /*
-     * Shift the partial/unaligned chunk we loaded to remove the bytes
-     * from before the start of the string, adding NUL bytes at the end.
-     */
-#if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
-    srl     a2, a2 ,a3          // chunk &gt;&gt; (offset * 8)
-#else
-    sll     a2, a2, a3
-#endif
-    orc.b   a2, a2
-    not     a2, a2
-    /*
-     * Non-NUL bytes in the string have been expanded to 0x00, while
-     * NUL bytes have become 0xff.  Search for the first set bit
-     * (corresponding to a NUL byte in the original chunk).
-     */
-#if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
-    ctz     a2, a2
-#else
-    clz     a2, a2
-#endif
-    /*
-     * The first chunk is special: compare against the number of valid
-     * bytes in this chunk.
-     */
-    srli    a0, a2, 3
-    bgtu    a4, a0, .Ldone
-    addi    a3, a1, SZREG
-    li      a4, -1
-    .align 2
-    /*
-     * Our critical loop is 4 instructions and processes data in 4 byte
-     * or 8 byte chunks.
-     */
-.Lloop:
-    REG_L   a2, SZREG(a1)
-    addi    a1, a1, SZREG
-    orc.b   a2, a2
-    beq     a2, a4, .Lloop
-
-.Lepilogue:
-    not     a2, a2
-#if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
-    ctz     a2, a2
-#else
-    clz     a2, a2
-#endif
-    sub     a1, a1, a3
-    add     a0, a0, a1
-    srli    a2, a2, 3
-    add     a0, a0, a2
-.Ldone:
-    ret</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="29-6-2-strcmp"><a class="anchor" href="#29-6-2-strcmp"></a>29.6.2. strcmp</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">#include &lt;sys/asm.h&gt;
-
-  .text
-  .globl strcmp
-  .type  strcmp, @function
-strcmp:
-  or    a4, a0, a1
-  li    t2, -1
-  and   a4, a4, SZREG-1
-  bnez  a4, .Lsimpleloop
-
-  # Main loop for aligned strings
-.Lloop:
-  REG_L a2, 0(a0)
-  REG_L a3, 0(a1)
-  orc.b t0, a2
-  bne   t0, t2, .Lfoundnull
-  addi  a0, a0, SZREG
-  addi  a1, a1, SZREG
-  beq   a2, a3, .Lloop
-
-  # Words don't match, and no null byte in first word.
-  # Get bytes in big-endian order and compare.
-#if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
-  rev8  a2, a2
-  rev8  a3, a3
-#endif
-  # Synthesize (a2 &gt;= a3) ? 1 : -1 in a branchless sequence.
-  sltu a0, a2, a3
-  neg  a0, a0
-  ori  a0, a0, 1
-  ret
-
-.Lfoundnull:
-  # Found a null byte.
-  # If words don't match, fall back to simple loop.
-  bne   a2, a3, .Lsimpleloop
-
-  # Otherwise, strings are equal.
-  li    a0, 0
-  ret
-
-  # Simple loop for misaligned strings
-.Lsimpleloop:
-  lbu   a2, 0(a0)
-  lbu   a3, 0(a1)
-  addi  a0, a0, 1
-  addi  a1, a1, 1
-  bne   a2, a3, 1f
-  bnez  a2, .Lsimpleloop
-
-1:
-  sub   a0, a2, a3
-  ret
-
-.size   strcmp, .-strcmp</code></pre>
-</div>
 </div>
 </div>
 </div>

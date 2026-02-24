@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0 :: RISC-V Ratified Specifications Library</title>
+    <title>Untitled :: RISC-V Ratified Specifications Library</title>
     <link rel="canonical" href="https://docs.riscv.org/isa/unpriv/cmo.html">
     <link rel="prev" href="ztso-st-ext.html">
     <link rel="next" href="f-st-ext.html">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
     <meta name="antora-ui-version" content="7c7bd9946ded257ce7e3474127cd0623096613e3"> 
-    <meta name="version" content="v20250508">
+    <meta name="version" content="v20260120">
     <meta name="component" content="isa">
     <meta name="latest-version" content="true">
     <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -273,7 +273,7 @@
     }
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script><div class="body">
-<div class="nav-container" data-component="isa" data-version="v20250508">
+<div class="nav-container" data-component="isa" data-version="v20260120">
   <aside class="nav">
     <div class="panels">
       <div class="nav-panel-menu is-active" data-panel="menu">
@@ -284,10 +284,17 @@
       <select data-component="isa" class="select-version">
           <option
             value="../index.html"
-            data-version="v20250508"
+            data-version="v20260120"
             
             selected>
             Latest
+          </option>
+          <option
+            value="../v20250508/index.html"
+            data-version="v20250508"
+            
+            >
+            Version: 20250508
           </option>
           <option
             value="../v20240411/index.html"
@@ -328,7 +335,7 @@
     <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -406,7 +413,7 @@
     <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
@@ -415,22 +422,16 @@
     <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">Chapter 37. Document Revision History</a>
+    <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="calling-convention.html">Appendix C: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -448,64 +449,64 @@
     <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../priv/priv-intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smepmp.html">"Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smdbltrp.html">"Smdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smctr.html">"Smctr" Control Transfer Records Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/supervisor.html">Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
+    <a class="nav-link"  href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/ssdbltrp.html">"Ssdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
+    <a class="nav-link"  href="../priv/zpm.html">Pointer Masking Extensions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link"  href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
+    <a class="nav-link"  href="../priv/priv-history.html">History</a>
   </li>
 </ul>
   </li>
@@ -556,7 +557,7 @@
     </div>
     <div
       class="toc"
-      data-title=""CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0"
+      data-title=""
       data-levels="5"
     >
       <div class="toc-menu"></div>
@@ -645,19 +646,18 @@
       <li><a href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a></li>
     </ul>
   </nav>
-</div><h1 id="page-title" class="page">"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</h1>
-<div class="sect1">
-<h2 id="19-1-pseudocode-for-instruction-semantics"><a class="anchor" href="#19-1-pseudocode-for-instruction-semantics"></a>19.1. Pseudocode for instruction semantics</h2>
+</div><div class="sect1">
+<h2 id="cmo"><a class="anchor" href="#cmo"></a>"CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="pseudocode-for-instruction-semantics"><a class="anchor" href="#pseudocode-for-instruction-semantics"></a>Pseudocode for instruction semantics</h3>
 <div class="paragraph">
 <p>The semantics of each instruction in the <a href="#insns">Instructions</a> chapter is expressed in a
 SAIL-like syntax.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="intro-cmo"><a class="anchor" href="#intro-cmo"></a>19.2. Introduction</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="intro-cmo"><a class="anchor" href="#intro-cmo"></a>Introduction</h3>
 <div class="paragraph">
 <p><em>Cache-management operation</em> (or <em>CMO</em>) instructions perform operations on
 copies of data in the memory hierarchy. In general, CMO instructions operate on
@@ -729,15 +729,13 @@ blocks. The first CMO extensions only define CBOs.</em></p>
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="background"><a class="anchor" href="#background"></a>19.3. Background</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="background"><a class="anchor" href="#background"></a>Background</h3>
 <div class="paragraph">
 <p>This chapter provides information common to all CMO extensions.</p>
 </div>
-<div class="sect2">
-<h3 id="memory-caches"><a class="anchor" href="#memory-caches"></a>19.3.1. Memory and Caches</h3>
+<div class="sect3">
+<h4 id="memory-caches"><a class="anchor" href="#memory-caches"></a>Memory and Caches</h4>
 <div class="paragraph">
 <p>A <em>memory location</em> is a physical resource in a system uniquely identified by a
 <em>physical address</em>. An <em>agent</em> is a logic block, such as a RISC-V hart,
@@ -827,8 +825,8 @@ the copy were modified by a store operation. Additional details are discussed in
 <a href="#coherent-agents-caches">Coherent Agents and Caches</a>.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="19-3-2-cache-block-operations"><a class="anchor" href="#19-3-2-cache-block-operations"></a>19.3.2. Cache-Block Operations</h3>
+<div class="sect3">
+<h4 id="cache-block-operations"><a class="anchor" href="#cache-block-operations"></a>Cache-Block Operations</h4>
 <div class="paragraph">
 <p>A CBO instruction causes one or more operations to be performed on the cache
 blocks identified by the instruction. In general, a CBO instruction may identify
@@ -875,10 +873,8 @@ Additional details are described in <a href="#Zicbop">Cache-Block Prefetch Instr
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="coherent-agents-caches"><a class="anchor" href="#coherent-agents-caches"></a>19.4. Coherent Agents and Caches</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="coherent-agents-caches"><a class="anchor" href="#coherent-agents-caches"></a>Coherent Agents and Caches</h3>
 <div class="paragraph">
 <p>For a given memory location, a <em>set of coherent agents</em> consists of the agents
 for which all of the following hold:</p>
@@ -993,10 +989,10 @@ memory from a non-coherent agent.</em></p>
 set of coherent caches accessed by a set of coherent agents. The mechanism to
 perform such an operation is <em>implementation-specific</em>.</p>
 </div>
-<div class="sect2">
-<h3 id="19-4-1-memory-ordering"><a class="anchor" href="#19-4-1-memory-ordering"></a>19.4.1. Memory Ordering</h3>
 <div class="sect3">
-<h4 id="19-4-1-1-preserved-program-order"><a class="anchor" href="#19-4-1-1-preserved-program-order"></a>19.4.1.1. Preserved Program Order</h4>
+<h4 id="memory-ordering"><a class="anchor" href="#memory-ordering"></a>Memory Ordering</h4>
+<div class="sect4">
+<h5 id="preserved-program-order"><a class="anchor" href="#preserved-program-order"></a>Preserved Program Order</h5>
 <div class="paragraph">
 <p>The preserved program order (abbreviated <em>PPO</em>) rules are defined by the RVWMO
 memory ordering model. How the operations resulting from CMO instructions fit
@@ -1005,14 +1001,14 @@ into these rules is described below.</p>
 <div class="paragraph">
 <p>For cache-block management instructions, the resulting invalidate, clean, and
 flush operations behave as stores in the PPO rules subject to one additional
-overlapping address rule. Specifically, if <em>a</em> precedes <em>b</em> in program order,
-then <em>a</em> will precede <em>b</em> in the global memory order if:</p>
+overlapping address rule. Specifically, <span id="norm:PPO_overlap_1">if <em>a</em> precedes <em>b</em> in program order,
+then <em>a</em> will precede <em>b</em> in the global memory order if:</span></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><em>a</em> is an invalidate, clean, or flush, <em>b</em> is a load, and <em>a</em> and <em>b</em> access
-overlapping memory addresses</p>
+<p><span id="norm:PPO_overlap_2"><em>a</em> is an invalidate, clean, or flush, <em>b</em> is a load, and <em>a</em> and <em>b</em> access
+overlapping memory addresses</span></p>
 </li>
 </ul>
 </div>
@@ -1049,8 +1045,8 @@ stores in the PPO rules and are ordered by other instructions that order stores.
 instructions.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="19-4-1-2-load-values"><a class="anchor" href="#19-4-1-2-load-values"></a>19.4.1.2. Load Values</h4>
+<div class="sect4">
+<h5 id="load-values"><a class="anchor" href="#load-values"></a>Load Values</h5>
 <div class="paragraph">
 <p>An invalidate operation may change the set of values that can be returned by a
 load. In particular, an additional condition is added to the Load Value Axiom:</p>
@@ -1065,27 +1061,27 @@ values for <em>x</em>:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>If no clean or flush operations on <em>x</em> precede <em>i</em> in the global memory order,
+<p><span id="norm:invalidate_load_val1">If no clean or flush operations on <em>x</em> precede <em>i</em> in the global memory order,
 either the initial value of <em>x</em> or the value of any store to <em>x</em> that precedes
-<em>i</em></p>
+<em>i</em></span></p>
 </li>
 <li>
-<p>If no store to <em>x</em> precedes a clean or flush operation on <em>x</em> in the global
+<p><span id="norm:invalidate_load_val2">If no store to <em>x</em> precedes a clean or flush operation on <em>x</em> in the global
 memory order and if the clean or flush operation on <em>x</em> precedes <em>i</em> in the
 global memory order, either the initial value of <em>x</em> or the value of any store
-to <em>x</em> that precedes <em>i</em></p>
+to <em>x</em> that precedes <em>i</em></span></p>
 </li>
 <li>
-<p>If a store to <em>x</em> precedes a clean or flush operation on <em>x</em> in the global
+<p><span id="norm:invalidate_load_val3">If a store to <em>x</em> precedes a clean or flush operation on <em>x</em> in the global
 memory order and if the clean or flush operation on <em>x</em> precedes <em>i</em> in the
 global memory order, either the value of the latest store to <em>x</em> that precedes
 the latest clean or flush operation on <em>x</em> or the value of any store to <em>x</em>
 that both precedes <em>i</em> and succeeds the latest clean or flush operation on <em>x</em>
-that precedes <em>i</em></p>
+that precedes <em>i</em></span></p>
 </li>
 <li>
-<p>The value of any store to <em>x</em> by a non-coherent agent regardless of the above
-conditions</p>
+<p><span id="norm:invalidate_load_val4">The value of any store to <em>x</em> by a non-coherent agent regardless of the above
+conditions</span></p>
 </li>
 </ol>
 </div>
@@ -1111,16 +1107,16 @@ any time.</em></p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="19-4-2-traps"><a class="anchor" href="#19-4-2-traps"></a>19.4.2. Traps</h3>
+<div class="sect3">
+<h4 id="traps"><a class="anchor" href="#traps"></a>Traps</h4>
 <div class="paragraph">
 <p>Execution of certain CMO instructions may result in traps due to CSR state,
 described in the <a href="#csr_state">Control and Status Register State</a> section, or due to the address translation and
 protection mechanisms. The trapping behavior of CMO instructions is described in
 the following sections.</p>
 </div>
-<div class="sect3">
-<h4 id="19-4-2-1-illegal-instruction-and-virtual-instruction-exceptions"><a class="anchor" href="#19-4-2-1-illegal-instruction-and-virtual-instruction-exceptions"></a>19.4.2.1. Illegal-Instruction and Virtual-Instruction Exceptions</h4>
+<div class="sect4">
+<h5 id="illegal-instruction-and-virtual-instruction-exceptions"><a class="anchor" href="#illegal-instruction-and-virtual-instruction-exceptions"></a>Illegal-Instruction and Virtual-Instruction Exceptions</h5>
 <div class="paragraph">
 <p>Cache-block management instructions and cache-block zero instructions may raise
 illegal-instruction exceptions or virtual-instruction exceptions depending on
@@ -1132,8 +1128,8 @@ in the <a href="#csr_state">Control and Status Register State</a> section.</p>
 nor virtual-instruction exceptions.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="19-4-2-2-page-fault-guest-page-fault-and-access-fault-exceptions"><a class="anchor" href="#19-4-2-2-page-fault-guest-page-fault-and-access-fault-exceptions"></a>19.4.2.2. Page-Fault, Guest-Page-Fault, and Access-Fault Exceptions</h4>
+<div class="sect4">
+<h5 id="page-fault-guest-page-fault-and-access-fault-exceptions"><a class="anchor" href="#page-fault-guest-page-fault-and-access-fault-exceptions"></a>Page-Fault, Guest-Page-Fault, and Access-Fault Exceptions</h5>
 <div class="paragraph">
 <p>Similar to load and store instructions, CMO instructions are explicit memory
 access instructions that compute an effective address. The effective address is
@@ -1144,20 +1140,20 @@ constraints on the physical addresses in a given cache block:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The PMP access control bits shall be the same for <em>all</em> physical addresses in
+<p><span id="norm:PMP_same">The PMP access control bits shall be the same for <em>all</em> physical addresses in
 the cache block, and if write permission is granted by the PMP access control
-bits, read permission shall also be granted</p>
+bits, read permission shall also be granted</span></p>
 </li>
 <li>
-<p>The PMAs shall be the same for <em>all</em> physical addresses in the cache block,
+<p><span id="norm:PMA_same">The PMAs shall be the same for <em>all</em> physical addresses in the cache block,
 and if write permission is granted by the supported access type PMAs, read
-permission shall also be granted</p>
+permission shall also be granted</span></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>If the above constraints are not met, the behavior of a CBO instruction is
-UNSPECIFIED.</p>
+<p><span id="norm:cbo_rsv">If the above constraints are not met, the behavior of a CBO instruction is
+UNSPECIFIED.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1174,9 +1170,25 @@ main memory regions and may be met for certain I/O regions.</em></p>
 </tr>
 </table>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Additionally, for the purposes of PMP and PMA checks, the access size of a CMO
-instruction equals the size of the cache block accessed by the instruction.</p>
+<p>The access size for CMO instructions is equal to the size of the cache
+block, however in some cases that access can be decomposed into multiple
+memory operations. PMP checks are applied to each memory operation
+independently. For example a 64-byte <strong>cbo.zero</strong> that spans two 32-byte PMP
+regions would succeed if it was decomposed into two 32-byte memory operations
+(and the PMP access control bits are the same in both regions), but if
+performed as a single 64-byte memory operation it would cause an access fault.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>The Zicboz extension introduces an additional supported access type PMA for
@@ -1185,17 +1197,17 @@ accesses by cache-block zero instructions; however, I/O regions may specify
 whether accesses by cache-block zero instructions are supported.</p>
 </div>
 <div class="paragraph">
-<p>A cache-block management instruction is permitted to access the specified cache
+<p><span id="norm:cbm_access">A cache-block management instruction is permitted to access the specified cache
 block whenever a load instruction or store instruction is permitted to access
-the corresponding physical addresses. If neither a load instruction nor store
+the corresponding physical addresses.</span> If neither a load instruction nor store
 instruction is permitted to access the physical addresses, but an instruction
 fetch is permitted to access the physical addresses, whether a cache-block
-management instruction is permitted to access the cache block is UNSPECIFIED. If
+management instruction is permitted to access the cache block is UNSPECIFIED. <span id="norm:cbm_unperm_fault">If
 access to the cache block is not permitted, a cache-block management instruction
 raises a store page-fault or store guest-page-fault exception if address
 translation does not permit any access or raises a store access-fault exception
-otherwise. During address translation, the instruction also checks the accessed
-bit and may either raise an exception or set the bit as required.</p>
+otherwise.</span> <span id="norm:cbm_unperm_translate">During address translation, the instruction also checks the accessed
+bit and may either raise an exception or set the bit as required.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1217,29 +1229,29 @@ dirty bit and neither raises an exception nor sets the bit.</em></p>
 </table>
 </div>
 <div class="paragraph">
-<p>A cache-block zero instruction is permitted to access the specified cache block
+<p><span id="norm:cbz_access">A cache-block zero instruction is permitted to access the specified cache block
 whenever a store instruction is permitted to access the corresponding physical
 addresses and when the PMAs indicate that cache-block zero instructions are a
-supported access type. If access to the cache block is not permitted, a
+supported access type.</span> <span id="norm:cbz_unperm_fault">If access to the cache block is not permitted, a
 cache-block zero instruction raises a store page-fault or store guest-page-fault
 exception if address translation does not permit write access or raises a store
-access-fault exception otherwise. During address translation, the instruction
+access-fault exception otherwise.</span> <span id="norm:cbz_unperm_translate">During address translation, the instruction
 also checks the accessed and dirty bits and may either raise an exception or set
-the bits as required.</p>
+the bits as required.</span></p>
 </div>
 <div class="paragraph">
-<p>A cache-block prefetch instruction is permitted to access the specified cache
+<p><span id="norm:cbp_access">A cache-block prefetch instruction is permitted to access the specified cache
 block whenever a load instruction, store instruction, or instruction fetch is
-permitted to access the corresponding physical addresses. If access to the cache
+permitted to access the corresponding physical addresses.</span> <span id="norm:cbp_unperm_noexcep">If access to the cache
 block is not permitted, a cache-block prefetch instruction does not raise any
-exceptions and shall not access any caches or memory. During address
+exceptions and shall not access any caches or memory.</span> <span id="norm:cbp_unperm_translate">During address
 translation, the instruction does <em>not</em> check the accessed and dirty bits and
-neither raises an exception nor sets the bits.</p>
+neither raises an exception nor sets the bits.</span></p>
 </div>
 <div class="paragraph">
-<p>When a page-fault, guest-page-fault, or access-fault exception is taken, the
+<p><span id="norm:fault_excep_csr">When a page-fault, guest-page-fault, or access-fault exception is taken, the
 relevant *tval CSR is written with the faulting effective address (i.e. the
-value of <em>rs1</em>).</p>
+value of <em>rs1</em>).</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1264,14 +1276,14 @@ appropriate for these instructions, regardless of the permissions required.</em>
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="19-4-2-3-address-misaligned-exceptions"><a class="anchor" href="#19-4-2-3-address-misaligned-exceptions"></a>19.4.2.3. Address-Misaligned Exceptions</h4>
-<div class="paragraph">
+<div class="sect4">
+<h5 id="address-misaligned-exceptions"><a class="anchor" href="#address-misaligned-exceptions"></a>Address-Misaligned Exceptions</h5>
+<div id="norm:no_addr_misaligned_excep" class="paragraph">
 <p>CMO instructions do <em>not</em> generate address-misaligned exceptions.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="19-4-2-4-breakpoint-exceptions-and-debug-mode-entry"><a class="anchor" href="#19-4-2-4-breakpoint-exceptions-and-debug-mode-entry"></a>19.4.2.4. Breakpoint Exceptions and Debug Mode Entry</h4>
+<div class="sect4">
+<h5 id="breakpoint-exceptions-and-debug-mode-entry"><a class="anchor" href="#breakpoint-exceptions-and-debug-mode-entry"></a>Breakpoint Exceptions and Debug Mode Entry</h5>
 <div class="paragraph">
 <p>Unless otherwise defined by the debug architecture specification, the behavior
 of trigger modules with respect to CMO instructions is UNSPECIFIED.</p>
@@ -1378,9 +1390,9 @@ Zicbom and Zicbop extensions is expected to be defined in future extensions.</em
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="19-4-2-5-hypervisor-extension"><a class="anchor" href="#19-4-2-5-hypervisor-extension"></a>19.4.2.5. Hypervisor Extension</h4>
-<div class="paragraph">
+<div class="sect4">
+<h5 id="hypervisor-extension"><a class="anchor" href="#hypervisor-extension"></a>Hypervisor Extension</h5>
+<div id="norm:h_trans_cache" class="paragraph">
 <p>For the purposes of writing the <code>mtinst</code> or <code>htinst</code> register on a trap, the
 following standard transformation is defined for cache-block management
 instructions and cache-block zero instructions:</p>
@@ -1411,8 +1423,8 @@ or <code>htinst</code> instead of the standard transformation defined above.</em
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="19-4-3-effects-on-constrained-lrsc-loops"><a class="anchor" href="#19-4-3-effects-on-constrained-lrsc-loops"></a>19.4.3. Effects on Constrained LR/SC Loops</h3>
+<div class="sect3">
+<h4 id="effects-on-constrained-lrsc-loops"><a class="anchor" href="#effects-on-constrained-lrsc-loops"></a>Effects on Constrained LR/SC Loops</h4>
 <div class="paragraph">
 <p>The following event is added to the list of events that satisfy the eventuality
 guarantee provided by constrained LR/SC loops, as defined in the A extension:</p>
@@ -1452,8 +1464,8 @@ LR/SC loops executed on any hart.</em></p>
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="19-4-4-software-discovery"><a class="anchor" href="#19-4-4-software-discovery"></a>19.4.4. Software Discovery</h3>
+<div class="sect3">
+<h4 id="software-discovery"><a class="anchor" href="#software-discovery"></a>Software Discovery</h4>
 <div class="paragraph">
 <p>The initial set of CMO extensions requires the following information to be
 discovered by software:</p>
@@ -1477,130 +1489,13 @@ mechanism.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="csr_state"><a class="anchor" href="#csr_state"></a>19.5. Control and Status Register State</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Three CSRs control the execution of CMO instructions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>menvcfg</code></p>
-</li>
-<li>
-<p><code>senvcfg</code></p>
-</li>
-<li>
-<p><code>henvcfg</code></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The <code>senvcfg</code> register is used by all supervisor modes, including VS-mode. A
-hypervisor is responsible for saving and restoring <code>senvcfg</code> on guest context
-switches. The <code>henvcfg</code> register is only present if the H-extension is
-implemented and enabled.</p>
-</div>
-<div class="paragraph">
-<p>Each <code>xenvcfg</code> register (where <code>x</code> is <code>m</code>, <code>s</code>, or <code>h</code>) has the following
-generic format:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Generic Format for xenvcfg CSRs</caption>
-<colgroup>
-<col style="width: 10%;">
-<col style="width: 10%;">
-<col style="width: 80%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-center valign-top">Bits</th>
-<th class="tableblock halign-center valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">[5:4]</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>CBIE</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Cache Block Invalidate instruction Enable.  <strong>WARL</strong>.</p>
-</div>
-<div class="paragraph">
-<p>Enables the execution of the cache block invalidate instruction, <code>CBO.INVAL</code>, in
-a lower privilege mode:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>00</code>: The instruction raises an illegal-instruction or virtual-instruction
-exception</p>
-</li>
-<li>
-<p><code>01</code>: The instruction is executed and performs a flush operation</p>
-</li>
-<li>
-<p><code>10</code>: <em>Reserved</em></p>
-</li>
-<li>
-<p><code>11</code>: The instruction is executed and performs an invalidate operation</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">[6]</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>CBCFE</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Cache Block Clean and Flush instruction Enable</p>
-</div>
-<div class="paragraph">
-<p>Enables the execution of the cache block clean instruction, <code>CBO.CLEAN</code>, and the
-cache block flush instruction, <code>CBO.FLUSH</code>, in a lower privilege mode:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>0</code>: The instruction raises an illegal-instruction or virtual-instruction
-exception</p>
-</li>
-<li>
-<p><code>1</code>: The instruction is executed</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">[7]</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>CBZE</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Cache Block Zero instruction Enable</p>
-</div>
-<div class="paragraph">
-<p>Enables the execution of the cache block zero instruction, <code>CBO.ZERO</code>, in a
-lower privilege mode:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>0</code>: The instruction raises an illegal-instruction or virtual-instruction
-exception</p>
-</li>
-<li>
-<p><code>1</code>: The instruction is executed</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-</tbody>
-</table>
+<div class="sect2">
+<h3 id="csr_state"><a class="anchor" href="#csr_state"></a>CSR controls for CMO instructions</h3>
 <div class="paragraph">
 <p>The xenvcfg registers control CBO instruction execution based on the current
 privilege mode and the state of the appropriate CSRs, as detailed below.</p>
 </div>
-<div class="paragraph">
+<div id="norm:cbo-inval" class="paragraph">
 <p>A <code>CBO.INVAL</code> instruction executes or raises either an illegal-instruction
 exception or a virtual-instruction exception based on the state of the
 <code>xenvcfg.CBIE</code> fields:</p>
@@ -1661,9 +1556,9 @@ either traps or performs a flush operation in a lower privileged level.</em></p>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>A <code>CBO.CLEAN</code> or <code>CBO.FLUSH</code> instruction executes or raises an illegal
-instruction or virtual-instruction exception based on the state of the
+<div id="norm:cbo-clean_cbo-flush" class="paragraph">
+<p>A <code>CBO.CLEAN</code> or <code>CBO.FLUSH</code> instruction executes or raises an illegal-instruction
+or virtual-instruction exception based on the state of the
 <code>xenvcfg.CBCFE</code> bits:</p>
 </div>
 <div class="listingblock">
@@ -1687,7 +1582,7 @@ else
 }</code></pre>
 </div>
 </div>
-<div class="paragraph">
+<div id="norm:cbo-zero_basedon_xenvcfg-CBZE" class="paragraph">
 <p>Finally, a <code>CBO.ZERO</code> instruction executes or raises an illegal-instruction or
 virtual-instruction exception based on the state of the <code>xenvcfg.CBZE</code> bits:</p>
 </div>
@@ -1712,15 +1607,17 @@ else
 }</code></pre>
 </div>
 </div>
+<div id="norm:cbxe_unaffected" class="paragraph">
+<p>The CBIE/CBCFE/CBZE fields in each <code>xenvcfg</code> register do not affect the
+read and write behavior of the same fields in the other <code>xenvcfg</code> registers.</p>
+</div>
 <div class="paragraph">
 <p>Each <code>xenvcfg</code> register is WARL; however, software should determine the legal
 values from the execution environment discovery mechanism.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="extensions"><a class="anchor" href="#extensions"></a>19.6. Extensions</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="extensions"><a class="anchor" href="#extensions"></a>Extensions</h3>
 <div class="paragraph">
 <p>CMO instructions are defined in the following extensions:</p>
 </div>
@@ -1737,8 +1634,8 @@ values from the execution environment discovery mechanism.</p>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="Zicbom"><a class="anchor" href="#Zicbom"></a>19.6.1. Cache-Block Management Instructions</h3>
+<div class="sect3">
+<h4 id="Zicbom"><a class="anchor" href="#Zicbom"></a>Cache-Block Management Instructions</h4>
 <div class="paragraph">
 <p>Cache-block management instructions enable software running on a set of coherent
 agents to communicate with a set of non-coherent agents by performing one of the
@@ -1818,28 +1715,44 @@ physical address by the appropriate translation mechanisms.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">cbo.clean <em>base</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-cbo_clean">Cache Block Clean</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">cbo.flush <em>base</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-cbo_flush">Cache Block Flush</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">cbo.inval <em>base</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-cbo_inval">Cache Block Invalidate</a></p></td>
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><em>Cache-block management instructions ignore cacheability attributes and operate
+on the cache block irrespective of the PMA cacheable attribute and any Page-Based
+Memory Type (PBMT) downgrade from cacheable to non-cacheable.</em></p>
 </div>
-<div class="sect2">
-<h3 id="Zicboz"><a class="anchor" href="#Zicboz"></a>19.6.2. Cache-Block Zero Instructions</h3>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Zicboz"><a class="anchor" href="#Zicboz"></a>Cache-Block Zero Instructions</h4>
 <div class="paragraph">
 <p>Cache-block zero instructions store zeros to the set of bytes corresponding to a
 cache block. An implementation may update the bytes in any order and with any
@@ -1862,8 +1775,8 @@ does not constrain how the bytes are written.</em></p>
 </table>
 </div>
 <div class="paragraph">
-<p>These instructions operate on the cache block, or the memory locations
-corresponding to the cache block, whose effective address is specified in <em>rs1</em>.
+<p><span id="norm:cbo-zero_specified_block">These instructions operate on the cache block, or the memory locations
+corresponding to the cache block, whose effective address is specified in <em>rs1</em>.</span>
 The effective address is translated into a corresponding physical address by the
 appropriate translation mechanisms.</p>
 </div>
@@ -1887,16 +1800,16 @@ appropriate translation mechanisms.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">cbo.zero <em>base</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-cbo_zero">Cache Block Zero</a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="sect2">
-<h3 id="Zicbop"><a class="anchor" href="#Zicbop"></a>19.6.3. Cache-Block Prefetch Instructions</h3>
+<div class="sect3">
+<h4 id="Zicbop"><a class="anchor" href="#Zicbop"></a>Cache-Block Prefetch Instructions</h4>
 <div class="paragraph">
 <p>Cache-block prefetch instructions are HINTs to the hardware to indicate that
 software intends to perform a particular type of memory access in the near
@@ -1904,9 +1817,9 @@ future. The types of memory accesses are instruction fetch, data read (i.e.
 load), and data write (i.e. store).</p>
 </div>
 <div class="paragraph">
-<p>These instructions operate on the cache block whose effective address is the sum
+<p><span id="norm:prefetch_operating_block">These instructions operate on the cache block whose effective address is the sum
 of the base address specified in <em>rs1</em> and the sign-extended offset encoded in
-<em>imm[11:0]</em>, where <em>imm[4:0]</em> shall equal <code>0b00000</code>. The effective address is
+<em>imm[11:0]</em>, where <em>imm[4:0]</em> shall equal <code>0b00000</code>.</span> The effective address is
 translated into a corresponding physical address by the appropriate translation
 mechanisms.</p>
 </div>
@@ -1946,20 +1859,20 @@ field is also interpreted as imm[4:0] like a store instruction.</em></p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">prefetch.i <em>offset</em>(<em>base</em>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-prefetch_i">Cache Block Prefetch for Instruction Fetch</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">prefetch.r <em>offset</em>(<em>base</em>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-prefetch_r">Cache Block Prefetch for Data Read</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">&#10003;</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">✓</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">prefetch.w <em>offset</em>(<em>base</em>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#insns-prefetch_w">Cache Block Prefetch for Data Write</a></p></td>
 </tr>
@@ -1967,12 +1880,10 @@ field is also interpreted as imm[4:0] like a store instruction.</em></p>
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="insns"><a class="anchor" href="#insns"></a>19.7. Instructions</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="insns-cbo_clean"><a class="anchor" href="#insns-cbo_clean"></a>19.7.1. cbo.clean</h3>
+<h3 id="insns"><a class="anchor" href="#insns"></a>Instructions</h3>
+<div class="sect3">
+<h4 id="insns-cbo_clean"><a class="anchor" href="#insns-cbo_clean"></a>cbo.clean</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -1995,10 +1906,10 @@ field is also interpreted as imm[4:0] like a store instruction.</em></p>
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>A <strong>cbo.clean</strong> instruction performs a clean operation on the cache block whose
-effective address is the base address specified in <em>rs1</em>. The offset operand may
+<p><span id="norm:cbo-clean_op">A <strong>cbo.clean</strong> instruction performs a clean operation on the cache block whose
+effective address is the base address specified in <em>rs1</em>.</span> <span id="norm:cbo-clean_offset">The offset operand may
 be omitted; otherwise, any expression that computes the offset shall evaluate to
-zero. The instruction operates on the set of coherent caches accessed by the
+zero.</span> The instruction operates on the set of coherent caches accessed by the
 agent executing the instruction.</p>
 </dd>
 </dl>
@@ -2020,19 +1931,9 @@ copies in the set of coherent caches.</em></p>
 </tr>
 </table>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Operation</dt>
-</dl>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">TODO</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="insns-cbo_flush"><a class="anchor" href="#insns-cbo_flush"></a>19.7.2. cbo.flush</h3>
+<div class="sect3">
+<h4 id="insns-cbo_flush"><a class="anchor" href="#insns-cbo_flush"></a>cbo.flush</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2055,9 +1956,9 @@ copies in the set of coherent caches.</em></p>
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>A <strong>cbo.flush</strong> instruction performs a flush operation on the cache block whose
-that contains the address specified in <em>rs1</em>. It is not required that <em>rs1</em> is
-aligned to the size of a cache block. On faults, the faulting virtual address
+<p><span id="norm:cbo-flush_op">A <strong>cbo.flush</strong> instruction performs a flush operation on the cache block whose
+that contains the address specified in <em>rs1</em>.</span> <span id="norm:cbo-flush_unaligned">It is not required that <em>rs1</em> is
+aligned to the size of a cache block.</span> On faults, the faulting virtual address
 is considered to be the value in rs1, rather than the base address of the cache
 block. The instruction operates on the set of coherent caches accessed by the
 agent executing the instruction.</p>
@@ -2068,19 +1969,9 @@ agent executing the instruction.</p>
 <p>The assembly <em>offset</em> operand may be omitted. If it isn&#8217;t then any expression
 that computes the offset shall evaluate to zero.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Operation</dt>
-</dl>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">TODO</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="insns-cbo_inval"><a class="anchor" href="#insns-cbo_inval"></a>19.7.3. cbo.inval</h3>
+<div class="sect3">
+<h4 id="insns-cbo_inval"><a class="anchor" href="#insns-cbo_inval"></a>cbo.inval</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2103,9 +1994,9 @@ that computes the offset shall evaluate to zero.</p>
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>A <strong>cbo.inval</strong> instruction performs an invalidate operation on the cache block
-that contains the address specified in <em>rs1</em>. It is not required that <em>rs1</em> is
-aligned to the size of a cache block. On faults, the faulting virtual address
+<p><span id="norm:cbo-inval_op">A <strong>cbo.inval</strong> instruction performs an invalidate operation on the cache block
+that contains the address specified in <em>rs1</em>.</span> <span id="norm:cbo-inval_unaligned">It is not required that <em>rs1</em> is
+aligned to the size of a cache block.</span> On faults, the faulting virtual address
 is considered to be the value in rs1, rather than the base address of the cache
 block. The instruction operates on the set of coherent caches accessed by the
 agent executing the instruction.</p>
@@ -2137,19 +2028,9 @@ invalidate operation.</em></p>
 </tr>
 </table>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Operation</dt>
-</dl>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">TODO</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="insns-cbo_zero"><a class="anchor" href="#insns-cbo_zero"></a>19.7.4. cbo.zero</h3>
+<div class="sect3">
+<h4 id="insns-cbo_zero"><a class="anchor" href="#insns-cbo_zero"></a>cbo.zero</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2172,32 +2053,22 @@ invalidate operation.</em></p>
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>A <strong>cbo.zero</strong> instruction performs stores of zeros to the full set of bytes
-corresponding to the cache block that contains the address specified in <em>rs1</em>.
-It is not required that <em>rs1</em> is aligned to the size of a cache block. On
+<p><span id="norm:cbo-zero_op">A <strong>cbo.zero</strong> instruction performs stores of zeros to the full set of bytes
+corresponding to the cache block that contains the address specified in <em>rs1</em>.</span>
+<span id="norm:cbo-zero_unaligned">It is not required that <em>rs1</em> is aligned to the size of a cache block.</span> On
 faults, the faulting virtual address is considered to be the value in rs1,
 rather than the base address of the cache block. An implementation may or
 may not update the entire set of bytes atomically.</p>
 </dd>
 </dl>
 </div>
-<div class="paragraph">
+<div id="norm:cbo-zero_offset" class="paragraph">
 <p>The assembly <em>offset</em> operand may be omitted. If it isn&#8217;t then any expression
 that computes the offset shall evaluate to zero.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Operation</dt>
-</dl>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">TODO</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="insns-prefetch_i"><a class="anchor" href="#insns-prefetch_i"></a>19.7.5. prefetch.i</h3>
+<div class="sect3">
+<h4 id="insns-prefetch_i"><a class="anchor" href="#insns-prefetch_i"></a>prefetch.i</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2220,13 +2091,13 @@ instruction fetch in the near future</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Description</dt>
-<dd>
+</dl>
+</div>
+<div id="norm:prefetch-i_op" class="paragraph">
 <p>A <strong>prefetch.i</strong> instruction indicates to hardware that the cache block whose
 effective address is the sum of the base address specified in <em>rs1</em> and the
 sign-extended offset encoded in <em>imm[11:0]</em>, where <em>imm[4:0]</em> equals <code>0b00000</code>,
 is likely to be accessed by an instruction fetch in the near future.</p>
-</dd>
-</dl>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2244,19 +2115,9 @@ this behavior is not required.</em></p>
 </tr>
 </table>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Operation</dt>
-</dl>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">TODO</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="insns-prefetch_r"><a class="anchor" href="#insns-prefetch_r"></a>19.7.6. prefetch.r</h3>
+<div class="sect3">
+<h4 id="insns-prefetch_r"><a class="anchor" href="#insns-prefetch_r"></a>prefetch.r</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2279,13 +2140,13 @@ read in the near future</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Description</dt>
-<dd>
+</dl>
+</div>
+<div id="norm:prefetch-r_op" class="paragraph">
 <p>A <strong>prefetch.r</strong> instruction indicates to hardware that the cache block whose
 effective address is the sum of the base address specified in <em>rs1</em> and the
 sign-extended offset encoded in <em>imm[11:0]</em>, where <em>imm[4:0]</em> equals <code>0b00000</code>,
 is likely to be accessed by a data read (i.e. load) in the near future.</p>
-</dd>
-</dl>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2303,19 +2164,9 @@ behavior is not required.</em></p>
 </tr>
 </table>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Operation</dt>
-</dl>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">TODO</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="insns-prefetch_w"><a class="anchor" href="#insns-prefetch_w"></a>19.7.7. prefetch.w</h3>
+<div class="sect3">
+<h4 id="insns-prefetch_w"><a class="anchor" href="#insns-prefetch_w"></a>prefetch.w</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Synopsis</dt>
@@ -2338,13 +2189,13 @@ write in the near future</p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Description</dt>
-<dd>
+</dl>
+</div>
+<div id="norm:prefetch-w_op" class="paragraph">
 <p>A <strong>prefetch.w</strong> instruction indicates to hardware that the cache block whose
 effective address is the sum of the base address specified in <em>rs1</em> and the
 sign-extended offset encoded in <em>imm[11:0]</em>, where <em>imm[4:0]</em> equals <code>0b00000</code>,
 is likely to be accessed by a data write (i.e. store) in the near future.</p>
-</dd>
-</dl>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2361,15 +2212,6 @@ behavior is not required.</em></p>
 </td>
 </tr>
 </table>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Operation</dt>
-</dl>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">TODO</code></pre>
 </div>
 </div>
 </div>

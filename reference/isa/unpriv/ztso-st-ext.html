@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>"Ztso" Extension for Total Store Ordering, Version 1.0 :: RISC-V Ratified Specifications Library</title>
+    <title>Untitled :: RISC-V Ratified Specifications Library</title>
     <link rel="canonical" href="https://docs.riscv.org/isa/unpriv/ztso-st-ext.html">
     <link rel="prev" href="rvwmo.html">
     <link rel="next" href="cmo.html">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
     <meta name="antora-ui-version" content="7c7bd9946ded257ce7e3474127cd0623096613e3"> 
-    <meta name="version" content="v20250508">
+    <meta name="version" content="v20260120">
     <meta name="component" content="isa">
     <meta name="latest-version" content="true">
     <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -273,7 +273,7 @@
     }
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script><div class="body">
-<div class="nav-container" data-component="isa" data-version="v20250508">
+<div class="nav-container" data-component="isa" data-version="v20260120">
   <aside class="nav">
     <div class="panels">
       <div class="nav-panel-menu is-active" data-panel="menu">
@@ -284,10 +284,17 @@
       <select data-component="isa" class="select-version">
           <option
             value="../index.html"
-            data-version="v20250508"
+            data-version="v20260120"
             
             selected>
             Latest
+          </option>
+          <option
+            value="../v20250508/index.html"
+            data-version="v20250508"
+            
+            >
+            Version: 20250508
           </option>
           <option
             value="../v20240411/index.html"
@@ -328,7 +335,7 @@
     <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -406,7 +413,7 @@
     <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
@@ -415,22 +422,16 @@
     <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">Chapter 37. Document Revision History</a>
+    <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="calling-convention.html">Appendix C: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -448,64 +449,64 @@
     <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../priv/priv-intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smepmp.html">"Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smdbltrp.html">"Smdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smctr.html">"Smctr" Control Transfer Records Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/supervisor.html">Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
+    <a class="nav-link"  href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/ssdbltrp.html">"Ssdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
+    <a class="nav-link"  href="../priv/zpm.html">Pointer Masking Extensions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link"  href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
+    <a class="nav-link"  href="../priv/priv-history.html">History</a>
   </li>
 </ul>
   </li>
@@ -556,7 +557,7 @@
     </div>
     <div
       class="toc"
-      data-title=""Ztso" Extension for Total Store Ordering, Version 1.0"
+      data-title=""
       data-levels="5"
     >
       <div class="toc-menu"></div>
@@ -645,13 +646,13 @@
       <li><a href="ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a></li>
     </ul>
   </nav>
-</div><h1 id="page-title" class="page">"Ztso" Extension for Total Store Ordering, Version 1.0</h1>
-<div id="preamble">
+</div><div class="sect1">
+<h2 id="ztso"><a class="anchor" href="#ztso"></a>"Ztso" Extension for Total Store Ordering, Version 1.0</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This chapter defines the "Ztso" extension for the RISC-V Total Store
 Ordering (RVTSO) memory consistency model. RVTSO is defined as a delta
-from RVWMO, which is defined in <a href="rvwmo.html" class="xref page">RVWMO Memory Consistency Model</a>.</p>
+from RVWMO, which is defined in <a href="#rvwmo">[rvwmo]</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -670,20 +671,20 @@ behavior and want to expose that fact to software.</em></p>
 </tr>
 </table>
 </div>
-<div class="paragraph">
+<div id="norm:rvtso_adj_rvwmo" class="paragraph">
 <p>RVTSO makes the following adjustments to RVWMO:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>All load operations behave as if they have an acquire-RCpc annotation</p>
+<p><span id="norm:ztso_ld">All load operations behave as if they have an acquire-RCpc annotation</span></p>
 </li>
 <li>
-<p>All store operations behave as if they have a release-RCpc annotation.</p>
+<p><span id="norm:ztso_sd">All store operations behave as if they have a release-RCpc annotation.</span></p>
 </li>
 <li>
-<p>All AMOs behave as if they have both acquire-RCsc and release-RCsc
-annotations.</p>
+<p><span id="norm:ztso_amo">All AMOs behave as if they have both acquire-RCsc and release-RCsc
+annotations.</span></p>
 </li>
 </ul>
 </div>
@@ -705,7 +706,7 @@ an AMO in either direction.</em></p>
 <p><em>In the context of RVTSO, as is the case for RVWMO, the storage ordering
 annotations are concisely and completely defined by PPO rules
 <a href="#overlapping-ordering">5-7</a>. In both of these
-memory models, it is the <a href="rvwmo.html#ax-loadl" class="xref page">Load Value Axiom</a> that allows a hart to forward a value from its
+memory models, it is the <a href="#ax-load">[ax-load]</a> that allows a hart to forward a value from its
 store buffer to a subsequent (in program order) load—that is to say that
 stores can be forwarded locally before they are visible to other harts.</em></p>
 </div>
@@ -714,9 +715,9 @@ stores can be forwarded locally before they are visible to other harts.</em></p>
 </table>
 </div>
 <div class="paragraph">
-<p>Additionally, if the Ztso extension is implemented, then vector memory
+<p><span id="norm:ztso_vect_mem">Additionally, if the Ztso extension is implemented, then vector memory
 instructions in the V extension and Zve family of extensions follow RVTSO at
-the instruction level.
+the instruction level.</span>
 The Ztso extension does not strengthen the ordering of intra-instruction
 element accesses.</p>
 </div>

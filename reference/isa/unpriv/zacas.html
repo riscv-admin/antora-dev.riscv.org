@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0 :: RISC-V Ratified Specifications Library</title>
+    <title>Untitled :: RISC-V Ratified Specifications Library</title>
     <link rel="canonical" href="https://docs.riscv.org/isa/unpriv/zacas.html">
     <link rel="prev" href="zawrs.html">
     <link rel="next" href="zabha.html">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
     <meta name="antora-ui-version" content="7c7bd9946ded257ce7e3474127cd0623096613e3"> 
-    <meta name="version" content="v20250508">
+    <meta name="version" content="v20260120">
     <meta name="component" content="isa">
     <meta name="latest-version" content="true">
     <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -273,7 +273,7 @@
     }
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script><div class="body">
-<div class="nav-container" data-component="isa" data-version="v20250508">
+<div class="nav-container" data-component="isa" data-version="v20260120">
   <aside class="nav">
     <div class="panels">
       <div class="nav-panel-menu is-active" data-panel="menu">
@@ -284,10 +284,17 @@
       <select data-component="isa" class="select-version">
           <option
             value="../index.html"
-            data-version="v20250508"
+            data-version="v20260120"
             
             selected>
             Latest
+          </option>
+          <option
+            value="../v20250508/index.html"
+            data-version="v20250508"
+            
+            >
+            Version: 20250508
           </option>
           <option
             value="../v20240411/index.html"
@@ -328,7 +335,7 @@
     <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -406,7 +413,7 @@
     <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
@@ -415,22 +422,16 @@
     <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">Chapter 37. Document Revision History</a>
+    <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="calling-convention.html">Appendix C: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -448,64 +449,64 @@
     <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../priv/priv-intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smepmp.html">"Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smdbltrp.html">"Smdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smctr.html">"Smctr" Control Transfer Records Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/supervisor.html">Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
+    <a class="nav-link"  href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/ssdbltrp.html">"Ssdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
+    <a class="nav-link"  href="../priv/zpm.html">Pointer Masking Extensions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link"  href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
+    <a class="nav-link"  href="../priv/priv-history.html">History</a>
   </li>
 </ul>
   </li>
@@ -556,7 +557,7 @@
     </div>
     <div
       class="toc"
-      data-title=""Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0"
+      data-title=""
       data-levels="5"
     >
       <div class="toc-menu"></div>
@@ -645,47 +646,28 @@
       <li><a href="zacas.html">Chapter 15. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a></li>
     </ul>
   </nav>
-</div><h1 id="page-title" class="page">"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</h1>
-<div id="preamble">
+</div><div class="sect1">
+<h2 id="zacas-extension-for-atomic-compare-and-swap-cas-instructions-version-1-0-0"><a class="anchor" href="#zacas-extension-for-atomic-compare-and-swap-cas-instructions-version-1-0-0"></a>"Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Compare-and-Swap (CAS) provides an easy and typically faster way to perform
 thread synchronization operations when supported as a hardware instruction. CAS
-is typically used by lock-free and wait-free algorithms. This extension proposes
+is typically used by lock-free and wait-free algorithms. This extension defines
 CAS instructions to operate on 32-bit, 64-bit, and 128-bit (RV64 only) data
-values. The CAS instruction supports the C++11 atomic compare and exchange
-operation.</p>
+values. The Zacas extension depends upon the Zaamo extension.</p>
 </div>
-<div class="paragraph">
-<p>While compare-and-swap for XLEN wide data may be accomplished using LR/SC, the
-CAS atomic instructions scale better to highly parallel systems than LR/SC.
-Many lock-free algorithms, such as a lock-free queue, require manipulation of
-pointer variables. A simple CAS operation may not be sufficient to guard against
-what is commonly referred to as the ABA problem in such algorithms that
-manipulate pointer variables. To avoid the ABA problem, the algorithms associate
-a reference counter with the pointer variable and perform updates using a
-quadword compare and swap (of both the pointer and the counter). The double and
-quadword CAS instructions support implementation of algorithms for ABA problem
-avoidance.</p>
-</div>
-<div class="paragraph">
-<p>The Zacas extension depends upon the Zaamo extension.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="15-1-worddoublewordquadword-cas-amocas-wdq-instructions"><a class="anchor" href="#15-1-worddoublewordquadword-cas-amocas-wdq-instructions"></a>15.1. Word/Doubleword/Quadword CAS (AMOCAS.W/D/Q) Instructions</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="worddoublewordquadword-cas-amocas-wdq-instructions"><a class="anchor" href="#worddoublewordquadword-cas-amocas-wdq-instructions"></a>Word/Doubleword/Quadword CAS (AMOCAS.W/D/Q) Instructions</h3>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/svg-01fe6c8647c106825955b54f1d9f8f7883e13011.svg" alt="svg">
 </div>
 </div>
 <div class="paragraph">
-<p>For RV32, <code>AMOCAS.W</code> atomically loads a 32-bit data value from address in <code>rs1</code>,
+<p><span id="norm:Zacas_rv32_amocas-w_op">For RV32, <code>AMOCAS.W</code> atomically loads a 32-bit data value from address in <code>rs1</code>,
 compares the loaded value to the 32-bit value held in <code>rd</code>, and if the comparison
 is bitwise equal, then stores the 32-bit value held in <code>rs2</code> to the original
-address in <code>rs1</code>. The value loaded from memory is placed into register <code>rd</code>. The
+address in <code>rs1</code>. The value loaded from memory is placed into register <code>rd</code>.</span> The
 operation performed by <code>AMOCAS.W</code> for RV32 is as follows:</p>
 </div>
 <div class="listingblock">
@@ -700,17 +682,17 @@ operation performed by <code>AMOCAS.W</code> for RV32 is as follows:</p>
 <p><code>AMOCAS.D</code> is similar to <code>AMOCAS.W</code> but operates on 64-bit data values.</p>
 </div>
 <div class="paragraph">
-<p>For RV32, <code>AMOCAS.D</code> atomically loads 64-bits of a data value from address in
+<p><span id="norm:Zacas_rv32_amocas-d_op">For RV32, <code>AMOCAS.D</code> atomically loads 64-bits of a data value from address in
 <code>rs1</code>, compares the loaded value to a 64-bit value held in a register pair
 consisting of <code>rd</code> and <code>rd+1</code>, and if the comparison is bitwise equal, then
 stores the 64-bit value held in the register pair <code>rs2</code> and <code>rs2+1</code> to the
 original address in <code>rs1</code>. The value loaded from memory is placed into the
-register pair <code>rd</code> and <code>rd+1</code>. The instruction requires the first register in
+register pair <code>rd</code> and <code>rd+1</code>.</span> <span id="norm:Zacas_rv32_amocas-d_frst_pair_entry_reg_even">The instruction requires the first register in
 the pair to be even numbered; encodings with odd numbered registers specified
-in <code>rs2</code> and <code>rd</code> are reserved. When the first register of a source register
-pair is <code>x0</code>, then both halves of the pair read as zero. When the first
+in <code>rs2</code> and <code>rd</code> are reserved.</span> <span id="norm:Zacas_rv32_amocas-d_rs2_frst_reg_x0">When the first register of a source register
+pair is <code>x0</code>, then both halves of the pair read as zero.</span> <span id="norm:Zacas_rv32_amocas-d_rd_frst_reg_x0">When the first
 register of a destination register pair is <code>x0</code>, then the entire register
-result is discarded and neither destination register is written.
+result is discarded and neither destination register is written.</span>
 The operation performed by <code>AMOCAS.D</code> for RV32 is as follows:</p>
 </div>
 <div style="page-break-after: always;"></div>
@@ -733,11 +715,11 @@ The operation performed by <code>AMOCAS.D</code> for RV32 is as follows:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>For RV64, <code>AMOCAS.W</code> atomically loads a 32-bit data value from address in
+<p><span id="norm:Zacas_rv64_amocas-w_op">For RV64, <code>AMOCAS.W</code> atomically loads a 32-bit data value from address in
 <code>rs1</code>, compares the loaded value to the lower 32 bits of the value held in <code>rd</code>,
 and if the comparison is bitwise equal, then stores the lower 32 bits of the
 value held in <code>rs2</code> to the original address in <code>rs1</code>. The 32-bit value loaded
-from memory is sign-extended and is placed into register <code>rd</code>. The operation
+from memory is sign-extended and is placed into register <code>rd</code>.</span> The operation
 performed by <code>AMOCAS.W</code> for RV64 is as follows:</p>
 </div>
 <div class="listingblock">
@@ -749,11 +731,11 @@ performed by <code>AMOCAS.W</code> for RV64 is as follows:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>For RV64, <code>AMOCAS.D</code> atomically loads 64-bits of a data value from address in
+<p><span id="norm:Zacas_rv64_amocas-d_op">For RV64, <code>AMOCAS.D</code> atomically loads 64-bits of a data value from address in
 <code>rs1</code>, compares the loaded value to a 64-bit value held in <code>rd</code>, and if the
 comparison is bitwise equal, then stores the 64-bit value held in <code>rs2</code> to the
 original address in <code>rs1</code>. The value loaded from memory is placed into register
-<code>rd</code>. The operation performed by <code>AMOCAS.D</code> for RV64 is as follows:</p>
+<code>rd</code>.</span> The operation performed by <code>AMOCAS.D</code> for RV64 is as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -764,17 +746,17 @@ original address in <code>rs1</code>. The value loaded from memory is placed int
 </div>
 </div>
 <div class="paragraph">
-<p><code>AMOCAS.Q</code> (RV64 only) atomically loads 128-bits of a data value from address in
+<p><span id="norm:Zacas_rv64_amocas-q_op"><code>AMOCAS.Q</code> (RV64 only) atomically loads 128-bits of a data value from address in
 <code>rs1</code>, compares the loaded value to a 128-bit value held in a register pair
 consisting of <code>rd</code> and <code>rd+1</code>, and if the comparison is bitwise equal, then
 stores the 128-bit value held in the register pair <code>rs2</code> and <code>rs2+1</code> to the
 original address in <code>rs1</code>. The value loaded from memory is placed into the
-register pair <code>rd</code> and <code>rd+1</code>. The instruction requires the first register in
+register pair <code>rd</code> and <code>rd+1</code>.</span> <span id="norm:Zacas_rv64_amocas-q_frst_pair_entry_reg_even">The instruction requires the first register in
 the pair to be even numbered; encodings with odd numbered registers specified in
-<code>rs2</code> and <code>rd</code> are reserved. When the first register of a source register pair
-is <code>x0</code>, then both halves of the pair read as zero. When the first register of a
+<code>rs2</code> and <code>rd</code> are reserved.</span> <span id="norm:Zacas_rv64_amocas-q_rs2_frst_reg_x0">When the first register of a source register pair
+is <code>x0</code>, then both halves of the pair read as zero.</span> <span id="norm:Zacas_rv64_amocas-q_rd_frst_reg_x0">When the first register of a
 destination register pair is <code>x0</code>, then the entire register result is discarded
-and neither destination register is written. The operation performed by
+and neither destination register is written.</span> The operation performed by
 <code>AMOCAS.Q</code> is as follows:</p>
 </div>
 <div style="page-break-after: always;"></div>
@@ -839,20 +821,20 @@ retry:
 </table>
 </div>
 <div class="paragraph">
-<p>Just as for AMOs in the A extension, <code>AMOCAS.W/D/Q</code> requires that the address
+<p>Just as for AMOs in the A extension, <span id="norm:Zacas_amocas_rs1_addr_alignment"><code>AMOCAS.W/D/Q</code> requires that the address
 held in <code>rs1</code> be naturally aligned to the size of the operand (i.e., 16-byte
 aligned for <em>quadwords</em>, eight-byte aligned for <em>doublewords</em>, and four-byte
-aligned for <em>words</em>). And the same exception options apply if the address
+aligned for <em>words</em>).</span> And the same exception options apply if the address
 is not naturally aligned.</p>
 </div>
 <div class="paragraph">
 <p>Just as for AMOs in the A extension, the <code>AMOCAS.W/D/Q</code> optionally provide
 release consistency semantics, using the <code>aq</code> and <code>rl</code> bits, to help implement
-multiprocessor synchronization. The memory operation performed by an
+multiprocessor synchronization. <span id="norm:Zacas_amocas_mem_op_success_aq_rl">The memory operation performed by an
 <code>AMOCAS.W/D/Q</code>, when successful, has acquire semantics if <code>aq</code> bit is 1 and has
-release semantics if <code>rl</code> bit is 1. The memory operation performed by an
+release semantics if <code>rl</code> bit is 1.</span> <span id="norm:Zacas_amocas_mem_op_fail_aq_rl">The memory operation performed by an
 <code>AMOCAS.W/D/Q</code>, when not successful, has acquire semantics if <code>aq</code> bit is 1 but
-does not have release semantics, regardless of <code>rl</code>.</p>
+does not have release semantics, regardless of <code>rl</code>.</span></p>
 </div>
 <div class="paragraph">
 <p>A FENCE instruction may be used to order the memory read access and, if
@@ -877,7 +859,7 @@ treated as an AMO for the purposes of the RVWMO PPO rules.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>An <code>AMOCAS.W/D/Q</code> instruction always requires write permissions.</p>
+<p><span id="norm:Zacas_amocas_w_permission">An <code>AMOCAS.W/D/Q</code> instruction always requires write permissions.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -932,38 +914,6 @@ move_tail:               # Tail was not pointing to the last node
 </tr>
 </table>
 </div>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="15-2-additional-amo-pmas"><a class="anchor" href="#15-2-additional-amo-pmas"></a>15.2. Additional AMO PMAs</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>There are four levels of PMA support defined for AMOs in the A extension. Zacas
-defines three additional levels of support: <code>AMOCASW</code>, <code>AMOCASD</code>, and <code>AMOCASQ</code>.</p>
-</div>
-<div class="paragraph">
-<p><code>AMOCASW</code> indicates that in addition to instructions indicated by <code>AMOArithmetic</code>
-level support, the <code>AMOCAS.W</code> instruction is supported. <code>AMOCASD</code> indicates that
-in addition to instructions indicated by <code>AMOCASW</code> level support, the <code>AMOCAS.D</code>
-instruction is supported. <code>AMOCASQ</code> indicates that in addition to instructions
-indicated by <code>AMOCASD</code> level support, the <code>AMOCAS.Q</code> instruction is supported.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p><code>AMOCASW/D/Q</code> require <code>AMOArithmetic</code> level support as the <code>AMOCAS.W/D/Q</code>
-instructions require ability to perform an arithmetic comparison and a swap
-operation.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>

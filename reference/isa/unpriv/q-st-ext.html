@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>"Q" Extension for Quad-Precision Floating-Point, Version 2.2 :: RISC-V Ratified Specifications Library</title>
+    <title>Untitled :: RISC-V Ratified Specifications Library</title>
     <link rel="canonical" href="https://docs.riscv.org/isa/unpriv/q-st-ext.html">
     <link rel="prev" href="d-st-ext.html">
     <link rel="next" href="zfh.html">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
     <meta name="antora-ui-version" content="7c7bd9946ded257ce7e3474127cd0623096613e3"> 
-    <meta name="version" content="v20250508">
+    <meta name="version" content="v20260120">
     <meta name="component" content="isa">
     <meta name="latest-version" content="true">
     <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -273,7 +273,7 @@
     }
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script><div class="body">
-<div class="nav-container" data-component="isa" data-version="v20250508">
+<div class="nav-container" data-component="isa" data-version="v20260120">
   <aside class="nav">
     <div class="panels">
       <div class="nav-panel-menu is-active" data-panel="menu">
@@ -284,10 +284,17 @@
       <select data-component="isa" class="select-version">
           <option
             value="../index.html"
-            data-version="v20250508"
+            data-version="v20260120"
             
             selected>
             Latest
+          </option>
+          <option
+            value="../v20250508/index.html"
+            data-version="v20250508"
+            
+            >
+            Version: 20250508
           </option>
           <option
             value="../v20240411/index.html"
@@ -328,7 +335,7 @@
     <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -406,7 +413,7 @@
     <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
@@ -415,22 +422,16 @@
     <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">Chapter 37. Document Revision History</a>
+    <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="calling-convention.html">Appendix C: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -448,64 +449,64 @@
     <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../priv/priv-intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="../priv/priv-csrs.html">Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/machine.html">Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smstateen.html">"Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="../priv/indirect-csr.html">"Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smepmp.html">"Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcntrpmf.html">"Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/rnmi.html">"Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcdeleg.html">"Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smdbltrp.html">"Smdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smctr.html">"Smctr" Control Transfer Records Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/supervisor.html">Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sstc.html">"Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sscofpmf.html">"Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="../priv/hypervisor.html">"H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
+    <a class="nav-link"  href="../priv/priv-cfi.html">Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/ssdbltrp.html">"Ssdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
+    <a class="nav-link"  href="../priv/zpm.html">Pointer Masking Extensions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link"  href="../priv/priv-insns.html">RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
+    <a class="nav-link"  href="../priv/priv-history.html">History</a>
   </li>
 </ul>
   </li>
@@ -556,7 +557,7 @@
     </div>
     <div
       class="toc"
-      data-title=""Q" Extension for Quad-Precision Floating-Point, Version 2.2"
+      data-title=""
       data-levels="5"
     >
       <div class="toc-menu"></div>
@@ -645,28 +646,25 @@
       <li><a href="q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a></li>
     </ul>
   </nav>
-</div><h1 id="page-title" class="page">"Q" Extension for Quad-Precision Floating-Point, Version 2.2</h1>
-<div id="preamble">
+</div><div class="sect1">
+<h2 id="q-extension-for-quad-precision-floating-point-version-2-2"><a class="anchor" href="#q-extension-for-quad-precision-floating-point-version-2-2"></a>"Q" Extension for Quad-Precision Floating-Point, Version 2.2</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This chapter describes the Q standard extension for 128-bit
 quad-precision binary floating-point instructions compliant with the
 IEEE 754-2008 arithmetic standard. The quad-precision binary
 floating-point instruction-set extension is named "Q"; it depends on
-the double-precision floating-point extension D. The floating-point
+the double-precision floating-point extension D. <span id="norm:Q_flen_128">The floating-point
 registers are now extended to hold either a single, double, or
-quad-precision floating-point value (FLEN=128). The NaN-boxing scheme
-described in <a href="f-st-ext.html#nanboxing" class="xref page">NaN Boxing of Narrower Values</a> is now extended
+quad-precision floating-point value (FLEN=128).</span> The NaN-boxing scheme
+described in <a href="#nanboxing">[nanboxing]</a> is now extended
 recursively to allow a single-precision value to be NaN-boxed inside a
 double-precision value which is itself NaN-boxed inside a quad-precision
 value.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="22-1-quad-precision-load-and-store-instructions"><a class="anchor" href="#22-1-quad-precision-load-and-store-instructions"></a>22.1. Quad-Precision Load and Store Instructions</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<div class="sect2">
+<h3 id="quad-precision-load-and-store-instructions"><a class="anchor" href="#quad-precision-load-and-store-instructions"></a>Quad-Precision Load and Store Instructions</h3>
+<div id="norm:fsq_flq_op" class="paragraph">
 <p>New 128-bit variants of LOAD-FP and STORE-FP instructions are added,
 encoded with a new value for the funct3 width field.</p>
 </div>
@@ -680,19 +678,17 @@ encoded with a new value for the funct3 width field.</p>
 <img src="_images/svg-2b334c20b68f921d79e5e277822a6e133384456d.svg" alt="svg">
 </div>
 </div>
-<div id="quad-ls" class="paragraph">
+<div id="norm:fsq_flq_atomic_align" class="paragraph">
 <p>FLQ and FSQ are only guaranteed to execute atomically if the effective
 address is naturally aligned and XLEN=128.</p>
 </div>
-<div class="paragraph">
+<div id="norm:fsq_flq_bits_maintained" class="paragraph">
 <p>FLQ and FSQ do not modify the bits being transferred; in particular, the
 payloads of non-canonical NaNs are preserved.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="22-2-quad-precision-computational-instructions"><a class="anchor" href="#22-2-quad-precision-computational-instructions"></a>22.2. Quad-Precision Computational Instructions</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="quad-precision-computational-instructions"><a class="anchor" href="#quad-precision-computational-instructions"></a>Quad-Precision Computational Instructions</h3>
 <div class="paragraph">
 <p>A new supported format is added to the format field of most
 instructions, as shown in <a href="#fpextfmt">Format field encoding.</a></p>
@@ -734,7 +730,7 @@ instructions, as shown in <a href="#fpextfmt">Format field encoding.</a></p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
+<div id="norm:Q_computational_instrs" class="paragraph">
 <p>The quad-precision floating-point computational instructions are defined
 analogously to their double-precision counterparts, but operate on
 quad-precision operands and produce quad-precision results.</p>
@@ -750,21 +746,19 @@ quad-precision operands and produce quad-precision results.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="quad-compute"><a class="anchor" href="#quad-compute"></a>22.3. Quad-Precision Convert and Move Instructions</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="quad-compute"><a class="anchor" href="#quad-compute"></a>Quad-Precision Convert and Move Instructions</h3>
 <div class="paragraph">
 <p>New floating-point-to-integer and integer-to-floating-point conversion
 instructions are added. These instructions are defined analogously to
 the double-precision-to-integer and integer-to-double-precision
-conversion instructions. FCVT.W.Q or FCVT.L.Q converts a quad-precision
+conversion instructions. <span id="norm:fcvt-w-q_fcvt-l-q_op">FCVT.W.Q or FCVT.L.Q converts a quad-precision
 floating-point number to a signed 32-bit or 64-bit integer,
-respectively. FCVT.Q.W or FCVT.Q.L converts a 32-bit or 64-bit signed
-integer, respectively, into a quad-precision floating-point number.
-FCVT.WU.Q, FCVT.LU.Q, FCVT.Q.WU, and FCVT.Q.LU variants convert to or
-from unsigned integer values. FCVT.L[U].Q and FCVT.Q.L[U] are RV64-only
-instructions. Note FCVT.Q.L[U] always produces an exact result and is unaffected by rounding mode.</p>
+respectively</span>. <span id="norm:fcvt-q-w_fcvt-q-l_op">FCVT.Q.W or FCVT.Q.L converts a 32-bit or 64-bit signed
+integer, respectively, into a quad-precision floating-point number</span>.
+<span id="norm:fcvt-wu-q_fcvt-lu-q_fcvt-q-wu_fcvt-q-lu_op">FCVT.WU.Q, FCVT.LU.Q, FCVT.Q.WU, and FCVT.Q.LU variants convert to or
+from unsigned integer values</span>. <span id="norm:fcvt_long_quad_rv64_only">FCVT.L[U].Q and FCVT.Q.L[U] are RV64-only
+instructions</span>. Note FCVT.Q.L[U] always produces an exact result and is unaffected by rounding mode.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
@@ -774,18 +768,18 @@ instructions. Note FCVT.Q.L[U] always produces an exact result and is unaffected
 <div id="quad-cnvrt-mv" class="paragraph">
 <p>New floating-point-to-floating-point conversion instructions are added.
 These instructions are defined analogously to the double-precision
-floating-point-to-floating-point conversion instructions. FCVT.S.Q or
+floating-point-to-floating-point conversion instructions. <span id="norm:fcvt-s-q_fcvt-q-s_op">FCVT.S.Q or
 FCVT.Q.S converts a quad-precision floating-point number to a
-single-precision floating-point number, or vice-versa, respectively.
-FCVT.D.Q or FCVT.Q.D converts a quad-precision floating-point number to
-a double-precision floating-point number, or vice-versa, respectively.</p>
+single-precision floating-point number, or vice-versa, respectively</span>.
+<span id="norm:fcvt-d-q_fcvt-q-d_op">FCVT.D.Q or FCVT.Q.D converts a quad-precision floating-point number to
+a double-precision floating-point number, or vice-versa, respectively</span>.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/svg-4653d8c6b12c99eaa852fa93984e16156f5c3f31.svg" alt="svg">
 </div>
 </div>
-<div id="quad-convert-interchange" class="paragraph">
+<div id="norm:fsgnj-q_fsgnjn-q_fsgnjx-q_op" class="paragraph">
 <p>Floating-point to floating-point sign-injection instructions, FSGNJ.Q,
 FSGNJN.Q, and FSGNJX.Q are defined analogously to the double-precision
 sign-injection instruction.</p>
@@ -801,11 +795,9 @@ quad-precision bit patterns must be moved to the integer registers via
 memory.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="22-4-quad-precision-floating-point-compare-instructions"><a class="anchor" href="#22-4-quad-precision-floating-point-compare-instructions"></a>22.4. Quad-Precision Floating-Point Compare Instructions</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<div class="sect2">
+<h3 id="quad-precision-floating-point-compare-instructions"><a class="anchor" href="#quad-precision-floating-point-compare-instructions"></a>Quad-Precision Floating-Point Compare Instructions</h3>
+<div id="norm:Q_compare_instrs" class="paragraph">
 <p>The quad-precision floating-point compare instructions are defined
 analogously to their double-precision counterparts, but operate on
 quad-precision operands.</p>
@@ -816,11 +808,9 @@ quad-precision operands.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="quad-float-compare"><a class="anchor" href="#quad-float-compare"></a>22.5. Quad-Precision Floating-Point Classify Instruction</h2>
-<div class="sectionbody">
-<div class="paragraph">
+<div class="sect2">
+<h3 id="quad-float-compare"><a class="anchor" href="#quad-float-compare"></a>Quad-Precision Floating-Point Classify Instruction</h3>
+<div id="norm:fclass-q_op" class="paragraph">
 <p>The quad-precision floating-point classify instruction, FCLASS.Q, is
 defined analogously to its double-precision counterpart, but operates on
 quad-precision operands.</p>
@@ -828,6 +818,7 @@ quad-precision operands.</p>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/svg-0fbdc9079ae6482318595fb8e617b3c7f19cbd69.svg" alt="svg">
+</div>
 </div>
 </div>
 </div>
