@@ -358,19 +358,19 @@
     <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -448,16 +448,19 @@
     <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="zilsd.html">Chapter 34. "Zilsd", "Zclsd" Extensions for Load/Store pair for RV32, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="rv-32-64g.html">Chapter 35. RV32/64G Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="naming.html">Appendix A. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -542,6 +545,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/priv-rationale.html">Historical Rationale for Extensions</a>
   </li>
 </ul>
   </li>
@@ -678,7 +684,7 @@
     <ul>
       <li><a href="../index.html">ISA Specifications</a></li>
       <li>Volume I: RISC-V Unprivileged ISA Specification</li>
-      <li><a href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a></li>
+      <li><a href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
@@ -995,7 +1001,7 @@ opcode space be used for non-conforming extensions.</p>
 <div class="paragraph">
 <p>The RISC-V ISA keeps the source (<em>rs1</em> and <em>rs2</em>) and destination (<em>rd</em>)
 registers at the same position in all formats to simplify decoding.
-<span id="norm:imm_always_sex">Except for the 5-bit immediates used in CSR instructions (<a href="zicsr.html#sec:csrinsts" class="xref page">CSR Instructions</a>),
+<span id="norm:imm_always_sex">Except for the 5-bit immediates used in CSR instructions (<a href="zicsr.html#csrinsts" class="xref page">CSR Instructions</a>),
 immediates are always sign-extended</span>,
 and are generally packed towards the leftmost available
 bits in the instruction and have been allocated to reduce hardware
@@ -1368,7 +1374,7 @@ significant address boundaries, or to leave space for inline code
 modifications. Although there are many possible ways to encode a NOP, we
 define a canonical NOP encoding to allow microarchitectural
 optimizations as well as for more readable disassembly output. The other
-NOP encodings are made available for <a href="#rv32i-hints">HINT Instructions</a>.</p>
+NOP encodings are made available for <a href="#rv32i-hints">"Zfh" and "HINT Instructions</a>.</p>
 </div>
 <div class="paragraph">
 <p>ADDI was chosen for the NOP encoding as this is most likely to take
@@ -2087,7 +2093,7 @@ require privileged access and are encoded using the I-type instruction
 format. These can be divided into two main classes: those that
 atomically read-modify-write control and status registers (CSRs), and
 all other potentially privileged instructions. CSR instructions are
-described in <a href="zicsr.html#sec:csrinsts" class="xref page">CSR Instructions</a>, and the base
+described in <a href="zicsr.html#csrinsts" class="xref page">CSR Instructions</a>, and the base
 unprivileged instructions are described in the following section.</p>
 </div>
 <div class="admonitionblock note">

@@ -358,19 +358,19 @@
     <a class="nav-link"  href="../unpriv/intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="../unpriv/rv32.html">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="../unpriv/rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -448,16 +448,19 @@
     <a class="nav-link"  href="../unpriv/scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="../unpriv/zilsd.html">Chapter 34. "Zilsd", "Zclsd" Extensions for Load/Store pair for RV32, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="../unpriv/rv-32-64g.html">Chapter 35. RV32/64G Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../unpriv/naming.html">Appendix A. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -542,6 +545,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="priv-history.html">Chapter 20. History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="priv-rationale.html">Historical Rationale for Extensions</a>
   </li>
 </ul>
   </li>
@@ -763,7 +769,7 @@ register keeps track of the processor&#8217;s current operating state.</p>
 <p>The SPP bit indicates the privilege level at which a hart was executing
 before entering supervisor mode. When a trap is taken, SPP is set to 0
 if the trap originated from user mode, or 1 otherwise. When an SRET
-instruction (see <a href="#otherpriv">[otherpriv]</a>) is executed to
+instruction (see <a href="machine.html#otherpriv" class="xref page">Other Privileged Instructions</a>) is executed to
 return from the trap handler, the privilege level is set to user mode if
 the SPP bit is 0, or supervisor mode if the SPP bit is 1; SPP is then
 set to 0.</p>
@@ -806,7 +812,7 @@ is executed, SIE is set to SPIE, then SPIE is set to 1.</p>
 <p>The UXL field controls the value of XLEN for U-mode, termed <em>UXLEN</em>,
 which may differ from the value of XLEN for S-mode, termed <em>SXLEN</em>. The
 encoding of UXL is the same as that of the MXL field of <code>misa</code>, shown in
-<a href="#norm:misa_mxl_enc">[norm:misa_mxl_enc]</a>.</p>
+<a href="machine.html#norm:misa_mxl_enc" class="xref page">Encoding of UXL field in <code>misa</code></a>.</p>
 </div>
 <div id="norm:sstatus-uxl_sz" class="paragraph">
 <p>When SXLEN=32, the UXL field does not exist, and UXLEN=32. When
@@ -963,7 +969,7 @@ when <code>V=1</code>.</p>
 <h5 id="supv-double-trap"><a class="anchor" href="#supv-double-trap"></a>12.1.1.1.5. Double Trap Control in <code>sstatus</code> Register</h5>
 <div id="norm:sstatus-sdt" class="paragraph">
 <p>The S-mode-disable-trap (<code>SDT</code>) bit is a WARL field introduced by the Ssdbltrp
-extension to address double trap (See <a href="#machine-double-trap">[machine-double-trap]</a>) at privilege
+extension to address double trap (See <a href="machine.html#machine-double-trap" class="xref page">Double Trap Control in <code>mstatus</code> Register</a>) at privilege
 modes lower than M.</p>
 </div>
 <div id="norm:sstatus-sdt_sstatus-sie_overwrite" class="paragraph">
@@ -1093,7 +1099,7 @@ field. When MODE=Vectored, all synchronous exceptions into supervisor
 mode cause the <code>pc</code> to be set to the address in the BASE field, whereas
 interrupts cause the <code>pc</code> to be set to the address in the BASE field
 plus four times the interrupt cause number. For example, a
-supervisor-mode timer interrupt (see <a href="#scauses">Supervisor cause (<code>scause</code>) register values after trap. Synchronous exception priorities are given by [norm:exc_priority].</a>)
+supervisor-mode timer interrupt (see <a href="#scauses">Supervisor cause (<code>scause</code>) register values after trap. Synchronous exception priorities are given by Table: Synchronous exception priority in decreasing priority order.</a>)
 causes the <code>pc</code> to be set to BASE+<code>0x14</code>. Setting MODE=Vectored may
 impose a stricter alignment constraint on BASE.</p>
 </div>
@@ -1373,7 +1379,7 @@ implementation, though it may be explicitly written by software.</p>
 <div id="norm:scause-interrupt" class="paragraph">
 <p>The Interrupt bit in the <code>scause</code> register is set if the trap was caused
 by an interrupt. The Exception Code field contains a code identifying
-the last exception or interrupt. <a href="#scauses">Supervisor cause (<code>scause</code>) register values after trap. Synchronous exception priorities are given by [norm:exc_priority].</a> lists
+the last exception or interrupt. <a href="#scauses">Supervisor cause (<code>scause</code>) register values after trap. Synchronous exception priorities are given by Table: Synchronous exception priority in decreasing priority order.</a> lists
 the possible exception codes for the current supervisor ISAs. <span id="norm:scause-exception_code_acc">The
 Exception Code is a <strong>WLRL</strong> field.</span> <span id="norm:scause-exception_code_sz">It is required to hold the values 0–31
 (i.e., bits 4–0 must be implemented), but otherwise it is only
@@ -1386,7 +1392,7 @@ guaranteed to hold supported exception codes.</span></p>
 <div class="title">Figure 11. Supervisor Cause (<code>scause</code>) register.</div>
 </div>
 <table id="scauses" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 2. Supervisor cause (<code>scause</code>) register values after trap. Synchronous exception priorities are given by <a href="#norm:exc_priority">[norm:exc_priority]</a>.</caption>
+<caption class="title">Table 2. Supervisor cause (<code>scause</code>) register values after trap. Synchronous exception priorities are given by <a href="machine.html#norm:exc_priority" class="xref page">Table: Synchronous exception priority in decreasing priority order</a>.</caption>
 <colgroup>
 <col>
 <col>
@@ -1584,10 +1590,10 @@ cause for the exception. The following encodings are defined:</p>
 <p>0 - No information provided.</p>
 </li>
 <li>
-<p>2 - Landing Pad Fault. Defined by the Zicfilp extension (<a href="#priv-forward">[priv-forward]</a>).</p>
+<p>2 - Landing Pad Fault. Defined by the Zicfilp extension (<a href="priv-cfi.html#priv-forward" class="xref page">Landing Pad (Zicfilp)</a>).</p>
 </li>
 <li>
-<p>3 - Shadow Stack Fault. Defined by the Zicfiss extension (<a href="#priv-backward">[priv-backward]</a>).</p>
+<p>3 - Shadow Stack Fault. Defined by the Zicfiss extension (<a href="priv-cfi.html#priv-backward" class="xref page">Shadow Stack (Zicfiss)</a>).</p>
 </li>
 </ul>
 </div>
@@ -1686,7 +1692,7 @@ harts are involved in accessing this emulated device from U-mode.</p>
 </div>
 <div class="paragraph">
 <p>A hypervisor running in S-mode without the benefit of the hypervisor
-extension of <a href="#hypervisor">[hypervisor]</a> may need to emulate
+extension of <a href="hypervisor.html#hypervisor" class="xref page">"H" Extension for Hypervisor Support</a> may need to emulate
 a device for U-mode if paravirtualization cannot be employed. If the
 same hypervisor provides a virtual machine (VM) with multiple virtual
 harts, mapped one-to-one to real harts, then multiple harts may
@@ -1759,7 +1765,7 @@ is set to <code>11b</code>. Otherwise, the instruction behaves as follows, depen
 </div>
 <div id="norm:senvcfg-pmm_Ssnpm" class="paragraph">
 <p>If the Ssnpm extension is implemented, the <code>PMM</code> field enables or disables
-pointer masking (see <a href="#Zpm">[Zpm]</a>) for the next-lower privilege mode (U/VU),
+pointer masking (see <a href="zpm.html" class="xref page">Pointer Masking Extensions</a>) for the next-lower privilege mode (U/VU),
 according to the values in <a href="#senvcfg-pmm-values">Legal values of <code>PMM</code> WARL field</a>. If Ssnpm is not
 implemented, <code>PMM</code> is read-only zero. The <code>PMM</code> field is read-only zero for
 RV32.</p>
@@ -1844,7 +1850,7 @@ supervisor physical address divided by 4 KiB; an address space identifier
 (ASID), which facilitates address-translation fences on a
 per-address-space basis; and the MODE field, which selects the current
 address-translation scheme. Further details on the access to this
-register are described in <a href="#virt-control">[virt-control]</a>.</p>
+register are described in <a href="machine.html#virt-control" class="xref page">Virtualization Support in <code>mstatus</code> Register</a>.</p>
 </div>
 <div id="rv32satp" class="imageblock kroki">
 <div class="content">
@@ -1902,7 +1908,7 @@ cost of a context switch.</p>
 SXLEN=32 and SXLEN=64. When MODE=Bare, supervisor virtual addresses are
 equal to supervisor physical addresses, and there is no additional
 memory protection beyond the physical memory protection scheme described
-in <a href="#pmp">[pmp]</a>. To select MODE=Bare, software must write
+in <a href="machine.html#pmp" class="xref page">Physical Memory Protection</a>. To select MODE=Bare, software must write
 zero to the remaining fields of <code>satp</code> (bits 30–0 when SXLEN=32, or bits
 59–0 when SXLEN=64). Attempting to select MODE=Bare with a nonzero
 pattern in the remaining fields has an UNSPECIFIED effect on the value that the
@@ -2043,7 +2049,7 @@ wasting physical memory and possibly cache capacity.</p>
 4 KiB for both RV32 and RV64. We expect this decision to ease the
 porting of low-level runtime software and device drivers. The TLB reach
 problem is ameliorated by transparent superpage support in modern
-operating systems. [<a href="../biblio/bibliography.html#bib-transparent-superpages" class="xref page">87</a>] Additionally, multi-level TLB hierarchies are quite
+operating systems. [<a href="../biblio/bibliography.html#bib-transparent-superpages" class="xref page">92</a>] Additionally, multi-level TLB hierarchies are quite
 inexpensive relative to the multi-level cache hierarchies whose address
 space they map.</p>
 </div>
@@ -2164,7 +2170,7 @@ takes advantage of stimecmp directly.)</p>
 <div class="sect2">
 <h3 id="12-1-2-supervisor-instructions"><a class="anchor" href="#12-1-2-supervisor-instructions"></a>12.1.2. Supervisor Instructions</h3>
 <div class="paragraph">
-<p>In addition to the SRET instruction defined in <a href="#otherpriv">[otherpriv]</a>, one new supervisor-level instruction is provided.</p>
+<p>In addition to the SRET instruction defined in <a href="machine.html#otherpriv" class="xref page">Trap-Return Instructions</a>, one new supervisor-level instruction is provided.</p>
 </div>
 <div class="sect3">
 <h4 id="sfence.vma"><a class="anchor" href="#sfence.vma"></a>12.1.2.1. Supervisor Memory-Management Fence Instruction</h4>
@@ -2185,7 +2191,7 @@ implicit references by subsequent instructions in that hart to the
 memory-management data structures. The specific set of operations
 ordered by SFENCE.VMA is determined by <em>rs1</em> and <em>rs2</em>, as described
 below.</span> <span id="norm:sfence-vma_invalidation">SFENCE.VMA is also used to invalidate entries in the
-address-translation cache associated with a hart (see <a href="#sv32algorithm">12.1.3.2. Virtual Address Translation Process</a>).</span> Further details on the behavior of this instruction are described in <a href="#virt-control">[virt-control]</a> and <a href="#pmp-vmem">[pmp-vmem]</a>.</p>
+address-translation cache associated with a hart (see <a href="#sv32algorithm">12.1.3.2. Virtual Address Translation Process</a>).</span> Further details on the behavior of this instruction are described in <a href="machine.html#virt-control" class="xref page">Virtualization Support in <code>mstatus</code> Register</a> and <a href="machine.html#pmp-vmem" class="xref page">Physical Memory Protection and Paging</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2485,7 +2491,7 @@ illegal-instruction exception.</p>
 </div>
 <div class="paragraph">
 <p>No SFENCE.VMA is required after enabling or disabling pointer masking
-(see <a href="#Zpm">[Zpm]</a>), as pointer masking applies to the effective address only and
+(see <a href="zpm.html" class="xref page">Pointer Masking Extensions</a>), as pointer masking applies to the effective address only and
 does not affect any memory-management data structures.</p>
 </div>
 </div>
@@ -2542,7 +2548,7 @@ supervisor physical addresses via a two-level page table. The 20-bit VPN
 is translated into a <span id="norm:satp-ppn_sv32_sz">22-bit physical page number (PPN)</span>,
 while the 12-bit page offset is untranslated. The resulting supervisor-level physical
 addresses are then checked using any physical memory protection
-structures (<a href="#pmp">[pmp]</a>), before being directly
+structures (<a href="machine.html#pmp" class="xref page">Physical Memory Protection</a>), before being directly
 converted to machine-level physical addresses. If necessary,
 supervisor-level physical addresses are zero-extended to the number of
 physical address bits found in the implementation.</p>
@@ -3995,7 +4001,7 @@ instructions as no-ops.</p>
 <p><span id="norm:Svadu_hw_update_a_d_bits">If the Svadu extension is implemented, the <code>menvcfg</code>.ADUE field is writable.</span>
 <span id="norm:Svadu_hypervisor_adue_writable">If the hypervisor extension is additionally implemented, the <code>henvcfg</code>.ADUE
 field is also writable.</span>
-See <a href="#sec:menvcfg">[sec:menvcfg]</a> and <a href="#sec:henvcfg">[sec:henvcfg]</a> for the definitions of those fields.</p>
+See <a href="machine.html#sec:menvcfg" class="xref page">Machine Environment Configuration (menvcfg) Register</a> and <a href="hypervisor.html#sec:henvcfg" class="xref page">Hypervisor Environment Configuration Register (<code>henvcfg</code>)</a> for the definitions of those fields.</p>
 </div>
 <div class="paragraph">
 <p><a href="#translation">12.1.3.1. Addressing and Memory Protection</a> defines the semantics of hardware updating of A/D bits.

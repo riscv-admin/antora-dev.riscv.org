@@ -358,19 +358,19 @@
     <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -448,16 +448,19 @@
     <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="zilsd.html">Chapter 34. "Zilsd", "Zclsd" Extensions for Load/Store pair for RV32, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="rv-32-64g.html">Chapter 35. RV32/64G Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="naming.html">Appendix A. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -542,6 +545,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/priv-rationale.html">Historical Rationale for Extensions</a>
   </li>
 </ul>
   </li>
@@ -923,7 +929,7 @@ bytes accessed by the LR, the SC may or may not fail.) <span id="norm:sc_interve
 if there is another SC (to any address) between the LR and the SC in
 program order.</span> <span id="norm:lr_sc_atomicity_axiom">The precise statement of the atomicity requirements for
 successful LR/SC sequences is defined by the Atomicity Axiom in
-<a href="#rvwmo">[rvwmo]</a>.</span></p>
+<a href="rvwmo.html" class="xref page">RVWMO Memory Consistency Model</a>.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -960,7 +966,7 @@ as when migrating pages that might contain an active reservation.</p>
 imply that a hart can only hold one reservation at a time, and that an
 SC can only pair with the most recent LR, and LR with the next following
 SC, in program order. This is a restriction to the Atomicity Axiom in
-<a href="#rvwmo">[rvwmo]</a> that ensures software runs correctly on
+<a href="rvwmo.html" class="xref page">RVWMO Memory Consistency Model</a> that ensures software runs correctly on
 expected common implementations that operate in this manner.</p>
 </div>
 </td>

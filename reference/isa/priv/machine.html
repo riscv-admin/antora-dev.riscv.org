@@ -358,19 +358,19 @@
     <a class="nav-link"  href="../unpriv/intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="../unpriv/rv32.html">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="../unpriv/rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -448,16 +448,19 @@
     <a class="nav-link"  href="../unpriv/scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="../unpriv/zilsd.html">Chapter 34. "Zilsd", "Zclsd" Extensions for Load/Store pair for RV32, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="../unpriv/rv-32-64g.html">Chapter 35. RV32/64G Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../unpriv/naming.html">Appendix A. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -542,6 +545,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="priv-history.html">Chapter 20. History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="priv-rationale.html">Historical Rationale for Extensions</a>
   </li>
 </ul>
   </li>
@@ -3772,9 +3778,11 @@ as shown in <a href="#norm:menvcfg_enc_img">Machine environment configuration (<
 <span id="norm:menvcfg_op">controls certain characteristics of the execution environment
 for modes less privileged than M.</span></p>
 </div>
-<div id="norm:menvcfg_enc_img" class="paragraph">
-<div class="title">Machine environment configuration (<code>menvcfg</code>) register.</div>
-<p>Unresolved include directive in modules/priv/pages/machine.adoc - include::priv:partial$bytefield/menvcfgreg.edn[]</p>
+<div id="norm:menvcfg_enc_img" class="imageblock kroki">
+<div class="content">
+<img src="_images/svg-25bdc5e38b0e0804c5b53a2fa176913bbef4f635.svg" alt="Machine environment configuration (`menvcfg`) register.">
+</div>
+<div class="title">Figure 24. Machine environment configuration (<code>menvcfg</code>) register.</div>
 </div>
 <div class="paragraph">
 <p><span id="norm:menvcfg_fiom_fence_op">If bit FIOM (Fence of I/O implies Memory) is set to one in <code>menvcfg</code>,
@@ -3951,7 +3959,7 @@ operation.</p>
 </div>
 <div class="paragraph">
 <p><span id="norm:menvcfg_pmm_op">If the Smnpm extension is implemented, the <code>PMM</code> field enables or disables
-pointer masking (see <a href="zpm.html" class="xref page">ZPM</a>) for the next-lower privilege mode (S-/HS-mode if
+pointer masking (see <a href="zpm.html" class="xref page">Pointer Masking Extensions</a>) for the next-lower privilege mode (S-/HS-mode if
 S-mode is implemented, or U-mode otherwise), according to the values in
 <a href="#norm:menvcfg_pmm_enc">Legal values of <code>PMM</code> WARL field</a>.</span>
 <span id="norm:menvcfg_pmm_rdonly0">If Smnpm is not implemented, <code>PMM</code> is read-only zero.
@@ -4054,9 +4062,11 @@ not exist.</span></p>
 that controls security features.</span>
 <span id="norm:mseccfg_presence">It exists if any extension that adds a field to <code>mseccfg</code> is implemented. Otherwise, it is reserved.</span></p>
 </div>
-<div id="norm:mseccfg_enc_img" class="paragraph">
-<div class="title">Machine security configuration (<code>mseccfg</code>) register.</div>
-<p>Unresolved include directive in modules/priv/pages/machine.adoc - include::priv:partial$bytefield/mseccfg.edn[]</p>
+<div id="norm:mseccfg_enc_img" class="imageblock kroki">
+<div class="content">
+<img src="_images/svg-25df12cdde1a753b4a3ab2f85f370cc8a277e286.svg" alt="Machine security configuration (`mseccfg`) register.">
+</div>
+<div class="title">Figure 25. Machine security configuration (<code>mseccfg</code>) register.</div>
 </div>
 <div id="norm:mseccfg_sseed_useed_presence" class="paragraph">
 <p>The Zkr extension adds the <code>SSEED</code> and <code>USEED</code> fields to the <code>mseccfg</code> CSR to
@@ -4374,13 +4384,13 @@ enabled and the MTIE bit is set in the <code>mie</code> register.</span></p>
 <div class="content">
 <img src="_images/diag-850b45304d1878447c2c983f3f29bec99a983c6a.svg" alt="Machine time register (memory-mapped control register).">
 </div>
-<div class="title">Figure 24. Machine time register (memory-mapped control register).</div>
+<div class="title">Figure 26. Machine time register (memory-mapped control register).</div>
 </div>
 <div id="norm:mtimecmp_enc_img" class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-ed9eddb704a73478f37cbb41121d057703dd8b0d.svg" alt="Machine time compare register (memory-mapped control register).">
 </div>
-<div class="title">Figure 25. Machine time compare register (memory-mapped control register).</div>
+<div class="title">Figure 27. Machine time compare register (memory-mapped control register).</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -4718,7 +4728,7 @@ minimum required privilege mode, as do other SYSTEM instructions.</p>
 <div class="content">
 <img src="_images/diag-9a22e09f44a9318b24cb7215438cad5abea31086.svg" alt="SYSTEM instruction encodings designated for custom use.">
 </div>
-<div class="title">Figure 26. SYSTEM instruction encodings designated for custom use.</div>
+<div class="title">Figure 28. SYSTEM instruction encodings designated for custom use.</div>
 </div>
 </div>
 </div>
@@ -5524,13 +5534,13 @@ entries 8-11 appear in <code>pmpcfg2</code>[31:0] for both RV32 and RV64.</p>
 <div class="content">
 <img src="_images/diag-efd252c46c30d454fa34f34e22da6366e5c313c2.svg" alt="RV32 PMP configuration CSR layout.">
 </div>
-<div class="title">Figure 27. RV32 PMP configuration CSR layout.</div>
+<div class="title">Figure 29. RV32 PMP configuration CSR layout.</div>
 </div>
 <div id="pmpcfg-rv64" class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-b47bcbc11126ed099881aa16d91f134279156f98.svg" alt="RV64 PMP configuration CSR layout.">
 </div>
-<div class="title">Figure 28. RV64 PMP configuration CSR layout.</div>
+<div class="title">Figure 30. RV64 PMP configuration CSR layout.</div>
 </div>
 <div class="paragraph">
 <p><span id="norm:pmp_addr_registers">The PMP address registers are CSRs named <code>pmpaddr0</code>-<code>pmpaddr63</code>.</span> <span id="norm:pmp_addr_encoding">Each
@@ -5565,13 +5575,13 @@ the same limit.</p>
 <div class="content">
 <img src="_images/diag-ec67b4b34dae76306144656520ff9981f801f1cb.svg" alt="PMP address register format, RV32.">
 </div>
-<div class="title">Figure 29. PMP address register format, RV32.</div>
+<div class="title">Figure 31. PMP address register format, RV32.</div>
 </div>
 <div id="pmpaddr-rv64" class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-9855fd151b9d924dfc27737cdee72a35b7d4f7cf.svg" alt="PMP address register format, RV64.">
 </div>
-<div class="title">Figure 30. PMP address register format, RV64.</div>
+<div class="title">Figure 32. PMP address register format, RV64.</div>
 </div>
 <div class="paragraph">
 <p><span id="norm:pmp_cfg_permissions"><a href="#pmpcfg">PMP configuration register format.</a> shows the layout of a PMP configuration
@@ -5585,7 +5595,7 @@ W, and X fields form a collective <strong>WARL</strong> field for which the comb
 <div class="content">
 <img src="_images/diag-87e49044797677d35392804a47489c59fb69ce26.svg" alt="PMP configuration register format.">
 </div>
-<div class="title">Figure 31. PMP configuration register format.</div>
+<div class="title">Figure 33. PMP configuration register format.</div>
 </div>
 <div class="paragraph">
 <p><span id="norm:pmp_exec_fault">Attempting to fetch an instruction from a PMP region that does not have

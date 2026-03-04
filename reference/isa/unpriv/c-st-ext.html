@@ -358,19 +358,19 @@
     <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -448,16 +448,19 @@
     <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="zilsd.html">Chapter 34. "Zilsd", "Zclsd" Extensions for Load/Store pair for RV32, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="rv-32-64g.html">Chapter 35. RV32/64G Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="naming.html">Appendix A. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -542,6 +545,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/priv-rationale.html">Historical Rationale for Extensions</a>
   </li>
 </ul>
   </li>
@@ -1957,7 +1963,7 @@ to cause control to be transferred back to the debugging environment.
 <div class="paragraph">
 <p>On implementations that support the C extension, compressed forms of the
 I instructions permitted inside constrained LR/SC sequences, as
-described in <a href="#sec:lrscseq">[sec:lrscseq]</a>, are also permitted
+described in <a href="rv32.html#rv32i-hints" class="xref page">HINT Instructions</a>, are also permitted
 inside constrained LR/SC sequences.</p>
 </div>
 <div class="admonitionblock note">
@@ -1982,7 +1988,7 @@ C instructions will eventually complete.</p>
 <div class="paragraph">
 <p><span id="norm:Zca_hints">A portion of the RVC encoding space is reserved for microarchitectural
 HINTs. Like the HINTs in the RV32I base ISA (see
-<a href="#rv32i-hints">[rv32i-hints]</a>), these instructions do not
+<a href="rv32.html#rv32i-hints" class="xref page">HINT Instructions</a>), these instructions do not
 modify any architectural state, except for advancing the <code>pc</code> and any
 applicable performance counters. HINTs are executed as no-ops on
 implementations that ignore them.</span></p>

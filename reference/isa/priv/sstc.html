@@ -358,19 +358,19 @@
     <a class="nav-link"  href="../unpriv/intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="../unpriv/rv32.html">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="../unpriv/rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -448,16 +448,19 @@
     <a class="nav-link"  href="../unpriv/scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="../unpriv/zilsd.html">Chapter 34. "Zilsd", "Zclsd" Extensions for Load/Store pair for RV32, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="../unpriv/rv-32-64g.html">Chapter 35. RV32/64G Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../unpriv/naming.html">Appendix A. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -542,6 +545,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="priv-history.html">Chapter 20. History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="priv-rationale.html">Historical Rationale for Extensions</a>
   </li>
 </ul>
   </li>
@@ -705,9 +711,9 @@ extension for VS-mode.</p>
 <div class="paragraph">
 <p>The extension name is "Sstc" ('Ss' for Privileged arch and Supervisor-level
 extensions, and 'tc' for timecmp). This extension adds the S-level <code>stimecmp</code>
-CSR (<a href="#stimecmp">[stimecmp]</a>) and the VS-level <code>vstimecmp</code> CSR (<a href="#vstimecmp">[vstimecmp]</a>.  This
-extension adds the <code>STCE</code> bit to the <code>menvcfg</code> (<a href="#sec:menvcfg">[sec:menvcfg]</a>) and <code>henvcfg</code>
-(<a href="#sec:henvcfg">[sec:henvcfg]</a>) CSRs.</p>
+CSR (<a href="supervisor.html#stimecmp" class="xref page">Supervisor Timer (<code>stimecmp</code>) Register</a>) and the VS-level <code>vstimecmp</code> CSR (<a href="hypervisor.html#vstimecmp" class="xref page">Virtual Supervisor Timer (<code>vstimecmp</code>) Register</a>.  This
+extension adds the <code>STCE</code> bit to the <code>menvcfg</code> (<a href="machine.html#sec:menvcfg" class="xref page">Machine Environment Configuration (<code>menvcfg</code>) Register</a>) and <code>henvcfg</code>
+(<a href="hypervisor.html#sec:henvcfg" class="xref page">Hypervisor Environment Configuration Register (<code>henvcfg</code>)</a>) CSRs.</p>
 </div>
 </div>
 </div>

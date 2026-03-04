@@ -358,19 +358,19 @@
     <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -448,16 +448,19 @@
     <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="zilsd.html">Chapter 34. "Zilsd", "Zclsd" Extensions for Load/Store pair for RV32, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="rv-32-64g.html">Chapter 35. RV32/64G Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="naming.html">Appendix A. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -542,6 +545,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/priv-rationale.html">Historical Rationale for Extensions</a>
   </li>
 </ul>
   </li>
@@ -1006,10 +1012,10 @@ base ISAs. Each base integer instruction set is characterized by the
 width of the integer registers and the corresponding size of the address
 space and by the number of integer registers. <span id="norm:base_integer_variants">There are two primary base
 integer variants, RV32I and RV64I, described in
-<a href="#rv32">[rv32]</a> and <a href="#rv64">[rv64]</a>, which provide 32-bit
+<a href="rv32e.html" class="xref page">RV32E and RV64E Base Integer Instruction Sets</a> and <a href="rv64.html" class="xref page">RV64I Base Integer Instruction Set</a>, which provide 32-bit
 or 64-bit address spaces respectively.</span> <span id="norm:xlen_definition">We use the term XLEN to refer to
 the width of an integer register in bits (either 32 or 64).</span>
-<a href="#rv32e">[rv32e]</a> describes the RV32E and RV64E subset variants of the
+<a href="rv32e.html" class="xref page">RV32E and RV64E Base Integer Instruction Sets</a> describes the RV32E and RV64E subset variants of the
 RV32I or RV64I base instruction sets respectively, which have been added to support small
 microcontrollers, and which have half the number of integer registers.
 <span id="norm:twos_complement_signed_integers">The base integer instruction sets use a two&#8217;s-complement
@@ -1128,7 +1134,7 @@ standard or reserved encoding. Instruction-set extensions are generally
 shared but may provide slightly different functionality depending on the
 base ISA. We have also developed a naming convention
 for RISC-V base instructions and instruction-set extensions, described
-in detail in <a href="#naming">[naming]</a>.</p>
+in detail in <a href="naming.html" class="xref page">ISA Extension Naming Conventions</a>.</p>
 </div>
 <div class="paragraph">
 <p>To support more general software development, a set of standard
@@ -1250,7 +1256,7 @@ and avoid reading main memory for instruction fetches ever again. To
 ensure that certain implicit reads are ordered only after writes to the
 same memory locations, software must execute specific fence or
 cache-control instructions defined for this purpose (such as the FENCE.I
-instruction defined in <a href="#zifencei">[zifencei]</a>).
+instruction defined in <a href="zifencei.html" class="xref page">"Zifencei" Extension for Instruction-Fetch Fence</a>).
 </p>
 </div>
 <div class="paragraph">
@@ -1262,7 +1268,7 @@ consistency model. The default memory consistency model for RISC-V is
 the RISC-V Weak Memory Ordering (RVWMO), defined in
 <a href="rvwmo.html" class="xref page">RVWMO Memory Consistency Model</a> and in appendices. Optionally,
 an implementation may adopt the stronger model of Total Store Ordering,
-as defined in <a href="#ztso">[ztso]</a>. The execution environment
+as defined in <a href="ztso-st-ext.html" class="xref page">"Ztso" Extension for Total Store Ordering</a>. The execution environment
 may also add constraints that further limit the perceived reordering of
 memory accesses. Since the RVWMO model is the weakest model allowed for
 any RISC-V implementation, software written for this model is compatible
@@ -1638,7 +1644,7 @@ extensions, platform standards, or implementations.</p>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="colophon.html">Preface</a></span>
-  <span class="next"><a href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a></span>
+  <span class="next"><a href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a></span>
 </nav>
 </article>  </div>
 </main>

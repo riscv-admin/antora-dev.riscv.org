@@ -358,19 +358,19 @@
     <a class="nav-link"  href="../unpriv/intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="../unpriv/rv32.html">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="../unpriv/rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="../unpriv/zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -448,16 +448,19 @@
     <a class="nav-link"  href="../unpriv/scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="../unpriv/vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="../unpriv/zilsd.html">Chapter 34. "Zilsd", "Zclsd" Extensions for Load/Store pair for RV32, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="../unpriv/rv-32-64g.html">Chapter 35. RV32/64G Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../unpriv/naming.html">Appendix A. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../unpriv/mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -542,6 +545,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="priv-history.html">Chapter 20. History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="priv-rationale.html">Historical Rationale for Extensions</a>
   </li>
 </ul>
   </li>
@@ -709,7 +715,7 @@
 <p><span id="norm:Smctr_Ssctr_depend">Smctr and Ssctr depend on both the implementation of S-mode and the Sscsrind extension.</span></p>
 </div>
 <div class="sect2">
-<h3 id="11-1-1-csrs"><a class="anchor" href="#11-1-1-csrs"></a>11.1.1. CSRs</h3>
+<h3 id="CSRs"><a class="anchor" href="#CSRs"></a>11.1.1. CSRs</h3>
 <div class="sect3">
 <h4 id="11-1-1-1-machine-control-transfer-records-control-register-mctrctl"><a class="anchor" href="#11-1-1-1-machine-control-transfer-records-control-register-mctrctl"></a>11.1.1.1. Machine Control Transfer Records Control Register (<code>mctrctl</code>)</h4>
 <div class="paragraph">
@@ -740,79 +746,79 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RASEMU</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-rasemu_op">Enables RAS (Return Address Stack) Emulation Mode.</span>  See <a href="#RAS (Return Address Stack) Emulation Mode">[RAS (Return Address Stack) Emulation Mode]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-rasemu_op">Enables RAS (Return Address Stack) Emulation Mode.</span>  See <a href="#ras-emulation-mode">RAS (Return Address Stack) Emulation Mode</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">MTE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-mte_op">Enables recording of traps to M-mode when M=0.</span>  See <a href="#External Traps">[External Traps]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-mte_op">Enables recording of traps to M-mode when M=0.</span>  See <a href="#external-traps">External Traps</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">STE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-ste_op">Enables recording of traps to S-mode when S=0.</span>  See <a href="#External Traps">[External Traps]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-ste_op">Enables recording of traps to S-mode when S=0.</span>  See <a href="#external-traps">External Traps</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">BPFRZ</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-bpfrz_op">Set <code>sctrstatus</code>.FROZEN on a breakpoint exception that traps to M-mode or S-mode.</span> See <a href="#Freeze">[Freeze]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-bpfrz_op">Set <code>sctrstatus</code>.FROZEN on a breakpoint exception that traps to M-mode or S-mode.</span> See <a href="#freeze">Freeze</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LCOFIFRZ</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-lcofifrz_op">Set <code>sctrstatus</code>.FROZEN on local-counter-overflow interrupt (LCOFI) that traps to M-mode or S-mode.</span> See <a href="#Freeze">[Freeze]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-lcofifrz_op">Set <code>sctrstatus</code>.FROZEN on local-counter-overflow interrupt (LCOFI) that traps to M-mode or S-mode.</span> See <a href="#freeze">Freeze</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EXCINH</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-excinh_op">Inhibit recording of exceptions.</span>  See <a href="#Transfer Type Filtering">[Transfer Type Filtering]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-excinh_op">Inhibit recording of exceptions.</span>  See <a href="#transfer-type-filtering">Transfer Type Filtering</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">INTRINH</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-intrinh_op">Inhibit recording of interrupts.</span>  See <a href="#Transfer Type Filtering">[Transfer Type Filtering]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-intrinh_op">Inhibit recording of interrupts.</span>  See <a href="#transfer-type-filtering">Transfer Type Filtering</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TRETINH</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-tretinh_op">Inhibit recording of trap returns.</span>  See <a href="#Transfer Type Filtering">[Transfer Type Filtering]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-tretinh_op">Inhibit recording of trap returns.</span>  See <a href="#transfer-type-filtering">Transfer Type Filtering</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NTBREN</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-ntbren_op">Enable recording of not-taken branches.</span>  See <a href="#Transfer Type Filtering">[Transfer Type Filtering]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-ntbren_op">Enable recording of not-taken branches.</span>  See <a href="#transfer-type-filtering">Transfer Type Filtering</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">TKBRINH</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-tkbrinh_op">Inhibit recording of taken branches.</span>  See <a href="#Transfer Type Filtering">[Transfer Type Filtering]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-tkbrinh_op">Inhibit recording of taken branches.</span>  See <a href="#transfer-type-filtering">Transfer Type Filtering</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">INDCALLINH</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-indcallinh_op">Inhibit recording of indirect calls.</span>  See <a href="#Transfer Type Filtering">[Transfer Type Filtering]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-indcallinh_op">Inhibit recording of indirect calls.</span>  See <a href="#transfer-type-filtering">Transfer Type Filtering</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DIRCALLINH</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-dircallinh_op">Inhibit recording of direct calls.</span>  See <a href="#Transfer Type Filtering">[Transfer Type Filtering]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-dircallinh_op">Inhibit recording of direct calls.</span>  See <a href="#transfer-type-filtering">Transfer Type Filtering</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">INDJMPINH</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-indjmpinh_op">Inhibit recording of indirect jumps (without linkage).</span>  See <a href="#Transfer Type Filtering">[Transfer Type Filtering]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-indjmpinh_op">Inhibit recording of indirect jumps (without linkage).</span>  See <a href="#transfer-type-filtering">Transfer Type Filtering</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DIRJMPINH</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-dirjmpinh_op">Inhibit recording of direct jumps (without linkage).</span>  See <a href="#Transfer Type Filtering">[Transfer Type Filtering]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-dirjmpinh_op">Inhibit recording of direct jumps (without linkage).</span>  See <a href="#transfer-type-filtering">Transfer Type Filtering</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CORSWAPINH</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-corswapinh_op">Inhibit recording of co-routine swaps.</span>  See <a href="#Transfer Type Filtering">[Transfer Type Filtering]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-corswapinh_op">Inhibit recording of co-routine swaps.</span>  See <a href="#transfer-type-filtering">Transfer Type Filtering</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RETINH</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-retinh_op">Inhibit recording of function returns.</span>  See <a href="#Transfer Type Filtering">[Transfer Type Filtering]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-retinh_op">Inhibit recording of function returns.</span>  See <a href="#transfer-type-filtering">Transfer Type Filtering</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">INDLJMPINH</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-indljmpinh_op">Inhibit recording of other indirect jumps (with linkage).</span>  See <a href="#Transfer Type Filtering">[Transfer Type Filtering]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-indljmpinh_op">Inhibit recording of other indirect jumps (with linkage).</span>  See <a href="#transfer-type-filtering">Transfer Type Filtering</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DIRLJMPINH</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-dirljmpinh_op">Inhibit recording of other direct jumps (with linkage).</span>  See <a href="#Transfer Type Filtering">[Transfer Type Filtering]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-dirljmpinh_op">Inhibit recording of other direct jumps (with linkage).</span>  See <a href="#transfer-type-filtering">Transfer Type Filtering</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Custom[3:0]</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-custom_op">WARL bits designated for custom use.</span>  The value 0 must correspond to standard behavior.  See <a href="#Custom Extensions">[Custom Extensions]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:mctrctl-custom_op">WARL bits designated for custom use.</span>  The value 0 must correspond to standard behavior.  See <a href="#custom-extensions">Custom Extensions</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -881,15 +887,15 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">STE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:vsctrctl-ste_op">Enables recording of traps to VS-mode when S=0.</span>  See <a href="#External Traps">[External Traps]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:vsctrctl-ste_op">Enables recording of traps to VS-mode when S=0.</span>  See <a href="#external-traps">External Traps</a>..</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">BPFRZ</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:vsctrctl-bpfrz_op">Set <code>sctrstatus</code>.FROZEN on a breakpoint exception that traps to VS-mode.</span> See <a href="#Freeze">[Freeze]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:vsctrctl-bpfrz_op">Set <code>sctrstatus</code>.FROZEN on a breakpoint exception that traps to VS-mode.</span> See <a href="#freeze">Freeze</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LCOFIFRZ</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:vsctrctl-lcofifrz_op">Set <code>sctrstatus</code>.FROZEN on local-counter-overflow interrupt (LCOFI) that traps to VS-mode.</span> See <a href="#Freeze">[Freeze]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:vsctrctl-lcofifrz_op">Set <code>sctrstatus</code>.FROZEN on local-counter-overflow interrupt (LCOFI) that traps to VS-mode.</span> See <a href="#freeze">Freeze</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock">Other field definitions match those of <code>sctrctl</code>.  The optional fields implemented in <code>vsctrctl</code> should match those implemented in <code>sctrctl</code>.</p></td>
@@ -944,13 +950,13 @@
 <p class="tableblock">‘011 - 128</p>
 <p class="tableblock">‘100 - 256</p>
 <p class="tableblock">'11x - reserved</p>
-<p class="tableblock"><span id="norm:sctrdepth-depth_op1">The depth of the CTR buffer dictates the number of entries to which the hardware records transfers. For a depth of N, the hardware records transfers to entries 0..N-1. All <a href="#_entry_registers">Entry Registers</a> read as '0' and are read-only when the selected entry is in the range N to 255.  When the depth is increased, the newly accessible entries contain unspecified but legal values.</span></p>
+<p class="tableblock"><span id="norm:sctrdepth-depth_op1">The depth of the CTR buffer dictates the number of entries to which the hardware records transfers. For a depth of N, the hardware records transfers to entries 0..N-1. All <a href="#entry-registers">Entry Registers</a> read as '0' and are read-only when the selected entry is in the range N to 255.  When the depth is increased, the newly accessible entries contain unspecified but legal values.</span></p>
 <p class="tableblock"><span id="norm:sctrdepth-depth_param">It is implementation-specific which DEPTH value(s) are supported.</span></p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p><span id="norm:sctrdepth_mode">Attempts to access <code>sctrdepth</code> from VS-mode or VU-mode raise a virtual-instruction exception, unless CTR state enable access restrictions apply.</span>  See <a href="#State Enable Access Control">[State Enable Access Control]</a>.</p>
+<p><span id="norm:sctrdepth_mode">Attempts to access <code>sctrdepth</code> from VS-mode or VU-mode raise a virtual-instruction exception, unless CTR state enable access restrictions apply.</span>  See <a href="#state-enable-access-control">State Enable Access Control</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -999,17 +1005,17 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WRPTR</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:sctrstatus-wrptr">WARL field that indicates the physical CTR buffer entry to be written next.  It is incremented after new transfers are recorded (see <a href="#Behavior">[Behavior]</a>), though there are exceptions when <code><em>x</em>ctrctl</code>.RASEMU=1, see <a href="#RAS (Return Address Stack) Emulation Mode">[RAS (Return Address Stack) Emulation Mode]</a>.  For a given CTR depth (where depth = 2<sup>(DEPTH+4)</sup>), WRPTR wraps to 0 on an increment when the value matches depth-1, and to depth-1 on a decrement when the value is 0.  Bits above those needed to represent depth-1 (e.g., bits 7:4 for a depth of 16) are read-only 0. On depth changes, WRPTR holds an unspecified but legal value.</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:sctrstatus-wrptr">WARL field that indicates the physical CTR buffer entry to be written next.  It is incremented after new transfers are recorded (see <a href="#behavior">Behavior</a>), though there are exceptions when <code><em>x</em>ctrctl</code>.RASEMU=1, see <a href="#ras-emulation-mode">RAS (Return Address Stack) Emulation Mode</a>.  For a given CTR depth (where depth = 2<sup>(DEPTH+4)</sup>), WRPTR wraps to 0 on an increment when the value matches depth-1, and to depth-1 on a decrement when the value is 0.  Bits above those needed to represent depth-1 (e.g., bits 7:4 for a depth of 16) are read-only 0. On depth changes, WRPTR holds an unspecified but legal value.</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FROZEN</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:sctrstatus-frozen_op">Inhibit transfer recording.</span> See <a href="#Freeze">[Freeze]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:sctrstatus-frozen_op">Inhibit transfer recording.</span> See <a href="#freeze">Freeze</a>.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
 <p><span id="norm:Ssctr_sctrstatus_acc">Undefined bits in <code>sctrstatus</code> are WPRI. Status fields may be added by future extensions,
-and software should ignore but preserve any fields that it does not recognize.  Undefined  bits must be implemented as read-only 0, unless a custom extension is implemented and enabled</span> (see <a href="#Custom Extensions">[Custom Extensions]</a>).</p>
+and software should ignore but preserve any fields that it does not recognize.  Undefined  bits must be implemented as read-only 0, unless a custom extension is implemented and enabled</span> (see <a href="#custom-extensions">Custom Extensions</a>).</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1067,7 +1073,7 @@ and software should ignore but preserve any fields that it does not recognize.  
 </td>
 <td class="content">
 <div class="paragraph">
-<p><em>Smctr/Ssctr depends upon implementation of S-mode because much of CTR state is accessible only through S-mode CSRs.  If, in the future, it becomes desirable to remove this dependency, an extension could add <code>mctrdepth</code> and <code>mctrstatus</code> CSRs that reflect the same state as <code>sctrdepth</code> and <code>sctrstatus</code>, respectively.  Further, such an extension should make CTR entries accessible via <code>miselect</code>/<code>mireg*</code>.  See <a href="#Entry Registers">[Entry Registers]</a>.</em></p>
+<p><em>Smctr/Ssctr depends upon implementation of S-mode because much of CTR state is accessible only through S-mode CSRs.  If, in the future, it becomes desirable to remove this dependency, an extension could add <code>mctrdepth</code> and <code>mctrstatus</code> CSRs that reflect the same state as <code>sctrdepth</code> and <code>sctrstatus</code>, respectively.  Further, such an extension should make CTR entries accessible via <code>miselect</code>/<code>mireg*</code>.  See <a href="#entry-registers">Entry Registers</a>.</em></p>
 </div>
 </td>
 </tr>
@@ -1076,7 +1082,7 @@ and software should ignore but preserve any fields that it does not recognize.  
 </div>
 </div>
 <div class="sect2">
-<h3 id="11-1-2-entry-registers"><a class="anchor" href="#11-1-2-entry-registers"></a>11.1.2. Entry Registers</h3>
+<h3 id="entry-registers"><a class="anchor" href="#entry-registers"></a>11.1.2. Entry Registers</h3>
 <div class="paragraph">
 <p>Control transfer records are stored in a CTR buffer, such that each buffer entry stores information about a single transfer.  The CTR buffer entries are logically accessed via the indirect register access mechanism defined by the Sscsrind extension. <span id="norm:siselect_acc_op">The <code>siselect</code> index range 0x200 through 0x2FF is reserved for CTR logical entries 0 through 255. When <code>siselect</code> holds a value in this range, <code>sireg</code> provides access to <code>ctrsource</code>, <code>sireg2</code> provides access to <code>ctrtarget</code>, and <code>sireg3</code> provides access to <code>ctrdata</code>.  <code>sireg4</code>, <code>sireg5</code>, and <code>sireg6</code> are read-only 0.</span></p>
 </div>
@@ -1084,7 +1090,7 @@ and software should ignore but preserve any fields that it does not recognize.  
 <p><span id="norm:vsiselect_op">When <code>vsiselect</code> holds a value in 0x200..0x2FF, the <code>vsireg*</code> registers provide access to the same CTR entry register state as the analogous <code>sireg*</code> registers.  There is not a separate set of entry registers for V=1.</span></p>
 </div>
 <div class="paragraph">
-<p>See <a href="#State Enable Access Control">[State Enable Access Control]</a> for cases where CTR accesses from S-mode and VS-mode may be restricted.</p>
+<p>See <a href="#state-enable-access-control">State Enable Access Control</a> for cases where CTR accesses from S-mode and VS-mode may be restricted.</p>
 </div>
 <div class="sect3">
 <h4 id="11-1-2-1-control-transfer-record-source-register-ctrsource"><a class="anchor" href="#11-1-2-1-control-transfer-record-source-register-ctrsource"></a>11.1.2.1. Control Transfer Record Source Register (<code>ctrsource</code>)</h4>
@@ -1173,20 +1179,20 @@ Unimplemented fields are read-only 0.  <code>ctrdata</code> is a 64-bit register
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CCV</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:ctrdata-ccv">Cycle Count Valid.</span> See <a href="#Cycle Counting">[Cycle Counting]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:ctrdata-ccv">Cycle Count Valid.</span> See <a href="#cycle-counting">Cycle Counting</a>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CC[15:0]</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:ctrdata-cc">Cycle Count, composed of the Cycle Count Exponent (CCE, in
 CC[15:12]) and Cycle Count Mantissa (CCM, in CC[11:0]).</span> See
-<a href="#Cycle Counting">[Cycle Counting]</a>.</p></td>
+<a href="#cycle-counting">Cycle Counting</a>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p><span id="norm:ctrdata_undef">Undefined bits in <code>ctrdata</code> are WPRI. Undefined bits must be implemented as read-only 0, unless a <a href="#_custom_extensions">custom extension</a> is implemented and enabled.</span></p>
+<p><span id="norm:ctrdata_undef">Undefined bits in <code>ctrdata</code> are WPRI. Undefined bits must be implemented as read-only 0, unless a <a href="#custom-extension">Custom extension</a> is implemented and enabled.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1196,7 +1202,7 @@ CC[15:12]) and Cycle Count Mantissa (CCM, in CC[11:0]).</span> See
 </td>
 <td class="content">
 <div class="paragraph">
-<p><em>Like the <a href="#_transfer_type_filtering">Transfer Type Filtering</a> bits in <code>mctrctl</code>, the <code>ctrdata</code>.TYPE bits leverage the E-trace itype encodings.</em></p>
+<p><em>Like the <a href="#transfer-type-filtering">Transfer Type Filter</a> bits in <code>mctrctl</code>, the <code>ctrdata</code>.TYPE bits leverage the E-trace itype encodings.</em></p>
 </div>
 </td>
 </tr>
@@ -1207,7 +1213,7 @@ CC[15:12]) and Cycle Count Mantissa (CCM, in CC[11:0]).</span> See
 <div class="sect2">
 <h3 id="11-1-3-instructions"><a class="anchor" href="#11-1-3-instructions"></a>11.1.3. Instructions</h3>
 <div class="sect3">
-<h4 id="11-1-3-1-supervisor-ctr-clear-instruction"><a class="anchor" href="#11-1-3-1-supervisor-ctr-clear-instruction"></a>11.1.3.1. Supervisor CTR Clear Instruction</h4>
+<h4 id="supervisor-ctr-clear-instruction"><a class="anchor" href="#supervisor-ctr-clear-instruction"></a>11.1.3.1. Supervisor CTR Clear Instruction</h4>
 <div class="imageblock kroki">
 <div class="content">
 <img src="_images/svg-5e9f60b9b6bddba48714931a72c3484ceaedbe54.svg" alt="svg">
@@ -1219,10 +1225,10 @@ CC[15:12]) and Cycle Count Mantissa (CCM, in CC[11:0]).</span> See
 <div class="ulist">
 <ul>
 <li>
-<p><span id="norm:sctrclr_op1">Zeroes all  CTR <a href="#_entry_registers">Entry Registers</a>, for all DEPTH values</span></p>
+<p><span id="norm:sctrclr_op1">Zeroes all  CTR <a href="#entry-registers">Entry Registers</a>, for all DEPTH values</span></p>
 </li>
 <li>
-<p><span id="norm:sctrclr_op2">Zeroes the CTR cycle counter and CCV</span> (see <a href="#Cycle Counting">[Cycle Counting]</a>)</p>
+<p><span id="norm:sctrclr_op2">Zeroes the CTR cycle counter and CCV</span> (see <a href="#cycle-counting">Cycle Counting</a>)</p>
 </li>
 </ul>
 </div>
@@ -1230,14 +1236,14 @@ CC[15:12]) and Cycle Count Mantissa (CCM, in CC[11:0]).</span> See
 <p><span id="norm:sctrclr_acc">Any read of <code>ctrsource</code>, <code>ctrtarget</code>, or <code>ctrdata</code> that follows SCTRCLR, such that it precedes the next qualified control transfer, will return the value 0.  Further, the first recorded transfer following SCTRCLR will have <code>ctrdata</code>.CCV=0.</span></p>
 </div>
 <div class="paragraph">
-<p><span id="norm:sctrclr_exceptions">SCTRCLR raises an illegal-instruction exception in U-mode, and a virtual-instruction exception in VU-mode, unless CTR state enable access restrictions apply.</span>  See <a href="#State Enable Access Control">[State Enable Access Control]</a>.</p>
+<p><span id="norm:sctrclr_exceptions">SCTRCLR raises an illegal-instruction exception in U-mode, and a virtual-instruction exception in VU-mode, unless CTR state enable access restrictions apply.</span>  See <a href="#state-enable-access-control">State Enable Access Control</a>.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="11-1-4-state-enable-access-control"><a class="anchor" href="#11-1-4-state-enable-access-control"></a>11.1.4. State Enable Access Control</h3>
+<h3 id="state-enable-access-control"><a class="anchor" href="#state-enable-access-control"></a>11.1.4. State Enable Access Control</h3>
 <div class="paragraph">
-<p>When Smstateen is implemented, the <code>mstateen0</code>.CTR bit controls access to CTR register state from privilege modes less privileged than M-mode.  <span id="norm:mstateen_ctr1">When <code>mstateen0</code>.CTR=1, accesses to CTR register state behave as described in <a href="#CSRs">[CSRs]</a> and <a href="#Entry Registers">[Entry Registers]</a> above, while SCTRCLR behaves as described in <a href="#Supervisor CTR Clear Instruction">[Supervisor CTR Clear Instruction]</a>.</span>  <span id="norm:mstateen_ctr0">When <code>mstateen0</code>.CTR=0 and the privilege mode is less privileged than M-mode, the following operations raise an illegal-instruction exception:</span></p>
+<p>When Smstateen is implemented, the <code>mstateen0</code>.CTR bit controls access to CTR register state from privilege modes less privileged than M-mode.  <span id="norm:mstateen_ctr1">When <code>mstateen0</code>.CTR=1, accesses to CTR register state behave as described in <a href="#CSRs">CSRs</a> and <a href="#entry-registers">Entry Registers</a> above, while SCTRCLR behaves as described in <a href="#supervisor-ctr-clear-instruction">Supervisor CTR Clear Instruction</a>.</span>  <span id="norm:mstateen_ctr0">When <code>mstateen0</code>.CTR=0 and the privilege mode is less privileged than M-mode, the following operations raise an illegal-instruction exception:</span></p>
 </div>
 <div class="ulist">
 <ul>
@@ -1259,7 +1265,7 @@ CC[15:12]) and Cycle Count Mantissa (CCM, in CC[11:0]).</span> See
 <p><span id="norm:hstateen_ctr">If the H extension is implemented and <code>mstateen0</code>.CTR=1, the <code>hstateen0</code>.CTR bit controls access to supervisor CTR state when V=1.  This state includes <code>sctrctl</code> (really <code>vsctrctl</code>), <code>sctrstatus</code>, and <code>sireg*</code> (really <code>vsireg*</code>) when <code>siselect</code> (really <code>vsiselect</code>) is in 0x200..0x2FF.  <code>hstateen0</code>.CTR is read-only 0 when <code>mstateen0</code>.CTR=0.</span></p>
 </div>
 <div class="paragraph">
-<p><span id="norm:hstateen_vs">When <code>mstateen0</code>.CTR=1 and <code>hstateen0</code>.CTR=1, VS-mode accesses to supervisor CTR state behave as described in <a href="#CSRs">[CSRs]</a> and <a href="#Entry Registers">[Entry Registers]</a> above, while SCTRCLR behaves as described in <a href="#Supervisor CTR Clear Instruction">[Supervisor CTR Clear Instruction]</a>.  When <code>mstateen0</code>.CTR=1 and <code>hstateen0</code>.CTR=0, both VS-mode accesses to supervisor CTR state and VS-mode execution of SCTRCLR raise a virtual-instruction exception.</span></p>
+<p><span id="norm:hstateen_vs">When <code>mstateen0</code>.CTR=1 and <code>hstateen0</code>.CTR=1, VS-mode accesses to supervisor CTR state behave as described in <a href="#CSRs">CSRs</a> and <a href="#entry-registers">Entry Registers</a> above, while SCTRCLR behaves as described in <a href="#supervisor-ctr-clear-instruction">Supervisor CTR Clear Instruction</a>.  When <code>mstateen0</code>.CTR=1 and <code>hstateen0</code>.CTR=0, both VS-mode accesses to supervisor CTR state and VS-mode execution of SCTRCLR raise a virtual-instruction exception.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1286,7 +1292,7 @@ CC[15:12]) and Cycle Count Mantissa (CCM, in CC[11:0]).</span> See
 </td>
 <td class="content">
 <div class="paragraph">
-<p><em>See <a href="#indirect-csr">[indirect-csr]</a> for how bit 60 in <code>mstateen0</code> and <code>hstateen0</code> can also restrict access to <code>sireg*</code>/<code>siselect</code> and <code>vsireg*</code>/<code>vsiselect</code> from privilege modes less privileged than M-mode.</em></p>
+<p><em>See <a href="indirect-csr.html" class="xref page">Indirect CSR</a> for how bit 60 in <code>mstateen0</code> and <code>hstateen0</code> can also restrict access to <code>sireg*</code>/<code>siselect</code> and <code>vsireg*</code>/<code>vsiselect</code> from privilege modes less privileged than M-mode.</em></p>
 </div>
 </td>
 </tr>
@@ -1308,7 +1314,7 @@ CC[15:12]) and Cycle Count Mantissa (CCM, in CC[11:0]).</span> See
 </div>
 </div>
 <div class="sect2">
-<h3 id="11-1-5-behavior"><a class="anchor" href="#11-1-5-behavior"></a>11.1.5. Behavior</h3>
+<h3 id="behavior"><a class="anchor" href="#behavior"></a>11.1.5. Behavior</h3>
 <div class="paragraph">
 <p><span id="norm:ctr_behavior">CTR records qualified control transfers.  Control transfers are qualified if they meet the following criteria:</span></p>
 </div>
@@ -1329,7 +1335,7 @@ CC[15:12]) and Cycle Count Mantissa (CCM, in CC[11:0]).</span> See
 </ul>
 </div>
 <div class="paragraph">
-<p><span id="norm:ctr_stack">Such qualified transfers update the <a href="#_entry_registers">Entry Registers</a> at logical entry 0.  As a result, older entries are pushed down the stack; the record previously in logical entry 0 moves to logical entry 1, the record in logical entry 1 moves to logical entry 2, and so on.  If the CTR buffer is full, the oldest recorded entry (previously at entry depth-1) is lost.</span></p>
+<p><span id="norm:ctr_stack">Such qualified transfers update the <a href="#entry-registers">Entry Registers</a> at logical entry 0.  As a result, older entries are pushed down the stack; the record previously in logical entry 0 moves to logical entry 1, the record in logical entry 1 moves to logical entry 2, and so on.  If the CTR buffer is full, the oldest recorded entry (previously at entry depth-1) is lost.</span></p>
 </div>
 <div class="paragraph">
 <p><span id="norm:ctr_validbit">Recorded transfers will set the <code>ctrsource</code>.V bit to 1, and will update all implemented record fields.</span></p>
@@ -1357,7 +1363,7 @@ and/or target privilege mode are enabled for recording, and on the transfer type
 or trap return).</p>
 </div>
 <div class="paragraph">
-<p><span id="norm:trap_enabled">Traps between enabled privilege modes are recorded as normal.</span>  <span id="norm:trap_disabled_src">Traps from a disabled privilege mode to an enabled privilege mode are partially recorded, such that the <code>ctrsource</code>.PC is 0.</span> <span id="norm:trap_disabled_tgt">Traps from an enabled mode to a disabled mode, known as external traps, are not recorded by default.</span>  See <a href="#External Traps">[External Traps]</a> for how they can be recorded.</p>
+<p><span id="norm:trap_enabled">Traps between enabled privilege modes are recorded as normal.</span>  <span id="norm:trap_disabled_src">Traps from a disabled privilege mode to an enabled privilege mode are partially recorded, such that the <code>ctrsource</code>.PC is 0.</span> <span id="norm:trap_disabled_tgt">Traps from an enabled mode to a disabled mode, known as external traps, are not recorded by default.</span>  See <a href="#external-traps">External Traps</a>. for how they can be recorded.</p>
 </div>
 <div class="paragraph">
 <p>Trap returns have similar treatment.  <span id="norm:trapret_enabled">Trap returns between enabled privilege modes are recorded as normal.</span>  <span id="norm:trapret_to_disabled">Trap returns from an enabled mode back to a disabled mode are partially recorded, such that <code>ctrtarget</code>.PC is 0.</span>  <span id="norm:trapret_from_disabled">Trap returns from a disabled mode to an enabled mode are not recorded.</span></p>
@@ -1404,7 +1410,7 @@ or trap return).</p>
 <td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><strong>Trap</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Enabled</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:trap_ee">Recorded</span>.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:trap_ed">External trap.  Not recorded by default,</span> but see <a href="#External Traps">[External Traps]</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span id="norm:trap_ed">External trap.  Not recorded by default,</span> but see <a href="#external-traps">External Traps</a>..</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disabled</strong></p></td>
@@ -1435,10 +1441,10 @@ or trap return).</p>
 <p><code>mctrctl</code>.M, <code>sctrctl</code>.S, and <code>vsctrctl</code>.{S,U} are used to determine whether the source and target modes are enabled;</p>
 </li>
 <li>
-<p><code>mctrctl</code>.MTE, <code>sctrctl</code>.STE, and <code>vsctrctl</code>.STE are used to determine whether an external trap is recorded (see <a href="#External Traps">[External Traps]</a>);</p>
+<p><code>mctrctl</code>.MTE, <code>sctrctl</code>.STE, and <code>vsctrctl</code>.STE are used to determine whether an external trap is recorded (see <a href="#external-traps">External Traps</a>.);</p>
 </li>
 <li>
-<p><code>sctrctl</code>.LCOFIFRZ and <code>sctrctl</code>.BPFRZ determine whether CTR becomes frozen (see <a href="#Freeze">[Freeze]</a>)</p>
+<p><code>sctrctl</code>.LCOFIFRZ and <code>sctrctl</code>.BPFRZ determine whether CTR becomes frozen (see <a href="#freeze">Freeze</a>)</p>
 </li>
 <li>
 <p>For all other <code><em>x</em>ctrctl</code> fields, the value in <code>vsctrctl</code> is used.</p>
@@ -1453,7 +1459,7 @@ or trap return).</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p><em>Consider an exception that traps from VU-mode to HS-mode, with <code>vsctrctl</code>.U=1 and <code>sctrctl</code>.S=1.  Because both the source mode and target mode are enabled for recording, whether the trap is recorded then depends on the CTR configuration (e.g., the <a href="#_transfer_type_filtering">transfer type filter</a> bits) in <code>vsctrctl</code>, not in <code>sctrctl</code>.</em></p>
+<p><em>Consider an exception that traps from VU-mode to HS-mode, with <code>vsctrctl</code>.U=1 and <code>sctrctl</code>.S=1.  Because both the source mode and target mode are enabled for recording, whether the trap is recorded then depends on the CTR configuration (e.g., the <a href="#transfer-type-filtering">Transfer Type Filter</a> bits) in <code>vsctrctl</code>, not in <code>sctrctl</code>.</em></p>
 </div>
 </td>
 </tr>
@@ -1461,7 +1467,7 @@ or trap return).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="11-1-5-1-2-external-traps"><a class="anchor" href="#11-1-5-1-2-external-traps"></a>11.1.5.1.2. External Traps</h5>
+<h5 id="external-traps"><a class="anchor" href="#external-traps"></a>11.1.5.1.2. External Traps</h5>
 <div class="paragraph">
 <p><span id="norm:exttrap_def">External traps are traps from a privilege mode enabled for CTR recording to a privilege mode that is not enabled for CTR recording.  By default external traps are not recorded, but privileged software running in the target mode of the trap can opt-in to allowing CTR to record external traps into that mode. The <code><em>x</em>ctrctl</code>.<em>x</em>TE bits allow M-mode, S-mode, and VS-mode to opt-in separately.</span></p>
 </div>
@@ -1581,7 +1587,7 @@ record.</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="11-1-5-2-transfer-type-filtering"><a class="anchor" href="#11-1-5-2-transfer-type-filtering"></a>11.1.5.2. Transfer Type Filtering</h4>
+<h4 id="transfer-type-filtering"><a class="anchor" href="#transfer-type-filtering"></a>11.1.5.2. Transfer Type Filtering</h4>
 <div class="paragraph">
 <p><span id="norm:ttf_default">Default CTR behavior, when all transfer type filter bits (<code><em>x</em>ctrctl</code>[47:32]) are unimplemented or 0, is to record all control transfers within enabled privileged modes. By setting transfer type filter bits, software can opt out of recording select transfer types, or opt into recording non-default operations.  All transfer type filter bits are optional.</span></p>
 </div>
@@ -1799,7 +1805,7 @@ in the
 </div>
 </div>
 <div class="sect3">
-<h4 id="11-1-5-3-cycle-counting"><a class="anchor" href="#11-1-5-3-cycle-counting"></a>11.1.5.3. Cycle Counting</h4>
+<h4 id="cycle-counting"><a class="anchor" href="#cycle-counting"></a>11.1.5.3. Cycle Counting</h4>
 <div class="paragraph">
 <p><span id="norm:ctrdata_cc_supported_param">The <code>ctrdata</code> register may optionally include a count of CPU cycles elapsed since the prior CTR record.  The elapsed cycle count value is represented by the CC field, which has a 12-bit mantissa component (Cycle Count Mantissa, or CCM) and a 4-bit exponent component (Cycle Count Exponent, or CCE).</span></p>
 </div>
@@ -1899,7 +1905,7 @@ calls and returns.</span></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="11-1-5-4-ras-return-address-stack-emulation-mode"><a class="anchor" href="#11-1-5-4-ras-return-address-stack-emulation-mode"></a>11.1.5.4. RAS (Return Address Stack) Emulation Mode</h4>
+<h4 id="ras-emulation-mode"><a class="anchor" href="#ras-emulation-mode"></a>11.1.5.4. RAS (Return Address Stack) Emulation Mode</h4>
 <div class="paragraph">
 <p><span id="norm:ctrctl_rasemu_op">When the optional <code><em>x</em>ctrctl</code>.RASEMU bit is implemented and set to 1, transfer recording behavior is altered to emulate the behavior of a return-address stack (RAS).</span></p>
 </div>
@@ -1955,12 +1961,12 @@ unmodified code.</em></p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p><em>As described in <a href="#Cycle Counting">[Cycle Counting]</a>,
+<p><em>As described in <a href="#cycle-counting">Cycle Counting</a>,
 when CCV=1, the CC field provides the elapsed cycles since the prior CTR
 entry was recorded. This introduces implementation challenges when
 RASEMU=1 because, for each recorded call, there may have been several
 recorded calls (and returns which “popped” them) since the prior
-remaining call entry was recorded (see <a href="#RAS (Return Address Stack) Emulation Mode">[RAS (Return Address Stack) Emulation Mode]</a>). The implication is that returns that
+remaining call entry was recorded (see <a href="#ras-emulation-mode">RAS (Return Address Stack) Emulation Mode</a>). The implication is that returns that
 pop a call entry not only do not reset the cycle counter, but instead
 add the CC field from the popped entry to the counter. For simplicity,
 an implementation may opt to record CCV=0 for all calls, or those whose parent call was popped, when RASEMU=1.</em></p>
@@ -1971,7 +1977,7 @@ an implementation may opt to record CCV=0 for all calls, or those whose parent c
 </div>
 </div>
 <div class="sect3">
-<h4 id="11-1-5-5-freeze"><a class="anchor" href="#11-1-5-5-freeze"></a>11.1.5.5. Freeze</h4>
+<h4 id="freeze"><a class="anchor" href="#freeze"></a>11.1.5.5. Freeze</h4>
 <div class="paragraph">
 <p>When <code>sctrstatus</code>.FROZEN=1, transfer recording is inhibited.  This bit can be set by hardware, as described below, or by software.</p>
 </div>
@@ -2038,9 +2044,9 @@ recording is desired.</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="11-1-6-custom-extensions"><a class="anchor" href="#11-1-6-custom-extensions"></a>11.1.6. Custom Extensions</h3>
+<h3 id="custom-extensions"><a class="anchor" href="#custom-extensions"></a>11.1.6. Custom Extensions</h3>
 <div class="paragraph">
-<p><span id="norm:custom_bits">Any custom CTR extension must be associated with a non-zero value within the designated custom bits in <code><em>x</em>ctrctl</code>.  When the custom bits hold a non-zero value that enables a custom extension, the extension may alter standard CTR behavior, and may define new custom status fields within <code>sctrstatus</code> or the CTR <a href="#_entry_registers">Entry Registers</a>.  All custom status fields, and standard status fields whose behavior is altered by the custom extension, must revert to standard behavior when the custom bits hold zero.  This includes read-only 0 behavior for any bits undefined by any implemented standard extensions.</span></p>
+<p><span id="norm:custom_bits">Any custom CTR extension must be associated with a non-zero value within the designated custom bits in <code><em>x</em>ctrctl</code>.  When the custom bits hold a non-zero value that enables a custom extension, the extension may alter standard CTR behavior, and may define new custom status fields within <code>sctrstatus</code> or the CTR <a href="#entry-registers">Entry Registers</a>.  All custom status fields, and standard status fields whose behavior is altered by the custom extension, must revert to standard behavior when the custom bits hold zero.  This includes read-only 0 behavior for any bits undefined by any implemented standard extensions.</span></p>
 </div>
 </div>
 </div>

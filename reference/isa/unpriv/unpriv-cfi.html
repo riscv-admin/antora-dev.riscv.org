@@ -6,7 +6,7 @@
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
     <link rel="canonical" href="https://docs.riscv.org/isa/unpriv/unpriv-cfi.html">
     <link rel="prev" href="vector-crypto.html">
-    <link rel="next" href="rv-32-64g.html">
+    <link rel="next" href="zilsd.html">
     <meta name="generator" content="Antora 3.1.14">
     <script>
 !function (theme, navWidth) {
@@ -358,19 +358,19 @@
     <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
+    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">Chapter 6."Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
@@ -448,16 +448,19 @@
     <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="zilsd.html">Chapter 34. "Zilsd", "Zclsd" Extensions for Load/Store pair for RV32, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="rv-32-64g.html">Chapter 35. RV32/64G Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="naming.html">Appendix A. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
@@ -542,6 +545,9 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../priv/priv-rationale.html">Historical Rationale for Extensions</a>
   </li>
 </ul>
   </li>
@@ -714,7 +720,7 @@ convention that a <code>JAL</code>/<code>JALR</code> where <code>rd</code> (i.e.
 <code>x5</code> is a procedure call, and a <code>JALR</code> where <code>rs1</code> is the conventional
 link register (i.e. <code>x1</code> or <code>x5</code>) is a return from procedure. The architecture
 allows for using these hints and conventions to support return address
-prediction (See <a href="#rashints">[rashints]</a>).</p>
+prediction (See <a href="rv32.html#rashints" class="xref page">Return-address stack prediction hints</a>).</p>
 </div>
 <div class="paragraph">
 <p>The RVC standard extension for compressed instructions provides unconditional
@@ -1305,7 +1311,7 @@ instruction-fetch units, but they require accurate detection of instructions
 used for procedure calls and returns to be effective. For RISC-V, hints as to
 the instructions' usage are encoded implicitly via the register numbers used.
 The return-address stack (RAS) actions to pop and/or push onto the RAS are
-specified in <a href="#rashints">[rashints]</a>.</p>
+specified in <a href="rv32.html#rashints" class="xref page">Return-address stack prediction hints</a>.</p>
 </div>
 <div class="paragraph">
 <p>Using <code>x1</code> or <code>x5</code> as the link register allows a program to benefit from the
@@ -1730,8 +1736,8 @@ value at the memory location operated on by <code>SSAMOSWAP.W/D</code> is not re
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="vector-crypto.html">Chapter 32.Cryptography Extensions: Vector Instructions, Version 1.0</a></span>
-  <span class="next"><a href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a></span>
+  <span class="prev"><a href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a></span>
+  <span class="next"><a href="zilsd.html">Chapter 34. "Zilsd", "Zclsd" Extensions for Load/Store pair for RV32, Version 1.0</a></span>
 </nav>
 </article>  </div>
 </main>
