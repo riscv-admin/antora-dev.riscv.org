@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="3fd20fb6d9a5f6cea1eca177d6ecca3bbbb7c0eb"> 
+    <meta name="antora-ui-version" content="65dbddab5c7bf609868b6dd78cb9fc9f33c457bd"> 
     <meta name="version" content="v1.0">
     <meta name="component" content="aia">
     <meta name="latest-version" content="false">
@@ -341,7 +341,8 @@
 </div>
 <script>
 !function (sidebar) {
-  if (sidebar) {
+  var isHome = window.location.pathname.includes('/home/') || window.location.pathname === '/'
+  if (isHome || sidebar) {
     document.body.classList.add('nav-sm')
   }
 }(localStorage && localStorage.getItem('sidebar') === 'close')

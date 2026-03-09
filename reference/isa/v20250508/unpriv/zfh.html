@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="3fd20fb6d9a5f6cea1eca177d6ecca3bbbb7c0eb"> 
+    <meta name="antora-ui-version" content="65dbddab5c7bf609868b6dd78cb9fc9f33c457bd"> 
     <meta name="version" content="v20250508">
     <meta name="component" content="isa">
     <meta name="latest-version" content="false">
@@ -113,7 +113,7 @@
             data-version="v20260120"
             
             >
-            Latest
+            Version: 20260120
           </option>
           <option
             value="../index.html"
@@ -366,7 +366,8 @@
 </div>
 <script>
 !function (sidebar) {
-  if (sidebar) {
+  var isHome = window.location.pathname.includes('/home/') || window.location.pathname === '/'
+  if (isHome || sidebar) {
     document.body.classList.add('nav-sm')
   }
 }(localStorage && localStorage.getItem('sidebar') === 'close')
@@ -486,7 +487,7 @@
       </td>
       <td class="content">
         <div class="paragraph">
-          <p> For the latest stable version, please use <a href="../../unpriv/zfh.html">ISA Specifications Latest</a>!</p>
+          <p> For the latest stable version, please use <a href="../../unpriv/zfh.html">ISA Specifications Version: 20260120</a>!</p>
         </div>
       </td>
     </tr></tbody>

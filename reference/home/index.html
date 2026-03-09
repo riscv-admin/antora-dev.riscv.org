@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="3fd20fb6d9a5f6cea1eca177d6ecca3bbbb7c0eb"> 
+    <meta name="antora-ui-version" content="65dbddab5c7bf609868b6dd78cb9fc9f33c457bd"> 
     <meta name="version" content="">
     <meta name="component" content="home">
     <meta name="latest-version" content="false">
@@ -92,7 +92,7 @@
     }
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script><div class="body">
-<div class="nav-container" data-component="home" data-version="">
+<div class="nav-container" data-component="home" data-version="" data-is-home="true">
   <aside class="nav">
     <div class="panels">
       <div class="nav-panel-menu is-active" data-panel="menu">
@@ -118,7 +118,8 @@
 </div>
 <script>
 !function (sidebar) {
-  if (sidebar) {
+  var isHome = window.location.pathname.includes('/home/') || window.location.pathname === '/'
+  if (isHome || sidebar) {
     document.body.classList.add('nav-sm')
   }
 }(localStorage && localStorage.getItem('sidebar') === 'close')
