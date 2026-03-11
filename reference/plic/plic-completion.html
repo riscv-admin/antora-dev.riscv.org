@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="d98b521f5546600886ee819ee6067a5ea48ebbdd"> 
+    <meta name="antora-ui-version" content="8dfb45222624158c8076413f2907f83ef72beae5"> 
     <meta name="version" content="v1.0.0">
     <meta name="component" content="plic">
     <meta name="latest-version" content="false">
@@ -52,201 +52,15 @@
       <div class="navbar-end">
         <div class="navbar-item home">
           <a class="navbar-link"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/16154769/RISC-V+Technical+Specifications"
-            aria-label="Library">
-            Library</a>
-        </div>
-      </div>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="#">ISA</a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805601287/The+RISC-V+Instruction+Set+Manual+Volume+I+Unprivileged+ISA">Unprivileged
-            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805568665">Privileged <svg
-              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
+            href="../home/index.html"
+            aria-label="home"
+            title="home">
+            <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
             </svg></a>
         </div>
       </div>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="#">Profiles</a>
-        <div class="navbar-dropdown" style="min-width: 280px">
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805240860/RVA23+Profile">RVA23 Profile <svg
-              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/805568757/RVB23+Profile">RVB23 Profile <svg
-              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806289411/RISC-V+Profiles">RISC-V Profiles <svg
-              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-        </div>
-      </div>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="#">Non-ISA Hardware</a>
-        <div class="navbar-dropdown" style="min-width: 280px">
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806289428/RISC-V+Advanced+Interrupt+Architecture">Advanced
-            Interrupt Architecture <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806617089/RISC-V+IOMMU+Architecture">IOMMU
-            Architecture <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806617106/RISC-V+Platform-Level+Interrupt+Controller">Platform-Level
-            Interrupt Controller <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806617123/RISC-V+Server+SOC">Server
-            SOC <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-        </div>
-      </div>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="#">Debug, Trace, RAS</a>
-        <div class="navbar-dropdown" style="min-width: 280px">
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926657/Efficient+Trace+for+RISC-V">Efficient
-            Trace
-            < <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-              </svg>
-          </a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809697292/RISC-V+Capacity+and+Bandwidth+QoS+Register+Interface">QoS
-            Register Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926674/The+RISC-V+Debug">Debug <svg
-              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926691/RISC-V+N-Trace+Nexus-based+Trace">N-Trace
-            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809697310/RISC-V+RERI+Architecture">RERI
-            Architecture
-            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057729/RISC-V+Trace+Connectors">Trace Connectors
-            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057747/RISC-V+Trace+Control+Interface">Trace
-            Control Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057766/Unformatted+Trace+Diagnostic+Data+Packet+Encapsulation+for+RISC-V">Unformatted
-            Trace and Diagnostic Data Packet
-            Encapsulation <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-        </div>
-      </div>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="#">Platform Software</a>
-        <div class="navbar-dropdown" style="min-width: 280px">
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926709/RISC-V+Boot+and+Runtime+Services+BRS">Boot
-            and Runtime Services <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057786/RISC-V+Functional+Fixed+Hardware">Functional
-            Fixed Hardware <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926726/RISC-V+IO+Mapping+Table">IO Mapping Table
-            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057803/RISC-V+Platform+Management+Interface+RPMI">Platform
-            Management Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057820/RISC-V+Semihosting">Semihosting <svg
-              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057837/RISC-V+Supervisor+Binary+Interface">Supervisor
-            Binary Interface <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057854/RISC-V+UEFI+Protocol">UEFI Protocol <svg
-              class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-        </div>
-      </div>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="#">App Enablement</a>
-        <div class="navbar-dropdown" style="min-width: 280px">
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/810057873/RISC-V+ABIs">Application Binary Interface
-            <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-          <a class="navbar-item" target="_blank" rel="noopener noreferrer"
-            href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/809926743/RISC-V+Vector+C+Intrinsic">Vector C
-            Intrinsic <svg class="nav-external-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path d="M10 1h5v5h-2V3.41l-6.29 6.3-1.42-1.42L11.59 2H10V1zM14 14H2V2h5V0H2a2 2 0 0 0-2 2v12
-             a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5h-2v5z" />
-            </svg></a>
-        </div>
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
         <div id="search-field" class="field">
@@ -533,7 +347,8 @@
     document.body.classList.add('nav-sm')
   }
 }(localStorage && localStorage.getItem('sidebar') === 'close')
-</script><main class="article">
+</script>
+<main class="article">
 <div class="toolbar" role="navigation">
   <button id="nav-toggle-1" class="nav-toggle"></button>
 </div>
