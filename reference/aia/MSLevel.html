@@ -1753,7 +1753,7 @@ still be true before the next SRET that ends the handler.</p>
 <p>According to the base RISC-V Privileged Architecture, instruction execution must resume from a WFI whenever any interrupt is both pending and enabled in CSRs <code>mip</code> and <code>mie</code>, ignoring any delegation indicated by <code>mideleg</code>. With the AIA, this succinct rule is no longer appropriate, due to the mechanisms the AIA adds for virtual interrupts. Instead, execution must resume from a WFI whenever an interrupt is pending at any privilege level (regardless of whether the interrupt privilege level is higher or lower than the hart&#8217;s current privilege mode).</p>
 </div>
 <div class="paragraph">
-<p>An interrupt is pending at machine level if register <code>mtopi</code> is not zero. If S-mode is implemented, an interrupt is pending at supervisor level if <code>stopi</code> is not zero. And if the H extension is implemented, an interrupt is pending at VS level if <code>vstopi</code> (<a href="#vstopi">[vstopi]</a>) is not zero.</p>
+<p>An interrupt is pending at machine level if register <code>mtopi</code> is not zero. If S-mode is implemented, an interrupt is pending at supervisor level if <code>stopi</code> is not zero. And if the H extension is implemented, an interrupt is pending at VS level if <code>vstopi</code> (<a href="VSLevel.html#vstopi" class="xref page">Virtual supervisor top interrupt CSR (<code>vstopi</code>)</a>) is not zero.</p>
 </div>
 <div class="admonitionblock note">
 <table>
