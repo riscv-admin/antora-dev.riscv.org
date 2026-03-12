@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: RISC-V Ratified Specifications Library</title>
+    <link rel="canonical" href="https://docs.riscv.org/rvprofile/rva22.html">
+    <link rel="prev" href="rva20.html">
+    <link rel="next" href="extensions.html">
+    <meta name="generator" content="Antora 3.1.14">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/vendor/search.css">
+    <link rel="stylesheet" href="../_/css/vendor/page-search.css">
+    <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
+
+    <meta name="antora-ui-version" content="f5e243cb702754f38d33fc35d2ba26de4718cedb"> 
+    <meta name="version" content="v1.0">
+    <meta name="component" content="rvprofile">
+    <meta name="latest-version" content="false">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var title = document.querySelector('h2');
+      if (title && document.title.startsWith('Untitled')) {
+        document.title = title.textContent.trim() + ' :: RISC-V Ratified Specifications Library';
+      }
+    });
+    </script>
+    <link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../_/img/favicon.ico">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://riscv.org">
+        <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV" />
+        <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV" />
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item home">
+          <a class="navbar-link"
+            href="../home/index.html"
+            aria-label="home"
+            title="home">
+            <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg></a>
+        </div>
+      </div>
+      </div>
+      <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs" >
+        </div>
+        <div class="navbar-item" style="padding-left: 0;">
+          <label class="theme-toggler">
+            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
+                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor"
+                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                </path>
+              </svg>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
+                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+                </path>
+              </svg></span>
+            <span class="text">light</span>
+          </label>
+        </div>
+      </div>
+  </nav>
+</header>
+<script>
+  !function (theme) {
+    if (theme === 'dark') {
+      document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+    }
+  }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="rvprofile" data-version="v1.0">
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+          <ul class="nav-list" style="padding-left: 0; margin: 0;">
+            <li class="nav-item" style="padding-left: 0;">
+              <a class="nav-link" href="../home/index.html" style="font-weight: bold; font-size: 1.1em; margin-left: 0; padding-left: 1rem;">RISC-V Specifications</a>
+            </li>
+          </ul>
+<div class="context">
+  <span class="title">ISA</span>
+</div>        <div class="nav-trees" data-component="isa">
+          <div class="version-box">
+            <select data-component="isa" class="select-version">
+                <option
+                  value="../isa/index.html"
+                  data-version="v20260120"
+                  
+                  selected>
+                  20260120
+                </option>
+                <option
+                  value="../isa/v20250508/index.html"
+                  data-version="v20250508"
+                  
+                  >
+                  20250508
+                </option>
+                <option
+                  value="../isa/v20240411/index.html"
+                  data-version="v20240411"
+                  
+                  >
+                  20240411
+                </option>
+            </select>
+          </div>
+              <div data-component="isa" data-version="v20260120" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/unpriv-index.html">Unprivileged Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/unpriv-contributors.html">Preamble</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/colophon.html">Preface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/intro.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/rv32.html">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/zihintntl.html">Chapter 8. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/zihintpause.html">Chapter 9. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/zimop.html">Chapter 10. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/zicond.html">Chapter 11. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/m-st-ext.html">Chapter 12. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/a-st-ext.html">Chapter 13. "A" Extension for Atomic Instructions, Version 2.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/zawrs.html">Chapter 14. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/zacas.html">Chapter 15. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/zabha.html">Chapter 16. "Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/bfloat16.html">Chapter 24. "BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/zfa.html">Chapter 25. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/zfinx.html">Chapter 26. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/c-st-ext.html">Chapter 27. "C" Extension for Compressed Instructions, Version 2.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/zc.html">Chapter 28. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/b-st-ext.html">Chapter 29. "B" Extension for Bit Manipulation, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/v-st-ext.html">Chapter 30. "V" Standard Extension for Vector Operations, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/zilsd.html">Chapter 34. "Zilsd", "Zclsd" Extensions for Load/Store pair for RV32, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/rv-32-64g.html">Chapter 35. RV32/64G Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/unpriv/calling-convention.html">Appendix C: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Volume II: RISC-V Privileged ISA Specification</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/priv-index.html">Privileged Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/priv-contributors.html">Preamble</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/priv-preface.html">Preface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/priv-intro.html">Chapter 1. Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/priv-history.html">Chapter 20. History</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/priv/priv-rationale.html">Appendix A. Historical Rationale for Extensions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Bibliography</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../isa/biblio/bibliography.html">Bibliography</a>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="rvprofile">
+          <div class="version-box">
+            <select data-component="rvprofile" class="select-version">
+                <option
+                  value="index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="rvprofile" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">RISC-V Profiles</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="index.html">Cover</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="changelog.html">Changelog</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="profilevsplat.html">Profiles versus Platforms</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="components.html">Components of a Profile</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="rva20.html">RVA20 Profile</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link"  href="rva22.html">RVA22 Profile</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="extensions.html">New ISA Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="glossary.html">Glossary</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="rva23">
+          <div class="version-box">
+            <select data-component="rva23" class="select-version">
+                <option
+                  value="../rva23/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="rva23" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">RVA23 Profile</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../rva23/index.html">Cover</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../rva23/rva-profile-overview-body.html">RVA Profiles Rationale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../rva23/rv-profile-defined-extensions.html">Profile-Defined Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../rva23/rva23-profiles.html">RVA23 Profile</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../rva23/glossary-of-isa-extensions.html">Glossary of ISA Extensions</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+        <div class="nav-trees" data-component="rvb23">
+          <div class="version-box">
+            <select data-component="rvb23" class="select-version">
+                <option
+                  value="../rvb23/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
+                  v1.0
+                </option>
+            </select>
+          </div>
+              <div data-component="rvb23" data-version="v1.0" class="nav-version-group">
+                <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">RVB23 Profile</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../rvb23/index.html">Cover</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../rvb23/intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../rvb23/profile-defined.html">Profile-Defined Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../rvb23/rvb23.html">RVB23 Profile</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../rvb23/glossary.html">Glossary of ISA Extensions</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+              </div>
+        </div>
+          <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  var isHome = window.location.pathname.includes('/home/') || window.location.pathname === '/'
+  if (isHome || sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script>
+<main class="article">
+<div class="toolbar" role="navigation">
+  <button id="nav-toggle-1" class="nav-toggle"></button>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div class="tag-toggle-container">
+      <button
+        class="tag-toggle-btn"
+        type="button"
+        onclick="document.documentElement.classList.toggle('tag-highlight-enabled');"
+      >
+        <div class="tag-toggle-switch"></div>
+        <span id="tag-toggle-label">Normative Rules</span>
+      </button>
+    </div>
+    <div
+      class="toc"
+      data-title=""
+      data-levels="5"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="https://github.com/riscv/riscv-profiles/issues/new" target="_blank" title="Issues">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Report a Problem
+        </a>
+        <a href="https://github.com/riscv/riscv-profiles" target="_blank" title="GitHub">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          GitHub Project
+        </a>
+
+        <a href="https://riscv.atlassian.net/wiki/spaces/HOME/pages/806289411/RISC-V+Profiles" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"/><circle cx="148.5" cy="250" r="31.5" fill="currentColor"/><circle cx="250" cy="250" r="31.5" fill="currentColor"/><circle cx="351.5" cy="250" r="31.5" fill="currentColor"/></svg>
+          More Details
+        </a>
+      
+
+          </div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+      <li>RISC-V Profiles</li>
+      <li><a href="rva22.html">RVA22 Profile</a></li>
+    </ul>
+  </nav>
+</div><div class="sect1">
+<h2 id="rva22-profiles"><a class="anchor" href="#rva22-profiles"></a>RVA22 Profiles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The RVA22 profiles are intended to be used for 64-bit application
+processors running rich OS stacks.  Only user-mode (RVA22U64) and
+supervisor-mode (RVA22S64) profiles are specified in this family.</p>
+</div>
+<div class="sect2">
+<h3 id="rva22u64-profile"><a class="anchor" href="#rva22u64-profile"></a>RVA22U64 Profile</h3>
+<div class="paragraph">
+<p>The RVA22U64 profile specifies the ISA features available to user-mode
+execution environments in 64-bit applications processors.  This is the
+most important profile within the application processor family in
+terms of the amount of software that targets this profile.</p>
+</div>
+<div class="sect3">
+<h4 id="rva22u64-mandatory-base"><a class="anchor" href="#rva22u64-mandatory-base"></a>RVA22U64 Mandatory Base</h4>
+<div class="paragraph">
+<p>RV64I is the mandatory base ISA for RVA22U64, including mandatory <code>fence.tso</code>, and is little-endian.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Later versions of the RV64I unprivileged ISA specification
+ratified in 2021 made clear that <code>fence.tso</code> is mandatory.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>As per the unprivileged architecture specification, the <code>ecall</code>
+instruction causes a requested trap to the execution environment.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="rva22u64-mandatory-extensions"><a class="anchor" href="#rva22u64-mandatory-extensions"></a>RVA22U64 Mandatory Extensions</h4>
+<div class="paragraph">
+<p>The following mandatory extensions were present in RVA20U64.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>M</strong> Integer multiplication and division.</p>
+</li>
+<li>
+<p><strong>A</strong> Atomic instructions.</p>
+</li>
+<li>
+<p><strong>F</strong> Single-precision floating-point instructions.</p>
+</li>
+<li>
+<p><strong>D</strong> Double-precision floating-point instructions.</p>
+</li>
+<li>
+<p><strong>C</strong> Compressed Instructions.</p>
+</li>
+<li>
+<p><strong>Zicsr</strong>  CSR instructions.  These are implied by presence of F.</p>
+</li>
+<li>
+<p><strong>Zicntr</strong> Base counters and timers.</p>
+</li>
+<li>
+<p><strong>Ziccif</strong> Main memory regions with both the cacheability and
+coherence PMAs must support instruction fetch, and any instruction
+fetches of naturally aligned power-of-2 sizes up to min(ILEN,XLEN)
+(i.e., 32 bits for RVA22) are atomic.</p>
+</li>
+<li>
+<p><strong>Ziccrse</strong> Main memory regions with both the cacheability and coherence PMAs must support RsrvEventual.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Ziccrse is a new extension name capturing this feature.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Ziccamoa</strong> Main memory regions with both the cacheability and coherence PMAs must support AMOArithmetic.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Ziccamoa is a new extension name capturing this feature.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zicclsm</strong> Misaligned loads and stores to main memory regions with both the
+cacheability and coherence PMAs must be supported.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This is a new extension name for this feature. Even though
+mandated, misaligned loads and stores might execute extremely slowly.
+Standard software distributions should assume their existence only for
+correctness, not for performance.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following mandatory feature was further restricted in RVA22U64:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Za64rs</strong> Reservation sets are contiguous, naturally aligned, and a
+maximum of 64 bytes.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This is a new extension name capturing this feature.  The
+maximum reservation size has been reduced to match the required cache
+block size.  The minimum reservation size is effectively set by the
+instructions in the mandatory A extension.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following mandatory extensions are new for RVA22U64.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>B</strong> Bit-manipulation instructions.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The B extension comprises the Zba, Zbb, and Zbs extensions.
+At the time of RVA22U64&#8217;s ratification, the B extension had not yet been
+defined, and so RVA22U64 explicitly mandated Zba, Zbb, and Zbs instead.
+Mandating B is equivalent.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zihpm</strong> Hardware performance counters.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Zihpm was optional in RVA20U64.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zihintpause</strong> Pause instruction.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+While the <code>pause</code> instruction is a HINT can be implemented as a
+NOP and hence trivially supported by hardware implementers, its
+inclusion in the mandatory extension list signifies that software
+should use the instruction whenever it would make sense and that
+implementors are expected to exploit this information to optimize
+hardware execution.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zic64b</strong> Cache blocks must be 64 bytes in size, naturally aligned in the
+address space.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This is a new extension name for this feature. While the general
+RISC-V specifications are agnostic to cache block size, selecting a
+common cache block size simplifies the specification and use of the
+following cache-block extensions within the application processor
+profile. Software does not have to query a discovery mechanism and/or
+provide dynamic dispatch to the appropriate code. We choose 64 bytes
+at it is effectively an industry standard. Implementations may use
+longer cache blocks to reduce tag cost provided they use 64-byte
+sub-blocks to remain compatible. Implementations may use shorter cache
+blocks provided they sequence cache operations across the multiple
+cache blocks comprising a 64-byte block to remain compatible.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zicbom</strong> Cache-Block Management Operations.</p>
+</li>
+<li>
+<p><strong>Zicbop</strong> Cache-Block Prefetch Operations.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As with other HINTS, the inclusion of prefetches in the
+mandatory set of extensions indicates that software should generate
+these instructions where they are expected to be useful, and hardware
+is expected to exploit that information.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zicboz</strong> Cache-Block Zero Operations.</p>
+</li>
+<li>
+<p><strong>Zfhmin</strong> Half-Precision Floating-point transfer and convert.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Zfhmin is a small extension that adds support to load/store and convert
+IEEE 754 half-precision numbers to and from the IEEE 754 single-precision
+format.  The hardware cost for this extension is low, and mandating the
+extension avoids adding an option to the profile.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zkt</strong> Data-independent execution time.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Zkt requires a certain subset of integer instructions execute
+with data-independent latency.  Mandating this feature enables
+portable libraries for safe basic cryptographic operations. It is
+expected that application processors will naturally have this property
+and so implementation cost is low, if not zero, in most systems that
+would support RVA22.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="rva22u64-optional-extensions"><a class="anchor" href="#rva22u64-optional-extensions"></a>RVA22U64 Optional Extensions</h4>
+<div class="paragraph">
+<p>RVA22U64 has four profile options (Zfh, V, Zkn, Zks):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zfh</strong> Half-Precision Floating-Point.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A future profile might mandate Zfh.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>V</strong> Vector Extension.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The smaller vector extensions (Zve32f, Zve32x, Zve64d, Zve64f,
+Zve64x) are not provided as separately supported profile options. The
+full V extension is specified as the only supported profile option.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A future profile might mandate V.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zkn</strong> Scalar Crypto NIST Algorithms.</p>
+</li>
+<li>
+<p><strong>Zks</strong> Scalar Crypto ShangMi Algorithms.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The scalar crypto extensions are expected to be superseded by
+vector crypto standards in future profiles, and the scalar extensions
+may be removed as supported options once vector crypto is present.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The smaller component scalar crypto extensions (Zbc, Zbkb, Zbkc,
+Zbkx, Zknd, Zkne, Zknh, Zksed, Zksh) are not provided as separate
+options in the profile.  Profile implementers should provide all of
+the instructions in a given algorithm suite as part of the Zkn or Zks
+supported options.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Access to the entropy source (Zkr) in a system is usually
+carefully controlled.  While the design supports unprivileged access
+to the entropy source, this is unlikely to be commonly used in an
+application processor, and so Zkr was not added as a profile option.
+This also means the roll-up Zk was not added as a profile option.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Zfinx, Zdinx, Zhinx, Zhinxmin extensions are incompatible
+with the profile mandates to support the F and D extensions.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="rva22u64-recommendations"><a class="anchor" href="#rva22u64-recommendations"></a>RVA22U64 Recommendations</h4>
+<div class="paragraph">
+<p>Recommendations are not strictly mandated but are included to guide
+implementers making design choices.</p>
+</div>
+<div class="paragraph">
+<p>Implementations are strongly recommended to raise illegal-instruction
+exceptions on attempts to execute unimplemented opcodes.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="rva22s64-profile"><a class="anchor" href="#rva22s64-profile"></a>RVA22S64 Profile</h3>
+<div class="paragraph">
+<p>The RVA22S64 profile specifies the ISA features available to a
+supervisor-mode execution environment in 64-bit applications
+processors.  RVA22S64 is based on privileged architecture version
+1.12.</p>
+</div>
+<div class="sect3">
+<h4 id="rva22s64-mandatory-base"><a class="anchor" href="#rva22s64-mandatory-base"></a>RVA22S64 Mandatory Base</h4>
+<div class="paragraph">
+<p>RV64I is the mandatory base ISA for RVA22S64, including mandatory
+<code>fence.tso</code>, and is little-endian.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Later versions of the RV64I unprivileged ISA specification
+ratified in 2021 made clear that <code>fence.tso</code> is mandatory.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <code>ecall</code> instruction operates as per the unprivileged architecture
+specification.  An <code>ecall</code> in user mode causes a contained trap to
+supervisor mode.  An <code>ecall</code> in supervisor mode causes a requested
+trap to the execution environment.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="rva22s64-mandatory-extensions"><a class="anchor" href="#rva22s64-mandatory-extensions"></a>RVA22S64 Mandatory Extensions</h4>
+<div class="paragraph">
+<p>The following unprivileged extensions are mandatory:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The RVA22S64 mandatory unprivileged extensions include all the
+mandatory unprivileged extensions in RVA22U64.</p>
+</li>
+<li>
+<p><strong>Zifencei</strong>  Instruction-Fetch Fence.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Zifencei is mandated as it is the only standard way to support
+instruction-cache coherence in RVA22 application processors.  A new
+instruction-cache coherence mechanism is under development which might
+be added as an option in the future.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following privileged extensions are mandatory:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Ss1p12</strong>  Privileged Architecture version 1.12.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Ss1p12 supersedes Ss1p11.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Svbare</strong> The <code>satp</code> mode Bare must be supported.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This is a new extension name for this feature.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sv39</strong> Page-Based 39-bit Virtual-Memory System.</p>
+</li>
+<li>
+<p><strong>Svade</strong> Page-fault exceptions are raised when a page is accessed
+when A bit is clear, or written when D bit is clear.</p>
+</li>
+<li>
+<p><strong>Ssccptr</strong> Main memory regions with both the cacheability and
+coherence PMAs must support hardware page-table reads.</p>
+</li>
+<li>
+<p><strong>Sstvecd</strong> <code>stvec.MODE</code> must be capable of holding the value 0
+(Direct).  When <code>stvec.MODE=Direct</code>, <code>stvec.BASE</code> must be capable of
+holding any valid four-byte-aligned address.</p>
+</li>
+<li>
+<p><strong>Sstvala</strong> stval must be written with the faulting virtual address
+for load, store, and instruction page-fault, access-fault, and
+misaligned exceptions, and for breakpoint exceptions other than
+those caused by execution of the EBREAK or C.EBREAK instructions.
+For virtual-instruction and illegal-instruction exceptions, stval must be written with the
+faulting instruction.</p>
+</li>
+<li>
+<p><strong>Sscounterenw</strong> For any hpmcounter that is not read-only zero, the corresponding bit in scounteren must be writable.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This is new extension name capturing this feature.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Svpbmt</strong> Page-Based Memory Types</p>
+</li>
+<li>
+<p><strong>Svinval</strong> Fine-Grained Address-Translation Cache Invalidation</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="rva22s64-optional-extensions"><a class="anchor" href="#rva22s64-optional-extensions"></a>RVA22S64 Optional Extensions</h4>
+<div class="paragraph">
+<p>RVA22S64 has four unprivileged options (Zfh, V, Zkn, Zks) from
+RVA22U64, and eight privileged options (Sv48, Sv57, Svnapot, Ssu64xl,
+Sstc, Sscofpmf, Zkr, H).</p>
+</div>
+<div class="paragraph">
+<p>The privileged optional extensions are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sv48</strong> Page-Based 48-bit Virtual-Memory System.</p>
+</li>
+<li>
+<p><strong>Sv57</strong> Page-Based 57-bit Virtual-Memory System.</p>
+</li>
+<li>
+<p><strong>Svnapot</strong> NAPOT Translation Contiguity</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is expected that Svnapot will be mandatory in the next
+profile release.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Ssu64xl</strong> <code>sstatus.UXL</code> must be capable of holding the value 2
+(i.e., UXLEN=64 must be supported).</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This is a new extension name for this feature.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sstc</strong> supervisor-mode timer interrupts.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Sstc was not made mandatory in RVA22S64 as it is a more
+disruptive change affecting system-level architecture, and will take
+longer for implementations to adopt.  It is expected to be made
+mandatory in the next profile release.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sscofpmf</strong> Count Overflow and Mode-Based Filtering.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Platforms may choose to mandate the presence of Sscofpmf.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Zkr</strong>  Entropy CSR.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Technically, Zk is also a privileged-mode option capturing that
+Zkr, Zkn, and Zkt are all implemented.  However, the Zk rollup is less
+descriptive than specifying the individual extensions explicitly.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sha</strong> The augmented hypervisor extension.
+Sha comprises the following extensions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>H</strong> The hypervisor extension.</p>
+</li>
+<li>
+<p><strong>Ssstateen</strong> Supervisor-mode view of the state-enable extension.  The
+supervisor-mode (<code>sstateen0-3</code>) and hypervisor-mode (<code>hstateen0-3</code>)
+state-enable registers must be provided.</p>
+</li>
+<li>
+<p><strong>Shcounterenw</strong> For any <code>hpmcounter</code> that is not read-only zero, the corresponding bit in <code>hcounteren</code> must be writable.</p>
+</li>
+<li>
+<p><strong>Shvstvala</strong> <code>vstval</code> must be written in all cases described above for <code>stval</code>.</p>
+</li>
+<li>
+<p><strong>Shtvala</strong> <code>htval</code> must be written with the faulting guest physical
+address in all circumstances permitted by the ISA.</p>
+</li>
+<li>
+<p><strong>Shvstvecd</strong> <code>vstvec.MODE</code> must be capable of holding the value 0 (Direct).
+When <code>vstvec.MODE</code>=Direct, <code>vstvec.BASE</code> must be capable of holding
+any valid four-byte-aligned address.</p>
+</li>
+<li>
+<p><strong>Shvsatpa</strong> All translation modes supported in <code>satp</code> must be supported in <code>vsatp</code>.</p>
+</li>
+<li>
+<p><strong>Shgatpa</strong> For each supported virtual memory scheme SvNN supported in
+<code>satp</code>, the corresponding hgatp SvNNx4 mode must be supported.  The
+<code>hgatp</code> mode Bare must also be supported.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Sha, Shcounterenw, Shvstvala, Shtvala, Shvstvecd, Shvsatpa, and Shgatpa
+are new extension names.  Sha was introduced after RVA22S64 was ratified, but
+the ratified text required all of Sha&#8217;s constituent extensions if the optional
+H extension was included.  Hence, offering the Sha option is equivalent.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Smstateen extension specification is an M-mode extension as
+it includes M-mode features, but the supervisor-mode visible
+components of the extension are named as the Ssstateen extension.  Only
+Ssstateen is mandated in the RVA22S64 profile when the hypervisor
+extension is implemented.  These registers are not mandated or
+supported options without the hypervisor extension, as there are no
+RVA22S64 supported options with relevant state to control in the
+absence of the hypervisor extension.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="rva22s64-recommendations"><a class="anchor" href="#rva22s64-recommendations"></a>RVA22S64 Recommendations</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Implementations are strongly recommended to raise illegal-instruction
+exceptions when attempting to execute unimplemented opcodes.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="rva20.html">RVA20 Profile</a></span>
+  <span class="next"><a href="extensions.html">New ISA Extensions</a></span>
+</nav>
+</article>  </div>
+</main>
+</div>
+<footer class="footer flex">
+    <div id="footer-buttons" class="footer-buttons">
+        <a href="https://riscv.org/" target="_blank" rel="noopener noreferrer" class="footer-btn">riscv.org</a>
+        <a href="https://lf-riscv.atlassian.net/wiki/spaces/HOME/overview?mode=global" target="_blank" rel="noopener noreferrer" class="footer-btn">Technical Wiki</a>
+        <a href="https://riscv.org/code-of-conduct/" target="_blank" rel="noopener noreferrer" class="footer-btn">Code of Conduct</a>
+        <a href="https://riscv.org/privacy-policy/" target="_blank" rel="noopener noreferrer" class="footer-btn">Privacy Policy</a>
+        <a href="https://riscv.org/members/" target="_blank" rel="noopener noreferrer" class="footer-btn">Join RISC-V</a>
+    </div>
+
+    <div id="RISC-V footer">
+     <p class="smallest antialiased">Copyright © RISC-V International®. All rights reserved. RISC-V, RISC-V International, and the RISC-V logos are trademarks of RISC-V International.</p>
+    </div>
+
+    <div id="social-icons" class="flex jc-between">
+        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
+        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
+        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"/></svg></a>
+        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"/><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"/></svg></a>
+        <a href="https://risc-v-international.slack.com/join/shared_invite/zt-2y1w69wde-PdoN3fXovLlzoni~UaPrBA" title="Slack" target="_blank" rel="noopener noreferrer" class="slack-icon-link"><i class="fa fa-slack" aria-hidden="true"></i></a>
+    </div>
+</footer>
+<script src="../_/js/vendor/import.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async
+    src="../_/js/vendor/spring-tabs.js"
+    data-sync-storage-key="docs:preferred-tab"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>
