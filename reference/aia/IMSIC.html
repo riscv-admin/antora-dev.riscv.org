@@ -581,7 +581,7 @@ device are initially guest physical addresses, as they are configured at
 the device by the guest OS. These guest addresses must be translated by
 an IOMMU, which gets configured by the hypervisor to redirect those MSIs
 to the interrupt files for the correct guest external interrupts. For
-more on this topic, see <a href="IOMMU.html#IOMMU" class="xref page">IOMMU.adoc#IOMMU</a>.</p>
+more on this topic, see <a href="IOMMU.html#IOMMU" class="xref page">IOMMU Support for MSIs to Virtual Machines</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -928,7 +928,7 @@ within the address ranges,</p>
 <p>pages not occupied by an interrupt file should be read-only zeros.</p>
 </div>
 <div class="paragraph">
-<p>See also <a href="AdvPLIC.html#AdvPLIC-MSIAddrs" class="xref page">AdvPLIC.adoc#AdvPLIC-MSIAddrs</a> for the
+<p>See also <a href="AdvPLIC.html#AdvPLIC-MSIAddrs" class="xref page">Addresses and data for outgoing MSIs</a> for the
 default algorithms an Advanced PLIC may use to determine the destination
 addresses of outgoing MSIs, which should be the addresses of IMSIC
 interrupt files.</p>
@@ -938,7 +938,7 @@ interrupt files.</p>
 <h3 id="3-1-7-csrs-for-external-interrupts-via-an-imsic"><a class="anchor" href="#3-1-7-csrs-for-external-interrupts-via-an-imsic"></a>3.1.7. CSRs for external interrupts via an IMSIC</h3>
 <div class="paragraph">
 <p>Software accesses a hart&#8217;s IMSIC primarily through the CSRs introduced
-in <a href="CSRs.html#CSRs" class="xref page">CSRs.adoc#CSRs</a>. There is a separate set of CSRs for each
+in <a href="CSRs.html#CSRs" class="xref page">Control and Status Registers (CSRs) Added to Harts</a>. There is a separate set of CSRs for each
 implemented privilege level that can receive interrupts. The
 machine-level CSRs interact with the IMSIC&#8217;s machine-level interrupt
 file, while, if supervisor mode is implemented, the supervisor-level
@@ -950,7 +950,7 @@ guest interrupt file, selected by the VGEIN field of CSR <code>hstatus</code>.</
 <p>For machine level, the relevant CSRs are <code>miselect</code>, <code>mireg</code>, and <code>mtopei</code>. When supervisor mode is implemented, the set of supervisor-level CSRs matches those of machine level: <code>siselect</code>, <code>sireg</code>, and <code>stopei</code>. And when the H extension is implemented, there are three corresponding VS CSRs: <code>vsiselect</code>, <code>vsireg</code>, and <code>vstopei</code>.</p>
 </div>
 <div class="paragraph">
-<p>As explained in <a href="CSRs.html#CSRs" class="xref page">CSRs.adoc#CSRs</a>, registers <code>miselect</code> and <code>mireg</code> provide indirect access to additional machine-level registers. Likewise for supervisor-level <code>siselect</code> and <code>sireg</code>, and VS-level <code>vsiselect</code> and <code>vsireg</code> . In each case, a value of the <strong><em>*iselect</em></strong> <em>CSR</em> (<code>miselect</code>, <code>siselect</code> , or <code>vsiselect)</code>) in the range 0x70-0xFF selects a register of the
+<p>As explained in <a href="CSRs.html#CSRs" class="xref page">Control and Status Registers (CSRs) Added to Harts</a>, registers <code>miselect</code> and <code>mireg</code> provide indirect access to additional machine-level registers. Likewise for supervisor-level <code>siselect</code> and <code>sireg</code>, and VS-level <code>vsiselect</code> and <code>vsireg</code> . In each case, a value of the <strong><em>*iselect</em></strong> <em>CSR</em> (<code>miselect</code>, <code>siselect</code> , or <code>vsiselect)</code>) in the range 0x70-0xFF selects a register of the
 corresponding IMSIC interrupt file, either the machine-level interrupt
 file (<code>miselect</code>), the supervisor-level interrupt file (<code>siselect</code>), or a guest interrupt file (<code>vsiselect</code>).</p>
 </div>

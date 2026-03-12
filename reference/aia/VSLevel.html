@@ -434,7 +434,7 @@ Architecture adds to the H extension new interrupt facilities
 aligned with those described earlier for supervisor-level interrupts.</p>
 </div>
 <div class="paragraph">
-<p>As introduced in <a href="CSRs.html#CSRs" class="xref page">CSRs.adoc#CSRs</a>, several hypervisor and VS
+<p>As introduced in <a href="CSRs.html#CSRs" class="xref page">Control and Status Registers (CSRs) Added to Harts</a>, several hypervisor and VS
 CSRs are added: <code>hvien</code>, <code>hvictl</code>, <code>hviprio1</code>, <code>hviprio2</code>, <code>vsiselect</code>, <code>vsireg</code>, <code>vstopei</code>, and <code>vstopi</code>. (And for RV32, the following
 high-half CSRs are also added: <code>hidelegh</code>, <code>hvienh</code>, <code>hviph</code>, <code>hviprio1h</code>, <code>hviprio2h</code>, <code>vsiph</code> and <code>vsieh</code>.) As always, when
 executing in VS-mode or VU-mode, the VS CSRs substitute for the
@@ -470,7 +470,7 @@ the range <code>0x70</code>-<code>0xFF</code> select registers of this guest int
 values of <code>siselect</code> in the same range select registers of the IMSIC&#8217;s true
 supervisor-level interrupt file. The registers of an interrupt file that
 are accessed indirectly through <code>vsiselect</code> and <code>vsireg</code> are documented in
-<a href="IMSIC.html#IMSIC" class="xref page">IMSIC.adoc#IMSIC</a> on the IMSIC, along with IMSIC-only CSR <code>vstopei</code>.
+<a href="IMSIC.html#IMSIC" class="xref page">Incoming MSI Controller (IMSIC)</a> on the IMSIC, along with IMSIC-only CSR <code>vstopei</code>.
 Because all IMSIC interrupt files act identically, the guest interrupt
 file that a virtual hart accesses through CSRs <code>siselect</code>, <code>sireg</code>, and <code>stopei</code> is
 indistinguishable from a true supervisor-level interrupt file as seen
@@ -596,7 +596,7 @@ the old interrupt file, reconfigure the APLIC to send them to the new
 interrupt file. As needed, synchronize with all IOMMUs and APLICs to
 ensure that no straggler MSIs will arrive at the old interrupt file
 after this step. Synchronizing with an APLIC can be accomplished using
-the algorithm of <a href="AdvPLIC.html#AdvPLIC-MSISync" class="xref page">AdvPLIC.adoc#AdvPLIC-MSISync</a>.</p>
+the algorithm of <a href="AdvPLIC.html#AdvPLIC-MSISync" class="xref page">Synchronizing interactions between a hart and the APLIC</a>.</p>
 </li>
 <li>
 <p>At the old interrupt file, dump to memory all implemented
@@ -671,7 +671,7 @@ described later in the next section.</p>
 <p>Like for supervisor level, the Advanced Interrupt Architecture
 optionally allows major VS-level interrupts to be configured by software
 to intermix in priority with VS-level external interrupts. As documented
-in <a href="MSLevel.html#intrs-S" class="xref page">MSLevel.adoc#intrs-S</a>, interrupt priorities for
+in <a href="MSLevel.html#intrs-S" class="xref page">Interrupts at supervisor level</a>, interrupt priorities for
 supervisor level are configured by the <code>iprio</code> array accessed indirectly through
 CSRs <code>siselect</code> and <code>sireg</code>. The <code>siselect</code> addresses for the <code>iprio</code> array registers are <code>0x30</code>-<code>0x3F</code>.</p>
 </div>
@@ -864,7 +864,7 @@ added CSRs that must be swapped on a virtual hart switch.</p>
 <div class="paragraph">
 <p>Major interrupts outside the priority-configurable subset can still be
 directed to VS level, but their priority will simply be the default
-order defined in <a href="MSLevel.html#majorIntrs" class="xref page">MSLevel.adoc#majorIntrs</a>.</p>
+order defined in <a href="MSLevel.html#majorIntrs" class="xref page">Defined major interrupts and default priorities</a>.</p>
 </div>
 </td>
 </tr>
@@ -885,7 +885,7 @@ can assert interrupts to the virtual hart using CSRs <code>hvien</code> (Hypervi
 Virtual-Interrupt-Enable) and <code>hvip</code> (Hypervisor Virtual-Interrupt-Pending
 bits). These CSRs affect interrupts for VS level much the same way that <code>mvien</code>
 and <code>mvip</code> do for supervisor level, as explained in
-<a href="MSLevel.html#virtIntrs-S" class="xref page">MSLevel.adoc#virtIntrs-S</a>.</p>
+<a href="MSLevel.html#virtIntrs-S" class="xref page">Interrupt filtering and virtual interrupts for supervisor level</a>.</p>
 </div>
 <div class="paragraph">
 <p>Each bit of registers <code>hvien</code> and <code>hvip</code> corresponds with an interrupt number in the
@@ -1250,7 +1250,7 @@ above), in which case default priority order is determined solely by
 <code>hvictl</code>.DPR. If bit IPRIOM (IPRIO Mode) of <code>hvictl</code> is zero, IPRIO in <code>vstopi</code> is 1; else, if the
 priority number for the highest-priority candidate is within the range 1
 to 255, IPRIO is that value; else, IPRIO is set to either 0 or 255 in
-the manner documented for <code>stopi</code> in <a href="MSLevel.html#stopi" class="xref page">MSLevel.adoc#stopi</a>.</p>
+the manner documented for <code>stopi</code> in <a href="MSLevel.html#stopi" class="xref page">Supervisor top interrupt CSR (<code>stopi</code>)</a>.</p>
 </div>
 </div>
 <div class="sect3">

@@ -436,7 +436,7 @@ labels, the <em>external</em> interrupts at each privilege level are given
 secondary, minor identities by an external interrupt controller such as
 an APLIC or IMSIC, distinguishing interrupts from different devices or
 causes. These minor identities for external interrupts were covered in
-<a href="IMSIC.html#IMSIC" class="xref page">IMSIC.adoc#IMSIC</a> and <a href="AdvPLIC.html#AdvPLIC" class="xref page">AdvPLIC.adoc#AdvPLIC</a> specifying the IMSIC and APLIC components.</p>
+<a href="IMSIC.html#IMSIC" class="xref page">Incoming MSI Controller (IMSIC)</a> and <a href="AdvPLIC.html#AdvPLIC" class="xref page">Advanced Platform-Level Interrupt Controller (APLIC)</a> specifying the IMSIC and APLIC components.</p>
 </div>
 <div class="paragraph">
 <p>The Advanced Interrupt Architecture reserves another 24 major interrupt
@@ -784,7 +784,7 @@ default order specified in the previous section <a href="#majorIntrs">5.1.1. Def
 <div class="paragraph">
 <p>The machine-level priorities for major interrupts 0-63 may be configured
 by a set of registers accessed through the <code>miselect</code> and <code>mireg</code> CSRs introduced in
-<a href="CSRs.html#CSRs" class="xref page">CSRs.adoc#CSRs</a>. When XLEN = 32, sixteen of these registers are defined, listed below with their <code>miselect</code> addresses:</p>
+<a href="CSRs.html#CSRs" class="xref page">Control and Status Registers (CSRs) Added to Harts</a>. When XLEN = 32, sixteen of these registers are defined, listed below with their <code>miselect</code> addresses:</p>
 </div>
 <table class="tableblock frame-none grid-none fit-content center">
 <colgroup>
@@ -926,7 +926,7 @@ This parameter is affected by the main external interrupt controller for
 the hart, whether a PLIC, APLIC, or IMSIC.</p>
 </div>
 <div class="paragraph">
-<p>For an APLIC, IPRIOLEN is in the range 1-8 as specified in <a href="AdvPLIC.html#AdvPLIC" class="xref page">AdvPLIC.adoc#AdvPLIC</a> on the APLIC.</p>
+<p>For an APLIC, IPRIOLEN is in the range 1-8 as specified in <a href="AdvPLIC.html#AdvPLIC" class="xref page">Advanced Platform-Level Interrupt Controller (APLIC)</a> on the APLIC.</p>
 </div>
 <div class="paragraph">
 <p>For an IMSIC, IPRIOLEN is 6, 7, or 8. IPRIOLEN may be 6 only if the

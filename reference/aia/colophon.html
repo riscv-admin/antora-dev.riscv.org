@@ -547,7 +547,7 @@ some instructions, not <code>mip</code>, <code>sip</code>, <code>hip</code>, or 
 <p><strong>Changes for the ratified version 1.0</strong></p>
 </div>
 <div class="paragraph">
-<p>Resolved some inconsistencies in <a href="CSRs.html#CSRs" class="xref page">CSRs.adoc#CSRs</a> about when to raise
+<p>Resolved some inconsistencies in <a href="CSRs.html#CSRs" class="xref page">Control and Status Registers (CSRs) Added to Harts</a> about when to raise
 a virtual instruction exception versus an illegal instruction exception.</p>
 </div>
 <div class="paragraph">
@@ -562,7 +562,7 @@ preferably raise an illegal instruction exception instead of a virtual
 instruction exception.</p>
 </div>
 <div class="paragraph">
-<p>Added clarification about the term <em>IOMMU</em> used in <a href="IOMMU.html#IOMMU" class="xref page">IOMMU.adoc#IOMMU</a>.</p>
+<p>Added clarification about the term <em>IOMMU</em> used in <a href="IOMMU.html#IOMMU" class="xref page">IOMMU Support for MSIs to Virtual Machines</a>.</p>
 </div>
 <div class="paragraph">
 <p>Added clarification about MSI write replaced by MRIF update and notice
@@ -593,15 +593,15 @@ partner here is <code>mip</code>.)</p>
 </div>
 <div class="paragraph">
 <p>Allocated major interrupts 35 and 43 for signaling RAS events
-(<a href="MSLevel.html#majorIntrs" class="xref page">MSLevel.adoc#majorIntrs</a>).</p>
+(<a href="MSLevel.html#majorIntrs" class="xref page">Defined major interrupts and default priorities</a>).</p>
 </div>
 <div class="paragraph">
-<p>In <a href="MSLevel.html#virtIntrs-S" class="xref page">MSLevel.adoc#virtIntrs-S</a> added the options for bits 1 and 9 to
+<p>In <a href="MSLevel.html#virtIntrs-S" class="xref page">Interrupt filtering and virtual interrupts for supervisor level</a> added the options for bits 1 and 9 to
 be writable in CSR <code>mvien</code>, and specified the effects of setting each
 of these bits.</p>
 </div>
 <div class="paragraph">
-<p>Upgraded <a href="IOMMU.html#IOMMU" class="xref page">IOMMU.adoc#IOMMU</a> ("IOMMU Support") to the <em>frozen</em> state.</p>
+<p>Upgraded <a href="IOMMU.html#IOMMU" class="xref page">IOMMU Support for MSIs to Virtual Machines</a> ("IOMMU Support") to the <em>frozen</em> state.</p>
 </div>
 <div class="paragraph">
 <p><strong>Changes for RC2</strong></p>
@@ -613,7 +613,7 @@ that writes to <code>hvictl</code> always set IID in the most straightforward
 way.</p>
 </div>
 <div class="paragraph">
-<p>A comment was added to <a href="IPIs.html#IPIs" class="xref page">IPIs.adoc#IPIs</a> warning about the possible
+<p>A comment was added to <a href="IPIs.html#IPIs" class="xref page">Interprocessor Interrupts (IPIs)</a> warning about the possible
 need for FENCE instructions when IPIs are sent to other harts by writing
 MSIs to those harts' IMSICs.</p>
 </div>

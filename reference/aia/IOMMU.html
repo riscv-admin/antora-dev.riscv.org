@@ -909,12 +909,12 @@ indicating an invalid interrupt identity of zero.</p>
 <div class="paragraph">
 <p>The data component of an MSI write specifies the interrupt identity to
 raise in the destination interrupt file. (Recall
-<a href="IMSIC.html#MSIEncoding" class="xref page">IMSIC.adoc#MSIEncoding</a>.) This data may be in
+<a href="IMSIC.html#MSIEncoding" class="xref page">MSI encoding</a>.) This data may be in
 little-endian or big-endian byte order. If an IOMMU supports
 memory-resident interrupt files, it can store to an MRIF MSIs of the
 same endianness that the machine&#8217;s IMSICs accept. All IMSIC interrupt
 files are required to accept MSIs in little-endian byte order written to
-memory-mapped register <code>seteipnum_le</code> (<a href="IMSIC.html#IMSIC-memRegion" class="xref page">IMSIC.adoc#IMSIC-memRegion</a>). IMSIC interrupt
+memory-mapped register <code>seteipnum_le</code> (<a href="IMSIC.html#IMSIC-memRegion" class="xref page">Memory region for an interrupt file</a>). IMSIC interrupt
 files may also accept MSIs in big-endian byte order if register <code>seteipnum_be</code> is
 implemented alongside <code>seteipnum_le</code>.</p>
 </div>
@@ -1511,7 +1511,7 @@ MRIF, or is discarded.</p>
 <div class="paragraph">
 <p>When the IMSIC interrupt files in the system implement memory-mapped
 register <code>seteipnum_be</code> for receiving MSIs in big-endian byte order
-(<a href="IMSIC.html#IMSIC-memRegion" class="xref page">IMSIC.adoc#IMSIC-memRegion</a>), then an IOMMU
+(<a href="IMSIC.html#IMSIC-memRegion" class="xref page">Memory region for an interrupt file</a>), then an IOMMU
 must be able to store MSIs in both little-endian and big-endian byte
 orders to the destination MRIF. If the IMSIC interrupt files in the
 system do not implement register <code>seteipnum_be</code>, an IOMMU should ordinarily store only
