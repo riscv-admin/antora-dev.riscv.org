@@ -503,8 +503,10 @@ requests to the PLIC core. At most one interrupt request per interrupt source ca
 be pending in the PLIC core at any time, indicated by setting the source&#8217;s IP bit.
 The gateway only forwards a new interrupt request to the PLIC core after receiving
 notification that the interrupt handler servicing the previous interrupt request
-from the same source has completed.<br>
-If the global interrupt source uses level-sensitive interrupts, the gateway will
+from the same source has completed.<br></p>
+</div>
+<div class="paragraph">
+<p>If the global interrupt source uses level-sensitive interrupts, the gateway will
 convert the first assertion of the interrupt level into an interrupt request, but
 thereafter the gateway will not forward an additional interrupt request until it
 receives an interrupt completion message. On receiving an interrupt completion
@@ -515,8 +517,10 @@ If a level-sensitive interrupt source deasserts the interrupt after the PLIC cor
 accepts the request and before the interrupt is serviced, the interrupt request
 remains present in the IP bit of the PLIC core and will be serviced by a handler,
 which will then have to determine that the interrupt device no longer requires
-service.<br>
-If the global interrupt source was edge-triggered, the gateway will convert the
+service.<br></p>
+</div>
+<div class="paragraph">
+<p>If the global interrupt source was edge-triggered, the gateway will convert the
 first matching signal edge into an interrupt request. Depending on the design of
 the device and the interrupt handler, in between sending an interrupt request and
 receiving notice of its handler&#8217;s completion, the gateway might either ignore
@@ -541,16 +545,20 @@ core, brought on by interrupt sources, interrupt targets, or other agents
 manipulating register values in the PLIC. The value in EIP is communicated
 to the destination target as an interrupt notification. If the target is a RISC-V
 hart context, the interrupt notifications arrive on the meip/seip bits
-depending on the privilege level of the hart context.<br>
-(<em>In simple systems, the
+depending on the privilege level of the hart context.<br></p>
+</div>
+<div class="paragraph">
+<p>(<em>In simple systems, the
 interrupt notifications will be simple wires connected to the processor
 implementing a hart. In more complex platforms, the notifications might be routed
 as messages across a system interconnect.</em>)<br></p>
 </div>
 <div class="paragraph">
 <p>The PLIC hardware only supports multicasting of interrupts, such that all enabled
-targets will receive interrupt notifications for a given active interrupt.<br>
-(<em>Multicasting provides rapid response since the fastest responder claims the
+targets will receive interrupt notifications for a given active interrupt.<br></p>
+</div>
+<div class="paragraph">
+<p>(<em>Multicasting provides rapid response since the fastest responder claims the
 interrupt, but can be wasteful in high-interrupt-rate scenarios if multiple harts
 take a trap for an interrupt that only one can successfully claim. Software can
 modulate the PLIC IE bits as part of each interrupt handler to provide alternate
