@@ -599,273 +599,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="5-1-rvi20-profiles"><a class="anchor" href="#5-1-rvi20-profiles"></a>5.1. RVI20 Profiles</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The RVI20 profiles document the initial set of unprivileged
-instructions.  These provide a generic target for software toolchains
-and represent the minimum level of compatibility with RISC-V ratified
-standards.  The two profiles RVI20U32 and RVI20U64 correspond to the
-RV32I and RV64I base ISAs respectively.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-These are designed as <em>unprivileged</em> profiles as opposed to
-<em>user</em>-<em>mode</em> profiles.  Code using this profile can run in any
-privilege mode, and so requested and fatal traps may be horizontal
-traps into an execution environment running in the same privilege
-mode.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="5-1-1-rvi20u32"><a class="anchor" href="#5-1-1-rvi20u32"></a>5.1.1. RVI20U32</h3>
-<div class="paragraph">
-<p>RVI20U32 specifies the ISA features available to generic unprivileged
-execution environments.</p>
-</div>
-<div class="sect3">
-<h4 id="5-1-1-1-rvi20u32-mandatory-base"><a class="anchor" href="#5-1-1-1-rvi20u32-mandatory-base"></a>5.1.1.1. RVI20U32 Mandatory Base</h4>
-<div class="paragraph">
-<p>RV32I is the mandatory base ISA for RVI20U32, and is little-endian.</p>
-</div>
-<div class="paragraph">
-<p>As per the unprivileged architecture specification, the <code>ecall</code>
-instruction causes a requested trap to the execution environment.</p>
-</div>
-<div class="paragraph">
-<p>Misaligned loads and stores might not be supported.</p>
-</div>
-<div class="paragraph">
-<p>The <code>fence.tso</code> instruction is mandatory.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The <code>fence.tso</code> instruction was incorrectly described as
-optional in the 2019 ratified specifications. However, <code>fence.tso</code> is
-encoded within the standard <code>fence</code> encoding such that implementations
-must treat it as a simple global fence if they do not natively support
-TSO-ordering optimizations.  As software can always assume without any
-penalty that <code>fence.tso</code> is being exploited by a hardware
-implementation, there is no advantage to making the instruction an
-option.  Later versions of the unprivileged ISA specifications
-correctly indicate that <code>fence.tso</code> is mandatory.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="5-1-1-2-rvi20u32-mandatory-extensions"><a class="anchor" href="#5-1-1-2-rvi20u32-mandatory-extensions"></a>5.1.1.2. RVI20U32 Mandatory Extensions</h4>
-<div class="paragraph">
-<p>There are no mandatory extensions for RVI20U32.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="5-1-1-3-rvi20u32-optional-extensions"><a class="anchor" href="#5-1-1-3-rvi20u32-optional-extensions"></a>5.1.1.3. RVI20U32 Optional Extensions</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>M</strong> Integer multiplication and division.</p>
-</li>
-<li>
-<p><strong>A</strong> Atomic instructions.</p>
-</li>
-<li>
-<p><strong>F</strong> Single-precision floating-point instructions.</p>
-</li>
-<li>
-<p><strong>D</strong> Double-precision floating-point instructions.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The rationale to not include Q as an optional extension is that
-quad-precision floating-point is unlikely to be implemented in
-hardware, and so we do not require or expect software to expend effort
-optimizing use of Q instructions in case they are present.
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>C</strong> Compressed Instructions.</p>
-</li>
-<li>
-<p><strong>Zifencei</strong> Instruction-fetch fence instruction.</p>
-</li>
-<li>
-<p>Misaligned loads and stores may be supported.</p>
-</li>
-<li>
-<p><strong>Zicntr</strong> Basic counters.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The Zicsr extension is not supported independent of the Zicntr or
-F extensions.
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Zihpm</strong> Hardware performance counters.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="5-1-2-rvi20u64"><a class="anchor" href="#5-1-2-rvi20u64"></a>5.1.2. RVI20U64</h3>
-<div class="paragraph">
-<p>RVI20U64 specifies the ISA features available to generic unprivileged
-execution environments.</p>
-</div>
-<div class="sect3">
-<h4 id="5-1-2-1-rvi20u64-mandatory-base"><a class="anchor" href="#5-1-2-1-rvi20u64-mandatory-base"></a>5.1.2.1. RVI20U64 Mandatory Base</h4>
-<div class="paragraph">
-<p>RV64I is the mandatory base ISA for RVI20U64, and is little-endian.</p>
-</div>
-<div class="paragraph">
-<p>As per the unprivileged architecture specification, the <code>ecall</code>
-instruction causes a requested trap to the execution environment.</p>
-</div>
-<div class="paragraph">
-<p>Misaligned loads and stores might not be supported.</p>
-</div>
-<div class="paragraph">
-<p>The <code>fence.tso</code> instruction is mandatory.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The <code>fence.tso</code> instruction was incorrectly described as
-optional in the 2019 ratified specifications. However, <code>fence.tso</code> is
-encoded within the standard <code>fence</code> encoding such that implementations
-must treat it as a simple global fence if they do not natively support
-TSO-ordering optimizations.  As software can always assume without any
-penalty that <code>fence.tso</code> is being exploited by a hardware
-implementation, there is no advantage to making the instruction a
-profile option.  Later versions of the unprivileged ISA specifications
-correctly indicate that <code>fence.tso</code> is mandatory.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="5-1-2-2-rvi20u64-mandatory-extensions"><a class="anchor" href="#5-1-2-2-rvi20u64-mandatory-extensions"></a>5.1.2.2. RVI20U64 Mandatory Extensions</h4>
-<div class="paragraph">
-<p>There are no mandatory extensions for RVI20U64.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="5-1-2-3-rvi20u64-optional-extensions"><a class="anchor" href="#5-1-2-3-rvi20u64-optional-extensions"></a>5.1.2.3. RVI20U64 Optional Extensions</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>M</strong> Integer multiplication and division.</p>
-</li>
-<li>
-<p><strong>A</strong> Atomic instructions.</p>
-</li>
-<li>
-<p><strong>F</strong> Single-precision floating-point instructions.</p>
-</li>
-<li>
-<p><strong>D</strong> Double-precision floating-point instructions.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The rationale to not include Q as a profile option is that
-quad-precision floating-point is unlikely to be implemented in
-hardware, and so we do not require or expect software to expend effort
-optimizing use of Q instructions in case they are present.
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>C</strong> Compressed Instructions.</p>
-</li>
-<li>
-<p><strong>Zifencei</strong> Instruction-fetch fence instruction.</p>
-</li>
-<li>
-<p>Misaligned loads and stores may be supported.</p>
-</li>
-<li>
-<p><strong>Zicntr</strong> Basic counters.</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The Zicsr extension is not supported independent of the Zicntr or
-F extensions.
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Zihpm</strong> Hardware performance counters.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="5-2-rva20-profiles"><a class="anchor" href="#5-2-rva20-profiles"></a>5.2. RVA20 Profiles</h2>
+<h2 id="5-1-rva20-profiles"><a class="anchor" href="#5-1-rva20-profiles"></a>5.1. RVA20 Profiles</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The RVA20 profiles are intended to be used for 64-bit application
@@ -906,7 +640,7 @@ variants.
 </table>
 </div>
 <div class="sect2">
-<h3 id="5-2-1-rva20u64-profile"><a class="anchor" href="#5-2-1-rva20u64-profile"></a>5.2.1. RVA20U64 Profile</h3>
+<h3 id="5-1-1-rva20u64-profile"><a class="anchor" href="#5-1-1-rva20u64-profile"></a>5.1.1. RVA20U64 Profile</h3>
 <div class="paragraph">
 <p>The RVA20U64 profile specifies the ISA features available to user-mode
 execution environments in 64-bit applications processors.  This is the
@@ -917,7 +651,7 @@ terms of the amount of software that targets this profile.</p>
 <p>RVA20U64 has one optional extension (Zihpm).</p>
 </div>
 <div class="sect3">
-<h4 id="5-2-1-1-rva20u64-mandatory-base"><a class="anchor" href="#5-2-1-1-rva20u64-mandatory-base"></a>5.2.1.1. RVA20U64 Mandatory Base</h4>
+<h4 id="5-1-1-1-rva20u64-mandatory-base"><a class="anchor" href="#5-1-1-1-rva20u64-mandatory-base"></a>5.1.1.1. RVA20U64 Mandatory Base</h4>
 <div class="paragraph">
 <p>RV64I is the mandatory base ISA for RVA20U64, and is little-endian.</p>
 </div>
@@ -950,7 +684,7 @@ specifications correctly indicate that <code>fence.tso</code> is mandatory.
 </div>
 </div>
 <div class="sect3">
-<h4 id="5-2-1-2-rva20u64-mandatory-extensions"><a class="anchor" href="#5-2-1-2-rva20u64-mandatory-extensions"></a>5.2.1.2. RVA20U64 Mandatory Extensions</h4>
+<h4 id="5-1-1-2-rva20u64-mandatory-extensions"><a class="anchor" href="#5-1-1-2-rva20u64-mandatory-extensions"></a>5.1.1.2. RVA20U64 Mandatory Extensions</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1086,7 +820,7 @@ for performance.
 </div>
 </div>
 <div class="sect3">
-<h4 id="5-2-1-3-rva20u64-optional-extensions"><a class="anchor" href="#5-2-1-3-rva20u64-optional-extensions"></a>5.2.1.3. RVA20U64 Optional Extensions</h4>
+<h4 id="5-1-1-3-rva20u64-optional-extensions"><a class="anchor" href="#5-1-1-3-rva20u64-optional-extensions"></a>5.1.1.3. RVA20U64 Optional Extensions</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1162,7 +896,7 @@ a corresponding vDSO call.
 </div>
 </div>
 <div class="sect3">
-<h4 id="5-2-1-4-rva20u64-recommendations"><a class="anchor" href="#5-2-1-4-rva20u64-recommendations"></a>5.2.1.4. RVA20U64 Recommendations</h4>
+<h4 id="5-1-1-4-rva20u64-recommendations"><a class="anchor" href="#5-1-1-4-rva20u64-recommendations"></a>5.1.1.4. RVA20U64 Recommendations</h4>
 <div class="paragraph">
 <p>Recommendations are not strictly mandated but are included to guide
 implementers making design choices.</p>
@@ -1174,7 +908,7 @@ exceptions on attempts to execute unimplemented opcodes.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="5-2-2-rva20s64-profile"><a class="anchor" href="#5-2-2-rva20s64-profile"></a>5.2.2. RVA20S64 Profile</h3>
+<h3 id="5-1-2-rva20s64-profile"><a class="anchor" href="#5-1-2-rva20s64-profile"></a>5.1.2. RVA20S64 Profile</h3>
 <div class="paragraph">
 <p>The RVA20S64 profile specifies the ISA features available to a
 supervisor-mode execution environment in 64-bit applications
@@ -1186,7 +920,7 @@ processors.  RVA20S64 is based on privileged architecture version
 (Sv48).</p>
 </div>
 <div class="sect3">
-<h4 id="5-2-2-1-rva20s64-mandatory-base"><a class="anchor" href="#5-2-2-1-rva20s64-mandatory-base"></a>5.2.2.1. RVA20S64 Mandatory Base</h4>
+<h4 id="5-1-2-1-rva20s64-mandatory-base"><a class="anchor" href="#5-1-2-1-rva20s64-mandatory-base"></a>5.1.2.1. RVA20S64 Mandatory Base</h4>
 <div class="paragraph">
 <p>RV64I is the mandatory base ISA for RVA20S64, and is little-endian.</p>
 </div>
@@ -1198,7 +932,7 @@ trap to the execution environment.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="5-2-2-2-rva20s64-mandatory-extensions"><a class="anchor" href="#5-2-2-2-rva20s64-mandatory-extensions"></a>5.2.2.2. RVA20S64 Mandatory Extensions</h4>
+<h4 id="5-1-2-2-rva20s64-mandatory-extensions"><a class="anchor" href="#5-1-2-2-rva20s64-mandatory-extensions"></a>5.1.2.2. RVA20S64 Mandatory Extensions</h4>
 <div class="paragraph">
 <p>The following unprivileged extensions are mandatory:</p>
 </div>
@@ -1343,7 +1077,7 @@ This is a new extension name for this feature.
 </div>
 </div>
 <div class="sect3">
-<h4 id="5-2-2-3-rva20s64-optional-extensions"><a class="anchor" href="#5-2-2-3-rva20s64-optional-extensions"></a>5.2.2.3. RVA20S64 Optional Extensions</h4>
+<h4 id="5-1-2-3-rva20s64-optional-extensions"><a class="anchor" href="#5-1-2-3-rva20s64-optional-extensions"></a>5.1.2.3. RVA20S64 Optional Extensions</h4>
 <div class="paragraph">
 <p>RVA20S64 has one unprivileged option.</p>
 </div>
