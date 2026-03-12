@@ -644,7 +644,7 @@ a RPMI transport channel.</p>
 <h3 id="3-1-1-message-types"><a class="anchor" href="#3-1-1-message-types"></a>3.1.1. Message Types</h3>
 <div class="paragraph">
 <p>The RPMI messaging protocol defines three types of RPMI messages namely:
-<strong>REQUEST</strong>, <strong>ACKNOWLEDGEMENT</strong> and <strong>NOTIFICATION</strong>. The <a href="#messaging_message_types_table">RPMI Message Types</a>
+<strong>REQUEST</strong>, <strong>ACKNOWLEDGEMENT</strong> and <strong>NOTIFICATION</strong>. The <a href="#messaging_message_types_table">Table 1</a>
 below summarize all RPMI message types.</p>
 </div>
 <div class="paragraph">
@@ -717,7 +717,7 @@ system events.</p></td>
 <h3 id="3-1-2-message-format"><a class="anchor" href="#3-1-2-message-format"></a>3.1.2. Message Format</h3>
 <div class="paragraph">
 <p>An RPMI message consists of a fixed <code>8-byte</code> message header followed by a
-variable sized optional message data as show in the <a href="#messaging_format">RPMI Message Format</a>
+variable sized optional message data as show in the <a href="#messaging_format">Figure 1</a>
 below. The byte ordering of an RPMI message is defined by the underlying
 RPMI transport.</p>
 </div>
@@ -733,7 +733,7 @@ RPMI transport.</p>
 <p>The RPMI message header and message data are split into multiple <strong>words</strong>,
 where each word is <code>4-byte</code> wide and indexed starting from <code>0</code>. The RPMI
 message layout is presented throughout the RPMI specification in the form
-of tables as shown in the <a href="#table_message_layout_table_example">Message Layout Table Example</a> below.
+of tables as shown in the <a href="#table_message_layout_table_example">Table 2</a> below.
 Some of the columns listed below may be omitted in the layout tables if
 not required.</p>
 </div>
@@ -768,7 +768,7 @@ or message data.</p></td>
 <h4 id="3-1-2-2-message-header"><a class="anchor" href="#3-1-2-2-message-header"></a>3.1.2.2. Message Header</h4>
 <div class="paragraph">
 <p>The layout of the <code>8-byte</code> wide RPMI message header is shown in the
-<a href="#table_message_header">RPMI Message Header</a> below. The RPMI message header provide a
+<a href="#table_message_header">Table 3</a> below. The RPMI message header provide a
 unique identity to the corresponding RPMI message withing an RPMI
 context.</p>
 </div>
@@ -987,7 +987,7 @@ packed into a single RPMI notification message depending on the space
 available in the message data. Each RPMI event may have additional data
 associated with it based on the type of RPMI event. Any action required
 for handling an RPMI event depends on the application processors. The
-format of an RPMI notification message in shown in the <a href="#messaging_notif_format">RPMI Notification Message Format</a>
+format of an RPMI notification message in shown in the <a href="#messaging_notif_format">Figure 2</a>
 below.</p>
 </div>
 <div class="paragraph">
@@ -1022,8 +1022,8 @@ in the RPMI message header represents the aggregate size of all RPMI events
 included in RPMI message data.</p>
 </div>
 <div class="paragraph">
-<p>The <a href="#table_notification_message_format">Event Format</a> below defines the format of an
-RPMI event whereas the <a href="#messaging_event_format">Event Header</a> below shows a pictorial
+<p>The <a href="#table_notification_message_format">Table 4</a> below defines the format of an
+RPMI event whereas the <a href="#messaging_event_format">Figure 3</a> below shows a pictorial
 view of an RPMI event. The format of the event data for each RPMI event is
 defined separately by an RPMI service group. If multiple RPMI events are
 packed into a single RPMI notification message then the ordering of RPMI
@@ -1114,7 +1114,7 @@ type.</p>
 <div class="sect2">
 <h3 id="3-1-4-possible-error-codes"><a class="anchor" href="#3-1-4-possible-error-codes"></a>3.1.4. Possible Error Codes</h3>
 <div class="paragraph">
-<p>The <a href="#table_error_codes">RPMI Error Codes</a> below lists the error codes which can be returned
+<p>The <a href="#table_error_codes">Table 5</a> below lists the error codes which can be returned
 by an RPMI service in the <code>STATUS</code> field of the RPMI acknowledgement message.</p>
 </div>
 <table id="table_error_codes" class="tableblock frame-all grid-all stretch">

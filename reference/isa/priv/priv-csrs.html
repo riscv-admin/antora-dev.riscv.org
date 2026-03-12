@@ -622,7 +622,7 @@ effects on writes.</p>
 <p>The standard RISC-V ISA sets aside a 12-bit encoding space (csr[11:0])
 for up to 4,096 CSRs. By convention, the upper 4 bits of the CSR address
 (csr[11:8]) are used to encode the read and write accessibility of the
-CSRs according to privilege level as shown in <a href="#csrrwpriv">Allocation of RISC-V CSR address ranges.</a>. <span id="norm:Zicsr_rw">The top two bits (csr[11:10]) indicate whether the register is read/write (<code>00</code>,<code>01</code>, or <code>10</code>) or read-only (<code>11</code>).</span>
+CSRs according to privilege level as shown in <a href="#csrrwpriv">Table 1</a>. <span id="norm:Zicsr_rw">The top two bits (csr[11:10]) indicate whether the register is read/write (<code>00</code>,<code>01</code>, or <code>10</code>) or read-only (<code>11</code>).</span>
 <span id="norm:Zicsr_access">The next two bits (csr[9:8]) encode the lowest privilege level that can access the CSR, with the pattern <code>10</code> representing hypervisor CSRs.</span></p>
 </div>
 <div class="admonitionblock note">
@@ -658,7 +658,7 @@ raise illegal-instruction exceptions or, as described in
 read-only, in which case writes to the read-only bits are ignored.</span></p>
 </div>
 <div class="paragraph">
-<p><a href="#csrrwpriv">Allocation of RISC-V CSR address ranges.</a> also indicates the convention to
+<p><a href="#csrrwpriv">Table 1</a> also indicates the convention to
 allocate CSR addresses between standard and custom uses. The CSR
 addresses designated for custom uses will not be redefined by future
 standard extensions.</p>
@@ -999,7 +999,7 @@ illegal accesses. Currently, the counters are the only shadowed CSRs.</p>
 <div class="sect2">
 <h3 id="2-1-2-csr-listing"><a class="anchor" href="#2-1-2-csr-listing"></a>2.1.2. CSR Listing</h3>
 <div class="paragraph">
-<p><a href="#ucsrnames">Currently allocated RISC-V unprivileged CSR addresses.</a>-<a href="#mcsrnames">Currently allocated RISC-V machine-level CSR addresses.</a> list the CSRs that
+<p><a href="#ucsrnames">Table 2</a>-<a href="#mcsrnames">Table 5</a> list the CSRs that
 have currently been allocated CSR addresses. The timers, counters, and
 floating-point CSRs are standard unprivileged CSRs. The other registers
 are used by privileged code, as described in the following chapters.

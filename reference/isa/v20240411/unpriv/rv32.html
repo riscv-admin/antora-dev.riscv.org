@@ -680,7 +680,7 @@ Assembly Programmer&#8217;s Manual [<a href="../biblio/bibliography.html#bib-ris
 <h2 id="sec:rv32i-model"><a class="anchor" href="#sec:rv32i-model"></a>Programmers' Model for Base Integer ISA</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="#gprs">RISC-V base unprivileged integer register state.</a> shows the unprivileged state for the base
+<p><a href="#gprs">Table 1</a> shows the unprivileged state for the base
 integer ISA. For RV32I, the 32 <code>x</code> registers are each 32 bits wide,
 i.e., <code>XLEN=32</code>. Register <code>x0</code> is hardwired with all bits equal to 0.
 General purpose registers <code>x1-x31</code> hold values that various
@@ -1473,7 +1473,7 @@ of instructions used for procedure calls and returns to be effective.
 For RISC-V, hints as to the instructions' usage are encoded implicitly
 via the register numbers used. A JAL instruction should push the return
 address onto a return-address stack (RAS) only when <em>rd</em> is 'x1' or
-<code>x5</code>. JALR instructions should push/pop a RAS as shown in <a href="#rashints">Return-address stack prediction hints encoded in the register operands of a JALR instruction.</a>.</p>
+<code>x5</code>. JALR instructions should push/pop a RAS as shown in <a href="#rashints">Table 2</a>.</p>
 </div>
 <table id="rashints" class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 2. Return-address stack prediction hints encoded in the register operands of a JALR instruction.</caption>
@@ -1986,7 +1986,7 @@ imposes, it is correct to ignore the <em>fm</em> field and implement FENCE.TSO a
 for finer-grain fences in future extensions. For forward compatibility,
 base implementations shall ignore these fields, and standard software
 shall zero these fields. Likewise, many <em>fm</em> and predecessor/successor
-set settings in <a href="#fm">Fence mode encoding</a> are also reserved for future use.
+set settings in <a href="#fm">Table 3</a> are also reserved for future use.
 Base implementations shall treat all such reserved configurations as
 normal fences with <em>fm</em>=0000, and standard software shall use only
 non-reserved configurations.</p>
@@ -2181,7 +2181,7 @@ architecturally visible effect.</p>
 </table>
 </div>
 <div class="paragraph">
-<p><a href="#t-rv32i-hints">RV32I HINT instructions.</a> lists all RV32I HINT code points. 91% of the
+<p><a href="#t-rv32i-hints">Table 4</a> lists all RV32I HINT code points. 91% of the
 HINT space is reserved for standard HINTs. The remainder of the HINT
 space is designated for custom HINTs: no standard HINTs will ever be
 defined in this subspace.</p>

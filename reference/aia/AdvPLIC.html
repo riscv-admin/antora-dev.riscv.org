@@ -574,14 +574,14 @@ to control a complete, separate APLIC, though in fact all domain
 interfaces together access a single combined interrupt controller.</p>
 </div>
 <div class="paragraph">
-<p><a href="#AdvPLIC-ex-1Domain">Example of a RISC-V system that has a single hart implementing only M-mode, with a single machine-level interrupt domain for that hart.</a> through
-<a href="#AdvPLIC-ex-3Domains">A RISC-V system that extends the example of An example system with four harts that implement M-mode and S-mode, with two APLIC interrupt domains, one each for machine and supervisor levels. with a fifth M-mode-only "manager" hart, with a separate machine-level interrupt domain above the other domains.</a> depict some possible hierarchies of
+<p><a href="#AdvPLIC-ex-1Domain">Figure 1</a> through
+<a href="#AdvPLIC-ex-3Domains">Figure 3</a> depict some possible hierarchies of
 interrupt domains implemented by an APLIC in a RISC-V system.</p>
 </div>
 <div class="paragraph">
 <p>The first figure represents a minimal system that has a single hart not
 supporting supervisor mode, with a single interrupt domain for machine
-level on that hart. The next figure, <a href="#AdvPLIC-ex-2Domains">An example system with four harts that implement M-mode and S-mode, with two APLIC interrupt domains, one each for machine and supervisor levels.</a>,
+level on that hart. The next figure, <a href="#AdvPLIC-ex-2Domains">Figure 2</a>,
 shows a basic arrangement for a larger system designed for symmetric
 multiprocessing (SMP), with multiple harts that all implement supervisor
 mode. In such cases, the APLIC will usually provide a separate interrupt
@@ -610,7 +610,7 @@ root, interrupt sources not delegated down to that domain appear to the
 domain as being not implemented.</p>
 </div>
 <div class="paragraph">
-<p><a href="#AdvPLIC-ex-3Domains">A RISC-V system that extends the example of An example system with four harts that implement M-mode and S-mode, with two APLIC interrupt domains, one each for machine and supervisor levels. with a fifth M-mode-only "manager" hart, with a separate machine-level interrupt domain above the other domains.</a> shows a hierarchy of three
+<p><a href="#AdvPLIC-ex-3Domains">Figure 3</a> shows a hierarchy of three
 interrupt domains, two at machine level and one at supervisor level. The
 arrangement in the figure, when combined with PMP (physical memory
 protection), allows machine-level software to isolate a selection of
@@ -627,7 +627,7 @@ application harts, even at machine level.</p>
 <div class="content">
 <img src="_images/AdvPLIC-ex-3Domains.png" alt="AdvPLIC ex 3Domains">
 </div>
-<div class="title">Figure 3. A RISC-V system that extends the example of <a href="#AdvPLIC-ex-2Domains">An example system with four harts that implement M-mode and S-mode, with two APLIC interrupt domains, one each for machine and supervisor levels.</a> with a fifth M-mode-only "manager" hart, with a separate machine-level interrupt domain above the other domains.</div>
+<div class="title">Figure 3. A RISC-V system that extends the example of <a href="#AdvPLIC-ex-2Domains">Figure 2</a> with a fifth M-mode-only "manager" hart, with a separate machine-level interrupt domain above the other domains.</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -641,7 +641,7 @@ application harts, even at machine level.</p>
 over the interrupts from the domain, the harts must be cooperatively
 controlled by software at the same privilege level. In particular, a
 single operating system should control all of the harts associated with
-a supervisor-level interrupt domain. In the examples of <a href="#AdvPLIC-ex-2Domains">An example system with four harts that implement M-mode and S-mode, with two APLIC interrupt domains, one each for machine and supervisor levels.</a> and <a href="#AdvPLIC-ex-3Domains">A RISC-V system that extends the example of An example system with four harts that implement M-mode and S-mode, with two APLIC interrupt domains, one each for machine and supervisor levels. with a fifth M-mode-only "manager" hart, with a separate machine-level interrupt domain above the other domains.</a>, control
+a supervisor-level interrupt domain. In the examples of <a href="#AdvPLIC-ex-2Domains">Figure 2</a> and <a href="#AdvPLIC-ex-3Domains">Figure 3</a>, control
 of the APLIC&#8217;s supervisor-level interrupt domain could not be safely
 split among multiple independent OSes.</p>
 </div>
@@ -803,7 +803,7 @@ This control region is a multiple of 4 KiB in size and aligned to a
 4-KiB address boundary. The smallest valid control region is 16 KiB. An
 interrupt domain&#8217;s control region is populated by a set of 32-bit
 registers. The first 16 KiB contains the registers listed in
-<a href="#TableAdvPLIC-domainControlRegion">The registers of the first 16 KiB of an interrupt domain&#8217;s memory-mapped control region.</a>.</p>
+<a href="#TableAdvPLIC-domainControlRegion">Table 1</a>.</p>
 </div>
 <table id="TableAdvPLIC-domainControlRegion" class="tableblock frame-none grid-none fit-content center">
 <caption class="title">Table 1. The registers of the first 16 KiB of an interrupt domain&#8217;s memory-mapped control region.</caption>
@@ -1110,7 +1110,7 @@ not) be all read-only zeros.</p>
 </div>
 <div class="paragraph">
 <p>Aside from the registers in
-<a href="#TableAdvPLIC-domainControlRegion">The registers of the first 16 KiB of an interrupt domain&#8217;s memory-mapped control region.</a>
+<a href="#TableAdvPLIC-domainControlRegion">Table 1</a>
 and those listed above for IDC structures, all other bytes in an
 interrupt domain&#8217;s control region are reserved and are implemented as
 read-only zeros.</p>
@@ -1317,7 +1317,7 @@ domain, <code>sourcecfg[<span class="steminline"> <svg style="vertical-align: -0
 is active in this domain, and if so, what values or transitions on the
 incoming wire are interpreted as interrupts. The values allowed for SM
 and their meanings are listed in
-<a href="#TableAdvPLIC-sourcecfg-SM">Encoding of the SM (Source Mode) field of a sourcecfg register when bit D = 0</a>. Inactive
+<a href="#TableAdvPLIC-sourcecfg-SM">Table 2</a>. Inactive
 (zero) is always supported for field SM. Implementations are free to
 choose, independently for each interrupt source, what other values are
 supported for SM.</p>

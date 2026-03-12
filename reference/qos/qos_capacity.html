@@ -854,7 +854,7 @@ fields.</p>
 </div>
 <div class="paragraph">
 <p>The <code>OP</code> field is used to instruct the controller to perform an operation listed
-in <a href="#CC_MON_OP">Capacity Usage Monitoring Operations (<code>OP</code>)</a>.</p>
+in <a href="#CC_MON_OP">Table 2</a>.</p>
 </div>
 <table id="CC_MON_OP" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 2. Capacity Usage Monitoring Operations (<code>OP</code>)</caption>
@@ -881,7 +881,7 @@ in <a href="#CC_MON_OP">Capacity Usage Monitoring Operations (<code>OP</code>)</
 <td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Configure the counter selected by <code>MCID</code> to count
                              the event selected by <code>EVT_ID</code>, <code>AT</code>, and <code>ATV</code>.
-                             The <code>EVT_ID</code> encodings are listed in <a href="#CC_EVT_ID">Capacity Usage Monitoring Event ID (<code>EVT_ID</code>)</a>.</p></td>
+                             The <code>EVT_ID</code> encodings are listed in <a href="#CC_EVT_ID">Table 3</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>READ_COUNTER</code></p></td>
@@ -968,7 +968,7 @@ several actions that might not complete synchronously with the write. A write to
 the <code>cc_mon_ctl</code> sets the read-only <code>BUSY</code> bit to 1, indicating the controller
 is performing the requested operation. When the <code>BUSY</code> bit reads 0, the operation
 is complete, and the read-only <code>STATUS</code> field provides a status value (see
-<a href="#CC_MON_STS"><code>cc_mon_ctl.STATUS</code> Field Encodings</a> for  details). Written values to the <code>BUSY</code> and the <code>STATUS</code>
+<a href="#CC_MON_STS">Table 4</a> for  details). Written values to the <code>BUSY</code> and the <code>STATUS</code>
 fields are ignored. An implementation that can complete the operation
 synchronously with the write may hardwire the <code>BUSY</code> bit to 0. The state of the
  <code>BUSY</code> bit, when not hardwired to 0, shall only change in response to a write to
@@ -1119,7 +1119,7 @@ allocation per access type, then the <code>AT</code> field is read-only zero.</p
 </div>
 <div class="paragraph">
 <p>The <code>OP</code> field is used to instruct the capacity controller to perform an
-operation listed in <a href="#CC_ALLOC_OP">Capacity Allocation Operations (<code>OP</code>)</a>. Some operations necessitate the
+operation listed in <a href="#CC_ALLOC_OP">Table 5</a>. Some operations necessitate the
 specification of the <em>capacity blocks</em> to act upon. For such operations, the
 targeted <em>capacity blocks</em> are designated in the form of a bitmask in the
 <code>cc_block_mask</code> register. Additionally, certain operations require the <em>capacity
@@ -1384,7 +1384,7 @@ several actions that might not complete synchronously with the write. A write to
 the <code>cc_alloc_ctl</code> sets the read-only <code>BUSY</code> bit to 1, indicating the controller
 is performing the requested operation. When the <code>BUSY</code> bit reads 0, the operation
 is complete, and the read-only <code>STATUS</code> field provides a status value
-(<a href="#CC_ALLOC_STS"><code>cc_alloc_ctl.STATUS</code> Field Encodings</a>) of the requested operation. Values that are written to the <code>BUSY</code> and
+(<a href="#CC_ALLOC_STS">Table 6</a>) of the requested operation. Values that are written to the <code>BUSY</code> and
 the <code>STATUS</code> fields are always ignored. An implementation that can complete the
 operation synchronously with the write might hardwire the <code>BUSY</code> bit to 0. The
 state of the <code>BUSY</code> bit, when not hardwired to 0, shall change only in response

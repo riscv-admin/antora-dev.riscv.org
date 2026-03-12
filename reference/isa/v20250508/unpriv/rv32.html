@@ -678,7 +678,7 @@ Assembly Programmer&#8217;s Manual [<a href="../biblio/bibliography.html#bib-ris
 <h2 id="2-2-programmers-model-for-base-integer-isa"><a class="anchor" href="#2-2-programmers-model-for-base-integer-isa"></a>2.2. Programmers' Model for Base Integer ISA</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a href="#gprs">RISC-V base unprivileged integer register state.</a> shows the unprivileged state for the base
+<p><a href="#gprs">Table 1</a> shows the unprivileged state for the base
 integer ISA. For RV32I, the 32 <code>x</code> registers are each 32 bits wide,
 i.e., <code>XLEN=32</code>. Register <code>x0</code> is hardwired with all bits equal to 0.
 General purpose registers <code>x1-x31</code> hold values that various
@@ -1468,7 +1468,7 @@ of instructions used for procedure calls and returns to be effective.
 For RISC-V, hints as to the instructions' usage are encoded implicitly
 via the register numbers used. A JAL instruction should push the return
 address onto a return-address stack (RAS) only when <em>rd</em> is 'x1' or
-<code>x5</code>. JALR instructions should push/pop a RAS as shown in <a href="#rashints">Return-address stack prediction hints encoded in the register operands of a JALR instruction.</a>.</p>
+<code>x5</code>. JALR instructions should push/pop a RAS as shown in <a href="#rashints">Table 2</a>.</p>
 </div>
 <table id="rashints" class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 2. Return-address stack prediction hints encoded in the register operands of a JALR instruction.</caption>
@@ -2178,7 +2178,7 @@ architecturally visible effect.</p>
 </table>
 </div>
 <div class="paragraph">
-<p><a href="#t-rv32i-hints">RV32I HINT instructions.</a> lists all RV32I HINT code points. 91% of the
+<p><a href="#t-rv32i-hints">Table 4</a> lists all RV32I HINT code points. 91% of the
 HINT space is reserved for standard HINTs. The remainder of the HINT
 space is designated for custom HINTs: no standard HINTs will ever be
 defined in this subspace.</p>
@@ -2390,7 +2390,7 @@ hints, security tags, and instrumentation flags for simulation/emulation.</p>
 <td class="content">
 <code>slli x0, x0, 0x1f</code> and <code>srai x0, x0, 7</code> were previously designated as
 custom HINTs, but they have been appropriated for use in semihosting calls, as
-described in <a href="#ecall-ebreak">2.9. Environment Call and Breakpoints</a>.
+described in <a href="#ecall-ebreak"><em>2.9. Environment Call and Breakpoints</em></a>.
 To reflect their usage in practice, the base ISA spec has been changed to
 designate them as standard HINTs.
 </td>

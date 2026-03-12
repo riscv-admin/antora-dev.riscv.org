@@ -1017,7 +1017,7 @@ BR group signals instead.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>itype</strong>[<em>itype_width_p</em>-1:0]</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">MR</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Termination type of the instruction
-block. Encoding given in <a href="#tab:itype">Instruction Type (<strong>itype</strong>) encoding</a> (see <a href="#JumpClasses">4.1.1.1. Jump classification and target inference</a> for definitions of codes 6 - 15).</p></td>
+block. Encoding given in <a href="#tab:itype">Table 4</a> (see <a href="#JumpClasses">4.1.1.1. Jump classification and target inference</a> for definitions of codes 6 - 15).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cause</strong>[<em>ecause_width_p</em>-1:0]</p></td>
@@ -1039,7 +1039,7 @@ currently supplies zero. Ignored unless <strong>itype</strong>=1.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">M</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Privilege level for all
 instructions retired on this cycle. Encoding given in
-<a href="#tab:priv">Privilege level (<strong>priv</strong>) encoding</a>. Codes 4-7 optional.</p></td>
+<a href="#tab:priv">Table 5</a>. Codes 4-7 optional.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>iaddr</strong>[<em>iaddress_width_p</em>-1:0]</p></td>
@@ -1063,7 +1063,7 @@ retired on this cycle.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ctype</strong>[<em>ctype_width_p</em>-1:0]</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">O</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reporting behavior for <strong>context</strong>.
-Encoding given in Table <a href="#tab:context-type">Context type <strong>ctype</strong> values and corresponding actions</a>. Codes 2-3
+Encoding given in Table <a href="#tab:context-type">Table 6</a>. Codes 2-3
 optional.</p></td>
 </tr>
 <tr>
@@ -1078,7 +1078,7 @@ for <strong>itype</strong> codes other than 6, 8, 10, 12 or 14.</p></td>
 </tbody>
 </table>
 <div class="paragraph">
-<p><a href="#tab:common-ingress">Instruction interface signals</a> and <a href="#tab:multi-ingress">Instruction interface signals - multiple retirement per block</a> list the signals in the
+<p><a href="#tab:common-ingress">Table 1</a> and <a href="#tab:multi-ingress">Table 2</a> list the signals in the
 interface designed to efficiently support retirement of multiple
 instructions per cycle. The following discussion describes the
 multiple-retirement behavior. However, for harts that can only retire
@@ -1361,7 +1361,7 @@ dynamically.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><a href="#tab:context-type">Context type <strong>ctype</strong> values and corresponding actions</a> specifies the actions for
+<p><a href="#tab:context-type">Table 6</a> specifies the actions for
 the various <strong>ctype</strong> values. A typical behavior would be for this signal
 to remain zero except on the 1st retirement after a context change or
 when a time value should be reported. <em>ctype_width_p</em> may be 1 or 2. The
@@ -1419,7 +1419,7 @@ Treated the same as an exception.</p></td>
 <div class="paragraph">
 <p>For harts that can only retire one instruction at a time, the interface
 can be simplified to the signals listed in
-<a href="#tab:common-ingress">Instruction interface signals</a> and <a href="#tab:single-ingress">Instruction interface signals - single retirement per block</a>. The simplifications can be
+<a href="#tab:common-ingress">Table 1</a> and <a href="#tab:single-ingress">Table 3</a>. The simplifications can be
 summarized as follows:</p>
 </div>
 <div class="ulist">
@@ -1463,8 +1463,8 @@ and OR.</p>
 <div class="paragraph">
 <p>Optional sideband signals may be included to provide additional
 functionality, as described in
-<a href="#tab:ingress-side-band">Optional sideband encoder input signals</a> and
-<a href="#tab:egress-side-band">Optional sideband encoder output signals</a>.</p>
+<a href="#tab:ingress-side-band">Table 7</a> and
+<a href="#tab:egress-side-band">Table 8</a>.</p>
 </div>
 <div class="paragraph">
 <p>Note, any user defined information that needs to be output by the
@@ -1557,7 +1557,7 @@ infrastructure).</p></td>
 defines a match control register (<strong><em>mcontrol</em></strong>) containing a 4-bit
 <strong>action</strong> field, and reserves codes 2 - 5 of this field for trace use.
 These action codes are hereby defined as shown in table
-<a href="#tab:debugModuleTriggerSupport">Debug Module trigger support (<strong><em>mcontrol</em> action</strong>)</a>. If implemented, each action must generate a pulse on an output from the hart, on the same cycle as the instruction which caused the trigger is
+<a href="#tab:debugModuleTriggerSupport">Table 9</a>. If implemented, each action must generate a pulse on an output from the hart, on the same cycle as the instruction which caused the trigger is
 retired.</p>
 </div>
 <table id="tab:debugModuleTriggerSupport" class="tableblock frame-all grid-all fit-content center">
@@ -1831,7 +1831,7 @@ of the following groups:</p>
 <div class="paragraph">
 <p>All signals in M, U and O groups are only valid when <strong>dretire</strong> is high.
 Signals in the S group are valid as indicated in table
-<a href="#tab:data-ingress">Data interface signals</a>.</p>
+<a href="#tab:data-ingress">Table 11</a>.</p>
 </div>
 <div class="paragraph">
 <p>For harts that can retire a maximum of M data accesses per cycle, the
@@ -1863,7 +1863,7 @@ first. For example, if there is one data access, use only group 0.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>dtype</strong>[<em>dtype_width_p</em>-1:0]</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">M</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Data access type. Encoding given in
-<a href="#tab:dtype">Data access type (<strong>dtype</strong>) encoding</a></p></td>
+<a href="#tab:dtype">Table 12</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>daddr</strong>[<em>daddress_width_p</em>-1:0]</p></td>

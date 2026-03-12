@@ -641,7 +641,7 @@ code can access all CSRs at lower privilege levels.</p>
 </div>
 <div class="paragraph">
 <p>The MXL (Machine XLEN) field encodes the native base integer ISA width as
-shown in <a href="#misabase">Encoding of MXL field in <code>misa</code></a>. The MXL field is read-only.  If <code>misa</code> is nonzero, the
+shown in <a href="#misabase">Table 1</a>. The MXL field is read-only.  If <code>misa</code> is nonzero, the
 MXL field indicates the effective XLEN in M-mode, a constant termed <em>MXLEN</em>.
 XLEN is never greater than MXLEN, but XLEN might be smaller than MXLEN in
 less-privileged modes.</p>
@@ -1113,8 +1113,8 @@ of the largest hart ID used in a system.</p>
 <h3 id="3-1-6-machine-status-registers-mstatus-and-mstatush"><a class="anchor" href="#3-1-6-machine-status-registers-mstatus-and-mstatush"></a>3.1.6. Machine Status Registers (<code>mstatus</code> and <code>mstatush</code>)</h3>
 <div class="paragraph">
 <p>The <code>mstatus</code> register is an MXLEN-bit read/write register formatted as
-shown in <a href="#mstatusreg-rv32">Machine-mode status register (<code>mstatus</code>) for RV32</a> for RV32 and
-<a href="#mstatusreg">Machine-mode status register (<code>mstatus</code>) for RV64</a> for RV64. The <code>mstatus</code> register
+shown in <a href="#mstatusreg-rv32">Figure 6</a> for RV32 and
+<a href="#mstatusreg">Figure 7</a> for RV64. The <code>mstatus</code> register
 keeps track of and controls the hart’s current operating state. A
 restricted view of <code>mstatus</code> appears as the <code>sstatus</code> register in the
 S-level ISA.</p>
@@ -1138,7 +1138,7 @@ S-level ISA.</p>
 </div>
 <div class="paragraph">
 <p>For RV32 only, <code>mstatush</code> is a 32-bit read/write register formatted as
-shown in <a href="#mstatushreg">Additional machine-mode status register (<code>mstatush</code>) for RV32.</a>. Bits 30:4 of <code>mstatush</code> generally contain the same fields found in bits 62:36 of <code>mstatus</code> for RV64. Fields SD, SXL, and UXL do not exist in <code>mstatush</code>.</p>
+shown in <a href="#mstatushreg">Figure 8</a>. Bits 30:4 of <code>mstatush</code> generally contain the same fields found in bits 62:36 of <code>mstatus</code> for RV64. Fields SD, SXL, and UXL do not exist in <code>mstatush</code>.</p>
 </div>
 <div id="mstatushreg" class="imageblock kroki">
 <div class="content">
@@ -1301,7 +1301,7 @@ storage bit is required to represent either 00 or 11 in MPP.</p>
 <p>For RV64 harts, the SXL and UXL fields are <strong>WARL</strong> fields that control the
 value of XLEN for S-mode and U-mode, respectively. The encoding of these
 fields is the same as the MXL field of <code>misa</code>, shown in
-<a href="#misabase">Encoding of MXL field in <code>misa</code></a>. The effective XLEN in S-mode and
+<a href="#misabase">Table 1</a>. The effective XLEN in S-mode and
 U-mode are termed <em>SXLEN</em> and <em>UXLEN</em>, respectively.</p>
 </div>
 <div class="paragraph">
@@ -1679,7 +1679,7 @@ extensions, so provides a fast check via the SD bit.</p>
 </div>
 <div class="paragraph">
 <p>The FS, VS, and XS fields use the same status encoding as shown in
-<a href="#fsxsencoding">Encoding of FS[1:0], VS[1:0], and XS[1:0] status fields</a>, with the four possible status
+<a href="#fsxsencoding">Table 3</a>, with the four possible status
 values being Off, Initial, Clean, and Dirty.</p>
 </div>
 <table id="fsxsencoding" class="tableblock frame-all grid-all fit-content center">
@@ -1754,7 +1754,7 @@ VS may optionally be read-only zero.</p>
 XS field is read-only zero. Every additional extension with state
 provides a CSR field that encodes the equivalent of the XS states. The
 XS field represents a summary of all extensions' status as shown in
-<a href="#fsxsencoding">Encoding of FS[1:0], VS[1:0], and XS[1:0] status fields</a>.</p>
+<a href="#fsxsencoding">Table 3</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1884,7 +1884,7 @@ instruction that writes a vector register or vector CSR but does not
 alter its contents causes VS to transition to Dirty.</p>
 </div>
 <div class="paragraph">
-<p><a href="#fsxsstates">FS, FS, and XS state transitions.</a> shows all the possible state
+<p><a href="#fsxsstates">Table 4</a> shows all the possible state
 transitions for the FS, VS, or XS status bits. Note that the standard
 floating-point and vector extensions do not support user-mode
 unconfigure or disable/enable instructions.</p>
@@ -2244,13 +2244,13 @@ Asynchronous interrupts set <code>pc</code> to BASE+4&#215;cause.<br>
 </table>
 <div class="paragraph">
 <p>The encoding of the MODE field is shown in
-<a href="#mtvec-mode">Encoding of mtvec MODE field.</a>. When MODE=Direct, all traps into
+<a href="#mtvec-mode">Table 5</a>. When MODE=Direct, all traps into
 machine mode cause the <code>pc</code> to be set to the address in the BASE field.
 When MODE=Vectored, all synchronous exceptions into machine mode cause
 the <code>pc</code> to be set to the address in the BASE field, whereas interrupts
 cause the <code>pc</code> to be set to the address in the BASE field plus four
 times the interrupt cause number. For example, a machine-mode timer
-interrupt (see <a href="#mcauses">Machine cause register (mcause) values after trap.</a>) causes the <code>pc</code>
+interrupt (see <a href="#mcauses">Table 6</a>) causes the <code>pc</code>
 to be set to BASE+<code>0x1c</code>.</p>
 </div>
 <div class="paragraph">
@@ -2381,7 +2381,7 @@ will transfer control to M-mode.</p>
 </div>
 <div class="paragraph">
 <p><code>medeleg</code> has a bit position allocated for every synchronous exception
-shown in <a href="#mcauses">Machine cause register (mcause) values after trap.</a>, with the index of the
+shown in <a href="#mcauses">Table 6</a>, with the index of the
 bit position equal to the value returned in the <code>mcause</code> register (i.e.,
 setting bit 8 allows user-mode environment calls to be delegated to a
 lower-privilege trap handler).</p>
@@ -2478,7 +2478,7 @@ zero.</p>
 </div>
 <div class="paragraph">
 <p>The standard portions (bits 15:0) of registers <code>mip</code> and <code>mie</code> are
-formatted as shown in <a href="#mipreg-standard">Standard portion (bits 15:0) of <code>mip</code>.</a> and <a href="#miereg-standard">Standard portion (bits 15:0) of <code>mie</code>.</a> respectively.</p>
+formatted as shown in <a href="#mipreg-standard">Figure 14</a> and <a href="#miereg-standard">Figure 15</a> respectively.</p>
 </div>
 <div id="mipreg-standard" class="imageblock kroki">
 <div class="content">
@@ -2898,7 +2898,7 @@ while the user context is running.</p>
 <h3 id="3-1-14-machine-exception-program-counter-mepc"><a class="anchor" href="#3-1-14-machine-exception-program-counter-mepc"></a>3.1.14. Machine Exception Program Counter (<code>mepc</code>)</h3>
 <div class="paragraph">
 <p><code>mepc</code> is an MXLEN-bit read/write register formatted as shown in
-<a href="#mepcreg">Machine exception program counter register.</a>. The low bit of <code>mepc</code> (<code>mepc[0]</code>) is
+<a href="#mepcreg">Figure 20</a>. The low bit of <code>mepc</code> (<code>mepc[0]</code>) is
 always zero. On implementations that support only IALIGN=32, the two low
 bits (<code>mepc[1:0]</code>) are always zero.</p>
 </div>
@@ -2950,7 +2950,7 @@ though it may be explicitly written by software.</p>
 <h3 id="mcause"><a class="anchor" href="#mcause"></a>3.1.15. Machine Cause Register (<code>mcause</code>)</h3>
 <div class="paragraph">
 <p>The <code>mcause</code> register is an MXLEN-bit read-write register formatted as
-shown in <a href="#mcausereg">Machine Cause register <code>mcause</code>.</a>. When a trap is taken into
+shown in <a href="#mcausereg">Figure 21</a>. When a trap is taken into
 M-mode, <code>mcause</code> is written with a code indicating the event that
 caused the trap. Otherwise, <code>mcause</code> is never written by the
 implementation, though it may be explicitly written by software.</p>
@@ -2958,7 +2958,7 @@ implementation, though it may be explicitly written by software.</p>
 <div class="paragraph">
 <p>The Interrupt bit in the <code>mcause</code> register is set if the trap was caused
 by an interrupt. The Exception Code field contains a code identifying
-the last exception or interrupt. <a href="#mcauses">Machine cause register (mcause) values after trap.</a> lists
+the last exception or interrupt. <a href="#mcauses">Table 6</a> lists
 the possible machine-level exception codes. The Exception Code is a
 <strong>WLRL</strong> field, so is only guaranteed to hold supported exception codes.</p>
 </div>
@@ -3002,7 +3002,7 @@ given opcode should be treated as illegal or privileged.</p>
 <div class="paragraph">
 <p>If an instruction may raise multiple synchronous exceptions, the
 decreasing priority order of
-<a href="#exception-priority">Synchronous exception priority in decreasing priority order.</a> indicates which
+<a href="#exception-priority">Table 7</a> indicates which
 exception is taken and reported in <code>mcause</code>. The priority of any custom
 synchronous exceptions is implementation-defined.</p>
 </div>
@@ -3307,7 +3307,7 @@ priority order at which the hardware error is discovered.</p>
 <h3 id="3-1-16-machine-trap-value-register-mtval"><a class="anchor" href="#3-1-16-machine-trap-value-register-mtval"></a>3.1.16. Machine Trap Value Register (<code>mtval</code>)</h3>
 <div class="paragraph">
 <p>The <code>mtval</code> register is an MXLEN-bit read-write register formatted as
-shown in <a href="#mtvalreg">Machine Trap Value register.</a>. When a trap is taken into
+shown in <a href="#mtvalreg">Figure 22</a>. When a trap is taken into
 M-mode, <code>mtval</code> is either set to zero or written with exception-specific
 information to assist software in handling the trap. Otherwise, <code>mtval</code>
 is never written by the implementation, though it may be explicitly
@@ -3426,7 +3426,7 @@ be able to hold all values less than 2<sup><em>N</em></sup>, where
 <h3 id="3-1-17-machine-configuration-pointer-register-mconfigptr"><a class="anchor" href="#3-1-17-machine-configuration-pointer-register-mconfigptr"></a>3.1.17. Machine Configuration Pointer Register (<code>mconfigptr</code>)</h3>
 <div class="paragraph">
 <p><code>mconfigptr</code> is an MXLEN-bit read-only CSR, formatted as shown in
-<a href="#mconfigptrreg">Machine Configuration Pointer register.</a>, that holds the physical
+<a href="#mconfigptrreg">Figure 23</a>, that holds the physical
 address of a configuration data structure. Software can traverse this
 data structure to discover information about the harts, the platform,
 and their configuration.</p>
@@ -3476,7 +3476,7 @@ M-mode software towards the beginning of the boot process.</p>
 <h3 id="sec:menvcfg"><a class="anchor" href="#sec:menvcfg"></a>3.1.18. Machine Environment Configuration Register (<code>menvcfg</code>)</h3>
 <div class="paragraph">
 <p>The <code>menvcfg</code> CSR is a 64-bit read/write register, formatted
-as shown in <a href="#menvcfgreg">Machine environment configuration register (<code>menvcfg</code>).</a>, that controls
+as shown in <a href="#menvcfgreg">Figure 24</a>, that controls
 certain characteristics of the execution environment for modes less
 privileged than M.</p>
 </div>
@@ -3490,7 +3490,7 @@ privileged than M.</p>
 <p>If bit FIOM (Fence of I/O implies Memory) is set to one in <code>menvcfg</code>,
 FENCE instructions executed in modes less privileged than M are modified
 so the requirement to order accesses to device I/O implies also the
-requirement to order main memory accesses. <a href="#menvcfg-FIOM">Modified interpretation of FENCE predecessor and successor sets for modes less privileged than M when FIOM=1.</a>
+requirement to order main memory accesses. <a href="#menvcfg-FIOM">Table 8</a>
 details the modified interpretation of FENCE instruction bits PI, PO,
 SI, and SO for modes less privileged than M when FIOM=1.</p>
 </div>
@@ -3631,7 +3631,7 @@ not exist.</p>
 <h3 id="3-1-19-machine-security-configuration-register-mseccfg"><a class="anchor" href="#3-1-19-machine-security-configuration-register-mseccfg"></a>3.1.19. Machine Security Configuration Register (<code>mseccfg</code>)</h3>
 <div class="paragraph">
 <p><code>mseccfg</code> is an optional 64-bit read/write register, formatted as
-shown in <a href="#mseccfg">Machine security configuration register (<code>mseccfg</code>).</a>, that controls security features.</p>
+shown in <a href="#mseccfg">Figure 25</a>, that controls security features.</p>
 </div>
 <div id="mseccfg" class="imageblock kroki">
 <div class="content">
@@ -4011,7 +4011,7 @@ extensions that wait on memory locations changing, or message arrival.</p>
 <div class="sect2">
 <h3 id="3-3-4-custom-system-instructions"><a class="anchor" href="#3-3-4-custom-system-instructions"></a>3.3.4. Custom SYSTEM Instructions</h3>
 <div class="paragraph">
-<p>The subspace of the SYSTEM major opcode shown in <a href="#customsys">SYSTEM instruction encodings designated for custom use.</a> is designated for custom use. It is recommended that these instructions use bits 29:28 to designate the
+<p>The subspace of the SYSTEM major opcode shown in <a href="#customsys">Figure 28</a> is designated for custom use. It is recommended that these instructions use bits 29:28 to designate the
 minimum required privilege mode, as do other SYSTEM instructions.</p>
 </div>
 <div id="customsys" class="imageblock kroki">
@@ -4119,7 +4119,7 @@ systems implement and check PMAs.</p>
 <div class="paragraph">
 <p>PMAs are inherent properties of the underlying hardware and rarely
 change during system operation. Unlike physical memory protection values
-described in <a href="#pmp">3.7. Physical Memory Protection</a>, PMAs do not vary by execution
+described in <a href="#pmp"><em>3.7. Physical Memory Protection</em></a>, PMAs do not vary by execution
 context. The PMAs of some memory regions are fixed at chip design
 time—for example, for an on-chip ROM. Others are fixed at board design
 time, depending, for example, on which other chips are connected to
@@ -4690,7 +4690,7 @@ An optional physical memory protection (PMP) unit provides per-hart
 machine-mode control registers to allow physical memory access
 privileges (read, write, execute) to be specified for each physical
 memory region. The PMP values are checked in parallel with the PMA
-checks described in <a href="#pma">3.6. Physical Memory Attributes</a>.</p>
+checks described in <a href="#pma"><em>3.6. Physical Memory Attributes</em></a>.</p>
 </div>
 <div class="paragraph">
 <p>The granularity of PMP access control settings are platform-specific,
@@ -4746,10 +4746,10 @@ accessible to M-mode.</p>
 <p>The PMP configuration registers are densely packed into CSRs to minimize
 context-switch time. For RV32, sixteen CSRs, <code>pmpcfg0</code>–<code>pmpcfg15</code>, hold
 the configurations <code>pmp0cfg</code>–<code>pmp63cfg</code> for the 64 PMP entries, as shown
-in <a href="#pmpcfg-rv32">RV32 PMP configuration CSR layout.</a>. For RV64, eight
+in <a href="#pmpcfg-rv32">Figure 29</a>. For RV64, eight
 even-numbered CSRs, <code>pmpcfg0</code>, <code>pmpcfg2</code>, …, <code>pmpcfg14</code>, hold the
 configurations for the 64 PMP entries, as shown in
-<a href="#pmpcfg-rv64">RV64 PMP configuration CSR layout.</a>. For RV64, the odd-numbered
+<a href="#pmpcfg-rv64">Figure 30</a>. For RV64, the odd-numbered
 configuration registers, <code>pmpcfg1</code>, <code>pmpcfg3</code>, …, <code>pmpcfg15</code>, are
 illegal.</p>
 </div>
@@ -4785,9 +4785,9 @@ entries 8-11 appear in <code>pmpcfg2</code>[31:0] for both RV32 and RV64.</p>
 <div class="paragraph">
 <p>The PMP address registers are CSRs named <code>pmpaddr0</code>-<code>pmpaddr63</code>. Each
 PMP address register encodes bits 33-2 of a 34-bit physical address for
-RV32, as shown in <a href="#pmpaddr-rv32">PMP address register format, RV32.</a>. For RV64,
+RV32, as shown in <a href="#pmpaddr-rv32">Figure 31</a>. For RV64,
 each PMP address register encodes bits 55-2 of a 56-bit physical
-address, as shown in <a href="#pmpaddr-rv64">PMP address register format, RV64.</a>. Not all
+address, as shown in <a href="#pmpaddr-rv64">Figure 32</a>. Not all
 physical address bits may be implemented, and so the <code>pmpaddr</code> registers
 are <strong>WARL</strong>.</p>
 </div>
@@ -4824,7 +4824,7 @@ the same limit.</p>
 <div class="title">Figure 32. PMP address register format, RV64.</div>
 </div>
 <div class="paragraph">
-<p><a href="#pmpcfg">PMP configuration register format.</a> shows the layout of a PMP configuration
+<p><a href="#pmpcfg">Figure 33</a> shows the layout of a PMP configuration
 register. The R, W, and X bits, when set, indicate that the PMP entry
 permits read, write, and instruction execution, respectively. When one
 of these bits is clear, the corresponding access type is denied. The R,
@@ -4851,7 +4851,7 @@ access-fault exception.</p>
 <div class="paragraph">
 <p>The A field in a PMP entry&#8217;s configuration register encodes the
 address-matching mode of the associated PMP address register. The
-encoding of this field is shown in <a href="#pmpcfg-a">Encoding of A field in PMP configuration registers.</a>.
+encoding of this field is shown in <a href="#pmpcfg-a">Table 10</a>.
 When A=0, this PMP entry is disabled and matches no addresses. Two other
 address-matching modes are supported: naturally aligned power-of-2
 regions (NAPOT), including the special case of naturally aligned
@@ -4893,7 +4893,7 @@ bytes</p></td>
 <div class="paragraph">
 <p>NAPOT ranges make use of the low-order bits of the associated address
 register to encode the size of the range, as shown in
-<a href="#pmpcfg-napot"><code>NAPOT</code> range encoding in PMP address and configuration registers.</a>.</p>
+<a href="#pmpcfg-napot">Table 11</a>.</p>
 </div>
 <table id="pmpcfg-napot" class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 11. <code>NAPOT</code> range encoding in PMP address and configuration registers.</caption>

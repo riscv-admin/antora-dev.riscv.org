@@ -4671,7 +4671,7 @@ with this EEW, which aids implementations that rearrange data internally.
 unmasked unit-stride store of elements with EEW=8.</p>
 </div>
 <div class="paragraph">
-<p>The <code>nf</code> field encodes how many vector registers to load and store using the NFIELDS encoding (Figure <a href="#fig-nf">NFIELDS Encoding</a>).
+<p>The <code>nf</code> field encodes how many vector registers to load and store using the NFIELDS encoding (Figure <a href="#fig-nf">Table 14</a>).
 The encoded number of registers must be a power of 2 and the vector
 register numbers must be aligned as with a vector register group,
 otherwise the instruction encoding is reserved.  <span id="norm:vector_ls_seg_wholereg_op">NFIELDS
@@ -10428,7 +10428,7 @@ equal to SEW.
 <p><span id="norm:vmv-nr-r_enc">The instruction is encoded as an OPIVI instruction.  The number of
 vector registers to copy is encoded in the low three bits of the
 <code>simm</code> field (<code>simm[2:0]</code>) using the same encoding as the <code>nf[2:0]</code> field for memory
-instructions (Figure <a href="#fig-nf">NFIELDS Encoding</a>), i.e., <code>simm[2:0]</code> = NREG-1.</span></p>
+instructions (Figure <a href="#fig-nf">Table 14</a>), i.e., <code>simm[2:0]</code> = NREG-1.</span></p>
 </div>
 <div class="paragraph">
 <p><span id="norm:vmv-nr-r_nreg_rsv">The value of NREG must be 1, 2, 4, or 8, and values of <code>simm[4:0]</code>

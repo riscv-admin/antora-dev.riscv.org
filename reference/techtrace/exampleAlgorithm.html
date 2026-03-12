@@ -607,7 +607,7 @@
 </div>
 <div class="paragraph">
 <p>A reference algorithm for compressed branch trace is given in
-<a href="#fig:algo">Instruction delta trace algorithm</a>. In the diagram, the following terms are used:</p>
+<a href="#fig:algo">Figure 1</a>. In the diagram, the following terms are used:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -683,7 +683,7 @@ there are entries in the branch map that have not yet been output (see
 </ul>
 </div>
 <div class="paragraph">
-<p><a href="#fig:algo">Instruction delta trace algorithm</a> shows instruction by instruction behavior, as
+<p><a href="#fig:algo">Figure 1</a> shows instruction by instruction behavior, as
 would be seen in a single-retirement system only. Whilst the core to
 encoder interface allows the RISC-V hart to provide information on
 multiple retiring instructions simultaneously, the resultant packet
@@ -834,7 +834,7 @@ reference algorithm is applied to each retired instruction. When
 instructions are retired in blocks, only the first and last instruction
 in a block need be considered, as all those in between are
 "uninteresting", and will have no effect on the encoder&#8217;s state (their
-route through <a href="#fig:algo">Instruction delta trace algorithm</a> does not pass through any of the
+route through <a href="#fig:algo">Figure 1</a> does not pass through any of the
 rectangular boxes).</p>
 </div>
 <div class="paragraph">

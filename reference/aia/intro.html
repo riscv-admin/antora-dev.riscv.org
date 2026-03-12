@@ -548,7 +548,7 @@ active virtual harts and potentially thousands of additional idle
 of one or more physical devices.</p>
 </div>
 <div class="paragraph">
-<p><a href="#overalllimits">Absolute limits on the numbers of harts and interrupt identities in a system.  Individual implementations are likely to have smaller limits.</a> summarizes the main limits
+<p><a href="#overalllimits">Table 1</a> summarizes the main limits
 on the numbers of harts, both physical and virtual, and the numbers of
 distinct interrupt identities that may be supported with the Advanced
 Interrupt Architecture.</p>
@@ -634,7 +634,7 @@ interrupts and simpler harts without IMSICs.</p>
 signaled to harts through dedicated wires. In that case, an <em>Advanced
 Platform-Level Interrupt Controller</em> (APLIC) acts as a traditional
 central hub for interrupts, routing and prioritizing external interrupts
-for each hart as illustrated in <a href="#intrsWithoutIMSICs">Traditional delivery of wired interrupts to harts without support for MSIs.</a>.
+for each hart as illustrated in <a href="#intrsWithoutIMSICs">Figure 1</a>.
 Interrupts may be selectively routed either to machine level or to
 supervisor level at each hart. The APLIC is specified in
 <a href="#AdvPLIC">[AdvPLIC]</a>.</p>
@@ -664,7 +664,7 @@ virtual machine.</p>
 <h4 id="1-1-3-2-external-interrupts-with-imsics"><a class="anchor" href="#1-1-3-2-external-interrupts-with-imsics"></a>1.1.3.2. External interrupts with IMSICs</h4>
 <div class="paragraph">
 <p>To be able to receive message-signaled interrupts (MSIs), each RISC-V hart must
-have an Incoming MSI Controller (IMSIC) as shown in <a href="#intrsWithIMSICs">Interrupt delivery by MSIs when harts have IMSICs for receiving them.</a>. Fundamentally, a message-signaled interrupt is simply a memory write to a specific address that hardware accepts as indicating an interrupt. To that end, every IMSIC is assigned one or more distinct addresses in the machine&#8217;s address space, and when a write is made to one of those addresses in the expected format, the receiving IMSIC interprets the write as an external interrupt for the respective hart.</p>
+have an Incoming MSI Controller (IMSIC) as shown in <a href="#intrsWithIMSICs">Figure 2</a>. Fundamentally, a message-signaled interrupt is simply a memory write to a specific address that hardware accepts as indicating an interrupt. To that end, every IMSIC is assigned one or more distinct addresses in the machine&#8217;s address space, and when a write is made to one of those addresses in the expected format, the receiving IMSIC interprets the write as an external interrupt for the respective hart.</p>
 </div>
 <div class="paragraph">
 <p>Because all IMSICs have unique addresses in the machine&#8217;s physical
@@ -689,7 +689,7 @@ in that chapter, <a href="#MSIEncoding">[MSIEncoding]</a>.</p>
 <div class="paragraph">
 <p>When the harts in a RISC-V system have IMSICs, the system will normally still
 contain an APLIC, but its role is changed. Instead of signaling
-interrupts to harts directly by wires as in <a href="#intrsWithoutIMSICs">Traditional delivery of wired interrupts to harts without support for MSIs.</a>, an APLIC converts incoming wired interrupts into MSI writes that are sent to harts via their IMSIC units. Each MSI is sent to a single target hart according to the APLIC&#8217;s configuration set by software.</p>
+interrupts to harts directly by wires as in <a href="#intrsWithoutIMSICs">Figure 1</a>, an APLIC converts incoming wired interrupts into MSI writes that are sent to harts via their IMSIC units. Each MSI is sent to a single target hart according to the APLIC&#8217;s configuration set by software.</p>
 </div>
 <div class="paragraph">
 <p>If RISC-V harts implement the H extension,
@@ -709,8 +709,8 @@ This topic is addressed in <a href="#IOMMU">[IOMMU]</a>, "IOMMU Support for MSIs
 Architecture specifies a few other major classes of interrupts for
 harts. The Privileged Architecture&#8217;s timer interrupts remain supported
 in full, and software interrupts remain at least partly supported,
-although neither appears in <a href="#intrsWithoutIMSICs">Traditional delivery of wired interrupts to harts without support for MSIs.</a>
-and <a href="#intrsWithIMSICs">Interrupt delivery by MSIs when harts have IMSICs for receiving them.</a>. For the specifics on software interrupts,
+although neither appears in <a href="#intrsWithoutIMSICs">Figure 1</a>
+and <a href="#intrsWithIMSICs">Figure 2</a>. For the specifics on software interrupts,
 refer to <a href="#IPIs">[IPIs]</a>, "Interprocessor Interrupts (IPIs).""</p>
 </div>
 <div class="paragraph">
@@ -734,7 +734,7 @@ available for platform standards or for custom use. The Advanced
 Interrupt Architecture claims further authority over identity numbers in
 the ranges 16-23 and 32-47, leaving numbers in the range 24-31 and all
 major identities 48 and higher still free for custom use.
-<a href="#interruptIdents">Major and minor identities for all interrupt causes at a hart. Major identities 0-15 are the purview of the base Privileged Architecture.</a> characterizes all
+<a href="#interruptIdents">Table 2</a> characterizes all
 major interrupt identities with this extension.</p>
 </div>
 <table id="interruptIdents" class="tableblock frame-all grid-all fit-content center">
@@ -848,9 +848,9 @@ High-priority RAS event interrupt<br>
 <div class="paragraph">
 <p>Interrupts from most I/O devices are conveyed to a hart by the <em>external
 interrupt controller</em> for the hart, which is either the hart&#8217;s IMSIC
-(<a href="#intrsWithIMSICs">Interrupt delivery by MSIs when harts have IMSICs for receiving them.</a>) or an APLIC
-(<a href="#intrsWithoutIMSICs">Traditional delivery of wired interrupts to harts without support for MSIs.</a>). As
-<a href="#interruptIdents">Major and minor identities for all interrupt causes at a hart. Major identities 0-15 are the purview of the base Privileged Architecture.</a> shows, external
+(<a href="#intrsWithIMSICs">Figure 2</a>) or an APLIC
+(<a href="#intrsWithoutIMSICs">Figure 1</a>). As
+<a href="#interruptIdents">Table 2</a> shows, external
 interrupts at a given privilege level all share a single major identity
 number: 11 for machine level, 9 for supervisor level, and 10 for
 VS-level. External interrupts from different causes are distinguished

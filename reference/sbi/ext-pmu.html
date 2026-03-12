@@ -747,7 +747,7 @@ specification.</p>
 <p>The <code>event_idx.type</code> (i.e. <strong>event type</strong>) should be <code>0x0</code> for all hardware
 general events and each hardware general event is identified by an unique
 <code>event_idx.code</code> (i.e. <strong>event code</strong>) described in the
-<a href="#table_pmu_hardware_events">PMU Hardware Events</a> below.</p>
+<a href="#table_pmu_hardware_events">Table 2</a> below.</p>
 </div>
 <table id="table_pmu_hardware_events" class="tableblock frame-all grid-all" style="width: 95%;">
 <caption class="title">Table 2. PMU Hardware Events</caption>
@@ -1094,7 +1094,7 @@ value for simplicity.
 <div class="paragraph">
 <p>The <code>event_idx.type</code> (i.e. <strong>event type</strong>) should be <code>0xf</code> for all firmware
 events and each firmware event is identified by an unique <code>event_idx.code</code>
-(i.e. <strong>event code</strong>) described in the <a href="#table_pmu_firmware_events">PMU Firmware Events</a> below.</p>
+(i.e. <strong>event code</strong>) described in the <a href="#table_pmu_firmware_events">Table 6</a> below.</p>
 </div>
 <table id="table_pmu_firmware_events" class="tableblock frame-all grid-all" style="width: 95%;">
 <caption class="title">Table 6. PMU Firmware Events</caption>
@@ -1307,7 +1307,7 @@ should be ignored.</p>
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in the
-<a href="#table_pmu_counter_get_info_errors">PMU Counter Get Info Errors</a> below.</p>
+<a href="#table_pmu_counter_get_info_errors">Table 7</a> below.</p>
 </div>
 <table id="table_pmu_counter_get_info_errors" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 7. PMU Counter Get Info Errors</caption>
@@ -1354,7 +1354,7 @@ represents any additional event configuration.</p>
 <div class="paragraph">
 <p>The <code>config_flags</code> parameter represents additional counter configuration
 and filter flags. The bit definitions of the <code>config_flags</code> parameter are
-shown in the <a href="#table_pmu_counter_cfg_match_flags">PMU Counter Config Match Flags</a> below.</p>
+shown in the <a href="#table_pmu_counter_cfg_match_flags">Table 8</a> below.</p>
 </div>
 <table id="table_pmu_counter_cfg_match_flags" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 8. PMU Counter Config Match Flags</caption>
@@ -1472,7 +1472,7 @@ or due to lack of event filtering support in the underlying RISC-V platform.
 </div>
 <div class="paragraph">
 <p>In case of failure, the possible error codes returned in <code>sbiret.error</code> are
-shown in the <a href="#table_pmu_counter_cfg_match_errors">PMU Counter Config Match Errors</a> below.</p>
+shown in the <a href="#table_pmu_counter_cfg_match_errors">Table 9</a> below.</p>
 </div>
 <table id="table_pmu_counter_cfg_match_errors" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 9. PMU Counter Config Match Errors</caption>
@@ -1521,7 +1521,7 @@ specifies the initial value of the counter.</p>
 </div>
 <div class="paragraph">
 <p>The bit definitions of the <code>start_flags</code> parameter are shown in the
-<a href="#table_pmu_counter_start_flags">PMU Counter Start Flags</a> below.</p>
+<a href="#table_pmu_counter_start_flags">Table 10</a> below.</p>
 </div>
 <table id="table_pmu_counter_start_flags" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 10. PMU Counter Start Flags</caption>
@@ -1595,7 +1595,7 @@ mutually exclusive as the former is only valid for a single counter.
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in the
-<a href="#table_pmu_counter_start_errors">PMU Counter Start Errors</a> below.</p>
+<a href="#table_pmu_counter_start_errors">Table 11</a> below.</p>
 </div>
 <table id="table_pmu_counter_start_errors" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 11. PMU Counter Start Errors</caption>
@@ -1646,7 +1646,7 @@ mutually exclusive as the former is only valid for a single counter.
 <p>Stop or disable a set of counters on the calling hart. The <code>counter_idx_base</code>
 and <code>counter_idx_mask</code> parameters represent the set of counters. The bit
 definitions of the <code>stop_flags</code> parameter are shown in the
-<a href="#table_pmu_counter_stop_flags">PMU Counter Stop Flags</a> below.</p>
+<a href="#table_pmu_counter_stop_flags">Table 12</a> below.</p>
 </div>
 <table id="table_pmu_counter_stop_flags" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 12. PMU Counter Stop Flags</caption>
@@ -1695,7 +1695,7 @@ shared memory.</p>
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in the
-<a href="#table_pmu_counter_stop_errors">PMU Counter Stop Errors</a> below.</p>
+<a href="#table_pmu_counter_stop_errors">Table 13</a> below.</p>
 </div>
 <table id="table_pmu_counter_stop_errors" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 13. PMU Counter Stop Errors</caption>
@@ -1747,7 +1747,7 @@ counter value.</p>
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in the
-<a href="#table_pmu_counter_fw_read_errors">PMU Counter Firmware Read Errors</a> below.</p>
+<a href="#table_pmu_counter_fw_read_errors">Table 14</a> below.</p>
 </div>
 <table id="table_pmu_counter_fw_read_errors" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 14. PMU Counter Firmware Read Errors</caption>
@@ -1788,7 +1788,7 @@ for RV64 (or higher) systems.</p>
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in
-<a href="#table_pmu_counter_fw_read_hi_errors">PMU Counter Firmware Read High Errors</a> below.</p>
+<a href="#table_pmu_counter_fw_read_hi_errors">Table 15</a> below.</p>
 </div>
 <table id="table_pmu_counter_fw_read_hi_errors" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 15. PMU Counter Firmware Read High Errors</caption>
@@ -1833,7 +1833,7 @@ bitwise then <code>shmem_phys_lo</code> specifies the lower XLEN bits and <code>
 specifies the upper XLEN bits of the snapshot shared memory physical base
 address. The <code>shmem_phys_lo</code> MUST be 4096 bytes (i.e. page) aligned and
 the size of the snapshot shared memory must be 4096 bytes. The layout
-of the snapshot shared memory is described in <a href="#table_snapshot_shmem_layout">SBI PMU Snapshot shared memory layout</a>.</p>
+of the snapshot shared memory is described in <a href="#table_snapshot_shmem_layout">Table 16</a>.</p>
 </div>
 <div class="paragraph">
 <p>If both <code>shmem_phys_lo</code> and <code>shmem_phys_hi</code> parameters are all-ones bitwise
@@ -1914,7 +1914,7 @@ access this memory any other time.</p>
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in
-<a href="#table_pmu_snapshot_set_shmem_errors">PMU Setup Snapshot Area Errors</a> below.</p>
+<a href="#table_pmu_snapshot_set_shmem_errors">Table 17</a> below.</p>
 </div>
 <table id="table_pmu_snapshot_set_shmem_errors" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 17. PMU Setup Snapshot Area Errors</caption>
@@ -2036,7 +2036,7 @@ as supervisor software may free the memory at any time.</p>
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in
-<a href="#table_pmu_event_get_info_errors">PMU Get Event Info Errors</a> below.</p>
+<a href="#table_pmu_event_get_info_errors">Table 19</a> below.</p>
 </div>
 <table id="table_pmu_event_get_info_errors" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 19. PMU Get Event Info Errors</caption>

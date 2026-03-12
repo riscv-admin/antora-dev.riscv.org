@@ -643,7 +643,7 @@ set of functions which allow the supervisor-mode software to request a hart
 state change.</p>
 </div>
 <div class="paragraph">
-<p>The <a href="#table_hsm_states">HSM Hart States</a> shown below describes all possible <strong>HSM states</strong>
+<p>The <a href="#table_hsm_states">Table 1</a> shown below describes all possible <strong>HSM states</strong>
 along with a unique <strong>HSM state id</strong> for each state:</p>
 </div>
 <table id="table_hsm_states" class="tableblock frame-all grid-all stretch">
@@ -721,7 +721,7 @@ along with a unique <strong>HSM state id</strong> for each state:</p>
 <div class="paragraph">
 <p>At any point in time, a hart should be in one of the above mentioned hart
 states. The hart state transitions by the SBI implementation should follow
-the state machine shown below in the <a href="#figure_hsm">SBI HSM State Machine</a>.</p>
+the state machine shown below in the <a href="#figure_hsm">Figure 1</a>.</p>
 </div>
 <div id="figure_hsm" class="imageblock">
 <div class="content">
@@ -792,7 +792,7 @@ group</p>
 <div class="paragraph">
 <p>Request the SBI implementation to start executing the target hart in
 supervisor-mode, at the address specified by <code>start_addr</code>, with the
-specific register values described in <a href="#table_hsm_hart_start_regs">HSM Hart Start Register State</a>.</p>
+specific register values described in <a href="#table_hsm_hart_start_regs">Table 2</a>.</p>
 </div>
 <table id="table_hsm_hart_start_regs" class="tableblock frame-all grid-all" style="width: 80%;">
 <caption class="title">Table 2. HSM Hart Start Register State</caption>
@@ -864,7 +864,7 @@ register when the hart starts executing at <code>start_addr</code>.</p>
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in the
-<a href="#table_hsm_hart_start_errors">HSM Hart Start Errors</a> below.</p>
+<a href="#table_hsm_hart_start_errors">Table 3</a> below.</p>
 </div>
 <table id="table_hsm_hart_start_errors" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 3. HSM Hart Start Errors</caption>
@@ -926,7 +926,7 @@ This call is not expected to return under normal conditions. The
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in the
-<a href="#table_hsm_hart_stop_errors">HSM Hart Stop Errors</a> below.</p>
+<a href="#table_hsm_hart_stop_errors">Table 4</a> below.</p>
 </div>
 <table id="table_hsm_hart_stop_errors" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 4. HSM Hart Stop Errors</caption>
@@ -965,11 +965,11 @@ required.</p>
 </div>
 <div class="paragraph">
 <p>The possible status (or HSM state id) values returned in <code>sbiret.value</code>
-are described in <a href="#table_hsm_states">HSM Hart States</a>.</p>
+are described in <a href="#table_hsm_states">Table 1</a>.</p>
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in the
-<a href="#table_hsm_hart_get_status_errors">HSM Hart Get Status Errors</a> below.</p>
+<a href="#table_hsm_hart_get_status_errors">Table 5</a> below.</p>
 </div>
 <table id="table_hsm_hart_get_status_errors" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 5. HSM Hart Get Status Errors</caption>
@@ -1028,7 +1028,7 @@ failures.  The <code>resume_addr</code> parameter is unused during retentive sus
 requires software to restore various hart registers and CSRs for all privilege
 modes. Upon resuming from non-retentive suspend state, the hart will jump to
 supervisor-mode at address specified by <code>resume_addr</code> with specific registers
-values described in the <a href="#table_hsm_hart_resume_regs">HSM Hart Resume Register State</a> below.</p>
+values described in the <a href="#table_hsm_hart_resume_regs">Table 6</a> below.</p>
 </div>
 <table id="table_hsm_hart_resume_regs" class="tableblock frame-all grid-all" style="width: 80%;">
 <caption class="title">Table 6. HSM Hart Resume Register State</caption>
@@ -1080,7 +1080,7 @@ hence <code>resume_addr</code> must be less than XLEN bits wide.
 </div>
 <div class="paragraph">
 <p>The <code>suspend_type</code> parameter is 32 bits wide and the possible values are
-shown in <a href="#table_hsm_hart_suspend_types">HSM Hart Suspend Types</a> below.</p>
+shown in <a href="#table_hsm_hart_suspend_types">Table 7</a> below.</p>
 </div>
 <table id="table_hsm_hart_suspend_types" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 7. HSM Hart Suspend Types</caption>
@@ -1133,7 +1133,7 @@ non-retentive suspend.</p>
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in the
-<a href="#table_hsm_hart_suspend_errors">HSM Hart Suspend Errors</a> below.</p>
+<a href="#table_hsm_hart_suspend_errors">Table 8</a> below.</p>
 </div>
 <table id="table_hsm_hart_suspend_errors" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 8. HSM Hart Suspend Errors</caption>

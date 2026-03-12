@@ -671,7 +671,7 @@ in hardware.
 <p>This SBI extension defines optional features which MUST be discovered by
 the supervisor software (or L1 hypervisor) before using the corresponding
 SBI functions. Each nested acceleration feature is assigned a unique ID
-which is an unsigned 32-bit integer. The <a href="#table_nacl_features">Nested acceleration features</a> below
+which is an unsigned 32-bit integer. The <a href="#table_nacl_features">Table 1</a> below
 provides a list of all nested acceleration features.</p>
 </div>
 <table id="table_nacl_features" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -723,7 +723,7 @@ physical address for each virtual hart at boot-time. The physical base
 address of the nested acceleration shared memory MUST be 4096 bytes
 (i.e. page) aligned and the size of the nested acceleration shared
 memory must be <code>4096 + (1024 * (XLEN / 8))</code> bytes. The
-<a href="#table_nacl_shmem_layout">Nested acceleration shared memory layout</a> below shows the layout of nested
+<a href="#table_nacl_shmem_layout">Table 2</a> below shows the layout of nested
 acceleration shared memory.</p>
 </div>
 <table id="table_nacl_shmem_layout" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -765,15 +765,15 @@ acceleration shared memory.</p>
 </table>
 <div class="paragraph">
 <p>Any nested acceleration feature may define the contents of the scratch space
-shown in the <a href="#table_nacl_shmem_layout">Nested acceleration shared memory layout</a> above if required.</p>
+shown in the <a href="#table_nacl_shmem_layout">Table 2</a> above if required.</p>
 </div>
 <div class="paragraph">
-<p>The contents of the CSR space shown in the <a href="#table_nacl_shmem_layout">Nested acceleration shared memory layout</a>
+<p>The contents of the CSR space shown in the <a href="#table_nacl_shmem_layout">Table 2</a>
 above is an array of RISC-V H-extension CSR values where CSR <code>&lt;x&gt;</code> is at
 index <code>&lt;i&gt; = ((&lt;x&gt; &amp; 0xc00) &gt;&gt; 2) | (&lt;x&gt; &amp; 0xff)</code>. The SBI implementation
 (or L0 hypervisor) MUST update the CSR space whenever the state of any
 RISC-V H-extension CSR changes unless some nested acceleration feature
-defines a different behaviour. The <a href="#table_nacl_hext_csr_index_ranges">Nested acceleration H-extension CSR index ranges</a>
+defines a different behaviour. The <a href="#table_nacl_hext_csr_index_ranges">Table 3</a>
 below shows CSR space index ranges for all possible 1024 RISC-V
 H-extension CSRs.</p>
 </div>
@@ -949,8 +949,8 @@ HFENCE entry consists of four XLEN-bit words.</p>
 </div>
 <div class="paragraph">
 <p>A nested HFENCE entry is equivalent to an HFENCE over a range of guest
-addresses. The <a href="#table_nacl_hfence_entry_format">Nested HFENCE entry format</a> below shows the nested
-HFENCE entry format whereas <a href="#table_nacl_hfence_entry_types">Nested HFENCE entry types</a> below provides
+addresses. The <a href="#table_nacl_hfence_entry_format">Table 4</a> below shows the nested
+HFENCE entry format whereas <a href="#table_nacl_hfence_entry_types">Table 5</a> below provides
 a list of nested HFENCE entry types. Upon an explicit synchronize HFENCE
 request from supervisor software (or L1 hypervisor), the SBI implementation
 (or L0 hypervisor) will process nested HFENCE entries with the <code>Config.Pending</code>
@@ -1142,7 +1142,7 @@ along with SRET emulation.</p>
 <div class="paragraph">
 <p>This nested acceleration feature defines the scratch space offset range
 <code>0x0000 - 0x01FF</code> (512 bytes) as nested SRET context. The
-<a href="#table_nacl_sret_context">Nested SRET context</a> below shows contents of the nested SRET context.</p>
+<a href="#table_nacl_sret_context">Table 6</a> below shows contents of the nested SRET context.</p>
 </div>
 <table id="table_nacl_sret_context" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 6. Nested SRET context</caption>
@@ -1409,7 +1409,7 @@ CSR feature in conjunction with the synchronize SRET feature.
 <div class="paragraph">
 <p>This nested acceleration feature defines the scratch space offset
 range <code>0x0200 - 0x027F</code> (128 bytes) as nested autoswap context. The
-<a href="#table_nacl_autoswap_context">Nested autoswap context</a> below shows contents of the nested
+<a href="#table_nacl_autoswap_context">Table 7</a> below shows contents of the nested
 autoswap context.</p>
 </div>
 <table id="table_nacl_autoswap_context" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -1486,7 +1486,7 @@ in the nested autoswap context.</p>
 <div class="paragraph">
 <p>Probe a nested acceleration feature. This is a mandatory function of the
 SBI nested acceleration extension. The <code>feature_id</code> parameter specifies the
-nested acceleration feature to probe. <a href="#table_nacl_features">Nested acceleration features</a> provides
+nested acceleration feature to probe. <a href="#table_nacl_features">Table 1</a> provides
 a list of possible feature IDs.</p>
 </div>
 <div class="paragraph">
@@ -1524,7 +1524,7 @@ then the nested acceleration features are disabled.</p>
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in
-<a href="#table_nacl_set_shmem_errors">NACL Set Shared Memory Errors</a>.</p>
+<a href="#table_nacl_set_shmem_errors">Table 8</a>.</p>
 </div>
 <table id="table_nacl_set_shmem_errors" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 8. NACL Set Shared Memory Errors</caption>
@@ -1589,7 +1589,7 @@ is synchronized as described in the <a href="#_feature_synchronize_csr_id_0">[_f
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in
-<a href="#table_nacl_sync_csr_errors">NACL Synchronize CSR Errors</a>.</p>
+<a href="#table_nacl_sync_csr_errors">Table 9</a>.</p>
 </div>
 <table id="table_nacl_sync_csr_errors" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 9. NACL Synchronize CSR Errors</caption>
@@ -1651,7 +1651,7 @@ in the <a href="#_feature_synchronize_hfence_id_1">[_feature_synchronize_hfence_
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in
-<a href="#table_nacl_sync_hfence_errors">NACL Synchronize HFENCE Errors</a>.</p>
+<a href="#table_nacl_sync_hfence_errors">Table 10</a>.</p>
 </div>
 <table id="table_nacl_sync_hfence_errors" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 10. NACL Synchronize HFENCE Errors</caption>
@@ -1706,7 +1706,7 @@ MUST handle it as described in the <a href="#_feature_synchronize_sret_id_2">[_f
 <div class="paragraph">
 <p>This function does not return upon success and the possible error codes
 returned in <code>sbiret.error</code> upon failure are shown in
-<a href="#table_nacl_sync_sret_errors">NACL Synchronize SRET Errors</a>.</p>
+<a href="#table_nacl_sync_sret_errors">Table 11</a>.</p>
 </div>
 <table id="table_nacl_sync_sret_errors" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 11. NACL Synchronize SRET Errors</caption>

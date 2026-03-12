@@ -637,7 +637,7 @@
 <h2 id="2-1-risc-v-io-mapping-table-rimt"><a class="anchor" href="#2-1-risc-v-io-mapping-table-rimt"></a>2.1. RISC-V IO Mapping Table (RIMT)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <a href="#rimt">RISC-V IO Mapping Table</a> shows the structure of RIMT. Apart from the basic header, RIMT can contain several
+<p>The <a href="#rimt">Table 1</a> shows the structure of RIMT. Apart from the basic header, RIMT can contain several
 nodes. Each node represents a component, which can be an IOMMU, a PCIe root complex, or a platform
 device.</p>
 </div>
@@ -746,7 +746,7 @@ device.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">List of RIMT nodes in the
                                                                 platform. Nodes listed may be one
                                                                 of the types listed in
-                                                                <a href="#rimt_node_structure">RIMT Node Types</a>. This
+                                                                <a href="#rimt_node_structure">Table 2</a>. This
                                                                 structure for node types is
                                                                 defined in the following sections.</p></td>
 </tr>
@@ -759,7 +759,7 @@ device.</p>
 structure and the other is the device node structure for devices bound to an IOMMU. The device node
 structure can be further classified as PCIe root complex and platform device structures bound to an IOMMU. For example,
 in a system with a single IOMMU, RIMT should have at least two nodes. One for the IOMMU itself
-and another for the devices behind this particular IOMMU. <a href="#rimt_node_structure">RIMT Node Types</a> lists possible
+and another for the devices behind this particular IOMMU. <a href="#rimt_node_structure">Table 2</a> lists possible
 types for those structures.</p>
 </div>
 <table id="rimt_node_structure" class="tableblock frame-all grid-all" style="width: 95%;">
@@ -777,15 +777,15 @@ types for those structures.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RISC-V IOMMU Node. See <a href="#iommu_node_structure">IOMMU Node</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RISC-V IOMMU Node. See <a href="#iommu_node_structure">Table 3</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PCIe Root Complex Node. See <a href="#rc_node_structure">PCIe Root Complex Node</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PCIe Root Complex Node. See <a href="#rc_node_structure">Table 5</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Platform Device Node. See <a href="#platform_node_structure">Platform Device Node</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Platform Device Node. See <a href="#platform_node_structure">Table 7</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3-255</p></td>
@@ -973,7 +973,7 @@ the structure in RIMT used to report the configuration and capabilities of each 
 <td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Array of Interrupt Wire Structures where N
 							       is the number of elements in the array.
-                                                               See <a href="#interrupt_wire_structure">Interrupt Wire Structure</a>.</p></td>
+                                                               See <a href="#interrupt_wire_structure">Table 4</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1177,7 +1177,7 @@ hierarchy following a PCIe host bridge.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Array of ID mapping structures where N
 							    is the number of ID mapping structures.
-							    See <a href="#id_mapping_structure">ID Mapping Structure</a>.</p></td>
+							    See <a href="#id_mapping_structure">Table 6</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1392,7 +1392,7 @@ device&#8217;s device driver.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">12 + M + P</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Array of ID mapping structures where N is the
 							    number of ID mapping structures.
-							    See <a href="#id_mapping_structure">ID Mapping Structure</a>.</p></td>
+							    See <a href="#id_mapping_structure">Table 6</a>.</p></td>
 </tr>
 </tbody>
 </table>

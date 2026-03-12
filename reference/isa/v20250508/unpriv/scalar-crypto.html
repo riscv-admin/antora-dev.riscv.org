@@ -648,11 +648,11 @@ vector unit.</p>
 <div class="paragraph">
 <p>This document also describes the architectural interface to an
 Entropy Source, which can be used to generate cryptographic secrets.
-This is found in <a href="#crypto_scalar_es">31.5. Entropy Source</a>.</p>
+This is found in <a href="#crypto_scalar_es"><em>31.5. Entropy Source</em></a>.</p>
 </div>
 <div class="paragraph">
 <p>It also contains a mechanism allowing core implementers to provide
-<em>"Constant Time Execution"</em> guarantees in <a href="#crypto_scalar_zkt">31.6. Data Independent Execution Latency Subset: Zkt</a>.</p>
+<em>"Constant Time Execution"</em> guarantees in <a href="#crypto_scalar_zkt"><em>31.6. Data Independent Execution Latency Subset: Zkt</em></a>.</p>
 </div>
 <div class="sect2">
 <h3 id="crypto_scalar_audience"><a class="anchor" href="#crypto_scalar_audience"></a>31.2.1. Intended Audience</h3>
@@ -684,9 +684,9 @@ They should understand fairly obviously the motivations for the
 instructions we include, and be familiar with most of the algorithms
 and outside standards to which we refer.
 We expect the sections on constant time execution
-(<a href="#crypto_scalar_zkt">31.6. Data Independent Execution Latency Subset: Zkt</a>)
+(<a href="#crypto_scalar_zkt"><em>31.6. Data Independent Execution Latency Subset: Zkt</em></a>)
 and the entropy source
-(<a href="#crypto_scalar_es">31.5. Entropy Source</a>)
+(<a href="#crypto_scalar_es"><em>31.5. Entropy Source</em></a>)
 to be chiefly understood with their help.</p>
 </dd>
 <dt class="hdlist1">Computer architects</dt>
@@ -750,7 +750,7 @@ Each instruction is accompanied by its expression in Sail, and includes
 calls to supporting functions which are too verbose to include directly
 in the specification.
 This supporting code is listed in
-<a href="#crypto_scalar_appx_sail">31.10. Supporting Sail Code</a>.
+<a href="#crypto_scalar_appx_sail"><em>31.10. Supporting Sail Code</em></a>.
 The
 <a href="https://alasdair.github.io/manual.html">Sail Manual</a>
 is recommended reading in order to best understand the code snippets.</p>
@@ -1258,8 +1258,8 @@ This CSR provides up to 16 physical <code>entropy</code> bits that can be used t
 seed cryptographic random bit generators.</p>
 </div>
 <div class="paragraph">
-<p>See <a href="#crypto_scalar_es">31.5. Entropy Source</a> for the normative specification and access control
-notes. <a href="#crypto_scalar_appx_es">31.8. Entropy Source Rationale and Recommendations</a> contains design rationale and further
+<p>See <a href="#crypto_scalar_es"><em>31.5. Entropy Source</em></a> for the normative specification and access control
+notes. <a href="#crypto_scalar_appx_es"><em>31.8. Entropy Source Rationale and Recommendations</em></a> contains design rationale and further
 recommendations to implementers.</p>
 </div>
 </div>
@@ -1396,7 +1396,7 @@ cryptographic software developers that a subset of RISC-V instructions
 are guaranteed to be implemented such that their execution latency
 is independent of the data values they operate on.
 A complete description of this extension is found in
-<a href="#crypto_scalar_zkt">31.6. Data Independent Execution Latency Subset: Zkt</a>.</p>
+<a href="#crypto_scalar_zkt"><em>31.6. Data Independent Execution Latency Subset: Zkt</em></a>.</p>
 </div>
 </div>
 </div>
@@ -5658,7 +5658,7 @@ use it to seed a cryptographically secure Deterministic Random Bit Generator
 (DRBG) such as AES-based <code>CTR_DRBG</code> [<a href="../biblio/bibliography.html#bib-bake15" class="xref page">37</a>].
 The combination of an Entropy Source, Conditioning, and a DRBG can be used
 to create random bits securely [<a href="../biblio/bibliography.html#bib-bakero:21" class="xref page">38</a>].
-See <a href="#crypto_scalar_appx_es">31.8. Entropy Source Rationale and Recommendations</a> for a non-normative description of a
+See <a href="#crypto_scalar_appx_es"><em>31.8. Entropy Source Rationale and Recommendations</em></a> for a non-normative description of a
 certification and self-certification procedures, design rationale, and more
 detailed suggestions on how the entropy source output can be used.</p>
 </div>
@@ -7268,7 +7268,7 @@ rotation instructions, so <code>zip</code> and <code>unzip</code> are not requir
 </div>
 <div class="paragraph">
 <p>See <a href="b-st-ext.html#zbkc" class="xref page">zbkc</a> for details of these instructions.
-See <a href="#crypto_scalar_zkt">31.6. Data Independent Execution Latency Subset: Zkt</a> for additional implementation
+See <a href="#crypto_scalar_zkt"><em>31.6. Data Independent Execution Latency Subset: Zkt</em></a> for additional implementation
 requirements for these instructions, related to data independent
 execution latency.</p>
 </div>
@@ -7464,7 +7464,7 @@ following appropriate security standards is usually needed to achieve this.</p>
 <li>
 <p><strong>ISA Architectural Tests.</strong> Verify, to the extent possible, that RISC-V ISA
 requirements in this specification are correctly implemented. This includes
-the state transitions (<a href="#crypto_scalar_es">31.5. Entropy Source</a> and
+the state transitions (<a href="#crypto_scalar_es"><em>31.5. Entropy Source</em></a> and
 <a href="#crypto_scalar_es_getnoise">31.8.6. Suggested GetNoise Test Interface</a>), access control
 (<a href="#crypto_scalar_es_access">31.5.3. Access Control to <code>seed</code></a>), and that <code>seed</code> ES16 <code>entropy</code> words
 can only be read destructively.

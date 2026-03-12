@@ -4147,7 +4147,7 @@ if the tables have not been updated in memory since the last <em>fence.i</em>.</
 <p>The <em>jvt</em> register is an XLEN-bit <strong>WARL</strong> read/write register that holds the jump table configuration, consisting of the jump table base address (BASE) and the jump table mode (MODE).</p>
 </div>
 <div class="paragraph">
-<p>If <a href="#Zcmt">28.10. Zcmt</a> is implemented then <em>jvt</em> must also be implemented, but can contain a read-only value. If <em>jvt</em> is writable, the set of values the register may hold can vary by implementation. The value in the BASE field must always be aligned on a 64-byte boundary.
+<p>If <a href="#Zcmt"><em>28.10. Zcmt</em></a> is implemented then <em>jvt</em> must also be implemented, but can contain a read-only value. If <em>jvt</em> is writable, the set of values the register may hold can vary by implementation. The value in the BASE field must always be aligned on a 64-byte boundary.
 Note that the CSR contains only bits XLEN-1 through 6 of the address <em>base</em>. When computing jump-table accesses, the lower six bits of <em>base</em> are filled with zeroes to obtain an XLEN-bit jump-table base address <em>jvt.base</em> that is always aligned on a 64-byte boundary.</p>
 </div>
 <div class="paragraph">

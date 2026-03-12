@@ -593,7 +593,7 @@ structures.</p>
 machines without hypervisor intervention, an IOMMU must be able to
 translate the guest physical address of an MSI to the real physical
 address of an IMSIC’s guest interrupt file in the machine, as
-illustrated in <a href="#IOMMU-guestIntrFiles">Translation of a device-sourced MSI that a guest OS intended to go to a (virtual) IMSIC interrupt file in the OS&#8217;s virtual machine. Referencing an MSI page table supplied by the controlling hypervisor, the IOMMU redirects the MSI to a guest interrupt file of the real machine.</a>. This address
+illustrated in <a href="#IOMMU-guestIntrFiles">Figure 1</a>. This address
 translation is controlled by the MSI page table configured in the
 appropriate device context at the IOMMU. Because every interrupt file,
 real or virtual, occupies a naturally aligned 4-KiB page of address
@@ -661,7 +661,7 @@ total number of virtual RISC-V harts able to receive device MSIs is almost
 unbounded, constrained only by the amount of real physical memory and
 the additional processing time needed to handle them. As its name
 implies, a memory-resident interrupt file is located in memory instead
-of within an IMSIC. <a href="#IOMMU-MRIF">Recording an incoming MSI into a memory-resident interrupt file (MRIF) instead of sending it to a guest interrupt file as in Translation of a device-sourced MSI that a guest OS intended to go to a (virtual) IMSIC interrupt file in the OS&#8217;s virtual machine. Referencing an MSI page table supplied by the controlling hypervisor, the IOMMU redirects the MSI to a guest interrupt file of the real machine..</a> depicts how an IOMMU can
+of within an IMSIC. <a href="#IOMMU-MRIF">Figure 2</a> depicts how an IOMMU can
 record an incoming MSI in an MRIF. When properly configured by a
 hypervisor, an IOMMU recognizes certain incoming MSIs as intended for a
 specific virtual interrupt file, and records each such MSI by setting an
@@ -674,7 +674,7 @@ have changed.</p>
 <div class="content">
 <img src="_images/IOMMU-MRIF.png" alt="IOMMU MRIF">
 </div>
-<div class="title">Figure 2. Recording an incoming MSI into a memory-resident interrupt file (MRIF) instead of sending it to a guest interrupt file as in <a href="#IOMMU-guestIntrFiles">Translation of a device-sourced MSI that a guest OS intended to go to a (virtual) IMSIC interrupt file in the OS&#8217;s virtual machine. Referencing an MSI page table supplied by the controlling hypervisor, the IOMMU redirects the MSI to a guest interrupt file of the real machine.</a>.</div>
+<div class="title">Figure 2. Recording an incoming MSI into a memory-resident interrupt file (MRIF) instead of sending it to a guest interrupt file as in <a href="#IOMMU-guestIntrFiles">Figure 1</a>.</div>
 </div>
 <div class="paragraph">
 <p>While a memory-resident interrupt file provides a place to record MSIs,
@@ -1184,7 +1184,7 @@ within the guest OS&#8217;s virtual machine, using guest physical addresses
 that are inappropriate and unsafe for the real machine. An IOMMU must
 recognize certain incoming writes from such devices as MSIs and convert
 them as needed for the real machine. (Recall
-<a href="#IOMMU-guestIntrFiles">Translation of a device-sourced MSI that a guest OS intended to go to a (virtual) IMSIC interrupt file in the OS&#8217;s virtual machine. Referencing an MSI page table supplied by the controlling hypervisor, the IOMMU redirects the MSI to a guest interrupt file of the real machine.</a>.)</p>
+<a href="#IOMMU-guestIntrFiles">Figure 1</a>.)</p>
 </div>
 <div class="paragraph">
 <p>MSIs originating from a single device that require conversion are
@@ -1268,9 +1268,9 @@ number extracted from the destination guest physical address of the
 incoming memory access by the formula of the previous section. Each MSI
 PTE may specify either the address of a real guest interrupt file that
 substitutes for the targeted virtual interrupt file (as in
-<a href="#IOMMU-guestIntrFiles">Translation of a device-sourced MSI that a guest OS intended to go to a (virtual) IMSIC interrupt file in the OS&#8217;s virtual machine. Referencing an MSI page table supplied by the controlling hypervisor, the IOMMU redirects the MSI to a guest interrupt file of the real machine.</a>), or a memory-resident interrupt
+<a href="#IOMMU-guestIntrFiles">Figure 1</a>), or a memory-resident interrupt
 file in which to store incoming MSIs for the virtual interrupt file (as
-in <a href="#IOMMU-MRIF">Recording an incoming MSI into a memory-resident interrupt file (MRIF) instead of sending it to a guest interrupt file as in Translation of a device-sourced MSI that a guest OS intended to go to a (virtual) IMSIC interrupt file in the OS&#8217;s virtual machine. Referencing an MSI page table supplied by the controlling hypervisor, the IOMMU redirects the MSI to a guest interrupt file of the real machine..</a>).</p>
+in <a href="#IOMMU-MRIF">Figure 2</a>).</p>
 </div>
 <div class="paragraph">
 <p>The number of entries in an MSI page table is <span class="steminline"> <svg style="vertical-align: 0; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="2.152ex" height="1.932ex" role="img" focusable="false" viewBox="0 -853.7 951.4 853.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g></g></g></g></g></svg> </span>

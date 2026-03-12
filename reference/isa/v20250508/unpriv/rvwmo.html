@@ -831,14 +831,14 @@ of a syntactic dependency, defined as follows.</p>
 an entire general-purpose register, some portion of a CSR, or an entire
 CSR. The granularity at which dependencies are tracked through CSRs is
 specific to each CSR and is defined in
-<a href="#csr-granularity">17.2. CSR Dependency Tracking Granularity</a>.</p>
+<a href="#csr-granularity"><em>17.2. CSR Dependency Tracking Granularity</em></a>.</p>
 </div>
 <div class="paragraph">
 <p>Syntactic dependencies are defined in terms of instructions' <em>source
 registers</em>, instructions' <em>destination registers</em>, and the way
 instructions <em>carry a dependency</em> from their source registers to their
 destination registers. This section provides a general definition of all
-of these terms; however, <a href="#source-dest-regs">17.3. Source and Destination Register Listings</a> provides a
+of these terms; however, <a href="#source-dest-regs"><em>17.3. Source and Destination Register Listings</em></a> provides a
 complete listing of the specifics for each instruction.</p>
 </div>
 <div class="paragraph">
@@ -859,7 +859,7 @@ is CSRRW or CSRRWI and <em>rd</em> is set to <code>x0</code></p>
 </li>
 <li>
 <p><em>r</em> is a CSR and an implicit source register for
-<em>i</em>, as defined in <a href="#source-dest-regs">17.3. Source and Destination Register Listings</a></p>
+<em>i</em>, as defined in <a href="#source-dest-regs"><em>17.3. Source and Destination Register Listings</em></a></p>
 </li>
 <li>
 <p><em>r</em> is a CSR that aliases with another source register for
@@ -889,7 +889,7 @@ or CSRRCI and uimm[4:0] is set to zero.</p>
 </li>
 <li>
 <p><em>r</em> is a CSR and an implicit destination register for
-<em>i</em>, as defined in <a href="#source-dest-regs">17.3. Source and Destination Register Listings</a></p>
+<em>i</em>, as defined in <a href="#source-dest-regs"><em>17.3. Source and Destination Register Listings</em></a></p>
 </li>
 <li>
 <p><em>r</em> is a CSR that aliases with another destination
@@ -900,7 +900,7 @@ register for <em>i</em></p>
 <div class="paragraph">
 <p>Most non-memory instructions <em>carry a dependency</em> from each of their
 source registers to each of their destination registers. However, there
-are exceptions to this rule; see <a href="#source-dest-regs">17.3. Source and Destination Register Listings</a>.</p>
+are exceptions to this rule; see <a href="#source-dest-regs"><em>17.3. Source and Destination Register Listings</em></a>.</p>
 </div>
 <div class="paragraph">
 <p>Instruction <em>j</em> has a <em>syntactic dependency</em> on instruction

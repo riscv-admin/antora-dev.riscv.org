@@ -653,7 +653,7 @@ time of ratification.
 instructions.  Other instructions that have been considered during
 development but are not present in this document are not included in
 the review and ratification process, and may be completely revised or
-abandoned.  Section <a href="#sec-vector-extensions">31.18. Standard Vector Extensions</a> lists the standard
+abandoned.  Section <a href="#sec-vector-extensions"><em>31.18. Standard Vector Extensions</em></a> lists the standard
 vector extensions and which instructions and element widths are
 supported by each extension.</p>
 </div>
@@ -677,7 +677,7 @@ must be a power of 2.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>Standard vector extensions (Section <a href="#sec-vector-extensions">31.18. Standard Vector Extensions</a>) and
+<p>Standard vector extensions (Section <a href="#sec-vector-extensions"><em>31.18. Standard Vector Extensions</em></a>) and
 architecture profiles may set further constraints on <em>ELEN</em> and <em>VLEN</em>.</p>
 </div>
 <div class="admonitionblock note">
@@ -4755,7 +4755,7 @@ with this EEW, which aids implementations that rearrange data internally.
 unmasked unit-stride store of elements with EEW=8.</p>
 </div>
 <div class="paragraph">
-<p>The <code>nf</code> field encodes how many vector registers to load and store using the NFIELDS encoding (Figure <a href="#fig-nf">NFIELDS Encoding</a>).
+<p>The <code>nf</code> field encodes how many vector registers to load and store using the NFIELDS encoding (Figure <a href="#fig-nf">Table 14</a>).
 The encoded number of registers must be a power of 2 and the vector
 register numbers must be aligned as with a vector register group,
 otherwise the instruction encoding is reserved.  NFIELDS
@@ -10550,7 +10550,7 @@ equal to SEW.
 <p>The instruction is encoded as an OPIVI instruction.  The number of
 vector registers to copy is encoded in the low three bits of the
 <code>simm</code> field (<code>simm[2:0]</code>) using the same encoding as the <code>nf[2:0]</code> field for memory
-instructions (Figure <a href="#fig-nf">NFIELDS Encoding</a>), i.e., <code>simm[2:0]</code> = NREG-1.</p>
+instructions (Figure <a href="#fig-nf">Table 14</a>), i.e., <code>simm[2:0]</code> = NREG-1.</p>
 </div>
 <div class="paragraph">
 <p>The value of NREG must be 1, 2, 4, or 8, and values of <code>simm[4:0]</code>
@@ -11004,16 +11004,16 @@ Zve64* extensions also support EEW of 64.</p>
 </div>
 <div class="paragraph">
 <p>All Zve* extensions support the vector configuration instructions
-(Section <a href="#sec-vector-config">31.6. Configuration-Setting Instructions (<code>vsetvli</code>/<code>vsetivli</code>/<code>vsetvl</code>)</a>).</p>
+(Section <a href="#sec-vector-config"><em>31.6. Configuration-Setting Instructions (<code>vsetvli</code>/<code>vsetivli</code>/<code>vsetvl</code>)</em></a>).</p>
 </div>
 <div class="paragraph">
 <p>All Zve* extensions support all vector load and store instructions
-(Section <a href="#sec-vector-memory">31.7. Vector Loads and Stores</a>), except Zve64* extensions do not
+(Section <a href="#sec-vector-memory"><em>31.7. Vector Loads and Stores</em></a>), except Zve64* extensions do not
 support EEW=64 for index values when XLEN=32.</p>
 </div>
 <div class="paragraph">
 <p>All Zve* extensions support all vector integer instructions (Section
-<a href="#sec-vector-integer">31.11. Vector Integer Arithmetic Instructions</a>), except that the <code>vmulh</code> integer multiply
+<a href="#sec-vector-integer"><em>31.11. Vector Integer Arithmetic Instructions</em></a>), except that the <code>vmulh</code> integer multiply
 variants that return the high word of the product (<code>vmulh.vv</code>,
 <code>vmulh.vx</code>, <code>vmulhu.vv</code>, <code>vmulhu.vx</code>, <code>vmulhsu.vv</code>, <code>vmulhsu.vx</code>) are
 not included for EEW=64 in Zve64*.</p>
@@ -11033,7 +11033,7 @@ additional gates for large EEW.
 </div>
 <div class="paragraph">
 <p>All Zve* extensions support all vector fixed-point arithmetic
-instructions (<a href="#sec-vector-fixed-point">31.12. Vector Fixed-Point Arithmetic Instructions</a>), except that <code>vsmul.vv</code> and
+instructions (<a href="#sec-vector-fixed-point"><em>31.12. Vector Fixed-Point Arithmetic Instructions</em></a>), except that <code>vsmul.vv</code> and
 <code>vsmul.vx</code> are not included in EEW=64 in Zve64*.</p>
 </div>
 <div class="admonitionblock note">
@@ -11056,11 +11056,11 @@ widening reduction operations (Sections <a href="#sec-vector-integer-reduce">31.
 </div>
 <div class="paragraph">
 <p>All Zve* extensions support all vector mask instructions (Section
-<a href="#sec-vector-mask">31.15. Vector Mask Instructions</a>).</p>
+<a href="#sec-vector-mask"><em>31.15. Vector Mask Instructions</em></a>).</p>
 </div>
 <div class="paragraph">
 <p>All Zve* extensions support all vector permutation instructions
-(Section <a href="#sec-vector-permute">31.16. Vector Permutation Instructions</a>), except that Zve32x and Zve64x
+(Section <a href="#sec-vector-permute"><em>31.16. Vector Permutation Instructions</em></a>), except that Zve32x and Zve64x
 do not include those with floating-point operands, and Zve64f does not include those
 with EEW=64 floating-point operands.</p>
 </div>
@@ -11068,14 +11068,14 @@ with EEW=64 floating-point operands.</p>
 <p>The Zve32x extension depends on the Zicsr extension.
 The Zve32f and Zve64f extensions depend upon the F extension,
 and implement all
-vector floating-point instructions (Section <a href="#sec-vector-float">31.13. Vector Floating-Point Instructions</a>) for
+vector floating-point instructions (Section <a href="#sec-vector-float"><em>31.13. Vector Floating-Point Instructions</em></a>) for
 floating-point operands with EEW=32. Vector single-width floating-point reduction
 operations (<a href="#sec-vector-float-reduce">31.14.3. Vector Single-Width Floating-Point Reduction Instructions</a>) for EEW=32 are supported.</p>
 </div>
 <div class="paragraph">
 <p>The Zve64d extension depends upon the D extension,
 and implements all vector
-floating-point instructions (Section <a href="#sec-vector-float">31.13. Vector Floating-Point Instructions</a>) for
+floating-point instructions (Section <a href="#sec-vector-float"><em>31.13. Vector Floating-Point Instructions</em></a>) for
 floating-point operands with EEW=32 or EEW=64 (including widening
 instructions and conversions between FP32 and FP64). Vector
 single-width floating-point reductions (<a href="#sec-vector-float-reduce">31.14.3. Vector Single-Width Floating-Point Reduction Instructions</a>)
@@ -11123,20 +11123,20 @@ processed without stripmining using four vector register groups.
 </div>
 <div class="paragraph">
 <p>The V extension supports the vector configuration instructions
-(Section <a href="#sec-vector-config">31.6. Configuration-Setting Instructions (<code>vsetvli</code>/<code>vsetivli</code>/<code>vsetvl</code>)</a>).</p>
+(Section <a href="#sec-vector-config"><em>31.6. Configuration-Setting Instructions (<code>vsetvli</code>/<code>vsetivli</code>/<code>vsetvl</code>)</em></a>).</p>
 </div>
 <div class="paragraph">
 <p>The V extension supports all vector load and store instructions
-(Section <a href="#sec-vector-memory">31.7. Vector Loads and Stores</a>), except the V extension does not
+(Section <a href="#sec-vector-memory"><em>31.7. Vector Loads and Stores</em></a>), except the V extension does not
 support EEW=64 for index values when XLEN=32.</p>
 </div>
 <div class="paragraph">
 <p>The V extension supports all vector integer instructions (Section
-<a href="#sec-vector-integer">31.11. Vector Integer Arithmetic Instructions</a>).</p>
+<a href="#sec-vector-integer"><em>31.11. Vector Integer Arithmetic Instructions</em></a>).</p>
 </div>
 <div class="paragraph">
 <p>The V extension supports all vector fixed-point arithmetic
-instructions (<a href="#sec-vector-fixed-point">31.12. Vector Fixed-Point Arithmetic Instructions</a>).</p>
+instructions (<a href="#sec-vector-fixed-point"><em>31.12. Vector Fixed-Point Arithmetic Instructions</em></a>).</p>
 </div>
 <div class="paragraph">
 <p>The V extension supports all vector integer single-width and
@@ -11145,16 +11145,16 @@ widening reduction operations (Sections <a href="#sec-vector-integer-reduce">31.
 </div>
 <div class="paragraph">
 <p>The V extension supports all vector mask instructions (Section
-<a href="#sec-vector-mask">31.15. Vector Mask Instructions</a>).</p>
+<a href="#sec-vector-mask"><em>31.15. Vector Mask Instructions</em></a>).</p>
 </div>
 <div class="paragraph">
 <p>The V extension supports all vector permutation instructions (Section
-<a href="#sec-vector-permute">31.16. Vector Permutation Instructions</a>).</p>
+<a href="#sec-vector-permute"><em>31.16. Vector Permutation Instructions</em></a>).</p>
 </div>
 <div class="paragraph">
 <p>The V extension depends upon the F and D
 extensions, and implements all vector floating-point instructions
-(Section <a href="#sec-vector-float">31.13. Vector Floating-Point Instructions</a>) for floating-point operands with EEW=32
+(Section <a href="#sec-vector-float"><em>31.13. Vector Floating-Point Instructions</em></a>) for floating-point operands with EEW=32
 or EEW=64 (including widening instructions and conversions between
 FP32 and FP64). Vector single-width floating-point reductions
 (<a href="#sec-vector-float-reduce">31.14.3. Vector Single-Width Floating-Point Reduction Instructions</a>) for EEW=32 and EEW=64 are supported as
@@ -11198,7 +11198,7 @@ format.</p>
 <p>The Zvfh extension provides support for vectors of IEEE 754-2008
 binary16 values.
 When the Zvfh extension is implemented, all instructions in Sections
-<a href="#sec-vector-float">31.13. Vector Floating-Point Instructions</a>, <a href="#sec-vector-float-reduce">31.14.3. Vector Single-Width Floating-Point Reduction Instructions</a>,
+<a href="#sec-vector-float"><em>31.13. Vector Floating-Point Instructions</em></a>, <a href="#sec-vector-float-reduce">31.14.3. Vector Single-Width Floating-Point Reduction Instructions</a>,
 <a href="#sec-vector-float-reduce-widen">31.14.4. Vector Widening Floating-Point Reduction Instructions</a>, <a href="#sec-vector-float-move">31.13.16. Vector Floating-Point Move Instruction</a>,
 <a href="#sec-vfslide1up">31.16.3.4. Vector Floating-Point Slide1up Instruction</a>, and <a href="#sec-vfslide1down">31.16.3.6. Vector Floating-Point Slide1down Instruction</a>
 become defined when SEW=16.

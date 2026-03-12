@@ -673,11 +673,11 @@ except that:</p>
 <ul>
 <li>
 <p>If the encoding in <em>pte</em> is valid according to
-<a href="#ptenapot">Page table entry encodings when <em>pte</em>.N=1</a>, then instead of returning the original
+<a href="#ptenapot">Table 1</a>, then instead of returning the original
 value of <em>pte</em>, implicit reads of a NAPOT PTE return a copy
 of <em>pte</em> in which <em>pte</em>.<em>ppn</em>[<em>i</em>][<em>pte</em>.<em>napot_bits</em>-1:0] is replaced by
 <em>vpn</em>[<em>i</em>][<em>pte</em>.<em>napot_bits</em>-1:0]. If the encoding in <em>pte</em> is reserved according to
-<a href="#ptenapot">Page table entry encodings when <em>pte</em>.N=1</a>, then a page-fault exception must be raised.</p>
+<a href="#ptenapot">Table 1</a>, then a page-fault exception must be raised.</p>
 </li>
 <li>
 <p>Implicit reads of NAPOT page table entries may create

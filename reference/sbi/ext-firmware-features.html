@@ -640,7 +640,7 @@
 <div class="paragraph">
 <p>The Firmware Features extension enables supervisor-mode software to manage and
 control specific hardware capabilities or SBI implementation features.
-<a href="#table_fw_features_types">FWFT Feature Types</a> defines 32-bit identifiers for
+<a href="#table_fw_features_types">Table 1</a> defines 32-bit identifiers for
 the features which supervisor-mode software may request to set or get.</p>
 </div>
 <table id="table_fw_features_types" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -725,8 +725,8 @@ the features which supervisor-mode software may request to set or get.</p>
 </table>
 <div class="paragraph">
 <p>These features have some attributes that define their behavior and are described
-in <a href="#table_fw_features_attributes">FWFT Feature Attributes</a>. The attribute values are defined for each
-feature in <a href="#table_fw_features_attribute_values">FWFT Feature Attribute Values</a>.</p>
+in <a href="#table_fw_features_attributes">Table 2</a>. The attribute values are defined for each
+feature in <a href="#table_fw_features_attribute_values">Table 3</a>.</p>
 </div>
 <table id="table_fw_features_attributes" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 2. FWFT Feature Attributes</caption>
@@ -923,7 +923,7 @@ description. Upon system reset, global and local feature values are reset.</p>
 <p>A successful return from <code>sbi_fwft_set()</code> results in the requested
 firmware feature to be set according to the <code>value</code> and <code>flags</code> parameters for
 which per feature supported values are described in
-<a href="#table_fw_features_attribute_values">FWFT Feature Attribute Values</a> and flags in <a href="#table_fw_features_flags">FWFT Firmware Features Set Flags</a>.</p>
+<a href="#table_fw_features_attribute_values">Table 3</a> and flags in <a href="#table_fw_features_flags">Table 4</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -970,7 +970,7 @@ value.
 </table>
 <div class="paragraph">
 <p>In case of failure, <code>feature</code> value is not modified and the possible error codes
-returned in <code>sbiret.error</code> are shown in <a href="#table_fw_features_set_errors">FWFT Firmware Features Set Errors</a> below.</p>
+returned in <code>sbiret.error</code> are shown in <a href="#table_fw_features_set_errors">Table 5</a> below.</p>
 </div>
 <table id="table_fw_features_set_errors" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 5. FWFT Firmware Features Set Errors</caption>
@@ -1045,12 +1045,12 @@ switch if delegation choices are different between Host and Guest/VM.
 <div class="paragraph">
 <p>A successful return from <code>sbi_fwft_get()</code> results in the firmware
 feature configuration value to be returned in <code>sbiret.value</code>. Possible
-<code>sbiret.value</code> values are described in <a href="#table_fw_features_attribute_values">FWFT Feature Attribute Values</a> for each
+<code>sbiret.value</code> values are described in <a href="#table_fw_features_attribute_values">Table 3</a> for each
 feature ID.</p>
 </div>
 <div class="paragraph">
 <p>In case of failure, the content of <code>sbiret.value</code> is zero and the possible error
-codes returned in <code>sbiret.error</code> are shown in <a href="#table_fw_features_get_errors">FWFT Firmware Features Get Errors</a>.</p>
+codes returned in <code>sbiret.error</code> are shown in <a href="#table_fw_features_get_errors">Table 6</a>.</p>
 </div>
 <table id="table_fw_features_get_errors" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 6. FWFT Firmware Features Get Errors</caption>

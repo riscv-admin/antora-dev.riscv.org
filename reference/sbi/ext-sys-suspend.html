@@ -642,7 +642,7 @@
 function which allows the supervisor-mode software to request that the system
 transitions to a sleep state. Sleep states are identified with 32-bit wide
 identifiers (<code>sleep_type</code>). The possible values for the identifiers are shown
-in <a href="#table_susp_sleep_types">SUSP System Sleep Types</a>.</p>
+in <a href="#table_susp_sleep_types">Table 1</a>.</p>
 </div>
 <div class="paragraph">
 <p>The term "system" refers to the world-view of the supervisor software domain
@@ -705,11 +705,11 @@ by that of the extension.</p>
 </div>
 <div class="paragraph">
 <p>A return from a <code>sbi_system_suspend()</code> call implies an error and an error code
-from <a href="#table_susp_errors">SUSP System Suspend Errors</a> will be in <code>sbiret.error</code>. A successful suspend and
+from <a href="#table_susp_errors">Table 3</a> will be in <code>sbiret.error</code>. A successful suspend and
 wake up, results in the hart which initiated the suspend, resuming from the
 <code>STOPPED</code> state. To resume, the hart will jump to supervisor-mode, at the
 address specified by <code>resume_addr</code>, with the specific register values described
-in <a href="#table_susp_resume_state">SUSP System Resume Register State</a>.</p>
+in <a href="#table_susp_resume_state">Table 2</a>.</p>
 </div>
 <table id="table_susp_resume_state" class="tableblock frame-all grid-all" style="width: 80%;">
 <caption class="title">Table 2. SUSP System Resume Register State</caption>
@@ -783,7 +783,7 @@ similarly to the native case from the point of view of the supervisor software.<
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in
-<a href="#table_susp_errors">SUSP System Suspend Errors</a>.</p>
+<a href="#table_susp_errors">Table 3</a>.</p>
 </div>
 <table id="table_susp_errors" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 3. SUSP System Suspend Errors</caption>

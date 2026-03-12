@@ -649,7 +649,7 @@ instructions allows significantly greater code density.</p>
 </div>
 <div class="paragraph">
 <p>The compressed instruction encodings are mostly common across RV32C and
-RV64C, but as shown in <a href="#rvc-instr-table0">Instruction listing for RVC, Quadrant 0</a>, a few opcodes are used for
+RV64C, but as shown in <a href="#rvc-instr-table0">Figure 1</a>, a few opcodes are used for
 different purposes depending on base ISA. For example, the wider
 address-space RV64C variant requires additional opcodes to
 compress loads and stores of 64-bit integer values, while RV32C uses the
@@ -829,10 +829,10 @@ performance impact as doubling the instruction cache size. [<a href="../biblio/b
 <p></p>
 </div>
 <div class="paragraph">
-<p><a href="#rvc-form">Compressed 16-bit RVC instruction formats</a> shows the nine compressed instruction
+<p><a href="#rvc-form">Table 1</a> shows the nine compressed instruction
 formats. CR, CI, and CSS can use any of the 32 RVI registers, but <span id="norm:Zca_regs8">CIW,
 CL, CS, CA, and CB are limited to just 8 of them.
-<a href="#registers">Registers specified by the three-bit <em>rs1</em>′, <em>rs2</em>′, and <em>rd</em>′ fields of the CIW, CL, CS, CA, and CB formats.</a> lists these popular registers, which
+<a href="#registers">Table 2</a> lists these popular registers, which
 correspond to registers <code>x8</code> to <code>x15</code>.</span> Note that there is a separate
 version of load and store instructions that use the stack pointer as the
 base address register, since saving to and restoring from the stack are
@@ -1943,7 +1943,7 @@ macro-op fusion.</p>
 </table>
 </div>
 <div class="paragraph">
-<p><a href="#rvc-t-hints">RVC HINT instructions.</a> lists all RVC HINT code points. For RV32C, 78%
+<p><a href="#rvc-t-hints">Table 3</a> lists all RVC HINT code points. For RV32C, 78%
 of the HINT space is reserved for standard HINTs. The remainder of the HINT space is designated for custom HINTs;
 no standard HINTs will ever be defined in this subspace.</p>
 </div>
@@ -2023,7 +2023,7 @@ no standard HINTs will ever be defined in this subspace.</p>
 <div class="sect2">
 <h3 id="27-1-8-rvc-instruction-set-listings"><a class="anchor" href="#27-1-8-rvc-instruction-set-listings"></a>27.1.8. RVC Instruction Set Listings</h3>
 <div class="paragraph">
-<p><a href="#rvcopcodemap">RVC opcode map instructions.</a> shows a map of the major
+<p><a href="#rvcopcodemap">Table 4</a> shows a map of the major
 opcodes for RVC. Each row of the table corresponds to one quadrant of
 the encoding space. The last quadrant, which has the two
 least-significant bits set, corresponds to instructions wider than 16
@@ -2119,7 +2119,7 @@ RV64</p></td>
 </tbody>
 </table>
 <div class="paragraph">
-<p><a href="#rvc-instr-table0">Instruction listing for RVC, Quadrant 0</a>, <a href="#rvc-instr-table1">Instruction listing for RVC, Quadrant 1</a>, and <a href="#rvc-instr-table2">Instruction listing for RVC, Quadrant 2</a> list the RVC instructions.</p>
+<p><a href="#rvc-instr-table0">Figure 1</a>, <a href="#rvc-instr-table1">Figure 2</a>, and <a href="#rvc-instr-table2">Figure 3</a> list the RVC instructions.</p>
 </div>
 <div id="rvc-instr-table0" class="imageblock kroki">
 <div class="content">

@@ -434,7 +434,7 @@ handling.</p>
 <div class="sect2">
 <h3 id="2-1-1-machine-level-csrs"><a class="anchor" href="#2-1-1-machine-level-csrs"></a>2.1.1. Machine-level CSRs</h3>
 <div class="paragraph">
-<p><a href="#CSRs-M">Machine-level CSRs added or widened by the Advanced Interrupt Architecture.</a> lists both the CSRs added for machine
+<p><a href="#CSRs-M">Table 1</a> lists both the CSRs added for machine
 level and existing machine-level CSRs whose size is changed by the
 Advanced Interrupt Architecture. Existing CSRs <code>mie</code>, <code>mip</code>, and <code>mideleg</code> are widened to 64 bits to support a total of 64 interrupt causes.</p>
 </div>
@@ -443,7 +443,7 @@ Advanced Interrupt Architecture. Existing CSRs <code>mie</code>, <code>mip</code
 upper 32 bits of registers <code>mideleg</code>, <code>mie</code>, <code>mvien</code>, <code>mvip</code>, and <code>mip</code>. The Advanced Interrupt Architecture requires that these high-half CSRs exist for RV32, but the bits they access may all be merely read-only zeros.</p>
 </div>
 <div class="paragraph">
-<p>CSRs <code>miselect</code> and <code>mireg</code> provide a window for accessing multiple registers beyond the CSRs in <a href="#CSRs-M">Machine-level CSRs added or widened by the Advanced Interrupt Architecture.</a>. The value of <code>miselect</code> determines which
+<p>CSRs <code>miselect</code> and <code>mireg</code> provide a window for accessing multiple registers beyond the CSRs in <a href="#CSRs-M">Table 1</a>. The value of <code>miselect</code> determines which
 register is currently accessible through alias CSR <code>mireg</code>. <code>miselect</code> is a <strong>WARL</strong> register, and it must support a minimum range of values depending on the implemented features. When an IMSIC is not implemented, <code>miselect</code> must be able to hold at least any 6-bit value in the range 0 to 0<code>x3F</code>. When an IMSIC is implemented, <code>miselect</code> must be able to hold any 8-bit value in the range 0 to 0<code>xFF</code>.
 The Advanced Interrupt Architecture makes use
 of these subranges of values for <code>miselect</code>:</p>
@@ -632,7 +632,7 @@ instruction exception.</p>
 <div class="sect2">
 <h3 id="2-1-2-supervisor-level-csrs"><a class="anchor" href="#2-1-2-supervisor-level-csrs"></a>2.1.2. Supervisor-level CSRs</h3>
 <div class="paragraph">
-<p><a href="#CSRs-S">Supervisor-level CSRs added or widened by the Advanced Interrupt Architecture.</a> lists the supervisor-level CSRs that are
+<p><a href="#CSRs-S">Table 2</a> lists the supervisor-level CSRs that are
 added and existing CSRs that are widened to 64 bits, if the hart
 implements S-mode. The functions of these registers all match their
 machine-level counterparts.</p>
@@ -805,7 +805,7 @@ enabled for supervisor level, as specified in
 <h3 id="hypervisor-vs-csrs"><a class="anchor" href="#hypervisor-vs-csrs"></a>2.1.3. Hypervisor and VS CSRs</h3>
 <div class="paragraph">
 <p>If a hart implements the H extension,
-then the hypervisor and VS CSRs listed in <a href="#CSRs-hypervisor">Hypervisor and VS CSRs added or widened by the Advanced Interrupt Architecture. (Parameter HSXLEN is just another name for SXLEN for hypervisor-extended S-mode).</a> are also either added or widened to 64 bits.</p>
+then the hypervisor and VS CSRs listed in <a href="#CSRs-hypervisor">Table 3</a> are also either added or widened to 64 bits.</p>
 </div>
 <div class="paragraph">
 <p>The new hypervisor CSRs in the table (<code>hvien</code>, <code>hvictl</code> , <code>hviprio1</code>, and <code>hviprio2</code>) augment <code>hvip</code> for injecting interrupts into VS level. The use of these registers is covered in <a href="#VSLevel">[VSLevel]</a> on interrupts for virtual machines.</p>
@@ -1101,7 +1101,7 @@ state.</p>
 <td class="content">
 <div class="paragraph">
 <p>This means in particular that, when the hart does not have an IMSIC, the
-following raise a virtual instruction exception as described in <a href="#CSRs-hypervisor">Hypervisor and VS CSRs added or widened by the Advanced Interrupt Architecture. (Parameter HSXLEN is just another name for SXLEN for hypervisor-extended S-mode).</a>, not an illegal instruction exception, despite that <code>mstateen0</code>.IMSIC is zero:</p>
+following raise a virtual instruction exception as described in <a href="#CSRs-hypervisor">Table 3</a>, not an illegal instruction exception, despite that <code>mstateen0</code>.IMSIC is zero:</p>
 </div>
 <div class="ulist">
 <ul>

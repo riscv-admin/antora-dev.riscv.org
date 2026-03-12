@@ -786,7 +786,7 @@ matching the monitoring event as the requests go past the monitoring point.</p>
 </div>
 <div class="paragraph">
 <p>The <code>OP</code> field is used to instruct the controller to perform an operation
-listed in <a href="#BC_MON_OP">Bandwidth Usage Monitoring Operations (<code>OP</code>)</a>.</p>
+listed in <a href="#BC_MON_OP">Table 2</a>.</p>
 </div>
 <table id="BC_MON_OP" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 2. Bandwidth Usage Monitoring Operations (<code>OP</code>)</caption>
@@ -813,7 +813,7 @@ listed in <a href="#BC_MON_OP">Bandwidth Usage Monitoring Operations (<code>OP</
 <td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Configure the counter selected by <code>MCID</code> to count
                              the event selected by <code>EVT_ID</code>, <code>AT</code>, and <code>ATV</code>.
-                             The <code>EVT_ID</code> encodings are listed in <a href="#BC_EVT_ID">Bandwidth Monitoring Event ID (<code>EVT_ID</code>)</a>.</p></td>
+                             The <code>EVT_ID</code> encodings are listed in <a href="#BC_EVT_ID">Table 3</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>READ_COUNTER</code></p></td>
@@ -916,7 +916,7 @@ several actions that may not complete synchronously with the write. A write to
 the <code>bc_mon_ctl</code> register sets the read-only <code>BUSY</code> bit to 1, indicating that the
 controller is performing the requested operation. When the <code>BUSY</code> bit reads 0, the
 operation is complete, and the read-only <code>STATUS</code> field provides a status value
-(see <a href="#BC_MON_STS"><code>bc_mon_ctl.STATUS</code> Field Encodings</a> for details). Written values to the <code>BUSY</code> and the <code>STATUS</code>
+(see <a href="#BC_MON_STS">Table 4</a> for details). Written values to the <code>BUSY</code> and the <code>STATUS</code>
 fields are ignored. An implementation that can complete the operation
 synchronously with the write may hardwire the <code>BUSY</code> bit to 0. The state of the
 <code>BUSY</code> bit, when not hardwired to 0, shall only change in response to a write to
@@ -1068,7 +1068,7 @@ allocation per access-type, then the <code>AT</code> field is read-only zero.</p
 </div>
 <div class="paragraph">
 <p>The <code>OP</code> field instructs the bandwidth controller to perform an operation listed
-in <a href="#BC_ALLOC_OP">Bandwidth Allocation Operations (<code>OP</code>)</a>. The <code>bc_alloc_ctl</code> register is used in conjunction with the
+in <a href="#BC_ALLOC_OP">Table 5</a>. The <code>bc_alloc_ctl</code> register is used in conjunction with the
 <code>bc_bw_alloc</code> register to perform bandwidth allocation operations. If the
 requested operation uses the operands configured in <code>bc_bw_alloc</code>, software must
 first program the <code>bc_bw_alloc</code> register with the operands for the operation
@@ -1137,7 +1137,7 @@ several actions that may not complete synchronously with the write. A write to
 the <code>bc_alloc_ctl</code> sets the read-only <code>BUSY</code> bit to 1 indicating the controller
 is performing the requested operation. When the <code>BUSY</code> bit reads 0, the operation
 is complete, and the read-only <code>STATUS</code> field provides a status value (see
-<a href="#BC_ALLOC_STS"><code>bc_alloc_ctl.STATUS</code> Field Encodings</a> for  details). Written values to the <code>BUSY</code> and the <code>STATUS</code>
+<a href="#BC_ALLOC_STS">Table 6</a> for  details). Written values to the <code>BUSY</code> and the <code>STATUS</code>
 fields are ignored. An implementation that can complete the operation
 synchronously with the write may hardwire the <code>BUSY</code> bit to 0. The state of the
 <code>BUSY</code> bit, when not hardwired to 0, shall only change in response to a write to

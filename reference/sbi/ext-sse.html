@@ -665,7 +665,7 @@ each 16-bit range is encoded as follows:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The <a href="#table_sse_event_ids">SSE Event ID Space</a> below show the complete <code>event_id</code> space along
+<p>The <a href="#table_sse_event_ids">Table 1</a> below show the complete <code>event_id</code> space along
 with standard events based on the above encoding.</p>
 </div>
 <table id="table_sse_event_ids" class="tableblock frame-all grid-all" style="width: 95%;">
@@ -881,7 +881,7 @@ event upon completion.
 </table>
 </div>
 <div class="paragraph">
-<p>The <a href="#figure_sbi_sse_state_machine">SBI SSE State Machine</a> below shows the state transitions of a
+<p>The <a href="#figure_sbi_sse_state_machine">Figure 1</a> below shows the state transitions of a
 software event.</p>
 </div>
 <div id="figure_sbi_sse_state_machine" class="imageblock">
@@ -921,7 +921,7 @@ previous lower priority software event will be resumed.</p>
 <p>A software event can have various XLEN bits wide attributes associated to it
 where each event attribute is identified by a unique 32-bit unsigned integer
 called <code>attr_id</code>. A software event attribute has Read-Only or Read-Write
-access permissions. The <a href="#table_sse_event_attributes">SSE Event Attributes</a> below provides a list
+access permissions. The <a href="#table_sse_event_attributes">Table 2</a> below provides a list
 event attributes.</p>
 </div>
 <table id="table_sse_event_attributes" class="tableblock frame-all grid-all" style="width: 95%;">
@@ -1385,7 +1385,7 @@ at offset <code>(XLEN / 8) * (base_attr_id + i)</code></p>
 </div>
 <div class="paragraph">
 <p>In case of an error, the possible error codes are shown in the
-<a href="#table_sse_read_attrs_errors">SSE Event Attributes Read Errors</a> below:</p>
+<a href="#table_sse_read_attrs_errors">Table 3</a> below:</p>
 </div>
 <table id="table_sse_read_attrs_errors" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 3. SSE Event Attributes Read Errors</caption>
@@ -1477,7 +1477,7 @@ For global events, the event attributes are updated for all the harts.</p>
 </div>
 <div class="paragraph">
 <p>The possible error codes returned in <code>sbiret.error</code> are shown in
-<a href="#table_sse_write_attrs_errors">SSE Event Attributes Write Errors</a> below. In case of errors with attribute values,
+<a href="#table_sse_write_attrs_errors">Table 4</a> below. In case of errors with attribute values,
 the first error encountered (based on attributes ID order) is returned.</p>
 </div>
 <table id="table_sse_write_attrs_errors" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -1511,7 +1511,7 @@ the first error encountered (based on attributes ID order) is returned.</p>
                             - <code>attr_count</code> is zero<br>
                             - <code>event_id</code> is valid but one of the attribute
                             values violates the legal values described in
-                            <a href="#table_sse_event_attributes">SSE Event Attributes</a>.</p></td>
+                            <a href="#table_sse_event_attributes">Table 2</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SBI_ERR_DENIED</p></td>
@@ -1522,7 +1522,7 @@ the first error encountered (based on attributes ID order) is returned.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SBI_ERR_INVALID_STATE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>event_id</code> is valid but one of the attribute values
                             violates the state rules described in
-                            <a href="#table_sse_event_attributes">SSE Event Attributes</a>.</p></td>
+                            <a href="#table_sse_event_attributes">Table 2</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SBI_ERR_BAD_RANGE</p></td>
@@ -1587,7 +1587,7 @@ events.
 </div>
 <div class="paragraph">
 <p>Upon success, the event state moves from <code>UNUSED</code> to <code>REGISTERED</code>. In case
-of an error, possible error codes are listed in <a href="#table_sse_register_errors">SSE Event Register Errors</a>
+of an error, possible error codes are listed in <a href="#table_sse_register_errors">Table 5</a>
 below.</p>
 </div>
 <table id="table_sse_register_errors" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -1646,7 +1646,7 @@ For global events, the event is unregistered for all the harts.</p>
 </div>
 <div class="paragraph">
 <p>Upon success, the event state moves from <code>REGISTERED</code> to <code>UNUSED</code>. In case
-of an error, possible error codes are listed in <a href="#table_sse_unregister_errors">SSE Event Unregister Errors</a>
+of an error, possible error codes are listed in <a href="#table_sse_unregister_errors">Table 6</a>
 below.</p>
 </div>
 <table id="table_sse_unregister_errors" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -1704,7 +1704,7 @@ For global events, the event is enabled for all the harts.</p>
 </div>
 <div class="paragraph">
 <p>Upon success, the event state moves from <code>REGISTERED</code> to <code>ENABLED</code>. In case
-of an error, possible error codes are listed in <a href="#table_sse_enable_errors">SSE Event Enable Errors</a>
+of an error, possible error codes are listed in <a href="#table_sse_enable_errors">Table 7</a>
 below.</p>
 </div>
 <table id="table_sse_enable_errors" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -1762,7 +1762,7 @@ For global events, the event is disabled for all the harts.</p>
 </div>
 <div class="paragraph">
 <p>Upon success, the event state moves from <code>ENABLED</code> to <code>REGISTERED</code>. In case
-of an error, possible error codes are listed in <a href="#table_sse_disable_errors">SSE Event Disable Errors</a>
+of an error, possible error codes are listed in <a href="#table_sse_disable_errors">Table 8</a>
 below.</p>
 </div>
 <table id="table_sse_disable_errors" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -1821,7 +1821,7 @@ highest priority event in <code>RUNNING</code> state to:</p>
 <ul>
 <li>
 <p><code>REGISTERED</code> if the event is configured as one-shot (see the <code>CONFIG</code>
-attribute in <a href="#table_sse_event_attributes">SSE Event Attributes</a>.)</p>
+attribute in <a href="#table_sse_event_attributes">Table 2</a>.)</p>
 </li>
 <li>
 <p><code>ENABLED</code> state otherwise</p>
@@ -1851,7 +1851,7 @@ For global events, the <code>hart_id</code> parameter is ignored.</p>
 </div>
 <div class="paragraph">
 <p>An event can only be injected if it is allowed by the event attribute as
-described in <a href="#table_sse_event_attributes">SSE Event Attributes</a>.</p>
+described in <a href="#table_sse_event_attributes">Table 2</a>.</p>
 </div>
 <div class="paragraph">
 <p>If an event is injected from within an SSE event handler, if it is ready to be
@@ -1872,7 +1872,7 @@ running completes.</p>
 </div>
 <div class="paragraph">
 <p>In case of an error, possible error codes are listed in
-<a href="#table_sse_inject_errors">SSE Event Inject Errors</a> below.</p>
+<a href="#table_sse_inject_errors">Table 9</a> below.</p>
 </div>
 <table id="table_sse_inject_errors" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 9. SSE Event Inject Errors</caption>
@@ -1929,7 +1929,7 @@ boot-time.</p>
 </div>
 <div class="paragraph">
 <p>In case of an error, possible error codes are listed in
-<a href="#table_sse_hard_unmask_errors">SSE Hart Unmask Errors</a> below.</p>
+<a href="#table_sse_hard_unmask_errors">Table 10</a> below.</p>
 </div>
 <table id="table_sse_hard_unmask_errors" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 10. SSE Hart Unmask Errors</caption>
@@ -1973,7 +1973,7 @@ from the SBI implementation.</p>
 </div>
 <div class="paragraph">
 <p>In case of an error, possible error codes are listed in
-<a href="#table_sse_hard_mask_errors">SSE Hart Mask Errors</a> below.</p>
+<a href="#table_sse_hard_mask_errors">Table 11</a> below.</p>
 </div>
 <table id="table_sse_hard_mask_errors" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 11. SSE Hart Mask Errors</caption>

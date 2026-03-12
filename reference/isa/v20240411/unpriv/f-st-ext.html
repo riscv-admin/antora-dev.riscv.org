@@ -625,7 +625,7 @@ with the IEEE 754-2008 arithmetic standard [<a href="../biblio/bibliography.html
 bits wide, and a floating-point control and status register <code>fcsr</code>,
 which contains the operating mode and exception status of the
 floating-point unit. This additional state is shown in
-<a href="#fprs">RISC-V standard F extension single-precision floating-point state</a>. We use the term FLEN to describe the width of
+<a href="#fprs">Table 1</a>. We use the term FLEN to describe the width of
 the floating-point registers in the RISC-V ISA, and FLEN=32 for the F
 single-precision floating-point extension. Most floating-point
 instructions operate on values in the floating-point register file.
@@ -827,7 +827,7 @@ preserve the contents of these bits.</p>
 <div class="paragraph">
 <p>Floating-point operations use either a static rounding mode encoded in
 the instruction, or a dynamic rounding mode held in <code>frm</code>. Rounding
-modes are encoded as shown in <a href="#rm">Rounding mode encoding.</a>. A value of 111 in the
+modes are encoded as shown in <a href="#rm">Table 2</a>. A value of 111 in the
 instruction&#8217;s <em>rm</em> field selects the dynamic rounding mode held in
 <code>frm</code>. The behavior of floating-point instructions that depend on
 rounding mode when executed with a reserved rounding mode is <em>reserved</em>, including both static reserved rounding modes (101-110) and dynamic reserved rounding modes (101-111). Some instructions, including widening conversions, have the <em>rm</em> field but are nevertheless mathematically unaffected by the rounding mode; software should set their <em>rm</em> field to
@@ -921,7 +921,7 @@ are compatible with the weakened spec.</p>
 <div class="paragraph">
 <p>The accrued exception flags indicate the exception conditions that have
 arisen on any floating-point arithmetic instruction since the field was
-last reset by software, as shown in <a href="#bitdef">Accrued exception flag encoding.</a>. The base
+last reset by software, as shown in <a href="#bitdef">Table 3</a>. The base
 RISC-V ISA does not support generating a trap on the setting of a
 floating-point exception flag.
 </p>
@@ -1106,7 +1106,7 @@ single-precision floating-point subtraction of <em>rs2</em> from <em>rs1</em>. F
 </div>
 <div class="paragraph">
 <p>The 2-bit floating-point format field <em>fmt</em> is encoded as shown in
-<a href="#fmt">Format field encoding</a>. It is set to <em>S</em> (00) for all instructions in the F extension.</p>
+<a href="#fmt">Table 4</a>. It is set to <em>S</em> (00) for all instructions in the F extension.</p>
 </div>
 <table id="fmt" class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 4. Format field encoding</caption>
@@ -1148,7 +1148,7 @@ single-precision floating-point subtraction of <em>rs2</em> from <em>rs1</em>. F
 <div class="paragraph">
 <p>All floating-point operations that perform rounding can select the
 rounding mode using the <em>rm</em> field with the encoding shown in
-<a href="#rm">Rounding mode encoding.</a>.</p>
+<a href="#rm">Table 2</a>.</p>
 </div>
 <div class="paragraph">
 <p>Floating-point minimum-number and maximum-number instructions FMIN.S and FMAX.S write, respectively, the smaller or larger of <em>rs1</em> and <em>rs2</em> to <em>rd</em>. For the purposes of these instructions only, the value
@@ -1283,7 +1283,7 @@ XLEN<span class="steminline"> <svg style="vertical-align: -0.09ex; overflow: vis
 destination register width. FCVT.L[U].S and FCVT.S.L[U] are RV64-only
 instructions. If the rounded result is not representable in the
 destination format, it is clipped to the nearest value and the invalid
-flag is set. <a href="#int_conv">Domains of float-to-integer conversions and behavior for invalid inputs</a> gives the range of valid inputs
+flag is set. <a href="#int_conv">Table 5</a> gives the range of valid inputs
 for FCVT.<em>int</em>.S and the behavior for invalid inputs.
 </p>
 </div>
@@ -1494,7 +1494,7 @@ but it is nevertheless an unfortunate incongruity in the ISA.</p>
 <p>The FCLASS.S instruction examines the value in floating-point register
 <em>rs1</em> and writes to integer register <em>rd</em> a 10-bit mask that indicates
 the class of the floating-point number. The format of the mask is
-described in <a href="#fclass">Format of result of FCLASS instruction.</a>. The corresponding bit in <em>rd</em> will
+described in <a href="#fclass">Table 6</a>. The corresponding bit in <em>rd</em> will
 be set if the property is true and clear otherwise. All other bits in
 <em>rd</em> are cleared. Note that exactly one bit in <em>rd</em> will be set.
 FCLASS.S does not set the floating-point exception flags.

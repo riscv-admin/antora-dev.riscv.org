@@ -671,8 +671,8 @@ supervisor-level CSR descriptions.</p>
 <h3 id="sstatus"><a class="anchor" href="#sstatus"></a>10.1.1. Supervisor Status Register (<code>sstatus</code>)</h3>
 <div class="paragraph">
 <p>The <code>sstatus</code> register is an SXLEN-bit read/write register formatted as
-shown in <a href="#sstatusreg-rv32">Supervisor-mode status register (<code>sstatus</code>) when SXLEN=32.</a> when SXLEN=32
-and <a href="#sstatusreg">Supervisor-mode status register (<code>sstatus</code>) when SXLEN=64.</a> when SXLEN=64. The <code>sstatus</code>
+shown in <a href="#sstatusreg-rv32">Figure 1</a> when SXLEN=32
+and <a href="#sstatusreg">Figure 2</a> when SXLEN=64. The <code>sstatus</code>
 register keeps track of the processor&#8217;s current operating state.</p>
 </div>
 <div class="imageblock kroki">
@@ -770,7 +770,7 @@ user-mode memory accesses reference the lowest 4 GiB of the address space.</p>
 <div class="paragraph">
 <p>The MXR (Make eXecutable Readable) bit modifies the privilege with which
 loads access virtual memory. When MXR=0, only loads from pages marked
-readable (R=1 in <a href="#sec:sv32pte">Sv32 page table entry.</a>) will succeed. When
+readable (R=1 in <a href="#sec:sv32pte">Figure 18</a>) will succeed. When
 MXR=1, loads from pages marked either readable or executable (R=1 or
 X=1) will succeed. MXR has no effect when page-based virtual memory is
 not in effect.</p>
@@ -779,7 +779,7 @@ not in effect.</p>
 <p>The SUM (permit Supervisor User Memory access) bit modifies the
 privilege with which S-mode loads and stores access virtual memory. When
 SUM=0, S-mode memory accesses to pages that are accessible by U-mode
-(U=1 in <a href="#sec:sv32pte">Sv32 page table entry.</a>) will fault. When SUM=1, these
+(U=1 in <a href="#sec:sv32pte">Figure 18</a>) will fault. When SUM=1, these
 accesses are permitted. SUM has no effect when page-based virtual memory
 is not in effect, nor when executing in U-mode. Note that S-mode can
 never execute instructions from user pages, regardless of the state of
@@ -914,13 +914,13 @@ Asynchronous interrupts set <code>pc</code> to BASE+4&#215;cause.<br>
 </table>
 <div class="paragraph">
 <p>The encoding of the MODE field is shown in
-<a href="#stvec-mode">Encoding of <code>stvec</code> MODE field.</a>. When MODE=Direct, all traps into
+<a href="#stvec-mode">Table 1</a>. When MODE=Direct, all traps into
 supervisor mode cause the <code>pc</code> to be set to the address in the BASE
 field. When MODE=Vectored, all synchronous exceptions into supervisor
 mode cause the <code>pc</code> to be set to the address in the BASE field, whereas
 interrupts cause the <code>pc</code> to be set to the address in the BASE field
 plus four times the interrupt cause number. For example, a
-supervisor-mode timer interrupt (see <a href="#scauses">Supervisor cause register (<code>scause</code>) values after trap. Synchronous exception priorities are given by Exception Priority.</a>)
+supervisor-mode timer interrupt (see <a href="#scauses">Table 2</a>)
 causes the <code>pc</code> to be set to BASE+<code>0x14</code>. Setting MODE=Vectored may
 impose a stricter alignment constraint on BASE.</p>
 </div>
@@ -980,8 +980,8 @@ become pending. Bits of <code>sie</code> that are not writable are read-only zer
 </div>
 <div class="paragraph">
 <p>The standard portions (bits 15:0) of registers <code>sip</code> and <code>sie</code> are
-formatted as shown in Figures <a href="#sipreg-standard">Standard portion (bits 15:0) of <code>sip</code>.</a>
-and <a href="#siereg-standard">Standard portion (bits 15:0) of <code>sie</code>.</a> respectively.</p>
+formatted as shown in Figures <a href="#sipreg-standard">Figure 6</a>
+and <a href="#siereg-standard">Figure 7</a> respectively.</p>
 </div>
 <div id="sipreg-standard" class="imageblock kroki">
 <div class="content">
@@ -1065,7 +1065,7 @@ of <code>sip</code>/<code>sie</code> effects a read or write of the homonymous f
 software, timer, and external interrupts, respectively. Since most
 platforms will choose not to make these interrupts delegatable from
 M-mode to S-mode, they are shown as 0 in
-<a href="#sipreg-standard">Standard portion (bits 15:0) of <code>sip</code>.</a> and <a href="#siereg-standard">Standard portion (bits 15:0) of <code>sie</code>.</a>.</p>
+<a href="#sipreg-standard">Figure 6</a> and <a href="#siereg-standard">Figure 7</a>.</p>
 </div>
 </td>
 </tr>
@@ -1153,7 +1153,7 @@ with a user register to provide an initial working register.</p>
 <h3 id="10-1-7-supervisor-exception-program-counter-sepc"><a class="anchor" href="#10-1-7-supervisor-exception-program-counter-sepc"></a>10.1.7. Supervisor Exception Program Counter (<code>sepc</code>)</h3>
 <div class="paragraph">
 <p><code>sepc</code> is an SXLEN-bit read/write register formatted as shown in
-<a href="#epcreg">Supervisor exception program counter register.</a>. The low bit of <code>sepc</code> (<code>sepc[0]</code>) is always zero. On implementations that support only IALIGN=32, the two low bits (<code>sepc[1:0]</code>) are always zero.</p>
+<a href="#epcreg">Figure 10</a>. The low bit of <code>sepc</code> (<code>sepc[0]</code>) is always zero. On implementations that support only IALIGN=32, the two low bits (<code>sepc[1:0]</code>) are always zero.</p>
 </div>
 <div class="paragraph">
 <p>If an implementation allows IALIGN to be either 16 or 32 (by changing
@@ -1186,7 +1186,7 @@ though it may be explicitly written by software.</p>
 <h3 id="scause"><a class="anchor" href="#scause"></a>10.1.8. Supervisor Cause Register (<code>scause</code>)</h3>
 <div class="paragraph">
 <p>The <code>scause</code> register is an SXLEN-bit read-write register formatted as
-shown in <a href="#scausereg">Supervisor Cause register <code>scause</code>.</a>. When a trap is taken into
+shown in <a href="#scausereg">Figure 11</a>. When a trap is taken into
 S-mode, <code>scause</code> is written with a code indicating the event that
 caused the trap. Otherwise, <code>scause</code> is never written by the
 implementation, though it may be explicitly written by software.</p>
@@ -1194,7 +1194,7 @@ implementation, though it may be explicitly written by software.</p>
 <div class="paragraph">
 <p>The Interrupt bit in the <code>scause</code> register is set if the trap was caused
 by an interrupt. The Exception Code field contains a code identifying
-the last exception or interrupt. <a href="#scauses">Supervisor cause register (<code>scause</code>) values after trap. Synchronous exception priorities are given by Exception Priority.</a> lists
+the last exception or interrupt. <a href="#scauses">Table 2</a> lists
 the possible exception codes for the current supervisor ISAs. The
 Exception Code is a <strong>WLRL</strong> field. It is required to hold the values 0–31
 (i.e., bits 4–0 must be implemented), but otherwise it is only
@@ -1328,7 +1328,7 @@ Hardware error<br>
 <h3 id="10-1-9-supervisor-trap-value-stval-register"><a class="anchor" href="#10-1-9-supervisor-trap-value-stval-register"></a>10.1.9. Supervisor Trap Value (<code>stval</code>) Register</h3>
 <div class="paragraph">
 <p>The <code>stval</code> register is an SXLEN-bit read-write register formatted as
-shown in <a href="#stvalreg">Supervisor Trap Value register.</a>. When a trap is taken into
+shown in <a href="#stvalreg">Figure 12</a>. When a trap is taken into
 S-mode, <code>stval</code> is written with exception-specific information to assist
 software in handling the trap. Otherwise, <code>stval</code> is never written by
 the implementation, though it may be explicitly written by software. The
@@ -1405,7 +1405,7 @@ of SXLEN and ILEN.</p>
 <h3 id="10-1-10-supervisor-environment-configuration-register-senvcfg"><a class="anchor" href="#10-1-10-supervisor-environment-configuration-register-senvcfg"></a>10.1.10. Supervisor Environment Configuration Register (<code>senvcfg</code>)</h3>
 <div class="paragraph">
 <p>The <code>senvcfg</code> CSR is an SXLEN-bit read/write register, formatted as
-shown in <a href="#senvcfg">Supervisor environment configuration register (<code>senvcfg</code>).</a>, that controls certain
+shown in <a href="#senvcfg">Figure 13</a>, that controls certain
 characteristics of the U-mode execution environment.</p>
 </div>
 <div id="senvcfg" class="imageblock kroki">
@@ -1418,7 +1418,7 @@ characteristics of the U-mode execution environment.</p>
 <p>If bit FIOM (Fence of I/O implies Memory) is set to one in <code>senvcfg</code>,
 FENCE instructions executed in U-mode are modified so the requirement to
 order accesses to device I/O implies also the requirement to order main
-memory accesses. <a href="#senvcfg-FIOM">Modified interpretation of FENCE predecessor and successor sets in U-mode when FIOM=1.</a> details the modified
+memory accesses. <a href="#senvcfg-FIOM">Table 3</a> details the modified
 interpretation of FENCE instruction bits PI, PO, SI, and SO in U-mode
 when FIOM=1.</p>
 </div>
@@ -1525,8 +1525,8 @@ ratification of that extension.</p>
 <h3 id="satp"><a class="anchor" href="#satp"></a>10.1.11. Supervisor Address Translation and Protection (<code>satp</code>) Register</h3>
 <div class="paragraph">
 <p>The <code>satp</code> register is an SXLEN-bit read/write register, formatted as
-shown in <a href="#rv32satp">Supervisor address translation and protection register <code>satp</code> when SXLEN=32.</a> for SXLEN=32 and
-<a href="#rv64satp">Supervisor address translation and protection register <code>satp</code> when SXLEN=64, for MODE values Bare, Sv39, Sv48, and Sv57.</a> for SXLEN=64, which controls
+shown in <a href="#rv32satp">Figure 14</a> for SXLEN=32 and
+<a href="#rv64satp">Figure 15</a> for SXLEN=64, which controls
 supervisor-mode address translation and protection. This register holds
 the physical page number (PPN) of the root page table, i.e., its
 supervisor physical address divided by 4 KiB; an address space identifier
@@ -1587,7 +1587,7 @@ cost of a context switch.</p>
 </table>
 </div>
 <div class="paragraph">
-<p><a href="#satp-mode">Encoding of <code>satp</code> MODE field.</a> shows the encodings of the MODE field when
+<p><a href="#satp-mode">Table 4</a> shows the encodings of the MODE field when
 SXLEN=32 and SXLEN=64. When MODE=Bare, supervisor virtual addresses are
 equal to supervisor physical addresses, and there is no additional
 memory protection beyond the physical memory protection scheme described
@@ -1625,12 +1625,12 @@ have already been allocated.</p>
 </div>
 <div class="paragraph">
 <p>When SXLEN=32, the only other valid setting for MODE is Sv32, a paged
-virtual-memory scheme described in <a href="#sec:sv32">10.3. Sv32: Page-Based 32-bit Virtual-Memory Systems</a>.</p>
+virtual-memory scheme described in <a href="#sec:sv32"><em>10.3. Sv32: Page-Based 32-bit Virtual-Memory Systems</em></a>.</p>
 </div>
 <div class="paragraph">
 <p>When SXLEN=64, three paged virtual-memory schemes are defined: Sv39,
-Sv48, and Sv57, described in <a href="#sec:sv39">10.4. Sv39: Page-Based 39-bit Virtual-Memory System</a>, <a href="#sec:sv48">10.5. Sv48: Page-Based 48-bit Virtual-Memory System</a>,
-and <a href="#sv57">10.6. Sv57: Page-Based 57-bit Virtual-Memory System</a>, respectively. One additional scheme, Sv64, will be
+Sv48, and Sv57, described in <a href="#sec:sv39"><em>10.4. Sv39: Page-Based 39-bit Virtual-Memory System</em></a>, <a href="#sec:sv48"><em>10.5. Sv48: Page-Based 48-bit Virtual-Memory System</em></a>,
+and <a href="#sv57"><em>10.6. Sv57: Page-Based 57-bit Virtual-Memory System</em></a>, respectively. One additional scheme, Sv64, will be
 defined in a later version of this specification. The remaining MODE
 settings are reserved for future use and may define different
 interpretations of the other fields in <code>satp</code>.</p>
@@ -1675,7 +1675,7 @@ and Sv57.</p>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Bare<br>
 Sv32</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No translation or protection.<br>
-Page-based 32-bit virtual addressing (see <a href="#sec:sv32">10.3. Sv32: Page-Based 32-bit Virtual-Memory Systems</a>).</p></td>
+Page-based 32-bit virtual addressing (see <a href="#sec:sv32"><em>10.3. Sv32: Page-Based 32-bit Virtual-Memory Systems</em></a>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" colspan="3"><p class="tableblock"><strong>SXLEN=64</strong></p></td>
@@ -1704,9 +1704,9 @@ Sv64<br>
 -</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No translation or protection.<br>
 <em>Reserved for standard use</em><br>
-Page-based 39-bit virtual addressing (see <a href="#sec:sv39">10.4. Sv39: Page-Based 39-bit Virtual-Memory System</a>).<br>
-Page-based 48-bit virtual addressing (see <a href="#sec:sv48">10.5. Sv48: Page-Based 48-bit Virtual-Memory System</a>).<br>
-Page-based 57-bit virtual addressing (see <a href="#sv57">10.6. Sv57: Page-Based 57-bit Virtual-Memory System</a>).<br>
+Page-based 39-bit virtual addressing (see <a href="#sec:sv39"><em>10.4. Sv39: Page-Based 39-bit Virtual-Memory System</em></a>).<br>
+Page-based 48-bit virtual addressing (see <a href="#sec:sv48"><em>10.5. Sv48: Page-Based 48-bit Virtual-Memory System</em></a>).<br>
+Page-based 57-bit virtual addressing (see <a href="#sv57"><em>10.6. Sv57: Page-Based 57-bit Virtual-Memory System</em></a>).<br>
 <em>Reserved for page-based 64-bit virtual addressing.</em><br>
 <em>Reserved for standard use</em><br>
 <em>Designated for custom use</em></p></td>
@@ -2147,7 +2147,7 @@ permit such behavior to be architecturally exposed.</p>
 <div class="paragraph">
 <p>Sv32 implementations support a 32-bit virtual address space, divided
 into pages. An Sv32 virtual address is partitioned into a virtual page
-number (VPN) and page offset, as shown in <a href="#sv32va">Sv32 virtual address.</a>.
+number (VPN) and page offset, as shown in <a href="#sv32va">Figure 16</a>.
 When Sv32 virtual memory mode is selected in the MODE field of the
 <code>satp</code> register, supervisor virtual addresses are translated into
 supervisor physical addresses via a two-level page table. The 20-bit VPN
@@ -2204,14 +2204,14 @@ of the root page table is stored in the <code>satp</code> register.</p>
 <div class="title">Figure 18. Sv32 page table entry.</div>
 </div>
 <div class="paragraph">
-<p>The PTE format for Sv32 is shown in <a href="#sec:sv32pte">Sv32 page table entry.</a>.
+<p>The PTE format for Sv32 is shown in <a href="#sec:sv32pte">Figure 18</a>.
 The V bit indicates whether the PTE is valid; if it is 0, all other bits
 in the PTE are don’t-cares and may be used freely by software. The
 permission bits, R, W, and X, indicate whether the page is readable,
 writable, and executable, respectively. When all three are zero, the PTE
 is a pointer to the next level of the page table; otherwise, it is a
 leaf PTE. Writable pages must also be marked readable; the contrary
-combinations are reserved for future use. <a href="#pteperm">Encoding of PTE R/W/X fields.</a>
+combinations are reserved for future use. <a href="#pteperm">Table 5</a>
 summarizes the encoding of the permission bits.</p>
 </div>
 <table id="pteperm" class="tableblock frame-all grid-all fit-content center">
@@ -2736,7 +2736,7 @@ even further.</p>
 <div class="paragraph">
 <p>Sv39 implementations support a 39-bit virtual address space, divided
 into pages. An Sv39 address is partitioned as shown in
-<a href="#sv39va">Sv39 virtual address.</a>. Instruction fetch addresses and load and
+<a href="#sv39va">Figure 19</a>. Instruction fetch addresses and load and
 store effective addresses, which are 64 bits, must have bits 63–39 all
 equal to bit 38, or else a page-fault exception will occur. The 27-bit
 VPN is translated into a 44-bit PPN via a three-level page table, while
@@ -2787,7 +2787,7 @@ always be aligned to a page boundary. The physical page number of the
 root page table is stored in the <code>satp</code> register&#8217;s PPN field.</p>
 </div>
 <div class="paragraph">
-<p>The PTE format for Sv39 is shown in <a href="#sv39pte">Sv39 page table entry.</a>.
+<p>The PTE format for Sv39 is shown in <a href="#sv39pte">Figure 21</a>.
 Bits 9-0 have the same meaning as for Sv32. Bit 63 is reserved for use
 by the <a href="svnapot.html#svnapot" class="xref page">"Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a> extension in <a href="svnapot.html#svnapot" class="xref page">"Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a>. If <a href="svnapot.html#svnapot" class="xref page">"Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a> is not
 implemented, bit 63 remains reserved and must be zeroed by software for
@@ -2866,7 +2866,7 @@ that assumes Sv39.</p>
 <div class="paragraph">
 <p>Sv48 implementations support a 48-bit virtual address space, divided
 into pages. An Sv48 address is partitioned as shown in
-<a href="#sv48va">Sv48 virtual address.</a>. Instruction fetch addresses and load and
+<a href="#sv48va">Figure 22</a>. Instruction fetch addresses and load and
 store effective addresses, which are 64 bits, must have bits 63–48 all
 equal to bit 47, or else a page-fault exception will occur. The 36-bit
 VPN is translated into a 44-bit PPN via a four-level page table, while
@@ -2891,7 +2891,7 @@ the 12-bit page offset is untranslated.</p>
 <div class="title">Figure 24. Sv48 page table entry.</div>
 </div>
 <div class="paragraph">
-<p>The PTE format for Sv48 is shown in <a href="#sv48pte">Sv48 page table entry.</a>.
+<p>The PTE format for Sv48 is shown in <a href="#sv48pte">Figure 24</a>.
 Bits 63-54 and 9-0 have the same meaning as for Sv39. Any level of PTE
 may be a leaf PTE, so in addition to pages, Sv48 supports <em>megapages</em>,
 <em>gigapages</em>, and <em>terapages</em>, each of which must be virtually and
@@ -2941,7 +2941,7 @@ that assumes Sv48.</p>
 <div class="paragraph">
 <p>Sv57 implementations support a 57-bit virtual address space, divided
 into pages. An Sv57 address is partitioned as shown in
-<a href="#sv57va">Sv57 virtual address.</a>. Instruction fetch addresses and load and
+<a href="#sv57va">Figure 25</a>. Instruction fetch addresses and load and
 store effective addresses, which are 64 bits, must have bits 63–57 all
 equal to bit 56, or else a page-fault exception will occur. The 45-bit
 VPN is translated into a 44-bit PPN via a five-level page table, while
@@ -2966,7 +2966,7 @@ the 12-bit page offset is untranslated.</p>
 <div class="title">Figure 27. Sv57 page table entry.</div>
 </div>
 <div class="paragraph">
-<p>The PTE format for Sv57 is shown in <a href="#sv57pte">Sv57 page table entry.</a>.
+<p>The PTE format for Sv57 is shown in <a href="#sv57pte">Figure 27</a>.
 Bits 63–54 and 9–0 have the same meaning as for Sv39. Any level of PTE
 may be a leaf PTE, so in addition to pages, Sv57 supports <em>megapages</em>,
 <em>gigapages</em>, <em>terapages</em>, and <em>petapages</em>, each of which must be

@@ -853,7 +853,7 @@ same as that of the <code>fctl.BE</code> field.</p>
 </div>
 <div class="paragraph">
 <p>The <code>SXL</code> field controls the supported paged virtual-memory schemes as defined
-in <a href="#IOSATP_MODE_ENC">Encodings of <code>iosatp.MODE</code> field</a>. If <code>fctl.GXL</code> is 1 then the <code>SXL</code> field must be 1;
+in <a href="#IOSATP_MODE_ENC">Table 2</a>. If <code>fctl.GXL</code> is 1 then the <code>SXL</code> field must be 1;
 otherwise the legal values for the <code>SXL</code> field are the same as those for the
 <code>fctl.GXL</code> field.</p>
 </div>
@@ -892,7 +892,7 @@ to select the second-stage address translation scheme.</p>
 <div class="paragraph">
 <p>The second-stage page table formats are as defined by the Privileged
 specification.  The <code>fctl.GXL</code> field controls the supported address-translation
-schemes for guest physical addresses as defined in <a href="#IOHGATP_MODE_ENC">Encodings of <code>iohgatp.MODE</code> field</a>.</p>
+schemes for guest physical addresses as defined in <a href="#IOHGATP_MODE_ENC">Table 1</a>.</p>
 </div>
 <div class="paragraph">
 <p>The <code>iohgatp</code> <code>MODE</code> field identifies the paged virtual-memory schemes and its
@@ -1074,7 +1074,7 @@ the controls for first-stage address translation and protection.</p>
 </div>
 <div class="paragraph">
 <p>The <code>iosatp.MODE</code> identifies the paged virtual-memory schemes and is encoded
-as defined in <a href="#IOSATP_MODE_ENC">Encodings of <code>iosatp.MODE</code> field</a>. The <code>iosatp.PPN</code> field holds the PPN of the
+as defined in <a href="#IOSATP_MODE_ENC">Table 2</a>. The <code>iosatp.PPN</code> field holds the PPN of the
 root page of a first-stage page table.</p>
 </div>
 <div class="paragraph">
@@ -1384,7 +1384,7 @@ or <code>DC.tc.PRPR</code> is 1</p>
 </li>
 <li>
 <p><code>DC.tc.PDTV</code> is 0 and <code>DC.fsc.iosatp.MODE</code> encoding is not a valid
-encoding as determined by <a href="#IOSATP_MODE_ENC">Encodings of <code>iosatp.MODE</code> field</a></p>
+encoding as determined by <a href="#IOSATP_MODE_ENC">Table 2</a></p>
 </li>
 <li>
 <p><code>DC.tc.PDTV</code> is 0 and <code>DC.tc.SXL</code> is 0 <code>DC.fsc.iosatp.MODE</code>
@@ -1419,7 +1419,7 @@ is not one of the supported modes</p>
 </li>
 <li>
 <p><code>DC.iohgatp.MODE</code> encoding is not a valid encoding as determined
-by <a href="#IOHGATP_MODE_ENC">Encodings of <code>iohgatp.MODE</code> field</a></p>
+by <a href="#IOHGATP_MODE_ENC">Table 1</a></p>
 </li>
 <li>
 <p><code>fctl.GXL</code> is 0 and <code>DC.iohgatp.MODE</code> is not a supported mode</p>
@@ -1604,7 +1604,7 @@ protection.</p>
 </div>
 <div class="paragraph">
 <p>The <code>PC.fsc.MODE</code> is used to determine the first-stage paged virtual-memory
-scheme and its encodings are as defined in <a href="#IOSATP_MODE_ENC">Encodings of <code>iosatp.MODE</code> field</a>. The <code>DC.tc.SXL</code>
+scheme and its encodings are as defined in <a href="#IOSATP_MODE_ENC">Table 2</a>. The <code>DC.tc.SXL</code>
 field controls the supported paged virtual-memory schemes. When <code>PC.fsc.MODE</code> is
 not <code>Bare</code>, the <code>PC.fsc.PPN</code> field holds the PPN of the root page of a
 first-stage page table.</p>
@@ -1651,7 +1651,7 @@ misconfigured" (cause = 267).</p>
 <p>If any bits or encoding that are reserved for future standard use are set</p>
 </li>
 <li>
-<p><code>PC.fsc.MODE</code> encoding is not valid as determined by <a href="#IOSATP_MODE_ENC">Encodings of <code>iosatp.MODE</code> field</a></p>
+<p><code>PC.fsc.MODE</code> encoding is not valid as determined by <a href="#IOSATP_MODE_ENC">Table 2</a></p>
 </li>
 <li>
 <p><code>DC.tc.SXL</code> is 0 and <code>PC.fsc.MODE</code> is not one of the supported modes</p>

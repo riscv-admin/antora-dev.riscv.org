@@ -1078,7 +1078,7 @@ reporting is disabled.</p>
 <p>The <code>ces</code>, <code>ueds</code>, and <code>uecs</code> are WARL fields used to enable signaling of CE,
 UED, and UEC respectively when they are logged (i.e. when <code>else</code> is 1). Enables
 for unsupported classes of errors may be hardwired to 0. The encodings of these
-fields are specified in <a href="#ERR_SIG_ENABLES">Error signaling enable field encodings</a>.</p>
+fields are specified in <a href="#ERR_SIG_ENABLES">Table 2</a>.</p>
 </div>
 <table id="ERR_SIG_ENABLES" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 2. Error signaling enable field encodings</caption>
@@ -1390,7 +1390,7 @@ the error record such as the address of the memory where corruption was detected
 <p>The address-or-info-type (<code>ait</code>) is a WARL field that indicates the type of
 information reported in the <code>addr_info_i</code> register. An error record that does
 not report information in this field may hardwire this field to 0. The encodings
-of the <code>ait</code> field are listed in <a href="#AIT_ENCODINGS">Address-or-information type encodings</a>.</p>
+of the <code>ait</code> field are listed in <a href="#AIT_ENCODINGS">Table 3</a>.</p>
 </div>
 <table id="AIT_ENCODINGS" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 3. Address-or-information type encodings</caption>
@@ -1456,7 +1456,7 @@ the <code>info_i</code> and/or the <code>suppl_info_i</code> registers.</p>
 </div>
 <div class="paragraph">
 <p>The transaction-type (<code>tt</code>) is a WARL field to report the type of transaction
-that detected the error and its encodings are listed in <a href="#TT_ENCODINGS">Transaction type encodings</a>. An
+that detected the error and its encodings are listed in <a href="#TT_ENCODINGS">Table 4</a>. An
 error record that does not report transaction types may hardwire this field
 to 0.</p>
 </div>
@@ -1569,7 +1569,7 @@ bit may be specified in a future standard extension.</p>
 <div class="paragraph">
 <p>The error-code (<code>ec</code>) is a WARL field that holds an error code that provides a
 description of the detected error. Standard <code>ec</code> encodings are defined in
-<a href="#EC_ENCODINGS">Error code encodings</a>. If an error record detects an error that does not correspond
+<a href="#EC_ENCODINGS">Table 5</a>. If an error record detects an error that does not correspond
 to a standard <code>ec</code> encoding then such errors may be reported using a custom
 encoding. The custom encodings have the most significant bit set to 1 to
 differentiate them from the standard encodings.</p>

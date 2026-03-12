@@ -613,7 +613,7 @@
 <p>In Sv39, Sv48, and Sv57, bits 62-61 of a leaf page table entry indicate
 the use of page-based memory types that override the PMA(s) for the
 associated memory pages. The encoding for the PBMT bits is captured in
-<a href="#pbmt">Encodings for PBMT field in Sv39, Sv48, and Sv57 PTEs.</a>.</p>
+<a href="#pbmt">Table 1</a>.</p>
 </div>
 <div class="paragraph">
 <p>The Svpbmt extension depends on Sv39.</p>
@@ -651,7 +651,7 @@ Non-cacheable, non-idempotent, strongly-ordered (I/O ordering), I/O<br>
 </table>
 <div class="paragraph">
 <p>Implementations may override additional PMAs not explicitly listed in
-<a href="#pbmt">Encodings for PBMT field in Sv39, Sv48, and Sv57 PTEs.</a>.
+<a href="#pbmt">Table 1</a>.
 For example, to be consistent with the characteristics of a typical I/O region,
 a misaligned memory access to a page with PBMT=IO might raise an exception,
 even if the underlying region were main memory and the same access would have

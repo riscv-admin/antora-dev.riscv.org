@@ -2600,7 +2600,7 @@ interrupt-pending bit.</p>
 </table>
 <div class="paragraph">
 <p>If a bit in <code>ipsr</code> is 1 then a write of 1 to the bit transitions the bit from 1&#8594;0.
-If the conditions to set that bit are still present (See <a href="#IPSR_FIELD">Interrupt pending status register fields</a>) or if
+If the conditions to set that bit are still present (See <a href="#IPSR_FIELD">Table 2</a>) or if
 they occur after the bit is cleared then that bit transitions again from 0&#8594;1.</p>
 </div>
 <div style="page-break-after: always;"></div>
@@ -2861,7 +2861,7 @@ transactions with a range of IDs to be counted by the counter.</p>
 <p>Indicates the event to count. A value of 0
                                  indicates no events are counted.<br>
                                  Encodings 1 to 16383 are reserved for standard
-                                 events defined in the <a href="#Event_list">Standard Events list</a>.<br>
+                                 events defined in the <a href="#Event_list">Table 5</a>.<br>
                                  Encodings 16384 to 32767 are for designated for
                                  custom use.<br>
                                  When <code>eventID</code> is changed, including to 0,

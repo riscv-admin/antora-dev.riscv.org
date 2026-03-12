@@ -1251,7 +1251,7 @@ initial working register.</p>
 <h3 id="12-1-7-supervisor-exception-program-counter-sepc-register"><a class="anchor" href="#12-1-7-supervisor-exception-program-counter-sepc-register"></a>12.1.7. Supervisor Exception Program Counter (<code>sepc</code>) Register</h3>
 <div class="paragraph">
 <p><code>sepc</code> is an SXLEN-bit read/write CSR formatted as shown in
-<a href="#epcreg">Supervisor exception program counter register.</a>. The low bit of <code>sepc</code> (<code>sepc[0]</code>) is always zero. On implementations that support only IALIGN=32, the two low bits (<code>sepc[1:0]</code>) are always zero.</p>
+<a href="#epcreg">Figure 10</a>. The low bit of <code>sepc</code> (<code>sepc[0]</code>) is always zero. On implementations that support only IALIGN=32, the two low bits (<code>sepc[1:0]</code>) are always zero.</p>
 </div>
 <div class="paragraph">
 <p>If an implementation allows IALIGN to be either 16 or 32 (by changing
@@ -1777,12 +1777,12 @@ have already been allocated.</p>
 </div>
 <div class="paragraph">
 <p>When SXLEN=32, the only other valid setting for MODE is Sv32, a paged
-virtual-memory scheme described in <a href="#sv32">12.3. Sv32: Page-Based 32-bit Virtual-Memory Systems</a>.</p>
+virtual-memory scheme described in <a href="#sv32"><em>12.3. Sv32: Page-Based 32-bit Virtual-Memory Systems</em></a>.</p>
 </div>
 <div class="paragraph">
 <p>When SXLEN=64, three paged virtual-memory schemes are defined: Sv39,
-Sv48, and Sv57, described in <a href="#sv39">12.4. Sv39: Page-Based 39-bit Virtual-Memory System</a>, <a href="#sv48">12.5. Sv48: Page-Based 48-bit Virtual-Memory System</a>,
-and <a href="#sv57">12.6. Sv57: Page-Based 57-bit Virtual-Memory System</a>, respectively. One additional scheme, Sv64, will be
+Sv48, and Sv57, described in <a href="#sv39"><em>12.4. Sv39: Page-Based 39-bit Virtual-Memory System</em></a>, <a href="#sv48"><em>12.5. Sv48: Page-Based 48-bit Virtual-Memory System</em></a>,
+and <a href="#sv57"><em>12.6. Sv57: Page-Based 57-bit Virtual-Memory System</em></a>, respectively. One additional scheme, Sv64, will be
 defined in a later version of this specification. The remaining MODE
 settings are reserved for future use and may define different
 interpretations of the other fields in <code>satp</code>.</p>
@@ -1827,7 +1827,7 @@ and Sv57.</p>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Bare<br>
 Sv32</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No translation or protection.<br>
-Page-based 32-bit virtual addressing (see <a href="#sv32">12.3. Sv32: Page-Based 32-bit Virtual-Memory Systems</a>).</p></td>
+Page-based 32-bit virtual addressing (see <a href="#sv32"><em>12.3. Sv32: Page-Based 32-bit Virtual-Memory Systems</em></a>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" colspan="3"><p class="tableblock"><strong>SXLEN=64</strong></p></td>
@@ -1856,9 +1856,9 @@ Sv64<br>
 -</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No translation or protection.<br>
 <em>Reserved for standard use</em><br>
-Page-based 39-bit virtual addressing (see <a href="#sv39">12.4. Sv39: Page-Based 39-bit Virtual-Memory System</a>).<br>
-Page-based 48-bit virtual addressing (see <a href="#sv48">12.5. Sv48: Page-Based 48-bit Virtual-Memory System</a>).<br>
-Page-based 57-bit virtual addressing (see <a href="#sv57">12.6. Sv57: Page-Based 57-bit Virtual-Memory System</a>).<br>
+Page-based 39-bit virtual addressing (see <a href="#sv39"><em>12.4. Sv39: Page-Based 39-bit Virtual-Memory System</em></a>).<br>
+Page-based 48-bit virtual addressing (see <a href="#sv48"><em>12.5. Sv48: Page-Based 48-bit Virtual-Memory System</em></a>).<br>
+Page-based 57-bit virtual addressing (see <a href="#sv57"><em>12.6. Sv57: Page-Based 57-bit Virtual-Memory System</em></a>).<br>
 <em>Reserved for page-based 64-bit virtual addressing.</em><br>
 <em>Reserved for standard use</em><br>
 <em>Designated for custom use</em></p></td>
@@ -2947,11 +2947,11 @@ root page table is stored in the <code>satp</code> register&#8217;s PPN field.</
 <div class="paragraph">
 <p>The PTE format for Sv39 is shown in <a href="#sv39pte">Figure 22</a>.
 Bits 9-0 have the same meaning as for Sv32. Bit 63 is reserved for use
-by the Svnapot extension in <a href="#svnapot">12.7. "Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a>. If Svnapot is not
+by the Svnapot extension in <a href="#svnapot"><em>12.7. "Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</em></a>. If Svnapot is not
 implemented, bit 63 remains reserved and must be zeroed by software for
 forward compatibility, or else a page-fault exception is raised. Bits
 62-61 are reserved for use by the Svpbmt extension in
-<a href="#svpbmt">12.8. "Svpbmt" Extension for Page-Based Memory Types, Version 1.0</a>. If Svpbmt is not implemented, bits 62-61 remain
+<a href="#svpbmt"><em>12.8. "Svpbmt" Extension for Page-Based Memory Types, Version 1.0</em></a>. If Svpbmt is not implemented, bits 62-61 remain
 reserved and must be zeroed by software for forward compatibility, or
 else a page-fault exception is raised. Bits 60-54 are reserved for
 future standard use and, until their use is defined by some standard
