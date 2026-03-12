@@ -459,7 +459,7 @@ appeared earlier in the source code.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">void *memcpy_rvv(void *restrict destination, const void *restrict source,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void *memcpy_rvv(void *restrict destination, const void *restrict source,
     size_t n) {
   unsigned char *dst = destination;
   const unsigned char *src = source;
@@ -488,7 +488,7 @@ appeared earlier in the source code.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">void saxpy_reference(size_t n, const float a, const float *x, float *y) {
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void saxpy_reference(size_t n, const float a, const float *x, float *y) {
   for (size_t i = 0; i &lt; n; ++i) {
     y[i] = a * x[i] + y[i];
   }
@@ -500,7 +500,7 @@ appeared earlier in the source code.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">void saxpy_rvv(size_t n, const float a, const float *x, float *y) {
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void saxpy_rvv(size_t n, const float a, const float *x, float *y) {
   for (size_t vl; n &gt; 0; n -= vl, x += vl, y += vl) {
     vl = __riscv_vsetvl_e32m8(n);
     // Load x[i..i+vl)
@@ -524,7 +524,7 @@ appeared earlier in the source code.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">// matrix multiplication
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">// matrix multiplication
 //  C[0..n)[0..m) = A[0..n)[0..p) x B[0..p)[0..m)
 void matmul_reference(double *a, double *b, double *c, int n, int m, int p) {
   for (int i = 0; i &lt; n; ++i)
@@ -547,7 +547,7 @@ followed by a single final accumulation.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">void matmul_rvv(double *a, double *b, double *c, int n, int m, int p) {
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void matmul_rvv(double *a, double *b, double *c, int n, int m, int p) {
   size_t vlmax = __riscv_vsetvlmax_e64m1();
   for (int i = 0; i &lt; n; ++i)
     for (int j = 0; j &lt; m; ++j) {
@@ -590,7 +590,7 @@ followed by a single final accumulation.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">char *strcpy_rvv(char *destination, const char *source) {
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">char *strcpy_rvv(char *destination, const char *source) {
   unsigned char *dst = (unsigned char *)destination;
   unsigned char *src = (unsigned char *)source;
   size_t vlmax = __riscv_vsetvlmax_e8m8();
@@ -637,7 +637,7 @@ divisor array is zero.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">void branch_ref(double *a, double *b, double *c, int n, double constant) {
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void branch_ref(double *a, double *b, double *c, int n, double constant) {
   for (int i = 0; i &lt; n; ++i) {
     c[i] = (b[i] != 0.0) ? a[i] / b[i] : constant;
   }
@@ -653,7 +653,7 @@ semantics of the conditional operator.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">void branch_rvv(double *a, double *b, double *c, int n, double constant) {
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void branch_rvv(double *a, double *b, double *c, int n, double constant) {
   // set vlmax and initialize variables
   size_t vlmax = __riscv_vsetvlmax_e64m1();
   // "Broadcast" the value of constant to all (vlmax) the elements in
@@ -696,7 +696,7 @@ pairs of elements took part in the dot-product.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">void reduce_reference(double *a, double *b, double *result_sum,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void reduce_reference(double *a, double *b, double *result_sum,
                       int *result_count, int n) {
   int count = 0;
   double s = 0.0;
@@ -721,7 +721,7 @@ several partial accumulations followed by a final accumulation.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">void reduce_rvv(double *a, double *b, double *result_sum, int *result_count,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void reduce_rvv(double *a, double *b, double *result_sum, int *result_count,
     int n) {
   int count = 0;
   // set vlmax and initialize variables

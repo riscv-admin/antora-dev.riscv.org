@@ -675,7 +675,7 @@ of the specification breaks backwards compatibility, a new GUID must be defined.
 <h3 id="guid"><a class="anchor" href="#guid"></a>GUID</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">#define RISCV_EFI_BOOT_PROTOCOL_GUID \
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">#define RISCV_EFI_BOOT_PROTOCOL_GUID \
     { 0xccd15fec, 0x6f73, 0x4eec, \
     { 0x83, 0x95, 0x3e, 0x69, 0xe4, 0xb9, 0x40, 0xbf } }</code></pre>
 </div>
@@ -685,7 +685,7 @@ of the specification breaks backwards compatibility, a new GUID must be defined.
 <h3 id="revision-number"><a class="anchor" href="#revision-number"></a>Revision Number</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">#define RISCV_EFI_BOOT_PROTOCOL_REVISION 0x00010000
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">#define RISCV_EFI_BOOT_PROTOCOL_REVISION 0x00010000
 #define RISCV_EFI_BOOT_PROTOCOL_LATEST_VERSION \
         RISCV_EFI_BOOT_PROTOCOL_REVISION</code></pre>
 </div>
@@ -695,7 +695,7 @@ of the specification breaks backwards compatibility, a new GUID must be defined.
 <h3 id="protocol-interface-structure"><a class="anchor" href="#protocol-interface-structure"></a>Protocol Interface Structure</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">typedef struct _RISCV_EFI_BOOT_PROTOCOL {
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">typedef struct _RISCV_EFI_BOOT_PROTOCOL {
     UINT64                Revision;
     EFI_GET_BOOT_HARTID   GetBootHartId;
 } RISCV_EFI_BOOT_PROTOCOL;</code></pre>
@@ -710,7 +710,7 @@ of the specification breaks backwards compatibility, a new GUID must be defined.
 <h5 id="prototype"><a class="anchor" href="#prototype"></a>Prototype</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">typedef EFI_STATUS
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">typedef EFI_STATUS
 (EFIAPI *EFI_GET_BOOT_HARTID) (
     IN RISCV_EFI_BOOT_PROTOCOL *This,
     OUT UINTN                  *BootHartId

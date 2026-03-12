@@ -1969,7 +1969,7 @@ latency does not depend on the (secret) data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let base = X(rs2);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let base = X(rs2);
 let index = EXTZ(X(rs1)[31..0]);
 
 X(rd) = base + index;</code></pre>
@@ -2034,7 +2034,7 @@ X(rd) = base + index;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">X(rd) = X(rs1) &amp; ~X(rs2);</code></pre>
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">X(rd) = X(rs1) &amp; ~X(rs2);</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -2102,7 +2102,7 @@ The index is read from the lower log2(XLEN) bits of <em>rs2</em>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let index = X(rs2) &amp; (XLEN - 1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let index = X(rs2) &amp; (XLEN - 1);
 X(rd) = X(rs1) &amp; ~(1 &lt;&lt; index)</code></pre>
 </div>
 </div>
@@ -2177,7 +2177,7 @@ For RV32, the encodings corresponding to shamt[5]=1 are reserved.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let index = shamt &amp; (XLEN - 1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let index = shamt &amp; (XLEN - 1);
 X(rd) = X(rs1) &amp; ~(1 &lt;&lt; index)</code></pre>
 </div>
 </div>
@@ -2241,7 +2241,7 @@ The index is read from the lower log2(XLEN) bits of <em>rs2</em>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let index = X(rs2) &amp; (XLEN - 1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let index = X(rs2) &amp; (XLEN - 1);
 X(rd) = (X(rs1) &gt;&gt; index) &amp; 1;</code></pre>
 </div>
 </div>
@@ -2316,7 +2316,7 @@ For RV32, the encodings corresponding to shamt[5]=1 are reserved.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let index = shamt &amp; (XLEN - 1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let index = shamt &amp; (XLEN - 1);
 X(rd) = (X(rs1) &gt;&gt; index) &amp; 1;</code></pre>
 </div>
 </div>
@@ -2380,7 +2380,7 @@ The index is read from the lower log2(XLEN) bits of <em>rs2</em>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let index = X(rs2) &amp; (XLEN - 1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let index = X(rs2) &amp; (XLEN - 1);
 X(rd) = X(rs1) ^ (1 &lt;&lt; index)</code></pre>
 </div>
 </div>
@@ -2455,7 +2455,7 @@ For RV32, the encodings corresponding to shamt[5]=1 are reserved.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let index = shamt &amp; (XLEN - 1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let index = shamt &amp; (XLEN - 1);
 X(rd) = X(rs1) ^ (1 &lt;&lt; index)</code></pre>
 </div>
 </div>
@@ -2519,7 +2519,7 @@ The index is read from the lower log2(XLEN) bits of <em>rs2</em>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let index = X(rs2) &amp; (XLEN - 1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let index = X(rs2) &amp; (XLEN - 1);
 X(rd) = X(rs1) | (1 &lt;&lt; index)</code></pre>
 </div>
 </div>
@@ -2594,7 +2594,7 @@ For RV32, the encodings corresponding to shamt[5]=1 are reserved.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let index = shamt &amp; (XLEN - 1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let index = shamt &amp; (XLEN - 1);
 X(rd) = X(rs1) | (1 &lt;&lt; index)</code></pre>
 </div>
 </div>
@@ -2657,7 +2657,7 @@ X(rd) = X(rs1) | (1 &lt;&lt; index)</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1_val = X(rs1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1_val = X(rs1);
 let rs2_val = X(rs2);
 let output : xlenbits = 0;
 
@@ -2734,7 +2734,7 @@ X[rd] = output</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1_val = X(rs1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1_val = X(rs1);
 let rs2_val = X(rs2);
 let output : xlenbits = 0;
 
@@ -2812,7 +2812,7 @@ product.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1_val = X(rs1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1_val = X(rs1);
 let rs2_val = X(rs2);
 let output : xlenbits = 0;
 
@@ -2902,7 +2902,7 @@ a <strong>clmul</strong>, then bit-reversing the output.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">val HighestSetBit : forall ('N : Int), 'N &gt;= 0. bits('N) -&gt; int
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">val HighestSetBit : forall ('N : Int), 'N &gt;= 0. bits('N) -&gt; int
 
 function HighestSetBit x = {
   foreach (i from (xlen - 1) to 0 by 1 in dec)
@@ -2974,7 +2974,7 @@ Accordingly, if the least-significant word is 0, the output is 32, and if the mo
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">val HighestSetBit32 : forall ('N : Int), 'N &gt;= 0. bits('N) -&gt; int
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">val HighestSetBit32 : forall ('N : Int), 'N &gt;= 0. bits('N) -&gt; int
 
 function HighestSetBit32 x = {
   foreach (i from 31 to 0 by 1 in dec)
@@ -3045,7 +3045,7 @@ X[rd] = 31 - HighestSetBit(rs);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let bitcount = 0;
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let bitcount = 0;
 let rs = X(rs);
 
 foreach (i from 0 to (xlen - 1) in inc)
@@ -3132,7 +3132,7 @@ The GCC builtin function <code>__builtin_popcountl (unsigned long x)</code> for 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let bitcount = 0;
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let bitcount = 0;
 let val = X(rs);
 
 foreach (i from 0 to 31 in inc)
@@ -3201,7 +3201,7 @@ Accordingly, if the input is 0, the output is XLEN, and if the least-significant
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">val LowestSetBit : forall ('N : Int), 'N &gt;= 0. bits('N) -&gt; int
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">val LowestSetBit : forall ('N : Int), 'N &gt;= 0. bits('N) -&gt; int
 
 function LowestSetBit x = {
   foreach (i from 0 to (xlen - 1) by 1 in dec)
@@ -3272,7 +3272,7 @@ X[rd] = LowestSetBit(rs);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">val LowestSetBit32 : forall ('N : Int), 'N &gt;= 0. bits('N) -&gt; int
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">val LowestSetBit32 : forall ('N : Int), 'N &gt;= 0. bits('N) -&gt; int
 
 function LowestSetBit32 x = {
   foreach (i from 0 to 31 by 1 in dec)
@@ -3343,7 +3343,7 @@ X[rd] = LowestSetBit32(rs);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1_val = X(rs1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1_val = X(rs1);
 let rs2_val = X(rs2);
 
 let result = if   rs1_val &lt;_s rs2_val
@@ -3431,7 +3431,7 @@ implementations that are so optimized can fuse them together.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1_val = X(rs1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1_val = X(rs1);
 let rs2_val = X(rs2);
 
 let result = if   rs1_val &lt;_u rs2_val
@@ -3500,7 +3500,7 @@ X(rd) = result;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1_val = X(rs1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1_val = X(rs1);
 let rs2_val = X(rs2);
 
 let result = if   rs1_val &lt;_s rs2_val
@@ -3569,7 +3569,7 @@ X(rd) = result;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1_val = X(rs1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1_val = X(rs1);
 let rs2_val = X(rs2);
 
 let result = if   rs1_val &lt;_u rs2_val
@@ -3639,7 +3639,7 @@ This sets the bits of each byte in the result <em>rd</em> to all zeros if no bit
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let input = X(rs);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let input = X(rs);
 let output : xlenbits = 0;
 
 foreach (i from 0 to (xlen - 8) by 8) {
@@ -3710,7 +3710,7 @@ X[rd] = output;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">X(rd) = X(rs1) | ~X(rs2);</code></pre>
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">X(rd) = X(rs1) | ~X(rs2);</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -3778,7 +3778,7 @@ X[rd] = output;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let lo_half : bits(xlen/2) = X(rs1)[xlen/2-1..0];
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let lo_half : bits(xlen/2) = X(rs1)[xlen/2-1..0];
 let hi_half : bits(xlen/2) = X(rs2)[xlen/2-1..0];
 X(rd) = EXTZ(hi_half @ lo_half);</code></pre>
 </div>
@@ -3861,7 +3861,7 @@ zero extending the rest of <em>rd</em>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let lo_half : bits(8) = X(rs1)[7..0];
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let lo_half : bits(8) = X(rs1)[7..0];
 let hi_half : bits(8) = X(rs2)[7..0];
 X(rd) = EXTZ(hi_half @ lo_half);</code></pre>
 </div>
@@ -3928,7 +3928,7 @@ This instruction only exists on RV64 based systems.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let lo_half : bits(16) = X(rs1)[15..0];
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let lo_half : bits(16) = X(rs1)[15..0];
 let hi_half : bits(16) = X(rs2)[15..0];
 X(rd) = EXTS(hi_half @ lo_half);</code></pre>
 </div>
@@ -4019,7 +4019,7 @@ extensions are implemented).
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let input = X(rs);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let input = X(rs);
 let output : xlenbits = 0;
 let j = xlen - 1;
 
@@ -4128,7 +4128,7 @@ XLEN-32 and XLEN-16, respectively.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">result : xlenbits = EXTZ(0b0);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">result : xlenbits = EXTZ(0b0);
 foreach (i from 0 to sizeof(xlen) by 8) {
     result[i+7..i] = reverse_bits_in_byte(X(rs1)[i+7..i]);
 };
@@ -4194,7 +4194,7 @@ X(rd) = result;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let shamt = if   xlen == 32
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let shamt = if   xlen == 32
             then X(rs2)[4..0]
             else X(rs2)[5..0];
 let result = (X(rs1) &lt;&lt; shamt) | (X(rs1) &gt;&gt; (xlen - shamt));
@@ -4267,7 +4267,7 @@ The resulting word value is sign-extended by copying bit 31 to all of the more-s
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1 = EXTZ(X(rs1)[31..0])
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1 = EXTZ(X(rs1)[31..0])
 let shamt = X(rs2)[4..0];
 let result = (rs1 &lt;&lt; shamt) | (rs1 &gt;&gt; (32 - shamt));
 X(rd) = EXTS(result[31..0]);</code></pre>
@@ -4337,7 +4337,7 @@ X(rd) = EXTS(result[31..0]);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let shamt = if   xlen == 32
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let shamt = if   xlen == 32
             then X(rs2)[4..0]
             else X(rs2)[5..0];
 let result = (X(rs1) &gt;&gt; shamt) | (X(rs1) &lt;&lt; (xlen - shamt));
@@ -4420,7 +4420,7 @@ For RV32, the encodings corresponding to shamt[5]=1 are reserved.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let shamt = if   xlen == 32
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let shamt = if   xlen == 32
             then shamt[4..0]
             else shamt[5..0];
 let result = (X(rs1) &gt;&gt; shamt) | (X(rs1) &lt;&lt; (xlen - shamt));
@@ -4496,7 +4496,7 @@ the more-significant bits.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1_data = EXTZ(X(rs1)[31..0];
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1_data = EXTZ(X(rs1)[31..0];
 let result = (rs1_data &gt;&gt; shamt) | (rs1_data &lt;&lt; (32 - shamt));
 X(rd) = EXTS(result[31..0]);</code></pre>
 </div>
@@ -4566,7 +4566,7 @@ The resultant word is sign-extended by copying bit 31 to all of the more-signifi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1 = EXTZ(X(rs1)[31..0])
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1 = EXTZ(X(rs1)[31..0])
 let shamt = X(rs2)[4..0];
 let result = (rs1 &gt;&gt; shamt) | (rs1 &lt;&lt; (32 - shamt));
 X(rd) = EXTS(result);</code></pre>
@@ -4636,7 +4636,7 @@ X(rd) = EXTS(result);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">X(rd) = EXTS(X(rs)[7..0]);</code></pre>
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">X(rd) = EXTS(X(rs)[7..0]);</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -4698,7 +4698,7 @@ X(rd) = EXTS(result);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">X(rd) = EXTS(X(rs)[15..0]);</code></pre>
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">X(rd) = EXTS(X(rs)[15..0]);</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -4760,7 +4760,7 @@ X(rd) = EXTS(result);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">X(rd) = X(rs2) + (X(rs1) &lt;&lt; 1);</code></pre>
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">X(rd) = X(rs2) + (X(rs1) &lt;&lt; 1);</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -4823,7 +4823,7 @@ The first addend is <em>rs2</em>. The second addend is the unsigned value formed
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let base = X(rs2);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let base = X(rs2);
 let index = EXTZ(X(rs1)[31..0]);
 
 X(rd) = base + (index &lt;&lt; 1);</code></pre>
@@ -4888,7 +4888,7 @@ X(rd) = base + (index &lt;&lt; 1);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">X(rd) = X(rs2) + (X(rs1) &lt;&lt; 2);</code></pre>
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">X(rd) = X(rs2) + (X(rs1) &lt;&lt; 2);</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -4952,7 +4952,7 @@ The second addend is the unsigned value formed by extracting the least-significa
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let base = X(rs2);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let base = X(rs2);
 let index = EXTZ(X(rs1)[31..0]);
 
 X(rd) = base + (index &lt;&lt; 2);</code></pre>
@@ -5017,7 +5017,7 @@ X(rd) = base + (index &lt;&lt; 2);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">X(rd) = X(rs2) + (X(rs1) &lt;&lt; 3);</code></pre>
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">X(rd) = X(rs2) + (X(rs1) &lt;&lt; 3);</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -5079,7 +5079,7 @@ X(rd) = base + (index &lt;&lt; 2);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let base = X(rs2);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let base = X(rs2);
 let index = EXTZ(X(rs1)[31..0]);
 
 X(rd) = base + (index &lt;&lt; 3);</code></pre>
@@ -5144,7 +5144,7 @@ X(rd) = base + (index &lt;&lt; 3);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">X(rd) = (EXTZ(X(rs)[31..0]) &lt;&lt; shamt);</code></pre>
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">X(rd) = (EXTZ(X(rs)[31..0]) &lt;&lt; shamt);</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -5225,7 +5225,7 @@ This instruction is available only on RV32.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">foreach (i from 0 to xlen/2-1) {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">foreach (i from 0 to xlen/2-1) {
   X(rd)[i] = X(rs1)[2*i]
   X(rd)[i+xlen/2] = X(rs1)[2*i+1]
 }</code></pre>
@@ -5308,7 +5308,7 @@ directly.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">X(rd) = ~(X(rs1) ^ X(rs2));</code></pre>
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">X(rd) = ~(X(rs1) ^ X(rs2));</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -5379,7 +5379,7 @@ or zero if the index into <em>rs2</em> is out of bounds.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">val xperm8_lookup : (bits(8), xlenbits) -&gt; bits(8)
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">val xperm8_lookup : (bits(8), xlenbits) -&gt; bits(8)
 function xperm8_lookup (idx, lut) = {
     (lut &gt;&gt; (idx @ 0b000))[7..0]
 }
@@ -5457,7 +5457,7 @@ or zero if the index into <em>rs2</em> is out of bounds.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">val xperm4_lookup : (bits(4), xlenbits) -&gt; bits(4)
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">val xperm4_lookup : (bits(4), xlenbits) -&gt; bits(4)
 function xperm4_lookup (idx, lut) = {
     (lut &gt;&gt; (idx @ 0b00))[3..0]
 }
@@ -5541,7 +5541,7 @@ function clause execute ( XPERM4 (rs2,rs1,rd)) = {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">X(rd) = EXTZ(X(rs)[15..0]);</code></pre>
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">X(rd) = EXTZ(X(rs)[15..0]);</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -5622,7 +5622,7 @@ This instruction is available only on RV32.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">foreach (i from 0 to xlen/2-1) {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">foreach (i from 0 to xlen/2-1) {
   X(rd)[2*i] = X(rs1)[i]
   X(rd)[2*i+1] = X(rs1)[i+xlen/2]
 }</code></pre>
@@ -5698,7 +5698,7 @@ directly.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">#include &lt;sys/asm.h&gt;
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">#include &lt;sys/asm.h&gt;
 
     .text
     .globl strlen
@@ -5771,7 +5771,7 @@ strlen:
 <h3 id="29-6-2-strcmp"><a class="anchor" href="#29-6-2-strcmp"></a>29.6.2. strcmp</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">#include &lt;sys/asm.h&gt;
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">#include &lt;sys/asm.h&gt;
 
   .text
   .globl strcmp

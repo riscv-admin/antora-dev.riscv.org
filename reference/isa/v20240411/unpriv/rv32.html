@@ -1165,7 +1165,7 @@ negative.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-text" data-lang="text">         add t0, t1, t2
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">         add t0, t1, t2
          slti t3, t2, 0
          slt t4, t0, t1
          bne t3, t4, overflow</code></pre>
@@ -2111,7 +2111,7 @@ to distinguish a semihosting EBREAK from a debugger inserted EBREAK.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    slli x0, x0, 0x1f   # Entry NOP
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    slli x0, x0, 0x1f   # Entry NOP
     ebreak              # Break to debugger
     srai x0, x0, 7      # NOP encoding the semihosting call number 7</code></pre>
 </div>

@@ -1454,7 +1454,7 @@ exception or a virtual-instruction exception based on the state of the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">// illegal-instruction exceptions
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal-instruction exceptions
 if (((priv_mode != M) &amp;&amp; (menvcfg.CBIE == 00)) ||
     ((priv_mode == U) &amp;&amp; (senvcfg.CBIE == 00)))
 {
@@ -1515,7 +1515,7 @@ or virtual-instruction exception based on the state of the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">// illegal-instruction exceptions
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal-instruction exceptions
 if (((priv_mode != M) &amp;&amp; !menvcfg.CBCFE) ||
     ((priv_mode == U) &amp;&amp; !senvcfg.CBCFE))
 {
@@ -1540,7 +1540,7 @@ virtual-instruction exception based on the state of the <code>xenvcfg.CBZE</code
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">// illegal-instruction exceptions
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">// illegal-instruction exceptions
 if (((priv_mode != M) &amp;&amp; !menvcfg.CBZE) ||
     ((priv_mode == U) &amp;&amp; !senvcfg.CBZE))
 {

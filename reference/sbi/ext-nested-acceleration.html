@@ -1480,7 +1480,7 @@ in the nested autoswap context.</p>
 <h3 id="16-1-5-function-probe-nested-acceleration-feature-fid-0"><a class="anchor" href="#16-1-5-function-probe-nested-acceleration-feature-fid-0"></a>16.1.5. Function: Probe nested acceleration feature (FID #0)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_nacl_probe_feature(uint32_t feature_id)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_nacl_probe_feature(uint32_t feature_id)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1499,7 +1499,7 @@ in <code>sbiret.value</code> if the given <code>feature_id</code> is not availab
 <h3 id="16-1-6-function-set-nested-acceleration-shared-memory-fid-1"><a class="anchor" href="#16-1-6-function-set-nested-acceleration-shared-memory-fid-1"></a>16.1.6. Function: Set nested acceleration shared memory (FID #1)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_nacl_set_shmem(unsigned long shmem_phys_lo,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_nacl_set_shmem(unsigned long shmem_phys_lo,
                                  unsigned long shmem_phys_hi,
                                  unsigned long flags)</code></pre>
 </div>
@@ -1568,7 +1568,7 @@ then the nested acceleration features are disabled.</p>
 <h3 id="16-1-7-function-synchronize-shared-memory-csrs-fid-2"><a class="anchor" href="#16-1-7-function-synchronize-shared-memory-csrs-fid-2"></a>16.1.7. Function: Synchronize shared memory CSRs (FID #2)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_nacl_sync_csr(unsigned long csr_num)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_nacl_sync_csr(unsigned long csr_num)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1631,7 +1631,7 @@ is synchronized as described in the <a href="#_feature_synchronize_csr_id_0">[_f
 <h3 id="16-1-8-function-synchronize-shared-memory-hfences-fid-3"><a class="anchor" href="#16-1-8-function-synchronize-shared-memory-hfences-fid-3"></a>16.1.8. Function: Synchronize shared memory HFENCEs (FID #3)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_nacl_sync_hfence(unsigned long entry_index)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_nacl_sync_hfence(unsigned long entry_index)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1690,7 +1690,7 @@ in the <a href="#_feature_synchronize_hfence_id_1">[_feature_synchronize_hfence_
 <h3 id="16-1-9-function-synchronize-shared-memory-and-emulate-sret-fid-4"><a class="anchor" href="#16-1-9-function-synchronize-shared-memory-and-emulate-sret-fid-4"></a>16.1.9. Function: Synchronize shared memory and emulate SRET (FID #4)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_nacl_sync_sret(void)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_nacl_sync_sret(void)</code></pre>
 </div>
 </div>
 <div class="paragraph">

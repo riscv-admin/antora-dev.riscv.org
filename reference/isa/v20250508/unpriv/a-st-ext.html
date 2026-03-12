@@ -956,7 +956,7 @@ those with both bits clear, but may result in lower performance.</p>
 <div id="cas" class="listingblock">
 <div class="title">Sample code for compare-and-swap function using LR/SC.</div>
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">        # a0 holds address of memory location
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">        # a0 holds address of memory location
         # a1 holds expected value
         # a2 holds desired value
         # a0 holds return value, 0 if successful, !0 otherwise
@@ -1265,7 +1265,7 @@ relinquishment.</p>
 <div id="critical" class="listingblock">
 <div class="title">Sample code for mutual exclusion. <code>a0</code> contains the address of the lock.</div>
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">        li           t0, 1        # Initialize swap value.
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">        li           t0, 1        # Initialize swap value.
     again:
         lw           t1, (a0)     # Check if lock is held.
         bnez         t1, again    # Retry if held.

@@ -427,7 +427,7 @@
 <h4 id="vector-single-width-floating-point-add-subtract"><a class="anchor" href="#vector-single-width-floating-point-add-subtract"></a>Vector Single-Width Floating-Point Add/Subtract Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vfadd_vv_f16mf4(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vfadd_vv_f16mf4(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
                                       size_t vl);
 vfloat16mf4_t __riscv_vfadd_vf_f16mf4(vfloat16mf4_t vs2, _Float16 rs1,
                                       size_t vl);
@@ -1072,7 +1072,7 @@ vfloat64m8_t __riscv_vfrsub_vf_f64m8_rm_m(vbool8_t vm, vfloat64m8_t vs2,
 <h4 id="vector-widening-floating-point-add-subtract"><a class="anchor" href="#vector-widening-floating-point-add-subtract"></a>Vector Widening Floating-Point Add/Subtract Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat32mf2_t __riscv_vfwadd_vv_f32mf2(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat32mf2_t __riscv_vfwadd_vv_f32mf2(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
                                        size_t vl);
 vfloat32mf2_t __riscv_vfwadd_vf_f32mf2(vfloat16mf4_t vs2, _Float16 rs1,
                                        size_t vl);
@@ -1699,7 +1699,7 @@ vfloat64m8_t __riscv_vfwsub_wf_f64m8_rm_m(vbool8_t vm, vfloat64m8_t vs2,
 <h4 id="vector-single-width-floating-point-multiply-divide"><a class="anchor" href="#vector-single-width-floating-point-multiply-divide"></a>Vector Single-Width Floating-Point Multiply/Divide Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vfmul_vv_f16mf4(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vfmul_vv_f16mf4(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
                                       size_t vl);
 vfloat16mf4_t __riscv_vfmul_vf_f16mf4(vfloat16mf4_t vs2, _Float16 rs1,
                                       size_t vl);
@@ -2344,7 +2344,7 @@ vfloat64m8_t __riscv_vfrdiv_vf_f64m8_rm_m(vbool8_t vm, vfloat64m8_t vs2,
 <h4 id="vector-widening-floating-point-multiply"><a class="anchor" href="#vector-widening-floating-point-multiply"></a>Vector Widening Floating-Point Multiply Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat32mf2_t __riscv_vfwmul_vv_f32mf2(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat32mf2_t __riscv_vfwmul_vv_f32mf2(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
                                        size_t vl);
 vfloat32mf2_t __riscv_vfwmul_vf_f32mf2(vfloat16mf4_t vs2, _Float16 rs1,
                                        size_t vl);
@@ -2508,7 +2508,7 @@ vfloat64m8_t __riscv_vfwmul_vf_f64m8_rm_m(vbool8_t vm, vfloat32m4_t vs2,
 <h4 id="vector-single-width-floating-point-fused-multiply-add"><a class="anchor" href="#vector-single-width-floating-point-fused-multiply-add"></a>Vector Single-Width Floating-Point Fused Multiply-Add Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vfmacc_vv_f16mf4(vfloat16mf4_t vd, vfloat16mf4_t vs1,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vfmacc_vv_f16mf4(vfloat16mf4_t vd, vfloat16mf4_t vs1,
                                        vfloat16mf4_t vs2, size_t vl);
 vfloat16mf4_t __riscv_vfmacc_vf_f16mf4(vfloat16mf4_t vd, _Float16 rs1,
                                        vfloat16mf4_t vs2, size_t vl);
@@ -5133,7 +5133,7 @@ vfloat64m8_t __riscv_vfnmsub_vf_f64m8_rm_m(vbool8_t vm, vfloat64m8_t vd,
 <h4 id="vector-widening-floating-point-fused-multiply-add"><a class="anchor" href="#vector-widening-floating-point-fused-multiply-add"></a>Vector Widening Floating-Point Fused Multiply-Add Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat32mf2_t __riscv_vfwmacc_vv_f32mf2(vfloat32mf2_t vd, vfloat16mf4_t vs1,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat32mf2_t __riscv_vfwmacc_vv_f32mf2(vfloat32mf2_t vd, vfloat16mf4_t vs1,
                                         vfloat16mf4_t vs2, size_t vl);
 vfloat32mf2_t __riscv_vfwmacc_vf_f32mf2(vfloat32mf2_t vd, _Float16 vs1,
                                         vfloat16mf4_t vs2, size_t vl);
@@ -5936,7 +5936,7 @@ vfloat64m8_t __riscv_vfwnmsac_vf_f64m8_rm_m(vbool8_t vm, vfloat64m8_t vd,
 <h4 id="vector-floating-point-square-root"><a class="anchor" href="#vector-floating-point-square-root"></a>Vector Floating-Point Square-Root Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vfsqrt_v_f16mf4(vfloat16mf4_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vfsqrt_v_f16mf4(vfloat16mf4_t vs2, size_t vl);
 vfloat16mf2_t __riscv_vfsqrt_v_f16mf2(vfloat16mf2_t vs2, size_t vl);
 vfloat16m1_t __riscv_vfsqrt_v_f16m1(vfloat16m1_t vs2, size_t vl);
 vfloat16m2_t __riscv_vfsqrt_v_f16m2(vfloat16m2_t vs2, size_t vl);
@@ -6044,7 +6044,7 @@ vfloat64m8_t __riscv_vfsqrt_v_f64m8_rm_m(vbool8_t vm, vfloat64m8_t vs2,
 <h4 id="vector-floating-point-reciprocal-square-root-estimate"><a class="anchor" href="#vector-floating-point-reciprocal-square-root-estimate"></a>Vector Floating-Point Reciprocal Square-Root Estimate Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vfrsqrt7_v_f16mf4(vfloat16mf4_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vfrsqrt7_v_f16mf4(vfloat16mf4_t vs2, size_t vl);
 vfloat16mf2_t __riscv_vfrsqrt7_v_f16mf2(vfloat16mf2_t vs2, size_t vl);
 vfloat16m1_t __riscv_vfrsqrt7_v_f16m1(vfloat16m1_t vs2, size_t vl);
 vfloat16m2_t __riscv_vfrsqrt7_v_f16m2(vfloat16m2_t vs2, size_t vl);
@@ -6098,7 +6098,7 @@ vfloat64m8_t __riscv_vfrsqrt7_v_f64m8_m(vbool8_t vm, vfloat64m8_t vs2,
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vfrec7_v_f16mf4(vfloat16mf4_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vfrec7_v_f16mf4(vfloat16mf4_t vs2, size_t vl);
 vfloat16mf2_t __riscv_vfrec7_v_f16mf2(vfloat16mf2_t vs2, size_t vl);
 vfloat16m1_t __riscv_vfrec7_v_f16m1(vfloat16m1_t vs2, size_t vl);
 vfloat16m2_t __riscv_vfrec7_v_f16m2(vfloat16m2_t vs2, size_t vl);
@@ -6206,7 +6206,7 @@ vfloat64m8_t __riscv_vfrec7_v_f64m8_rm_m(vbool8_t vm, vfloat64m8_t vs2,
 <h4 id="vector-floating-point-minmax"><a class="anchor" href="#vector-floating-point-minmax"></a>Vector Floating-Point MIN/MAX Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vfmin_vv_f16mf4(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vfmin_vv_f16mf4(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
                                       size_t vl);
 vfloat16mf4_t __riscv_vfmin_vf_f16mf4(vfloat16mf4_t vs2, _Float16 rs1,
                                       size_t vl);
@@ -6428,7 +6428,7 @@ vfloat64m8_t __riscv_vfmax_vf_f64m8_m(vbool8_t vm, vfloat64m8_t vs2, double rs1,
 <h4 id="vector-floating-point-sign-injection"><a class="anchor" href="#vector-floating-point-sign-injection"></a>Vector Floating-Point Sign-Injection Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vfsgnj_vv_f16mf4(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vfsgnj_vv_f16mf4(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
                                        size_t vl);
 vfloat16mf4_t __riscv_vfsgnj_vf_f16mf4(vfloat16mf4_t vs2, _Float16 rs1,
                                        size_t vl);
@@ -6767,7 +6767,7 @@ vfloat64m8_t __riscv_vfsgnjx_vf_f64m8_m(vbool8_t vm, vfloat64m8_t vs2,
 <h4 id="vector-floating-point-abs-neg-value"><a class="anchor" href="#vector-floating-point-abs-neg-value"></a>Vector Floating-Point Abs and Neg Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vfabs_v_f16mf4(vfloat16mf4_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vfabs_v_f16mf4(vfloat16mf4_t vs2, size_t vl);
 vfloat16mf2_t __riscv_vfabs_v_f16mf2(vfloat16mf2_t vs2, size_t vl);
 vfloat16m1_t __riscv_vfabs_v_f16m1(vfloat16m1_t vs2, size_t vl);
 vfloat16m2_t __riscv_vfabs_v_f16m2(vfloat16m2_t vs2, size_t vl);
@@ -6841,7 +6841,7 @@ vfloat64m8_t __riscv_vfneg_v_f64m8_m(vbool8_t vm, vfloat64m8_t vs2, size_t vl);<
 <h4 id="vector-floating-point-compare"><a class="anchor" href="#vector-floating-point-compare"></a>Vector Floating-Point Compare Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vbool64_t __riscv_vmfeq_vv_f16mf4_b64(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vbool64_t __riscv_vmfeq_vv_f16mf4_b64(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
                                       size_t vl);
 vbool64_t __riscv_vmfeq_vf_f16mf4_b64(vfloat16mf4_t vs2, _Float16 rs1,
                                       size_t vl);
@@ -7491,7 +7491,7 @@ vbool8_t __riscv_vmfge_vf_f64m8_b8_m(vbool8_t vm, vfloat64m8_t vs2, double rs1,
 <h4 id="vector-floating-point-classify"><a class="anchor" href="#vector-floating-point-classify"></a>Vector Floating-Point Classify Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vuint16mf4_t __riscv_vfclass_v_u16mf4(vfloat16mf4_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vuint16mf4_t __riscv_vfclass_v_u16mf4(vfloat16mf4_t vs2, size_t vl);
 vuint16mf2_t __riscv_vfclass_v_u16mf2(vfloat16mf2_t vs2, size_t vl);
 vuint16m1_t __riscv_vfclass_v_u16m1(vfloat16m1_t vs2, size_t vl);
 vuint16m2_t __riscv_vfclass_v_u16m2(vfloat16m2_t vs2, size_t vl);
@@ -7538,7 +7538,7 @@ vuint64m8_t __riscv_vfclass_v_u64m8_m(vbool8_t vm, vfloat64m8_t vs2, size_t vl);
 <h4 id="vector-floating-point-merge"><a class="anchor" href="#vector-floating-point-merge"></a>Vector Floating-Point Merge Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vmerge_vvm_f16mf4(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vmerge_vvm_f16mf4(vfloat16mf4_t vs2, vfloat16mf4_t vs1,
                                         vbool64_t v0, size_t vl);
 vfloat16mf4_t __riscv_vfmerge_vfm_f16mf4(vfloat16mf4_t vs2, _Float16 rs1,
                                          vbool64_t v0, size_t vl);
@@ -7605,7 +7605,7 @@ vfloat64m8_t __riscv_vfmerge_vfm_f64m8(vfloat64m8_t vs2, double rs1,
 <h4 id="vector-floating-point-move"><a class="anchor" href="#vector-floating-point-move"></a>Vector Floating-Point Move Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vmv_v_v_f16mf4(vfloat16mf4_t vs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vmv_v_v_f16mf4(vfloat16mf4_t vs1, size_t vl);
 vfloat16mf4_t __riscv_vfmv_v_f_f16mf4(_Float16 rs1, size_t vl);
 vfloat16mf2_t __riscv_vmv_v_v_f16mf2(vfloat16mf2_t vs1, size_t vl);
 vfloat16mf2_t __riscv_vfmv_v_f_f16mf2(_Float16 rs1, size_t vl);
@@ -7642,7 +7642,7 @@ vfloat64m8_t __riscv_vfmv_v_f_f64m8(double rs1, size_t vl);</code></pre>
 <h4 id="single-width-floating-pointinteger-type-convert"><a class="anchor" href="#single-width-floating-pointinteger-type-convert"></a>Single-Width Floating-Point/Integer Type-Convert Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint16mf4_t __riscv_vfcvt_x_f_v_i16mf4(vfloat16mf4_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint16mf4_t __riscv_vfcvt_x_f_v_i16mf4(vfloat16mf4_t vs2, size_t vl);
 vint16mf4_t __riscv_vfcvt_rtz_x_f_v_i16mf4(vfloat16mf4_t vs2, size_t vl);
 vint16mf2_t __riscv_vfcvt_x_f_v_i16mf2(vfloat16mf2_t vs2, size_t vl);
 vint16mf2_t __riscv_vfcvt_rtz_x_f_v_i16mf2(vfloat16mf2_t vs2, size_t vl);
@@ -8161,7 +8161,7 @@ vfloat64m8_t __riscv_vfcvt_f_xu_v_f64m8_rm_m(vbool8_t vm, vuint64m8_t vs2,
 <h4 id="widening-floating-pointinteger-type-convert"><a class="anchor" href="#widening-floating-pointinteger-type-convert"></a>Widening Floating-Point/Integer Type-Convert Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vfwcvt_f_x_v_f16mf4(vint8mf8_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vfwcvt_f_x_v_f16mf4(vint8mf8_t vs2, size_t vl);
 vfloat16mf2_t __riscv_vfwcvt_f_x_v_f16mf2(vint8mf4_t vs2, size_t vl);
 vfloat16m1_t __riscv_vfwcvt_f_x_v_f16m1(vint8mf2_t vs2, size_t vl);
 vfloat16m2_t __riscv_vfwcvt_f_x_v_f16m2(vint8m1_t vs2, size_t vl);
@@ -8467,7 +8467,7 @@ vuint64m8_t __riscv_vfwcvt_xu_f_v_u64m8_rm_m(vbool8_t vm, vfloat32m4_t vs2,
 <h4 id="narrowing-floating-pointinteger-type-convert"><a class="anchor" href="#narrowing-floating-pointinteger-type-convert"></a>Narrowing Floating-Point/Integer Type-Convert Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vfncvt_x_f_w_i8mf8(vfloat16mf4_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vfncvt_x_f_w_i8mf8(vfloat16mf4_t vs2, size_t vl);
 vint8mf8_t __riscv_vfncvt_rtz_x_f_w_i8mf8(vfloat16mf4_t vs2, size_t vl);
 vint8mf4_t __riscv_vfncvt_x_f_w_i8mf4(vfloat16mf2_t vs2, size_t vl);
 vint8mf4_t __riscv_vfncvt_rtz_x_f_w_i8mf4(vfloat16mf2_t vs2, size_t vl);

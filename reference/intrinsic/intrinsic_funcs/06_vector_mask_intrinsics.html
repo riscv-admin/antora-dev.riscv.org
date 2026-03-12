@@ -427,7 +427,7 @@
 <h4 id="vector-mask-register-logical"><a class="anchor" href="#vector-mask-register-logical"></a>Vector Mask-Register Logical</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vbool1_t __riscv_vmand_mm_b1(vbool1_t vs2, vbool1_t vs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vbool1_t __riscv_vmand_mm_b1(vbool1_t vs2, vbool1_t vs1, size_t vl);
 vbool2_t __riscv_vmand_mm_b2(vbool2_t vs2, vbool2_t vs1, size_t vl);
 vbool4_t __riscv_vmand_mm_b4(vbool4_t vs2, vbool4_t vs1, size_t vl);
 vbool8_t __riscv_vmand_mm_b8(vbool8_t vs2, vbool8_t vs1, size_t vl);
@@ -518,7 +518,7 @@ vbool64_t __riscv_vmnot_m_b64(vbool64_t vs, size_t vl);</code></pre>
 <h4 id="vector-count-population-in-mask-vcpopm"><a class="anchor" href="#vector-count-population-in-mask-vcpopm"></a>Vector count population in mask <code>vcpop.m</code></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">unsigned long __riscv_vcpop_m_b1(vbool1_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">unsigned long __riscv_vcpop_m_b1(vbool1_t vs2, size_t vl);
 unsigned long __riscv_vcpop_m_b2(vbool2_t vs2, size_t vl);
 unsigned long __riscv_vcpop_m_b4(vbool4_t vs2, size_t vl);
 unsigned long __riscv_vcpop_m_b8(vbool8_t vs2, size_t vl);
@@ -540,7 +540,7 @@ unsigned long __riscv_vcpop_m_b64_m(vbool64_t vm, vbool64_t vs2, size_t vl);</co
 <h4 id="vfirst-find-first-set-mask-bit"><a class="anchor" href="#vfirst-find-first-set-mask-bit"></a><code>vfirst</code> find-first-set mask bit</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">long __riscv_vfirst_m_b1(vbool1_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">long __riscv_vfirst_m_b1(vbool1_t vs2, size_t vl);
 long __riscv_vfirst_m_b2(vbool2_t vs2, size_t vl);
 long __riscv_vfirst_m_b4(vbool4_t vs2, size_t vl);
 long __riscv_vfirst_m_b8(vbool8_t vs2, size_t vl);
@@ -562,7 +562,7 @@ long __riscv_vfirst_m_b64_m(vbool64_t vm, vbool64_t vs2, size_t vl);</code></pre
 <h4 id="vmsbfm-set-before-first-mask-bit"><a class="anchor" href="#vmsbfm-set-before-first-mask-bit"></a><code>vmsbf.m</code> set-before-first mask bit</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vbool1_t __riscv_vmsbf_m_b1(vbool1_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vbool1_t __riscv_vmsbf_m_b1(vbool1_t vs2, size_t vl);
 vbool2_t __riscv_vmsbf_m_b2(vbool2_t vs2, size_t vl);
 vbool4_t __riscv_vmsbf_m_b4(vbool4_t vs2, size_t vl);
 vbool8_t __riscv_vmsbf_m_b8(vbool8_t vs2, size_t vl);
@@ -584,7 +584,7 @@ vbool64_t __riscv_vmsbf_m_b64_m(vbool64_t vm, vbool64_t vs2, size_t vl);</code><
 <h4 id="vmsifm-set-including-first-mask-bit"><a class="anchor" href="#vmsifm-set-including-first-mask-bit"></a><code>vmsif.m</code> set-including-first mask bit</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vbool1_t __riscv_vmsif_m_b1(vbool1_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vbool1_t __riscv_vmsif_m_b1(vbool1_t vs2, size_t vl);
 vbool2_t __riscv_vmsif_m_b2(vbool2_t vs2, size_t vl);
 vbool4_t __riscv_vmsif_m_b4(vbool4_t vs2, size_t vl);
 vbool8_t __riscv_vmsif_m_b8(vbool8_t vs2, size_t vl);
@@ -606,7 +606,7 @@ vbool64_t __riscv_vmsif_m_b64_m(vbool64_t vm, vbool64_t vs2, size_t vl);</code><
 <h4 id="vmsofm-set-only-first-mask-bit"><a class="anchor" href="#vmsofm-set-only-first-mask-bit"></a><code>vmsof.m</code> set-only-first mask bit</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vbool1_t __riscv_vmsof_m_b1(vbool1_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vbool1_t __riscv_vmsof_m_b1(vbool1_t vs2, size_t vl);
 vbool2_t __riscv_vmsof_m_b2(vbool2_t vs2, size_t vl);
 vbool4_t __riscv_vmsof_m_b4(vbool4_t vs2, size_t vl);
 vbool8_t __riscv_vmsof_m_b8(vbool8_t vs2, size_t vl);
@@ -628,7 +628,7 @@ vbool64_t __riscv_vmsof_m_b64_m(vbool64_t vm, vbool64_t vs2, size_t vl);</code><
 <h4 id="vector-iota"><a class="anchor" href="#vector-iota"></a>Vector Iota Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vuint8mf8_t __riscv_viota_m_u8mf8(vbool64_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vuint8mf8_t __riscv_viota_m_u8mf8(vbool64_t vs2, size_t vl);
 vuint8mf4_t __riscv_viota_m_u8mf4(vbool32_t vs2, size_t vl);
 vuint8mf2_t __riscv_viota_m_u8mf2(vbool16_t vs2, size_t vl);
 vuint8m1_t __riscv_viota_m_u8m1(vbool8_t vs2, size_t vl);
@@ -680,7 +680,7 @@ vuint64m8_t __riscv_viota_m_u64m8_m(vbool8_t vm, vbool8_t vs2, size_t vl);</code
 <h4 id="vector-element-index"><a class="anchor" href="#vector-element-index"></a>Vector Element Index Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vuint8mf8_t __riscv_vid_v_u8mf8(size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vuint8mf8_t __riscv_vid_v_u8mf8(size_t vl);
 vuint8mf4_t __riscv_vid_v_u8mf4(size_t vl);
 vuint8mf2_t __riscv_vid_v_u8mf2(size_t vl);
 vuint8m1_t __riscv_vid_v_u8m1(size_t vl);

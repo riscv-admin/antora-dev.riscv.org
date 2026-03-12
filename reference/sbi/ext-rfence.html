@@ -661,7 +661,7 @@ the below constraints on range parameters.</p>
 <h3 id="9-1-1-function-remote-fence-i-fid-0"><a class="anchor" href="#9-1-1-function-remote-fence-i-fid-0"></a>9.1.1. Function: Remote FENCE.I (FID #0)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_remote_fence_i(unsigned long hart_mask,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_remote_fence_i(unsigned long hart_mask,
                                  unsigned long hart_mask_base)</code></pre>
 </div>
 </div>
@@ -708,7 +708,7 @@ the below constraints on range parameters.</p>
 <h3 id="9-1-2-function-remote-sfence-vma-fid-1"><a class="anchor" href="#9-1-2-function-remote-sfence-vma-fid-1"></a>9.1.2. Function: Remote SFENCE.VMA (FID #1)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_remote_sfence_vma(unsigned long hart_mask,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_remote_sfence_vma(unsigned long hart_mask,
                                     unsigned long hart_mask_base,
                                     unsigned long start_addr,
                                     unsigned long size)</code></pre>
@@ -764,7 +764,7 @@ covering the range of virtual addresses between <code>start_addr</code> and
 <h3 id="9-1-3-function-remote-sfence-vma-with-asid-fid-2"><a class="anchor" href="#9-1-3-function-remote-sfence-vma-with-asid-fid-2"></a>9.1.3. Function: Remote SFENCE.VMA with ASID (FID #2)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_remote_sfence_vma_asid(unsigned long hart_mask,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_remote_sfence_vma_asid(unsigned long hart_mask,
                                          unsigned long hart_mask_base,
                                          unsigned long start_addr,
                                          unsigned long size,
@@ -821,7 +821,7 @@ covering the range of virtual addresses between <code>start_addr</code> and
 <h3 id="9-1-4-function-remote-hfence-gvma-with-vmid-fid-3"><a class="anchor" href="#9-1-4-function-remote-hfence-gvma-with-vmid-fid-3"></a>9.1.4. Function: Remote HFENCE.GVMA with VMID (FID #3)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_remote_hfence_gvma_vmid(unsigned long hart_mask,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_remote_hfence_gvma_vmid(unsigned long hart_mask,
                                           unsigned long hart_mask_base,
                                           unsigned long start_addr,
                                           unsigned long size,
@@ -885,7 +885,7 @@ for harts implementing hypervisor extension.</p>
 <h3 id="9-1-5-function-remote-hfence-gvma-fid-4"><a class="anchor" href="#9-1-5-function-remote-hfence-gvma-fid-4"></a>9.1.5. Function: Remote HFENCE.GVMA (FID #4)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_remote_hfence_gvma(unsigned long hart_mask,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_remote_hfence_gvma(unsigned long hart_mask,
                                      unsigned long hart_mask_base,
                                      unsigned long start_addr,
                                      unsigned long size)</code></pre>
@@ -948,7 +948,7 @@ harts implementing hypervisor extension.</p>
 <h3 id="9-1-6-function-remote-hfence-vvma-with-asid-fid-5"><a class="anchor" href="#9-1-6-function-remote-hfence-vvma-with-asid-fid-5"></a>9.1.6. Function: Remote HFENCE.VVMA with ASID (FID #5)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_remote_hfence_vvma_asid(unsigned long hart_mask,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_remote_hfence_vvma_asid(unsigned long hart_mask,
                                           unsigned long hart_mask_base,
                                           unsigned long start_addr,
                                           unsigned long size,
@@ -1013,7 +1013,7 @@ hypervisor extension.</p>
 <h3 id="9-1-7-function-remote-hfence-vvma-fid-6"><a class="anchor" href="#9-1-7-function-remote-hfence-vvma-fid-6"></a>9.1.7. Function: Remote HFENCE.VVMA (FID #6)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_remote_hfence_vvma(unsigned long hart_mask,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_remote_hfence_vvma(unsigned long hart_mask,
                                      unsigned long hart_mask_base,
                                      unsigned long start_addr,
                                      unsigned long size)</code></pre>

@@ -689,7 +689,7 @@ a hardware (or firmware) event.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">    event_idx[19:16] = type
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">    event_idx[19:16] = type
     event_idx[15:0] = code</code></pre>
 </div>
 </div>
@@ -897,7 +897,7 @@ cache events and each hardware cache event is identified by an unique
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">    event_idx.code[15:3] = cache_id
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">    event_idx.code[15:3] = cache_id
     event_idx.code[2:1] = op_id
     event_idx.code[0:0] = result_id</code></pre>
 </div>
@@ -1268,7 +1268,7 @@ configuration (or parameter) is unused and all non-zero values of
 <h3 id="12-1-6-function-get-number-of-counters-fid-0"><a class="anchor" href="#12-1-6-function-get-number-of-counters-fid-0"></a>12.1.6. Function: Get number of counters (FID #0)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_pmu_num_counters()</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_pmu_num_counters()</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1280,7 +1280,7 @@ configuration (or parameter) is unused and all non-zero values of
 <h3 id="12-1-7-function-get-details-of-a-counter-fid-1"><a class="anchor" href="#12-1-7-function-get-details-of-a-counter-fid-1"></a>12.1.7. Function: Get details of a counter (FID #1)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_pmu_counter_get_info(unsigned long counter_idx)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_pmu_counter_get_info(unsigned long counter_idx)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1292,7 +1292,7 @@ width of the counter, type of counter hardware/firmware, etc.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">    counter_info[11:0] = CSR (12bit CSR number)
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">    counter_info[11:0] = CSR (12bit CSR number)
     counter_info[17:12] = Width (One less than number of bits in CSR)
     counter_info[XLEN-2:18] = Reserved for future use
     counter_info[XLEN-1] = Type (0 = hardware and 1 = firmware)</code></pre>
@@ -1337,7 +1337,7 @@ should be ignored.</p>
 <h3 id="12-1-8-function-find-and-configure-a-matching-counter-fid-2"><a class="anchor" href="#12-1-8-function-find-and-configure-a-matching-counter-fid-2"></a>12.1.8. Function: Find and configure a matching counter (FID #2)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_pmu_counter_config_matching(unsigned long counter_idx_base,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_pmu_counter_config_matching(unsigned long counter_idx_base,
                                               unsigned long counter_idx_mask,
                                               unsigned long config_flags,
                                               unsigned long event_idx,
@@ -1507,7 +1507,7 @@ shown in the <a href="#table_pmu_counter_cfg_match_errors">Table 9</a> below.</p
 <h3 id="12-1-9-function-start-a-set-of-counters-fid-3"><a class="anchor" href="#12-1-9-function-start-a-set-of-counters-fid-3"></a>12.1.9. Function: Start a set of counters (FID #3)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_pmu_counter_start(unsigned long counter_idx_base,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_pmu_counter_start(unsigned long counter_idx_base,
                                     unsigned long counter_idx_mask,
                                     unsigned long start_flags,
                                     uint64_t initial_value)</code></pre>
@@ -1637,7 +1637,7 @@ mutually exclusive as the former is only valid for a single counter.
 <h3 id="12-1-10-function-stop-a-set-of-counters-fid-4"><a class="anchor" href="#12-1-10-function-stop-a-set-of-counters-fid-4"></a>12.1.10. Function: Stop a set of counters (FID #4)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_pmu_counter_stop(unsigned long counter_idx_base,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_pmu_counter_stop(unsigned long counter_idx_base,
                                    unsigned long counter_idx_mask,
                                    unsigned long stop_flags)</code></pre>
 </div>
@@ -1737,7 +1737,7 @@ shared memory.</p>
 <h3 id="12-1-11-function-read-a-firmware-counter-fid-5"><a class="anchor" href="#12-1-11-function-read-a-firmware-counter-fid-5"></a>12.1.11. Function: Read a firmware counter (FID #5)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_pmu_counter_fw_read(unsigned long counter_idx)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_pmu_counter_fw_read(unsigned long counter_idx)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1778,7 +1778,7 @@ counter value.</p>
 <h3 id="12-1-12-function-read-a-firmware-counter-high-bits-fid-6"><a class="anchor" href="#12-1-12-function-read-a-firmware-counter-high-bits-fid-6"></a>12.1.12. Function: Read a firmware counter high bits (FID #6)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_pmu_counter_fw_read_hi(unsigned long counter_idx)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_pmu_counter_fw_read_hi(unsigned long counter_idx)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1819,7 +1819,7 @@ for RV64 (or higher) systems.</p>
 <h3 id="12-1-13-function-set-pmu-snapshot-shared-memory-fid-7"><a class="anchor" href="#12-1-13-function-set-pmu-snapshot-shared-memory-fid-7"></a>12.1.13. Function: Set PMU snapshot shared memory (FID #7)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_pmu_snapshot_set_shmem(unsigned long shmem_phys_lo,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_pmu_snapshot_set_shmem(unsigned long shmem_phys_lo,
                                          unsigned long shmem_phys_hi,
                                          unsigned long flags)</code></pre>
 </div>
@@ -1962,7 +1962,7 @@ access this memory any other time.</p>
 <h3 id="12-1-14-function-get-pmu-event-info-fid-8"><a class="anchor" href="#12-1-14-function-get-pmu-event-info-fid-8"></a>12.1.14. Function: Get PMU Event info (FID #8)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_pmu_event_get_info(unsigned long shmem_phys_lo,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_pmu_event_get_info(unsigned long shmem_phys_lo,
                                      unsigned long shmem_phys_hi,
                                      unsigned long num_entries,
                                      unsigned long flags)</code></pre>

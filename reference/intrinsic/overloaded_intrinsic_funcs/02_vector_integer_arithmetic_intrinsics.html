@@ -427,7 +427,7 @@
 <h4 id="overloaded-vector-single-width-integer-add-and-subtract"><a class="anchor" href="#overloaded-vector-single-width-integer-add-and-subtract"></a>Vector Single-Width Integer Add and Subtract Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vadd(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vadd(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
 vint8mf8_t __riscv_vadd(vint8mf8_t vs2, int8_t rs1, size_t vl);
 vint8mf4_t __riscv_vadd(vint8mf4_t vs2, vint8mf4_t vs1, size_t vl);
 vint8mf4_t __riscv_vadd(vint8mf4_t vs2, int8_t rs1, size_t vl);
@@ -974,7 +974,7 @@ vuint64m8_t __riscv_vrsub(vbool8_t vm, vuint64m8_t vs2, uint64_t rs1,
 <h4 id="overloaded-vector-widening-integer-add-subtract"><a class="anchor" href="#overloaded-vector-widening-integer-add-subtract"></a>Vector Widening Integer Add/Subtract Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint16mf4_t __riscv_vwadd_vv(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint16mf4_t __riscv_vwadd_vv(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
 vint16mf4_t __riscv_vwadd_vx(vint8mf8_t vs2, int8_t rs1, size_t vl);
 vint16mf4_t __riscv_vwadd_wv(vint16mf4_t vs2, vint8mf8_t vs1, size_t vl);
 vint16mf4_t __riscv_vwadd_wx(vint16mf4_t vs2, int8_t rs1, size_t vl);
@@ -1690,7 +1690,7 @@ vuint64m8_t __riscv_vwsubu_wx(vbool8_t vm, vuint64m8_t vs2, uint32_t rs1,
 <h4 id="overloaded-vector-integer-widening"><a class="anchor" href="#overloaded-vector-integer-widening"></a>Vector Integer Widening Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint16mf4_t __riscv_vwcvt_x(vint8mf8_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint16mf4_t __riscv_vwcvt_x(vint8mf8_t vs2, size_t vl);
 vint16mf2_t __riscv_vwcvt_x(vint8mf4_t vs2, size_t vl);
 vint16m1_t __riscv_vwcvt_x(vint8mf2_t vs2, size_t vl);
 vint16m2_t __riscv_vwcvt_x(vint8m1_t vs2, size_t vl);
@@ -1758,7 +1758,7 @@ vuint64m8_t __riscv_vwcvtu_x(vbool8_t vm, vuint32m4_t vs2, size_t vl);</code></p
 <h4 id="overloaded-vector-integer-extension"><a class="anchor" href="#overloaded-vector-integer-extension"></a>Vector Integer Extension Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint16mf4_t __riscv_vsext_vf2(vint8mf8_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint16mf4_t __riscv_vsext_vf2(vint8mf8_t vs2, size_t vl);
 vint16mf2_t __riscv_vsext_vf2(vint8mf4_t vs2, size_t vl);
 vint16m1_t __riscv_vsext_vf2(vint8mf2_t vs2, size_t vl);
 vint16m2_t __riscv_vsext_vf2(vint8m1_t vs2, size_t vl);
@@ -1878,7 +1878,7 @@ vuint64m8_t __riscv_vzext_vf2(vbool8_t vm, vuint32m4_t vs2, size_t vl);</code></
 <h4 id="overloaded-vector-integer-neg"><a class="anchor" href="#overloaded-vector-integer-neg"></a>Vector Integer Neg Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vneg(vint8mf8_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vneg(vint8mf8_t vs2, size_t vl);
 vint8mf4_t __riscv_vneg(vint8mf4_t vs2, size_t vl);
 vint8mf2_t __riscv_vneg(vint8mf2_t vs2, size_t vl);
 vint8m1_t __riscv_vneg(vint8m1_t vs2, size_t vl);
@@ -1930,7 +1930,7 @@ vint64m8_t __riscv_vneg(vbool8_t vm, vint64m8_t vs2, size_t vl);</code></pre>
 <h4 id="overloaded-vector-integer-add-with-carry-subtract-with-borrow"><a class="anchor" href="#overloaded-vector-integer-add-with-carry-subtract-with-borrow"></a>Vector Integer Add-with-Carry / Subtract-with-Borrow Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vadc(vint8mf8_t vs2, vint8mf8_t vs1, vbool64_t v0,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vadc(vint8mf8_t vs2, vint8mf8_t vs1, vbool64_t v0,
                         size_t vl);
 vint8mf8_t __riscv_vadc(vint8mf8_t vs2, int8_t rs1, vbool64_t v0, size_t vl);
 vint8mf4_t __riscv_vadc(vint8mf4_t vs2, vint8mf4_t vs1, vbool32_t v0,
@@ -2609,7 +2609,7 @@ vbool8_t __riscv_vmsbc(vuint64m8_t vs2, uint64_t rs1, size_t vl);</code></pre>
 <h4 id="overloaded-vector-bitwise-binary-logical"><a class="anchor" href="#overloaded-vector-bitwise-binary-logical"></a>Vector Bitwise Binary Logical Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vand(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vand(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
 vint8mf8_t __riscv_vand(vint8mf8_t vs2, int8_t rs1, size_t vl);
 vint8mf4_t __riscv_vand(vint8mf4_t vs2, vint8mf4_t vs1, size_t vl);
 vint8mf4_t __riscv_vand(vint8mf4_t vs2, int8_t rs1, size_t vl);
@@ -3247,7 +3247,7 @@ vuint64m8_t __riscv_vxor(vbool8_t vm, vuint64m8_t vs2, uint64_t rs1, size_t vl);
 <h4 id="overloaded-vector-bitwise-unary-logical"><a class="anchor" href="#overloaded-vector-bitwise-unary-logical"></a>Vector Bitwise Unary Logical Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vnot(vint8mf8_t vs, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vnot(vint8mf8_t vs, size_t vl);
 vint8mf4_t __riscv_vnot(vint8mf4_t vs, size_t vl);
 vint8mf2_t __riscv_vnot(vint8mf2_t vs, size_t vl);
 vint8m1_t __riscv_vnot(vint8m1_t vs, size_t vl);
@@ -3343,7 +3343,7 @@ vuint64m8_t __riscv_vnot(vbool8_t vm, vuint64m8_t vs, size_t vl);</code></pre>
 <h4 id="overloaded-vector-single-width-bit-shift"><a class="anchor" href="#overloaded-vector-single-width-bit-shift"></a>Vector Single-Width Bit Shift Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vsll(vint8mf8_t vs2, vuint8mf8_t vs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vsll(vint8mf8_t vs2, vuint8mf8_t vs1, size_t vl);
 vint8mf8_t __riscv_vsll(vint8mf8_t vs2, size_t rs1, size_t vl);
 vint8mf4_t __riscv_vsll(vint8mf4_t vs2, vuint8mf4_t vs1, size_t vl);
 vint8mf4_t __riscv_vsll(vint8mf4_t vs2, size_t rs1, size_t vl);
@@ -3781,7 +3781,7 @@ vuint64m8_t __riscv_vsrl(vbool8_t vm, vuint64m8_t vs2, size_t rs1, size_t vl);</
 <h4 id="overloaded-vector-narrowing-integer-right-shift"><a class="anchor" href="#overloaded-vector-narrowing-integer-right-shift"></a>Vector Narrowing Integer Right Shift Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vnsra(vint16mf4_t vs2, vuint8mf8_t vs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vnsra(vint16mf4_t vs2, vuint8mf8_t vs1, size_t vl);
 vint8mf8_t __riscv_vnsra(vint16mf4_t vs2, size_t rs1, size_t vl);
 vint8mf4_t __riscv_vnsra(vint16mf2_t vs2, vuint8mf4_t vs1, size_t vl);
 vint8mf4_t __riscv_vnsra(vint16mf2_t vs2, size_t rs1, size_t vl);
@@ -3941,7 +3941,7 @@ vuint32m4_t __riscv_vnsrl(vbool8_t vm, vuint64m8_t vs2, size_t rs1, size_t vl);<
 <h4 id="overloaded-vector-integer-narrowing"><a class="anchor" href="#overloaded-vector-integer-narrowing"></a>Vector Integer Narrowing Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vncvt_x(vint16mf4_t vs2, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vncvt_x(vint16mf4_t vs2, size_t vl);
 vint8mf4_t __riscv_vncvt_x(vint16mf2_t vs2, size_t vl);
 vint8mf2_t __riscv_vncvt_x(vint16m1_t vs2, size_t vl);
 vint8m1_t __riscv_vncvt_x(vint16m2_t vs2, size_t vl);
@@ -4009,7 +4009,7 @@ vuint32m4_t __riscv_vncvt_x(vbool8_t vm, vuint64m8_t vs2, size_t vl);</code></pr
 <h4 id="overloaded-vector-integer-comparison"><a class="anchor" href="#overloaded-vector-integer-comparison"></a>Vector Integer Compare Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vbool64_t __riscv_vmseq(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vbool64_t __riscv_vmseq(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
 vbool64_t __riscv_vmseq(vint8mf8_t vs2, int8_t rs1, size_t vl);
 vbool32_t __riscv_vmseq(vint8mf4_t vs2, vint8mf4_t vs1, size_t vl);
 vbool32_t __riscv_vmseq(vint8mf4_t vs2, int8_t rs1, size_t vl);
@@ -5295,7 +5295,7 @@ vbool8_t __riscv_vmsgeu(vbool8_t vm, vuint64m8_t vs2, uint64_t rs1, size_t vl);<
 <h4 id="overloaded-vector-integer-minmax"><a class="anchor" href="#overloaded-vector-integer-minmax"></a>Vector Integer Min/Max Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vmin(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vmin(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
 vint8mf8_t __riscv_vmin(vint8mf8_t vs2, int8_t rs1, size_t vl);
 vint8mf4_t __riscv_vmin(vint8mf4_t vs2, vint8mf4_t vs1, size_t vl);
 vint8mf4_t __riscv_vmin(vint8mf4_t vs2, int8_t rs1, size_t vl);
@@ -5759,7 +5759,7 @@ vuint64m8_t __riscv_vmaxu(vbool8_t vm, vuint64m8_t vs2, uint64_t rs1,
 <h4 id="overloaded-vector-single-width-integer-multiply"><a class="anchor" href="#overloaded-vector-single-width-integer-multiply"></a>Vector Single-Width Integer Multiply Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vmul(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vmul(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
 vint8mf8_t __riscv_vmul(vint8mf8_t vs2, int8_t rs1, size_t vl);
 vint8mf4_t __riscv_vmul(vint8mf4_t vs2, vint8mf4_t vs1, size_t vl);
 vint8mf4_t __riscv_vmul(vint8mf4_t vs2, int8_t rs1, size_t vl);
@@ -6347,7 +6347,7 @@ vuint64m8_t __riscv_vmulhu(vbool8_t vm, vuint64m8_t vs2, uint64_t rs1,
 <h4 id="overloaded-vector-integer-divide"><a class="anchor" href="#overloaded-vector-integer-divide"></a>Vector Integer Divide Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vdiv(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vdiv(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
 vint8mf8_t __riscv_vdiv(vint8mf8_t vs2, int8_t rs1, size_t vl);
 vint8mf4_t __riscv_vdiv(vint8mf4_t vs2, vint8mf4_t vs1, size_t vl);
 vint8mf4_t __riscv_vdiv(vint8mf4_t vs2, int8_t rs1, size_t vl);
@@ -6811,7 +6811,7 @@ vuint64m8_t __riscv_vremu(vbool8_t vm, vuint64m8_t vs2, uint64_t rs1,
 <h4 id="overloaded-vector-widening-integer-multiply"><a class="anchor" href="#overloaded-vector-widening-integer-multiply"></a>Vector Widening Integer Multiply Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint16mf4_t __riscv_vwmul(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint16mf4_t __riscv_vwmul(vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
 vint16mf4_t __riscv_vwmul(vint8mf8_t vs2, int8_t rs1, size_t vl);
 vint16mf2_t __riscv_vwmul(vint8mf4_t vs2, vint8mf4_t vs1, size_t vl);
 vint16mf2_t __riscv_vwmul(vint8mf4_t vs2, int8_t rs1, size_t vl);
@@ -7066,7 +7066,7 @@ vuint64m8_t __riscv_vwmulu(vbool8_t vm, vuint32m4_t vs2, uint32_t rs1,
 <h4 id="overloaded-vector-single-width-integer-multiply-add"><a class="anchor" href="#overloaded-vector-single-width-integer-multiply-add"></a>Vector Single-Width Integer Multiply-Add Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vmacc(vint8mf8_t vd, vint8mf8_t vs1, vint8mf8_t vs2,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vmacc(vint8mf8_t vd, vint8mf8_t vs1, vint8mf8_t vs2,
                          size_t vl);
 vint8mf8_t __riscv_vmacc(vint8mf8_t vd, int8_t rs1, vint8mf8_t vs2, size_t vl);
 vint8mf4_t __riscv_vmacc(vint8mf4_t vd, vint8mf4_t vs1, vint8mf4_t vs2,
@@ -8406,7 +8406,7 @@ vuint64m8_t __riscv_vnmsub(vbool8_t vm, vuint64m8_t vd, uint64_t rs1,
 <h4 id="overloaded-vector-widening-integer-multiply-add"><a class="anchor" href="#overloaded-vector-widening-integer-multiply-add"></a>Vector Widening Integer Multiply-Add Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint16mf4_t __riscv_vwmacc(vint16mf4_t vd, vint8mf8_t vs1, vint8mf8_t vs2,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint16mf4_t __riscv_vwmacc(vint16mf4_t vd, vint8mf8_t vs1, vint8mf8_t vs2,
                            size_t vl);
 vint16mf4_t __riscv_vwmacc(vint16mf4_t vd, int8_t rs1, vint8mf8_t vs2,
                            size_t vl);
@@ -8830,7 +8830,7 @@ vuint64m8_t __riscv_vwmaccu(vbool8_t vm, vuint64m8_t vd, uint32_t rs1,
 <h4 id="overloaded-vector-integer-merge"><a class="anchor" href="#overloaded-vector-integer-merge"></a>Vector Integer Merge Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vmerge(vint8mf8_t vs2, vint8mf8_t vs1, vbool64_t v0,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vmerge(vint8mf8_t vs2, vint8mf8_t vs1, vbool64_t v0,
                           size_t vl);
 vint8mf8_t __riscv_vmerge(vint8mf8_t vs2, int8_t rs1, vbool64_t v0, size_t vl);
 vint8mf4_t __riscv_vmerge(vint8mf4_t vs2, vint8mf4_t vs1, vbool32_t v0,
@@ -8986,7 +8986,7 @@ vuint64m8_t __riscv_vmerge(vuint64m8_t vs2, uint64_t rs1, vbool8_t v0,
 <h4 id="overloaded-vector-integer-move"><a class="anchor" href="#overloaded-vector-integer-move"></a>Vector Integer Move Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vint8mf8_t __riscv_vmv_v(vint8mf8_t vs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vmv_v(vint8mf8_t vs1, size_t vl);
 vint8mf4_t __riscv_vmv_v(vint8mf4_t vs1, size_t vl);
 vint8mf2_t __riscv_vmv_v(vint8mf2_t vs1, size_t vl);
 vint8m1_t __riscv_vmv_v(vint8m1_t vs1, size_t vl);

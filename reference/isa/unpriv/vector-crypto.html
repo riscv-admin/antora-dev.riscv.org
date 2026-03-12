@@ -2898,7 +2898,7 @@ on the data being operated upon.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VAESDF(vs2, vd, suffix)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VAESDF(vs2, vd, suffix)) = {
   if(LMUL*VLEN &lt; EGW)  then {
     handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
@@ -3051,7 +3051,7 @@ on the data being operated upon.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VAESDM(vs2, vd, suffix)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VAESDM(vs2, vd, suffix)) = {
   if(LMUL*VLEN &lt; EGW)  then {
     handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
@@ -3204,7 +3204,7 @@ on the data being operated upon.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VAESEF(vs2, vd, suffix) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VAESEF(vs2, vd, suffix) = {
   if(LMUL*VLEN &lt; EGW)  then {
     handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
@@ -3356,7 +3356,7 @@ on the data being operated upon.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VAESEM(vs2, vd, suffix)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VAESEM(vs2, vd, suffix)) = {
   if(LMUL*VLEN &lt; EGW)  then {
     handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
@@ -3520,7 +3520,7 @@ behavior to be fully defined for all values of <code>uimm[4:0]</code> with minim
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-Sail" data-lang="Sail">function clause execute (VAESKF1(rnd, vd, vs2)) = {
+<pre class="highlightjs highlight"><code class="language-Sail hljs" data-lang="Sail">function clause execute (VAESKF1(rnd, vd, vs2)) = {
   if(LMUL*VLEN &lt; EGW)  then {
     handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
@@ -3695,7 +3695,7 @@ behavior to be fully defined for all values of <code>uimm[4:0]</code> with minim
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-Sail" data-lang="Sail">function clause execute (VAESKF2(rnd, vd, vs2)) = {
+<pre class="highlightjs highlight"><code class="language-Sail hljs" data-lang="Sail">function clause execute (VAESKF2(rnd, vd, vs2)) = {
   if(LMUL*VLEN &lt; EGW)  then {
     handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
@@ -3863,7 +3863,7 @@ This instruction only exists in the <code>.vs</code> form because the <code>.vv<
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VAESZ(vs2, vd) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VAESZ(vs2, vd) = {
   if(((vstart%EGS)&lt;&gt;0) | (LMUL*VLEN &lt; EGW))  then {
     handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
@@ -4049,7 +4049,7 @@ of the immediate value with the <code>vand.vi</code> instruction.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VANDN(vs2, vs1, vd, suffix)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VANDN(vs2, vs1, vd, suffix)) = {
   foreach (i from vstart to vl-1) {
     let op1 = match suffix {
       "vv" =&gt; get_velem(vs1, SEW, i),
@@ -4135,7 +4135,7 @@ of the immediate value with the <code>vand.vi</code> instruction.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VBREV(vs2)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VBREV(vs2)) = {
 
   foreach (i from vstart to vl-1) {
     let input = get_velem(vs2, SEW, i);
@@ -4239,7 +4239,7 @@ This byte-wise instruction is defined for all SEWs to eliminate the need to chan
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VBREV8(vs2)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VBREV8(vs2)) = {
 
   foreach (i from vstart to vl-1) {
     let input = get_velem(vs2, SEW, i);
@@ -4381,7 +4381,7 @@ vector carry-less multiplication instructions.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VCLMUL(vs2, vs1, vd, suffix)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VCLMUL(vs2, vs1, vd, suffix)) = {
 
   foreach (i from vstart to vl-1) {
     let op1 : bits (64) = if suffix =="vv" then get_velem(vs1,i)
@@ -4510,7 +4510,7 @@ significant 64 bits of the carry-less product.</span></p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VCLMULH(vs2, vs1, vd, suffix)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VCLMULH(vs2, vs1, vd, suffix)) = {
 
   foreach (i from vstart to vl-1) {
     let op1 : bits (64) = if suffix =="vv" then get_velem(vs1,i)
@@ -4610,7 +4610,7 @@ function clmulh(x, y, width) = {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VCLZ(vs2)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VCLZ(vs2)) = {
 
   foreach (i from vstart to vl-1) {
     let input = get_velem(vs2, SEW, i);
@@ -4693,7 +4693,7 @@ function clmulh(x, y, width) = {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VCPOP(vs2)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VCPOP(vs2)) = {
 
   foreach (i from vstart to vl-1) {
     let input = get_velem(vs2, SEW, i);
@@ -4781,7 +4781,7 @@ function clmulh(x, y, width) = {
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VCTZ(vs2)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VCTZ(vs2)) = {
 
   foreach (i from vstart to vl-1) {
     let input = get_velem(vs2, SEW, i);
@@ -4966,7 +4966,7 @@ a future extension might define a vector-scalar version of this instruction wher
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode">function clause execute (VGHSH(vs2, vs1, vd)) = {
+<pre class="highlightjs highlight"><code class="language-pseudocode hljs" data-lang="pseudocode">function clause execute (VGHSH(vs2, vs1, vd)) = {
   // operands are input with bits reversed in each byte
   if(LMUL*VLEN &lt; EGW)  then {
     handle_illegal();  // illegal-instruction exception
@@ -5180,7 +5180,7 @@ doesn&#8217;t use the add-multiply form of the <code>vghsh.vv</code> instruction
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode">function clause execute (VGMUL(vs2, vs1, vd)) = {
+<pre class="highlightjs highlight"><code class="language-pseudocode hljs" data-lang="pseudocode">function clause execute (VGMUL(vs2, vs1, vd)) = {
   // operands are input with bits reversed in each byte
   if(LMUL*VLEN &lt; EGW)  then {
     handle_illegal();  // illegal-instruction exception
@@ -5304,7 +5304,7 @@ doesn&#8217;t use the add-multiply form of the <code>vghsh.vv</code> instruction
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VREV8(vs2)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VREV8(vs2)) = {
   foreach (i from vstart to vl-1) {
     input = get_velem(vs2, SEW, i);
     let output : SEW = 0;
@@ -5469,7 +5469,7 @@ the rotate amount and using the immediate form of rotate right instruction (i.e.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VROL_VV(vs2, vs1, vd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VROL_VV(vs2, vs1, vd)) = {
   foreach (i from vstart to vl - 1) {
     set_velem(vd, EEW=SEW, i,
       get_velem(vs2, i) &lt;&lt;&lt; (get_velem(vs1, i) &amp; (SEW-1))
@@ -5635,7 +5635,7 @@ bits are ignored.</span></p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VROR_VV(vs2, vs1, vd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VROR_VV(vs2, vs1, vd)) = {
   foreach (i from vstart to vl - 1) {
     set_velem(vd, EEW=SEW, i,
       get_velem(vs2, i) &gt;&gt;&gt; (get_velem(vs1, i) &amp; (SEW-1))
@@ -5863,7 +5863,7 @@ that <code>vd</code>, <code>vs1</code> and <code>vs2</code> each are different r
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VSHA2c(vs2, vs1, vd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VSHA2c(vs2, vs1, vd)) = {
   if(LMUL*VLEN &lt; EGW)  then {
     handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
@@ -6136,7 +6136,7 @@ that <code>vd</code>, <code>vs1</code> and <code>vs2</code> each contain differe
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VSHA2ms(vs2, vs1, vd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VSHA2ms(vs2, vs1, vd)) = {
   // SEW32 = SHA-256
   // SEW64 =  SHA-512
   if(LMUL*VLEN &lt; EGW)  then {
@@ -6359,7 +6359,7 @@ that <code>vd</code> and <code>vs2</code> each are different registers.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VSM3C(rnds, vs2, vd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VSM3C(rnds, vs2, vd)) = {
   if(LMUL*VLEN &lt; EGW)  then {
     handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
@@ -6594,7 +6594,7 @@ values to be preserved for generating the next 8 words.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VSM3ME(vs2, vs1)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VSM3ME(vs2, vs1)) = {
   if(LMUL*VLEN &lt; EGW)  then {
     handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
@@ -6848,7 +6848,7 @@ Since the results are all limited to 8 bits, the modulo operation occurs for fre
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (vsm4k(uimm, vs2)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (vsm4k(uimm, vs2)) = {
   if(LMUL*VLEN &lt; EGW)  then {
     handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
@@ -7070,7 +7070,7 @@ previous four rounds.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-pseudocode" data-lang="pseudocode">function clause execute (VSM4R(vd, vs2)) = {
+<pre class="highlightjs highlight"><code class="language-pseudocode hljs" data-lang="pseudocode">function clause execute (VSM4R(vd, vs2)) = {
   if(LMUL*VLEN &lt; EGW)  then {
     handle_illegal();  // illegal-instruction exception
     RETIRE_FAIL
@@ -7281,7 +7281,7 @@ bits are ignored.</span></p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (VWSLL_VV(vs2, vs1, vd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (VWSLL_VV(vs2, vs1, vd)) = {
   foreach (i from vstart to vl - 1) {
     set_velem(vd, EEW=2*SEW, i,
       get_velem(vs2, i) &lt;&lt; (get_velem(vs1, i) &amp; ((2*SEW)-1))
@@ -9030,7 +9030,7 @@ is recommended reading in order to best understand the supporting code.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">/* Auxiliary function for performing GF multiplication */
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">/* Auxiliary function for performing GF multiplication */
 val xt2 : bits(8) -&gt; bits(8)
 function xt2(x) = {
   (x &lt;&lt; 1) ^ (if bit_to_bool(x[7]) then 0x1b else 0x00)

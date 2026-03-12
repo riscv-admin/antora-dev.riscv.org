@@ -427,7 +427,7 @@
 <h4 id="vector-unit-stride-segment-load"><a class="anchor" href="#vector-unit-stride-segment-load"></a>Vector Unit-Stride Segment Load Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4x2_t __riscv_vlseg2e16_v_f16mf4x2(const _Float16 *rs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4x2_t __riscv_vlseg2e16_v_f16mf4x2(const _Float16 *rs1, size_t vl);
 vfloat16mf4x3_t __riscv_vlseg3e16_v_f16mf4x3(const _Float16 *rs1, size_t vl);
 vfloat16mf4x4_t __riscv_vlseg4e16_v_f16mf4x4(const _Float16 *rs1, size_t vl);
 vfloat16mf4x5_t __riscv_vlseg5e16_v_f16mf4x5(const _Float16 *rs1, size_t vl);
@@ -2059,7 +2059,7 @@ vuint64m4x2_t __riscv_vlseg2e64ff_v_u64m4x2_m(vbool16_t vm, const uint64_t *rs1,
 <h4 id="vecrtor-unit-stride-segment-store"><a class="anchor" href="#vecrtor-unit-stride-segment-store"></a>Vector Unit-Stride Segment Store Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">void __riscv_vsseg2e16_v_f16mf4x2(_Float16 *rs1, vfloat16mf4x2_t vs3,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void __riscv_vsseg2e16_v_f16mf4x2(_Float16 *rs1, vfloat16mf4x2_t vs3,
                                   size_t vl);
 void __riscv_vsseg3e16_v_f16mf4x3(_Float16 *rs1, vfloat16mf4x3_t vs3,
                                   size_t vl);
@@ -2759,7 +2759,7 @@ void __riscv_vsseg2e64_v_u64m4x2_m(vbool16_t vm, uint64_t *rs1,
 <h4 id="vector-strided-segment-load"><a class="anchor" href="#vector-strided-segment-load"></a>Vector Strided Segment Load Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4x2_t __riscv_vlsseg2e16_v_f16mf4x2(const _Float16 *rs1,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4x2_t __riscv_vlsseg2e16_v_f16mf4x2(const _Float16 *rs1,
                                               ptrdiff_t rs2, size_t vl);
 vfloat16mf4x3_t __riscv_vlsseg3e16_v_f16mf4x3(const _Float16 *rs1,
                                               ptrdiff_t rs2, size_t vl);
@@ -3706,7 +3706,7 @@ vuint64m4x2_t __riscv_vlsseg2e64_v_u64m4x2_m(vbool16_t vm, const uint64_t *rs1,
 <h4 id="vector-strided-segment-store"><a class="anchor" href="#vector-strided-segment-store"></a>Vector Strided Segment Store Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">void __riscv_vssseg2e16_v_f16mf4x2(_Float16 *rs1, ptrdiff_t rs2,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void __riscv_vssseg2e16_v_f16mf4x2(_Float16 *rs1, ptrdiff_t rs2,
                                    vfloat16mf4x2_t vs3, size_t vl);
 void __riscv_vssseg3e16_v_f16mf4x3(_Float16 *rs1, ptrdiff_t rs2,
                                    vfloat16mf4x3_t vs3, size_t vl);
@@ -4618,7 +4618,7 @@ void __riscv_vssseg2e64_v_u64m4x2_m(vbool16_t vm, uint64_t *rs1, ptrdiff_t rs2,
 <h4 id="vector-indexed-segment-load"><a class="anchor" href="#vector-indexed-segment-load"></a>Vector Indexed Segment Load Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4x2_t __riscv_vloxseg2ei8_v_f16mf4x2(const _Float16 *rs1,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4x2_t __riscv_vloxseg2ei8_v_f16mf4x2(const _Float16 *rs1,
                                                vuint8mf8_t rs2, size_t vl);
 vfloat16mf4x3_t __riscv_vloxseg3ei8_v_f16mf4x3(const _Float16 *rs1,
                                                vuint8mf8_t rs2, size_t vl);
@@ -12448,7 +12448,7 @@ vuint64m4x2_t __riscv_vluxseg2ei64_v_u64m4x2_m(vbool16_t vm,
 <h4 id="vector-indexed-segment-store"><a class="anchor" href="#vector-indexed-segment-store"></a>Vector Indexed Segment Store Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">void __riscv_vsoxseg2ei8_v_f16mf4x2(_Float16 *rs1, vuint8mf8_t vs2,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void __riscv_vsoxseg2ei8_v_f16mf4x2(_Float16 *rs1, vuint8mf8_t vs2,
                                     vfloat16mf4x2_t vs3, size_t vl);
 void __riscv_vsoxseg3ei8_v_f16mf4x3(_Float16 *rs1, vuint8mf8_t vs2,
                                     vfloat16mf4x3_t vs3, size_t vl);

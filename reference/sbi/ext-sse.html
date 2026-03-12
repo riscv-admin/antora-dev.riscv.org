@@ -660,7 +660,7 @@ each 16-bit range is encoded as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">    event_id[14:14] = Platform (0: Standard event, 1: Platform specific event)
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">    event_id[14:14] = Platform (0: Standard event, 1: Platform specific event)
     event_id[15:15] = Global (0: Local event, 1: Global event)</code></pre>
 </div>
 </div>
@@ -1352,7 +1352,7 @@ it can update the event attributes of the software event before calling
 <h3 id="18-1-7-function-read-software-event-attributes-fid-0"><a class="anchor" href="#18-1-7-function-read-software-event-attributes-fid-0"></a>18.1.7. Function: Read software event attributes (FID #0)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_sse_read_attrs(uint32_t event_id,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_sse_read_attrs(uint32_t event_id,
                                  uint32_t base_attr_id, uint32_t attr_count,
                                  unsigned long output_phys_lo,
                                  unsigned long output_phys_hi)</code></pre>
@@ -1440,7 +1440,7 @@ at offset <code>(XLEN / 8) * (base_attr_id + i)</code></p>
 <h3 id="18-1-8-function-write-software-event-attributes-fid-1"><a class="anchor" href="#18-1-8-function-write-software-event-attributes-fid-1"></a>18.1.8. Function: Write software event attributes (FID #1)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_sse_write_attrs(uint32_t event_id,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_sse_write_attrs(uint32_t event_id,
                                  uint32_t base_attr_id, uint32_t attr_count,
                                  unsigned long input_phys_lo,
                                  unsigned long input_phys_hi)</code></pre>
@@ -1549,7 +1549,7 @@ the first error encountered (based on attributes ID order) is returned.</p>
 <h3 id="18-1-9-function-register-a-software-event-fid-2"><a class="anchor" href="#18-1-9-function-register-a-software-event-fid-2"></a>18.1.9. Function: Register a software event (FID #2)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_sse_register(uint32_t event_id,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_sse_register(uint32_t event_id,
                                unsigned long handler_entry_pc,
                                unsigned long handler_entry_arg)</code></pre>
 </div>
@@ -1631,7 +1631,7 @@ below.</p>
 <h3 id="18-1-10-function-unregister-a-software-event-fid-3"><a class="anchor" href="#18-1-10-function-unregister-a-software-event-fid-3"></a>18.1.10. Function: Unregister a software event (FID #3)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_sse_unregister(uint32_t event_id)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_sse_unregister(uint32_t event_id)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1689,7 +1689,7 @@ below.</p>
 <h3 id="18-1-11-function-enable-a-software-event-fid-4"><a class="anchor" href="#18-1-11-function-enable-a-software-event-fid-4"></a>18.1.11. Function: Enable a software event (FID #4)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_sse_enable(uint32_t event_id)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_sse_enable(uint32_t event_id)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1747,7 +1747,7 @@ below.</p>
 <h3 id="18-1-12-function-disable-a-software-event-fid-5"><a class="anchor" href="#18-1-12-function-disable-a-software-event-fid-5"></a>18.1.12. Function: Disable a software event (FID #5)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_sse_disable(uint32_t event_id)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_sse_disable(uint32_t event_id)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1805,7 +1805,7 @@ below.</p>
 <h3 id="18-1-13-function-complete-software-event-handling-fid-6"><a class="anchor" href="#18-1-13-function-complete-software-event-handling-fid-6"></a>18.1.13. Function: Complete software event handling (FID #6)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_sse_complete(void)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_sse_complete(void)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1837,7 +1837,7 @@ attribute in <a href="#table_sse_event_attributes">Table 2</a>.)</p>
 <h3 id="18-1-14-function-inject-a-software-event-fid-7"><a class="anchor" href="#18-1-14-function-inject-a-software-event-fid-7"></a>18.1.14. Function: Inject a software event (FID #7)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_sse_inject(uint32_t event_id, unsigned long hart_id)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_sse_inject(uint32_t event_id, unsigned long hart_id)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1914,7 +1914,7 @@ running completes.</p>
 <h3 id="18-1-15-function-unmask-software-events-on-a-hart-fid-8"><a class="anchor" href="#18-1-15-function-unmask-software-events-on-a-hart-fid-8"></a>18.1.15. Function: Unmask software events on a hart (FID #8)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_sse_hart_unmask(void)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_sse_hart_unmask(void)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1963,7 +1963,7 @@ boot-time.</p>
 <h3 id="18-1-16-function-mask-software-events-on-a-hart-fid-9"><a class="anchor" href="#18-1-16-function-mask-software-events-on-a-hart-fid-9"></a>18.1.16. Function: Mask software events on a hart (FID #9)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_sse_hart_mask(void)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_sse_hart_mask(void)</code></pre>
 </div>
 </div>
 <div class="paragraph">

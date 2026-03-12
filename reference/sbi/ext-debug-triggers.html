@@ -756,7 +756,7 @@ trigger called <code>trig_state</code> which is encoded as shown in <a href="#ta
 <h3 id="20-1-1-function-get-number-of-triggers-fid-0"><a class="anchor" href="#20-1-1-function-get-number-of-triggers-fid-0"></a>20.1.1. Function: Get number of triggers (FID #0)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_debug_num_triggers(unsigned long trig_tdata1)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_debug_num_triggers(unsigned long trig_tdata1)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -773,7 +773,7 @@ debug triggers in <code>sbiret.value</code>.</p>
 <h3 id="20-1-2-function-set-trigger-shared-memory-fid-1"><a class="anchor" href="#20-1-2-function-set-trigger-shared-memory-fid-1"></a>20.1.2. Function: Set trigger shared memory (FID #1)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_debug_set_shmem(unsigned long shmem_phys_lo,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_debug_set_shmem(unsigned long shmem_phys_lo,
                                   unsigned long shmem_phys_hi,
                                   unsigned long flags)</code></pre>
 </div>
@@ -840,7 +840,7 @@ memory for debug trigger configuration is disabled.</p>
 <h3 id="20-1-3-function-read-triggers-fid-2"><a class="anchor" href="#20-1-3-function-read-triggers-fid-2"></a>20.1.3. Function: Read triggers (FID #2)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_debug_read_triggers(unsigned long trig_idx_base,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_debug_read_triggers(unsigned long trig_idx_base,
                                       unsigned long trig_count)</code></pre>
 </div>
 </div>
@@ -855,7 +855,7 @@ little-endian format at <code>offset = i * (XLEN / 2)</code> of the shared memor
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">    word[0] = `trig_state` written by the SBI implementation
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">    word[0] = `trig_state` written by the SBI implementation
     word[1] = `trig_tdata1` written by the SBI implementation
     word[2] = `trig_tdata2` written by the SBI implementation
     word[3] = `trig_tdata3` written by the SBI implementation</code></pre>
@@ -898,7 +898,7 @@ little-endian format at <code>offset = i * (XLEN / 2)</code> of the shared memor
 <h3 id="20-1-4-function-install-triggers-fid-3"><a class="anchor" href="#20-1-4-function-install-triggers-fid-3"></a>20.1.4. Function: Install triggers (FID #3)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_debug_install_triggers(unsigned long trig_count)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_debug_install_triggers(unsigned long trig_count)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -917,7 +917,7 @@ organized as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">    word[0] = `trig_idx` written back by the SBI implementation
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">    word[0] = `trig_idx` written back by the SBI implementation
     word[1] = `trig_tdata1` read by the SBI implementation
     word[2] = `trig_tdata2` read by the SBI implementation
     word[3] = `trig_tdata3` read by the SBI implementation</code></pre>
@@ -1013,7 +1013,7 @@ other failures.</p>
 <h3 id="20-1-5-function-update-triggers-fid-4"><a class="anchor" href="#20-1-5-function-update-triggers-fid-4"></a>20.1.5. Function: Update triggers (FID #4)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_debug_update_triggers(unsigned long trig_count)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_debug_update_triggers(unsigned long trig_count)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1030,7 +1030,7 @@ consists of four consecutive XLEN-bit words in little-endian format as follows:<
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">    word[0] = `trig_idx` read by the SBI implementation
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">    word[0] = `trig_idx` read by the SBI implementation
     word[1] = `trig_tdata1` read by the SBI implementation
     word[2] = `trig_tdata2` read by the SBI implementation
     word[3] = `trig_tdata3` read by the SBI implementation</code></pre>
@@ -1126,7 +1126,7 @@ other failures.</p>
 <h3 id="20-1-6-function-uninstall-a-set-of-triggers-fid-5"><a class="anchor" href="#20-1-6-function-uninstall-a-set-of-triggers-fid-5"></a>20.1.6. Function: Uninstall a set of triggers (FID #5)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_debug_uninstall_triggers(unsigned long trig_idx_base,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_debug_uninstall_triggers(unsigned long trig_idx_base,
                                            unsigned long trig_idx_mask)</code></pre>
 </div>
 </div>
@@ -1188,7 +1188,7 @@ the future trigger installations.</p>
 <h3 id="20-1-7-function-enable-a-set-of-triggers-fid-6"><a class="anchor" href="#20-1-7-function-enable-a-set-of-triggers-fid-6"></a>20.1.7. Function: Enable a set of triggers (FID #6)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_debug_enable_triggers(unsigned long trig_idx_base,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_debug_enable_triggers(unsigned long trig_idx_base,
                                         unsigned long trig_idx_mask)</code></pre>
 </div>
 </div>
@@ -1238,7 +1238,7 @@ saved copy in <code>trig_state</code>.</p>
 <h3 id="20-1-8-function-disable-a-set-of-triggers-fid-7"><a class="anchor" href="#20-1-8-function-disable-a-set-of-triggers-fid-7"></a>20.1.8. Function: Disable a set of triggers (FID #7)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_debug_disable_triggers(unsigned long trig_idx_base,
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_debug_disable_triggers(unsigned long trig_idx_base,
                                          unsigned long trig_idx_mask)</code></pre>
 </div>
 </div>

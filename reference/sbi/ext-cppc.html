@@ -851,7 +851,7 @@ but is additionally required by the supervisor-mode power-management software.</
 <h3 id="15-1-1-function-probe-cppc-register-fid-0"><a class="anchor" href="#15-1-1-function-probe-cppc-register-fid-0"></a>15.1.1. Function: Probe CPPC register (FID #0)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_cppc_probe(uint32_t cppc_reg_id)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_cppc_probe(uint32_t cppc_reg_id)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -899,7 +899,7 @@ width. If the register is not implemented, <code>sbiret.value</code> will be set
 <h3 id="15-1-2-function-read-cppc-register-fid-1"><a class="anchor" href="#15-1-2-function-read-cppc-register-fid-1"></a>15.1.2. Function: Read CPPC register (FID #1)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_cppc_read(uint32_t cppc_reg_id)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_cppc_read(uint32_t cppc_reg_id)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -952,7 +952,7 @@ will only contain the lower 32 bits of the CPPC register value.</p>
 <h3 id="15-1-3-function-read-cppc-register-high-bits-fid-2"><a class="anchor" href="#15-1-3-function-read-cppc-register-high-bits-fid-2"></a>15.1.3. Function: Read CPPC register high bits (FID #2)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_cppc_read_hi(uint32_t cppc_reg_id)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_cppc_read_hi(uint32_t cppc_reg_id)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1005,7 +1005,7 @@ returns zero in <code>sbiret.value</code> when supervisor mode XLEN is 64 or hig
 <h3 id="15-1-4-function-write-to-cppc-register-fid-3"><a class="anchor" href="#15-1-4-function-write-to-cppc-register-fid-3"></a>15.1.4. Function: Write to CPPC register (FID #3)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-C" data-lang="C">struct sbiret sbi_cppc_write(uint32_t cppc_reg_id, uint64_t val)</code></pre>
+<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">struct sbiret sbi_cppc_write(uint32_t cppc_reg_id, uint64_t val)</code></pre>
 </div>
 </div>
 <div class="paragraph">

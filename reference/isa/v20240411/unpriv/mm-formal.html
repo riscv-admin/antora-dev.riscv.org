@@ -649,7 +649,7 @@ how Alloy can be used to model check some of the mappings in <a href="mm-eplan.h
 <div class="listingblock">
 <div class="title">The RVWMO memory model formalized in Alloy (1/5: PPO)</div>
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">// =RVWMO PPO=
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">// =RVWMO PPO=
 
 // Preserved Program Order
 fun ppo : Event-&gt;Event {
@@ -714,7 +714,7 @@ pred RISCV_mm { LoadValue and Atomicity /* and Progress */ }</pre>
 <div class="listingblock">
 <div class="title">The RVWMO memory model formalized in Alloy (3/5: model of memory)</div>
 <div class="content">
-<pre class="highlight"><code class="language-sml" data-lang="sml">//Basic model of memory
+<pre class="highlightjs highlight"><code class="language-sml hljs" data-lang="sml">//Basic model of memory
 
 sig Hart {  // hardware thread
   start : one Event
@@ -770,7 +770,7 @@ fact { no FenceTSO.(pr + pw + sr + sw) }</code></pre>
 <div class="listingblock">
 <div class="title">The RVWMO memory model formalized in Alloy (4/5: Basic model rules)</div>
 <div class="content">
-<pre class="highlight"><code class="language-scala" data-lang="scala">// =Basic model rules=
+<pre class="highlightjs highlight"><code class="language-scala hljs" data-lang="scala">// =Basic model rules=
 
 // Ordering annotation groups
 fun Acquire : MemoryEvent { MemoryEvent.acquireRCpc + MemoryEvent.acquireRCsc }
@@ -815,7 +815,7 @@ fact { no Init &lt;: po and no po :&gt; Init }</code></pre>
 <div class="listingblock">
 <div class="title">The RVWMO memory model formalized in Alloy (5/5: Auxiliaries)</div>
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">// po
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">// po
 fact { acyclic[po] }
 
 // gmo
@@ -893,7 +893,7 @@ models and more are available online at <a href="http://diy.inria.fr/cats7/riscv
 <div id="herd1" class="listingblock">
 <div class="title">riscv-defs.cat, a herd definition of preserved program order (1/3)</div>
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">(*************)
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">(*************)
 (* Utilities *)
 (*************)
 
@@ -959,7 +959,7 @@ let ppo = r1 | r2 | r3 | r4 | r5 | r6 | r7 | r8 | r9 | r10 | r11 | r12 | r13</co
 <div id="herd2" class="listingblock">
 <div class="title">riscv.cat, a herd version of the RVWMO memory model (2/3)</div>
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">Total
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">Total
 
 (* Notice that herd has defined its own rf relation *)
 
@@ -1002,7 +1002,7 @@ empty winside as Atomic</code></pre>
 <div id="herd3" class="listingblock">
 <div class="title"><code>riscv.cat</code>, an alternative herd presentation of the RVWMO memory model (3/3)</div>
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">Partial
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">Partial
 
 (***************)
 (* Definitions *)

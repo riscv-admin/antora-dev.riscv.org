@@ -717,7 +717,7 @@ channel <code>attribute_id</code> is as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">attribute_id[31] = 0 (Standard)
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">attribute_id[31] = 0 (Standard)
 attribute_id[31] = 1 (Message protocol)</code></pre>
 </div>
 </div>
@@ -772,7 +772,7 @@ Version of the message protocol specification.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>[31:16]: Major version.
+<pre class="highlightjs highlight"><code class="language-none hljs">[31:16]: Major version.
  [15:0]: Minor version.</code></pre>
 </div>
 </div>
@@ -824,7 +824,7 @@ wait for response can use this timeout value.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>[31:6]: Reserved and `0`
+<pre class="highlightjs highlight"><code class="language-none hljs">[31:6]: Reserved and `0`
 
    [5]: Get Notifications (FID #7)
         Support
@@ -876,7 +876,7 @@ Control for MSI based indication.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>0 = Disable
+<pre class="highlightjs highlight"><code class="language-none hljs">0 = Disable
 1 = Enable</code></pre>
 </div>
 </div>
@@ -1030,7 +1030,7 @@ assigned ID.</p>
 <h3 id="21-1-5-function-get-shared-memory-size-fid-0"><a class="anchor" href="#21-1-5-function-get-shared-memory-size-fid-0"></a>21.1.5. Function: Get shared memory size (FID #0)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">struct sbiret sbi_mpxy_get_shmem_size(void)</code></pre>
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">struct sbiret sbi_mpxy_get_shmem_size(void)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1079,7 +1079,7 @@ This function does not require the prior setup of shared memory using the
 <h3 id="21-1-6-function-set-shared-memory-fid-1"><a class="anchor" href="#21-1-6-function-set-shared-memory-fid-1"></a>21.1.6. Function: Set shared memory (FID #1)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">struct sbiret sbi_mpxy_set_shmem(unsigned long shmem_phys_lo,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">struct sbiret sbi_mpxy_set_shmem(unsigned long shmem_phys_lo,
                                  unsigned long shmem_phys_hi,
                                  unsigned long flags)</code></pre>
 </div>
@@ -1105,7 +1105,7 @@ encoded as follows:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>flags[XLEN-1:2]: Reserved for future use and must be zero.
+<pre class="highlightjs highlight"><code class="language-none hljs">flags[XLEN-1:2]: Reserved for future use and must be zero.
 flags[1:0]: Shared memory setup mode (Refer table below).</code></pre>
 </div>
 </div>
@@ -1227,7 +1227,7 @@ kind of data transfer.
 <h3 id="21-1-7-function-get-channel-ids-fid-2"><a class="anchor" href="#21-1-7-function-get-channel-ids-fid-2"></a>21.1.7. Function: Get Channel IDs (FID #2)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">struct sbiret sbi_mpxy_get_channel_ids(uint32_t start_index)</code></pre>
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">struct sbiret sbi_mpxy_get_channel_ids(uint32_t start_index)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1335,7 +1335,7 @@ returned in <code>sbiret.error</code> are below.</p>
 <h3 id="21-1-8-function-read-channel-attributes-fid-3"><a class="anchor" href="#21-1-8-function-read-channel-attributes-fid-3"></a>21.1.8. Function: Read Channel Attributes (FID #3)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">struct sbiret sbi_mpxy_read_attributes(uint32_t channel_id,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">struct sbiret sbi_mpxy_read_attributes(uint32_t channel_id,
                                        uint32_t base_attribute_id,
                                        uint32_t attribute_count)</code></pre>
 </div>
@@ -1411,7 +1411,7 @@ Or the <code>base_attribute_id</code> is not valid.</p></td>
 <h3 id="21-1-9-function-write-channel-attributes-fid-4"><a class="anchor" href="#21-1-9-function-write-channel-attributes-fid-4"></a>21.1.9. Function: Write Channel Attributes (FID #4)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">struct sbiret sbi_mpxy_write_attributes(uint32_t channel_id,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">struct sbiret sbi_mpxy_write_attributes(uint32_t channel_id,
                                         uint32_t base_attribute_id,
                                         uint32_t attribute_count)</code></pre>
 </div>
@@ -1495,7 +1495,7 @@ overlaps with standard and message protocol specific attributes.</p></td>
 <h3 id="21-1-10-function-send-message-with-response-fid-5"><a class="anchor" href="#21-1-10-function-send-message-with-response-fid-5"></a>21.1.10. Function: Send Message with Response (FID #5)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">struct sbiret
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">struct sbiret
 sbi_mpxy_send_message_with_response(uint32_t channel_id,
                                     uint32_t message_id,
                                     unsigned long message_data_len)</code></pre>
@@ -1588,7 +1588,7 @@ Or this function is not supported.</p></td>
 <h3 id="21-1-11-function-send-message-without-response-fid-6"><a class="anchor" href="#21-1-11-function-send-message-without-response-fid-6"></a>21.1.11. Function: Send Message without Response (FID #6)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">struct sbiret
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">struct sbiret
 sbi_mpxy_send_message_without_response(uint32_t channel_id,
                                        uint32_t message_id,
                                        unsigned long message_data_len)</code></pre>
@@ -1684,7 +1684,7 @@ Or this function is not supported.</p></td>
 <h3 id="21-1-12-function-get-notifications-fid-7"><a class="anchor" href="#21-1-12-function-get-notifications-fid-7"></a>21.1.12. Function: Get Notifications (FID #7)</h3>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">struct sbiret sbi_mpxy_get_notification_events(uint32_t channel_id)</code></pre>
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">struct sbiret sbi_mpxy_get_notification_events(uint32_t channel_id)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1758,7 +1758,7 @@ state data.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">Offset 0x0: REMAINING
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">Offset 0x0: REMAINING
 Offset 0x4: RETURNED
 Offset 0x8: LOST
 Offset 0xC: RESERVED

@@ -1403,7 +1403,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (AES32DSI (bs,rs2,rs1,rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (AES32DSI (bs,rs2,rs1,rd)) = {
   let shamt   : bits( 5) = bs @ 0b000; /* shamt = bs*8 */
   let si      : bits( 8) = (X(rs2)[31..0] &gt;&gt; shamt)[7..0]; /* SBox Input */
   let so      : bits(32) = 0x000000 @ aes_sbox_inv(si);
@@ -1485,7 +1485,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (AES32DSMI (bs,rs2,rs1,rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (AES32DSMI (bs,rs2,rs1,rd)) = {
   let shamt   : bits( 5) = bs @ 0b000; /* shamt = bs*8 */
   let si      : bits( 8) = (X(rs2)[31..0] &gt;&gt; shamt)[7..0]; /* SBox Input */
   let so      : bits( 8) = aes_sbox_inv(si);
@@ -1568,7 +1568,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (AES32ESI (bs,rs2,rs1,rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (AES32ESI (bs,rs2,rs1,rd)) = {
   let shamt   : bits( 5) = bs @ 0b000; /* shamt = bs*8 */
   let si      : bits( 8) = (X(rs2)[31..0] &gt;&gt; shamt)[7..0]; /* SBox Input */
   let so      : bits(32) = 0x000000 @ aes_sbox_fwd(si);
@@ -1650,7 +1650,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (AES32ESMI (bs,rs2,rs1,rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (AES32ESMI (bs,rs2,rs1,rd)) = {
   let shamt   : bits( 5) = bs @ 0b000; /* shamt = bs*8 */
   let si      : bits( 8) = (X(rs2)[31..0] &gt;&gt; shamt)[7..0]; /* SBox Input */
   let so      : bits( 8) = aes_sbox_fwd(si);
@@ -1763,7 +1763,7 @@ aes64ds t3, t1, t0</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (AES64DS(rs2, rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (AES64DS(rs2, rs1, rd)) = {
   let sr : bits(64) = aes_rv64_shiftrows_inv(X(rs2)[63..0], X(rs1)[63..0]);
   let wd : bits(64) = sr[63..0];
   X(rd) = aes_apply_inv_sbox_to_each_byte(wd);
@@ -1874,7 +1874,7 @@ aes64dsm t3, t1, t0</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (AES64DSM(rs2, rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (AES64DSM(rs2, rs1, rd)) = {
   let sr : bits(64) = aes_rv64_shiftrows_inv(X(rs2)[63..0], X(rs1)[63..0]);
   let wd : bits(64) = sr[63..0];
   let sb : bits(64) = aes_apply_inv_sbox_to_each_byte(wd);
@@ -1986,7 +1986,7 @@ aes64es t3, t1, t0</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (AES64ES(rs2, rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (AES64ES(rs2, rs1, rd)) = {
   let sr : bits(64) = aes_rv64_shiftrows_fwd(X(rs2)[63..0], X(rs1)[63..0]);
   let wd : bits(64) = sr[63..0];
   X(rd) = aes_apply_fwd_sbox_to_each_byte(wd);
@@ -2097,7 +2097,7 @@ aes64esm t3, t1, t0</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (AES64ESM(rs2, rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (AES64ESM(rs2, rs1, rd)) = {
   let sr : bits(64) = aes_rv64_shiftrows_fwd(X(rs2)[63..0], X(rs1)[63..0]);
   let wd : bits(64) = sr[63..0];
   let sb : bits(64) = aes_apply_fwd_sbox_to_each_byte(wd);
@@ -2183,7 +2183,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (AES64IM(rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (AES64IM(rs1, rd)) = {
   let w0 : bits(32) = aes_mixcolumn_inv(X(rs1)[31.. 0]);
   let w1 : bits(32) = aes_mixcolumn_inv(X(rs1)[63..32]);
   X(rd)  = w1 @ w0;
@@ -2266,7 +2266,7 @@ The values <code>0xB..0xF</code> are reserved.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (AES64KS1I(rnum, rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (AES64KS1I(rnum, rs1, rd)) = {
   if(unsigned(rnum) &gt; 10) then {
     handle_illegal();  RETIRE_SUCCESS
   } else {
@@ -2359,7 +2359,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (AES64KS2(rs2, rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (AES64KS2(rs2, rs1, rd)) = {
   let w0 : bits(32) = X(rs1)[63..32] ^ X(rs2)[31..0];
   let w1 : bits(32) = X(rs1)[63..32] ^ X(rs2)[31..0] ^ X(rs2)[63..32];
   X(rd)  = w1 @ w0;
@@ -2441,7 +2441,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">X(rd) = X(rs1) &amp; ~X(rs2);</code></pre>
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">X(rd) = X(rs1) &amp; ~X(rs2);</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -2508,7 +2508,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">result : xlenbits = EXTZ(0b0);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">result : xlenbits = EXTZ(0b0);
 foreach (i from 0 to sizeof(xlen) by 8) {
     result[i+7..i] = reverse_bits_in_byte(X(rs1)[i+7..i]);
 };
@@ -2574,7 +2574,7 @@ X(rd) = result;</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1_val = X(rs1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1_val = X(rs1);
 let rs2_val = X(rs2);
 let output : xlenbits = 0;
 
@@ -2651,7 +2651,7 @@ X[rd] = output</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1_val = X(rs1);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1_val = X(rs1);
 let rs2_val = X(rs2);
 let output : xlenbits = 0;
 
@@ -2728,7 +2728,7 @@ X[rd] = output</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">X(rd) = X(rs1) | ~X(rs2);</code></pre>
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">X(rd) = X(rs1) | ~X(rs2);</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -2796,7 +2796,7 @@ X[rd] = output</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let lo_half : bits(xlen/2) = X(rs1)[xlen/2-1..0];
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let lo_half : bits(xlen/2) = X(rs1)[xlen/2-1..0];
 let hi_half : bits(xlen/2) = X(rs2)[xlen/2-1..0];
 X(rd) = EXTZ(hi_half @ lo_half);</code></pre>
 </div>
@@ -2862,7 +2862,7 @@ zero extending the rest of <em>rd</em>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let lo_half : bits(8) = X(rs1)[7..0];
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let lo_half : bits(8) = X(rs1)[7..0];
 let hi_half : bits(8) = X(rs2)[7..0];
 X(rd) = EXTZ(hi_half @ lo_half);</code></pre>
 </div>
@@ -2929,7 +2929,7 @@ This instruction only exists on RV64 based systems.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let lo_half : bits(16) = X(rs1)[15..0];
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let lo_half : bits(16) = X(rs1)[15..0];
 let hi_half : bits(16) = X(rs2)[15..0];
 X(rd) = EXTS(hi_half @ lo_half);</code></pre>
 </div>
@@ -3003,7 +3003,7 @@ X(rd) = EXTS(hi_half @ lo_half);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let input = X(rs);
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let input = X(rs);
 let output : xlenbits = 0;
 let j = xlen - 1;
 
@@ -3112,7 +3112,7 @@ XLEN-32 and XLEN-16, respectively.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let shamt = if   xlen == 32
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let shamt = if   xlen == 32
             then X(rs2)[4..0]
             else X(rs2)[5..0];
 let result = (X(rs1) &lt;&lt; shamt) | (X(rs1) &gt;&gt; (xlen - shamt));
@@ -3185,7 +3185,7 @@ The resulting word value is sign-extended by copying bit 31 to all of the more-s
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1 = EXTZ(X(rs1)[31..0])
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1 = EXTZ(X(rs1)[31..0])
 let shamt = X(rs2)[4..0];
 let result = (rs1 &lt;&lt; shamt) | (rs1 &gt;&gt; (32 - shamt));
 X(rd) = EXTS(result[31..0]);</code></pre>
@@ -3255,7 +3255,7 @@ X(rd) = EXTS(result[31..0]);</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let shamt = if   xlen == 32
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let shamt = if   xlen == 32
             then X(rs2)[4..0]
             else X(rs2)[5..0];
 let result = (X(rs1) &gt;&gt; shamt) | (X(rs1) &lt;&lt; (xlen - shamt));
@@ -3338,7 +3338,7 @@ For RV32, the encodings corresponding to shamt[5]=1 are reserved.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let shamt = if   xlen == 32
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let shamt = if   xlen == 32
             then shamt[4..0]
             else shamt[5..0];
 let result = (X(rs1) &gt;&gt; shamt) | (X(rs1) &lt;&lt; (xlen - shamt));
@@ -3414,7 +3414,7 @@ the more-significant bits.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1_data = EXTZ(X(rs1)[31..0];
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1_data = EXTZ(X(rs1)[31..0];
 let result = (rs1_data &gt;&gt; shamt) | (rs1_data &lt;&lt; (32 - shamt));
 X(rd) = EXTS(result[31..0]);</code></pre>
 </div>
@@ -3484,7 +3484,7 @@ The resultant word is sign-extended by copying bit 31 to all of the more-signifi
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">let rs1 = EXTZ(X(rs1)[31..0])
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">let rs1 = EXTZ(X(rs1)[31..0])
 let shamt = X(rs2)[4..0];
 let result = (rs1 &gt;&gt; shamt) | (rs1 &lt;&lt; (32 - shamt));
 X(rd) = EXTS(result);</code></pre>
@@ -3563,7 +3563,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SHA256SIG0(rs1,rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SHA256SIG0(rs1,rd)) = {
   let inb    : bits(32) = X(rs1)[31..0];
   let result : bits(32) = ror32(inb,  7) ^ ror32(inb, 18) ^ (inb &gt;&gt;  3);
   X(rd)      = EXTS(result);
@@ -3649,7 +3649,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SHA256SIG1(rs1,rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SHA256SIG1(rs1,rd)) = {
   let inb    : bits(32) = X(rs1)[31..0];
   let result : bits(32) = ror32(inb, 17) ^ ror32(inb, 19) ^ (inb &gt;&gt; 10);
   X(rd)      = EXTS(result);
@@ -3735,7 +3735,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SHA256SUM0(rs1,rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SHA256SUM0(rs1,rd)) = {
   let inb    : bits(32) = X(rs1)[31..0];
   let result : bits(32) = ror32(inb,  2) ^ ror32(inb, 13) ^ ror32(inb, 22);
   X(rd)      = EXTS(result);
@@ -3821,7 +3821,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SHA256SUM1(rs1,rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SHA256SUM1(rs1,rd)) = {
   let inb    : bits(32) = X(rs1)[31..0];
   let result : bits(32) = ror32(inb,  6) ^ ror32(inb, 11) ^ ror32(inb, 25);
   X(rd)      = EXTS(result);
@@ -3931,7 +3931,7 @@ sha512sig0h    t1, a1, a0</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SHA512SIG0H(rs2, rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SHA512SIG0H(rs2, rs1, rd)) = {
   X(rd) = EXTS((X(rs1) &gt;&gt;  1) ^ (X(rs1) &gt;&gt;  7) ^ (X(rs1) &gt;&gt;  8) ^
                (X(rs2) &lt;&lt; 31)                  ^ (X(rs2) &lt;&lt; 24) );
   RETIRE_SUCCESS
@@ -4040,7 +4040,7 @@ sha512sig0h    t1, a1, a0</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SHA512SIG0L(rs2, rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SHA512SIG0L(rs2, rs1, rd)) = {
   X(rd) = EXTS((X(rs1) &gt;&gt;  1) ^ (X(rs1) &gt;&gt;  7) ^ (X(rs1) &gt;&gt;  8) ^
                (X(rs2) &lt;&lt; 31) ^ (X(rs2) &lt;&lt; 25) ^ (X(rs2) &lt;&lt; 24) );
   RETIRE_SUCCESS
@@ -4149,7 +4149,7 @@ sha512sig1h    t1, a1, a0</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SHA512SIG1H(rs2, rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SHA512SIG1H(rs2, rs1, rd)) = {
   X(rd) = EXTS((X(rs1) &lt;&lt;  3) ^ (X(rs1) &gt;&gt;  6) ^ (X(rs1) &gt;&gt; 19) ^
                (X(rs2) &gt;&gt; 29)                  ^ (X(rs2) &lt;&lt; 13) );
   RETIRE_SUCCESS
@@ -4258,7 +4258,7 @@ sha512sig1h    t1, a1, a0</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SHA512SIG1L(rs2, rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SHA512SIG1L(rs2, rs1, rd)) = {
   X(rd) = EXTS((X(rs1) &lt;&lt;  3) ^ (X(rs1) &gt;&gt;  6) ^ (X(rs1) &gt;&gt; 19) ^
                (X(rs2) &gt;&gt; 29) ^ (X(rs2) &lt;&lt; 26) ^ (X(rs2) &lt;&lt; 13) );
   RETIRE_SUCCESS
@@ -4369,7 +4369,7 @@ sha512sum0r    t1, a1, a0</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SHA512SUM0R(rs2, rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SHA512SUM0R(rs2, rs1, rd)) = {
   X(rd) = EXTS((X(rs1) &lt;&lt; 25) ^ (X(rs1) &lt;&lt; 30) ^ (X(rs1) &gt;&gt; 28) ^
                (X(rs2) &gt;&gt;  7) ^ (X(rs2) &gt;&gt;  2) ^ (X(rs2) &lt;&lt;  4) );
   RETIRE_SUCCESS
@@ -4480,7 +4480,7 @@ sha512sum1r    t1, a1, a0</pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SHA512SUM1R(rs2, rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SHA512SUM1R(rs2, rs1, rd)) = {
   X(rd) = EXTS((X(rs1) &lt;&lt; 23) ^ (X(rs1) &gt;&gt; 14) ^ (X(rs1) &gt;&gt; 18) ^
                (X(rs2) &gt;&gt;  9) ^ (X(rs2) &lt;&lt; 18) ^ (X(rs2) &lt;&lt; 14) );
   RETIRE_SUCCESS
@@ -4561,7 +4561,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SHA512SIG0(rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SHA512SIG0(rs1, rd)) = {
   X(rd) = ror64(X(rs1),  1) ^ ror64(X(rs1),  8) ^ (X(rs1) &gt;&gt; 7);
   RETIRE_SUCCESS
 }</code></pre>
@@ -4641,7 +4641,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SHA512SIG1(rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SHA512SIG1(rs1, rd)) = {
   X(rd) = ror64(X(rs1), 19) ^ ror64(X(rs1), 61) ^ (X(rs1) &gt;&gt; 6);
   RETIRE_SUCCESS
 }</code></pre>
@@ -4721,7 +4721,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SHA512SUM0(rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SHA512SUM0(rs1, rd)) = {
   X(rd) = ror64(X(rs1), 28) ^ ror64(X(rs1), 34) ^ ror64(X(rs1) ,39);
   RETIRE_SUCCESS
 }</code></pre>
@@ -4801,7 +4801,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SHA512SUM1(rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SHA512SUM1(rs1, rd)) = {
   X(rd) = ror64(X(rs1), 14) ^ ror64(X(rs1), 18) ^ ror64(X(rs1) ,41);
   RETIRE_SUCCESS
 }</code></pre>
@@ -4899,7 +4899,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SM3P0(rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SM3P0(rs1, rd)) = {
   let r1     : bits(32) = X(rs1)[31..0];
   let result : bits(32) =  r1 ^ rol32(r1,  9) ^ rol32(r1, 17);
   X(rd) = EXTS(result);
@@ -4994,7 +4994,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SM3P1(rs1, rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SM3P1(rs1, rd)) = {
   let r1     : bits(32) = X(rs1)[31..0];
   let result : bits(32) =  r1 ^ rol32(r1, 15) ^ rol32(r1, 23);
   X(rd) = EXTS(result);
@@ -5075,7 +5075,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SM4ED (bs,rs2,rs1,rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SM4ED (bs,rs2,rs1,rd)) = {
   let shamt : bits(5)  = bs @ 0b000; /* shamt = bs*8 */
   let sb_in : bits(8)  = (X(rs2)[31..0] &gt;&gt; shamt)[7..0];
   let x     : bits(32) = 0x000000 @ sm4_sbox(sb_in);
@@ -5162,7 +5162,7 @@ latency does not depend on the data being operated on.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">function clause execute (SM4KS (bs,rs2,rs1,rd)) = {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">function clause execute (SM4KS (bs,rs2,rs1,rd)) = {
   let shamt : bits(5)  = (bs @ 0b000); /* shamt = bs*8 */
   let sb_in : bits(8)  = (X(rs2)[31..0] &gt;&gt; shamt)[7..0];
   let x     : bits(32) = 0x000000 @ sm4_sbox(sb_in);
@@ -5243,7 +5243,7 @@ This instruction is available only on RV32.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">foreach (i from 0 to xlen/2-1) {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">foreach (i from 0 to xlen/2-1) {
   X(rd)[i] = X(rs1)[2*i]
   X(rd)[i+xlen/2] = X(rs1)[2*i+1]
 }</code></pre>
@@ -5326,7 +5326,7 @@ directly.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">X(rd) = ~(X(rs1) ^ X(rs2));</code></pre>
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">X(rd) = ~(X(rs1) ^ X(rs2));</code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -5397,7 +5397,7 @@ or zero if the index into <em>rs2</em> is out of bounds.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">val xperm8_lookup : (bits(8), xlenbits) -&gt; bits(8)
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">val xperm8_lookup : (bits(8), xlenbits) -&gt; bits(8)
 function xperm8_lookup (idx, lut) = {
     (lut &gt;&gt; (idx @ 0b000))[7..0]
 }
@@ -5475,7 +5475,7 @@ or zero if the index into <em>rs2</em> is out of bounds.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">val xperm4_lookup : (bits(4), xlenbits) -&gt; bits(4)
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">val xperm4_lookup : (bits(4), xlenbits) -&gt; bits(4)
 function xperm4_lookup (idx, lut) = {
     (lut &gt;&gt; (idx @ 0b00))[3..0]
 }
@@ -5553,7 +5553,7 @@ This instruction is available only on RV32.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">foreach (i from 0 to xlen/2-1) {
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">foreach (i from 0 to xlen/2-1) {
   X(rd)[2*i] = X(rs1)[i]
   X(rd)[2*i+1] = X(rs1)[i+xlen/2]
 }</code></pre>
@@ -8373,7 +8373,7 @@ is recommended reading in order to best understand the supporting code.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-sail" data-lang="sail">/* Auxiliary function for performing GF multiplication */
+<pre class="highlightjs highlight"><code class="language-sail hljs" data-lang="sail">/* Auxiliary function for performing GF multiplication */
 val xt2 : bits(8) -&gt; bits(8)
 function xt2(x) = {
   (x &lt;&lt; 1) ^ (if bit_to_bool(x[7]) then 0x1b else 0x00)

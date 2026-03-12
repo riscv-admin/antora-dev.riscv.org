@@ -455,7 +455,7 @@ an address in the <code>medlow</code> code model.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    # Load value from a symbol
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    # Load value from a symbol
     lui  a0, %hi(symbol)
     lw   a0, %lo(symbol)(a0)
 
@@ -484,7 +484,7 @@ immediates; the following code fragments show where the ranges come from:
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm"># Largest postive number:
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm"># Largest postive number:
 lui a0, 0x7ffff # a0 = 0x7ffff000
 addi a0, 0x7ff # a0 = a0 + 2047 = 0x000000007FFFF7FF
 
@@ -532,7 +532,7 @@ an address in the medany code model.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">         # Load value from a symbol
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">         # Load value from a symbol
 .Ltmp0:  auipc a0, %pcrel_hi(symbol)
          lw    a0, %pcrel_lo(.Ltmp0)(a0)
 
@@ -580,7 +580,7 @@ The address space of RV64ILP32* ABIs is not continuous in the middle.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">         # Load value from a local symbol
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">         # Load value from a local symbol
 .Ltmp0:  auipc a0, %pcrel_hi(symbol)
          lw    a0, %pcrel_lo(.Ltmp0)(a0)
 
@@ -622,7 +622,7 @@ is appended in .text section or put into .rodata section.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">         # Get address of a symbol
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">         # Get address of a symbol
          # Literal pool
 .LCPI0:
          .8byte symbol
@@ -667,7 +667,7 @@ via the literal pool or not.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">         # Function call
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">         # Function call
          # Literal pool
 .LCPI1:
          .8byte function
@@ -761,7 +761,7 @@ a decimal string indicating its length, which is prefixed by "u".</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">    void foo(vint8m1_t x);</code></pre>
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">    void foo(vint8m1_t x);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -769,12 +769,12 @@ a decimal string indicating its length, which is prefixed by "u".</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">    _Z3foou15__rvv_vint8m1_t</code></pre>
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">    _Z3foou15__rvv_vint8m1_t</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-abnf" data-lang="abnf">mangled-name = "u" len "__rvv_" type-name
+<pre class="highlightjs highlight"><code class="language-abnf hljs" data-lang="abnf">mangled-name = "u" len "__rvv_" type-name
 
 len = nonzero *DIGIT
 nonzero = "1" / "2" / "3" / "4" / "5" / "6" / "7" / "8" / "9"
@@ -2109,7 +2109,7 @@ LO12
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    lui  a0, %hi(symbol)     # R_RISCV_HI20 (symbol)
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    lui  a0, %hi(symbol)     # R_RISCV_HI20 (symbol)
     addi a0, a0, %lo(symbol) # R_RISCV_LO12_I (symbol)</code></pre>
 </div>
 </div>
@@ -2121,7 +2121,7 @@ identical, a condition met when the symbol is sufficiently aligned.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    lui a0, 0       # R_RISCV_HI20 (symbol)
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    lui a0, 0       # R_RISCV_HI20 (symbol)
     lw a1, 0(a0)    # R_RISCV_LO12_I (symbol)
     lw a2, 0(a0)    # R_RISCV_LO12_I (symbol+4)
     lw a3, 0(a0)    # R_RISCV_LO12_I (symbol+8)
@@ -2166,7 +2166,7 @@ in the PLT occupies two 16 byte entries:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">1:  auipc  t2, %pcrel_hi(.got.plt)
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">1:  auipc  t2, %pcrel_hi(.got.plt)
     sub    t1, t1, t3               # shifted .got.plt offset + hdr size + 12
     l[w|d] t3, %pcrel_lo(1b)(t2)    # _dl_runtime_resolve
     addi   t1, t1, -(hdr size + 12) # shifted .got.plt offset
@@ -2184,7 +2184,7 @@ and fills in the GOT entry for subsequent calls to the function:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">1:  auipc   t3, %pcrel_hi(function@.got.plt)
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">1:  auipc   t3, %pcrel_hi(function@.got.plt)
     l[w|d]  t3, %pcrel_lo(1b)(t3)
     jalr    t1, t3
     nop</code></pre>
@@ -2216,7 +2216,7 @@ to the <code>JAL</code> instruction when the procedure or PLT entry is within (-
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    call symbol
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    call symbol
     call symbol@plt</code></pre>
 </div>
 </div>
@@ -2225,7 +2225,7 @@ to the <code>JAL</code> instruction when the procedure or PLT entry is within (-
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL (symbol), R_RISCV_RELAX (symbol)
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL (symbol), R_RISCV_RELAX (symbol)
     jalr  ra, ra, 0</code></pre>
 </div>
 </div>
@@ -2234,7 +2234,7 @@ to the <code>JAL</code> instruction when the procedure or PLT entry is within (-
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL_PLT (symbol), R_RISCV_RELAX (symbol)
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL_PLT (symbol), R_RISCV_RELAX (symbol)
     jalr  ra, ra, 0</code></pre>
 </div>
 </div>
@@ -2324,7 +2324,7 @@ the symbol.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">label:
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">label:
     auipc t0, %pcrel_hi(symbol)   # R_RISCV_PCREL_HI20 (symbol)
     lui t1, 1
     lw t2, t0, %pcrel_lo(label)   # R_RISCV_PCREL_LO12_I (label)
@@ -2368,7 +2368,7 @@ valid instructions and each instruction is aligned to at least IALIGN byte.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">0x0    c.nop           # R_RISCV_ALIGN with addend 2
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">0x0    c.nop           # R_RISCV_ALIGN with addend 2
 0x2    add t1, t2, t3  # This instruction must align to 4 byte.</code></pre>
 </div>
 </div>
@@ -2417,7 +2417,7 @@ Here is pseudocode to decide the alignment of <code>R_RISCV_ALIGN</code> relocat
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python"># input:
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python"># input:
 #   addend: addend value of relocation with R_RISCV_ALIGN type.
 # output:
 #   Alignment of this relocation.
@@ -2522,7 +2522,7 @@ relocations are in comments.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    lui  a5,%tprel_hi(i)           # R_RISCV_TPREL_HI20 (symbol)
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    lui  a5,%tprel_hi(i)           # R_RISCV_TPREL_HI20 (symbol)
     add  a5,a5,tp,%tprel_add(i)    # R_RISCV_TPREL_ADD (symbol)
     lw   t0,%tprel_lo(i)(a5)       # R_RISCV_TPREL_LO12_I (symbol)
     addi t0,t0,1
@@ -2561,7 +2561,7 @@ be resolved at load time. This model uses the GOT to resolve TLS offsets.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    la.tls.ie a5,i
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    la.tls.ie a5,i
     add  a5,a5,tp
     lw   t0,0(a5)
     addi t0,t0,1
@@ -2573,7 +2573,7 @@ be resolved at load time. This model uses the GOT to resolve TLS offsets.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    la.tls.ie a5,symbol</code></pre>
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    la.tls.ie a5,symbol</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2581,7 +2581,7 @@ be resolved at load time. This model uses the GOT to resolve TLS offsets.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">label:
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">label:
     auipc a5, 0                   # R_RISCV_TLS_GOT_HI20 (symbol)
     {ld,lw} a5, 0(a5)             # R_RISCV_PCREL_LO12_I (label)</code></pre>
 </div>
@@ -2611,7 +2611,7 @@ In the global dynamic model, application code calls the dynamic linker function
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    la.tls.gd a0,i
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    la.tls.gd a0,i
     call  __tls_get_addr@plt
     mv   a5,a0
     lw   t0,0(a5)
@@ -2624,7 +2624,7 @@ In the global dynamic model, application code calls the dynamic linker function
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    la.tls.gd a0,symbol</code></pre>
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    la.tls.gd a0,symbol</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2632,7 +2632,7 @@ In the global dynamic model, application code calls the dynamic linker function
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">label:
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">label:
     auipc a0,0                    # R_RISCV_TLS_GD_HI20 (symbol)
     addi  a0,a0,0                 # R_RISCV_PCREL_LO12_I (label)</code></pre>
 </div>
@@ -2642,7 +2642,7 @@ In the global dynamic model, application code calls the dynamic linker function
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">extern void *__tls_get_addr (tls_index *ti);</code></pre>
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">extern void *__tls_get_addr (tls_index *ti);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2650,7 +2650,7 @@ In the global dynamic model, application code calls the dynamic linker function
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">typedef struct
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">typedef struct
 {
   unsigned long int ti_module;
   unsigned long int ti_offset;
@@ -2671,7 +2671,7 @@ relocation. At runtime, the dynamic linker fills in the TLS descriptor entry as 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">typedef struct
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">typedef struct
 {
   unsigned long (*entry)(tls_descriptor *);
   unsigned long arg;
@@ -2704,7 +2704,7 @@ assembler functions. The emitted relocations are in the comments.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">label:
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">label:
 	auipc tX, %tlsdesc_hi(symbol)         // R_RISCV_TLSDESC_HI20 (symbol)
 	lw    tY, tX, %tlsdesc_load_lo(label) // R_RISCV_TLSDESC_LOAD_LO12 (label)
 	addi  a0, tX, %tlsdesc_add_lo(label)  // R_RISCV_TLSDESC_ADD_LO12 (label)
@@ -3642,7 +3642,7 @@ location of relocation and target symbol.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL_PLT (symbol), R_RISCV_RELAX
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL_PLT (symbol), R_RISCV_RELAX
     jalr  ra, ra, 0</code></pre>
 </div>
 </div>
@@ -3651,7 +3651,7 @@ location of relocation and target symbol.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    jal  ra, 0            # R_RISCV_JAL (symbol)</code></pre>
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    jal  ra, 0            # R_RISCV_JAL (symbol)</code></pre>
 </div>
 </div>
 </div>
@@ -3718,7 +3718,7 @@ location of relocation and target symbol.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL_PLT (symbol), R_RISCV_RELAX
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL_PLT (symbol), R_RISCV_RELAX
     jalr  ra, ra, 0</code></pre>
 </div>
 </div>
@@ -3727,7 +3727,7 @@ location of relocation and target symbol.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    c.jal  ra, &lt;offset-between-pc-and-symbol&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    c.jal  ra, &lt;offset-between-pc-and-symbol&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -3780,7 +3780,7 @@ location of relocation and target symbol.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL_PLT (symbol), R_RISCV_RELAX
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL_PLT (symbol), R_RISCV_RELAX
     jalr  x0, ra, 0</code></pre>
 </div>
 </div>
@@ -3789,7 +3789,7 @@ location of relocation and target symbol.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    c.j  ra, &lt;offset-between-pc-and-symbol&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    c.j  ra, &lt;offset-between-pc-and-symbol&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -3850,7 +3850,7 @@ global-pointer-relative access instruction.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    lui tX, 0       # R_RISCV_HI20 (symbol), R_RISCV_RELAX
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    lui tX, 0       # R_RISCV_HI20 (symbol), R_RISCV_RELAX
     lw tY, 0(tX)    # R_RISCV_LO12_I (symbol), R_RISCV_RELAX</code></pre>
 </div>
 </div>
@@ -3859,7 +3859,7 @@ global-pointer-relative access instruction.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    lw tY, &lt;gp-offset-for-symbol&gt;(gp)</code></pre>
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    lw tY, &lt;gp-offset-for-symbol&gt;(gp)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3873,7 +3873,7 @@ identical and all the relaxed global-pointer offsets must be in range.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    lui tX, 0       # R_RISCV_HI20 (symbol), R_RISCV_RELAX
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    lui tX, 0       # R_RISCV_HI20 (symbol), R_RISCV_RELAX
     lw tY, 0(tX)    # R_RISCV_LO12_I (symbol), R_RISCV_RELAX
     lw tZ, 0(tX+4)  # R_RISCV_LO12_I (symbol+4), R_RISCV_RELAX
     lw tW, 0(tX+8)  # R_RISCV_LO12_I (symbol+8), R_RISCV_RELAX
@@ -3885,7 +3885,7 @@ identical and all the relaxed global-pointer offsets must be in range.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    lw tY, &lt;gp-offset-for-symbol&gt;(gp)
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    lw tY, &lt;gp-offset-for-symbol&gt;(gp)
     lw tZ, &lt;gp-offset-for-symbol+4&gt;(gp)
     lw tW, &lt;gp-offset-for-symbol+8&gt;(gp)
     lw tX, &lt;gp-offset-for-symbol+12&gt;(gp)</code></pre>
@@ -3928,7 +3928,7 @@ instruction (e.g. <code>mv gp, gp</code>).
 </div>
 <div id="gp-relax-asm" class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    # Recommended way to initialize the gp register.
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    # Recommended way to initialize the gp register.
     .option push
     .option norelax
 1:  auipc gp, %pcrel_hi(__global_pointer$)
@@ -4037,7 +4037,7 @@ the linker may opt not to create a GOT slot for that symbol.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">label:
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">label:
     auipc   tX, 0      # R_RISCV_GOT_HI20 (symbol), R_RISCV_RELAX
     l[w|d]  tY, 0(tX)  # R_RISCV_PCREL_LO12_I (label), R_RISCV_RELAX</code></pre>
 </div>
@@ -4048,7 +4048,7 @@ a 6-bit signed integer and if the RVC instruction is permitted):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    c.li    tY, &lt;symbol-value&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    c.li    tY, &lt;symbol-value&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4057,7 +4057,7 @@ to use <code>c.li</code>):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    addi    tY, zero, &lt;symbol-value&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    addi    tY, zero, &lt;symbol-value&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4065,7 +4065,7 @@ to use <code>c.li</code>):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    auipc   tX, &lt;hi&gt;
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    auipc   tX, &lt;hi&gt;
     addi    tY, tX, &lt;lo&gt;</code></pre>
 </div>
 </div>
@@ -4119,7 +4119,7 @@ relaxed into x0-relative access.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    lui t0, 0       # R_RISCV_HI20 (symbol), R_RISCV_RELAX
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    lui t0, 0       # R_RISCV_HI20 (symbol), R_RISCV_RELAX
     lw t1, 0(t0)    # R_RISCV_LO12_I (symbol), R_RISCV_RELAX</code></pre>
 </div>
 </div>
@@ -4128,7 +4128,7 @@ relaxed into x0-relative access.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    lw t1, &lt;address-of-symbol&gt;(x0)</code></pre>
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    lw t1, &lt;address-of-symbol&gt;(x0)</code></pre>
 </div>
 </div>
 </div>
@@ -4179,7 +4179,7 @@ unchanged.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    lui t0, 0       # R_RISCV_HI20 (symbol), R_RISCV_RELAX
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    lui t0, 0       # R_RISCV_HI20 (symbol), R_RISCV_RELAX
     lw t1, 0(t0)    # R_RISCV_LO12_I (symbol), R_RISCV_RELAX</code></pre>
 </div>
 </div>
@@ -4188,7 +4188,7 @@ unchanged.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    c.lui t0, &lt;non-zero&gt;  # RVC_LUI (symbol), R_RISCV_RELAX
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    c.lui t0, &lt;non-zero&gt;  # RVC_LUI (symbol), R_RISCV_RELAX
     lw t1, 0(t0)          # R_RISCV_LO12_I (symbol), R_RISCV_RELAX</code></pre>
 </div>
 </div>
@@ -4242,7 +4242,7 @@ can be replaced with a thread-pointer-relative access instruction.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    lui t0, 0       # R_RISCV_TPREL_HI20 (symbol), R_RISCV_RELAX
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    lui t0, 0       # R_RISCV_TPREL_HI20 (symbol), R_RISCV_RELAX
     add t0, t0, tp  # R_RISCV_TPREL_ADD (symbol), R_RISCV_RELAX
     lw t1, 0(t0)    # R_RISCV_TPREL_LO12_I (symbol), R_RISCV_RELAX</code></pre>
 </div>
@@ -4252,7 +4252,7 @@ can be replaced with a thread-pointer-relative access instruction.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    lw t1, &lt;tp-offset-for-symbol&gt;(tp)</code></pre>
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    lw t1, &lt;tp-offset-for-symbol&gt;(tp)</code></pre>
 </div>
 </div>
 </div>
@@ -4308,7 +4308,7 @@ can be replaced with a thread-pointer-relative access instruction.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">label:
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">label:
 	auipc tX, &lt;hi&gt;      // R_RISCV_TLSDESC_HI20 (symbol), R_RISCV_RELAX
 	lw    tY, tX, &lt;lo&gt;  // R_RISCV_TLSDESC_LOAD_LO12 (label)
 	addi  a0, tX, &lt;lo&gt;  // R_RISCV_TLSDESC_ADD_LO12 (label)
@@ -4320,7 +4320,7 @@ can be replaced with a thread-pointer-relative access instruction.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">	auipc   a0, &lt;pcrel-got-offset-for-symbol-hi&gt;
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">	auipc   a0, &lt;pcrel-got-offset-for-symbol-hi&gt;
 	{ld,lw} a0, &lt;pcrel-got-offset-for-symbol-lo&gt;(a0)</code></pre>
 </div>
 </div>
@@ -4383,7 +4383,7 @@ can be replaced with a thread-pointer-relative access instruction.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">label:
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">label:
 	auipc tX, &lt;hi&gt;      // R_RISCV_TLSDESC_HI20 (symbol), R_RISCV_RELAX
 	lw    tY, tX, &lt;lo&gt;  // R_RISCV_TLSDESC_LOAD_LO12 (label)
 	addi  a0, tX, &lt;lo&gt;  // R_RISCV_TLSDESC_ADD_LO12 (label)
@@ -4395,7 +4395,7 @@ can be replaced with a thread-pointer-relative access instruction.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">	lui a0, &lt;tp-offset-for-symbol-hi&gt;
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">	lui a0, &lt;tp-offset-for-symbol-hi&gt;
 	addi a0, a0, &lt;tp-offset-for-symbol-lo&gt;</code></pre>
 </div>
 </div>
@@ -4404,7 +4404,7 @@ can be replaced with a thread-pointer-relative access instruction.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">	addi a0, zero, &lt;tp-offset-for-symbol&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">	addi a0, zero, &lt;tp-offset-for-symbol&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -4468,7 +4468,7 @@ jump instruction.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL (symbol), R_RISCV_RELAX (symbol)
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL (symbol), R_RISCV_RELAX (symbol)
     jalr  ra, ra, 0
 
     auipc ra, 0           # R_RISCV_CALL_PLT (symbol), R_RISCV_RELAX (symbol)
@@ -4484,7 +4484,7 @@ jump instruction.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    cm.jalt  &lt;index-for-symbol&gt;
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    cm.jalt  &lt;index-for-symbol&gt;
 
     cm.jt    &lt;index-for-symbol&gt;
 
@@ -4544,7 +4544,7 @@ instructions. It is recommended to initialize <code>jvt</code> CSR immediately a
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-asm" data-lang="asm">    # Recommended way to initialize the jvt CSR.
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    # Recommended way to initialize the jvt CSR.
 1:  auipc a0, %pcrel_hi(__jvt_base$)
     addi  a0, a0, %pcrel_lo(1b)
     csrw  jvt, a0</code></pre>

@@ -427,7 +427,7 @@
 <h4 id="policy-variant-overloadedinteger-scalar-move"><a class="anchor" href="#policy-variant-overloadedinteger-scalar-move"></a>Integer and Floating-Point Scalar Move Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vfmv_s_tu(vfloat16mf4_t vd, _Float16 rs1, size_t vl);
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vfmv_s_tu(vfloat16mf4_t vd, _Float16 rs1, size_t vl);
 vfloat16mf2_t __riscv_vfmv_s_tu(vfloat16mf2_t vd, _Float16 rs1, size_t vl);
 vfloat16m1_t __riscv_vfmv_s_tu(vfloat16m1_t vd, _Float16 rs1, size_t vl);
 vfloat16m2_t __riscv_vfmv_s_tu(vfloat16m2_t vd, _Float16 rs1, size_t vl);
@@ -493,7 +493,7 @@ vuint64m8_t __riscv_vmv_s_tu(vuint64m8_t vd, uint64_t rs1, size_t vl);</code></p
 <h4 id="policy-variant-overloadedvector-slideup"><a class="anchor" href="#policy-variant-overloadedvector-slideup"></a>Vector Slideup Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vslideup_tu(vfloat16mf4_t vd, vfloat16mf4_t vs2,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vslideup_tu(vfloat16mf4_t vd, vfloat16mf4_t vs2,
                                   size_t rs1, size_t vl);
 vfloat16mf2_t __riscv_vslideup_tu(vfloat16mf2_t vd, vfloat16mf2_t vs2,
                                   size_t rs1, size_t vl);
@@ -975,7 +975,7 @@ vuint64m8_t __riscv_vslideup_mu(vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2,
 <h4 id="policy-variant-overloadedvector-slidedown"><a class="anchor" href="#policy-variant-overloadedvector-slidedown"></a>Vector Slidedown Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vslidedown_tu(vfloat16mf4_t vd, vfloat16mf4_t vs2,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vslidedown_tu(vfloat16mf4_t vd, vfloat16mf4_t vs2,
                                     size_t rs1, size_t vl);
 vfloat16mf2_t __riscv_vslidedown_tu(vfloat16mf2_t vd, vfloat16mf2_t vs2,
                                     size_t rs1, size_t vl);
@@ -1457,7 +1457,7 @@ vuint64m8_t __riscv_vslidedown_mu(vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2,
 <h4 id="policy-variant-overloadedvector-slide1up-and-slide1down"><a class="anchor" href="#policy-variant-overloadedvector-slide1up-and-slide1down"></a>Vector Slide1up and Slide1down Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vfslide1up_tu(vfloat16mf4_t vd, vfloat16mf4_t vs2,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vfslide1up_tu(vfloat16mf4_t vd, vfloat16mf4_t vs2,
                                     _Float16 rs1, size_t vl);
 vfloat16mf2_t __riscv_vfslide1up_tu(vfloat16mf2_t vd, vfloat16mf2_t vs2,
                                     _Float16 rs1, size_t vl);
@@ -2433,7 +2433,7 @@ vuint64m8_t __riscv_vslide1down_mu(vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2,
 <h4 id="policy-variant-overloadedvector-register-gather"><a class="anchor" href="#policy-variant-overloadedvector-register-gather"></a>Vector Register Gather Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vrgather_tu(vfloat16mf4_t vd, vfloat16mf4_t vs2,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vrgather_tu(vfloat16mf4_t vd, vfloat16mf4_t vs2,
                                   vuint16mf4_t vs1, size_t vl);
 vfloat16mf4_t __riscv_vrgather_tu(vfloat16mf4_t vd, vfloat16mf4_t vs2,
                                   size_t vs1, size_t vl);
@@ -3987,7 +3987,7 @@ vuint64m8_t __riscv_vrgatherei16_mu(vbool8_t vm, vuint64m8_t vd,
 <h4 id="policy-variant-overloadedvector-compress"><a class="anchor" href="#policy-variant-overloadedvector-compress"></a>Vector Compress Intrinsics</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-c" data-lang="c">vfloat16mf4_t __riscv_vcompress_tu(vfloat16mf4_t vd, vfloat16mf4_t vs2,
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vcompress_tu(vfloat16mf4_t vd, vfloat16mf4_t vs2,
                                    vbool64_t vs1, size_t vl);
 vfloat16mf2_t __riscv_vcompress_tu(vfloat16mf2_t vd, vfloat16mf2_t vs2,
                                    vbool32_t vs1, size_t vl);
