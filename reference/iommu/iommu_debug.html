@@ -432,7 +432,7 @@ translation, if the process completes successfully, is reported through the
 translation-response registers. If the process stops due to faults then the
 faults are reported normally in the fault-queue and the translation-response
 registers updated with a failure indicator. If the IOVA is determined to be
-that of a virtual interrupt file (<a href="#MSI_ID">[MSI_ID]</a>) and the corresponding MSI PTE is
+that of a virtual interrupt file (<a href="iommu_data_structures.html#MSI_ID" class="xref page">MSI address mask and pattern</a>) and the corresponding MSI PTE is
 in MRIF mode, then the process stops and reports a "Transaction type disallowed"
 (cause = 260) fault.</p>
 </div>
@@ -453,16 +453,16 @@ Requests.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>tr_req_iova</code> (<a href="#TRR_IOVA">[TRR_IOVA]</a>)</p>
+<p><code>tr_req_iova</code> (<a href="iommu_registers.html#TRR_IOVA" class="xref page">Translation-request IOVA</a>)</p>
 </li>
 <li>
-<p><code>tr_req_ctl</code> (<a href="#TRR_CTRL">[TRR_CTRL]</a>)</p>
+<p><code>tr_req_ctl</code> (<a href="iommu_registers.html#TRR_CTRL" class="xref page">Translation-request control</a>)</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>The translation-response interface consists of a single 64-bit RO register
-<code>tr_response</code> (<a href="#TRR_RSP">[TRR_RSP]</a>)</p>
+<code>tr_response</code> (<a href="iommu_registers.html#TRR_RSP" class="xref page">Translation-response</a>)</p>
 </div>
 <div class="paragraph">
 <p>To request a translation, the <code>tr_req_iova</code> register is written first with
