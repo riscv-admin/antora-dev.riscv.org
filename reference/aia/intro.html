@@ -637,7 +637,7 @@ central hub for interrupts, routing and prioritizing external interrupts
 for each hart as illustrated in <a href="#intrsWithoutIMSICs">Figure 1</a>.
 Interrupts may be selectively routed either to machine level or to
 supervisor level at each hart. The APLIC is specified in
-<a href="#AdvPLIC">[AdvPLIC]</a>.</p>
+<a href="AdvPLIC.html#AdvPLIC" class="xref page">AdvPLIC.adoc#AdvPLIC</a>.</p>
 </div>
 <div class="paragraph">
 <p>Without IMSICs, the current Advanced Interrupt Architecture does not
@@ -682,9 +682,9 @@ the latter indicating which individual interrupts the hart is currently
 prepared to receive.</p>
 </div>
 <div class="paragraph">
-<p>IMSIC units are fully defined in <a href="#IMSIC">[IMSIC]</a>. The
+<p>IMSIC units are fully defined in <a href="IMSIC.html#IMSIC" class="xref page">IMSIC.adoc#IMSIC</a>. The
 format of MSIs used by the RISC-V Advanced Interrupt Architecture is described
-in that chapter, <a href="#MSIEncoding">[MSIEncoding]</a>.</p>
+in that chapter, <a href="IMSIC.html#MSIEncoding" class="xref page">IMSIC.adoc#MSIEncoding</a>.</p>
 </div>
 <div class="paragraph">
 <p>When the harts in a RISC-V system have IMSICs, the system will normally still
@@ -694,12 +694,12 @@ interrupts to harts directly by wires as in <a href="#intrsWithoutIMSICs">Figure
 <div class="paragraph">
 <p>If RISC-V harts implement the H extension,
 IMSICs may have additional <em>guest interrupt files</em> for delivering
-interrupts to virtual machines. Besides <a href="#IMSIC">[IMSIC]</a> on
-the IMSIC, see <a href="#VSLevel">[VSLevel]</a> which specifically
+interrupts to virtual machines. Besides <a href="IMSIC.html#IMSIC" class="xref page">IMSIC.adoc#IMSIC</a> on
+the IMSIC, see <a href="VSLevel.html#VSLevel" class="xref page">VSLevel.adoc#VSLevel</a> which specifically
 covers interrupts to virtual machines. If the system also contains an
 IOMMU to perform address translation of memory accesses made by I/O
 devices, then MSIs from those same devices may require special handling.
-This topic is addressed in <a href="#IOMMU">[IOMMU]</a>, "IOMMU Support for MSIs to Virtual Machines."</p>
+This topic is addressed in <a href="IOMMU.html#IOMMU" class="xref page">IOMMU.adoc#IOMMU</a>, "IOMMU Support for MSIs to Virtual Machines."</p>
 </div>
 </div>
 <div class="sect3">
@@ -711,7 +711,7 @@ harts. The Privileged Architecture&#8217;s timer interrupts remain supported
 in full, and software interrupts remain at least partly supported,
 although neither appears in <a href="#intrsWithoutIMSICs">Figure 1</a>
 and <a href="#intrsWithIMSICs">Figure 2</a>. For the specifics on software interrupts,
-refer to <a href="#IPIs">[IPIs]</a>, "Interprocessor Interrupts (IPIs).""</p>
+refer to <a href="IPIs.html#IPIs" class="xref page">IPIs.adoc#IPIs</a>, "Interprocessor Interrupts (IPIs).""</p>
 </div>
 <div class="paragraph">
 <p>The Advanced Interrupt Architecture adds considerable support for <em>local
@@ -864,7 +864,7 @@ identities only with regard to external interrupts.</p>
 </div>
 <div class="paragraph">
 <p>The local interrupts defined by the Advanced Interrupt Architecture and
-their handling are covered mainly in <a href="#MSLevel">[MSLevel]</a>,
+their handling are covered mainly in <a href="MSLevel.html#MSLevel" class="xref page">MSLevel.adoc#MSLevel</a>,
 "Interrupts for Machine and Supervisor Levels."</p>
 </div>
 </div>
@@ -891,7 +891,7 @@ hart.</p>
 <p>To send an interprocessor interrupt (IPI) to multiple harts, the
 originating hart need only execute a loop, sending an individual IPI to
 each destination hart. For IPIs to a single destination hart, see
-<a href="#IPIs">[IPIs]</a>.</p>
+<a href="IPIs.html#IPIs" class="xref page">IPIs.adoc#IPIs</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1014,8 +1014,8 @@ without the H extension).</p>
 <div class="paragraph">
 <p>Software development tools like compilers and assemblers need not be
 concerned about whether an IMSIC exists but should just allow attempts
-to access the IMSIC CSRs (described in <a href="#CSRs">[CSRs]</a>
-and <a href="#IMSIC">[IMSIC]</a>) if Smaia or Ssaia is indicated. Without an
+to access the IMSIC CSRs (described in <a href="CSRs.html#CSRs" class="xref page">CSRs.adoc#CSRs</a>
+and <a href="IMSIC.html#IMSIC" class="xref page">IMSIC.adoc#IMSIC</a>) if Smaia or Ssaia is indicated. Without an
 actual IMSIC, such attempts may trap, but that is not a problem for the
 development tools.</p>
 </div>
