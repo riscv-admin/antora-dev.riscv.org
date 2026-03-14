@@ -620,9 +620,13 @@
           GitHub Project
         </a>
 
+        <a href="https://riscv.atlassian.net/wiki/external/YTc0N2FlZDJmNTdiNDJlYzhiMGIyODFlOGQ0YWQyZDg" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"/><circle cx="148.5" cy="250" r="31.5" fill="currentColor"/><circle cx="250" cy="250" r="31.5" fill="currentColor"/><circle cx="351.5" cy="250" r="31.5" fill="currentColor"/></svg>
+          More Details
+        </a>
+      
 
-
-          <a href="https://github.com/riscv/docs.riscv.org/blob/main/static/pdf/riscv-interrupts.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
+          <a href="_attachments/riscv-brs-spec.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -838,157 +842,10 @@ present. <a href="#acpi-ids">See RVI ACPI IDs</a>.</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="sect2">
-<h3 id="acpi-ids"><a class="anchor" href="#acpi-ids"></a>RVI-specific ACPI IDs</h3>
 <div class="paragraph">
-<p>ACPI ID is used in the <code>_HID</code> (Hardware ID), <code>_CID</code> (Compatible ID) or
-<code>_SUB</code> (Subsystem ID) objects as described in the ACPI Specification for
-devices, that do not have a standard enumeration mechanism. The ACPI ID
-consists of two parts: a vendor identifier followed by a product identifier.</p>
+<p>Unresolved include directive in modules/ROOT/pages/acpi.adoc - include::acpi-id.adoc[]
+Unresolved include directive in modules/ROOT/pages/acpi.adoc - include::acpi-prop.adoc[]</p>
 </div>
-<div class="paragraph">
-<p>Vendor IDs consist of 4 characters, each character being either an
-uppercase letter (A-Z) or a numeral (0-9). The vendor ID SHOULD be
-unique across the Industry and registered by the UEFI forum. For RVI
-standard devices, <code>RSCV</code> is the vendor ID registered. Vendor-specific
-devices can use an appropriate vendor ID registered for the manufacturer.</p>
-</div>
-<div class="paragraph">
-<p>Product IDs are always four-character hexadecimal numbers (0-9
-and A-F). The device manufacturer is responsible for assigning this
-identifier to each product model.</p>
-</div>
-<div class="paragraph">
-<p>This document contains the canonical list of ACPI IDs for the namespace
-devices that adhere to the RVI specifications. The RVI task groups may
-make pull requests against this repository to request the allocation of
-ACPI ID for any new device.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 83.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">ACPI ID</th>
-<th class="tableblock halign-center valign-top">Device</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RSCV0001</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RISC-V Platform-Level Interrupt Controller (PLIC)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RSCV0002</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RISC-V Advanced Platform-Level Interrupt Controller (APLIC)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RSCV0003</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NS16550 UART compatible with an SPCR definition using <code>Interface Type</code> 0x12</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RSCV0004</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RISC-V IOMMU implemented as a platform device</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RSCV0005</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RISC-V SBI Message Proxy (MPXY) Mailbox Controller</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RSCV0006</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">RISC-V RPMI System MSI Interrupt Controller</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>Also see <a href="#acpi-props-uart">ACPI Device Properties for UART Devices</a>.</em></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="acpi-props"><a class="anchor" href="#acpi-props"></a>RVI-specific ACPI Device Properties</h3>
-<div class="paragraph">
-<p>This section is used to define the <code>_DSD</code> device properties cite:[DSD] in the <code>rscv-</code> namespace.</p>
-</div>
-<div class="paragraph">
-<p>Where explicit values are provided in a property definition, only these values must be used. System behavior with any other values is undefined.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 12.5%;">
-<col style="width: 62.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Property</th>
-<th class="tableblock halign-center valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><em>Currently, there are no properties defined in the <code>rscv-</code> namespace. Request for new property names in the <code>rscv-</code> namespace should be made as a git pull request to this table.</em></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="acpi-props-uart"><a class="anchor" href="#acpi-props-uart"></a>ACPI Device Properties for UART Devices</h3>
-<div class="paragraph">
-<p>Generic 16550-compatible UART devices can have device properties in the global name space
-since Operating Systems are already using them.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 12.5%;">
-<col style="width: 62.5%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Property</th>
-<th class="tableblock halign-center valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clock-frequency</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Clock feeding the IP block in Hz.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><em>A value of zero will preclude the ability to set the baud rate, or
-to configure a disabled device.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reg-offset</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Offset to apply to the register map base address from the start of the registers.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reg-shift</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Quantity to shift the register offsets by.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reg-io-width</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The size (in bytes) of the register accesses that should be performed on the device.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><em>1, 2, 4 or 8.</em></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fifo-size</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The FIFO size (in bytes).</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 </div>
