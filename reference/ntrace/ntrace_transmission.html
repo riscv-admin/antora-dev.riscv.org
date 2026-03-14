@@ -581,8 +581,16 @@
           GitHub Project
         </a>
 
+        <a href="https://riscv.atlassian.net/wiki/external/ZTUxYTJmNWRkYzhmNDM4ZDg5OWNlMmQxODMyYjY3YjI" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"/><circle cx="148.5" cy="250" r="31.5" fill="currentColor"/><circle cx="250" cy="250" r="31.5" fill="currentColor"/><circle cx="351.5" cy="250" r="31.5" fill="currentColor"/></svg>
+          More Details
+        </a>
+      
 
-
+          <a href="_attachments/RISC-V-N-Trace.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+            <span>Download PDF</span>
+          </a>
           </div>
   </div>
 </aside>
@@ -616,7 +624,7 @@
 <div class="paragraph">
 <p>N-Trace message transmission protocol is a strict subset of IEEE-5001 Nexus Standard trace messaging protocol.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table id="N-Trace_subset" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. N-Trace subset</caption>
 <colgroup>
 <col style="width: 25%;">
@@ -723,7 +731,7 @@
 <div class="paragraph">
 <p>The table below provides possible sequences of <strong>MSEO[1:0]</strong> bits (to expand above rules - <strong>highlighted</strong> MSEO represent the actual function):</p>
 </div>
-<table class="tableblock frame-all grid-all" style="width: 80%;">
+<table id="MSEO_Transitions" class="tableblock frame-all grid-all" style="width: 80%;">
 <caption class="title">Table 2. Transitions of MSEO Bits</caption>
 <colgroup>
 <col style="width: 40%;">
@@ -981,7 +989,7 @@ How it is done is not defined in this specification. Here are two possible imple
 <div class="paragraph">
 <p>Table below shows one N-Trace message with several fields. It is an output from N-Trace dump tool (part of N-Trace reference C code) with an added <strong>Explanation</strong> column.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table id="MDO_MSEO_Examples" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 3. MDO and MSEO Encoding Example</caption>
 <colgroup>
 <col style="width: 6%;">

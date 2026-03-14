@@ -581,8 +581,16 @@
           GitHub Project
         </a>
 
+        <a href="https://riscv.atlassian.net/wiki/external/ZTUxYTJmNWRkYzhmNDM4ZDg5OWNlMmQxODMyYjY3YjI" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"/><circle cx="148.5" cy="250" r="31.5" fill="currentColor"/><circle cx="250" cy="250" r="31.5" fill="currentColor"/><circle cx="351.5" cy="250" r="31.5" fill="currentColor"/></svg>
+          More Details
+        </a>
+      
 
-
+          <a href="_attachments/RISC-V-N-Trace.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+            <span>Download PDF</span>
+          </a>
           </div>
   </div>
 </aside>
@@ -620,7 +628,7 @@
 <div class="paragraph">
 <p>The table below provides a detailed mapping of causes for terminating an instruction block to the corresponding <strong>itype</strong> encoding. It could be used during development of ingress port logic inside of a hart. For some instructions operands matter - for example <strong>JALR rd,rs1</strong> instruction may generate 5 different, distinct <strong>itype</strong> values.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table id="Generating_itype_for_different_instructions" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Generating itype for different instructions</caption>
 <colgroup>
 <col style="width: 18%;">
@@ -849,7 +857,7 @@ Jump instructions (CM.JT and CM.JALT) defined by ratified <strong>Zcmt</strong> 
 <div class="paragraph">
 <p>Table below defines how N-Trace encoder should handle different 3-bit <strong>itype</strong> values on trace ingress port.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table id="Handling_of_3-bit_itype_values" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 2. Handling of 3-bit itype values</caption>
 <colgroup>
 <col style="width: 5%;">
@@ -926,7 +934,7 @@ Emit Indirect Branch message with <a href="#field_B-TYPE">B-TYPE</a>=0.<br>
 <div class="paragraph">
 <p>When the <strong>itype</strong> input of ingress port is 4-bit wide, the Indirect jump (with or without linkage) <strong>itype=6</strong> should not be generated and one of the following values should be generated instead. Encoder must handle call stack action as described in the <a href="#Implicit Return Optimization">Implicit Return Optimization</a> chapter (if enabled).</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table id="Handling_of_4-bit_itype_values" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 3. Handling of 4-bit itype values</caption>
 <colgroup>
 <col style="width: 5%;">

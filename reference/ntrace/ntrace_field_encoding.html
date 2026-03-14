@@ -581,8 +581,16 @@
           GitHub Project
         </a>
 
+        <a href="https://riscv.atlassian.net/wiki/external/ZTUxYTJmNWRkYzhmNDM4ZDg5OWNlMmQxODMyYjY3YjI" target="_blank" rel="noopener noreferrer" class="sidebar-link">
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"/><circle cx="148.5" cy="250" r="31.5" fill="currentColor"/><circle cx="250" cy="250" r="31.5" fill="currentColor"/><circle cx="351.5" cy="250" r="31.5" fill="currentColor"/></svg>
+          More Details
+        </a>
+      
 
-
+          <a href="_attachments/RISC-V-N-Trace.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+            <span>Download PDF</span>
+          </a>
           </div>
   </div>
 </aside>
@@ -1085,7 +1093,7 @@ Decoder must analyze every instruction in each code block being processed to kno
 </div>
 </li>
 <li>
-<p><a href="#msg2_ProgramTraceSync">ProgramTraceSync</a> (I-CNT overflown to 9 at an address 0x112)</p>
+<p><a href="#msg2_ProgTraceSync">ProgTraceSync</a> (I-CNT overflown to 9 at an address 0x112)</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1188,7 +1196,7 @@ That field identifies the reason for synchronization and such messages include t
 </tr>
 </table>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table id="SYNC_Field_Values" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. SYNC Field Values</caption>
 <colgroup>
 <col style="width: 6%;">
@@ -1325,50 +1333,50 @@ Periodic Synchronization (SYNC=2) messages may not be precise and may be delayed
 <div class="paragraph">
 <p>The following cases are created to help illustrate the type of N-trace <a href="#Synchronizing Messages">synchronizing message</a> generated for different scenarios. Events which may occur while a hart is running or halted:</p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/example_key.PNG" alt="example key">
+<img src="images/example_key.PNG" alt="example key">
 </div>
 </div>
 <div class="paragraph">
 <p><strong>Case1: Enable/disable debug while tracing:</strong></p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/case1_enable_disable_debug_while_tracing.PNG" alt="case1 enable disable debug while tracing">
+<img src="images/case1_enable_disable_debug_while_tracing.PNG" alt="case1 enable disable debug while tracing">
 </div>
 </div>
 <div class="paragraph">
 <p><strong>Case2: Enable trace while in debug:</strong></p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/case2_enable_trace_while_in_debug.PNG" alt="case2 enable trace while in debug">
+<img src="images/case2_enable_trace_while_in_debug.PNG" alt="case2 enable trace while in debug">
 </div>
 </div>
 <div style="page-break-after: always;"></div>
 <div class="paragraph">
 <p><strong>Case3: Disable trace while in debug:</strong></p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/case3_disable_trace_while_in_debug.PNG" alt="case3 disable trace while in debug">
+<img src="images/case3_disable_trace_while_in_debug.PNG" alt="case3 disable trace while in debug">
 </div>
 </div>
 <div class="paragraph">
 <p><strong>Case4: Sync trigger event (internal or external):</strong></p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/case4_sync_trigger_event.PNG" alt="case4 sync trigger event">
+<img src="images/case4_sync_trigger_event.PNG" alt="case4 sync trigger event">
 </div>
 </div>
 <div class="paragraph">
 <p><strong>Case5: Enable and disable while in debug:</strong></p>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/case5_enable_disable_while_in_debug.PNG" alt="case5 enable disable while in debug">
+<img src="images/case5_enable_disable_while_in_debug.PNG" alt="case5 enable disable while in debug">
 </div>
 </div>
 <div class="paragraph">
@@ -1384,9 +1392,9 @@ Periodic Synchronization (SYNC=2) messages may not be precise and may be delayed
 </li>
 </ul>
 </div>
-<div class="imageblock">
+<div class="imageblock unresolved">
 <div class="content">
-<img src="_images/case6_periodic.PNG" alt="case6 periodic">
+<img src="images/case6_periodic.PNG" alt="case6 periodic">
 </div>
 </div>
 <div class="paragraph">
@@ -1487,7 +1495,7 @@ The TSTAMP field is a variable-length field, and most significant bits set to 0 
 <div class="paragraph">
 <p>However, sometimes normal flow is interrupted (by exception or interrupt) or some other extra event (trigger/enable/disable) happens and sequence of messages or values of some fields may be a bit unusual. Table below is trying to explain some corner cases.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
+<table id="Corner_Cases" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 2. Corner Cases</caption>
 <colgroup>
 <col style="width: 20%;">
