@@ -248,16 +248,16 @@
     <a class="nav-link"  href="terms.html">Terms and Abbreviations</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="rimt-main.html">RISC-V IO Mapping Table (RIMT)</a>
+    <a class="nav-link"  href="rimt-main.html">Chapter 2. RISC-V IO Mapping Table (RIMT)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mapping-example.html">ID Mapping Examples</a>
+    <a class="nav-link"  href="mapping-example.html">Chapter 3. ID Mapping Examples</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="bibliography.html">Bibliography</a>
+    <a class="nav-link"  href="bibliography.html">Chapter 4. Bibliography</a>
   </li>
 </ul>
   </li>
@@ -638,11 +638,11 @@
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
       <li>IO Mapping Table</li>
-      <li><a href="rimt-main.html">RISC-V IO Mapping Table (RIMT)</a></li>
+      <li><a href="rimt-main.html">Chapter 2. RISC-V IO Mapping Table (RIMT)</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="risc-v-io-mapping-table-rimt"><a class="anchor" href="#risc-v-io-mapping-table-rimt"></a>RISC-V IO Mapping Table (RIMT)</h2>
+<h2 id="2-1-risc-v-io-mapping-table-rimt"><a class="anchor" href="#2-1-risc-v-io-mapping-table-rimt"></a>2.1. RISC-V IO Mapping Table (RIMT)</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <a href="#rimt">Table 1</a> shows the structure of RIMT. Apart from the basic header, RIMT can contain several
@@ -761,7 +761,7 @@ device.</p>
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="rimt-node-structure-types"><a class="anchor" href="#rimt-node-structure-types"></a>RIMT node structure types</h3>
+<h3 id="2-1-1-rimt-node-structure-types"><a class="anchor" href="#2-1-1-rimt-node-structure-types"></a>2.1.1. RIMT node structure types</h3>
 <div class="paragraph">
 <p>RIMT node structures can be broadly classified as two types: one is the actual IOMMU node
 structure and the other is the device node structure for devices bound to an IOMMU. The device node
@@ -802,7 +802,7 @@ types for those structures.</p>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="iommu-node"><a class="anchor" href="#iommu-node"></a>IOMMU Node</h4>
+<h4 id="2-1-1-1-iommu-node"><a class="anchor" href="#2-1-1-1-iommu-node"></a>2.1.1.1. IOMMU Node</h4>
 <div class="paragraph">
 <p>The IOMMU can be implemented as a platform device or as a PCIe device. The IOMMU node is
 the structure in RIMT used to report the configuration and capabilities of each IOMMU in the system.</p>
@@ -1054,7 +1054,7 @@ the structure in RIMT used to report the configuration and capabilities of each 
 </table>
 </div>
 <div class="sect3">
-<h4 id="pcie-root-complex-node"><a class="anchor" href="#pcie-root-complex-node"></a>PCIe Root Complex Node</h4>
+<h4 id="2-1-1-2-pcie-root-complex-node"><a class="anchor" href="#2-1-1-2-pcie-root-complex-node"></a>2.1.1.2. PCIe Root Complex Node</h4>
 <div class="paragraph">
 <p>The PCIe root complex node is the logical PCIe root complex that can be used to
 represent an entire physical root complex, an RCiEP/set of RCiEPs, a standalone PCIe device, or the
@@ -1306,7 +1306,7 @@ the input to the IOMMU. See <a href="#Mapping-Examples">[Mapping-Examples]</a> f
 </table>
 </div>
 <div class="sect3">
-<h4 id="platform-device-node"><a class="anchor" href="#platform-device-node"></a>Platform Device Node</h4>
+<h4 id="2-1-1-3-platform-device-node"><a class="anchor" href="#2-1-1-3-platform-device-node"></a>2.1.1.3. Platform Device Node</h4>
 <div class="paragraph">
 <p>There may be non-PCIe platform devices that are enumerated by using Differentiated System Description
 Table(DSDT). These devices can have one or more source IDs in the mapping table, but they can have
@@ -1409,8 +1409,8 @@ device&#8217;s device driver.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="intro.html">Introduction</a></span>
-  <span class="next"><a href="mapping-example.html">ID Mapping Examples</a></span>
+  <span class="prev"><a href="intro.html">Chapter 1. Introduction</a></span>
+  <span class="next"><a href="mapping-example.html">Chapter 3. ID Mapping Examples</a></span>
 </nav>
 </article>  </div>
 </main>
