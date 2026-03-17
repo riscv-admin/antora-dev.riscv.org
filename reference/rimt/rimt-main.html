@@ -865,7 +865,7 @@ the structure in RIMT used to report the configuration and capabilities of each 
                                                                or PCIe ID (Vendor ID + Device ID) for
                                                                the PCIe IOMMU device. This field adheres to the
                                                                <strong>_HID</strong> format described by the ACPI
-                                                               cite:[ACPI-SPEC] specification.</p></td>
+                                                               [<a href="bibliography.html#bib-acpi-spec" class="xref page">2</a>] specification.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Base Address</p></td>
@@ -1200,7 +1200,7 @@ function number (3-bit) (collectively known as routing identifier or RID). A ran
 single IOMMU only. If there are multiple root complexes with the same PCIe segment number, then their source
 ID ranges must not overlap. For each ACPI device object of the root complex that belongs to the same PCIe
 segment, the firmware must include the Device Specific Method (_DSM), Function Index 5, for preserving boot
-configurations as defined by the PCI Firmware Specification cite:[PCI-FW-SPEC]. The _DSM method must return
+configurations as defined by the PCI Firmware Specification [<a href="bibliography.html#bib-pci-fw-spec" class="xref page">3</a>]. The _DSM method must return
 zero to indicate that the Operating System must preserve PCIe resource assignments made by the firmware at
 boot time.</p>
 </div>
@@ -1252,7 +1252,7 @@ the input to the IOMMU. See <a href="#Mapping-Examples">[Mapping-Examples]</a> f
 <td class="tableblock halign-left valign-top"><p class="tableblock">The base of the destination ID range
                                                                as mapped by this entry. This is the
 							       <strong>device_id</strong> as defined by the RISC-V IOMMU
-							       specification cite:[IOMMU-SPEC]</p></td>
+							       specification [<a href="bibliography.html#bib-iommu-spec" class="xref page">1</a>]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Destination IOMMU Offset</p></td>
