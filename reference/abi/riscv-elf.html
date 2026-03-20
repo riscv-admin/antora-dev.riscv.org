@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="1691a208e75f1026ef6a36153f7872cf41d348f4"> 
+    <meta name="antora-ui-version" content="4e2bf83b464368ccd1b25a274e618ed2f0b9d10e"> 
     <meta name="version" content="v1.0">
     <meta name="component" content="abi">
     <meta name="latest-version" content="false">
@@ -107,7 +107,7 @@
             </li>
           </ul>
 <div class="context">
-  <span class="title">App Enablement</span>
+  <span class="title">Application Enablement</span>
 </div>        <div class="nav-trees" data-component="abi">
           <div class="version-box">
             <select data-component="abi" class="select-version">
@@ -124,10 +124,10 @@
                 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">RISC-V ABI Specifications</span>
+    <span class="nav-text">Application Binary Interface</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="index.html">RISC-V ABI</a>
+    <a class="nav-link"  href="index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="copyright.html">Chapter 1. Copyright and License</a>
@@ -420,8 +420,7 @@
 <div class="breadcrumbs-container">
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
-      <li><a href="index.html">ABI Specification</a></li>
-      <li>RISC-V ABI Specifications</li>
+      <li>Application Binary Interface</li>
       <li><a href="riscv-elf.html">Chapter 5. ELF Specification</a></li>
     </ul>
   </nav>
@@ -751,7 +750,50 @@ for more detail on how to mangle types. Note that <code>__bf16</code> is mangled
 same way as <code>std::bfloat16_t</code>.</p>
 </div>
 <div class="sect2">
-<h3 id="5-3-1-name-mangling-for-vector-data-types-vector-mask-types-and-vector-tuple-types"><a class="anchor" href="#5-3-1-name-mangling-for-vector-data-types-vector-mask-types-and-vector-tuple-types"></a>5.3.1. Name Mangling for Vector Data Types, Vector Mask Types and Vector Tuple Types.</h3>
+<h3 id="5-3-1-name-mangling-for-standard-calling-convention-variant"><a class="anchor" href="#5-3-1-name-mangling-for-standard-calling-convention-variant"></a>5.3.1. Name Mangling for Standard Calling Convention Variant</h3>
+<div class="paragraph">
+<p>Functions using the standard calling convention variant have to append extra ABI tag to
+the function name mangling, the rule is the same as the "ABI tags" section in
+<em>Itanium C&#43;&#43; ABI</em>.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 80%;">
+<caption class="title">Table 1. ABI Tag name for calling convention variants</caption>
+<colgroup>
+<col style="width: 71.4285%;">
+<col style="width: 28.5715%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">ABI tag name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Standard fixed-length vector calling convention variant</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">riscv_vls_cc_&lt;ABI_VLEN&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">    __attribute__((riscv_vls_cc(128))) void foo();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>is mangled as</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">    _Z3fooB12riscv_vls_cc_128v</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-3-2-name-mangling-for-vector-data-types-vector-mask-types-and-vector-tuple-types"><a class="anchor" href="#5-3-2-name-mangling-for-vector-data-types-vector-mask-types-and-vector-tuple-types"></a>5.3.2. Name Mangling for Vector Data Types, Vector Mask Types and Vector Tuple Types.</h3>
 <div class="paragraph">
 <p>The vector data types and vector mask types, as defined in the section
 <a href="#Vector Type Sizes and Alignments">[Vector Type Sizes and Alignments]</a>, are treated as vendor-extended types in
@@ -886,10 +928,10 @@ EM_RISCV (243) for RISC-V ELF files.</p>
 <dd>
 <p>Describes the format of this ELF file.  These flags are used by the
 linker to disallow linking ELF files with incompatible ABIs together,
-<a href="#e-flags-layout">Table 1</a> shows the layout of e_flags, and flag details are listed
+<a href="#e-flags-layout">Table 2</a> shows the layout of e_flags, and flag details are listed
 below.</p>
 <table id="e-flags-layout" class="tableblock frame-all grid-all" style="width: 80%;">
-<caption class="title">Table 1. Layout of e_flags</caption>
+<caption class="title">Table 2. Layout of e_flags</caption>
 <colgroup>
 <col style="width: 7.1428%;">
 <col style="width: 14.2857%;">
@@ -1103,10 +1145,10 @@ remaining 6 bits have no defined meaning in the ELF gABI. We use the highest
 bit to mark functions that do not follow the standard calling convention for
 the ABI in use.</p>
 <div class="paragraph">
-<p>The defined processor-specific <code>st_other</code> flags are listed in <a href="#rv-st-other">Table 2</a>.</p>
+<p>The defined processor-specific <code>st_other</code> flags are listed in <a href="#rv-st-other">Table 3</a>.</p>
 </div>
 <table id="rv-st-other" class="tableblock frame-all grid-all" style="width: 60%;">
-<caption class="title">Table 2. RISC-V-specific <code>st_other</code> flags</caption>
+<caption class="title">Table 3. RISC-V-specific <code>st_other</code> flags</caption>
 <colgroup>
 <col style="width: 75%;">
 <col style="width: 25%;">
@@ -1152,7 +1194,7 @@ machine word sized relocations that are used for symbol addresses in the
 Global Offset Table or DWARF meta data.</p>
 </div>
 <div class="paragraph">
-<p><a href="#reloc-table">Table 3</a> provides details of the RISC-V ELF relocations; the meaning of each
+<p><a href="#reloc-table">Table 4</a> provides details of the RISC-V ELF relocations; the meaning of each
 column is given below:</p>
 </div>
 <div class="dlist">
@@ -1198,7 +1240,7 @@ symbols can be found in <a href="#Calculation Symbols">[Calculation Symbols]</a>
 </dl>
 </div>
 <table id="reloc-table" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. Relocation types</caption>
+<caption class="title">Table 4. Relocation types</caption>
 <colgroup>
 <col style="width: 7.1428%;">
 <col style="width: 21.4285%;">
@@ -1807,7 +1849,27 @@ symbols can be found in <a href="#Calculation Symbols">[Calculation Symbols]</a>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" rowspan="2"><p class="tableblock">66-190</p></td>
+<td class="tableblock halign-right valign-top" rowspan="2"><p class="tableblock">66</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><strong>Reserved</strong></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Reserved for future standard use</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top" rowspan="2"><p class="tableblock">67-76</p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><strong>Reserved</strong></p></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Reserved for Y base ISA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-right valign-top" rowspan="2"><p class="tableblock">77-190</p></td>
 <td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><strong>Reserved</strong></p></td>
 <td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">-</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -1866,7 +1928,9 @@ The linker must not alter the length of the ULEB128-encoded value.
 purpose. These vendor-specific relocations must be preceded by a
 <code>R_RISCV_VENDOR</code> relocation against a vendor identifier symbol. The preceding
 <code>R_RISCV_VENDOR</code> relocation is used by the linker to choose the correct
-implementation for the associated nonstandard relocation.</p>
+implementation for the associated nonstandard relocation. This scheme only
+specifies how to encode static nonstandard relocations; a future version of this
+specification may extend the scheme to support dynamic nonstandard relocations.</p>
 </div>
 <div class="paragraph">
 <p>The vendor identifier symbol should be a defined symbol and should set the type
@@ -1899,11 +1963,11 @@ be shown.</p>
 <div class="sect3">
 <h4 id="5-4-4-2-calculation-symbols"><a class="anchor" href="#5-4-4-2-calculation-symbols"></a>5.4.4.2. Calculation Symbols</h4>
 <div class="paragraph">
-<p><a href="#var-reloc-calc">Table 4</a> provides details on the variables used in relocation
+<p><a href="#var-reloc-calc">Table 5</a> provides details on the variables used in relocation
 calculation:</p>
 </div>
 <table id="var-reloc-calc" class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 4. Variables used in relocation calculation</caption>
+<caption class="title">Table 5. Variables used in relocation calculation</caption>
 <colgroup>
 <col>
 <col>
@@ -1965,10 +2029,10 @@ of the <code>__global_pointer$</code> symbol into register <code>gp</code> (aka 
 <div class="sect3">
 <h4 id="5-4-4-3-field-symbols"><a class="anchor" href="#5-4-4-3-field-symbols"></a>5.4.4.3. Field Symbols</h4>
 <div class="paragraph">
-<p><a href="#var-reloc-field">Table 5</a> provides details on the variables used in relocation fields:</p>
+<p><a href="#var-reloc-field">Table 6</a> provides details on the variables used in relocation fields:</p>
 </div>
 <table id="var-reloc-field" class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 5. Variables used in relocation fields</caption>
+<caption class="title">Table 6. Variables used in relocation fields</caption>
 <colgroup>
 <col>
 <col>
@@ -2050,10 +2114,10 @@ of the <code>__global_pointer$</code> symbol into register <code>gp</code> (aka 
 <div class="sect3">
 <h4 id="5-4-4-4-constants"><a class="anchor" href="#5-4-4-4-constants"></a>5.4.4.4. Constants</h4>
 <div class="paragraph">
-<p><a href="#const-reloc-field">Table 6</a> provides details on the constants used in relocation fields:</p>
+<p><a href="#const-reloc-field">Table 7</a> provides details on the constants used in relocation fields:</p>
 </div>
 <table id="const-reloc-field" class="tableblock frame-all grid-all" style="width: 30%;">
-<caption class="title">Table 6. Constants used in relocation fields</caption>
+<caption class="title">Table 7. Constants used in relocation fields</caption>
 <colgroup>
 <col style="width: 75%;">
 <col style="width: 25%;">
@@ -2229,7 +2293,7 @@ to the <code>JAL</code> instruction when the procedure or PLT entry is within (-
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL (symbol), R_RISCV_RELAX (symbol)
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL (symbol), R_RISCV_RELAX
     jalr  ra, ra, 0</code></pre>
 </div>
 </div>
@@ -2238,7 +2302,7 @@ to the <code>JAL</code> instruction when the procedure or PLT entry is within (-
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL_PLT (symbol), R_RISCV_RELAX (symbol)
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL_PLT (symbol), R_RISCV_RELAX
     jalr  ra, ra, 0</code></pre>
 </div>
 </div>
@@ -2250,7 +2314,7 @@ to the <code>JAL</code> instruction when the procedure or PLT entry is within (-
 that can represent an even signed 21-bit offset (-1MiB to +1MiB-2).</p>
 </div>
 <div class="paragraph">
-<p>Branch (SB-Type) instructions have a <code>R_RISCV_BRANCH</code> relocation that
+<p>Branch (B-Type) instructions have a <code>R_RISCV_BRANCH</code> relocation that
 can represent an even signed 13-bit offset (-4096 to +4094).</p>
 </div>
 </div>
@@ -2455,11 +2519,11 @@ past the end of the TCB.</p>
 </div>
 <div class="paragraph">
 <p>There are various thread local storage models for statically allocated or
-dynamically allocated thread local storage. <a href="#tls-model">Table 7</a> lists the
+dynamically allocated thread local storage. <a href="#tls-model">Table 8</a> lists the
 thread local storage models:</p>
 </div>
 <table id="tls-model" class="tableblock frame-all grid-all" style="width: 70%;">
-<caption class="title">Table 7. TLS models</caption>
+<caption class="title">Table 8. TLS models</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -2742,10 +2806,10 @@ to associate the <code>R_RISCV_TLSDESC_CALL</code> relocation with the <code>jal
 <div class="sect3">
 <h4 id="5-4-6-1-section-types"><a class="anchor" href="#5-4-6-1-section-types"></a>5.4.6.1. Section Types</h4>
 <div class="paragraph">
-<p>The defined processor-specific section types are listed in <a href="#rv-section-type">Table 8</a>.</p>
+<p>The defined processor-specific section types are listed in <a href="#rv-section-type">Table 9</a>.</p>
 </div>
 <table id="rv-section-type" class="tableblock frame-all grid-all" style="width: 80%;">
-<caption class="title">Table 8. RISC-V-specific section types</caption>
+<caption class="title">Table 9. RISC-V-specific section types</caption>
 <colgroup>
 <col style="width: 42.8571%;">
 <col style="width: 42.8571%;">
@@ -2770,10 +2834,10 @@ to associate the <code>R_RISCV_TLSDESC_CALL</code> relocation with the <code>jal
 <div class="sect3">
 <h4 id="5-4-6-2-special-sections"><a class="anchor" href="#5-4-6-2-special-sections"></a>5.4.6.2. Special Sections</h4>
 <div class="paragraph">
-<p><a href="#rv-section">Table 9</a> lists the special sections defined by this ABI.</p>
+<p><a href="#rv-section">Table 10</a> lists the special sections defined by this ABI.</p>
 </div>
 <table id="rv-section" class="tableblock frame-all grid-all" style="width: 80%;">
-<caption class="title">Table 9. RISC-V-specific sections</caption>
+<caption class="title">Table 10. RISC-V-specific sections</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -2819,10 +2883,10 @@ target addresses. The minimum alignment of this section is 64 bytes.</p>
 <div class="sect2">
 <h3 id="5-4-7-program-header-table"><a class="anchor" href="#5-4-7-program-header-table"></a>5.4.7. Program Header Table</h3>
 <div class="paragraph">
-<p>The defined processor-specific segment types are listed in <a href="#rv-seg-type">Table 10</a>.</p>
+<p>The defined processor-specific segment types are listed in <a href="#rv-seg-type">Table 11</a>.</p>
 </div>
 <table id="rv-seg-type" class="tableblock frame-all grid-all" style="width: 80%;">
-<caption class="title">Table 10. RISC-V-specific segment types</caption>
+<caption class="title">Table 11. RISC-V-specific segment types</caption>
 <colgroup>
 <col style="width: 37.5%;">
 <col style="width: 25%;">
@@ -2870,10 +2934,10 @@ described by <code>PT_RISCV_ATTRIBUTES</code> is present.
 <div class="sect2">
 <h3 id="5-4-9-dynamic-section"><a class="anchor" href="#5-4-9-dynamic-section"></a>5.4.9. Dynamic Section</h3>
 <div class="paragraph">
-<p>The defined processor-specific dynamic array tags are listed in <a href="#rv-dyn-tag">Table 11</a>.</p>
+<p>The defined processor-specific dynamic array tags are listed in <a href="#rv-dyn-tag">Table 12</a>.</p>
 </div>
 <table id="rv-dyn-tag" class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 11. RISC-V-specific dynamic array tags</caption>
+<caption class="title">Table 12. RISC-V-specific dynamic array tags</caption>
 <colgroup>
 <col style="width: 30.7692%;">
 <col style="width: 15.3846%;">
@@ -2969,7 +3033,7 @@ non-standard ABI extensions.</p>
 <div class="sect3">
 <h4 id="5-4-11-2-list-of-attributes"><a class="anchor" href="#5-4-11-2-list-of-attributes"></a>5.4.11.2. List of Attributes</h4>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 12. RISC-V attributes</caption>
+<caption class="title">Table 13. RISC-V attributes</caption>
 <colgroup>
 <col style="width: 30.7692%;">
 <col style="width: 15.3846%;">
@@ -4275,7 +4339,8 @@ can be replaced with a thread-pointer-relative access instruction.</p>
 </dd>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>This relaxation can relax a sequence loading the address of a thread-local symbol reference into a GOT load instruction.</p>
+<p>This relaxation can relax a sequence loading the address of a thread-local symbol reference into a GOT load instruction.
+Unlike most other relaxations, this only requires a <code>R_RISCV_RELAX</code> relocation at the same location as the <code>R_RISCV_TLSDESC_HI20</code> relocation.</p>
 </dd>
 <dt class="hdlist1">Condition</dt>
 <dd>
@@ -4344,7 +4409,8 @@ can be replaced with a thread-pointer-relative access instruction.</p>
 </dd>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>This relaxation can relax a sequence loading the address of a thread-local symbol reference into a thread-pointer-relative instruction sequence.</p>
+<p>This relaxation can relax a sequence loading the address of a thread-local symbol reference into a thread-pointer-relative instruction sequence.
+Unlike most other relaxations, this only requires a <code>R_RISCV_RELAX</code> relocation at the same location as the <code>R_RISCV_TLSDESC_HI20</code> relocation.</p>
 </dd>
 <dt class="hdlist1">Condition</dt>
 <dd>
@@ -4430,7 +4496,7 @@ can be replaced with a thread-pointer-relative access instruction.</p>
 <dd>
 <p>This relaxation type can relax a function call or jump
 instruction into a single table jump instruction with the index of the target
-address in table jump section (<a href="#rv-section">Table 9</a>).
+address in table jump section (<a href="#rv-section">Table 10</a>).
 Before relaxation, the linker scans all relocations and calculates whether
 additional gains can be obtained by using table jump instructions, where
 expected size saving from function-call-related relaxations and the size of jump
@@ -4472,15 +4538,15 @@ jump instruction.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL (symbol), R_RISCV_RELAX (symbol)
+<pre class="highlightjs highlight"><code class="language-asm hljs" data-lang="asm">    auipc ra, 0           # R_RISCV_CALL (symbol), R_RISCV_RELAX
     jalr  ra, ra, 0
 
-    auipc ra, 0           # R_RISCV_CALL_PLT (symbol), R_RISCV_RELAX (symbol)
+    auipc ra, 0           # R_RISCV_CALL_PLT (symbol), R_RISCV_RELAX
     jalr  x0, ra, 0
 
-    jal ra, 0             # R_RISCV_JAL (symbol), R_RISCV_RELAX (symbol)
+    jal ra, 0             # R_RISCV_JAL (symbol), R_RISCV_RELAX
 
-    jal x0, 0             # R_RISCV_JAL (symbol), R_RISCV_RELAX (symbol)</code></pre>
+    jal x0, 0             # R_RISCV_JAL (symbol), R_RISCV_RELAX</code></pre>
 </div>
 </div>
 <div class="paragraph">

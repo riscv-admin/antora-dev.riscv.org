@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="1691a208e75f1026ef6a36153f7872cf41d348f4"> 
+    <meta name="antora-ui-version" content="4e2bf83b464368ccd1b25a274e618ed2f0b9d10e"> 
     <meta name="version" content="v1.0">
     <meta name="component" content="abi">
     <meta name="latest-version" content="false">
@@ -107,7 +107,7 @@
             </li>
           </ul>
 <div class="context">
-  <span class="title">App Enablement</span>
+  <span class="title">Application Enablement</span>
 </div>        <div class="nav-trees" data-component="abi">
           <div class="version-box">
             <select data-component="abi" class="select-version">
@@ -124,10 +124,10 @@
                 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">RISC-V ABI Specifications</span>
+    <span class="nav-text">Application Binary Interface</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="index.html">RISC-V ABI</a>
+    <a class="nav-link"  href="index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="copyright.html">Chapter 1. Copyright and License</a>
@@ -420,8 +420,7 @@
 <div class="breadcrumbs-container">
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
-      <li><a href="index.html">ABI Specification</a></li>
-      <li>RISC-V ABI Specifications</li>
+      <li>Application Binary Interface</li>
       <li><a href="riscv-cc.html">Chapter 4. Calling Conventions</a></li>
     </ul>
   </nav>
@@ -731,8 +730,18 @@ Any procedure that does explicitly write <code>vstart</code> to a nonzero value 
 </div>
 <div class="sect3">
 <h4 id="4-1-4-2-calling-convention-variant"><a class="anchor" href="#4-1-4-2-calling-convention-variant"></a>4.1.4.2. Calling Convention Variant</h4>
+<div class="paragraph">
+<p>Functions that use vector registers to pass arguments and return values must
+follow this calling convention. Some programming languages can require extra
+functions to follow this calling convention (e.g. C/C++ functions with
+attribute <code>riscv_vector_cc</code>).</p>
+</div>
+<div class="paragraph">
+<p>Please refer to the <a href="#Standard Vector Calling Convention Variant">[Standard Vector Calling Convention Variant]</a> section for
+more details about standard vector calling convention variant.</p>
+</div>
 <table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 4. Variant vector register calling convention*</caption>
+<caption class="title">Table 4. Variant vector register calling convention</caption>
 <colgroup>
 <col>
 <col>
@@ -798,16 +807,6 @@ Any procedure that does explicitly write <code>vstart</code> to a nonzero value 
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>*: Functions that use vector registers to pass arguments and return values must
-follow this calling convention. Some programming languages can require extra
-functions to follow this calling convention (e.g. C/C++ functions with
-attribute <code>riscv_vector_cc</code>).</p>
-</div>
-<div class="paragraph">
-<p>Please refer to the <a href="#Standard Vector Calling Convention Variant">[Standard Vector Calling Convention Variant]</a> section for
-more details about standard vector calling convention variant.</p>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -868,6 +867,40 @@ bits are widened according to the sign of their type up to 32 bits, then
 sign-extended to XLEN bits.
 When passed in registers or on the stack, floating-point types narrower than
 XLEN bits are widened to XLEN bits, with the upper bits undefined.</p>
+</div>
+<div class="paragraph">
+<p>When passed in registers or on the stack, <code>_BitInt(N)</code> types are handled as
+follows:
+- For N &lt; XLEN: Types are widened to XLEN bits, with upper bits sign-extended
+  for signed <code>_BitInt(N)</code> or zero-extended for unsigned <code>_BitInt(N)</code>.
+  However, for N = 32 in RV64, both signed and unsigned types are sign-extended.</p>
+</div>
+<div class="paragraph">
+<p>+
+- For N = XLEN: Types are passed using the same rules as scalars that are XLEN
+  bits wide.
+- For XLEN &lt; N ≤ 2×XLEN: Types are passed using the same rules as scalars that
+  are 2×XLEN bits wide.
+  Any unused bits in the most significant chunk are sign-extended for signed
+  types or zero-extended for unsigned types.
+- For N &gt; 2×XLEN: Types are passed by reference (replaced in the argument list
+  with the address). When stored in memory, any unused bits in the most
+  significant chunk are sign-extended for signed types or zero-extended for
+  unsigned types.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>_BitInt(32)</code> on RV64 has a special rule because it behaves consistently with regular <code>int</code> types.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Scalars that are 2×XLEN bits wide are passed in a pair of argument registers,
@@ -1220,9 +1253,392 @@ won&#8217;t disrupt the <code>jmp_buf</code> ABI.
 </tr>
 </table>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Functions that use the standard vector calling convention
+variant follow an additional name mangling rule for C&#43;&#43;.
+For more details, see <a href="#Name Mangling for Standard Calling Convention Variant">[Name Mangling for Standard Calling Convention Variant]</a>.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
-<h3 id="4-2-4-ilp32e-calling-convention"><a class="anchor" href="#4-2-4-ilp32e-calling-convention"></a>4.2.4. ILP32E Calling Convention</h3>
+<h3 id="4-2-4-standard-fixed-length-vector-calling-convention-variant"><a class="anchor" href="#4-2-4-standard-fixed-length-vector-calling-convention-variant"></a>4.2.4. Standard Fixed-length Vector Calling Convention Variant</h3>
+<div class="paragraph">
+<p>This section defines the calling convention variant for fixed-length vectors.
+The intention of this variant is to pass fixed-length vectors via the vector
+registers. For the definition of a fixed-length vector, see
+<a href="#Fixed-Length Vector">[Fixed-Length Vector]</a>.</p>
+</div>
+<div class="paragraph">
+<p>This variant is based on the standard vector calling convention variant:
+the register convention and the rules for passing arguments and return values
+are the same.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The reason we define a separate calling convention variant is that we
+would like to define a flexible convention to utilize the variable length
+feature in the vector extension, also considering embedded vector extensions,
+such as <code>Zve32x</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>ABI_VLEN refers to the width of a vector register in the calling convention
+variant.</p>
+</div>
+<div class="paragraph">
+<p>The ABI_VLEN must be no wider than the ISA&#8217;s VLEN, meaning that the ISA may
+support wider vector registers than the ABI, but the ABI&#8217;s VLEN cannot exceed
+the ISA&#8217;s VLEN.</p>
+</div>
+<div class="paragraph">
+<p>ABI_VLEN represents the width (in bits) of the vector registers available in the
+calling convention for fixed-length vectors. ABI_VLEN can vary from 32 bits
+(as in <code>Zve32x</code>) up to the maximum supported by the ISA. The flexibility of
+ABI_VLEN enables the convention to adapt to both low-end embedded systems and
+high-performance processors that utilize wider vector registers.</p>
+</div>
+<div class="paragraph">
+<p>The ABI_VLEN is a parameter of this calling convention variant. It could be set
+by a command line option for the compiler or specified by a function
+attribute in the source code.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+We suggest the toolchain implementation set the default value of ABI_VLEN
+to 128, as it&#8217;s the most common minimal requirement. However, it is not fixed
+to 128, since the ISA allows the VLEN to be only 32 bits or 64 bits. This
+also enables the utilization of the capacity of longer VLEN. Users can build
+with an optimized library with larger ABI_VLEN for better utilization of those
+cores with longer VLEN.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A fixed-length vector argument is passed in one vector argument register if the
+size of the vector is less than or equal to ABI_VLEN bit.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Even in the absence of specific vector extension support for certain element
+types, such as <code>__bf16</code>, <code>_Float16</code>, <code>float</code>, or <code>double</code>, the standard
+fixed-length vector calling convention rules still apply. For example,
+even without the support of extensions like <code>Zvfbfmin</code>, <code>Zve32f</code>, or <code>Zve64d</code>,
+these element types will be passed according to the calling convention rules
+outlined here.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, data types such as <code>__int128_t</code>, which currently do not
+have direct support in any vector extension, will also follow these rules.
+This design ensures that the calling convention remains forward-compatible,
+minimizing the need for continuous adjustments as new extensions and data types
+are introduced in the future.</p>
+</div>
+<div class="paragraph">
+<p>The consistency in applying these rules to unsupported element types guarantees
+a smooth transition when future vector extensions become available, allowing for
+seamless integration of new features without requiring significant changes to
+the calling convention.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A fixed-length vector argument is passed in two vector argument registers,
+similar to vector data arguments with LMUL=2 and following the same register
+constraints, if the size of the vector is greater than ABI_VLEN bits and less
+than or equal to 2×ABI_VLEN bits.</p>
+</div>
+<div class="paragraph">
+<p>A fixed-length vector argument is passed in four vector argument registers,
+similar to vector data arguments with LMUL=4 and following the same register
+constraints, if the size of the vector is greater than ABI_VLEN bits and less
+than or equal to 4×ABI_VLEN bits.</p>
+</div>
+<div class="paragraph">
+<p>A fixed-length vector argument is passed in eight vector argument registers,
+similar to vector data arguments with LMUL=4 and following the same register
+constraints, if the size of the vector is greater than ABI_VLEN bits and less
+than or equal to 8×ABI_VLEN bits.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Fixed-length vectors that are not a power-of-2 in size will be rounded up to
+the next power-of-2 length for the purpose of register allocation and handling.
+For instance, a vector type like <code>int32x3_t</code> (which contains three 32-bit
+integers) will be treated as an <code>int32x4_t</code> (a 128-bit vector, as LMUL=1 for
+ABI_VLEN=128) in the ABI, and passed accordingly. This ensures consistency in
+how vectors are handled and simplifies the process of argument passing.</p>
+</div>
+<div class="paragraph">
+<p>Example: Consider an <code>int32x3_t</code> vector (three 32-bit integers):
+- The vector&#8217;s total size is 96 bits, which is not a power of 2.
+- The ABI will round up the size to 128 bits (corresponding to <code>int32x4_t</code>),
+  meaning the vector will be passed using one vector argument register when
+  ABI_VLEN=128.</p>
+</div>
+<div class="paragraph">
+<p>This rule applies to all non-power-of-2 fixed-length vectors, ensuring they
+are treated consistently across different ABI_VLEN settings.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A fixed-length vector argument is passed by reference and is replaced in the
+argument list with the address if it is larger than 8×ABI_VLEN bit or if
+there is a shortage of vector argument registers.</p>
+</div>
+<div class="paragraph">
+<p>A struct containing members with all fixed-length vectors will be passed in
+vector argument registers like a vector tuple type if all members have the
+same length, the length is less than or equal to 4×ABI_VLEN bit, and the size of
+the whole struct is less than or equal to 8×ABI_VLEN bit.
+If there are not enough vector argument registers to pass the entire struct,
+it will pass by reference and is replaced in the argument list with the address.
+Otherwise, it will use the rule defined in the hardware floating-point calling
+convention.</p>
+</div>
+<div class="paragraph">
+<p>A struct containing just one fixed-length vector or a fixed-length vector
+array of length one, will be flattened as a single fixed-length vector argument
+if the size of the vector is less than or equal to 8×ABI_VLEN bit.</p>
+</div>
+<div class="paragraph">
+<p>Structs with zero-length fixed-length arrays use the rule defined in the hardware
+floating-point calling convention, which means it won&#8217;t consume vector argument
+register either in C or C&#43;&#43;.</p>
+</div>
+<div class="paragraph">
+<p>A struct containing just one fixed-length vector array is passed as though it
+were a vector tuple type if the size of the base element for the array is less than
+or equal to 8×ABI_VLEN bit, and the size of the array is less than 8×ABI_VLEN
+bits.
+If there are not enough vector argument registers to pass the entire struct,
+it will pass by reference and is replaced in the argument list with the address.
+Otherwise, it will use the rule defined in the hardware floating-point
+calling convention.</p>
+</div>
+<div class="paragraph">
+<p>Unions with fixed-length vectors are always passed according to the integer
+calling convention.</p>
+</div>
+<div class="paragraph">
+<p>The details of vector argument register rules are the same as the standard
+vector calling convention variant.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Functions that use the standard fixed-length vector calling convention
+variant must be marked with STO_RISCV_VARIANT_CC. See <a href="#Dynamic Linking">[Dynamic Linking]</a>
+for the meaning of STO_RISCV_VARIANT_CC.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Functions that use the standard fixed-length vector calling convention
+variant follow an additional name mangling rule for C&#43;&#43;.
+For more details, see <a href="#Name Mangling for Standard Calling Convention Variant">[Name Mangling for Standard Calling Convention Variant]</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When ABI_VLEN is smaller than the VLEN, the number of vector argument
+registers utilized remains unchanged. However, in such cases, values are only
+placed in a portion of these vector argument registers, corresponding to the
+size of ABI_VLEN. The remaining portion of the vector argument registers, which
+extends beyond the ABI_VLEN, will remain idle. This means that while the full
+capacity of the vector argument registers may not be used, the allocation of
+these registers do not change, ensuring consistency in register usage regardless
+of the ABI_VLEN to VLEN ratio.</p>
+</div>
+<div class="paragraph">
+<p>Example: With ABI_VLEN at 32 bits and VLEN at 128 bits, consider passing an
+<code>int32x4_t</code> parameter (four 32-bit integers).</p>
+</div>
+<div class="paragraph">
+<p>Allocation: Four vector argument registers are allocated for
+<code>int32x4_t</code>, based on LMUL=4.</p>
+</div>
+<div class="paragraph">
+<p>Utilization: All four integers are placed in the first vector register,
+utilizing its full 128-bit capacity (VLEN), despite ABI_VLEN being 32 bits.</p>
+</div>
+<div class="paragraph">
+<p>Remaining Registers: The other three allocated registers remain unused and idle.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. int32x4_t layout on different VLEN with ABI_VLEN at 32 bits:</caption>
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 21.4285%;">
+<col style="width: 21.4285%;">
+<col style="width: 21.4285%;">
+<col style="width: 21.4288%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">VLEN</th>
+<th class="tableblock halign-left valign-top">v8</th>
+<th class="tableblock halign-left valign-top">v9</th>
+<th class="tableblock halign-left valign-top">v10</th>
+<th class="tableblock halign-left valign-top">v11</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">d</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a, b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c, d</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-, -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-, -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">128</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a, b, c, d</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-, -, -, -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-, -, -, -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-, -, -, -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a, b, c, d, -, -, -, -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-, -, -, -, -, -, -, -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-, -, -, -, -, -, -, -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-, -, -, -, -, -, -, -</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 6. int64x8_t layout on different VLEN with ABI_VLEN at 128 bits:</caption>
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 21.4285%;">
+<col style="width: 21.4285%;">
+<col style="width: 21.4285%;">
+<col style="width: 21.4288%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">VLEN</th>
+<th class="tableblock halign-left valign-top">v8</th>
+<th class="tableblock halign-left valign-top">v9</th>
+<th class="tableblock halign-left valign-top">v10</th>
+<th class="tableblock halign-left valign-top">v11</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">128</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a, b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c, d</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">e, f</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">g, h</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a, b, c, d</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">e, f, g, h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-, -, -, -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-, -, -, -</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">512</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a, b, c, d, e, f, g, h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-, -, -, -, -, -, -, -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-, -, -, -, -, -, -, -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-, -, -, -, -, -, -, -</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>-</code> means that part are not used, and the value can be anything.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In a single compilation unit, different functions may use different
+ABI_VLEN values. This means that ABI_VLEN is not uniform across the entire unit,
+allowing for function-specific optimization. However, this necessitates that
+users ensure consistency in ABI_VLEN between calling and called functions. It
+is the user&#8217;s responsibility to verify that the ABI_VLEN matches on both sides
+of a function call to ensure correct operation and data handling.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="4-2-5-ilp32e-calling-convention"><a class="anchor" href="#4-2-5-ilp32e-calling-convention"></a>4.2.5. ILP32E Calling Convention</h3>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -1257,7 +1673,7 @@ calling convention must not be used with the D ISA extension.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-2-5-rv64ilp32-calling-convention"><a class="anchor" href="#4-2-5-rv64ilp32-calling-convention"></a>4.2.5. RV64ILP32* Calling Convention</h3>
+<h3 id="4-2-6-rv64ilp32-calling-convention"><a class="anchor" href="#4-2-6-rv64ilp32-calling-convention"></a>4.2.6. RV64ILP32* Calling Convention</h3>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -1278,7 +1694,7 @@ calling conventions. When passed in registers or on the stack, pointer scalars
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-2-6-named-abis"><a class="anchor" href="#4-2-6-named-abis"></a>4.2.6. Named ABIs</h3>
+<h3 id="4-2-7-named-abis"><a class="anchor" href="#4-2-7-named-abis"></a>4.2.7. Named ABIs</h3>
 <div class="paragraph">
 <p>This specification defines the following named ABIs:</p>
 </div>
@@ -1438,7 +1854,7 @@ hardware floating-point register file.
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-2-7-default-abis"><a class="anchor" href="#4-2-7-default-abis"></a>4.2.7. Default ABIs</h3>
+<h3 id="4-2-8-default-abis"><a class="anchor" href="#4-2-8-default-abis"></a>4.2.8. Default ABIs</h3>
 <div class="paragraph">
 <p>While various different ABIs are technically possible, for software
 compatibility reasons it is strongly recommended to use the following
@@ -1507,7 +1923,7 @@ Please refer to the documentation of the RISC-V execution environment interface
 <p>Use the following type sizes and
 alignments (based on the ILP32 convention):</p>
 <table class="tableblock frame-all grid-all" style="width: 60%;">
-<caption class="title">Table 5. C/C&#43;&#43; type sizes and alignments for ILP32</caption>
+<caption class="title">Table 7. C/C&#43;&#43; type sizes and alignments for ILP32</caption>
 <colgroup>
 <col style="width: 30.7692%;">
 <col style="width: 15.3846%;">
@@ -1558,6 +1974,18 @@ alignments (based on the ILP32 convention):</p>
 <td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
 <td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intmax_t</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">long long int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uintmax_t</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">unsigned long long int</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">void *</p></td>
@@ -1613,6 +2041,36 @@ alignments (based on the ILP32 convention):</p>
 <td class="tableblock halign-right valign-top"><p class="tableblock">16</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_BitInt(1  ≤ N ≤  8)</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_BitInt(9  ≤ N ≤ 16)</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_BitInt(17 ≤ N ≤ 32)</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_BitInt(33 ≤ N ≤ 64)</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_BitInt(N &gt; 64)</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">RoundUp(N / 64) * 8</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
 </tbody>
 </table>
 </dd>
@@ -1621,7 +2079,7 @@ alignments (based on the ILP32 convention):</p>
 <p>Use the following type sizes and
 alignments (based on the LP64 convention):</p>
 <table class="tableblock frame-all grid-all" style="width: 60%;">
-<caption class="title">Table 6. C/C&#43;&#43; type sizes and alignments for LP64</caption>
+<caption class="title">Table 8. C/C&#43;&#43; type sizes and alignments for LP64</caption>
 <colgroup>
 <col style="width: 30.7692%;">
 <col style="width: 15.3846%;">
@@ -1672,6 +2130,18 @@ alignments (based on the LP64 convention):</p>
 <td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
 <td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intmax_t</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">long int</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uintmax_t</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">unsigned long int</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">__int128</p></td>
@@ -1733,6 +2203,42 @@ alignments (based on the LP64 convention):</p>
 <td class="tableblock halign-right valign-top"><p class="tableblock">16</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_BitInt(1  ≤ N ≤  8)</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_BitInt(9  ≤ N ≤ 16)</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_BitInt(17 ≤ N ≤ 32)</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_BitInt(33 ≤ N ≤ 64)</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_BitInt(65 ≤ N ≤ 128)</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">_BitInt(N &gt; 128)</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">RoundUp(N / 128) * 16</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
 </tbody>
 </table>
 </dd>
@@ -1763,6 +2269,55 @@ alignment requirement of its elemental type.</p>
 <div class="paragraph">
 <p>The size of the fixed length vector is determined by multiplying the size of its
 elemental type by the total number of elements within the vector.</p>
+</div>
+<div class="sect3">
+<h4 id="4-4-2-1-_bitint-n"><a class="anchor" href="#4-4-2-1-_bitint-n"></a>4.4.2.1. _BitInt (N)</h4>
+<div class="paragraph">
+<p><code>_BitInt (N)</code> is the type defined in C23, allow user to define an
+arbitrary-sized integer type, where N is a postive integer larger than zero.</p>
+</div>
+<div class="paragraph">
+<p><code>_BitInt(N)</code> types are stored in memory as follows:
+- For N ≤ 2×XLEN: Types follow the standard scalar endianness rules.
+- For N &gt; 2×XLEN: Types are divided into 2×XLEN-bit chunks. Each chunk follows
+  the standard scalar endianness rules. The chunk ordering in memory follows
+  the system endianness: on little-endian systems, lower-addressed chunks contain
+  less significant bits; on big-endian systems, lower-addressed chunks contain
+  more significant bits.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The big-endian ABI is still experimental and may change in the future.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Unused bits of the <code>_BitInt(N)</code> are extended based on the signedness of the
+type when stored in memory or register. For signed <code>_BitInt(N)</code>, unused bits
+are sign-extended from the most significant bit of the N-bit value. For
+unsigned <code>_BitInt(N)</code>, unused bits are zero-extended.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+According to the C language specification, <code>_BitInt(N)</code> without an
+explicit <code>unsigned</code> qualifier is treated as signed. For example, <code>_BitInt(66)</code>
+is signed and will use sign-extension for unused bits, while
+<code>unsigned _BitInt(66)</code> will use zero-extension.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -1878,7 +2433,7 @@ is based on the content of the <code>vlenb</code> register.</p>
 data types and the vector tuple types.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 80%;">
-<caption class="title">Table 7. Type sizes and alignments for vector mask types</caption>
+<caption class="title">Table 9. Type sizes and alignments for vector mask types</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 25%;">
@@ -1997,7 +2552,7 @@ systems. These are noted in this section.</p>
 there is no differentiation between ILP32 and LP64 ABIs.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 80%;">
-<caption class="title">Table 8. Linux-specific C type sizes and alignments</caption>
+<caption class="title">Table 10. Linux-specific C type sizes and alignments</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 25%;">
