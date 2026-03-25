@@ -130,10 +130,10 @@
     <a class="nav-link"  href="index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="colophon.html">Preface</a>
+    <a class="nav-link"  href="contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="contributors.html">Contributors</a>
+    <a class="nav-link"  href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="copyright.html">Copyright</a>
@@ -605,21 +605,21 @@ indirect register access provided by <code>miselect</code> and <code>mireg</code
 an IMSIC is implemented; else, attempts to access <code>mireg</code> when <code>miselect</code> is in this range
 cause an illegal instruction exception. The contents of the
 external-interrupts region are documented in
-<a href="IMSIC.html#IMSIC" class="xref page">Incoming MSI Controller (IMSIC)</a> on the IMSIC.</p>
+<a href="#IMSIC">[IMSIC]</a> on the IMSIC.</p>
 </div>
 <div class="paragraph">
 <p>CSR <code>mtopei</code> also exists only when an IMSIC is implemented, so is documented in
-<a href="IMSIC.html#IMSIC" class="xref page">Incoming MSI Controller (IMSIC)</a> along with the indirectly accessed IMSIC
+<a href="#IMSIC">[IMSIC]</a> along with the indirectly accessed IMSIC
 registers.</p>
 </div>
 <div class="paragraph">
 <p>CSR <code>mtopi</code> reports the highest-priority interrupt that is pending and enabled
-for machine level, as specified in <a href="MSLevel.html#mtopi" class="xref page">Machine top interrupt CSR (<code>mtopi</code>)</a>.</p>
+for machine level, as specified in <a href="#mtopi">[mtopi]</a>.</p>
 </div>
 <div class="paragraph">
 <p>When S-mode is implemented, CSRs <code>mvien</code> and <code>mvip</code> support interrupt filtering and
 virtual interrupts for supervisor level. These facilities are explained
-in <a href="MSLevel.html#virtIntrs-S" class="xref page">Interrupt filtering and virtual interrupts for supervisor level</a>.</p>
+in <a href="#virtIntrs-S">[virtIntrs-S]</a>.</p>
 </div>
 <div class="paragraph">
 <p>If extension Smcsrind is also implemented, then when <code>miselect</code> has a value in the
@@ -789,12 +789,12 @@ registers are 64 bits when the current privilege mode is M (running RV64
 code) but 32 bits when the privilege mode is S (RV32 code).</p>
 </div>
 <div class="paragraph">
-<p>CSR <code>stopei</code> is described with the IMSIC in <a href="IMSIC.html#IMSIC" class="xref page">Incoming MSI Controller (IMSIC)</a>.</p>
+<p>CSR <code>stopei</code> is described with the IMSIC in <a href="#IMSIC">[IMSIC]</a>.</p>
 </div>
 <div class="paragraph">
 <p>Register <code>stopi</code> reports the highest-priority interrupt that is pending and
 enabled for supervisor level, as specified in
-<a href="MSLevel.html#stopi" class="xref page">Supervisor top interrupt CSR (<code>stopi</code>)</a>.</p>
+<a href="#stopi">[stopi]</a>.</p>
 </div>
 <div class="paragraph">
 <p>If extension Sscsrind is also implemented, then when <code>siselect</code> has a value in the range <code>0x30-0x3F</code> or <code>0x70-0xFF</code>, attempts to access alias CSRs <code>sireg2</code> through <code>sireg6</code> raise an illegal instruction exception (unless executing in a virtual machine, covered in the next section).</p>
@@ -807,7 +807,7 @@ enabled for supervisor level, as specified in
 then the hypervisor and VS CSRs listed in <a href="#CSRs-hypervisor">Table 3</a> are also either added or widened to 64 bits.</p>
 </div>
 <div class="paragraph">
-<p>The new hypervisor CSRs in the table (<code>hvien</code>, <code>hvictl</code> , <code>hviprio1</code>, and <code>hviprio2</code>) augment <code>hvip</code> for injecting interrupts into VS level. The use of these registers is covered in <a href="VSLevel.html#VSLevel" class="xref page">Interrupts for Virtual Machines (VS Level)</a> on interrupts for virtual machines.</p>
+<p>The new hypervisor CSRs in the table (<code>hvien</code>, <code>hvictl</code> , <code>hviprio1</code>, and <code>hviprio2</code>) augment <code>hvip</code> for injecting interrupts into VS level. The use of these registers is covered in <a href="#VSLevel">[VSLevel]</a> on interrupts for virtual machines.</p>
 </div>
 <div class="paragraph">
 <p>The new VS CSRs (<code>vsiselect</code>, <code>vsireg</code>, <code>vstopei</code>, and <code>vstopi</code>) all match supervisor CSRs, and substitute for those supervisor CSRs when executing in a virtual machine (in VS-mode or VU-mode).</p>
@@ -1066,7 +1066,7 @@ than M-mode:</p>
 the accessibility of any state when in M-mode, only in less privileged modes. For more explanation, see the documentation for extension Smstateen.</p>
 </div>
 <div class="paragraph">
-<p>The AIA bit controls access to AIA CSRs <code>siph</code>, <code>sieh</code>, <code>stopi</code>, <code>hidelegh</code>, <code>hvien</code>/<code>hvienh</code>, <code>hviph</code>, <code>hvictl</code>, <code>hviprio1</code>/<code>hviprio1h</code>, <code>hviprio2</code>/<code>hviprio2h</code>, <code>vsiph</code>, <code>vsieh</code>, and <code>vstopi</code>, as well as to the supervisor-level interrupt priorities accessed through <code>siselect</code> + <code>sireg</code> (the <code>iprio</code> array of <a href="MSLevel.html#intrPrios-S" class="xref page">Configuring priorities of major interrupts at supervisor level</a>).</p>
+<p>The AIA bit controls access to AIA CSRs <code>siph</code>, <code>sieh</code>, <code>stopi</code>, <code>hidelegh</code>, <code>hvien</code>/<code>hvienh</code>, <code>hviph</code>, <code>hvictl</code>, <code>hviprio1</code>/<code>hviprio1h</code>, <code>hviprio2</code>/<code>hviprio2h</code>, <code>vsiph</code>, <code>vsieh</code>, and <code>vstopi</code>, as well as to the supervisor-level interrupt priorities accessed through <code>siselect</code> + <code>sireg</code> (the <code>iprio</code> array of <a href="#intrPrios-S">[intrPrios-S]</a>).</p>
 </div>
 <div class="paragraph">
 <p>The IMSIC bit is implemented in <code>mstateen0</code> only if the hart has an IMSIC. If the
@@ -1147,7 +1147,7 @@ defined also in hypervisor CSR <code>hstateen0</code> but concern only the state
 <p>If the CSRIND bit is one in <code>mstateen0</code> but is zero in <code>hstateen0</code>, then all attempts from VS or VU-mode to access <code>siselect</code> or <code>sireg</code> raise a virtual instruction exception, not an illegal instruction exception, regardless of the value of <code>vsiselect</code> or any other <code>mstateen</code> bits.</p>
 </div>
 <div class="paragraph">
-<p>The IMSIC bit is implemented in <code>hstateen0</code> only if the hart has an IMSIC. Furthermore, even with an IMSIC, <code>hstateen0</code>.IMSIC may (or may not) be read-only zero if the IMSIC has no <em>guest interrupt files</em> for guest external interrupts (<a href="IMSIC.html#IMSIC" class="xref page">Incoming MSI Controller (IMSIC)</a>). When this bit is zero (whether read-only zero or set to zero), a virtual machine is prevented from accessing the hart&#8217;s IMSIC the same as when <code>hstatus.VGEIN</code> = 0.</p>
+<p>The IMSIC bit is implemented in <code>hstateen0</code> only if the hart has an IMSIC. Furthermore, even with an IMSIC, <code>hstateen0</code>.IMSIC may (or may not) be read-only zero if the IMSIC has no <em>guest interrupt files</em> for guest external interrupts (<a href="#IMSIC">[IMSIC]</a>). When this bit is zero (whether read-only zero or set to zero), a virtual machine is prevented from accessing the hart&#8217;s IMSIC the same as when <code>hstatus.VGEIN</code> = 0.</p>
 </div>
 <div class="paragraph">
 <p>Extension Ssstateen is defined as the supervisor-level view of Smstateen. Therefore, the combination of Ssaia and Ssstateen incorporates the bits defined above for <code>hstateen0</code> but not those for <code>mstateen0</code>, since machine-level CSRs are not visible to supervisor level.</p>

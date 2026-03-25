@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
     <link rel="canonical" href="https://docs.riscv.org/reference/aia/colophon.html">
-    <link rel="prev" href="index.html">
-    <link rel="next" href="contributors.html">
+    <link rel="prev" href="contributors.html">
+    <link rel="next" href="copyright.html">
     <meta name="generator" content="Antora 3.1.14">
     <script>
 !function (theme, navWidth) {
@@ -129,11 +129,11 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="index.html">Title Page</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="colophon.html">Preface</a>
-  </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="contributors.html">Contributors</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link"  href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="copyright.html">Copyright</a>
@@ -426,14 +426,14 @@
 <h2 id="preface"><a class="anchor" href="#preface"></a>Preface</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This document describes an Advanced Interrupt Architecture (AIA) for RISC-V
-systems. This specification was ratified by the RISC-V International
-Association in June of 2023.</p>
+<p>This document describes an Advanced Interrupt Architecture for RISC-V systems.
+This specification was ratified by the International Association in June
+of 2023.</p>
 </div>
 <div class="paragraph">
 <p>The table below indicates which chapters of this document specify
-extensions to the RISC-V ISA (instruction set architecture) and which
-are non-ISA.</p>
+extensions to the ISA (instruction set architecture) and which are
+non-ISA.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -481,146 +481,90 @@ are non-ISA.</p>
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="changes-for-the-ratified-version-1-0"><a class="anchor" href="#changes-for-the-ratified-version-1-0"></a>Changes for the ratified version 1.0</h3>
 <div class="paragraph">
-<p><strong>Changes for version 20250312</strong></p>
+<p>Resolved some inconsistencies in <a href="#CSRs">[CSRs]</a> about when
+to raise a virtual instruction exception versus an illegal instruction
+exception.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="changes-for-rc6-ratification-candidate-6"><a class="anchor" href="#changes-for-rc6-ratification-candidate-6"></a>Changes for RC6 (Ratification Candidate 6)</h3>
 <div class="paragraph">
-<p>Made the following clarifications to AIA 1.0:</p>
+<p>Resolved some inconsistencies in <a href="#CSRs">[CSRs]</a> about when
+to raise a virtual instruction exception versus an illegal instruction
+exception.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Where there are irreconcilable conflicts between the AIA and other
-implemented RISC-V extensions, the AIA usually has priority by default.</p>
-</li>
-<li>
-<p>Deference is given to extension
-Smcsrind/Sscsrind (indirectly accessed CSRs).</p>
-</li>
-<li>
-<p>Names are given to the bits defined in <code>mstateen0</code> and <code>hstateen0</code>
-when extension Smstateen/Ssstateen is also implemented.</p>
-</li>
-<li>
-<p>An IMSIC interrupt file&#8217;s <code>eidelivery</code> register affects only
-whether an interrupt appears in a hart&#8217;s <code>mip</code> or <code>hgeip</code> register.</p>
-</li>
-<li>
-<p>IMSIC CSRs <code>mtopei</code>, <code>stopei</code>, and <code>vstopei</code> are not affected
-by the values of <code>mie</code>, <code>sie</code>, <code>hie</code>, <code>hgeie</code>, or <code>vsie</code>.</p>
-</li>
-<li>
-<p>There may be a visible delay between a change of state of an IMSIC
-interrupt file and its effect on a bit in <code>mip</code>, <code>sip</code>, or <code>hgeip</code>.</p>
-</li>
-<li>
-<p>An APLIC&#8217;s <code>idelivery</code> registers and
-the IE bits of its <code>domaincfg</code> registers affect only whether
-pending-and-enabled interrupts are delivered to harts.</p>
-</li>
-<li>
-<p>The default priority order for major interrupts is applicable
-only when multiple interrupts would trap to the same privilege mode.</p>
-</li>
-<li>
-<p>The example pseudocode given for handling major interrupts at M-level
-and S-level has additional requirements not mentioned previously.</p>
-</li>
-<li>
-<p>An interrupt priority number in the S-level <code>iprio</code> array
-may be writable (not read-only zero) if
-the correponding bit is writable in either <code>sie</code> or <code>hie</code>.</p>
-</li>
-<li>
-<p>If a supervisor external interrupt (SEI) is injected from M-level
-when there is no actual interrupt from an external interrupt controller,
-the injected SEI is assigned an S-level priority number of 256.</p>
-</li>
-<li>
-<p>CSR <code>hvictl</code> affects only <code>vstopi</code> and the trapping of
-some instructions, not <code>mip</code>, <code>sip</code>, <code>hip</code>, or <code>vsip</code>.</p>
-</li>
-</ul>
 </div>
-<div class="paragraph">
-<p><strong>Changes for the ratified version 1.0</strong></p>
-</div>
-<div class="paragraph">
-<p>Resolved some inconsistencies in <a href="CSRs.html#CSRs" class="xref page">Control and Status Registers (CSRs) Added to Harts</a> about when to raise
-a virtual instruction exception versus an illegal instruction exception.</p>
-</div>
-<div class="paragraph">
-<p><strong>Changes for RC5 (Release Candidate 5)</strong></p>
-</div>
+<div class="sect2">
+<h3 id="changes-for-rc5"><a class="anchor" href="#changes-for-rc5"></a>Changes for RC5</h3>
 <div class="paragraph">
 <p>Better aligned the rules for indirectly accessed registers with the
 hypervisor extension and with forthcoming extension Smcsrind/Sscsrind.
-In particular, when <code>vsiselect</code> has a reserved value, attempts to
-access <code>sireg</code> from a virtual machine (VS or VU-mode) should
-preferably raise an illegal instruction exception instead of a virtual
-instruction exception.</p>
+In particular, when <code>vsiselect</code> has a reserved value, attempts to access <code>sireg</code> from a
+virtual machine (VS or VU-mode) should preferably raise an illegal
+instruction exception instead of a virtual instruction exception.</p>
 </div>
 <div class="paragraph">
-<p>Added clarification about the term <em>IOMMU</em> used in <a href="IOMMU.html#IOMMU" class="xref page">IOMMU Support for MSIs to Virtual Machines</a>.</p>
+<p>Added clarification about the term <em>IOMMU</em> used in <a href="#IOMMU">[IOMMU]</a>.</p>
 </div>
 <div class="paragraph">
 <p>Added clarification about MSI write replaced by MRIF update and notice
 MSI sent after the update.</p>
 </div>
-<div class="paragraph">
-<p><strong>Changes for RC4</strong></p>
 </div>
+<div class="sect2">
+<h3 id="changes-for-rc4"><a class="anchor" href="#changes-for-rc4"></a>Changes for RC4</h3>
 <div class="paragraph">
-<p>For alignment with other forthcoming RISC-V ISA extensions, the widths
-of the indirect-access CSRs, <code>miselect</code>, <code>mireg</code>, <code>siselect</code>,
-<code>sireg</code>, <code>vsiselect</code>, and <code>vsireg</code>, were changed to all be the
-current XLEN rather than being tied to their respective privilege levels
-(previously MXLEN for <code>miselect</code> and <code>mireg</code>, SXLEN for <code>siselect</code>
-and <code>sireg</code>, and VSXLEN for <code>vsiselect</code> and <code>vsireg</code>).</p>
+<p>For alignment with other forthcoming RISC-V ISA extensions, the widths of the
+indirect-access CSRs, <code>miselect</code>, <code>mireg</code>, <code>siselect</code>, <code>sireg</code>, <code>vsiselect</code>, and <code>vsireg</code> were changed to all be the current
+XLEN rather than being tied to their respective privilege levels
+(previously MXLEN for <code>miselect</code> and <code>mireg</code>, SXLEN for <code>siselect</code> and <code>sireg</code>, and VSXLEN for <code>vsiselect</code> and <code>vsireg</code>).</p>
 </div>
 <div class="paragraph">
 <p>Changed the description (but not the actual function) of <em>high-half</em>
 CSRs and their partner CSRs to match the latest RISC-V Privileged ISA
-specification. (An example of a high-half CSR is <code>miph</code>, and its
-partner here is <code>mip</code>.)</p>
+specification. (An example of a high-half CSR is <code>miph</code>, and its partner here
+is <code>mip</code>.)</p>
 </div>
-<div class="paragraph">
-<p><strong>Changes for RC3</strong></p>
 </div>
+<div class="sect2">
+<h3 id="changes-for-rc3"><a class="anchor" href="#changes-for-rc3"></a>Changes for RC3</h3>
 <div class="paragraph">
 <p>Removed the still-draft Duo-PLIC chapter to a separate document.</p>
 </div>
 <div class="paragraph">
 <p>Allocated major interrupts 35 and 43 for signaling RAS events
-(<a href="MSLevel.html#majorIntrs" class="xref page">Defined major interrupts and default priorities</a>).</p>
+(<a href="#majorIntrs">[majorIntrs]</a>).</p>
 </div>
 <div class="paragraph">
-<p>In <a href="MSLevel.html#virtIntrs-S" class="xref page">Interrupt filtering and virtual interrupts for supervisor level</a> added the options for bits 1 and 9 to
-be writable in CSR <code>mvien</code>, and specified the effects of setting each
-of these bits.</p>
+<p>In <a href="#virtIntrs-S">[virtIntrs-S]</a> added the options for
+bits 1 and 9 to be writable in CSR , and specified the effects of
+setting each of these bits.</p>
 </div>
 <div class="paragraph">
-<p>Upgraded <a href="IOMMU.html#IOMMU" class="xref page">IOMMU Support for MSIs to Virtual Machines</a> ("IOMMU Support") to the <em>frozen</em> state.</p>
+<p>Upgraded <a href="#IOMMU">[IOMMU]</a> ("IOMMU Support") to the <em>frozen</em> state.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="changes-for-rc2"><a class="anchor" href="#changes-for-rc2"></a>Changes for RC2</h3>
+<div class="paragraph">
+<p>Clarified that field IID of CSR must support all unsigned integer values
+of the number of bits implemented for that field, and that writes to
+always set IID in the most straightforward way.</p>
 </div>
 <div class="paragraph">
-<p><strong>Changes for RC2</strong></p>
+<p>A comment was added to <a href="#IPIs">[IPIs]</a> warning about the
+possible need for FENCE instructions when IPIs are sent to other harts
+by writing MSIs to those harts’ IMSICs.</p>
 </div>
-<div class="paragraph">
-<p>Clarified that field IID of CSR <code>hvictl</code> must support all unsigned
-integer values of the number of bits implemented for that field, and
-that writes to <code>hvictl</code> always set IID in the most straightforward
-way.</p>
-</div>
-<div class="paragraph">
-<p>A comment was added to <a href="IPIs.html#IPIs" class="xref page">Interprocessor Interrupts (IPIs)</a> warning about the possible
-need for FENCE instructions when IPIs are sent to other harts by writing
-MSIs to those harts' IMSICs.</p>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="index.html">Title Page</a></span>
-  <span class="next"><a href="contributors.html">Contributors</a></span>
+  <span class="prev"><a href="contributors.html">Contributors</a></span>
+  <span class="next"><a href="copyright.html">Copyright</a></span>
 </nav>
 </article>  </div>
 </main>
