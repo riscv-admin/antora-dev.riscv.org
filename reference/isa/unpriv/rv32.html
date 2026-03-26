@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
@@ -18,7 +20,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="4e2bf83b464368ccd1b25a274e618ed2f0b9d10e"> 
+    <meta name="antora-ui-version" content="e3e9b60dae8cbc9a3f6a894a584c662a6d874d08"> 
     <meta name="version" content="v20260120">
     <meta name="component" content="isa">
     <meta name="latest-version" content="true">
@@ -38,8 +40,8 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img class="riscvlogo riscvlogo--light" src="../../_/img/risc-v_logo.svg" alt="RISCV">
-        <img class="riscvlogo riscvlogo--dark" src="../../_/img/risc-v_logo_white.svg" alt="RISCV">
+        <img class="riscvlogo riscvlogo--light" src="../../_/img/risc-v_logo.svg" alt="RISCV" />
+        <img class="riscvlogo riscvlogo--dark" src="../../_/img/risc-v_logo_white.svg" alt="RISCV" />
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -50,7 +52,10 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item home">
-          <a class="navbar-link" href="../../home/index.html" aria-label="home" title="home">
+          <a class="navbar-link"
+            href="../../home/index.html"
+            aria-label="home"
+            title="home">
             <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
               <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -60,17 +65,21 @@
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
         <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs">
+          <input id="search-input" type="text" placeholder="Search the docs" >
         </div>
         <div class="navbar-item" style="padding-left: 0;">
           <label class="theme-toggler">
-            <input type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox">
-            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <path fill="currentColor" d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
+                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor"
+                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
                 </path>
               </svg>
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path fill="currentColor" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
+                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
                 </path>
               </svg></span>
             <span class="text">light</span>
@@ -102,13 +111,25 @@
 </div>        <div class="nav-trees" data-component="isa">
           <div class="version-box">
             <select data-component="isa" class="select-version">
-                <option value="../index.html" data-version="v20260120" selected="">
+                <option
+                  value="../index.html"
+                  data-version="v20260120"
+                  
+                  selected>
                   20260120
                 </option>
-                <option value="../v20250508/index.html" data-version="v20250508">
+                <option
+                  value="../v20250508/index.html"
+                  data-version="v20250508"
+                  
+                  >
                   20250508
                 </option>
-                <option value="../v20240411/index.html" data-version="v20240411">
+                <option
+                  value="../v20240411/index.html"
+                  data-version="v20240411"
+                  
+                  >
                   20240411
                 </option>
             </select>
@@ -120,130 +141,130 @@
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="unpriv-index.html">Title Page</a>
+    <a class="nav-link"  href="unpriv-index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="unpriv-contributors.html">Preamble</a>
+    <a class="nav-link"  href="unpriv-contributors.html">Preamble</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="colophon.html">Preface</a>
+    <a class="nav-link"  href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+    <a class="nav-link"  href="rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+    <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+    <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zihintntl.html">Chapter 8. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+    <a class="nav-link"  href="zihintntl.html">Chapter 8. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zihintpause.html">Chapter 9. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
+    <a class="nav-link"  href="zihintpause.html">Chapter 9. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zimop.html">Chapter 10. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
+    <a class="nav-link"  href="zimop.html">Chapter 10. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zicond.html">Chapter 11. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+    <a class="nav-link"  href="zicond.html">Chapter 11. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="m-st-ext.html">Chapter 12. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
+    <a class="nav-link"  href="m-st-ext.html">Chapter 12. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="a-st-ext.html">Chapter 13. "A" Extension for Atomic Instructions, Version 2.1</a>
+    <a class="nav-link"  href="a-st-ext.html">Chapter 13. "A" Extension for Atomic Instructions, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zawrs.html">Chapter 14. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+    <a class="nav-link"  href="zawrs.html">Chapter 14. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zacas.html">Chapter 15. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+    <a class="nav-link"  href="zacas.html">Chapter 15. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zabha.html">Chapter 16. "Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
+    <a class="nav-link"  href="zabha.html">Chapter 16. "Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
+    <a class="nav-link"  href="rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
+    <a class="nav-link"  href="ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+    <a class="nav-link"  href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link"  href="q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="bfloat16.html">Chapter 24. "BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
+    <a class="nav-link"  href="bfloat16.html">Chapter 24. "BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zfa.html">Chapter 25. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+    <a class="nav-link"  href="zfa.html">Chapter 25. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zfinx.html">Chapter 26. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+    <a class="nav-link"  href="zfinx.html">Chapter 26. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="c-st-ext.html">Chapter 27. "C" Extension for Compressed Instructions, Version 2.0</a>
+    <a class="nav-link"  href="c-st-ext.html">Chapter 27. "C" Extension for Compressed Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zc.html">Chapter 28. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+    <a class="nav-link"  href="zc.html">Chapter 28. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="b-st-ext.html">Chapter 29. "B" Extension for Bit Manipulation, Version 1.0.0</a>
+    <a class="nav-link"  href="b-st-ext.html">Chapter 29. "B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="v-st-ext.html">Chapter 30. "V" Standard Extension for Vector Operations, Version 1.0</a>
+    <a class="nav-link"  href="v-st-ext.html">Chapter 30. "V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+    <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
+    <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="zilsd.html">Chapter 34. "Zilsd", "Zclsd" Extensions for Load/Store pair for RV32, Version 1.0</a>
+    <a class="nav-link"  href="zilsd.html">Chapter 34. "Zilsd", "Zclsd" Extensions for Load/Store pair for RV32, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="rv-32-64g.html">Chapter 35. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link"  href="rv-32-64g.html">Chapter 35. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link"  href="mm-eplan.html">Appendix A: RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
+    <a class="nav-link"  href="mm-formal.html">Appendix B: Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="calling-convention.html">Appendix C: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link"  href="calling-convention.html">Appendix C: Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -252,76 +273,76 @@
     <span class="nav-text">Volume II: RISC-V Privileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-index.html">Title Page</a>
+    <a class="nav-link"  href="../priv/priv-index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-contributors.html">Preamble</a>
+    <a class="nav-link"  href="../priv/priv-contributors.html">Preamble</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-preface.html">Preface</a>
+    <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
+    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link"  href="../priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
+    <a class="nav-link"  href="../priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link"  href="../priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
+    <a class="nav-link"  href="../priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-history.html">Chapter 20. History</a>
+    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../priv/priv-rationale.html">Appendix A. Historical Rationale for Extensions</a>
+    <a class="nav-link"  href="../priv/priv-rationale.html">Appendix A. Historical Rationale for Extensions</a>
   </li>
 </ul>
   </li>
@@ -330,7 +351,7 @@
     <span class="nav-text">Bibliography</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../biblio/bibliography.html">Bibliography</a>
+    <a class="nav-link"  href="../biblio/bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -365,31 +386,56 @@
 <aside class="sidebar">
   <div class="content">
     <div class="tag-toggle-container">
-      <button class="tag-toggle-btn" type="button" onclick="document.documentElement.classList.toggle('tag-highlight-enabled');">
+      <button
+        class="tag-toggle-btn"
+        type="button"
+        onclick="document.documentElement.classList.toggle('tag-highlight-enabled');"
+      >
         <div class="tag-toggle-switch"></div>
         <span id="tag-toggle-label">Normative Rules</span>
       </button>
     </div>
-    <div class="toc" data-title="" data-levels="5">
+    <div
+      class="toc"
+      data-title=""
+      data-levels="5"
+    >
       <div class="toc-menu"></div>
     </div>
     <div class="sidebar-links">
         <a href="https://github.com/riscv/riscv-isa-manual/issues/new" target="_blank" title="Issues">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
           Report a Problem
         </a>
         <a href="https://github.com/riscv/riscv-isa-manual" target="_blank" title="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512px"><style type="text/css">&lt; .st0{fill-rule:evenodd;clip-rule:evenodd;}
-              ]]&gt;</style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
           GitHub Project
         </a>
 
         <a href="https://riscv.atlassian.net/wiki/external/MzM1NWFmYmFjNzlkNGMyMDg0NThjM2ZlODVkZTA3MDE" target="_blank" rel="noopener noreferrer" class="sidebar-link">
-          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"></circle><circle cx="148.5" cy="250" r="31.5" fill="currentColor"></circle><circle cx="250" cy="250" r="31.5" fill="currentColor"></circle><circle cx="351.5" cy="250" r="31.5" fill="currentColor"></circle></svg>
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"/><circle cx="148.5" cy="250" r="31.5" fill="currentColor"/><circle cx="250" cy="250" r="31.5" fill="currentColor"/><circle cx="351.5" cy="250" r="31.5" fill="currentColor"/></svg>
           More Details
         </a>
 
-          <a href="../_attachments/riscv-unprivileged.pdf" target="_blank" rel="noopener noreferrer" class="sidebar-link" download="">
+          <a href="../_attachments/riscv-unprivileged.pdf" target="_blank" rel="noopener noreferrer" class="sidebar-link" download>
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -413,7 +459,7 @@
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -442,26 +488,26 @@ instructions as a single trap.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
 <p>The standard RISC-V assembly language syntax is documented in the
-Assembly Programmer’s Manual [<a href="../biblio/bibliography.html#bib-riscv-asm-manual" class="xref page">11</a>].</p>
+Assembly Programmer&#8217;s Manual [<a href="../biblio/bibliography.html#bib-riscv-asm-manual" class="xref page">11</a>].</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -471,16 +517,16 @@ Assembly Programmer’s Manual [<a href="../biblio/bibliography.html#bib-riscv-a
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="sect2">
 <h3 id="2-1-1-programmers-model-for-base-integer-isa"><a class="anchor" href="#2-1-1-programmers-model-for-base-integer-isa"></a>2.1.1. Programmers' Model for Base Integer ISA</h3>
 <div class="paragraph">
-<p><a href="#gprs">Table 2</a> shows the unprivileged state for the base integer ISA.
+<p><a href="#gprs">Table 1</a> shows the unprivileged state for the base integer ISA.
 <span id="norm:rv32i_xreg_sz">For RV32I, the 32 <code>x</code> registers are each 32 bits wide,
 i.e., <code>XLEN=32</code>.</span> <span id="norm:x0eq0">Register <code>x0</code> is hardwired with all bits equal to 0.</span>
 <span id="norm:rv32i_rv64i_other_xregs">General purpose registers <code>x1-x31</code> hold values that various
-instructions interpret as a collection of Boolean values, or as two’s
+instructions interpret as a collection of Boolean values, or as two&#8217;s
 complement signed binary integers or unsigned binary integers.</span></p>
 </div>
 <div id="norm:pcreg_op" class="paragraph">
@@ -488,7 +534,7 @@ complement signed binary integers or unsigned binary integers.</span></p>
 holds the address of the current instruction.</p>
 </div>
 <table id="gprs" class="tableblock frame-all grid-rows" style="width: 50%;">
-<caption class="title">Table 2. RISC-V base unprivileged integer register state.</caption>
+<caption class="title">Table 1. RISC-V base unprivileged integer register state.</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -605,7 +651,7 @@ holds the address of the current instruction.</p>
 </table>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -636,7 +682,7 @@ would arguably be sufficient for an integer ISA running compiled code,
 it is impossible to encode a complete ISA with 16 registers in 16-bit
 instructions using a 3-address format. Although a 2-address format would
 be possible, it would increase instruction count and lower efficiency.
-We wanted to avoid intermediate instruction sizes (such as Xtensa’s
+We wanted to avoid intermediate instruction sizes (such as Xtensa&#8217;s
 24-bit instructions) to simplify base hardware implementations, and once
 a 32-bit instruction size was adopted, it was straightforward to support
 32 integer registers. A larger number of integer registers also helps
@@ -660,7 +706,7 @@ RV32E subset, which only has 16 registers
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -677,7 +723,7 @@ for a conditional branch that is not taken.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -695,14 +741,14 @@ only places where misalignment can occur.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>The behavior upon decoding a reserved instruction is UNSPECIFIED.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -714,7 +760,7 @@ opcode space be used for non-conforming extensions.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>The RISC-V ISA keeps the source (<em>rs1</em> and <em>rs2</em>) and destination (<em>rd</em>)
@@ -747,11 +793,11 @@ bit 31 of the instruction to speed sign-extension circuitry.</p>
 </div>
 </div>
 <div id="base_instr" class="paragraph">
-<p>RISC-V base instruction formats. Each immediate subfield is labeled with the bit position (imm[x]) in the immediate value being produced, rather than the bit position within the instruction’s immediate field as is usually done.</p>
+<p>RISC-V base instruction formats. Each immediate subfield is labeled with the bit position (imm[x]) in the immediate value being produced, rather than the bit position within the instruction&#8217;s immediate field as is usually done.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -776,7 +822,7 @@ to keep the ISA as simple as possible.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -866,7 +912,7 @@ instruction bit (inst[<em>y</em>]) produces each bit of the immediate value.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -892,7 +938,7 @@ common short forward branches have straightforward immediate encodings.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -908,7 +954,7 @@ cause arithmetic exceptions.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -922,7 +968,7 @@ additional branch instruction after the addition:
 <code>add t0, t1, t2; bltu t0, t1, overflow</code>.</p>
 </div>
 <div class="paragraph">
-<p>For signed addition, if one operand’s sign is known, overflow checking
+<p>For signed addition, if one operand&#8217;s sign is known, overflow checking
 requires only a single branch after the addition:
 <code>addi t0, t1, +imm; blt t0, t1, overflow</code>. This covers the common case
 of addition with an immediate operand.</p>
@@ -947,7 +993,7 @@ comparing the results of ADD and ADDW on the operands.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="sect3">
 <h4 id="2-1-4-1-integer-register-immediate-instructions"><a class="anchor" href="#2-1-4-1-integer-register-immediate-instructions"></a>2.1.4.1. Integer Register-Immediate Instructions</h4>
@@ -1010,7 +1056,7 @@ in register <em>rd</em>.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1036,7 +1082,7 @@ microarchitectures.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -1081,7 +1127,7 @@ performance counters.</span> <span id="norm:nop_enc">NOP is encoded as ADDI <em>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1107,7 +1153,7 @@ hardware.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 </div>
@@ -1138,7 +1184,7 @@ an alternate link register.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1153,7 +1199,7 @@ than the regular link register.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>Plain unconditional jumps (assembler pseudoinstruction J) are encoded as
@@ -1188,7 +1234,7 @@ pseudoinstruction RET) are encoded as a JALR with <em>rd</em>=<code>x0</code>, <
 </div>
 <div id="ct-unconditional-2" class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1227,7 +1273,7 @@ elsewhere in the address space.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div id="norm:jump_misaligned_exception" class="paragraph">
 <p>The JAL and JALR instructions will generate an
@@ -1236,7 +1282,7 @@ aligned to a four-byte boundary.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1248,7 +1294,7 @@ compressed instruction-set extension, C.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>Return-address prediction stacks are a common feature of
@@ -1257,10 +1303,10 @@ of instructions used for procedure calls and returns to be effective.
 For RISC-V, hints as to the instructions' usage are encoded implicitly
 via the register numbers used. A JAL instruction should push the return
 address onto a return-address stack (RAS) only when <em>rd</em> is 'x1' or
-<code>x5</code>. JALR instructions should push/pop a RAS as shown in <a href="#rashints">Table 3</a>.</p>
+<code>x5</code>. JALR instructions should push/pop a RAS as shown in <a href="#rashints">Table 2</a>.</p>
 </div>
 <table id="rashints" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 3. Return-address stack prediction hints encoded in the register operands of a JALR instruction.</caption>
+<caption class="title">Table 2. Return-address stack prediction hints encoded in the register operands of a JALR instruction.</caption>
 <colgroup>
 <col>
 <col>
@@ -1279,19 +1325,19 @@ address onto a return-address stack (RAS) only when <em>rd</em> is 'x1' or
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">No</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"> — </p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"> — </p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Pop</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">No</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"> — </p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Push</p></td>
 </tr>
 <tr>
@@ -1310,7 +1356,7 @@ address onto a return-address stack (RAS) only when <em>rd</em> is 'x1' or
 </table>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1330,7 +1376,7 @@ is only pushed to enable macro-op fusion of the sequences:
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -1358,7 +1404,7 @@ reversing the operands to BLT, BLTU, BGE, and BGEU, respectively.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1369,7 +1415,7 @@ any negative index will compare greater than any nonnegative bound.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>Software should be optimized such that the sequential code path is the
@@ -1388,7 +1434,7 @@ branches, and will not pollute conditional-branch prediction tables.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1454,7 +1500,7 @@ to other code.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p><span id="norm:branch_misaligned_taken_exception">The conditional branch instructions will generate an
@@ -1465,7 +1511,7 @@ instruction-address-misaligned exception will not be raised.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1477,7 +1523,7 @@ compressed instruction-set extension, C.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 </div>
@@ -1500,7 +1546,7 @@ even though the load value is discarded.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1527,7 +1573,7 @@ memory byte addresses to the less-significant register bytes.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="imageblock kroki">
 <div class="content">
@@ -1591,7 +1637,7 @@ trap (terminating execution).</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1619,7 +1665,7 @@ very simplified addressing modes (e.g., register indirect only).</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>Even when misaligned loads and stores complete successfully, these
@@ -1632,7 +1678,7 @@ synchronization to ensure atomicity.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1648,7 +1694,7 @@ are aligned.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -1677,7 +1723,7 @@ device using any other signaling mechanism.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1694,7 +1740,7 @@ overhead but those are outside the scope of the RISC-V memory model.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>The EEI will define what I/O operations are possible, and in particular,
@@ -1708,7 +1754,7 @@ instructions that will also be ordered using the I and O bits in a
 FENCE instruction.</p>
 </div>
 <table id="fm" class="tableblock frame-all grid-all stretch center">
-<caption class="title">Table 4. Fence mode encoding</caption>
+<caption class="title">Table 3. Fence mode encoding</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -1752,12 +1798,12 @@ with <em>fm</em>=<code>1000</code>, <em>predecessor</em>=<code>RW</code>, and <e
 all load operations in its predecessor set before all memory operations
 in its successor set, and all store operations in its predecessor set
 before all store operations in its successor set. This leaves <code>non-AMO</code>
-store operations in the <code>FENCE.TSO’s</code> predecessor set unordered with
+store operations in the <code>FENCE.TSO&#8217;s</code> predecessor set unordered with
 <code>non-AMO</code> loads in its successor set.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1768,7 +1814,7 @@ imposes, it is correct to ignore the <em>fm</em> field and implement <code>FENCE
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p><span id="norm:fence_unused_flds_rsv">The unused fields in the FENCE
@@ -1783,7 +1829,7 @@ non-reserved configurations.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1800,7 +1846,7 @@ conservative FENCE on all operations.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -1816,7 +1862,7 @@ unprivileged instructions are described in the following section.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1829,7 +1875,7 @@ hardware.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="imageblock kroki">
 <div class="content">
@@ -1851,7 +1897,7 @@ integer register file.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1864,11 +1910,11 @@ supervisor-level operating system or debugger.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1896,7 +1942,7 @@ to distinguish a semihosting EBREAK from a debugger inserted EBREAK.</p>
 </div>
 <div class="paragraph">
 <p>Note that these three instructions must be 32-bit-wide instructions,
-i.e., they mustn’t be among the compressed 16-bit instructions described
+i.e., they mustn&#8217;t be among the compressed 16-bit instructions described
 in <a href="c-st-ext.html" class="xref page">"C" Extension for Compressed Instructions</a>.</p>
 </div>
 <div class="paragraph">
@@ -1917,7 +1963,7 @@ for semihosting calls in newer designs.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -1937,7 +1983,7 @@ a null predecessor or successor set and with <em>fm</em>=0.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1963,17 +2009,17 @@ architecturally visible effect.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
-<p><a href="#t-rv32i-hints">Table 5</a> lists all RV32I HINT code points. 91% of the
+<p><a href="#t-rv32i-hints">Table 4</a> lists all RV32I HINT code points. 91% of the
 HINT space is reserved for standard HINTs. The remainder of the HINT
 space is designated for custom HINTs: no standard HINTs will ever be
 defined in this subspace.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1985,10 +2031,10 @@ hints, security tags, and instrumentation flags for simulation/emulation.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <table id="t-rv32i-hints" class="tableblock frame-all grid-all stretch center">
-<caption class="title">Table 5. RV32I HINT instructions.</caption>
+<caption class="title">Table 4. RV32I HINT instructions.</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2017,7 +2063,7 @@ hints, security tags, and instrumentation flags for simulation/emulation.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ADDI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, and either <em>rs1</em>≠<code>x0</code> or <em>imm</em>≠0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, and either <em>rs1</em>&#8800;<code>x0</code> or <em>imm</em>&#8800;0</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">2<sup>17</sup>−1</p></td>
 </tr>
 <tr>
@@ -2037,12 +2083,12 @@ hints, security tags, and instrumentation flags for simulation/emulation.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ADD</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, <em>rs1</em>≠<code>x0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, <em>rs1</em>&#8800;<code>x0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">2<sup>10</sup>−32</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ADD</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, <em>rs1</em>=<code>x0</code>, <em>rs2</em>≠<code>x2-x5</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, <em>rs1</em>=<code>x0</code>, <em>rs2</em>&#8800;<code>x2-x5</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">28</p></td>
 </tr>
 <tr>
@@ -2104,22 +2150,22 @@ hints, security tags, and instrumentation flags for simulation/emulation.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FENCE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, <em>rs1</em>≠<code>x0</code>, <em>fm</em>=0, and either <em>pred</em>=0 or <em>succ</em>=0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, <em>rs1</em>&#8800;<code>x0</code>, <em>fm</em>=0, and either <em>pred</em>=0 or <em>succ</em>=0</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">2<sup>10</sup>−63</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FENCE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>≠<code>x0</code>, <em>rs1</em>=<code>x0</code>, <em>fm</em>=0, and either <em>pred</em>=0 or <em>succ</em>=0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>&#8800;<code>x0</code>, <em>rs1</em>=<code>x0</code>, <em>fm</em>=0, and either <em>pred</em>=0 or <em>succ</em>=0</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">2<sup>10</sup>−63</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FENCE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>rs1</em>=<code>x0</code>, <em>fm</em>=0, <em>pred</em>=0, <em>succ</em>≠0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>rs1</em>=<code>x0</code>, <em>fm</em>=0, <em>pred</em>=0, <em>succ</em>&#8800;0</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">15</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FENCE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>rs1</em>=<code>x0</code>, <em>fm</em>=0, <em>pred</em>≠W, <em>succ</em>=0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<em>rs1</em>=<code>x0</code>, <em>fm</em>=0, <em>pred</em>&#8800;W, <em>succ</em>=0</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">15</p></td>
 </tr>
 <tr>
@@ -2144,7 +2190,7 @@ hints, security tags, and instrumentation flags for simulation/emulation.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SLLI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, and either <em>rs1</em>≠<code>x0</code> or <em>shamt</em>≠31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, and either <em>rs1</em>&#8800;<code>x0</code> or <em>shamt</em>&#8800;31</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">2<sup>10</sup>−1</p></td>
 </tr>
 <tr>
@@ -2154,7 +2200,7 @@ hints, security tags, and instrumentation flags for simulation/emulation.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SRAI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, and either <em>rs1</em>≠<code>x0</code> or <em>shamt</em>≠7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rd</em>=<code>x0</code>, and either <em>rs1</em>&#8800;<code>x0</code> or <em>shamt</em>&#8800;7</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">2<sup>10</sup>−1</p></td>
 </tr>
 <tr>
@@ -2171,7 +2217,7 @@ hints, security tags, and instrumentation flags for simulation/emulation.</p>
 </table>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2183,7 +2229,7 @@ To reflect their usage in practice, the base ISA spec has been changed to
 designate them as standard HINTs.
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 </div>
@@ -2198,7 +2244,7 @@ designate them as standard HINTs.
 <footer class="footer flex">
     <div id="footer-buttons" class="footer-buttons">
         <a href="https://riscv.org/" target="_blank" rel="noopener noreferrer" class="footer-btn">riscv.org</a>
-        <a href="https://lf-riscv.atlassian.net/wiki/spaces/HOME/overview?mode=global" target="_blank" rel="noopener noreferrer" class="footer-btn">Technical Wiki</a>
+        <a href="https://tech.riscv.org/" target="_blank" rel="noopener noreferrer" class="footer-btn">Technical Hub</a>
         <a href="https://riscv.org/code-of-conduct/" target="_blank" rel="noopener noreferrer" class="footer-btn">Code of Conduct</a>
         <a href="https://riscv.org/privacy-policy/" target="_blank" rel="noopener noreferrer" class="footer-btn">Privacy Policy</a>
         <a href="https://riscv.org/members/" target="_blank" rel="noopener noreferrer" class="footer-btn">Join RISC-V</a>
@@ -2208,21 +2254,15 @@ designate them as standard HINTs.
      <p class="smallest antialiased">Copyright © RISC-V International®. All rights reserved. RISC-V, RISC-V International, and the RISC-V logos are trademarks of RISC-V International.</p>
     </div>
 
-    <div id="social-icons" class="flex jc-between">
-        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
-        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
-        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"></path></svg></a>
-        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"></circle><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"></path></svg></a>
-        <a href="https://risc-v-international.slack.com/join/shared_invite/zt-2y1w69wde-PdoN3fXovLlzoni~UaPrBA" title="Slack" target="_blank" rel="noopener noreferrer" class="slack-icon-link"><i class="fa fa-slack" aria-hidden="true"></i></a>
-    </div>
 </footer>
 <script src="../../_/js/vendor/import.js"></script>
 <script src="../../_/js/site.js"></script>
-<script async="" src="../../_/js/vendor/highlight.js"></script>
-<script async="" src="../../_/js/vendor/spring-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async
+    src="../../_/js/vendor/spring-tabs.js"
+    data-sync-storage-key="docs:preferred-tab"></script>
 <script src="../../_/js/vendor/lunr.js"></script>
 <script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
-<script async="" src="../../search-index.js"></script>
-  
-
-</body></html>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

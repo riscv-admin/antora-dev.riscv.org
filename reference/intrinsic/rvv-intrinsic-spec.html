@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="4e2bf83b464368ccd1b25a274e618ed2f0b9d10e"> 
+    <meta name="antora-ui-version" content="e3e9b60dae8cbc9a3f6a894a584c662a6d874d08"> 
     <meta name="version" content="v1.0">
     <meta name="component" content="intrinsic">
     <meta name="latest-version" content="false">
@@ -174,10 +174,10 @@
                 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">RISC-V Vector C Intrinsic Specification Document</span>
+    <span class="nav-text">Vector C Intrinsic</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="index.html">RISC-V Vector C Intrinsic</a>
+    <a class="nav-link"  href="index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="copyright.html">Copyright and license information</a>
@@ -420,7 +420,7 @@
 <div class="breadcrumbs-container">
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
-      <li>RISC-V Vector C Intrinsic Specification Document</li>
+      <li>Vector C Intrinsic</li>
       <li><a href="rvv-intrinsic-spec.html">Chapter 1. Introduction</a></li>
     </ul>
   </nav>
@@ -428,7 +428,7 @@
 <h2 id="intro"><a class="anchor" href="#intro"></a>1.1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The RISC-V vector C intrinsics provide users interfaces in the C language level to directly leverage the RISC-V "V" extension cite:[riscv-v-spec] (also abbreviated as "RVV"), with assistance from the compiler in handling instruction scheduling and register allocation. The intrinsics also aim to free users from responsibility of maintaining the correct configuration settings for the vector instruction executions.</p>
+<p>The RISC-V vector C intrinsics provide users interfaces in the C language level to directly leverage the RISC-V "V" extension [<a href="bibliography.html#bib-riscv-v-spec" class="xref page">1</a>] (also abbreviated as "RVV"), with assistance from the compiler in handling instruction scheduling and register allocation. The intrinsics also aim to free users from responsibility of maintaining the correct configuration settings for the vector instruction executions.</p>
 </div>
 <div class="paragraph">
 <p>This document uses the term "RVV" as an abbreviation for the RISC-V "V" extension. This document uses the term "the RVV specification" to indicate the RISC-V "V" extension specification.</p>
@@ -445,7 +445,7 @@
 <p>This macro should be defined even if the vector extension is not enabled.</p>
 </div>
 <div class="paragraph">
-<p>The value of the test macro is defined as its version, which is computed using the following formula. The formula is identical to what is defined in the RISC-V C API specification cite:[riscv-c-api].</p>
+<p>The value of the test macro is defined as its version, which is computed using the following formula. The formula is identical to what is defined in the RISC-V C API specification [<a href="bibliography.html#bib-riscv-c-api" class="xref page">2</a>].</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -479,7 +479,7 @@
 <p>With <code>&lt;riscv_vector.h&gt;</code> included, availability of intrinsic variants depends on the required architecture of their corresponding vector instructions. The supported architecture is specified to the compiler using the <code>-march</code> option cite:[riscv-guide-llvm,riscv-v-gcc].</p>
 </div>
 <div class="paragraph">
-<p>The standard vector extensions cite:[riscv-v-spec] provides a set of smaller extensions for embedded use. Please check out the <code>Zve</code> extensions cite:[riscv-v-spec] for the varying degree of support.</p>
+<p>The standard vector extensions [<a href="bibliography.html#bib-riscv-v-spec" class="xref page">1</a>] provides a set of smaller extensions for embedded use. Please check out the <code>Zve</code> extensions [<a href="bibliography.html#bib-riscv-v-spec" class="xref page">1</a>] for the varying degree of support.</p>
 </div>
 <div class="paragraph">
 <p>For example, RVV type <code>vint64m1_t</code> and <code>__riscv_vle64_v_i64m1</code> are not available under architecture <code>rv64gc_zve32x</code>.</p>
@@ -608,7 +608,7 @@ Rounding mode does not affect the computations of <code>vsadd</code>, <code>vsad
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The RISC-V psABI cite:[riscv-cc-vector] states that <code>vxrm</code> is not preserved across calls. Optimization for reducing the number of redundant writes to <code>vxrm</code> is a compiler and system specific issue.
+The RISC-V psABI [<a href="bibliography.html#bib-riscv-cc-vector" class="xref page">3</a>] states that <code>vxrm</code> is not preserved across calls. Optimization for reducing the number of redundant writes to <code>vxrm</code> is a compiler and system specific issue.
 </td>
 </tr>
 </table>
@@ -643,7 +643,7 @@ The RISC-V psABI cite:[riscv-cc-vector] states that <code>vxrm</code> is not pre
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Control of the floating-point accrued exceptions flag fields (<code>fflag</code>) cite:[riscv-f-spec] is not yet covered in the vector intrinsics v1.0. We plan to support it in follow-up versions in a compatible way with existing intrinsics in v1.0.
+Control of the floating-point accrued exceptions flag fields (<code>fflag</code>) [<a href="bibliography.html#bib-riscv-f-spec" class="xref page">4</a>] is not yet covered in the vector intrinsics v1.0. We plan to support it in follow-up versions in a compatible way with existing intrinsics in v1.0.
 </td>
 </tr>
 </table>
@@ -660,7 +660,7 @@ Control of the floating-point accrued exceptions flag fields (<code>fflag</code>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Both GNU and LLVM compilers generate scalar floating-point instructions using dynamic rounding mode, relying on the environment initialization to set <code>frm</code> to <code>RNE</code> (specified as "roundTiesToEven" in IEEE-754 (a.k.a. IEC 60559)) cite:[ieee754-2008].
+Both GNU and LLVM compilers generate scalar floating-point instructions using dynamic rounding mode, relying on the environment initialization to set <code>frm</code> to <code>RNE</code> (specified as "roundTiesToEven" in IEEE-754 (a.k.a. IEC 60559)) [<a href="bibliography.html#bib-ieee754-2008" class="xref page">5</a>].
 </td>
 </tr>
 </table>
@@ -681,10 +681,10 @@ The implicit FP rounding mode intrinsics are intended to be used regardless of <
 <div class="sect3">
 <h4 id="explicit-frm"><a class="anchor" href="#explicit-frm"></a>1.5.6.2. Explicit FP rounding mode intrinsics</h4>
 <div class="paragraph">
-<p>The explicit FP rounding mode intrinsics contain the <code>frm</code> argument which indicates the rounding mode (<code>frm</code>) cite:[riscv-f-spec] control. The floating-point intrinsics with the <code>frm</code> argument are followed by an <code>_rm</code> suffix in the function name.</p>
+<p>The explicit FP rounding mode intrinsics contain the <code>frm</code> argument which indicates the rounding mode (<code>frm</code>) [<a href="bibliography.html#bib-riscv-f-spec" class="xref page">4</a>] control. The floating-point intrinsics with the <code>frm</code> argument are followed by an <code>_rm</code> suffix in the function name.</p>
 </div>
 <div class="paragraph">
-<p>The <code>frm</code> argument is required to be a constant integer expression. The implementation should provide the following <code>enum</code> that maps to the defined rounding mode values under RISC-V ISA Manual Table 8.1 cite:[riscv-cc-vector].</p>
+<p>The <code>frm</code> argument is required to be a constant integer expression. The implementation should provide the following <code>enum</code> that maps to the defined rounding mode values under RISC-V ISA Manual Table 8.1 [<a href="bibliography.html#bib-riscv-cc-vector" class="xref page">3</a>].</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2303,7 +2303,7 @@ dest = __riscv_vset_v_f32m2_f32m4(dest, 1, v1);</code></pre>
 <div class="sect2">
 <h3 id="1-9-6-bookkeeping-of-configurations"><a class="anchor" href="#1-9-6-bookkeeping-of-configurations"></a>1.9.6. Bookkeeping of configurations</h3>
 <div class="paragraph">
-<p>Control of <code>vl</code>, <code>vtype</code>, <code>vxrm</code>, and <code>frm</code> is not directly exposed to the user. The implementation is responsible for setting the correct values into these CSRs to achieve the expected semantics of the intrinsic functions with respect to the conventions defined in the ISA specification cite:[riscv-v-spec] and ABI specification cite:[riscv-cc-vector].</p>
+<p>Control of <code>vl</code>, <code>vtype</code>, <code>vxrm</code>, and <code>frm</code> is not directly exposed to the user. The implementation is responsible for setting the correct values into these CSRs to achieve the expected semantics of the intrinsic functions with respect to the conventions defined in the ISA specification [<a href="bibliography.html#bib-riscv-v-spec" class="xref page">1</a>] and ABI specification [<a href="bibliography.html#bib-riscv-cc-vector" class="xref page">3</a>].</p>
 </div>
 </div>
 <div class="sect2">
@@ -2348,7 +2348,7 @@ dest = __riscv_vset_v_f32m2_f32m4(dest, 1, v1);</code></pre>
 <footer class="footer flex">
     <div id="footer-buttons" class="footer-buttons">
         <a href="https://riscv.org/" target="_blank" rel="noopener noreferrer" class="footer-btn">riscv.org</a>
-        <a href="https://lf-riscv.atlassian.net/wiki/spaces/HOME/overview?mode=global" target="_blank" rel="noopener noreferrer" class="footer-btn">Technical Wiki</a>
+        <a href="https://tech.riscv.org/" target="_blank" rel="noopener noreferrer" class="footer-btn">Technical Hub</a>
         <a href="https://riscv.org/code-of-conduct/" target="_blank" rel="noopener noreferrer" class="footer-btn">Code of Conduct</a>
         <a href="https://riscv.org/privacy-policy/" target="_blank" rel="noopener noreferrer" class="footer-btn">Privacy Policy</a>
         <a href="https://riscv.org/members/" target="_blank" rel="noopener noreferrer" class="footer-btn">Join RISC-V</a>
@@ -2358,13 +2358,6 @@ dest = __riscv_vset_v_f32m2_f32m4(dest, 1, v1);</code></pre>
      <p class="smallest antialiased">Copyright © RISC-V International®. All rights reserved. RISC-V, RISC-V International, and the RISC-V logos are trademarks of RISC-V International.</p>
     </div>
 
-    <div id="social-icons" class="flex jc-between">
-        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
-        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
-        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"/></svg></a>
-        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"/><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"/></svg></a>
-        <a href="https://risc-v-international.slack.com/join/shared_invite/zt-2y1w69wde-PdoN3fXovLlzoni~UaPrBA" title="Slack" target="_blank" rel="noopener noreferrer" class="slack-icon-link"><i class="fa fa-slack" aria-hidden="true"></i></a>
-    </div>
 </footer>
 <script src="../_/js/vendor/import.js"></script>
 <script src="../_/js/site.js"></script>

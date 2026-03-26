@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
@@ -18,7 +20,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="4e2bf83b464368ccd1b25a274e618ed2f0b9d10e"> 
+    <meta name="antora-ui-version" content="e3e9b60dae8cbc9a3f6a894a584c662a6d874d08"> 
     <meta name="version" content="v1.0">
     <meta name="component" content="aia">
     <meta name="latest-version" content="false">
@@ -38,8 +40,8 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV">
-        <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV">
+        <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV" />
+        <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV" />
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -50,7 +52,10 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item home">
-          <a class="navbar-link" href="../home/index.html" aria-label="home" title="home">
+          <a class="navbar-link"
+            href="../home/index.html"
+            aria-label="home"
+            title="home">
             <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
               <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -60,17 +65,21 @@
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
         <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs">
+          <input id="search-input" type="text" placeholder="Search the docs" >
         </div>
         <div class="navbar-item" style="padding-left: 0;">
           <label class="theme-toggler">
-            <input type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox">
-            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <path fill="currentColor" d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
+                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor"
+                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
                 </path>
               </svg>
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path fill="currentColor" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
+                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
                 </path>
               </svg></span>
             <span class="text">light</span>
@@ -102,7 +111,11 @@
 </div>        <div class="nav-trees" data-component="aia">
           <div class="version-box">
             <select data-component="aia" class="select-version">
-                <option value="index.html" data-version="v1.0" selected="">
+                <option
+                  value="index.html"
+                  data-version="v1.0"
+                  
+                  selected>
                   v1.0
                 </option>
             </select>
@@ -114,40 +127,40 @@
     <span class="nav-text">Advanced Interrupt Architecture</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="index.html">Title Page</a>
+    <a class="nav-link"  href="index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="contributors.html">Contributors</a>
+    <a class="nav-link"  href="contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="colophon.html">Preface</a>
+    <a class="nav-link"  href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="copyright.html">Copyright</a>
+    <a class="nav-link"  href="copyright.html">Copyright</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="CSRs.html">Chapter 2. CSRs Added to Harts</a>
+    <a class="nav-link"  href="CSRs.html">Chapter 2. CSRs Added to Harts</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="IMSIC.html">Chapter 3. Incoming MSI Controller (IMSIC)</a>
+    <a class="nav-link"  href="IMSIC.html">Chapter 3. Incoming MSI Controller (IMSIC)</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="AdvPLIC.html">Chapter 4. Advanced PLIC (APLIC)</a>
+    <a class="nav-link"  href="AdvPLIC.html">Chapter 4. Advanced PLIC (APLIC)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="MSLevel.html">Chapter 5. Interrupts for Machine and Supervisor Levels</a>
+    <a class="nav-link"  href="MSLevel.html">Chapter 5. Interrupts for Machine and Supervisor Levels</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="VSLevel.html">Chapter 6. Interrupts for Virtual Machines (VS Level)</a>
+    <a class="nav-link"  href="VSLevel.html">Chapter 6. Interrupts for Virtual Machines (VS Level)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="IPIs.html">Chapter 7. Interprocessor Interrupts (IPIs)</a>
+    <a class="nav-link"  href="IPIs.html">Chapter 7. Interprocessor Interrupts (IPIs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="IOMMU.html">Chapter 8. IOMMU Support for MSIs to Virtual Machines</a>
+    <a class="nav-link"  href="IOMMU.html">Chapter 8. IOMMU Support for MSIs to Virtual Machines</a>
   </li>
 </ul>
   </li>
@@ -157,7 +170,11 @@
         <div class="nav-trees" data-component="iommu">
           <div class="version-box">
             <select data-component="iommu" class="select-version">
-                <option value="../iommu/index.html" data-version="v1.0" selected="">
+                <option
+                  value="../iommu/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
                   v1.0
                 </option>
             </select>
@@ -169,43 +186,43 @@
     <span class="nav-text">IOMMU Architecture</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/index.html">Title Page</a>
+    <a class="nav-link"  href="../iommu/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/preamble.html">Copyright and License</a>
+    <a class="nav-link"  href="../iommu/preamble.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/contributors.html">Contributors</a>
+    <a class="nav-link"  href="../iommu/contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_preface.html">Preface</a>
+    <a class="nav-link"  href="../iommu/iommu_preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../iommu/iommu_intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_data_structures.html">Chapter 2. Data Structures</a>
+    <a class="nav-link"  href="../iommu/iommu_data_structures.html">Chapter 2. Data Structures</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_in_memory_queues.html">Chapter 3. In-memory queue interface</a>
+    <a class="nav-link"  href="../iommu/iommu_in_memory_queues.html">Chapter 3. In-memory queue interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_debug.html">Chapter 4. Debug support</a>
+    <a class="nav-link"  href="../iommu/iommu_debug.html">Chapter 4. Debug support</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_registers.html">Chapter 5. Memory-mapped register interface</a>
+    <a class="nav-link"  href="../iommu/iommu_registers.html">Chapter 5. Memory-mapped register interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_sw_guidelines.html">Chapter 6. Software guidelines</a>
+    <a class="nav-link"  href="../iommu/iommu_sw_guidelines.html">Chapter 6. Software guidelines</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_hw_guidelines.html">Chapter 7. Hardware guidelines</a>
+    <a class="nav-link"  href="../iommu/iommu_hw_guidelines.html">Chapter 7. Hardware guidelines</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_extensions.html">Chapter 8. IOMMU Extensions</a>
+    <a class="nav-link"  href="../iommu/iommu_extensions.html">Chapter 8. IOMMU Extensions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/bibliography.html">Chapter 9. Bibliography</a>
+    <a class="nav-link"  href="../iommu/bibliography.html">Chapter 9. Bibliography</a>
   </li>
 </ul>
   </li>
@@ -215,7 +232,11 @@
         <div class="nav-trees" data-component="plic">
           <div class="version-box">
             <select data-component="plic" class="select-version">
-                <option value="../plic/index.html" data-version="v1.0.0" selected="">
+                <option
+                  value="../plic/index.html"
+                  data-version="v1.0.0"
+                  
+                  selected>
                   v1.0.0
                 </option>
             </select>
@@ -227,40 +248,40 @@
     <span class="nav-text">Platform-Level Interrupt Controller</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/index.html">Title Page</a>
+    <a class="nav-link"  href="../plic/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/changelog.html">Changelog</a>
+    <a class="nav-link"  href="../plic/changelog.html">Changelog</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/licensing.html">Copyright and license</a>
+    <a class="nav-link"  href="../plic/licensing.html">Copyright and license</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/contributor.html">Contributors</a>
+    <a class="nav-link"  href="../plic/contributor.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/introduction.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../plic/introduction.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a>
+    <a class="nav-link"  href="../plic/plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/plic-memory-map.html">Chapter 3. Memory Map</a>
+    <a class="nav-link"  href="../plic/plic-memory-map.html">Chapter 3. Memory Map</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/plic-priority.html">Chapter 4. Interrupt Priorities</a>
+    <a class="nav-link"  href="../plic/plic-priority.html">Chapter 4. Interrupt Priorities</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/plic-interrupts.html">Chapter 5. Interrupt Pending Bits</a>
+    <a class="nav-link"  href="../plic/plic-interrupts.html">Chapter 5. Interrupt Pending Bits</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/plic-enables.html">Chapter 6. Interrupt Enables</a>
+    <a class="nav-link"  href="../plic/plic-enables.html">Chapter 6. Interrupt Enables</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/plic-claims.html">Chapter 7. Interrupt Claim Process</a>
+    <a class="nav-link"  href="../plic/plic-claims.html">Chapter 7. Interrupt Claim Process</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/plic-completion.html">Chapter 8. Interrupt Completion</a>
+    <a class="nav-link"  href="../plic/plic-completion.html">Chapter 8. Interrupt Completion</a>
   </li>
 </ul>
   </li>
@@ -270,7 +291,11 @@
         <div class="nav-trees" data-component="soc">
           <div class="version-box">
             <select data-component="soc" class="select-version">
-                <option value="../soc/index.html" data-version="v1.0" selected="">
+                <option
+                  value="../soc/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
                   v1.0
                 </option>
             </select>
@@ -282,22 +307,22 @@
     <span class="nav-text">Server SoC</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../soc/index.html">Title Page</a>
+    <a class="nav-link"  href="../soc/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../soc/server_soc_preamble.html">Copyright and License</a>
+    <a class="nav-link"  href="../soc/server_soc_preamble.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../soc/server_soc_contributors.html">Contributors</a>
+    <a class="nav-link"  href="../soc/server_soc_contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../soc/server_soc_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../soc/server_soc_intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../soc/server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
+    <a class="nav-link"  href="../soc/server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../soc/server_soc_bibliography.html">Bibliography</a>
+    <a class="nav-link"  href="../soc/server_soc_bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -332,32 +357,57 @@
 <aside class="sidebar">
   <div class="content">
     <div class="tag-toggle-container">
-      <button class="tag-toggle-btn" type="button" onclick="document.documentElement.classList.toggle('tag-highlight-enabled');">
+      <button
+        class="tag-toggle-btn"
+        type="button"
+        onclick="document.documentElement.classList.toggle('tag-highlight-enabled');"
+      >
         <div class="tag-toggle-switch"></div>
         <span id="tag-toggle-label">Normative Rules</span>
       </button>
     </div>
-    <div class="toc" data-title="" data-levels="5">
+    <div
+      class="toc"
+      data-title=""
+      data-levels="5"
+    >
       <div class="toc-menu"></div>
     </div>
     <div class="sidebar-links">
         <a href="https://github.com/riscv/riscv-aia/issues/new" target="_blank" title="Issues">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
           Report a Problem
         </a>
         <a href="https://github.com/riscv/riscv-aia" target="_blank" title="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512px"><style type="text/css">&lt; .st0{fill-rule:evenodd;clip-rule:evenodd;}
-              ]]&gt;</style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
           GitHub Project
         </a>
 
         <a href="https://riscv.atlassian.net/wiki/external/MTc1MTUwOTg5NTRkNDk0YjlkOGY1MDk5MTljZGU2MjA" target="_blank" rel="noopener noreferrer" class="sidebar-link">
-          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"></circle><circle cx="148.5" cy="250" r="31.5" fill="currentColor"></circle><circle cx="250" cy="250" r="31.5" fill="currentColor"></circle><circle cx="351.5" cy="250" r="31.5" fill="currentColor"></circle></svg>
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"/><circle cx="148.5" cy="250" r="31.5" fill="currentColor"/><circle cx="250" cy="250" r="31.5" fill="currentColor"/><circle cx="351.5" cy="250" r="31.5" fill="currentColor"/></svg>
           More Details
         </a>
       
 
-          <a href="_attachments/riscv-interrupts.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download="">
+          <a href="_attachments/riscv-interrupts.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -400,7 +450,7 @@ interrupts to harts, not MSIs.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -412,11 +462,11 @@ expect will be suitable for many RISC-V systems without modification.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -428,7 +478,7 @@ However, at this time, it appears unlikely that RISC-V International will ever r
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>In a machine without IMSICs, every RISC-V hart accepts interrupts from exactly one PLIC or APLIC that is the <em>external interrupt controller</em> for that
@@ -441,7 +491,7 @@ serving as the external interrupt controller for all RISC-V harts.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -456,7 +506,7 @@ having all harts share a single APLIC.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>RISC-V harts that employ IMSICs as their external interrupt controllers can
@@ -490,7 +540,7 @@ always be configured as Detached. See
 modes</em>.)</p>
 </div>
 <div class="paragraph">
-<p>Each of an APLIC’s interrupt sources has a fixed unique <em>identity
+<p>Each of an APLIC&#8217;s interrupt sources has a fixed unique <em>identity
 number</em> in the range 1 to <span class="steminline"> <svg style="vertical-align: 0; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g></g></g></svg> </span>, where <span class="steminline"> <svg style="vertical-align: 0; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g></g></g></svg> </span> is the
 total number of sources at the APLIC. The number zero is not a valid
 interrupt identity number at an APLIC. The maximum number of interrupt
@@ -547,7 +597,7 @@ control.</p>
 <div class="title">Figure 3. Example of a RISC-V system that has a single hart implementing only M-mode, with a single machine-level interrupt domain for that hart.</div>
 </div>
 <div class="paragraph">
-<p>An APLIC’s interrupt domains are arranged in a tree hierarchy, with the
+<p>An APLIC&#8217;s interrupt domains are arranged in a tree hierarchy, with the
 root domain always being at machine level. Incoming interrupt wires
 arrive first at the root domain. Each domain may then selectively
 delegate all or a subset of interrupt sources to its child domains in
@@ -580,7 +630,7 @@ application harts, even at machine level.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -591,7 +641,7 @@ over the interrupts from the domain, the harts must be cooperatively
 controlled by software at the same privilege level. In particular, a
 single operating system should control all of the harts associated with
 a supervisor-level interrupt domain. In the examples of <a href="#AdvPLIC-ex-2Domains">Figure 4</a> and <a href="#AdvPLIC-ex-3Domains">Figure 5</a>, control
-of the APLIC’s supervisor-level interrupt domain could not be safely
+of the APLIC&#8217;s supervisor-level interrupt domain could not be safely
 split among multiple independent OSes.</p>
 </div>
 <div class="paragraph">
@@ -601,16 +651,16 @@ machine-level software would need to prevent direct OS access to the
 supervisor-level interrupt domain and instead provide SBI services for
 controlling APLIC interrupts or, alternatively, emulate the control
 interfaces of separate supervisor-level interrupt domains, one for each
-OS. Note that such emulation might still make use of the APLIC’s
+OS. Note that such emulation might still make use of the APLIC&#8217;s
 physical supervisor-level interrupt domain, but under the control of
 machine-level software.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
-<p>An APLIC’s interrupt domain hierarchy satisfies these rules:</p>
+<p>An APLIC&#8217;s interrupt domain hierarchy satisfies these rules:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -631,7 +681,7 @@ mixture of methods among the harts.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>When a RISC-V hart’s external interrupt controller is an APLIC, not an IMSIC,
+<p>When a RISC-V hart&#8217;s external interrupt controller is an APLIC, not an IMSIC,
 the hart can be within only one interrupt domain of this APLIC at each
 privilege level.</p>
 </div>
@@ -657,13 +707,13 @@ be available to machine level only.</p>
 not have any relationship to the unique hart identifier ("hart ID")
 that the Privileged Architecture assigns to the hart. Two different
 interrupt domains may employ a different mapping of index numbers to the
-same set of harts. However, if any of an APLIC’s interrupt domains can
+same set of harts. However, if any of an APLIC&#8217;s interrupt domains can
 forward interrupts by MSI, then all machine-level domains of the APLIC
 share a common mapping of index numbers to harts.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -674,7 +724,7 @@ index numbers.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -711,7 +761,7 @@ should currently be delivered, or should remain pending.</p>
 </li>
 <li>
 <p>Target selection. For an active source, target selection determines
-the hart to receive the interrupt and either the interrupt’s priority or
+the hart to receive the interrupt and either the interrupt&#8217;s priority or
 the new interrupt identity when forwarding as an MSI.</p>
 </li>
 </ul>
@@ -724,7 +774,7 @@ domain.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -740,7 +790,7 @@ appears as read-only zeros, requiring no physical register bits.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -750,12 +800,12 @@ appears as read-only zeros, requiring no physical register bits.</p>
 memory-mapped control region for managing interrupts in that domain.
 This control region is a multiple of 4 KiB in size and aligned to a
 4-KiB address boundary. The smallest valid control region is 16 KiB. An
-interrupt domain’s control region is populated by a set of 32-bit
+interrupt domain&#8217;s control region is populated by a set of 32-bit
 registers. The first 16 KiB contains the registers listed in
-<a href="#TableAdvPLIC-domainControlRegion">Table 6</a>.</p>
+<a href="#TableAdvPLIC-domainControlRegion">Table 1</a>.</p>
 </div>
 <table id="TableAdvPLIC-domainControlRegion" class="tableblock frame-none grid-none fit-content center">
-<caption class="title">Table 6. The registers of the first 16 KiB of an interrupt domain’s memory-mapped control region.</caption>
+<caption class="title">Table 1. The registers of the first 16 KiB of an interrupt domain&#8217;s memory-mapped control region.</caption>
 <colgroup>
 <col>
 <col>
@@ -988,7 +1038,7 @@ registers. The first 16 KiB contains the registers listed in
 </tbody>
 </table>
 <div class="paragraph">
-<p>Starting at offset <code>0x4000</code>, an interrupt domain’s control region may optionally
+<p>Starting at offset <code>0x4000</code>, an interrupt domain&#8217;s control region may optionally
 have an array of <em>interrupt delivery control</em> (IDC) structures, one for
 each potential hart index number in the range 0 to some maximum that is
 at least as large as the maximum hart index number for the interrupt
@@ -1044,7 +1094,7 @@ structure is 32 bytes and has these defined registers:</p>
 </table>
 <div class="paragraph">
 <p>IDC structures are packed contiguously, 32 bytes per structure, so the
-offset from the beginning of an interrupt domain’s control region to its
+offset from the beginning of an interrupt domain&#8217;s control region to its
 second IDC structure (hart index 1), if it exists, is <code>0x4020</code>; the offset to
 the third IDC structure (hart index 2), if it exists, is <code>0x4040</code>; etc.</p>
 </div>
@@ -1054,25 +1104,25 @@ numbers that are not <em>actual</em> hart index numbers in the domain. For
 example, the first IDC structure is always for hart index 0, but 0 is
 not necessarily a valid index number for any hart in the domain. For
 each IDC structure in the array that does not correspond to a valid hart
-index number in the domain, the IDC structure’s registers may (or may
+index number in the domain, the IDC structure&#8217;s registers may (or may
 not) be all read-only zeros.</p>
 </div>
 <div class="paragraph">
 <p>Aside from the registers in
-<a href="#TableAdvPLIC-domainControlRegion">Table 6</a>
+<a href="#TableAdvPLIC-domainControlRegion">Table 1</a>
 and those listed above for IDC structures, all other bytes in an
-interrupt domain’s control region are reserved and are implemented as
+interrupt domain&#8217;s control region are reserved and are implemented as
 read-only zeros.</p>
 </div>
 <div class="paragraph">
 <p>Only naturally aligned 32-bit simple reads and writes are supported
-within an interrupt domain’s control region. Writes to read-only bytes
+within an interrupt domain&#8217;s control region. Writes to read-only bytes
 are ignored. For other forms of accesses (other sizes, misaligned
 accesses, or AMOs), implementations should preferably report an access
 fault or bus error but must otherwise ignore the access.</p>
 </div>
 <div class="paragraph">
-<p>The registers of the first 16 KiB of an interrupt domain’s control
+<p>The registers of the first 16 KiB of an interrupt domain&#8217;s control
 region (all but the IDC structures) are documented individually below.
 IDC structures are documented later, in
 <a href="#AdvPLIC-directMode">4.1.8. Interrupt delivery directly by the APLIC</a>, "Interrupt delivery directly by
@@ -1154,7 +1204,7 @@ may support either or both of these delivery modes for each interrupt
 domain.</p>
 </div>
 <div class="paragraph">
-<p>If the interrupt domain’s harts have IMSICs, then unless the relevant
+<p>If the interrupt domain&#8217;s harts have IMSICs, then unless the relevant
 interrupt files of those IMSICs support value <code>0x40000000</code> for register <code>eidelivery</code>, setting DM
 to zero (direct delivery mode) will have the same effect as setting IE
 to zero. See <a href="IMSIC.html#IMSIC-reg-eidelivery" class="xref page">External interrupt delivery enable register (<code>eidelivery</code>)</a>
@@ -1162,7 +1212,7 @@ and <a href="#AdvPLIC-directMode-intrDelivery">4.1.8.2. Interrupt delivery and h
 </div>
 <div class="paragraph">
 <p>BE (Big-Endian) is a <strong>WARL</strong> field that determines the byte order for most
-registers in the interrupt domain’s memory-mapped control region. If
+registers in the interrupt domain&#8217;s memory-mapped control region. If
 BE = 0, byte order is little-endian, and if BE = 1, it is big-endian.
 For RISC-V systems that support only little-endian, BE may be read-only zero,
 and for those that support only big-endian, BE may be read-only one. For
@@ -1172,11 +1222,11 @@ bi-endian systems, BE is writable.</p>
 <p>Field BE affects the byte order of accesses to the <code>domaincfg</code> register itself, just
 as for other registers in the interrupt domain’s control region. To deal
 with this fact, the read-only value in <code>domaincfg’s</code> most-significant byte, bits
-31:24, serves two purposes. First, for any read of <code>domaincfg</code>, the register’s correct byte order is easily determined from the four-byte value
+31:24, serves two purposes. First, for any read of <code>domaincfg</code>, the register&#8217;s correct byte order is easily determined from the four-byte value
 obtained: When interpreted in the correct byte order, bit 31 is one, and
 in the wrong order, bit 31 is zero. Second, if the value of BE is
 uncertain (prior to software initializing the interrupt domain,
-presumably), an 8-bit value&nbsp;<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.294ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 572 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g></g></g></svg> </span> can be safely written to <code>domaincfg</code> by writing (<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.294ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 572 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g></g></g></svg> </span>&lt;&lt;24)|<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.294ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 572 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g></g></g></svg> </span>, where &lt;&lt;24 represents
+presumably), an 8-bit value <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.294ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 572 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g></g></g></svg> </span> can be safely written to <code>domaincfg</code> by writing (<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.294ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 572 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g></g></g></svg> </span>&lt;&lt;24)|<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.294ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 572 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g></g></g></svg> </span>, where &lt;&lt;24 represents
 shifting left by 24 bits, and the vertical bar (|) represents bitwise
 logical OR. After <code>domaincfg</code> is written once, the value of BE should then be known,
 so subsequent writes should not need to repeat the same trick.</p>
@@ -1195,13 +1245,13 @@ platform-defined) how these other resets may affect <code>domaincfg</code>.</p>
 the <em>source mode</em> for source <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> in this interrupt domain as
 well as any delegation of the source to a child domain. When
 source <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> is not implemented, or appears in this domain not
-to be implemented, <code>sourcecfg[<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span>]</code> is read-only zero. If source&nbsp;<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> was not
+to be implemented, <code>sourcecfg[<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span>]</code> is read-only zero. If source <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> was not
 delegated to this domain and is then changed (at the parent domain) to
 become delegated to this domain, <code>sourcecfg[<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span>]</code> remains zero until successfully written with a nonzero value.</p>
 </div>
 <div class="paragraph">
 <p>Bit 10 of <code>sourcecfg[<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span>]</code> is a 1-bit field called D (Delegate). If D = 1,
-source&nbsp;<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> is delegated to a child domain, and if D&nbsp;=&nbsp;0, it
+source <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> is delegated to a child domain, and if D = 0, it
 is not delegated to a child domain. Interpretation of the rest of <code>sourcecfg[<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span>]</code> depends on field D.</p>
 </div>
 <div class="paragraph">
@@ -1266,13 +1316,13 @@ domain, <code>sourcecfg[<span class="steminline"> <svg style="vertical-align: -0
 is active in this domain, and if so, what values or transitions on the
 incoming wire are interpreted as interrupts. The values allowed for SM
 and their meanings are listed in
-<a href="#TableAdvPLIC-sourcecfg-SM">Table 7</a>. Inactive
+<a href="#TableAdvPLIC-sourcecfg-SM">Table 2</a>. Inactive
 (zero) is always supported for field SM. Implementations are free to
 choose, independently for each interrupt source, what other values are
 supported for SM.</p>
 </div>
 <table id="TableAdvPLIC-sourcecfg-SM" class="tableblock frame-all grid-none fit-content center">
-<caption class="title">Table 7. Encoding of the SM (Source Mode) field of a sourcecfg register when bit D = 0</caption>
+<caption class="title">Table 2. Encoding of the SM (Source Mode) field of a sourcecfg register when bit D = 0</caption>
 <colgroup>
 <col>
 <col>
@@ -1326,11 +1376,11 @@ supported for SM.</p>
 <div class="paragraph">
 <p>An interrupt source is inactive in the interrupt domain if either the
 source is delegated to a child domain (D = 1) or it is not delegated
-(D = 0) and SM is Inactive. Whenever interrupt source&nbsp;<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> is
+(D = 0) and SM is Inactive. Whenever interrupt source <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> is
 inactive in an interrupt domain, the corresponding interrupt-pending and
 interrupt-enable bits within the domain are read-only zeros, and
 register <code>target[<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span>]</code> is also read-only zero. If source <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> is changed
-from inactive to an active mode, the interrupt source’s pending and
+from inactive to an active mode, the interrupt source&#8217;s pending and
 enable bits remain zeros, unless set automatically for a reason
 specified later in this section or in
 <a href="#AdvPLIC-pendingBits">4.1.7. Precise effects on interrupt-pending bits</a>, and the defined subfields of <code>target[<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span>]</code> obtain UNSPECIFIED values.</p>
@@ -1489,7 +1539,7 @@ either are read-only copies of <code>mmsiaddrcfg</code> and <code>mmsiaddrcfgh</
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1521,7 +1571,7 @@ implemented simply as read-only with values zero and <code>0x80000000</code>, an
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>If an APLIC supports additional forms of reset besides system reset, it
@@ -1654,8 +1704,8 @@ be set by writing to a <code>setip</code> register.</p>
 <h4 id="4-1-5-6-set-interrupt-pending-bit-by-number-setipnum"><a class="anchor" href="#4-1-5-6-set-interrupt-pending-bit-by-number-setipnum"></a>4.1.5.6. Set interrupt-pending bit by number (<code>setipnum</code>)</h4>
 <div class="paragraph">
 <p>If <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> is an active interrupt source number in the domain,
-writing 32-bit value&nbsp;<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> to register <code>setipnum</code> causes the pending bit
-for source&nbsp;<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> to be set to one if possible. See
+writing 32-bit value <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> to register <code>setipnum</code> causes the pending bit
+for source <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> to be set to one if possible. See
 <a href="#AdvPLIC-pendingBits">4.1.7. Precise effects on interrupt-pending bits</a> for exactly when a pending bit may
 be set by writing to <code>setipnum</code>.</p>
 </div>
@@ -1786,26 +1836,26 @@ writing 32-bit value <span class="steminline"> <svg style="vertical-align: -0.02
 <div class="paragraph">
 <p>When the interrupt domain is configured in MSI delivery mode (<code>domaincfg</code>.DM = 1), register <code>genmsi</code> can be used to cause an <em>extempore</em> MSI to be sent from the
 APLIC to a hart. The main purpose for this function is to assist in
-establishing a temporary known ordering between a hart’s writes to the
-APLIC’s registers and the transmission of MSIs from the APLIC to the
+establishing a temporary known ordering between a hart&#8217;s writes to the
+APLIC&#8217;s registers and the transmission of MSIs from the APLIC to the
 hart, as explained later in <a href="#AdvPLIC-MSISync">4.1.9.3. Synchronizing interactions between a hart and the APLIC</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
 <p>For other purposes, sending an MSI to a hart is usually better done by
-writing directly to the hart’s IMSIC, rather than employing an APLIC as
+writing directly to the hart&#8217;s IMSIC, rather than employing an APLIC as
 an intermediary. Use of the <code>genmsi</code> register should be minimized to avoid it
 becoming a bottleneck.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>Register <code>genmsi</code> has this format:</p>
@@ -1846,13 +1896,13 @@ level.</p>
 <div class="paragraph">
 <p>A pending extempore MSI should be sent by the APLIC with minimal delay.
 Once it has left the APLIC and the APLIC is able to accept a new write
-to <code>genmsi</code> for another extempore MSI, Busy reverts to false. All MSIs previously sent from this APLIC to the same hart must be visible at the hart’s IMSIC before the extempore MSI becomes visible at the hart’s IMSIC.</p>
+to <code>genmsi</code> for another extempore MSI, Busy reverts to false. All MSIs previously sent from this APLIC to the same hart must be visible at the hart&#8217;s IMSIC before the extempore MSI becomes visible at the hart&#8217;s IMSIC.</p>
 </div>
 <div class="paragraph">
 <p>While Busy is true, writes to <code>genmsi</code> are ignored.</p>
 </div>
 <div class="paragraph">
-<p>Extempore MSIs are not affected by the IE bit of the domain’s <code>domaincfg</code> register. An extempore MSI is sent even if <code>domaincfg</code>.IE = 0.</p>
+<p>Extempore MSIs are not affected by the IE bit of the domain&#8217;s <code>domaincfg</code> register. An extempore MSI is sent even if <code>domaincfg</code>.IE = 0.</p>
 </div>
 <div class="paragraph">
 <p>When the interrupt domain is configured in direct delivery mode (<code>domaincfg</code>.DM = 0), register <code>genmsi</code> is read-only zero.</p>
@@ -1916,7 +1966,7 @@ has the highest priority.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1927,7 +1977,7 @@ denoting higher priority, to match the encoding of priorities by IMSICs.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect4">
@@ -1964,9 +2014,9 @@ configured in MSI delivery mode (<code>domaincfg</code>.DM = 1), then register <
 source will be forwarded.</p>
 </div>
 <div class="paragraph">
-<p>If the interrupt domain is at supervisor level and the domain’s harts
+<p>If the interrupt domain is at supervisor level and the domain&#8217;s harts
 implement the H extension, then Guest Index is a <strong>WLRL</strong> field that must be able to hold all integer values in the range 0 through GEILEN. (Parameter <em>GEILEN</em> is defined by the H extension.) Otherwise, field Guest Index is read-only zero. For a supervisor-level interrupt domain, a nonzero Guest
-Index is the number of the target hart’s guest interrupt file to which
+Index is the number of the target hart&#8217;s guest interrupt file to which
 MSIs will be sent. When Guest Index is zero, MSIs from a
 supervisor-level domain are forwarded to the target hart at supervisor
 level. For a machine-level domain, Guest Index is read-only zero, and
@@ -1980,7 +2030,7 @@ value for those MSIs, eventually becoming the minor identity for an
 external interrupt at the target hart.</p>
 </div>
 <div class="paragraph">
-<p>If the interrupt domain’s harts have IMSIC interrupt files that
+<p>If the interrupt domain&#8217;s harts have IMSIC interrupt files that
 implement <span class="steminline"> <svg style="vertical-align: 0; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g></g></g></svg> </span> distinct interrupt identities
 (<a href="IMSIC.html#IMSIC-intrFilesAndIdents" class="xref page">Interrupt files and interrupt identities</a>),
 then EIID is a <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.179ex" height="1.595ex" role="img" focusable="false" viewBox="0 -694 521 705"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g></g></g></svg> </span>-bit unsigned integer field, where
@@ -2007,7 +2057,7 @@ otherwise UNSPECIFIED, except for:</p>
 <p>possibly the MSI address configuration registers of machine-level interrupt domains (<a href="#AdvPLIC-reg-mmsiaddrcfg">4.1.5.3. Machine MSI address configuration (<code>mmsiaddrcfg</code> and <code>mmsiaddrcfgh</code>)</a> and <a href="#AdvPLIC-reg-smsiaddrcfg">4.1.5.4. Supervisor MSI address configuration (<code>smsiaddrcfg</code> and <code>smsiaddrcfgh</code>)</a>); and</p>
 </li>
 <li>
-<p>the Busy bit of each interrupt domain’s <code>genmsi</code> register, if it exists (<a href="#AdvPLIC-reg-genmsi">4.1.5.15. Generate MSI (<code>genmsi</code>)</a>).</p>
+<p>the Busy bit of each interrupt domain&#8217;s <code>genmsi</code> register, if it exists (<a href="#AdvPLIC-reg-genmsi">4.1.5.15. Generate MSI (<code>genmsi</code>)</a>).</p>
 </li>
 </ul>
 </div>
@@ -2015,10 +2065,10 @@ otherwise UNSPECIFIED, except for:</p>
 <div class="sect2">
 <h3 id="AdvPLIC-pendingBits"><a class="anchor" href="#AdvPLIC-pendingBits"></a>4.1.7. Precise effects on interrupt-pending bits</h3>
 <div class="paragraph">
-<p>An attempt to set or clear an interrupt source’s pending bit by writing
-to a register in the interrupt domain’s control region may or may not be
+<p>An attempt to set or clear an interrupt source&#8217;s pending bit by writing
+to a register in the interrupt domain&#8217;s control region may or may not be
 successful, depending on the corresponding source mode, the interrupt
-domain’s delivery mode, and the state of the source’s rectified input
+domain&#8217;s delivery mode, and the state of the source&#8217;s rectified input
 value (defined in <a href="#AdvPLIC-reg-sourcecfg">4.1.5.2. Source configurations (<code>sourcecfg[1]–sourcecfg[1023]</code>)</a>). The
 following enumerates all the circumstances when a pending bit is set or
 cleared for a given source mode.</p>
@@ -2088,7 +2138,7 @@ when the interrupt is forwarded by MSI, or by a relevant write to an <code>in_cl
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2101,7 +2151,7 @@ source is never set (= 1) when the rectified input value is low.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>In addition to the rules above, a write to a <code>sourcecfg</code> register can cause the
@@ -2114,10 +2164,10 @@ source’s interrupt-pending bit to be set to one, as specified in
 <div class="paragraph">
 <p>When an interrupt domain is in direct delivery mode (<code>domaincfg</code>.DM = 0),
 interrupts are delivered from the APLIC to harts by a unique signal to
-each hart, usually a dedicated wire. In this case, the domain’s
+each hart, usually a dedicated wire. In this case, the domain&#8217;s
 memory-mapped control region contains at the end an array of interrupt
 delivery control (IDC) structures, one IDC structure per potential hart
-index. The first IDC structure is for the domain’s hart with index 0;
+index. The first IDC structure is for the domain&#8217;s hart with index 0;
 the second is for the hart with index 1; etc.</p>
 </div>
 <div class="sect3">
@@ -2173,7 +2223,7 @@ documented individually below.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2188,12 +2238,12 @@ unconnected to any physical harts.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="sect4">
 <h5 id="4-1-8-1-1-interrupt-delivery-enable-idelivery"><a class="anchor" href="#4-1-8-1-1-interrupt-delivery-enable-idelivery"></a>4.1.8.1.1. Interrupt delivery enable (<code>idelivery</code>)</h5>
 <div class="paragraph">
-<p><code>idelivery</code> is a <strong>WARL</strong> register that controls whether interrupts that are targeted to the corresponding hart are delivered to the hart so they appear as a pending interrupt in the hart’s <code>mip</code> CSR. Only two values are currently defined for <code>idelivery</code>:</p>
+<p><code>idelivery</code> is a <strong>WARL</strong> register that controls whether interrupts that are targeted to the corresponding hart are delivered to the hart so they appear as a pending interrupt in the hart&#8217;s <code>mip</code> CSR. Only two values are currently defined for <code>idelivery</code>:</p>
 </div>
 <table class="tableblock frame-none grid-none fit-content center">
 <colgroup>
@@ -2315,15 +2365,15 @@ harts of the domain, so long as one of the following is true: (a) the
 harts do not have IMSICs, or (b) the <code>eidelivery</code> registers of the relevant IMSIC
 interrupt files are set to <code>0x40000000</code> (<a href="IMSIC.html#IMSIC-reg-eidelivery" class="xref page">External interrupt delivery enable register (<code>eidelivery</code>)</a>). For a
 machine-level domain, the interrupt signals from the APLIC appear as bit
-MEIP (Machine External Interrupt-Pending) in each hart’s <code>mip</code> CSR. For a
+MEIP (Machine External Interrupt-Pending) in each hart&#8217;s <code>mip</code> CSR. For a
 supervisor-level domain, the interrupt signals appear as bit SEIP
-(Supervisor External Interrupt-Pending) in each hart’s <code>mip</code> and <code>sip</code> CSRs. Each
+(Supervisor External Interrupt-Pending) in each hart&#8217;s <code>mip</code> and <code>sip</code> CSRs. Each
 interrupt signal may be arbitrarily delayed traveling from the APLIC to
 the proper hart.</p>
 </div>
 <div class="paragraph">
 <p>At the APLIC, each interrupt signal to a hart is derived from the IE
-field of register <code>domaincfg</code> and the current state of the hart’s IDC structure in
+field of register <code>domaincfg</code> and the current state of the hart&#8217;s IDC structure in
 the memory-mapped control region for the domain. If either <code>domaincfg</code>.IE = 0 or
 interrupt delivery to the hart is disabled by the <code>idelivery</code> register (<code>idelivery</code> = 0), the
 interrupt signal is held de-asserted. When <code>domaincfg</code>.IE = 1 and interrupt
@@ -2332,13 +2382,13 @@ delivery is enabled (<code>idelivery</code> = 1), the interrupt signal is assert
 <div class="paragraph">
 <p>Due to likely delay in the communication between an APLIC and a hart, it
 may happen that an external interrupt trap is taken, yet no interrupt is
-pending and enabled for the hart when a read of the hart’s <code>claimi</code> register
+pending and enabled for the hart when a read of the hart&#8217;s <code>claimi</code> register
 actually occurs. In such a circumstance, the interrupt identity reported
 by the claim will be zero, resulting in an apparent <em>spurious interrupt</em>
 from the APLIC. Portable software must be prepared for the possibility
 of spurious interrupts at the APLIC, which can safely be ignored and
 should be rare. For testing purposes, a spurious interrupt can be
-triggered for a hart by setting an IDC structure’s <code>iforce</code> register to 1.</p>
+triggered for a hart by setting an IDC structure&#8217;s <code>iforce</code> register to 1.</p>
 </div>
 <div class="paragraph">
 <p>A trap handler solely for external interrupts via an APLIC could be
@@ -2353,7 +2403,7 @@ written roughly as follows:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">save processor registers</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">i = read register <code>claimi</code> from the hart’s IDC structure at the APLIC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">i = read register <code>claimi</code> from the hart&#8217;s IDC structure at the APLIC</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">i = i&gt;&gt;16</p></td>
@@ -2381,9 +2431,9 @@ interrupt handler for "external interrupt 0" which does nothing.</p>
 <p>In MSI delivery mode (<code>domaincfg</code>.DM = 1), an interrupt domain forwards interrupts to target harts by MSIs.</p>
 </div>
 <div class="paragraph">
-<p>An MSI is sent for a specific source only when the source’s
+<p>An MSI is sent for a specific source only when the source&#8217;s
 corresponding pending and enable bits are both one and the IE field of
-register <code>domaincfg</code> is also one. If and when an MSI is sent, the source’s interrupt pending bit is cleared.</p>
+register <code>domaincfg</code> is also one. If and when an MSI is sent, the source&#8217;s interrupt pending bit is cleared.</p>
 </div>
 <div class="sect3">
 <h4 id="AdvPLIC-MSIAddrs"><a class="anchor" href="#AdvPLIC-MSIAddrs"></a>4.1.9.1. Addresses and data for outgoing MSIs</h4>
@@ -2392,7 +2442,7 @@ register <code>domaincfg</code> is also one. If and when an MSI is sent, the sou
 for each hart. For any given system, these addresses are fixed and
 should be hardwired into the APLIC if possible. However, some APLIC
 implementations may require that software supply the MSI target
-addresses. In that case, the root domain’s registers <code>mmsiaddrcfg</code>, <code>mmsiaddrcfgh</code>, <code>smsiaddrcfg</code>, and <code>smsiaddrcfgh</code> (<a href="#AdvPLIC-reg-mmsiaddrcfg">4.1.5.3. Machine MSI address configuration (<code>mmsiaddrcfg</code> and <code>mmsiaddrcfgh</code>)</a>
+addresses. In that case, the root domain&#8217;s registers <code>mmsiaddrcfg</code>, <code>mmsiaddrcfgh</code>, <code>smsiaddrcfg</code>, and <code>smsiaddrcfgh</code> (<a href="#AdvPLIC-reg-mmsiaddrcfg">4.1.5.3. Machine MSI address configuration (<code>mmsiaddrcfg</code> and <code>mmsiaddrcfgh</code>)</a>
 and <a href="#AdvPLIC-reg-smsiaddrcfg">4.1.5.4. Supervisor MSI address configuration (<code>smsiaddrcfg</code> and <code>smsiaddrcfgh</code>)</a>) may be used to configure the
 MSI addresses for all interrupt domains. Alternatively MSI addresses may
 be configured by some custom means outside this standard. If MSI target
@@ -2427,7 +2477,7 @@ Hart Index field of register <code>target[<span class="steminline"> <svg style="
 and right by <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.179ex" height="1.595ex" role="img" focusable="false" viewBox="0 -694 521 705"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g></g></g></svg> </span> bits, an ampersand (&amp;) represents bitwise
 logical AND, and a vertical bar (|) represents bitwise logical OR.
 Assuming the recommendations of <a href="IMSIC.html#IMSIC-systemMemRegions" class="xref page">Arrangement of the memory regions of multiple interrupt files</a> are
-followed for the arrangement of IMSIC interrupt files in the machine’s
+followed for the arrangement of IMSIC interrupt files in the machine&#8217;s
 address space, value <span class="steminline"> <svg style="vertical-align: -0.464ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.079ex" height="1.464ex" role="img" focusable="false" viewBox="0 -442 477 647"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D454" d="M311 43Q296 30 267 15T206 0Q143 0 105 45T66 160Q66 265 143 353T314 442Q361 442 401 394L404 398Q406 401 409 404T418 412T431 419T447 422Q461 422 470 413T480 394Q480 379 423 152T363 -80Q345 -134 286 -169T151 -205Q10 -205 10 -137Q10 -111 28 -91T74 -71Q89 -71 102 -80T116 -111Q116 -121 114 -130T107 -144T99 -154T92 -162L90 -164H91Q101 -167 151 -167Q189 -167 211 -155Q234 -144 254 -122T282 -75Q288 -56 298 -13Q311 35 311 43ZM384 328L380 339Q377 350 375 354T369 368T359 382T346 393T328 402T306 405Q262 405 221 352Q191 313 171 233T151 117Q151 38 213 38Q269 38 323 108L331 118L384 328Z"></path></g></g></g></svg> </span> is intended to be the number of a
 hart group (always zero if HHXW = 0), while <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.303ex" height="1.595ex" role="img" focusable="false" viewBox="0 -694 576 705"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="210E" d="M137 683Q138 683 209 688T282 694Q294 694 294 685Q294 674 258 534Q220 386 220 383Q220 381 227 388Q288 442 357 442Q411 442 444 415T478 336Q478 285 440 178T402 50Q403 36 407 31T422 26Q450 26 474 56T513 138Q516 149 519 151T535 153Q555 153 555 145Q555 144 551 130Q535 71 500 33Q466 -10 419 -10H414Q367 -10 346 17T325 74Q325 90 361 192T398 345Q398 404 354 404H349Q266 404 205 306L198 293L164 158Q132 28 127 16Q114 -11 83 -11Q69 -11 59 -2T48 16Q48 30 121 320L195 616Q195 629 188 632T149 637H128Q122 643 122 645T124 664Q129 683 137 683Z"></path></g></g></g></svg> </span> is the
 number of the target hart within that group. Represented in the terms of
@@ -2435,7 +2485,7 @@ number of the target hart within that group. Represented in the terms of
 </div>
 <div class="paragraph">
 <p>For a supervisor-level domain, if MSI target addresses are determined by
-the root domain’s configuration registers (<code>smsiaddrcfg</code> and others), then to
+the root domain&#8217;s configuration registers (<code>smsiaddrcfg</code> and others), then to
 construct the address for an outgoing MSI for interrupt
 source <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span>, the Hart Index from register <code>target[<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span>]</code> must first be
 converted into the index number that machine-level domains use for the
@@ -2465,8 +2515,8 @@ together with the Base PPN and LHXS values from <code>smsiaddrcfg</code> and <co
 <a href="IMSIC.html#IMSIC-systemMemRegions" class="xref page">Arrangement of the memory regions of multiple interrupt files</a>, HHXW = <span class="steminline"> <svg style="vertical-align: -0.462ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.932ex" height="1.957ex" role="img" focusable="false" viewBox="0 -661 412 865"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D457" d="M297 596Q297 627 318 644T361 661Q378 661 389 651T403 623Q403 595 384 576T340 557Q322 557 310 567T297 596ZM288 376Q288 405 262 405Q240 405 220 393T185 362T161 325T144 293L137 279Q135 278 121 278H107Q101 284 101 286T105 299Q126 348 164 391T252 441Q253 441 260 441T272 442Q296 441 316 432Q341 418 354 401T367 348V332L318 133Q267 -67 264 -75Q246 -125 194 -164T75 -204Q25 -204 7 -183T-12 -137Q-12 -110 7 -91T53 -71Q70 -71 82 -81T95 -112Q95 -148 63 -167Q69 -168 77 -168Q111 -168 139 -140T182 -74L193 -32Q204 11 219 72T251 197T278 308T289 365Q289 372 288 376Z"></path></g></g></g></svg> </span>, LHXW = <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.179ex" height="1.595ex" role="img" focusable="false" viewBox="0 -694 521 705"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g></g></g></svg> </span>, HHXS = <span class="steminline"> <svg style="vertical-align: -0.186ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="6.757ex" height="1.724ex" role="img" focusable="false" viewBox="0 -680 2986.4 762"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mo" transform="translate(986.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(1986.4,0)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z" transform="translate(500,0)"></path></g></g></g></g></svg> </span>, LHXS = <span class="steminline"> <svg style="vertical-align: -0.186ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="6.901ex" height="1.731ex" role="img" focusable="false" viewBox="0 -683 3050.4 765"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D437" d="M287 628Q287 635 230 637Q207 637 200 638T193 647Q193 655 197 667T204 682Q206 683 403 683Q570 682 590 682T630 676Q702 659 752 597T803 431Q803 275 696 151T444 3L430 1L236 0H125H72Q48 0 41 2T33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM703 469Q703 507 692 537T666 584T629 613T590 629T555 636Q553 636 541 636T512 636T479 637H436Q392 637 386 627Q384 623 313 339T242 52Q242 48 253 48T330 47Q335 47 349 47T373 46Q499 46 581 128Q617 164 640 212T683 339T703 469Z"></path></g><g data-mml-node="mo" transform="translate(1050.2,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(2050.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="translate(500,0)"></path></g></g></g></g></svg> </span>, and Base PPN = <span class="steminline"> <svg style="vertical-align: 0; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.717ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 759 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path></g></g></g></svg> </span>&gt;&gt;12.</p>
 </div>
 <div class="paragraph">
-<p>The data for an outgoing MSI write is taken from the EIID field of <code>target[<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span>]</code>, zero-extended to 32 bits. An MSI’s 32-bit data is always written in
-little-endian byte order, regardless of the BE field of the domain’s <code>domaincfg</code>
+<p>The data for an outgoing MSI write is taken from the EIID field of <code>target[<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span>]</code>, zero-extended to 32 bits. An MSI&#8217;s 32-bit data is always written in
+little-endian byte order, regardless of the BE field of the domain&#8217;s <code>domaincfg</code>
 register.</p>
 </div>
 </div>
@@ -2481,7 +2531,7 @@ constant stream of repeated MSIs from the APLIC to the target hart for
 the same interrupt. However, after an interrupt service routine has
 addressed a cause found for the interrupt, the incoming interrupt wire
 might remain asserted at the APLIC for another reason, despite that the
-interrupt’s pending bit at the APLIC was cleared and will remain so
+interrupt&#8217;s pending bit at the APLIC was cleared and will remain so
 without intervention from software. If the interrupt service routine
 then exits without further action, a continued interrupt from this
 source might never receive attention.</p>
@@ -2503,8 +2553,8 @@ a new MSI sent to the hart.</p>
 </div>
 <div class="paragraph">
 <p>A second option is for the interrupt service routine to write the
-APLIC’s source identity number for the interrupt to the domain’s <code>setipnum</code>
-register just before exiting. This will cause the interrupt’s pending
+APLIC&#8217;s source identity number for the interrupt to the domain&#8217;s <code>setipnum</code>
+register just before exiting. This will cause the interrupt&#8217;s pending
 bit to be set to one again if the source is still asserting an
 interrupt, but not if the source is not asserting an interrupt.</p>
 </div>
@@ -2513,8 +2563,8 @@ interrupt, but not if the source is not asserting an interrupt.</p>
 <h4 id="AdvPLIC-MSISync"><a class="anchor" href="#AdvPLIC-MSISync"></a>4.1.9.3. Synchronizing interactions between a hart and the APLIC</h4>
 <div class="paragraph">
 <p>When an APLIC sends an MSI to a hart, there is an unspecified travel
-delay before the MSI is observed at the hart’s IMSIC. Consequently,
-after an APLIC’s configuration is changed by writing to an APLIC
+delay before the MSI is observed at the hart&#8217;s IMSIC. Consequently,
+after an APLIC&#8217;s configuration is changed by writing to an APLIC
 register, harts may continue to see MSIs arrive from the APLIC from the
 time before the write, for an unspecified amount of time.</p>
 </div>
@@ -2530,8 +2580,8 @@ known no more MSIs are destined for it.</p>
 <p>The <code>genmsi</code> register (<a href="#AdvPLIC-reg-genmsi">4.1.5.15. Generate MSI (<code>genmsi</code>)</a>) exists to allow
 software to determine when all earlier MSIs have arrived at a hart. To
 use <code>genmsi</code> for this purpose, software can dedicate one external interrupt
-identity at each hart’s IMSIC interrupt file solely for APLIC
-synchronization. Assuming there are multiple harts, an APLIC’s <code>genmsi</code> register
+identity at each hart&#8217;s IMSIC interrupt file solely for APLIC
+synchronization. Assuming there are multiple harts, an APLIC&#8217;s <code>genmsi</code> register
 should also be protected by a standard mutual-exclusion lock. The
 following sequence can then be used to synchronize between an APLIC and
 a specific hart:</p>
@@ -2539,12 +2589,12 @@ a specific hart:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>At the hart’s IMSIC, clear the pending bit for the specific minor
+<p>At the hart&#8217;s IMSIC, clear the pending bit for the specific minor
 interrupt identity <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> used exclusively for APLIC
 synchronization.</p>
 </li>
 <li>
-<p>Acquire the shared lock for the APLIC’s <code>genmsi</code> register.</p>
+<p>Acquire the shared lock for the APLIC&#8217;s <code>genmsi</code> register.</p>
 </li>
 <li>
 <p>Write <code>genmsi</code> to generate an MSI to the hart with interrupt
@@ -2558,7 +2608,7 @@ identity <span class="steminline"> <svg style="vertical-align: -0.025ex; overflo
 </li>
 <li>
 <p>Repeatedly read the pending bit for minor interrupt identity
-<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> at the hart’s IMSIC until it is found set.</p>
+<span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="0.781ex" height="1.52ex" role="img" focusable="false" viewBox="0 -661 345 672"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></svg> </span> at the hart&#8217;s IMSIC until it is found set.</p>
 </li>
 </ol>
 </div>
@@ -2566,7 +2616,7 @@ identity <span class="steminline"> <svg style="vertical-align: -0.025ex; overflo
 <p>The loops of steps 4 and 6 are expected normally to succeed very
 quickly, often on the first or second attempt. When this sequence is
 complete, all earlier MSIs from the APLIC must also have arrived at the
-hart’s IMSIC.</p>
+hart&#8217;s IMSIC.</p>
 </div>
 </div>
 </div>
@@ -2582,7 +2632,7 @@ hart’s IMSIC.</p>
 <footer class="footer flex">
     <div id="footer-buttons" class="footer-buttons">
         <a href="https://riscv.org/" target="_blank" rel="noopener noreferrer" class="footer-btn">riscv.org</a>
-        <a href="https://lf-riscv.atlassian.net/wiki/spaces/HOME/overview?mode=global" target="_blank" rel="noopener noreferrer" class="footer-btn">Technical Wiki</a>
+        <a href="https://tech.riscv.org/" target="_blank" rel="noopener noreferrer" class="footer-btn">Technical Hub</a>
         <a href="https://riscv.org/code-of-conduct/" target="_blank" rel="noopener noreferrer" class="footer-btn">Code of Conduct</a>
         <a href="https://riscv.org/privacy-policy/" target="_blank" rel="noopener noreferrer" class="footer-btn">Privacy Policy</a>
         <a href="https://riscv.org/members/" target="_blank" rel="noopener noreferrer" class="footer-btn">Join RISC-V</a>
@@ -2592,21 +2642,15 @@ hart’s IMSIC.</p>
      <p class="smallest antialiased">Copyright © RISC-V International®. All rights reserved. RISC-V, RISC-V International, and the RISC-V logos are trademarks of RISC-V International.</p>
     </div>
 
-    <div id="social-icons" class="flex jc-between">
-        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
-        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
-        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"></path></svg></a>
-        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"></circle><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"></path></svg></a>
-        <a href="https://risc-v-international.slack.com/join/shared_invite/zt-2y1w69wde-PdoN3fXovLlzoni~UaPrBA" title="Slack" target="_blank" rel="noopener noreferrer" class="slack-icon-link"><i class="fa fa-slack" aria-hidden="true"></i></a>
-    </div>
 </footer>
 <script src="../_/js/vendor/import.js"></script>
 <script src="../_/js/site.js"></script>
-<script async="" src="../_/js/vendor/highlight.js"></script>
-<script async="" src="../_/js/vendor/spring-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async
+    src="../_/js/vendor/spring-tabs.js"
+    data-sync-storage-key="docs:preferred-tab"></script>
 <script src="../_/js/vendor/lunr.js"></script>
 <script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
-<script async="" src="../search-index.js"></script>
-  
-
-</body></html>
+<script async src="../search-index.js"></script>
+  </body>
+</html>

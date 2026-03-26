@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
@@ -17,7 +19,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="4e2bf83b464368ccd1b25a274e618ed2f0b9d10e"> 
+    <meta name="antora-ui-version" content="e3e9b60dae8cbc9a3f6a894a584c662a6d874d08"> 
     <meta name="version" content="v1.0">
     <meta name="component" content="aia">
     <meta name="latest-version" content="false">
@@ -37,8 +39,8 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV">
-        <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV">
+        <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV" />
+        <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV" />
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -49,7 +51,10 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item home">
-          <a class="navbar-link" href="../home/index.html" aria-label="home" title="home">
+          <a class="navbar-link"
+            href="../home/index.html"
+            aria-label="home"
+            title="home">
             <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
               <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -59,17 +64,21 @@
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
         <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs">
+          <input id="search-input" type="text" placeholder="Search the docs" >
         </div>
         <div class="navbar-item" style="padding-left: 0;">
           <label class="theme-toggler">
-            <input type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox">
-            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <path fill="currentColor" d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
+                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor"
+                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
                 </path>
               </svg>
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path fill="currentColor" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
+                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
                 </path>
               </svg></span>
             <span class="text">light</span>
@@ -101,7 +110,11 @@
 </div>        <div class="nav-trees" data-component="aia">
           <div class="version-box">
             <select data-component="aia" class="select-version">
-                <option value="index.html" data-version="v1.0" selected="">
+                <option
+                  value="index.html"
+                  data-version="v1.0"
+                  
+                  selected>
                   v1.0
                 </option>
             </select>
@@ -113,40 +126,40 @@
     <span class="nav-text">Advanced Interrupt Architecture</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="index.html">Title Page</a>
+    <a class="nav-link"  href="index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="contributors.html">Contributors</a>
+    <a class="nav-link"  href="contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="colophon.html">Preface</a>
+    <a class="nav-link"  href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="copyright.html">Copyright</a>
+    <a class="nav-link"  href="copyright.html">Copyright</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="CSRs.html">Chapter 2. CSRs Added to Harts</a>
+    <a class="nav-link"  href="CSRs.html">Chapter 2. CSRs Added to Harts</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="IMSIC.html">Chapter 3. Incoming MSI Controller (IMSIC)</a>
+    <a class="nav-link"  href="IMSIC.html">Chapter 3. Incoming MSI Controller (IMSIC)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="AdvPLIC.html">Chapter 4. Advanced PLIC (APLIC)</a>
+    <a class="nav-link"  href="AdvPLIC.html">Chapter 4. Advanced PLIC (APLIC)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="MSLevel.html">Chapter 5. Interrupts for Machine and Supervisor Levels</a>
+    <a class="nav-link"  href="MSLevel.html">Chapter 5. Interrupts for Machine and Supervisor Levels</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="VSLevel.html">Chapter 6. Interrupts for Virtual Machines (VS Level)</a>
+    <a class="nav-link"  href="VSLevel.html">Chapter 6. Interrupts for Virtual Machines (VS Level)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="IPIs.html">Chapter 7. Interprocessor Interrupts (IPIs)</a>
+    <a class="nav-link"  href="IPIs.html">Chapter 7. Interprocessor Interrupts (IPIs)</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="IOMMU.html">Chapter 8. IOMMU Support for MSIs to Virtual Machines</a>
+    <a class="nav-link"  href="IOMMU.html">Chapter 8. IOMMU Support for MSIs to Virtual Machines</a>
   </li>
 </ul>
   </li>
@@ -156,7 +169,11 @@
         <div class="nav-trees" data-component="iommu">
           <div class="version-box">
             <select data-component="iommu" class="select-version">
-                <option value="../iommu/index.html" data-version="v1.0" selected="">
+                <option
+                  value="../iommu/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
                   v1.0
                 </option>
             </select>
@@ -168,43 +185,43 @@
     <span class="nav-text">IOMMU Architecture</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/index.html">Title Page</a>
+    <a class="nav-link"  href="../iommu/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/preamble.html">Copyright and License</a>
+    <a class="nav-link"  href="../iommu/preamble.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/contributors.html">Contributors</a>
+    <a class="nav-link"  href="../iommu/contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_preface.html">Preface</a>
+    <a class="nav-link"  href="../iommu/iommu_preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../iommu/iommu_intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_data_structures.html">Chapter 2. Data Structures</a>
+    <a class="nav-link"  href="../iommu/iommu_data_structures.html">Chapter 2. Data Structures</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_in_memory_queues.html">Chapter 3. In-memory queue interface</a>
+    <a class="nav-link"  href="../iommu/iommu_in_memory_queues.html">Chapter 3. In-memory queue interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_debug.html">Chapter 4. Debug support</a>
+    <a class="nav-link"  href="../iommu/iommu_debug.html">Chapter 4. Debug support</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_registers.html">Chapter 5. Memory-mapped register interface</a>
+    <a class="nav-link"  href="../iommu/iommu_registers.html">Chapter 5. Memory-mapped register interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_sw_guidelines.html">Chapter 6. Software guidelines</a>
+    <a class="nav-link"  href="../iommu/iommu_sw_guidelines.html">Chapter 6. Software guidelines</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_hw_guidelines.html">Chapter 7. Hardware guidelines</a>
+    <a class="nav-link"  href="../iommu/iommu_hw_guidelines.html">Chapter 7. Hardware guidelines</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/iommu_extensions.html">Chapter 8. IOMMU Extensions</a>
+    <a class="nav-link"  href="../iommu/iommu_extensions.html">Chapter 8. IOMMU Extensions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../iommu/bibliography.html">Chapter 9. Bibliography</a>
+    <a class="nav-link"  href="../iommu/bibliography.html">Chapter 9. Bibliography</a>
   </li>
 </ul>
   </li>
@@ -214,7 +231,11 @@
         <div class="nav-trees" data-component="plic">
           <div class="version-box">
             <select data-component="plic" class="select-version">
-                <option value="../plic/index.html" data-version="v1.0.0" selected="">
+                <option
+                  value="../plic/index.html"
+                  data-version="v1.0.0"
+                  
+                  selected>
                   v1.0.0
                 </option>
             </select>
@@ -226,40 +247,40 @@
     <span class="nav-text">Platform-Level Interrupt Controller</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/index.html">Title Page</a>
+    <a class="nav-link"  href="../plic/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/changelog.html">Changelog</a>
+    <a class="nav-link"  href="../plic/changelog.html">Changelog</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/licensing.html">Copyright and license</a>
+    <a class="nav-link"  href="../plic/licensing.html">Copyright and license</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/contributor.html">Contributors</a>
+    <a class="nav-link"  href="../plic/contributor.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/introduction.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../plic/introduction.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a>
+    <a class="nav-link"  href="../plic/plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/plic-memory-map.html">Chapter 3. Memory Map</a>
+    <a class="nav-link"  href="../plic/plic-memory-map.html">Chapter 3. Memory Map</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/plic-priority.html">Chapter 4. Interrupt Priorities</a>
+    <a class="nav-link"  href="../plic/plic-priority.html">Chapter 4. Interrupt Priorities</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/plic-interrupts.html">Chapter 5. Interrupt Pending Bits</a>
+    <a class="nav-link"  href="../plic/plic-interrupts.html">Chapter 5. Interrupt Pending Bits</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/plic-enables.html">Chapter 6. Interrupt Enables</a>
+    <a class="nav-link"  href="../plic/plic-enables.html">Chapter 6. Interrupt Enables</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/plic-claims.html">Chapter 7. Interrupt Claim Process</a>
+    <a class="nav-link"  href="../plic/plic-claims.html">Chapter 7. Interrupt Claim Process</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../plic/plic-completion.html">Chapter 8. Interrupt Completion</a>
+    <a class="nav-link"  href="../plic/plic-completion.html">Chapter 8. Interrupt Completion</a>
   </li>
 </ul>
   </li>
@@ -269,7 +290,11 @@
         <div class="nav-trees" data-component="soc">
           <div class="version-box">
             <select data-component="soc" class="select-version">
-                <option value="../soc/index.html" data-version="v1.0" selected="">
+                <option
+                  value="../soc/index.html"
+                  data-version="v1.0"
+                  
+                  selected>
                   v1.0
                 </option>
             </select>
@@ -281,22 +306,22 @@
     <span class="nav-text">Server SoC</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../soc/index.html">Title Page</a>
+    <a class="nav-link"  href="../soc/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../soc/server_soc_preamble.html">Copyright and License</a>
+    <a class="nav-link"  href="../soc/server_soc_preamble.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../soc/server_soc_contributors.html">Contributors</a>
+    <a class="nav-link"  href="../soc/server_soc_contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../soc/server_soc_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../soc/server_soc_intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../soc/server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
+    <a class="nav-link"  href="../soc/server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../soc/server_soc_bibliography.html">Bibliography</a>
+    <a class="nav-link"  href="../soc/server_soc_bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -331,32 +356,57 @@
 <aside class="sidebar">
   <div class="content">
     <div class="tag-toggle-container">
-      <button class="tag-toggle-btn" type="button" onclick="document.documentElement.classList.toggle('tag-highlight-enabled');">
+      <button
+        class="tag-toggle-btn"
+        type="button"
+        onclick="document.documentElement.classList.toggle('tag-highlight-enabled');"
+      >
         <div class="tag-toggle-switch"></div>
         <span id="tag-toggle-label">Normative Rules</span>
       </button>
     </div>
-    <div class="toc" data-title="" data-levels="5">
+    <div
+      class="toc"
+      data-title=""
+      data-levels="5"
+    >
       <div class="toc-menu"></div>
     </div>
     <div class="sidebar-links">
         <a href="https://github.com/riscv/riscv-aia/issues/new" target="_blank" title="Issues">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
           Report a Problem
         </a>
         <a href="https://github.com/riscv/riscv-aia" target="_blank" title="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512px"><style type="text/css">&lt; .st0{fill-rule:evenodd;clip-rule:evenodd;}
-              ]]&gt;</style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
           GitHub Project
         </a>
 
         <a href="https://riscv.atlassian.net/wiki/external/MTc1MTUwOTg5NTRkNDk0YjlkOGY1MDk5MTljZGU2MjA" target="_blank" rel="noopener noreferrer" class="sidebar-link">
-          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"></circle><circle cx="148.5" cy="250" r="31.5" fill="currentColor"></circle><circle cx="250" cy="250" r="31.5" fill="currentColor"></circle><circle cx="351.5" cy="250" r="31.5" fill="currentColor"></circle></svg>
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"/><circle cx="148.5" cy="250" r="31.5" fill="currentColor"/><circle cx="250" cy="250" r="31.5" fill="currentColor"/><circle cx="351.5" cy="250" r="31.5" fill="currentColor"/></svg>
           More Details
         </a>
       
 
-          <a href="_attachments/riscv-interrupts.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download="">
+          <a href="_attachments/riscv-interrupts.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -409,7 +459,7 @@ and must be specified elsewhere.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -422,7 +472,7 @@ how those blocks are integrated into a system.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>If a single physical I/O device can be subdivided for control by
@@ -451,7 +501,7 @@ example, the originating device may be identified by the unique triple
 of PCI bus number, device number, and function number.</p>
 </li>
 <li>
-<p>An IOMMU optionally translates the addresses of a device’s memory
+<p>An IOMMU optionally translates the addresses of a device&#8217;s memory
 accesses using address-translation data structures—typically page
 tables—specified by software via the corresponding device context. The
 smallest granularity of address translation implemented by all IOMMUs is
@@ -483,17 +533,17 @@ translation and/or conversion of MSIs from the device.</p>
 <p>The MSI address mask and address pattern are each unsigned integers with
 the same width as guest physical page numbers, i.e., 12 bits narrower
 than the maximum supported width of a guest physical address. Their use
-is explained in <a href="#IOMMU-identIncomingMSIs">8.1.4. Identification of page addresses of a VM’s interrupt files</a>.</p>
+is explained in <a href="#IOMMU-identIncomingMSIs">8.1.4. Identification of page addresses of a VM&#8217;s interrupt files</a>.</p>
 </div>
 <div class="paragraph">
-<p>A device context’s MSI page table is separate from the usual
+<p>A device context&#8217;s MSI page table is separate from the usual
 address-translation data structures used to translate other memory
 accesses from the same device. The form and function of MSI page tables
 are the subject of most of the rest of this chapter.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -507,13 +557,13 @@ reasons:</p>
 separate control of MSI translations to help simplify the case when
 virtual harts are migrated from one physical hart to another. As noted
 in <a href="#virtHartMigration">[virtHartMigration]</a>, when a
-virtual hart’s interrupt files are mapped to guest interrupt files in
+virtual hart&#8217;s interrupt files are mapped to guest interrupt files in
 the real machine, migration of the virtual hart causes the physical
 guest interrupt files underlying those virtual interrupt files to
 change. However, because on other systems (not RISC-V) the migration of a
 virtual hart does not affect the mapping from guest physical addresses
 to real physical addresses, the internal functions of Linux that perform
-this migration are not set up to modify an IOMMU’s address-translation
+this migration are not set up to modify an IOMMU&#8217;s address-translation
 tables to adjust for the changing physical locations of RISC-V virtual
 interrupt files. Giving a hypervisor control of a separate MSI
 translation table at an IOMMU bypasses this limitation. The MSI page
@@ -532,7 +582,7 @@ structures.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -554,7 +604,7 @@ page-based address translation.</p>
 <div class="content">
 <img src="_images/IOMMU-guestIntrFiles.png" alt="IOMMU guestIntrFiles">
 </div>
-<div class="title">Figure 6. Translation of a device-sourced MSI that a guest OS intended to go to a (virtual) IMSIC interrupt file in the OS’s virtual machine. Referencing an MSI page table supplied by the controlling hypervisor, the IOMMU redirects the MSI to a guest interrupt file of the real machine.</div>
+<div class="title">Figure 6. Translation of a device-sourced MSI that a guest OS intended to go to a (virtual) IMSIC interrupt file in the OS&#8217;s virtual machine. Referencing an MSI page table supplied by the controlling hypervisor, the IOMMU redirects the MSI to a guest interrupt file of the real machine.</div>
 </div>
 <div class="paragraph">
 <p>Memory writes from a device are recognized as MSIs by the destination
@@ -562,11 +612,11 @@ address of the write. If an IOMMU determines that a 32-bit write is to
 the location of a (virtual) interrupt file in the relevant virtual
 machine, the write is considered an MSI within the VM, else not. The
 exact formula for recognizing MSIs is documented in
-<a href="#IOMMU-identIncomingMSIs">8.1.4. Identification of page addresses of a VM’s interrupt files</a>.</p>
+<a href="#IOMMU-identIncomingMSIs">8.1.4. Identification of page addresses of a VM&#8217;s interrupt files</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -583,7 +633,7 @@ interpret the table properly.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -627,17 +677,17 @@ have changed.</p>
 </div>
 <div class="paragraph">
 <p>While a memory-resident interrupt file provides a place to record MSIs,
-it cannot interrupt a hart directly the way an IMSIC’s guest interrupt
+it cannot interrupt a hart directly the way an IMSIC&#8217;s guest interrupt
 files can. The notice MSIs that hypervisors receive only indicate that a
 virtual hart <em>might</em> need interrupting; a hypervisor is responsible for
 examining the MRIF contents each time to determine whether actually to
-interrupt the virtual hart. Furthermore, whereas an IMSIC’s guest
+interrupt the virtual hart. Furthermore, whereas an IMSIC&#8217;s guest
 interrupt file can directly act as a supervisor-level interrupt file for
-a virtual hart, keeping a virtual hart’s interrupt file in an MRIF while
+a virtual hart, keeping a virtual hart&#8217;s interrupt file in an MRIF while
 the virtual hart executes requires that the hypervisor emulate a
 supervisor-level interrupt file for the virtual hart, hiding the
 underlying MRIF. Depending on how often the virtual hart touches its
-interrupt file and the implementation’s level of support for MRIFs, the
+interrupt file and the implementation&#8217;s level of support for MRIFs, the
 cost of this emulation may be significant.</p>
 </div>
 <div class="paragraph">
@@ -653,7 +703,7 @@ interrupt file of another virtual hart to be evicted to its own MRIF.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -668,7 +718,7 @@ too small.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>An IOMMU can have one of these three levels of support for
@@ -707,7 +757,7 @@ harts are big-endian-only).</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -720,7 +770,7 @@ of instructions.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>The pairs of doublewords contain the interrupt-pending and
@@ -790,7 +840,7 @@ is the interrupt-enable bit.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -806,14 +856,14 @@ are supported without atomic update.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>Bit 0 of the first doubleword of an MRIF stores a faux interrupt-pending
 bit for nonexistent interrupt 0. If a write from an I/O device appears
 to be an MSI that should be stored in an MRIF, yet the data to write
 (the interrupt identity) is zero, the IOMMU acts as though zero were a
-valid interrupt identity, setting bit 0 of the target MRIF’s first
+valid interrupt identity, setting bit 0 of the target MRIF&#8217;s first
 doubleword and sending a notice MSI as usual.</p>
 </div>
 <div class="paragraph">
@@ -828,7 +878,7 @@ invalid identity 0 and all identities greater than <span class="steminline"> <sv
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -850,7 +900,7 @@ indicating an invalid interrupt identity of zero.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -861,14 +911,14 @@ raise in the destination interrupt file. (Recall
 <a href="IMSIC.html#MSIEncoding" class="xref page">MSI encoding</a>.) This data may be in
 little-endian or big-endian byte order. If an IOMMU supports
 memory-resident interrupt files, it can store to an MRIF MSIs of the
-same endianness that the machine’s IMSICs accept. All IMSIC interrupt
+same endianness that the machine&#8217;s IMSICs accept. All IMSIC interrupt
 files are required to accept MSIs in little-endian byte order written to
 memory-mapped register <code>seteipnum_le</code> (<a href="IMSIC.html#IMSIC-memRegion" class="xref page">Memory region for an interrupt file</a>). IMSIC interrupt
 files may also accept MSIs in big-endian byte order if register <code>seteipnum_be</code> is
 implemented alongside <code>seteipnum_le</code>.</p>
 </div>
 <div class="paragraph">
-<p>If the interrupt identity indicated by an MSI’s data (when interpreted
+<p>If the interrupt identity indicated by an MSI&#8217;s data (when interpreted
 in the correct byte order) is in the range 0-2047, an IOMMU stores the
 MSI to an MRIF by setting to one the interrupt-pending bit in the MRIF
 for that identity. If atomic update is supported for MRIFs, the pending
@@ -884,7 +934,7 @@ page table entries configured in <em>MRIF mode</em>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -899,7 +949,7 @@ the interrupt identity is zero.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -907,21 +957,21 @@ the interrupt identity is zero.</p>
 <div class="paragraph">
 <p>To make use of a memory-resident interrupt file with support for atomic
 update, software must have memory locations to save an IMSIC interrupt
-file’s <code>eidelivery</code> and <code>eithreshold</code> registers, in addition to the MRIF structure itself from <a href="#IOMMU-MRIFFormat">8.1.3.1. Format of a memory-resident interrupt file</a>.</p>
+file&#8217;s <code>eidelivery</code> and <code>eithreshold</code> registers, in addition to the MRIF structure itself from <a href="#IOMMU-MRIFFormat">8.1.3.1. Format of a memory-resident interrupt file</a>.</p>
 </div>
 <div class="paragraph">
-<p>Moving a virtual hart’s interrupt file from an IMSIC into an MRIF
+<p>Moving a virtual hart&#8217;s interrupt file from an IMSIC into an MRIF
 involves these steps:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Prepare the MRIF by zeroing all of its interrupt-pending bits (the
-even doublewords) and by copying the IMSIC interrupt file’s <code>eie</code> array to the
-MRIF’s interrupt-enable bits (the odd doublewords).</p>
+even doublewords) and by copying the IMSIC interrupt file&#8217;s <code>eie</code> array to the
+MRIF&#8217;s interrupt-enable bits (the odd doublewords).</p>
 </li>
 <li>
-<p>Save to memory the existing values of the IMSIC interrupt file’s
+<p>Save to memory the existing values of the IMSIC interrupt file&#8217;s
 registers <code>eidelivery</code> and <code>eithreshold</code>, and set <code>eidelivery</code> = 0.</p>
 </li>
 <li>
@@ -931,7 +981,7 @@ synchronize with all IOMMUs to ensure that no straggler MSIs will arrive
 at the IMSIC interrupt file after this step.</p>
 </li>
 <li>
-<p>Logically OR the contents of the IMSIC interrupt file’s <code>eip</code> array into the
+<p>Logically OR the contents of the IMSIC interrupt file&#8217;s <code>eip</code> array into the
 interrupt-pending bits of the MRIF, using AMOOR operations.</p>
 </li>
 </ol>
@@ -942,7 +992,7 @@ use.</p>
 </div>
 <div class="paragraph">
 <p>Each time a notice MSI arrives indicating that an MSI has been stored in
-the MRIF, the controlling hypervisor should scan the MRIF’s
+the MRIF, the controlling hypervisor should scan the MRIF&#8217;s
 interrupt-pending and interrupt-enable bits to determine if any enabled
 interrupt is now both pending and enabled and thus should interrupt the
 virtual hart.</p>
@@ -958,13 +1008,13 @@ the same MRIF.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If an IOMMU is ever configured to examine an MRIF’s interrupt-enable
+<p>If an IOMMU is ever configured to examine an MRIF&#8217;s interrupt-enable
 bits to decide whether to send notice MSIs, then modifying those enable
 bits will generally require coordination with the IOMMU. But so long as
 IOMMUs ignore the interrupt-enable bits as is currently assumed, the
@@ -972,7 +1022,7 @@ bits can be changed by software without risk.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>To move the same interrupt file from the MRIF back to an IMSIC:</p>
@@ -991,10 +1041,10 @@ will be stored in the MRIF after this step.</p>
 <li>
 <p>Logically OR the interrupt-pending bits from the MRIF into the IMSIC
 interrupt file, using instruction CSRS to write to the <code>eip</code> array. Also, copy
-the interrupt-enable bits from the MRIF to the IMSIC interrupt file’s <code>eie</code> array.</p>
+the interrupt-enable bits from the MRIF to the IMSIC interrupt file&#8217;s <code>eie</code> array.</p>
 </li>
 <li>
-<p>Load the IMSIC interrupt file’s registers <code>eithreshold</code> and <code>eidelivery</code> with the values that were earlier saved.</p>
+<p>Load the IMSIC interrupt file&#8217;s registers <code>eithreshold</code> and <code>eidelivery</code> with the values that were earlier saved.</p>
 </li>
 </ol>
 </div>
@@ -1011,24 +1061,24 @@ but with some added complexities.</p>
 multiple IOMMUs, then multiple MRIF structures are needed, one per
 IOMMU, not just a single MRIF structure. Furthermore, in addition to
 locations for storing <code>eidelivery</code> and <code>eithreshold</code>, software needs a place for a complete copy
-of the interrupt file’s implemented <code>eip</code> array, apart from the MRIFs. While a
+of the interrupt file&#8217;s implemented <code>eip</code> array, apart from the MRIFs. While a
 virtual interrupt file is in memory, its interrupt-pending bits will be
 split across all the MRIFs and the saved <code>eip</code> array. The interrupt-enable
 bits may exist only in the MRIFs.</p>
 </div>
 <div class="paragraph">
-<p>To move a virtual hart’s interrupt file from an IMSIC into memory, with
+<p>To move a virtual hart&#8217;s interrupt file from an IMSIC into memory, with
 one MRIF per IOMMU:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Prepare all MRIFs by zeroing their interrupt-pending bits (the even
-doublewords) and by copying the IMSIC interrupt file’s <code>eie</code> array to the
+doublewords) and by copying the IMSIC interrupt file&#8217;s <code>eie</code> array to the
 MRIFs' interrupt-enable bits (the odd doublewords).</p>
 </li>
 <li>
-<p>Save to memory the existing values of the IMSIC interrupt file’s
+<p>Save to memory the existing values of the IMSIC interrupt file&#8217;s
 registers <code>eidelivery</code> and <code>eithreshold</code>, and set <code>eidelivery</code> = 0.</p>
 </li>
 <li>
@@ -1039,7 +1089,7 @@ ensure that no straggler MSIs will arrive at the IMSIC interrupt file
 after this step.</p>
 </li>
 <li>
-<p>Dump the IMSIC interrupt file’s <code>eip</code> array to its separate location outside
+<p>Dump the IMSIC interrupt file&#8217;s <code>eip</code> array to its separate location outside
 the MRIFs.</p>
 </li>
 </ol>
@@ -1049,8 +1099,8 @@ the MRIFs.</p>
 use.</p>
 </div>
 <div class="paragraph">
-<p>While a virtual hart’s interrupt file remains in memory, an interrupt
-identity’s true pending bit is the logical OR of its bit in all MRIFs
+<p>While a virtual hart&#8217;s interrupt file remains in memory, an interrupt
+identity&#8217;s true pending bit is the logical OR of its bit in all MRIFs
 and its bit in the saved <code>eip</code> array. All pending bits in the MRIFs start as
 zeros, but interrupts may become pending there as MSIs for this virtual
 hart arrive at IOMMUs and are stored in the corresponding MRIFs.</p>
@@ -1063,7 +1113,7 @@ reconfigured to store MSIs into the new MRIF.) For this reason, it may
 or may not be practical to have a virtual hart execute while keeping one
 of its interrupt files in memory. When an MRIF records an interrupt that
 should wake a virtual hart, the simplest strategy is to always move the
-interrupt file back into an IMSIC’s guest interrupt file before resuming
+interrupt file back into an IMSIC&#8217;s guest interrupt file before resuming
 execution of the virtual hart.</p>
 </div>
 <div class="paragraph">
@@ -1085,10 +1135,10 @@ will be stored in MRIFs after this step.</p>
 and the saved <code>eip</code> array, and logically OR these merged bits into the IMSIC
 interrupt file, using instruction CSRS to write to the <code>eip</code> array. Also, copy
 the interrupt-enable bits from one of the MRIFs to the IMSIC interrupt
-file’s <code>eie</code> array.</p>
+file&#8217;s <code>eie</code> array.</p>
 </li>
 <li>
-<p>Load the IMSIC interrupt file’s registers <code>eithreshold</code> and <code>eidelivery</code> with the values that were earlier saved.</p>
+<p>Load the IMSIC interrupt file&#8217;s registers <code>eithreshold</code> and <code>eidelivery</code> with the values that were earlier saved.</p>
 </li>
 </ol>
 </div>
@@ -1108,7 +1158,7 @@ for the purpose of receiving notice MSIs.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1120,16 +1170,16 @@ does not police exactly how they are used by software.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="IOMMU-identIncomingMSIs"><a class="anchor" href="#IOMMU-identIncomingMSIs"></a>8.1.4. Identification of page addresses of a VM’s interrupt files</h3>
+<h3 id="IOMMU-identIncomingMSIs"><a class="anchor" href="#IOMMU-identIncomingMSIs"></a>8.1.4. Identification of page addresses of a VM&#8217;s interrupt files</h3>
 <div class="paragraph">
 <p>When an I/O device is configured directly by a guest operating system,
 MSIs from the device are expected to be targeted to virtual IMSICs
-within the guest OS’s virtual machine, using guest physical addresses
+within the guest OS&#8217;s virtual machine, using guest physical addresses
 that are inappropriate and unsafe for the real machine. An IOMMU must
 recognize certain incoming writes from such devices as MSIs and convert
 them as needed for the real machine. (Recall
@@ -1142,8 +1192,8 @@ running within one RISC-V virtual machine. Assuming the VM itself conforms to
 the Advanced Interrupt Architecture, MSIs are sent to virtual harts
 within the VM by writing to the memory-mapped registers of the interrupt
 files of virtual IMSICs. Each of these virtual interrupt files occupies
-a separate 4-KiB page in the VM’s guest physical address space, the same
-as real interrupt files do in a real machine’s physical address space. A
+a separate 4-KiB page in the VM&#8217;s guest physical address space, the same
+as real interrupt files do in a real machine&#8217;s physical address space. A
 write to a guest physical address can thus be recognized as an MSI to a
 virtual hart if the write is to a page occupied by an interrupt file of
 a virtual IMSIC within the VM.</p>
@@ -1266,7 +1316,7 @@ detailed further in the next two subsections.</p>
 <h4 id="8-1-5-1-msi-pte-basic-translate-mode"><a class="anchor" href="#8-1-5-1-msi-pte-basic-translate-mode"></a>8.1.5.1. MSI PTE, basic translate mode</h4>
 <div class="paragraph">
 <p>When an MSI PTE has fields V = 1, C = 0, and M = 3 (basic translate
-mode), the PTE’s complete format is:</p>
+mode), the PTE&#8217;s complete format is:</p>
 </div>
 <table class="tableblock frame-none grid-none fit-content center">
 <colgroup>
@@ -1306,7 +1356,7 @@ free for software to use.</p>
 </div>
 <div class="paragraph">
 <p>A memory access within the page covered by the MSI PTE is translated by
-replacing the access’s original address bits 12 and above (the guest
+replacing the access&#8217;s original address bits 12 and above (the guest
 physical page number) with field PPN (Physical Page Number) from the
 PTE, while retaining the original address bits 11:0 (the page offset).
 This translated address is either zero-extended or clipped at the upper
@@ -1321,7 +1371,7 @@ interrupt file of a real IMSIC in the machine.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1335,37 +1385,37 @@ and regular RISC-V leaf PTEs as follows:</p>
 <p>For RV64, the first doubleword of an MSI PTE in basic translate mode has
 the same encoding as a regular RISC-V leaf PTE for Sv39, Sv48, Sv57, Sv39x4,
 Sv48x4, or Sv57x4 page-based address translation, with PTE fields D, A,
-G, U, and X all zeros and W = R = 1. Hence, the MSI PTE’s first
+G, U, and X all zeros and W = R = 1. Hence, the MSI PTE&#8217;s first
 doubleword appears the same as a regular PTE that grants read and write
 permission (R = W = 1) but not execute permissions (X = 0). This
 same-encoded regular PTE would translate an MSI write the same as the
-actual MSI PTE, except that what would be the PTE’s accessed (A), dirty
+actual MSI PTE, except that what would be the PTE&#8217;s accessed (A), dirty
 (D), and user (U) bits are all zeros. An IOMMU needs to treat only these
 three bits differently for an MSI PTE versus a regular RV64 leaf PTE.</p>
 </div>
 <div class="paragraph">
 <p>The address computation used to select a PTE from a regular RISC-V page table
-must be modified to select an MSI PTE’s first doubleword from an MSI
+must be modified to select an MSI PTE&#8217;s first doubleword from an MSI
 page table. However, the extraction of an interrupt file number from a
 guest physical address to obtain the index for accessing the MSI page
 table already creates an unavoidable difference in PTE addressing.</p>
 </div>
 <div class="paragraph">
-<p>For RV32, the lower 32-bit word of an MSI PTE’s first doubleword has the
+<p>For RV32, the lower 32-bit word of an MSI PTE&#8217;s first doubleword has the
 same format as a leaf PTE for Sv32 or Sv32x4 page-based address
 translation, except again for what would be PTE bits A, D, and U, which
 must be treated differently.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 <div class="sect3">
 <h4 id="IOMMU-MSIPTE-MRIF"><a class="anchor" href="#IOMMU-MSIPTE-MRIF"></a>8.1.5.2. MSI PTE, MRIF mode</h4>
 <div class="paragraph">
 <p>If memory-resident interrupt files are supported and an MSI PTE has
-fields V = 1, C = 0, and M = 1 (MRIF mode), the PTE’s complete format
+fields V = 1, C = 0, and M = 1 (MRIF mode), the PTE&#8217;s complete format
 is:</p>
 </div>
 <table class="tableblock frame-none grid-none fit-content center">
@@ -1413,11 +1463,11 @@ is:</p>
 <p>All other PTE bits are reserved and must be set to zeros by software.</p>
 </div>
 <div class="paragraph">
-<p>The PTE’s MRIF Address field provides bits 55:9 of the physical address
+<p>The PTE&#8217;s MRIF Address field provides bits 55:9 of the physical address
 of a memory-resident interrupt file in which to store incoming MSIs,
 referred to as the <em>destination MRIF</em>. As every memory-resident
 interrupt file is naturally aligned to a 512-byte address boundary, bits
-8:0 of the destination MRIF’s address must be zero and are not specified
+8:0 of the destination MRIF&#8217;s address must be zero and are not specified
 in the PTE.</p>
 </div>
 <div class="paragraph">
@@ -1428,13 +1478,13 @@ updated as a result of consulting this PTE to store an incoming MSI.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Typically, NPPN will be the page address of an IMSIC’s interrupt file in
+<p>Typically, NPPN will be the page address of an IMSIC&#8217;s interrupt file in
 the real machine, and NID will be the interrupt identity to make pending
 in that interrupt file to indicate that the destination MRIF may have
 changed. However, NPPN is not required to be a valid interrupt file
@@ -1443,7 +1493,7 @@ addresses. Any page address must be accepted for NPPN.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 <div class="paragraph">
 <p>Memory accesses by I/O devices to addresses within a page covered by an
@@ -1500,7 +1550,7 @@ offset zero) in little-endian byte order.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tbody><tr>
+<tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1518,7 +1568,7 @@ leaving its address translation cache oblivious to MRIF-mode MSI PTEs.</p>
 </div>
 </td>
 </tr>
-</tbody></table>
+</table>
 </div>
 </div>
 </div>
@@ -1533,7 +1583,7 @@ leaving its address translation cache oblivious to MRIF-mode MSI PTEs.</p>
 <footer class="footer flex">
     <div id="footer-buttons" class="footer-buttons">
         <a href="https://riscv.org/" target="_blank" rel="noopener noreferrer" class="footer-btn">riscv.org</a>
-        <a href="https://lf-riscv.atlassian.net/wiki/spaces/HOME/overview?mode=global" target="_blank" rel="noopener noreferrer" class="footer-btn">Technical Wiki</a>
+        <a href="https://tech.riscv.org/" target="_blank" rel="noopener noreferrer" class="footer-btn">Technical Hub</a>
         <a href="https://riscv.org/code-of-conduct/" target="_blank" rel="noopener noreferrer" class="footer-btn">Code of Conduct</a>
         <a href="https://riscv.org/privacy-policy/" target="_blank" rel="noopener noreferrer" class="footer-btn">Privacy Policy</a>
         <a href="https://riscv.org/members/" target="_blank" rel="noopener noreferrer" class="footer-btn">Join RISC-V</a>
@@ -1543,21 +1593,15 @@ leaving its address translation cache oblivious to MRIF-mode MSI PTEs.</p>
      <p class="smallest antialiased">Copyright © RISC-V International®. All rights reserved. RISC-V, RISC-V International, and the RISC-V logos are trademarks of RISC-V International.</p>
     </div>
 
-    <div id="social-icons" class="flex jc-between">
-        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
-        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
-        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"></path></svg></a>
-        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"></circle><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"></path></svg></a>
-        <a href="https://risc-v-international.slack.com/join/shared_invite/zt-2y1w69wde-PdoN3fXovLlzoni~UaPrBA" title="Slack" target="_blank" rel="noopener noreferrer" class="slack-icon-link"><i class="fa fa-slack" aria-hidden="true"></i></a>
-    </div>
 </footer>
 <script src="../_/js/vendor/import.js"></script>
 <script src="../_/js/site.js"></script>
-<script async="" src="../_/js/vendor/highlight.js"></script>
-<script async="" src="../_/js/vendor/spring-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async
+    src="../_/js/vendor/spring-tabs.js"
+    data-sync-storage-key="docs:preferred-tab"></script>
 <script src="../_/js/vendor/lunr.js"></script>
 <script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
-<script async="" src="../search-index.js"></script>
-  
-
-</body></html>
+<script async src="../search-index.js"></script>
+  </body>
+</html>
