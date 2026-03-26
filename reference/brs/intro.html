@@ -127,37 +127,37 @@
     <span class="nav-text">Boot and Runtime Services</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="index.html">Chapter 1. Title Page</a>
+    <a class="nav-link"  href="index.html">Boot and Runtime Services</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="copyright.html">Chapter 2. Copyright and License</a>
+    <a class="nav-link"  href="copyright.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="contributors.html">Chapter 3. Contributors</a>
+    <a class="nav-link"  href="contributors.html">Contributors</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="intro.html">Chapter 4. Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="recipes.html">Chapter 5. Recipes</a>
+    <a class="nav-link"  href="recipes.html">Chapter 2. Recipes</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="hart.html">Chapter 6. Hart Requirements</a>
+    <a class="nav-link"  href="hart.html">Chapter 3. Hart Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="sbi.html">Chapter 7. SBI Requirements</a>
+    <a class="nav-link"  href="sbi.html">Chapter 4. SBI Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="uefi.html">Chapter 8. BRS-I UEFI Requirements</a>
+    <a class="nav-link"  href="uefi.html">Chapter 5. BRS-I UEFI Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="acpi.html">Chapter 9. BRS-I ACPI Requirements</a>
+    <a class="nav-link"  href="acpi.html">Chapter 6. BRS-I ACPI Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smbios.html">Chapter 10. BRS-I SMBIOS Requirements</a>
+    <a class="nav-link"  href="smbios.html">Chapter 7. BRS-I SMBIOS Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="bibliography.html">Chapter 11. Bibliography</a>
+    <a class="nav-link"  href="bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -638,11 +638,11 @@
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
       <li>Boot and Runtime Services</li>
-      <li><a href="intro.html">Chapter 4. Introduction</a></li>
+      <li><a href="intro.html">Chapter 1. Introduction</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="intro"><a class="anchor" href="#intro"></a>4.1. Introduction</h2>
+<h2 id="intro"><a class="anchor" href="#intro"></a>1.1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <em>RISC-V Boot and Runtime Services Specification</em> (BRS) defines a standardized set of software capabilities, that portable system software, such as operating systems and hypervisors, can rely on being present in an implementation to utilize in acts of device discovery, OS boot and hand-off, system management, and other operations.</p>
@@ -654,19 +654,19 @@
 <p>This specification standardizes the requirements for software interfaces and capabilities by building on top of relevant industry and ratified RISC-V standards.</p>
 </div>
 <div class="sect2">
-<h3 id="4-1-1-releases"><a class="anchor" href="#4-1-1-releases"></a>4.1.1. Releases</h3>
+<h3 id="1-1-1-releases"><a class="anchor" href="#1-1-1-releases"></a>1.1.1. Releases</h3>
 <div class="paragraph">
 <p>It is expected that the BRS will periodically release a new specification. The determination of a new release will be based on the evaluation of significant changes to its underlying dependencies.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-2-approach-to-solutions"><a class="anchor" href="#4-1-2-approach-to-solutions"></a>4.1.2. Approach to Solutions</h3>
+<h3 id="1-1-2-approach-to-solutions"><a class="anchor" href="#1-1-2-approach-to-solutions"></a>1.1.2. Approach to Solutions</h3>
 <div class="paragraph">
 <p>The BRS focuses on two solutions in the form of what is deemed a recipe. Each recipe contains the requirements needed to fulfill each solution. The requirements of each recipe will be marked accordingly with a unique identifier. The recipes are BRS-I (Interoperable) and BRS-B (Bespoke).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-3-testing-and-conformance"><a class="anchor" href="#4-1-3-testing-and-conformance"></a>4.1.3. Testing and Conformance</h3>
+<h3 id="1-1-3-testing-and-conformance"><a class="anchor" href="#1-1-3-testing-and-conformance"></a>1.1.3. Testing and Conformance</h3>
 <div class="paragraph">
 <p>To be compliant with this specification, an implementation MUST support all mandatory rules and MUST support the listed versions of the specifications. This standard set of capabilities MAY be extended by a specific implementation with additional standard or custom capabilities, including compatible later versions of listed standard specifications. Portable system software MUST support the specified mandatory capabilities to be compliant with this specification.</p>
 </div>
@@ -694,7 +694,7 @@
              The rules use the key words "MUST", "MUST NOT",
              "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT",
              "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" that are
-             to be interpreted as described in RFC 2119 cite:[RFC_2119] when,
+             to be interpreted as described in RFC 2119 [<a href="bibliography.html#bib-rfc_2119" class="xref page">1</a>] when,
              and only when, they appear in all capitals, as shown here. When
              these words are not capitalized, they have their normal English
              meanings.</p></td>
@@ -709,9 +709,9 @@
 </table>
 </div>
 <div class="sect2">
-<h3 id="4-1-4-glossary"><a class="anchor" href="#4-1-4-glossary"></a>4.1.4. Glossary</h3>
+<h3 id="1-1-4-glossary"><a class="anchor" href="#1-1-4-glossary"></a>1.1.4. Glossary</h3>
 <div class="paragraph">
-<p>Most terminology has the standard RISC-V meaning. This table captures other terms used in the document. Terms in the document prefixed by <strong>PCIe</strong> have the meaning defined in the <em>PCI Express Base Specification</em> cite:[PCI] (even if they are not in this table).</p>
+<p>Most terminology has the standard RISC-V meaning. This table captures other terms used in the document. Terms in the document prefixed by <strong>PCIe</strong> have the meaning defined in the <em>PCI Express Base Specification</em> [<a href="bibliography.html#bib-pci" class="xref page">2</a>] (even if they are not in this table).</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 1. Terms and definitions</caption>
@@ -728,7 +728,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ACPI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Advanced Configuration and Power Interface Specification</em> cite:[ACPI].</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Advanced Configuration and Power Interface Specification</em> [<a href="bibliography.html#bib-acpi" class="xref page">3</a>].</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">BRS</p></td>
@@ -744,11 +744,11 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DT</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Device Tree</em> cite:[DT].</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Device Tree</em> [<a href="bibliography.html#bib-dt" class="xref page">4</a>].</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EBBR</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Embedded Base Boot Requirements Specification</em> cite:[EBBR].</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Embedded Base Boot Requirements Specification</em> [<a href="bibliography.html#bib-ebbr" class="xref page">5</a>].</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OSV</p></td>
@@ -760,11 +760,11 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Profile</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>RISC-V Profile</em> cite:[Profile].</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>RISC-V Profile</em> [<a href="bibliography.html#bib-profile" class="xref page">6</a>].</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RPMI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>RISC-V Platform Management Interface</em> cite:[RPMI].</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>RISC-V Platform Management Interface</em> [<a href="bibliography.html#bib-rpmi" class="xref page">7</a>].</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RVI</p></td>
@@ -772,11 +772,11 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SBI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>RISC-V Supervisor Binary Interface Specification</em> cite:[SBI].</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>RISC-V Supervisor Binary Interface Specification</em> [<a href="bibliography.html#bib-sbi" class="xref page">8</a>].</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SMBIOS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>System Management BIOS (SMBIOS) Reference Specification</em> cite:[SMBIOS].</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>System Management BIOS (SMBIOS) Reference Specification</em> [<a href="bibliography.html#bib-smbios" class="xref page">9</a>].</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SoC</p></td>
@@ -784,7 +784,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UEFI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Unified Extensible Firmware Interface Specification</em> cite:[UEFI].</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Unified Extensible Firmware Interface Specification</em> [<a href="bibliography.html#bib-uefi" class="xref page">10</a>].</p></td>
 </tr>
 </tbody>
 </table>
@@ -792,8 +792,8 @@
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="contributors.html">Chapter 3. Contributors</a></span>
-  <span class="next"><a href="recipes.html">Chapter 5. Recipes</a></span>
+  <span class="prev"><a href="contributors.html">Contributors</a></span>
+  <span class="next"><a href="recipes.html">Chapter 2. Recipes</a></span>
 </nav>
 </article>  </div>
 </main>

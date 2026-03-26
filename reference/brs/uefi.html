@@ -127,37 +127,37 @@
     <span class="nav-text">Boot and Runtime Services</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="index.html">Chapter 1. Title Page</a>
+    <a class="nav-link"  href="index.html">Boot and Runtime Services</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="copyright.html">Chapter 2. Copyright and License</a>
+    <a class="nav-link"  href="copyright.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="contributors.html">Chapter 3. Contributors</a>
+    <a class="nav-link"  href="contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Chapter 4. Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="recipes.html">Chapter 5. Recipes</a>
+    <a class="nav-link"  href="recipes.html">Chapter 2. Recipes</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="hart.html">Chapter 6. Hart Requirements</a>
+    <a class="nav-link"  href="hart.html">Chapter 3. Hart Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="sbi.html">Chapter 7. SBI Requirements</a>
+    <a class="nav-link"  href="sbi.html">Chapter 4. SBI Requirements</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="uefi.html">Chapter 8. BRS-I UEFI Requirements</a>
+    <a class="nav-link"  href="uefi.html">Chapter 5. BRS-I UEFI Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="acpi.html">Chapter 9. BRS-I ACPI Requirements</a>
+    <a class="nav-link"  href="acpi.html">Chapter 6. BRS-I ACPI Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smbios.html">Chapter 10. BRS-I SMBIOS Requirements</a>
+    <a class="nav-link"  href="smbios.html">Chapter 7. BRS-I SMBIOS Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="bibliography.html">Chapter 11. Bibliography</a>
+    <a class="nav-link"  href="bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -638,18 +638,18 @@
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
       <li>Boot and Runtime Services</li>
-      <li><a href="uefi.html">Chapter 8. BRS-I UEFI Requirements</a></li>
+      <li><a href="uefi.html">Chapter 5. BRS-I UEFI Requirements</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="uefi"><a class="anchor" href="#uefi"></a>8.1. BRS-I UEFI Requirements</h2>
+<h2 id="uefi"><a class="anchor" href="#uefi"></a>5.1. BRS-I UEFI Requirements</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <em>Unified Extensible Firmware Interface Specification</em> (UEFI) describes the interface between the OS and the supervisor-mode firmware.</p>
 </div>
 <div class="paragraph">
 <p>This section defines the BRS-I mandatory and optional UEFI
-rules on top of existing cite:[UEFI] specification
+rules on top of existing [<a href="bibliography.html#bib-uefi" class="xref page">10</a>] specification
 requirements. Additional non-normative guidance may be found in the
 <a href="#uefi-guidance">firmware implementation guidance</a> section.</p>
 </div>
@@ -683,7 +683,7 @@ All content in this section is optional and recommended for BRS-B.
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>UEFI_020</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">MUST meet the 3rd Party UEFI Certificate Authority (CA) requirements on UEFI memory mitigations cite:[MSUefiCaRequirements].</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MUST meet the 3rd Party UEFI Certificate Authority (CA) requirements on UEFI memory mitigations [<a href="bibliography.html#bib-msueficarequirements" class="xref page">15</a>].</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>UEFI_030</code></p></td>
@@ -709,7 +709,7 @@ All content in this section is optional and recommended for BRS-B.
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>UEFI_040</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An implementation MAY comply with the <em>UEFI Platform Initialization Specification</em> cite:[UEFI-PI].</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An implementation MAY comply with the <em>UEFI Platform Initialization Specification</em> [<a href="bibliography.html#bib-uefi-pi" class="xref page">16</a>].</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>UEFI_050</code></p></td>
@@ -723,7 +723,7 @@ All content in this section is optional and recommended for BRS-B.
 <td class="tableblock halign-left valign-top"><p class="tableblock">The implementation MUST declare the <code>EFI_CONFORMANCE_PROFILES_UEFI_SPEC_GUID</code> conformance profile.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>The <code>EFI_CONFORMANCE_PROFILES_UEFI_SPEC_GUID</code> conformance profile MUST be declared, as the BRS requirements are a superset of UEFI cite:[UEFI] (Section 2.6).</em></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>The <code>EFI_CONFORMANCE_PROFILES_UEFI_SPEC_GUID</code> conformance profile MUST be declared, as the BRS requirements are a superset of UEFI [<a href="bibliography.html#bib-uefi" class="xref page">10</a>] (Section 2.6).</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>UEFI_070</code></p></td>
@@ -744,7 +744,7 @@ hand-off info to an OS, for example, to provide RAM disk information
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="8-1-1-brs-i-io-specific-requirements"><a class="anchor" href="#8-1-1-brs-i-io-specific-requirements"></a>8.1.1. BRS-I I/O-specific Requirements</h3>
+<h3 id="5-1-1-brs-i-io-specific-requirements"><a class="anchor" href="#5-1-1-brs-i-io-specific-requirements"></a>5.1.1. BRS-I I/O-specific Requirements</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -762,7 +762,7 @@ hand-off info to an OS, for example, to provide RAM disk information
 <td class="tableblock halign-left valign-top"><p class="tableblock">Systems implementing PCIe MUST always initialize all root complex hardware and perform resource assignment for all endpoints and usable hotplug-capable switches in the system, even in a boot scenario from a non-PCIe boot device.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>This is a stronger requirement than the PCI Firmware Specification firmware/OS device hand-off state (cite:[PCIFW] Section 3.5). <a href="#uefi-guidance-pcie">See additional guidance</a>.</em></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>This is a stronger requirement than the PCI Firmware Specification firmware/OS device hand-off state ([<a href="bibliography.html#bib-pcifw" class="xref page">17</a>] Section 3.5). <a href="#uefi-guidance-pcie">See additional guidance</a>.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>UIO_020</code></p></td>
@@ -775,7 +775,7 @@ hand-off info to an OS, for example, to provide RAM disk information
 </table>
 </div>
 <div class="sect2">
-<h3 id="uefi-rt"><a class="anchor" href="#uefi-rt"></a>8.1.2. BRS-I UEFI Runtime Services</h3>
+<h3 id="uefi-rt"><a class="anchor" href="#uefi-rt"></a>5.1.2. BRS-I UEFI Runtime Services</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -851,7 +851,7 @@ operate on the same hardware as the <a href="#acpi-tad">ACPI TAD</a> before UEFI
 </table>
 </div>
 <div class="sect2">
-<h3 id="8-1-3-brs-i-security-requirements"><a class="anchor" href="#8-1-3-brs-i-security-requirements"></a>8.1.3. BRS-I Security Requirements</h3>
+<h3 id="5-1-3-brs-i-security-requirements"><a class="anchor" href="#5-1-3-brs-i-security-requirements"></a>5.1.3. BRS-I Security Requirements</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -866,7 +866,7 @@ operate on the same hardware as the <a href="#acpi-tad">ACPI TAD</a> before UEFI
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>USEC_010</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Systems implementing a TPM MUST implement the <em>TCG EFI Protocol Specification</em> cite:[TcgEfiPlat].</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Systems implementing a TPM MUST implement the <em>TCG EFI Protocol Specification</em> [<a href="bibliography.html#bib-tcgefiplat" class="xref page">18</a>].</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>USEC_020</code></p></td>
@@ -891,7 +891,7 @@ operate on the same hardware as the <a href="#acpi-tad">ACPI TAD</a> before UEFI
 </div>
 </div>
 <div class="sect2">
-<h3 id="8-1-4-brs-i-firmware-update"><a class="anchor" href="#8-1-4-brs-i-firmware-update"></a>8.1.4. BRS-I Firmware Update</h3>
+<h3 id="5-1-4-brs-i-firmware-update"><a class="anchor" href="#5-1-4-brs-i-firmware-update"></a>5.1.4. BRS-I Firmware Update</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -906,18 +906,18 @@ operate on the same hardware as the <a href="#acpi-tad">ACPI TAD</a> before UEFI
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>UFU_010</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Systems with in-band firmware updates MUST do so either via <code>UpdateCapsule()</code> UEFI runtime service (cite:[UEFI] Section 8.5.3) or via <em>Delivery of Capsules via file on Mass Storage Device</em> (cite:[UEFI] Section 8.5.5).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Systems with in-band firmware updates MUST do so either via <code>UpdateCapsule()</code> UEFI runtime service ([<a href="bibliography.html#bib-uefi" class="xref page">10</a>] Section 8.5.3) or via <em>Delivery of Capsules via file on Mass Storage Device</em> ([<a href="bibliography.html#bib-uefi" class="xref page">10</a>] Section 8.5.5).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>In-band means the firmware running on a hart updates itself.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>UFU_020</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Systems implementing in-band firmware updates via <code>UpdateCapsule()</code> MUST accept updates in the <em>Firmware Management Protocol Data Capsule Structure</em> format as described in <em>Delivering Capsules Containing Updates to Firmware Management Protocol</em> cite:[UEFI] (Section 23.3).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Systems implementing in-band firmware updates via <code>UpdateCapsule()</code> MUST accept updates in the <em>Firmware Management Protocol Data Capsule Structure</em> format as described in <em>Delivering Capsules Containing Updates to Firmware Management Protocol</em> [<a href="bibliography.html#bib-uefi" class="xref page">10</a>] (Section 23.3).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>UFU_030</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Systems implementing in-band firmware updates via <code>UpdateCapsule()</code> MUST provide an ESRT cite:[UEFI] (Section 23.4) describing every firmware image that is updated in-band.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Systems implementing in-band firmware updates via <code>UpdateCapsule()</code> MUST provide an ESRT [<a href="bibliography.html#bib-uefi" class="xref page">10</a>] (Section 23.4) describing every firmware image that is updated in-band.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>UFU_040</code></p></td>
@@ -932,8 +932,8 @@ operate on the same hardware as the <a href="#acpi-tad">ACPI TAD</a> before UEFI
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="sbi.html">Chapter 7. SBI Requirements</a></span>
-  <span class="next"><a href="acpi.html">Chapter 9. BRS-I ACPI Requirements</a></span>
+  <span class="prev"><a href="sbi.html">Chapter 4. SBI Requirements</a></span>
+  <span class="next"><a href="acpi.html">Chapter 6. BRS-I ACPI Requirements</a></span>
 </nav>
 </article>  </div>
 </main>

@@ -127,37 +127,37 @@
     <span class="nav-text">Boot and Runtime Services</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="index.html">Chapter 1. Title Page</a>
+    <a class="nav-link"  href="index.html">Boot and Runtime Services</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="copyright.html">Chapter 2. Copyright and License</a>
+    <a class="nav-link"  href="copyright.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="contributors.html">Chapter 3. Contributors</a>
+    <a class="nav-link"  href="contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Chapter 4. Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="recipes.html">Chapter 5. Recipes</a>
+    <a class="nav-link"  href="recipes.html">Chapter 2. Recipes</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="hart.html">Chapter 6. Hart Requirements</a>
+    <a class="nav-link"  href="hart.html">Chapter 3. Hart Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="sbi.html">Chapter 7. SBI Requirements</a>
+    <a class="nav-link"  href="sbi.html">Chapter 4. SBI Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="uefi.html">Chapter 8. BRS-I UEFI Requirements</a>
+    <a class="nav-link"  href="uefi.html">Chapter 5. BRS-I UEFI Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="acpi.html">Chapter 9. BRS-I ACPI Requirements</a>
+    <a class="nav-link"  href="acpi.html">Chapter 6. BRS-I ACPI Requirements</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="smbios.html">Chapter 10. BRS-I SMBIOS Requirements</a>
+    <a class="nav-link"  href="smbios.html">Chapter 7. BRS-I SMBIOS Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="bibliography.html">Chapter 11. Bibliography</a>
+    <a class="nav-link"  href="bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -638,18 +638,18 @@
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
       <li>Boot and Runtime Services</li>
-      <li><a href="smbios.html">Chapter 10. BRS-I SMBIOS Requirements</a></li>
+      <li><a href="smbios.html">Chapter 7. BRS-I SMBIOS Requirements</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="smbios"><a class="anchor" href="#smbios"></a>10.1. BRS-I SMBIOS Requirements</h2>
+<h2 id="smbios"><a class="anchor" href="#smbios"></a>7.1. BRS-I SMBIOS Requirements</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <em>System Management BIOS (SMBIOS) Reference Specification</em> defines a standard format for presenting management information about an implementation, mostly focusing on hardware components.</p>
 </div>
 <div class="paragraph">
 <p>This section defines the BRS-I mandatory and optional SMBIOS requirements
-on top of existing cite:[SMBIOS] specification requirements. Additional
+on top of existing [<a href="bibliography.html#bib-smbios" class="xref page">9</a>] specification requirements. Additional
 non-normative guidance may be found in the <a href="#smbios-guidance">firmware
 implementation guidance</a> section.</p>
 </div>
@@ -672,7 +672,7 @@ All content in this section is optional and recommended for BRS-B.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The structures and fields in this section are defined in a manner consistent with the DMTF specification language (cite:[SMBIOS]).
+The structures and fields in this section are defined in a manner consistent with the DMTF specification language ([<a href="bibliography.html#bib-smbios" class="xref page">9</a>]).
 </td>
 </tr>
 </table>
@@ -698,10 +698,10 @@ The structures and fields in this section are defined in a manner consistent wit
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>SMBIOS_020</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Processor Information (Type 04) structures, meeting the additional <a href="#smbios-type04">10.1.1. Type 04 Processor Information</a> clarifications, MUST be implemented.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Processor Information (Type 04) structures, meeting the additional <a href="#smbios-type04">7.1.1. Type 04 Processor Information</a> clarifications, MUST be implemented.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>This supersedes the RISC-V specific language in the SMBIOS specification (cite:[SMBIOS], Section 7.5.3.5).</em></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>This supersedes the RISC-V specific language in the SMBIOS specification ([<a href="bibliography.html#bib-smbios" class="xref page">9</a>], Section 7.5.3.5).</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>SMBIOS_030</code></p></td>
@@ -745,7 +745,7 @@ The structures and fields in this section are defined in a manner consistent wit
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="smbios-type04"><a class="anchor" href="#smbios-type04"></a>10.1.1. Type 04 Processor Information</h3>
+<h3 id="smbios-type04"><a class="anchor" href="#smbios-type04"></a>7.1.1. Type 04 Processor Information</h3>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -753,7 +753,7 @@ The structures and fields in this section are defined in a manner consistent wit
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-The information in this section supersedes the definitions in (cite:[SMBIOS], Section 7.5.3.4).
+The information in this section supersedes the definitions in ([<a href="bibliography.html#bib-smbios" class="xref page">9</a>], Section 7.5.3.4).
 </td>
 </tr>
 </table>
@@ -768,13 +768,13 @@ this may also be known as the SoC ID. The first <code>DWORD</code> (offsets 08h-
 the vendor, where bits 6:0 is the ID without the parity and bits 31:7 represent the number of continuation codes. The second <code>DWORD</code> (offsets 0Ch-0Fh) reflects vendor-specific part versioning.</p>
 </div>
 <div class="paragraph">
-<p>For hart-specific vendor and revision information, please see <a href="#smbios-type44">10.1.2. Type 44 Processor-Specific Data</a>.</p>
+<p>For hart-specific vendor and revision information, please see <a href="#smbios-type44">7.1.2. Type 44 Processor-Specific Data</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="smbios-type44"><a class="anchor" href="#smbios-type44"></a>10.1.2. Type 44 Processor-Specific Data</h3>
+<h3 id="smbios-type44"><a class="anchor" href="#smbios-type44"></a>7.1.2. Type 44 Processor-Specific Data</h3>
 <div class="paragraph">
-<p>The processor-specific data structure fields are defined to follow the standard Processor-Specific Block fields (cite:[SMBIOS], Section 7.45.1).</p>
+<p>The processor-specific data structure fields are defined to follow the standard Processor-Specific Block fields ([<a href="bibliography.html#bib-smbios" class="xref page">9</a>], Section 7.45.1).</p>
 </div>
 <div class="paragraph">
 <p>The structure is valid for processors declared with <code>Processor Type</code> 07h (64-bit RISC-V) only.</p>
@@ -808,7 +808,7 @@ the vendor, where bits 6:0 is the ID without the parity and bits 31:7 represent 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Revision</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>WORD</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Varies</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">See <a href="#smbios-psd-ver">10.1.3. Processor-Specific Data Structure Versioning</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See <a href="#smbios-psd-ver">7.1.3. Processor-Specific Data Structure Versioning</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">02h</p></td>
@@ -851,7 +851,7 @@ of the version of the processor implementation.</p></td>
 </table>
 </div>
 <div class="sect2">
-<h3 id="smbios-psd-ver"><a class="anchor" href="#smbios-psd-ver"></a>10.1.3. Processor-Specific Data Structure Versioning</h3>
+<h3 id="smbios-psd-ver"><a class="anchor" href="#smbios-psd-ver"></a>7.1.3. Processor-Specific Data Structure Versioning</h3>
 <div class="paragraph">
 <p>The processor-specific data structure begins with a revision field to allow for future extensibility in a backwards-compatible manner.</p>
 </div>
@@ -891,8 +891,8 @@ Minor revision</th>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="acpi.html">Chapter 9. BRS-I ACPI Requirements</a></span>
-  <span class="next"><a href="bibliography.html">Chapter 11. Bibliography</a></span>
+  <span class="prev"><a href="acpi.html">Chapter 6. BRS-I ACPI Requirements</a></span>
+  <span class="next"><a href="bibliography.html">Bibliography</a></span>
 </nav>
 </article>  </div>
 </main>

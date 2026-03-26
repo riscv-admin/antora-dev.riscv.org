@@ -127,37 +127,37 @@
     <span class="nav-text">Boot and Runtime Services</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="index.html">Chapter 1. Title Page</a>
+    <a class="nav-link"  href="index.html">Boot and Runtime Services</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="copyright.html">Chapter 2. Copyright and License</a>
+    <a class="nav-link"  href="copyright.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="contributors.html">Chapter 3. Contributors</a>
+    <a class="nav-link"  href="contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Chapter 4. Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="recipes.html">Chapter 5. Recipes</a>
+    <a class="nav-link"  href="recipes.html">Chapter 2. Recipes</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="hart.html">Chapter 6. Hart Requirements</a>
+    <a class="nav-link"  href="hart.html">Chapter 3. Hart Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="sbi.html">Chapter 7. SBI Requirements</a>
+    <a class="nav-link"  href="sbi.html">Chapter 4. SBI Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="uefi.html">Chapter 8. BRS-I UEFI Requirements</a>
+    <a class="nav-link"  href="uefi.html">Chapter 5. BRS-I UEFI Requirements</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="acpi.html">Chapter 9. BRS-I ACPI Requirements</a>
+    <a class="nav-link"  href="acpi.html">Chapter 6. BRS-I ACPI Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smbios.html">Chapter 10. BRS-I SMBIOS Requirements</a>
+    <a class="nav-link"  href="smbios.html">Chapter 7. BRS-I SMBIOS Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="bibliography.html">Chapter 11. Bibliography</a>
+    <a class="nav-link"  href="bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -638,18 +638,18 @@
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
       <li>Boot and Runtime Services</li>
-      <li><a href="acpi.html">Chapter 9. BRS-I ACPI Requirements</a></li>
+      <li><a href="acpi.html">Chapter 6. BRS-I ACPI Requirements</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="acpi"><a class="anchor" href="#acpi"></a>9.1. BRS-I ACPI Requirements</h2>
+<h2 id="acpi"><a class="anchor" href="#acpi"></a>6.1. BRS-I ACPI Requirements</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <em>Advanced Configuration and Power Interface Specification</em> provides the OS-centric view of system configuration, various hardware resources, events and power management.</p>
 </div>
 <div class="paragraph">
 <p>This section defines the BRS-I mandatory and optional ACPI
-requirements on top of existing ACPI cite:[ACPI] and UEFI cite:[UEFI]
+requirements on top of existing ACPI [<a href="bibliography.html#bib-acpi" class="xref page">3</a>] and UEFI [<a href="bibliography.html#bib-uefi" class="xref page">10</a>]
 specification requirements. Additional non-normative guidance may be
 found in the <a href="#acpi-guidance">firmware implementation guidance</a>
 section.</p>
@@ -712,14 +712,14 @@ All content in this section is optional and recommended for BRS-B.
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="acpi-mcfg"></a><code>ACPI_040</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The PCI Memory-mapped Configuration Space (MCFG) table MUST NOT be present if it violates cite:[PCIFW].</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The PCI Memory-mapped Configuration Space (MCFG) table MUST NOT be present if it violates [<a href="bibliography.html#bib-pcifw" class="xref page">17</a>].</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>Only compatible PCIe segments, exposed via ECAM (Enhanced Configuration Access Mechanism), may be described in the MCFG. The MCFG MUST NOT require vendor-specific OS support. See PCI Services (cite:[ACPI], Section 4) for more ACPI requirements relating to PCIe support. <a href="#acpi-guidance-pcie">See additional guidance</a>.</em></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>Only compatible PCIe segments, exposed via ECAM (Enhanced Configuration Access Mechanism), may be described in the MCFG. The MCFG MUST NOT require vendor-specific OS support. See PCI Services ([<a href="bibliography.html#bib-acpi" class="xref page">3</a>], Section 4) for more ACPI requirements relating to PCIe support. <a href="#acpi-guidance-pcie">See additional guidance</a>.</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ACPI_050</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A Serial Port Console Redirection Table cite:[SPCR] MUST be present on systems, where the graphics hardware is not present or not made
+<td class="tableblock halign-left valign-top"><p class="tableblock">A Serial Port Console Redirection Table [<a href="bibliography.html#bib-spcr" class="xref page">19</a>] MUST be present on systems, where the graphics hardware is not present or not made
 available to an OS loader via the standard <code>UEFI EFI_GRAPHICS_OUTPUT_PROTOCOL</code> interface.</p></td>
 </tr>
 <tr>
@@ -757,7 +757,7 @@ available to an OS loader via the standard <code>UEFI EFI_GRAPHICS_OUTPUT_PROTOC
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="acpi-aml"><a class="anchor" href="#acpi-aml"></a>9.1.1. BRS-I ACPI Methods and Objects</h3>
+<h3 id="acpi-aml"><a class="anchor" href="#acpi-aml"></a>6.1.1. BRS-I ACPI Methods and Objects</h3>
 <div class="paragraph">
 <p>This section lists additional requirements for ACPI methods and
 objects.</p>
@@ -797,11 +797,11 @@ objects.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>AML_040</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Systems supporting OS-directed hart performance control and power management MUST expose these via Collaborative Processor Performance Control (CPPC, cite:[ACPI] Section 8.4.6).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Systems supporting OS-directed hart performance control and power management MUST expose these via Collaborative Processor Performance Control (CPPC, [<a href="bibliography.html#bib-acpi" class="xref page">3</a>] Section 8.4.6).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>AML_050</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Processor idle states MUST be described using Low Power Idle (<code>_LPI</code>, cite:[ACPI] Section 8.4.3).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Processor idle states MUST be described using Low Power Idle (<code>_LPI</code>, [<a href="bibliography.html#bib-acpi" class="xref page">3</a>] Section 8.4.3).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="acpi-tad"></a> <code>AML_060</code></p></td>
@@ -824,7 +824,7 @@ through the driver-backed <code>OperationRegion</code>.</em></p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="acpi-irq-gsb"></a> <code>AML_080</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">PLIC and APLIC device objects MUST support
-the Global System Interrupt Base (<code>_GSB</code>, cite:[ACPI] Section 6.2.7) object.
+the Global System Interrupt Base (<code>_GSB</code>, [<a href="bibliography.html#bib-acpi" class="xref page">3</a>] Section 6.2.7) object.
 <a href="#acpi-guidance-gsi-namespace">See additional guidance</a>.</p></td>
 </tr>
 <tr>
@@ -842,16 +842,163 @@ present. <a href="#acpi-ids">See RVI ACPI IDs</a>.</p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/acpi.adoc - include::acpi-id.adoc[]
-Unresolved include directive in modules/ROOT/pages/acpi.adoc - include::acpi-prop.adoc[]</p>
 </div>
+<div class="sect2">
+<h3 id="acpi-ids"><a class="anchor" href="#acpi-ids"></a>RVI-specific ACPI IDs</h3>
+<div class="paragraph">
+<p>ACPI ID is used in the <code>_HID</code> (Hardware ID), <code>_CID</code> (Compatible ID) or
+<code>_SUB</code> (Subsystem ID) objects as described in the ACPI Specification for
+devices, that do not have a standard enumeration mechanism. The ACPI ID
+consists of two parts: a vendor identifier followed by a product identifier.</p>
+</div>
+<div class="paragraph">
+<p>Vendor IDs consist of 4 characters, each character being either an
+uppercase letter (A-Z) or a numeral (0-9). The vendor ID SHOULD be
+unique across the Industry and registered by the UEFI forum. For RVI
+standard devices, <code>RSCV</code> is the vendor ID registered. Vendor-specific
+devices can use an appropriate vendor ID registered for the manufacturer.</p>
+</div>
+<div class="paragraph">
+<p>Product IDs are always four-character hexadecimal numbers (0-9
+and A-F). The device manufacturer is responsible for assigning this
+identifier to each product model.</p>
+</div>
+<div class="paragraph">
+<p>This document contains the canonical list of ACPI IDs for the namespace
+devices that adhere to the RVI specifications. The RVI task groups may
+make pull requests against this repository to request the allocation of
+ACPI ID for any new device.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ACPI ID</th>
+<th class="tableblock halign-center valign-top">Device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RSCV0001</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RISC-V Platform-Level Interrupt Controller (PLIC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RSCV0002</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RISC-V Advanced Platform-Level Interrupt Controller (APLIC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RSCV0003</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NS16550 UART compatible with an SPCR definition using <code>Interface Type</code> 0x12</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RSCV0004</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RISC-V IOMMU implemented as a platform device</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RSCV0005</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RISC-V SBI Message Proxy (MPXY) Mailbox Controller</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RSCV0006</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RISC-V RPMI System MSI Interrupt Controller</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>Also see <a href="#acpi-props-uart">ACPI Device Properties for UART Devices</a>.</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="acpi-props"><a class="anchor" href="#acpi-props"></a>RVI-specific ACPI Device Properties</h3>
+<div class="paragraph">
+<p>This section is used to define the <code>_DSD</code> device properties [<a href="bibliography.html#bib-dsd" class="xref page">20</a>] in the <code>rscv-</code> namespace.</p>
+</div>
+<div class="paragraph">
+<p>Where explicit values are provided in a property definition, only these values must be used. System behavior with any other values is undefined.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 12.5%;">
+<col style="width: 62.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-center valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><em>Currently, there are no properties defined in the <code>rscv-</code> namespace. Request for new property names in the <code>rscv-</code> namespace should be made as a git pull request to this table.</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="acpi-props-uart"><a class="anchor" href="#acpi-props-uart"></a>ACPI Device Properties for UART Devices</h3>
+<div class="paragraph">
+<p>Generic 16550-compatible UART devices can have device properties in the global name space
+since Operating Systems are already using them.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 12.5%;">
+<col style="width: 62.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-center valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clock-frequency</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clock feeding the IP block in Hz.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><em>A value of zero will preclude the ability to set the baud rate, or
+to configure a disabled device.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reg-offset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Offset to apply to the register map base address from the start of the registers.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reg-shift</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Quantity to shift the register offsets by.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reg-io-width</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The size (in bytes) of the register accesses that should be performed on the device.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="3"><p class="tableblock"><em>1, 2, 4 or 8.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fifo-size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The FIFO size (in bytes).</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="uefi.html">Chapter 8. BRS-I UEFI Requirements</a></span>
-  <span class="next"><a href="smbios.html">Chapter 10. BRS-I SMBIOS Requirements</a></span>
+  <span class="prev"><a href="uefi.html">Chapter 5. BRS-I UEFI Requirements</a></span>
+  <span class="next"><a href="smbios.html">Chapter 7. BRS-I SMBIOS Requirements</a></span>
 </nav>
 </article>  </div>
 </main>
