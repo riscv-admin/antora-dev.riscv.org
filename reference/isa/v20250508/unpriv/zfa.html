@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>"Zfa" Extension for Additional Floating-Point Instructions, Version 1.0 :: RISC-V Ratified Specifications Library</title>
@@ -40,8 +38,8 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img class="riscvlogo riscvlogo--light" src="../../../_/img/risc-v_logo.svg" alt="RISCV" />
-        <img class="riscvlogo riscvlogo--dark" src="../../../_/img/risc-v_logo_white.svg" alt="RISCV" />
+        <img class="riscvlogo riscvlogo--light" src="../../../_/img/risc-v_logo.svg" alt="RISCV">
+        <img class="riscvlogo riscvlogo--dark" src="../../../_/img/risc-v_logo_white.svg" alt="RISCV">
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -52,10 +50,7 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item home">
-          <a class="navbar-link"
-            href="../../../home/index.html"
-            aria-label="home"
-            title="home">
+          <a class="navbar-link" href="../../../home/index.html" aria-label="home" title="home">
             <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
               <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -65,21 +60,17 @@
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
         <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs" >
+          <input id="search-input" type="text" placeholder="Search the docs">
         </div>
         <div class="navbar-item" style="padding-left: 0;">
           <label class="theme-toggler">
-            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
-            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
-                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <path fill="currentColor"
-                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+            <input type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox">
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor" d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
                 </path>
               </svg>
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
-                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path fill="currentColor"
-                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
                 </path>
               </svg></span>
             <span class="text">light</span>
@@ -111,25 +102,13 @@
 </div>        <div class="nav-trees" data-component="isa">
           <div class="version-box">
             <select data-component="isa" class="select-version">
-                <option
-                  value="../../index.html"
-                  data-version="v20260120"
-                  
-                  >
+                <option value="../../index.html" data-version="v20260120">
                   20260120
                 </option>
-                <option
-                  value="../index.html"
-                  data-version="v20250508"
-                  
-                  selected>
+                <option value="../index.html" data-version="v20250508" selected="">
                   20250508
                 </option>
-                <option
-                  value="../../v20240411/index.html"
-                  data-version="v20240411"
-                  
-                  >
+                <option value="../../v20240411/index.html" data-version="v20240411">
                   20240411
                 </option>
             </select>
@@ -141,133 +120,133 @@
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="unpriv-index.html">Unprivileged Architecture</a>
+    <a class="nav-link" href="unpriv-index.html">Unprivileged Architecture</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="unpriv-contributors.html">Preamble</a>
+    <a class="nav-link" href="unpriv-contributors.html">Preamble</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="colophon.html">Preface</a>
+    <a class="nav-link" href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
+    <a class="nav-link" href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+    <a class="nav-link" href="rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
+    <a class="nav-link" href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+    <a class="nav-link" href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link" href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+    <a class="nav-link" href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintntl.html">Chapter 8. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+    <a class="nav-link" href="zihintntl.html">Chapter 8. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintpause.html">Chapter 9. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
+    <a class="nav-link" href="zihintpause.html">Chapter 9. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zimop.html">Chapter 10. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
+    <a class="nav-link" href="zimop.html">Chapter 10. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicond.html">Chapter 11. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+    <a class="nav-link" href="zicond.html">Chapter 11. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="m-st-ext.html">Chapter 12. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
+    <a class="nav-link" href="m-st-ext.html">Chapter 12. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="a-st-ext.html">Chapter 13. "A" Extension for Atomic Instructions, Version 2.1</a>
+    <a class="nav-link" href="a-st-ext.html">Chapter 13. "A" Extension for Atomic Instructions, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zawrs.html">Chapter 14. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+    <a class="nav-link" href="zawrs.html">Chapter 14. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zacas.html">Chapter 15. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+    <a class="nav-link" href="zacas.html">Chapter 15. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zabha.html">Chapter 16. "Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
+    <a class="nav-link" href="zabha.html">Chapter 16. "Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
+    <a class="nav-link" href="rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
+    <a class="nav-link" href="ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+    <a class="nav-link" href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link" href="f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link" href="d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link" href="q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+    <a class="nav-link" href="zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="bfloat16.html">Chapter 24. "BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
+    <a class="nav-link" href="bfloat16.html">Chapter 24. "BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="zfa.html">Chapter 25. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+    <a class="nav-link" href="zfa.html">Chapter 25. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfinx.html">Chapter 26. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+    <a class="nav-link" href="zfinx.html">Chapter 26. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="c-st-ext.html">Chapter 27. "C" Extension for Compressed Instructions, Version 2.0</a>
+    <a class="nav-link" href="c-st-ext.html">Chapter 27. "C" Extension for Compressed Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zc.html">Chapter 28. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+    <a class="nav-link" href="zc.html">Chapter 28. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="b-st-ext.html">Chapter 29. "B" Extension for Bit Manipulation, Version 1.0.0</a>
+    <a class="nav-link" href="b-st-ext.html">Chapter 29. "B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="v-st-ext.html">Chapter 30. "V" Standard Extension for Vector Operations, Version 1.0</a>
+    <a class="nav-link" href="v-st-ext.html">Chapter 30. "V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+    <a class="nav-link" href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link" href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
+    <a class="nav-link" href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link" href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
+    <a class="nav-link" href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link" href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">Chapter 37. Document Revision History</a>
+    <a class="nav-link" href="history.html">Chapter 37. Document Revision History</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link" href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
+    <a class="nav-link" href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link" href="calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -276,73 +255,73 @@
     <span class="nav-text">Volume II: RISC-V Privileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-index.html">Privileged Architecture</a>
+    <a class="nav-link" href="../priv/priv-index.html">Privileged Architecture</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-contributors.html">Preamble</a>
+    <a class="nav-link" href="../priv/priv-contributors.html">Preamble</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
+    <a class="nav-link" href="../priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="../priv/priv-intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
+    <a class="nav-link" href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link" href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link" href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link" href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link" href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link" href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link" href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link" href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link" href="../priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
+    <a class="nav-link" href="../priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link" href="../priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link" href="../priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link" href="../priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link" href="../priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
+    <a class="nav-link" href="../priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link" href="../priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
+    <a class="nav-link" href="../priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link" href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
+    <a class="nav-link" href="../priv/priv-history.html">Chapter 20. History</a>
   </li>
 </ul>
   </li>
@@ -351,7 +330,7 @@
     <span class="nav-text">Bibliography</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../biblio/bibliography.html">Bibliography</a>
+    <a class="nav-link" href="../biblio/bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -361,11 +340,7 @@
         <div class="nav-trees" data-component="rvprofile">
           <div class="version-box">
             <select data-component="rvprofile" class="select-version">
-                <option
-                  value="../../../rvprofile/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../../../rvprofile/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -379,34 +354,34 @@
     <span class="nav-text">RISC-V Profiles</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/index.html">Title Page</a>
+    <a class="nav-link" href="../../../rvprofile/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/copyright.html">Copyright and License Information</a>
+    <a class="nav-link" href="../../../rvprofile/copyright.html">Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/changelog.html">Chapter 1. Changelog</a>
+    <a class="nav-link" href="../../../rvprofile/changelog.html">Chapter 1. Changelog</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/intro.html">Chapter 2. Introduction</a>
+    <a class="nav-link" href="../../../rvprofile/intro.html">Chapter 2. Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/profilevsplat.html">Chapter 3. Profiles versus Platforms</a>
+    <a class="nav-link" href="../../../rvprofile/profilevsplat.html">Chapter 3. Profiles versus Platforms</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/components.html">Chapter 4. Components of a Profile</a>
+    <a class="nav-link" href="../../../rvprofile/components.html">Chapter 4. Components of a Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/rva20.html">Chapter 5. RVA20 Profile</a>
+    <a class="nav-link" href="../../../rvprofile/rva20.html">Chapter 5. RVA20 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/rva22.html">Chapter 6. RVA22 Profile</a>
+    <a class="nav-link" href="../../../rvprofile/rva22.html">Chapter 6. RVA22 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/extensions.html">Chapter 7. New ISA Extensions</a>
+    <a class="nav-link" href="../../../rvprofile/extensions.html">Chapter 7. New ISA Extensions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/glossary.html">Glossary</a>
+    <a class="nav-link" href="../../../rvprofile/glossary.html">Glossary</a>
   </li>
 </ul>
   </li>
@@ -418,11 +393,7 @@
         <div class="nav-trees" data-component="rva23">
           <div class="version-box">
             <select data-component="rva23" class="select-version">
-                <option
-                  value="../../../rva23/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../../../rva23/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -436,22 +407,22 @@
     <span class="nav-text">RVA23 Profile</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/index.html">Title Page</a>
+    <a class="nav-link" href="../../../rva23/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/copyright.html">Chapter 1. Copyright and License Information</a>
+    <a class="nav-link" href="../../../rva23/copyright.html">Chapter 1. Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/rva-profile-overview-body.html">Chapter 2. RVA Profiles Rationale</a>
+    <a class="nav-link" href="../../../rva23/rva-profile-overview-body.html">Chapter 2. RVA Profiles Rationale</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/rv-profile-defined-extensions.html">Chapter 3. Profile-Defined Extensions</a>
+    <a class="nav-link" href="../../../rva23/rv-profile-defined-extensions.html">Chapter 3. Profile-Defined Extensions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/rva23-profiles.html">Chapter 4. RVA23 Profile</a>
+    <a class="nav-link" href="../../../rva23/rva23-profiles.html">Chapter 4. RVA23 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/glossary-of-isa-extensions.html">Glossary of ISA Extensions</a>
+    <a class="nav-link" href="../../../rva23/glossary-of-isa-extensions.html">Glossary of ISA Extensions</a>
   </li>
 </ul>
   </li>
@@ -463,11 +434,7 @@
         <div class="nav-trees" data-component="rvb23">
           <div class="version-box">
             <select data-component="rvb23" class="select-version">
-                <option
-                  value="../../../rvb23/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../../../rvb23/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -481,22 +448,22 @@
     <span class="nav-text">RVB23 Profile</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/index.html">Title Page</a>
+    <a class="nav-link" href="../../../rvb23/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/copyright.html">Chapter 1. Copyright and License Information</a>
+    <a class="nav-link" href="../../../rvb23/copyright.html">Chapter 1. Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/intro.html">Chapter 2. Introduction</a>
+    <a class="nav-link" href="../../../rvb23/intro.html">Chapter 2. Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/profile-defined.html">Chapter 3. Profile-Defined Extensions</a>
+    <a class="nav-link" href="../../../rvb23/profile-defined.html">Chapter 3. Profile-Defined Extensions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/rvb23.html">Chapter 4. RVB23 Profile</a>
+    <a class="nav-link" href="../../../rvb23/rvb23.html">Chapter 4. RVB23 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/glossary.html">Glossary of ISA Extensions</a>
+    <a class="nav-link" href="../../../rvb23/glossary.html">Glossary of ISA Extensions</a>
   </li>
 </ul>
   </li>
@@ -533,56 +500,31 @@
 <aside class="sidebar">
   <div class="content">
     <div class="tag-toggle-container">
-      <button
-        class="tag-toggle-btn"
-        type="button"
-        onclick="document.documentElement.classList.toggle('tag-highlight-enabled');"
-      >
+      <button class="tag-toggle-btn" type="button" onclick="document.documentElement.classList.toggle('tag-highlight-enabled');">
         <div class="tag-toggle-switch"></div>
         <span id="tag-toggle-label">Normative Rules</span>
       </button>
     </div>
-    <div
-      class="toc"
-      data-title=""Zfa" Extension for Additional Floating-Point Instructions, Version 1.0"
-      data-levels="5"
-    >
+    <div class="toc" data-title="" zfa"="" extension="" for="" additional="" floating-point="" instructions,="" version="" 1.0"="" data-levels="5">
       <div class="toc-menu"></div>
     </div>
     <div class="sidebar-links">
         <a href="https://github.com/riscv/riscv-isa-manual/issues/new" target="_blank" title="Issues">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          ><path
-              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
-            ></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
           Report a Problem
         </a>
         <a href="https://github.com/riscv/riscv-isa-manual" target="_blank" title="GitHub">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="512px"
-            id="Layer_1"
-            version="1.1"
-            viewBox="0 0 512 512"
-            width="512px"
-          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
-              ]]></style><g><path
-                class="st0"
-                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
-              ></path></g></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512px"><style type="text/css">&lt; .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]&gt;</style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
           GitHub Project
         </a>
 
         <a href="https://riscv.atlassian.net/wiki/external/MzM1NWFmYmFjNzlkNGMyMDg0NThjM2ZlODVkZTA3MDE" target="_blank" rel="noopener noreferrer" class="sidebar-link">
-          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"/><circle cx="148.5" cy="250" r="31.5" fill="currentColor"/><circle cx="250" cy="250" r="31.5" fill="currentColor"/><circle cx="351.5" cy="250" r="31.5" fill="currentColor"/></svg>
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"></circle><circle cx="148.5" cy="250" r="31.5" fill="currentColor"></circle><circle cx="250" cy="250" r="31.5" fill="currentColor"></circle><circle cx="351.5" cy="250" r="31.5" fill="currentColor"></circle></svg>
           More Details
         </a>
 
-          <a href="../_attachments/riscv-unprivileged.pdf" target="_blank" rel="noopener noreferrer" class="sidebar-link" download>
+          <a href="../_attachments/riscv-unprivileged.pdf" target="_blank" rel="noopener noreferrer" class="sidebar-link" download="">
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -634,11 +576,11 @@ extension.</p>
 <p>The FLI.S instruction loads one of 32 single-precision floating-point
 constants, encoded in the <em>rs1</em> field, into floating-point register
 <em>rd</em>. The correspondence of <em>rs1</em> field values and single-precision
-floating-point values is shown in <a href="#tab:flis">Table 1</a>. FLI.S is encoded
+floating-point values is shown in <a href="#tab:flis">Table 20</a>. FLI.S is encoded
 like FMV.W.X, but with <em>rs2</em>=1.</p>
 </div>
 <table id="tab:flis" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 1. Immediate values loaded by the FLI.S instruction.</caption>
+<caption class="title">Table 20. Immediate values loaded by the FLI.S instruction.</caption>
 <colgroup>
 <col>
 <col>
@@ -661,230 +603,230 @@ like FMV.W.X, but with <em>rs2</em>=1.</p>
 <td class="tableblock halign-right valign-top"><p class="tableblock"><span class="steminline"> <svg style="vertical-align: -0.186ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="4.652ex" height="1.692ex" role="img" focusable="false" viewBox="0 -666 2056 748"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z" transform="translate(500,0)"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(778,0)"></path></g></g></g></svg> </span></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>1</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111111</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock"><em>Minimum positive normal</em></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>00000001</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">2</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock"><span class="steminline"> <svg style="vertical-align: -0.05ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="9.821ex" height="1.937ex" role="img" focusable="false" viewBox="0 -833.9 4340.7 855.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z" transform="translate(500,0)"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(778,0)"></path></g><g data-mml-node="mo" transform="translate(1500.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="msup" transform="translate(2500.4,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" transform="translate(500,0)"></path></g></g></g></g></g></svg> </span></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01101111</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">3</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock"><span class="steminline"> <svg style="vertical-align: -0.05ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="9.821ex" height="1.937ex" role="img" focusable="false" viewBox="0 -833.9 4340.7 855.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z" transform="translate(500,0)"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(778,0)"></path></g><g data-mml-node="mo" transform="translate(1500.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="msup" transform="translate(2500.4,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z" transform="translate(500,0)"></path></g></g></g></g></g></svg> </span></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01110000</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">4</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock"><span class="steminline"> <svg style="vertical-align: -0.05ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="9.021ex" height="1.937ex" role="img" focusable="false" viewBox="0 -833.9 3987.1 855.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z" transform="translate(500,0)"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(778,0)"></path></g><g data-mml-node="mo" transform="translate(1500.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="msup" transform="translate(2500.4,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"></path></g></g></g></g></g></svg> </span></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01110111</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">5</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock"><span class="steminline"> <svg style="vertical-align: -0.05ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="9.021ex" height="1.952ex" role="img" focusable="false" viewBox="0 -841 3987.1 863"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z" transform="translate(500,0)"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(778,0)"></path></g><g data-mml-node="mo" transform="translate(1500.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="msup" transform="translate(2500.4,0)"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z"></path></g></g></g></g></g></svg> </span></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111000</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">6</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">0.0625 (<span class="steminline"> <svg style="vertical-align: 0; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="3.364ex" height="1.904ex" role="img" focusable="false" viewBox="0 -841.7 1486.7 841.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path></g></g></g></g></g></svg> </span>)</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111011</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">7</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">0.125 (<span class="steminline"> <svg style="vertical-align: 0; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="3.364ex" height="1.885ex" role="img" focusable="false" viewBox="0 -833.2 1486.7 833.2"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g></g></g></g></g></svg> </span>)</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111100</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">0.25</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111101</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">9</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">0.3125</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111101</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>010&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>010…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">10</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">0.375</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111101</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">11</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">0.4375</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111101</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>110&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>110…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">12</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">0.5</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111110</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">13</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">0.625</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111110</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>010&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>010…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">14</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">0.75</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111110</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">15</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">0.875</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111110</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>110&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>110…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">16</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">1.0</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111111</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">17</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">1.25</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111111</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>010&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>010…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">18</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">1.5</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111111</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">19</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">1.75</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>01111111</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>110&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>110…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">20</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">2.0</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000000</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">21</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">2.5</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000000</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>010&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>010…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">22</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">3</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000000</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">23</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">4</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000001</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">24</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000010</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">25</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">16</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000011</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">26</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">128 (<span class="steminline"> <svg style="vertical-align: 0; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="2.119ex" height="1.903ex" role="img" focusable="false" viewBox="0 -841 936.6 841"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mn" transform="translate(533,363) scale(0.707)"><path data-c="37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z"></path></g></g></g></g></svg> </span>)</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000110</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">27</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">256 (<span class="steminline"> <svg style="vertical-align: 0; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="2.119ex" height="1.887ex" role="img" focusable="false" viewBox="0 -833.9 936.6 833.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="mn" transform="translate(533,363) scale(0.707)"><path data-c="38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"></path></g></g></g></g></svg> </span>)</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>10000111</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">28</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock"><span class="steminline"> <svg style="vertical-align: 0; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="2.919ex" height="1.887ex" role="img" focusable="false" viewBox="0 -833.9 1290.1 833.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z" transform="translate(500,0)"></path></g></g></g></g></g></svg> </span></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>10001110</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">29</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock"><span class="steminline"> <svg style="vertical-align: 0; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="2.919ex" height="1.887ex" role="img" focusable="false" viewBox="0 -833.9 1290.1 833.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><g data-mml-node="TeXAtom" transform="translate(533,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z" transform="translate(500,0)"></path></g></g></g></g></g></svg> </span></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>10001111</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">30</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock"><span class="steminline"> <svg style="vertical-align: -0.186ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="4.023ex" height="1.505ex" role="img" focusable="false" viewBox="0 -583 1778 665"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mi" transform="translate(778,0)"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path></g></g></g></svg> </span></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>11111111</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>000…​000</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">31</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock"><em>Canonical NaN</em></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>0</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock"><code>11111111</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100&#8230;&#8203;000</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>100…​000</code></p></td>
 </tr>
 </tbody>
 </table>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -896,11 +838,11 @@ the assembler will accept decimal constants in C-like syntax.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -916,7 +858,7 @@ bits other than the two most significant ones.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If the D extension is implemented, FLI.D performs the analogous
@@ -945,7 +887,7 @@ FLI.H is encoded like FLI.S, but with <em>fmt</em>=H.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -955,7 +897,7 @@ FLI.H is encoded like FLI.S, but with <em>fmt</em>=H.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The FLI.<em>fmt</em> instructions never set any floating-point exception flags.</p>
@@ -988,7 +930,7 @@ but with instruction bit 13 set to 1.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -999,7 +941,7 @@ operations.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -1009,7 +951,7 @@ operations.</p>
 <div class="paragraph">
 <p>The FROUND.S instruction rounds the single-precision floating-point
 number in floating-point register <em>rs1</em> to an integer, according to the
-rounding mode specified in the instruction&#8217;s <em>rm</em> field. It then writes
+rounding mode specified in the instruction’s <em>rm</em> field. It then writes
 that integer, represented as a single-precision floating-point number,
 to floating-point register <em>rd</em>. Zero and infinite inputs are copied to
 <em>rd</em> unmodified. Signaling NaN inputs cause the invalid operation
@@ -1039,7 +981,7 @@ encoded like FCVT.Q.S, but with <em>rs2</em>=4 and 5, respectively,</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1051,7 +993,7 @@ implement the other operations in the roundToIntegral family.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -1061,7 +1003,7 @@ implement the other operations in the roundToIntegral family.</p>
 <div class="paragraph">
 <p>The FCVTMOD.W.D instruction is defined similarly to the FCVT.W.D
 instruction, with the following differences. FCVTMOD.W.D always rounds
-towards zero. Bits 31:0 are taken from the rounded, unbounded two&#8217;s
+towards zero. Bits 31:0 are taken from the rounded, unbounded two’s
 complement result, then sign-extended to XLEN bits and written to
 integer register <em>rd</em>. <span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="4.023ex" height="1.532ex" role="img" focusable="false" viewBox="0 -666 1778 677"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="B1" d="M56 320T56 333T70 353H369V502Q369 651 371 655Q376 666 388 666Q402 666 405 654T409 596V500V353H707Q722 345 722 333Q722 320 707 313H409V40H707Q722 32 722 20T707 0H70Q56 7 56 20T70 40H369V313H70Q56 320 56 333Z"></path></g><g data-mml-node="mi" transform="translate(778,0)"><path data-c="221E" d="M55 217Q55 305 111 373T254 442Q342 442 419 381Q457 350 493 303L507 284L514 294Q618 442 747 442Q833 442 888 374T944 214Q944 128 889 59T743 -11Q657 -11 580 50Q542 81 506 128L492 147L485 137Q381 -11 252 -11Q166 -11 111 57T55 217ZM907 217Q907 285 869 341T761 397Q740 397 720 392T682 378T648 359T619 335T594 310T574 285T559 263T548 246L543 238L574 198Q605 158 622 138T664 94T714 61T765 51Q827 51 867 100T907 217ZM92 214Q92 145 131 89T239 33Q357 33 456 193L425 233Q364 312 334 337Q285 380 233 380Q171 380 132 331T92 214Z"></path></g></g></g></svg> </span> and NaN are converted to
 zero.</p>
@@ -1077,7 +1019,7 @@ field set to 1 (RTZ). Other <em>rm</em> values are <em>reserved</em>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1094,7 +1036,7 @@ mod <span class="steminline"> <svg style="vertical-align: 0; overflow: visible;"
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -1109,7 +1051,7 @@ integer register <em>rd</em>. It is encoded in the OP-FP major opcode with
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1120,7 +1062,7 @@ move a double-precision floating-point number to a pair of x-registers.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>For RV32 only, if the D extension is implemented, the FMVP.D.X
@@ -1138,7 +1080,7 @@ integer register <em>rd</em>. It is encoded in the OP-FP major opcode with
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1149,7 +1091,7 @@ move a quad-precision floating-point number to a pair of x-registers.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>For RV64 only, if the Q extension is implemented, the FMVP.Q.X
@@ -1187,7 +1129,7 @@ with instruction bit 14 set to 1.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1199,7 +1141,7 @@ masking.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -1224,21 +1166,20 @@ masking.</p>
     </div>
 
     <div id="social-icons" class="flex jc-between">
-        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
-        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
-        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"/></svg></a>
-        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"/><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
+        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
+        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"></path></svg></a>
+        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"></circle><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"></path></svg></a>
         <a href="https://risc-v-international.slack.com/join/shared_invite/zt-2y1w69wde-PdoN3fXovLlzoni~UaPrBA" title="Slack" target="_blank" rel="noopener noreferrer" class="slack-icon-link"><i class="fa fa-slack" aria-hidden="true"></i></a>
     </div>
 </footer>
 <script src="../../../_/js/vendor/import.js"></script>
 <script src="../../../_/js/site.js"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
-<script async
-    src="../../../_/js/vendor/spring-tabs.js"
-    data-sync-storage-key="docs:preferred-tab"></script>
+<script async="" src="../../../_/js/vendor/highlight.js"></script>
+<script async="" src="../../../_/js/vendor/spring-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
 <script src="../../../_/js/vendor/lunr.js"></script>
 <script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
-<script async src="../../../search-index.js"></script>
-  </body>
-</html>
+<script async="" src="../../../search-index.js"></script>
+  
+
+</body></html>

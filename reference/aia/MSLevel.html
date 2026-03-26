@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
@@ -40,8 +38,8 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV" />
-        <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV" />
+        <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV">
+        <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV">
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -52,10 +50,7 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item home">
-          <a class="navbar-link"
-            href="../home/index.html"
-            aria-label="home"
-            title="home">
+          <a class="navbar-link" href="../home/index.html" aria-label="home" title="home">
             <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
               <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -65,21 +60,17 @@
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
         <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs" >
+          <input id="search-input" type="text" placeholder="Search the docs">
         </div>
         <div class="navbar-item" style="padding-left: 0;">
           <label class="theme-toggler">
-            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
-            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
-                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <path fill="currentColor"
-                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+            <input type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox">
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor" d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
                 </path>
               </svg>
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
-                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path fill="currentColor"
-                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
                 </path>
               </svg></span>
             <span class="text">light</span>
@@ -111,11 +102,7 @@
 </div>        <div class="nav-trees" data-component="aia">
           <div class="version-box">
             <select data-component="aia" class="select-version">
-                <option
-                  value="index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -127,40 +114,40 @@
     <span class="nav-text">Advanced Interrupt Architecture</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="index.html">Title Page</a>
+    <a class="nav-link" href="index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="contributors.html">Contributors</a>
+    <a class="nav-link" href="contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="colophon.html">Preface</a>
+    <a class="nav-link" href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="copyright.html">Copyright</a>
+    <a class="nav-link" href="copyright.html">Copyright</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="CSRs.html">Chapter 2. CSRs Added to Harts</a>
+    <a class="nav-link" href="CSRs.html">Chapter 2. CSRs Added to Harts</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="IMSIC.html">Chapter 3. Incoming MSI Controller (IMSIC)</a>
+    <a class="nav-link" href="IMSIC.html">Chapter 3. Incoming MSI Controller (IMSIC)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="AdvPLIC.html">Chapter 4. Advanced PLIC (APLIC)</a>
+    <a class="nav-link" href="AdvPLIC.html">Chapter 4. Advanced PLIC (APLIC)</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="MSLevel.html">Chapter 5. Interrupts for Machine and Supervisor Levels</a>
+    <a class="nav-link" href="MSLevel.html">Chapter 5. Interrupts for Machine and Supervisor Levels</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="VSLevel.html">Chapter 6. Interrupts for Virtual Machines (VS Level)</a>
+    <a class="nav-link" href="VSLevel.html">Chapter 6. Interrupts for Virtual Machines (VS Level)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="IPIs.html">Chapter 7. Interprocessor Interrupts (IPIs)</a>
+    <a class="nav-link" href="IPIs.html">Chapter 7. Interprocessor Interrupts (IPIs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="IOMMU.html">Chapter 8. IOMMU Support for MSIs to Virtual Machines</a>
+    <a class="nav-link" href="IOMMU.html">Chapter 8. IOMMU Support for MSIs to Virtual Machines</a>
   </li>
 </ul>
   </li>
@@ -170,11 +157,7 @@
         <div class="nav-trees" data-component="iommu">
           <div class="version-box">
             <select data-component="iommu" class="select-version">
-                <option
-                  value="../iommu/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../iommu/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -186,43 +169,43 @@
     <span class="nav-text">IOMMU Architecture</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/index.html">Title Page</a>
+    <a class="nav-link" href="../iommu/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/preamble.html">Copyright and License</a>
+    <a class="nav-link" href="../iommu/preamble.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/contributors.html">Contributors</a>
+    <a class="nav-link" href="../iommu/contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_preface.html">Preface</a>
+    <a class="nav-link" href="../iommu/iommu_preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="../iommu/iommu_intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_data_structures.html">Chapter 2. Data Structures</a>
+    <a class="nav-link" href="../iommu/iommu_data_structures.html">Chapter 2. Data Structures</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_in_memory_queues.html">Chapter 3. In-memory queue interface</a>
+    <a class="nav-link" href="../iommu/iommu_in_memory_queues.html">Chapter 3. In-memory queue interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_debug.html">Chapter 4. Debug support</a>
+    <a class="nav-link" href="../iommu/iommu_debug.html">Chapter 4. Debug support</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_registers.html">Chapter 5. Memory-mapped register interface</a>
+    <a class="nav-link" href="../iommu/iommu_registers.html">Chapter 5. Memory-mapped register interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_sw_guidelines.html">Chapter 6. Software guidelines</a>
+    <a class="nav-link" href="../iommu/iommu_sw_guidelines.html">Chapter 6. Software guidelines</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_hw_guidelines.html">Chapter 7. Hardware guidelines</a>
+    <a class="nav-link" href="../iommu/iommu_hw_guidelines.html">Chapter 7. Hardware guidelines</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/iommu_extensions.html">Chapter 8. IOMMU Extensions</a>
+    <a class="nav-link" href="../iommu/iommu_extensions.html">Chapter 8. IOMMU Extensions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../iommu/bibliography.html">Chapter 9. Bibliography</a>
+    <a class="nav-link" href="../iommu/bibliography.html">Chapter 9. Bibliography</a>
   </li>
 </ul>
   </li>
@@ -232,11 +215,7 @@
         <div class="nav-trees" data-component="plic">
           <div class="version-box">
             <select data-component="plic" class="select-version">
-                <option
-                  value="../plic/index.html"
-                  data-version="v1.0.0"
-                  
-                  selected>
+                <option value="../plic/index.html" data-version="v1.0.0" selected="">
                   v1.0.0
                 </option>
             </select>
@@ -248,40 +227,40 @@
     <span class="nav-text">Platform-Level Interrupt Controller</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/index.html">Title Page</a>
+    <a class="nav-link" href="../plic/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/changelog.html">Changelog</a>
+    <a class="nav-link" href="../plic/changelog.html">Changelog</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/licensing.html">Copyright and license</a>
+    <a class="nav-link" href="../plic/licensing.html">Copyright and license</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/contributor.html">Contributors</a>
+    <a class="nav-link" href="../plic/contributor.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/introduction.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="../plic/introduction.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a>
+    <a class="nav-link" href="../plic/plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-memory-map.html">Chapter 3. Memory Map</a>
+    <a class="nav-link" href="../plic/plic-memory-map.html">Chapter 3. Memory Map</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-priority.html">Chapter 4. Interrupt Priorities</a>
+    <a class="nav-link" href="../plic/plic-priority.html">Chapter 4. Interrupt Priorities</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-interrupts.html">Chapter 5. Interrupt Pending Bits</a>
+    <a class="nav-link" href="../plic/plic-interrupts.html">Chapter 5. Interrupt Pending Bits</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-enables.html">Chapter 6. Interrupt Enables</a>
+    <a class="nav-link" href="../plic/plic-enables.html">Chapter 6. Interrupt Enables</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-claims.html">Chapter 7. Interrupt Claim Process</a>
+    <a class="nav-link" href="../plic/plic-claims.html">Chapter 7. Interrupt Claim Process</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-completion.html">Chapter 8. Interrupt Completion</a>
+    <a class="nav-link" href="../plic/plic-completion.html">Chapter 8. Interrupt Completion</a>
   </li>
 </ul>
   </li>
@@ -291,11 +270,7 @@
         <div class="nav-trees" data-component="soc">
           <div class="version-box">
             <select data-component="soc" class="select-version">
-                <option
-                  value="../soc/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../soc/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -307,22 +282,22 @@
     <span class="nav-text">Server SoC</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/index.html">Title Page</a>
+    <a class="nav-link" href="../soc/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_preamble.html">Copyright and License</a>
+    <a class="nav-link" href="../soc/server_soc_preamble.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_contributors.html">Contributors</a>
+    <a class="nav-link" href="../soc/server_soc_contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="../soc/server_soc_intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
+    <a class="nav-link" href="../soc/server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_bibliography.html">Bibliography</a>
+    <a class="nav-link" href="../soc/server_soc_bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -357,57 +332,32 @@
 <aside class="sidebar">
   <div class="content">
     <div class="tag-toggle-container">
-      <button
-        class="tag-toggle-btn"
-        type="button"
-        onclick="document.documentElement.classList.toggle('tag-highlight-enabled');"
-      >
+      <button class="tag-toggle-btn" type="button" onclick="document.documentElement.classList.toggle('tag-highlight-enabled');">
         <div class="tag-toggle-switch"></div>
         <span id="tag-toggle-label">Normative Rules</span>
       </button>
     </div>
-    <div
-      class="toc"
-      data-title=""
-      data-levels="5"
-    >
+    <div class="toc" data-title="" data-levels="5">
       <div class="toc-menu"></div>
     </div>
     <div class="sidebar-links">
         <a href="https://github.com/riscv/riscv-aia/issues/new" target="_blank" title="Issues">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          ><path
-              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
-            ></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
           Report a Problem
         </a>
         <a href="https://github.com/riscv/riscv-aia" target="_blank" title="GitHub">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="512px"
-            id="Layer_1"
-            version="1.1"
-            viewBox="0 0 512 512"
-            width="512px"
-          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
-              ]]></style><g><path
-                class="st0"
-                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
-              ></path></g></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512px"><style type="text/css">&lt; .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]&gt;</style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
           GitHub Project
         </a>
 
         <a href="https://riscv.atlassian.net/wiki/external/MTc1MTUwOTg5NTRkNDk0YjlkOGY1MDk5MTljZGU2MjA" target="_blank" rel="noopener noreferrer" class="sidebar-link">
-          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"/><circle cx="148.5" cy="250" r="31.5" fill="currentColor"/><circle cx="250" cy="250" r="31.5" fill="currentColor"/><circle cx="351.5" cy="250" r="31.5" fill="currentColor"/></svg>
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"></circle><circle cx="148.5" cy="250" r="31.5" fill="currentColor"></circle><circle cx="250" cy="250" r="31.5" fill="currentColor"></circle><circle cx="351.5" cy="250" r="31.5" fill="currentColor"></circle></svg>
           More Details
         </a>
       
 
-          <a href="_attachments/riscv-interrupts.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
+          <a href="_attachments/riscv-interrupts.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download="">
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -454,14 +404,14 @@ interrupts by a PLIC, APLIC, or IMSIC.</p>
 <div class="sect2">
 <h3 id="majorIntrs"><a class="anchor" href="#majorIntrs"></a>5.1.1. Defined major interrupts and default priorities</h3>
 <div class="paragraph">
-<p><a href="#TablemajorIntrs">Table 1</a> lists all the major interrupts
+<p><a href="#TablemajorIntrs">Table 8</a> lists all the major interrupts
 currently defined for RISC-V harts that conform to this Advanced Interrupt
 Architecture (AIA). Besides the major interrupts specified by the
 RISC-V Privileged Architecture, the AIA adds interrupt numbers 35 and 43 as
 local interrupts for low- and high-priority <em>RAS events</em>.</p>
 </div>
 <table id="TablemajorIntrs" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 1. The standard major interrupt codes, listed in default priority order</caption>
+<caption class="title">Table 8. The standard major interrupt codes, listed in default priority order</caption>
 <colgroup>
 <col>
 <col>
@@ -508,13 +458,13 @@ Local interrupt: counter overflow</p></td>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The default priority order in <a href="#TablemajorIntrs">Table 1</a> is applicable only
+<p>The default priority order in <a href="#TablemajorIntrs">Table 8</a> is applicable only
 when multiple major interrupts would trap to the same privilege mode.
 Interrupt traps to a more-privileged mode always have
 priority over traps to a less-privileged mode.</p>
 </div>
 <table id="TablemajorIntrCategories" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 2. Categorization of current and future major interrupts.</caption>
+<caption class="title">Table 9. Categorization of current and future major interrupts.</caption>
 <colgroup>
 <col>
 <col>
@@ -538,7 +488,7 @@ Privileged Architecture</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">16-23<br>
 24-31<br>
 32-47<br>
-&#8805; 48</p></td>
+≥ 48</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Local interrupts<br>
 <em>Designated for custom use</em><br>
 Local interrupts<br>
@@ -557,7 +507,7 @@ reserves major interrupt numbers in the ranges 16-23 and 32-47 for
 standard local interrupts that other RISC-V extensions may define. The
 remaining major interrupts allocated to the Privileged Architecture,
 numbers 0-12, are categorized as not local interrupts. Taken altogether,
-<a href="#TablemajorIntrCategories">Table 2</a> summarizes the AIA&#8217;s categorization of all major interrupt identities.</p>
+<a href="#TablemajorIntrCategories">Table 9</a> summarizes the AIA’s categorization of all major interrupt identities.</p>
 </div>
 <div class="paragraph">
 <p><em>RAS</em> is an abbreviation for <em>Reliability, Availability, and
@@ -577,7 +527,7 @@ routed through an APLIC or IMSIC, or by custom interrupts.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -595,11 +545,11 @@ events, whether RAS events or other.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -654,7 +604,7 @@ Counter overflow interrupt</p></td>
 <p>Among interrupts 16-23, a higher interrupt number conveys higher default
 priority, and likewise for interrupts 32-47. These two groups are
 interleaved together in the complete order, and the Privileged
-Architecture&#8217;s standard interrupts, 0-15, are inserted into the middle
+Architecture’s standard interrupts, 0-15, are inserted into the middle
 of the sequence. This proposed default priority order is arranged so
 that interrupts 0-31 can potentially be an adequate subset on their own
 for 32-bit RISC-V systems.</p>
@@ -665,18 +615,18 @@ the default priority order of interrupts they define.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
 <p>In addition to the existing major interrupts of
-<a href="#TablemajorIntrs">Table 1</a>, the following local interrupts
+<a href="#TablemajorIntrs">Table 8</a>, the following local interrupts
 are tentatively proposed, listed in order of decreasing default
 priority:</p>
 </div>
@@ -707,11 +657,11 @@ extensions are developed and ratified.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -724,7 +674,7 @@ and <a href="#stopi">5.1.4.2. Supervisor top interrupt CSR (<code>stopi</code>)<
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Interrupt numbers 24-31 and 48 and higher are all designated for custom
@@ -733,7 +683,7 @@ default priority order must be documented for the hart.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -747,7 +697,7 @@ major interrupt numbers potentially as large as 4095.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>When a hart supports the arbitrary configuration of interrupt priorities
@@ -800,8 +750,8 @@ by a set of registers accessed through the <code>miselect</code> and <code>mireg
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>iprio1</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&#8230;&#8203;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&#8230;&#8203;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>…​</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>…​</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>0x3F</code></p></td>
@@ -858,8 +808,8 @@ register <code>iprio</code><span class="steminline"> <svg style="vertical-align:
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>iprio2</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>&#8230;&#8203;</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>&#8230;&#8203;</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>…​</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>…​</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>0x3E</code></p></td>
@@ -939,7 +889,7 @@ implemented.</p>
 <p>Each byte of a valid <code>iprio</code><span class="steminline"> <svg style="vertical-align: -0.025ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.179ex" height="1.595ex" role="img" focusable="false" viewBox="0 -694 521 705"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g></g></g></svg> </span> register is either a read-only zero
 or a <strong>WARL</strong> unsigned integer field implementing exactly IPRIOLEN bits. For a
 given interrupt number, if the corresponding bit in <code>mie</code> is read-only zero,
-then the interrupt&#8217;s priority number in the <code>iprio</code> array must be read-only zero
+then the interrupt’s priority number in the <code>iprio</code> array must be read-only zero
 as well. The priority number for a machine-level external interrupt
 (bits 31:24 of register <code>iprio2</code>) must also be read-only zero. Aside from these
 two restrictions, implementations may freely choose which priority
@@ -949,7 +899,7 @@ external interrupts, not for any other interrupts.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -960,13 +910,13 @@ certain interrupt causes.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The <code>iprio</code> array accessed via <code>miselect</code> and <code>mireg</code> affects the prioritization of interrupts only when they trap to M-mode. When an interrupt’s priority number in the
 array is zero (either read-only zero or set to zero), its priority is
 the default order from <a href="#majorIntrs">5.1.1. Defined major interrupts and default priorities</a>. Setting an
-interrupt&#8217;s priority number instead to a nonzero value <span class="steminline"> <svg style="vertical-align: -0.439ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.138ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 503 636"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g></g></g></svg> </span>
+interrupt’s priority number instead to a nonzero value <span class="steminline"> <svg style="vertical-align: -0.439ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.138ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 503 636"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g></g></g></svg> </span>
 gives that interrupt nominally the same priority as a machine-level
 external interrupt with priority number <span class="steminline"> <svg style="vertical-align: -0.439ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.138ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 503 636"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g></g></g></svg> </span>. For a major
 interrupt that defaults to a higher priority than machine external
@@ -975,11 +925,11 @@ priority. For a major interrupt that defaults to a lower priority than
 machine external interrupts, setting its priority number to a nonzero
 value <em>raises</em> its priority. When two interrupt causes have been
 assigned the same nominal priority, ties are broken by the default
-priority order. <a href="#TableintrPrios-M">Table 3</a> summarizes the effect of priority numbers on interrupt priority.</p>
+priority order. <a href="#TableintrPrios-M">Table 10</a> summarizes the effect of priority numbers on interrupt priority.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -992,10 +942,10 @@ interrupt identities 1-255, not those of identities 256 or higher.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <table id="TableintrPrios-M" class="tableblock frame-all grid-all stretch center">
-<caption class="title">Table 3. Effect of the machine-level iprio array on the priorities of interrupts taken in M-mode. For interrupts with the same priority number, the default order of <a href="#majorIntrs">5.1.1. Defined major interrupts and default priorities</a> prevails.</caption>
+<caption class="title">Table 10. Effect of the machine-level iprio array on the priorities of interrupts taken in M-mode. For interrupts with the same priority number, the default order of <a href="#majorIntrs">5.1.1. Defined major interrupts and default priorities</a> prevails.</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -1028,17 +978,17 @@ order</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1<br>
 2<br>
-&#8230;&#8203;<br>
+…​<br>
 254<br>
 255</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1<br>
 2<br>
-&#8230;&#8203;<br>
+…​<br>
 254<br>
 255</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1<br>
 2<br>
-&#8230;&#8203;<br>
+…​<br>
 254<br>
 255</p></td>
 </tr>
@@ -1058,16 +1008,16 @@ order</p></td>
 </table>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
 <p>Implementing the priority configurability of this section requires that
-a RISC-V hart&#8217;s external interrupt controller communicate to the hart not only
+a RISC-V hart’s external interrupt controller communicate to the hart not only
 the existence of a pending-and-enabled external interrupt but also the
-interrupt&#8217;s priority number. Typically this implies that the width of
+interrupt’s priority number. Typically this implies that the width of
 the connection for signaling an external interrupt to the hart is not
 just a single wire as usual but now <span class="steminline"> <svg style="vertical-align: -0.186ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="16.598ex" height="1.778ex" role="img" focusable="false" viewBox="0 -704 7336.4 786"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D43C" d="M43 1Q26 1 26 10Q26 12 29 24Q34 43 39 45Q42 46 54 46H60Q120 46 136 53Q137 53 138 54Q143 56 149 77T198 273Q210 318 216 344Q286 624 286 626Q284 630 284 631Q274 637 213 637H193Q184 643 189 662Q193 677 195 680T209 683H213Q285 681 359 681Q481 681 487 683H497Q504 676 504 672T501 655T494 639Q491 637 471 637Q440 637 407 634Q393 631 388 623Q381 609 337 432Q326 385 315 341Q245 65 245 59Q245 52 255 50T307 46H339Q345 38 345 37T342 19Q338 6 332 0H316Q279 2 179 2Q143 2 113 2T65 2T43 1Z"></path></g><g data-mml-node="mi" transform="translate(504,0)"><path data-c="1D443" d="M287 628Q287 635 230 637Q206 637 199 638T192 648Q192 649 194 659Q200 679 203 681T397 683Q587 682 600 680Q664 669 707 631T751 530Q751 453 685 389Q616 321 507 303Q500 302 402 301H307L277 182Q247 66 247 59Q247 55 248 54T255 50T272 48T305 46H336Q342 37 342 35Q342 19 335 5Q330 0 319 0Q316 0 282 1T182 2Q120 2 87 2T51 1Q33 1 33 11Q33 13 36 25Q40 41 44 43T67 46Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628ZM645 554Q645 567 643 575T634 597T609 619T560 635Q553 636 480 637Q463 637 445 637T416 636T404 636Q391 635 386 627Q384 621 367 550T332 412T314 344Q314 342 395 342H407H430Q542 342 590 392Q617 419 631 471T645 554Z"></path></g><g data-mml-node="mi" transform="translate(1255,0)"><path data-c="1D445" d="M230 637Q203 637 198 638T193 649Q193 676 204 682Q206 683 378 683Q550 682 564 680Q620 672 658 652T712 606T733 563T739 529Q739 484 710 445T643 385T576 351T538 338L545 333Q612 295 612 223Q612 212 607 162T602 80V71Q602 53 603 43T614 25T640 16Q668 16 686 38T712 85Q717 99 720 102T735 105Q755 105 755 93Q755 75 731 36Q693 -21 641 -21H632Q571 -21 531 4T487 82Q487 109 502 166T517 239Q517 290 474 313Q459 320 449 321T378 323H309L277 193Q244 61 244 59Q244 55 245 54T252 50T269 48T302 46H333Q339 38 339 37T336 19Q332 6 326 0H311Q275 2 180 2Q146 2 117 2T71 2T50 1Q33 1 33 10Q33 12 36 24Q41 43 46 45Q50 46 61 46H67Q94 46 127 49Q141 52 146 61Q149 65 218 339T287 628Q287 635 230 637ZM630 554Q630 586 609 608T523 636Q521 636 500 636T462 637H440Q393 637 386 627Q385 624 352 494T319 361Q319 360 388 360Q466 361 492 367Q556 377 592 426Q608 449 619 486T630 554Z"></path></g><g data-mml-node="mi" transform="translate(2014,0)"><path data-c="1D43C" d="M43 1Q26 1 26 10Q26 12 29 24Q34 43 39 45Q42 46 54 46H60Q120 46 136 53Q137 53 138 54Q143 56 149 77T198 273Q210 318 216 344Q286 624 286 626Q284 630 284 631Q274 637 213 637H193Q184 643 189 662Q193 677 195 680T209 683H213Q285 681 359 681Q481 681 487 683H497Q504 676 504 672T501 655T494 639Q491 637 471 637Q440 637 407 634Q393 631 388 623Q381 609 337 432Q326 385 315 341Q245 65 245 59Q245 52 255 50T307 46H339Q345 38 345 37T342 19Q338 6 332 0H316Q279 2 179 2Q143 2 113 2T65 2T43 1Z"></path></g><g data-mml-node="mi" transform="translate(2518,0)"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mi" transform="translate(3281,0)"><path data-c="1D43F" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 217 683Q271 680 344 680Q485 680 506 683H518Q524 677 524 674T522 656Q517 641 513 637H475Q406 636 394 628Q387 624 380 600T313 336Q297 271 279 198T252 88L243 52Q243 48 252 48T311 46H328Q360 46 379 47T428 54T478 72T522 106T564 161Q580 191 594 228T611 270Q616 273 628 273H641Q647 264 647 262T627 203T583 83T557 9Q555 4 553 3T537 0T494 -1Q483 -1 418 -1T294 0H116Q32 0 32 10Q32 17 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"></path></g><g data-mml-node="mi" transform="translate(3962,0)"><path data-c="1D438" d="M492 213Q472 213 472 226Q472 230 477 250T482 285Q482 316 461 323T364 330H312Q311 328 277 192T243 52Q243 48 254 48T334 46Q428 46 458 48T518 61Q567 77 599 117T670 248Q680 270 683 272Q690 274 698 274Q718 274 718 261Q613 7 608 2Q605 0 322 0H133Q31 0 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q146 66 215 342T285 622Q285 629 281 629Q273 632 228 634H197Q191 640 191 642T193 659Q197 676 203 680H757Q764 676 764 669Q764 664 751 557T737 447Q735 440 717 440H705Q698 445 698 453L701 476Q704 500 704 528Q704 558 697 578T678 609T643 625T596 632T532 634H485Q397 633 392 631Q388 629 386 622Q385 619 355 499T324 377Q347 376 372 376H398Q464 376 489 391T534 472Q538 488 540 490T557 493Q562 493 565 493T570 492T572 491T574 487T577 483L544 351Q511 218 508 216Q505 213 492 213Z"></path></g><g data-mml-node="mi" transform="translate(4726,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g></g><g data-mml-node="mo" transform="translate(5836.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(6836.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></svg> </span>
 wires.</p>
@@ -1076,14 +1026,14 @@ wires.</p>
 <p>It is expected that many systems will forego priority configurability of
 major interrupts and simply have the array be all read-only zeros.
 Systems that need this priority configurability can try to arrange for
-each hart&#8217;s external interrupt controller to be relatively close to the
+each hart’s external interrupt controller to be relatively close to the
 hart, by, for example, limiting the system to at most a few small cores
 connected to an APLIC, or alternatively by giving every hart its own
 IMSIC.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If supported, setting the priority number for supervisor-level external
@@ -1145,22 +1095,22 @@ is always 1 whenever <code>mtopi</code> is not zero.</p>
 <div class="paragraph">
 <p>Otherwise, when <code>mtopi</code> is not zero, if the priority number for the reported
 interrupt is in the range 1 to 255, IPRIO is simply that number. If the
-interrupt&#8217;s priority number is zero or greater than 255, IPRIO is set to
+interrupt’s priority number is zero or greater than 255, IPRIO is set to
 either 0 or 255 as follows:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>If the interrupt&#8217;s priority number is greater than 255, then IPRIO is
+<p>If the interrupt’s priority number is greater than 255, then IPRIO is
 255 (lowest representable priority).</p>
 </li>
 <li>
-<p>If the interrupt&#8217;s priority number is zero and interrupt number IID
+<p>If the interrupt’s priority number is zero and interrupt number IID
 has a default priority higher than a machine external interrupt, then
-IPRIO is 0 (highest priority).</p>
+IPRIO is&nbsp;0 (highest priority).</p>
 </li>
 <li>
-<p>If the interrupt&#8217;s priority number is zero and interrupt number IID
+<p>If the interrupt’s priority number is zero and interrupt number IID
 has a default priority lower than a machine external interrupt, then
 IPRIO is 255 (lowest representable priority).</p>
 </li>
@@ -1168,7 +1118,7 @@ IPRIO is 255 (lowest representable priority).</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1180,7 +1130,7 @@ a default priority lower than a machine external interrupt.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The value of <code>mtopi</code> is not affected by the global interrupt enable MIE in CSR <code>mstatus</code>.</p>
@@ -1227,7 +1177,7 @@ be set to 1 before executing an MRET that changes the privilege mode.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1242,7 +1192,7 @@ still be true before the next MRET that ends the handler.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -1264,10 +1214,10 @@ that have no connection to any real interrupt events.</p>
 <p>Just as with CSRs <code>mip</code>, <code>mie</code>, and <code>mideleg</code>, each bit of registers <code>mvien</code> and <code>mvip</code> corresponds with an interrupt number in the range 0-63. When a bit in <code>mideleg</code> is zero and the matching bit in <code>mvien</code> is one, then the same bit position in <code>sip</code> is an alias
 for the corresponding bit in <code>mvip</code>. A bit in <code>sip</code> is read-only zero when the
 corresponding bits in <code>mideleg</code> and <code>mvien</code> are both zero. The combined effects of <code>mideleg</code> and <code>mvien</code> on <code>sip</code> and <code>sie</code> are summarized in
-<a href="#TableintrFilteringForS">Table 4</a>.</p>
+<a href="#TableintrFilteringForS">Table 11</a>.</p>
 </div>
 <table id="TableintrFilteringForS" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 4. The effects of <code>mideleg</code> and <code>mvien</code> on <code>sip</code> and <code>sie</code> (except for the H extension&#8217;s VS-level interrupts, which appear in <code>hip</code> and <code>hie</code> instead of <code>sip</code> and <code>sie</code>). A bit in <code>mvien</code> can be set to 1 only for major interrupts 1, 9, and 13-63. For interrupts 0-12, some aliases of <code>mip</code> bits in <code>sip</code> may be read-only copies, as specified by the base Privileged Architecture.</caption>
+<caption class="title">Table 11. The effects of <code>mideleg</code> and <code>mvien</code> on <code>sip</code> and <code>sie</code> (except for the H extension’s VS-level interrupts, which appear in <code>hip</code> and <code>hie</code> instead of <code>sip</code> and <code>sie</code>). A bit in <code>mvien</code> can be set to 1 only for major interrupts 1, 9, and 13-63. For interrupts 0-12, some aliases of <code>mip</code> bits in <code>sip</code> may be read-only copies, as specified by the base Privileged Architecture.</caption>
 <colgroup>
 <col>
 <col>
@@ -1305,7 +1255,7 @@ corresponding bits in <code>mideleg</code> and <code>mvien</code> are both zero.
 </table>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1318,7 +1268,7 @@ as in <code>mie</code>) mask pending interrupts.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>A bit in <code>sie</code> is writable if and only if the corresponding bit is set in
@@ -1338,7 +1288,7 @@ interrupts 13-63 must be writable in <code>mvip</code>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1349,7 +1299,7 @@ certain interrupt causes be writable, or be read-only zero or one.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The bits of <code>mvien</code> for supervisor software interrupts (code 1) and supervisor
@@ -1379,7 +1329,7 @@ does not affect the value of bit 9 of <code>mvip</code>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1394,7 +1344,7 @@ so it is then just a writable bit in <code>mvip</code>.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Except for bits 1, 5, and 9 as specified above, the bits of <code>mvip</code> in the range
@@ -1413,7 +1363,7 @@ Privileged Architecture. In particular, for most purposes, the value of
 bit 9 of <code>mvip</code> is logically ORed into the readable value of <code>mip</code>.SEIP. But when
 bit 9 of <code>mvien</code> is one, bit SEIP in <code>mip</code> is read-only and does not include the value
 of bit 9 of <code>mvip</code>. Rather, the value of <code>mip</code>.SEIP is simply the supervisor
-external interrupt signal from the hart&#8217;s external interrupt controller
+external interrupt signal from the hart’s external interrupt controller
 (APLIC or IMSIC).</p>
 </li>
 <li>
@@ -1461,8 +1411,8 @@ writable and will remain set until cleared by software.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>iprio1</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>&#8230;&#8203;</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>&#8230;&#8203;</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>…​</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>…​</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>0x3F</code></p></td>
@@ -1488,8 +1438,8 @@ writable and will remain set until cleared by software.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>iprio2</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>&#8230;&#8203;</code></p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>&#8230;&#8203;</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>…​</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>…​</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>0x3E</code></p></td>
@@ -1506,11 +1456,11 @@ writable and will remain set until cleared by software.</p>
 <div class="paragraph">
 <p>For a given interrupt number, if the corresponding bit is not writable
 either in <code>sie</code> or, if the H extension is implemented, in <code>hie</code>,
-then the interrupt&#8217;s priority number in the supervisor-level <code>iprio</code> array must be read-only zero as well. The priority number for a supervisor-level external interrupt (bits 15:8 of <code>iprio2</code>) must also be read-only zero. Aside from these two restrictions, implementations may freely choose which priority number fields are settable and which are read-only zeros.</p>
+then the interrupt’s priority number in the supervisor-level <code>iprio</code> array must be read-only zero as well. The priority number for a supervisor-level external interrupt (bits 15:8 of <code>iprio2</code>) must also be read-only zero. Aside from these two restrictions, implementations may freely choose which priority number fields are settable and which are read-only zeros.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1521,11 +1471,11 @@ configurable for certain interrupt causes.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1539,16 +1489,16 @@ but may simply be all read-only zeros.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
-<p>The supervisor-level <code>iprio</code> array accessed via <code>siselect</code> and <code>sireg</code> affects the prioritization of interrupts only when they trap to S-mode. When an interrupt&#8217;s priority number in the array is zero (either read-only zero or set to zero), its priority is the default order from <a href="#majorIntrs">5.1.1. Defined major interrupts and default priorities</a>. Setting an interrupt&#8217;s priority number instead to a nonzero value <span class="steminline"> <svg style="vertical-align: -0.439ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.138ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 503 636"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g></g></g></svg> </span> gives that interrupt nominally the same priority as a supervisor-level external interrupt with priority number <span class="steminline"> <svg style="vertical-align: -0.439ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.138ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 503 636"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g></g></g></svg> </span>. For an interrupt that defaults to a higher priority than supervisor external interrupts, setting its priority number to a nonzero value lowers its priority. For an interrupt that defaults to a lower priority than supervisor external interrupts, setting its priority number to a nonzero value raises its priority. When two interrupt causes have been assigned the same nominal priority, ties are broken by the default priority order. <a href="#TableintrPrios-S">Table 5</a> summarizes the effect of priority numbers on interrupt priority.</p>
+<p>The supervisor-level <code>iprio</code> array accessed via <code>siselect</code> and <code>sireg</code> affects the prioritization of interrupts only when they trap to S-mode. When an interrupt’s priority number in the array is zero (either read-only zero or set to zero), its priority is the default order from <a href="#majorIntrs">5.1.1. Defined major interrupts and default priorities</a>. Setting an interrupt’s priority number instead to a nonzero value <span class="steminline"> <svg style="vertical-align: -0.439ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.138ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 503 636"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g></g></g></svg> </span> gives that interrupt nominally the same priority as a supervisor-level external interrupt with priority number <span class="steminline"> <svg style="vertical-align: -0.439ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.138ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 503 636"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g></g></g></svg> </span>. For an interrupt that defaults to a higher priority than supervisor external interrupts, setting its priority number to a nonzero value lowers its priority. For an interrupt that defaults to a lower priority than supervisor external interrupts, setting its priority number to a nonzero value raises its priority. When two interrupt causes have been assigned the same nominal priority, ties are broken by the default priority order. <a href="#TableintrPrios-S">Table 12</a> summarizes the effect of priority numbers on interrupt priority.</p>
 </div>
 <div class="paragraph">
 <p>If supported, setting the priority number for VS-level external interrupts (bits 23:16 of <code>iprio2</code>) to a nonzero value <span class="steminline"> <svg style="vertical-align: -0.439ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.138ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 503 636"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g></g></g></svg> </span> has the effect of giving the entire category of VS external interrupts nominally  the same priority as a supervisor external interrupt with priority number <span class="steminline"> <svg style="vertical-align: -0.439ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="1.138ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 503 636"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g></g></g></svg> </span>, when VS external interrupts trap to S-mode.</p>
 </div>
 <table id="TableintrPrios-S" class="tableblock frame-all grid-all stretch center">
-<caption class="title">Table 5. Effect of the supervisor-level iprio array on the priorities of interrupts taken in S-mode. For interrupts with the same priority number, the default order of <a href="#majorIntrs">5.1.1. Defined major interrupts and default priorities</a> prevails.</caption>
+<caption class="title">Table 12. Effect of the supervisor-level iprio array on the priorities of interrupts taken in S-mode. For interrupts with the same priority number, the default order of <a href="#majorIntrs">5.1.1. Defined major interrupts and default priorities</a> prevails.</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -1581,17 +1531,17 @@ order</p></td>
 <td class="tableblock halign-center valign-top"></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1<br>
 2<br>
-&#8230;&#8203;<br>
+…​<br>
 254<br>
 255</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1<br>
 2<br>
-&#8230;&#8203;<br>
+…​<br>
 254<br>
 255</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">1<br>
 2<br>
-&#8230;&#8203;<br>
+…​<br>
 254<br>
 255</p></td>
 </tr>
@@ -1612,7 +1562,7 @@ order</p></td>
 <div class="paragraph">
 <p>If bit 9 for a supervisor external interrupt (SEI) is one
 in <code>mideleg</code> or <code>mvien</code> and in <code>mvip</code>, causing <code>sip</code>.SEIP to be one,
-but there is no supervisor-level interrupt from the hart&#8217;s external
+but there is no supervisor-level interrupt from the hart’s external
 interrupt controller (APLIC or IMSIC), then a priority number for
 the SEI is not supplied by the external interrupt controller as usual.
 In that case, the SEI is assigned a priority number of 256.</p>
@@ -1654,24 +1604,24 @@ priority.</p>
 <p>If all bytes of the supervisor-level <code>iprio</code> array are read-only zeros, a simplified implementation of field IPRIO is allowed in which its value is always 1 whenever <code>stopi</code> is not zero.</p>
 </div>
 <div class="paragraph">
-<p>Otherwise, when <code>stopi</code> is not zero, if the priority number for the reported interrupt is in the range 1 to 255, IPRIO is simply that number. If the interrupt&#8217;s priority number is zero or greater than 255, IPRIO is set to either 0 or 255 as follows:</p>
+<p>Otherwise, when <code>stopi</code> is not zero, if the priority number for the reported interrupt is in the range 1 to 255, IPRIO is simply that number. If the interrupt’s priority number is zero or greater than 255, IPRIO is set to either 0 or 255 as follows:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>If the interrupt&#8217;s priority number is greater than 255, then IPRIO is 255 (lowest representable priority).</p>
+<p>If the interrupt’s priority number is greater than 255, then IPRIO is 255 (lowest representable priority).</p>
 </li>
 <li>
-<p>If the interrupt&#8217;s priority number is zero and interrupt number IID has a default priority higher than a supervisor external interrupt, then IPRIO is 0 (highest priority).</p>
+<p>If the interrupt’s priority number is zero and interrupt number IID has a default priority higher than a supervisor external interrupt, then IPRIO is 0 (highest priority).</p>
 </li>
 <li>
-<p>If the interrupt&#8217;s priority number is zero and interrupt number IID has a default priority lower than a supervisor external interrupt, then IPRIO is 255 (lowest representable priority).</p>
+<p>If the interrupt’s priority number is zero and interrupt number IID has a default priority lower than a supervisor external interrupt, then IPRIO is 255 (lowest representable priority).</p>
 </li>
 </ul>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1681,7 +1631,7 @@ priority.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The value of <code>stopi</code> is not affected by the global interrupt enable SIE in CSR <code>sstatus</code>.</p>
@@ -1724,7 +1674,7 @@ be set to 1 before executing an SRET that changes the privilege mode.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1739,7 +1689,7 @@ still be true before the next SRET that ends the handler.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -1749,24 +1699,24 @@ still be true before the next SRET that ends the handler.</p>
 <p>The RISC-V Privileged Architecture specifies that instruction WFI (Wait for Interrupt) may suspend execution at a hart until an interrupt is pending for the hart. The Advanced Interrupt Architecture (AIA) redefines when execution must resume following a WFI.</p>
 </div>
 <div class="paragraph">
-<p>According to the base RISC-V Privileged Architecture, instruction execution must resume from a WFI whenever any interrupt is both pending and enabled in CSRs <code>mip</code> and <code>mie</code>, ignoring any delegation indicated by <code>mideleg</code>. With the AIA, this succinct rule is no longer appropriate, due to the mechanisms the AIA adds for virtual interrupts. Instead, execution must resume from a WFI whenever an interrupt is pending at any privilege level (regardless of whether the interrupt privilege level is higher or lower than the hart&#8217;s current privilege mode).</p>
+<p>According to the base RISC-V Privileged Architecture, instruction execution must resume from a WFI whenever any interrupt is both pending and enabled in CSRs <code>mip</code> and <code>mie</code>, ignoring any delegation indicated by <code>mideleg</code>. With the AIA, this succinct rule is no longer appropriate, due to the mechanisms the AIA adds for virtual interrupts. Instead, execution must resume from a WFI whenever an interrupt is pending at any privilege level (regardless of whether the interrupt privilege level is higher or lower than the hart’s current privilege mode).</p>
 </div>
 <div class="paragraph">
 <p>An interrupt is pending at machine level if register <code>mtopi</code> is not zero. If S-mode is implemented, an interrupt is pending at supervisor level if <code>stopi</code> is not zero. And if the H extension is implemented, an interrupt is pending at VS level if <code>vstopi</code> (<a href="VSLevel.html#vstopi" class="xref page">Virtual supervisor top interrupt CSR (<code>vstopi</code>)</a>) is not zero.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The AIA&#8217;s rule for WFI gives the same behavior as the base Privileged Architecture’s rule when <code>mvien</code> = 0 and, if the H extension is implemented, also <code>hvien</code> = 0 and <code>hvictl</code>.VTI = 0, thus disabling all virtual interrupts not visible in <code>mip</code>. (The AIA&#8217;s hypervisor registers are covered in the next chapter, "Interrupts for Virtual Machines (VS Level)".)</p>
+<p>The AIA’s rule for WFI gives the same behavior as the base Privileged Architecture’s rule when <code>mvien</code> = 0 and, if the H extension is implemented, also <code>hvien</code> = 0 and <code>hvictl</code>.VTI = 0, thus disabling all virtual interrupts not visible in <code>mip</code>. (The AIA’s hypervisor registers are covered in the next chapter, "Interrupts for Virtual Machines (VS Level)".)</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -1792,21 +1742,20 @@ still be true before the next SRET that ends the handler.</p>
     </div>
 
     <div id="social-icons" class="flex jc-between">
-        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
-        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
-        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"/></svg></a>
-        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"/><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
+        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
+        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"></path></svg></a>
+        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"></circle><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"></path></svg></a>
         <a href="https://risc-v-international.slack.com/join/shared_invite/zt-2y1w69wde-PdoN3fXovLlzoni~UaPrBA" title="Slack" target="_blank" rel="noopener noreferrer" class="slack-icon-link"><i class="fa fa-slack" aria-hidden="true"></i></a>
     </div>
 </footer>
 <script src="../_/js/vendor/import.js"></script>
 <script src="../_/js/site.js"></script>
-<script async src="../_/js/vendor/highlight.js"></script>
-<script async
-    src="../_/js/vendor/spring-tabs.js"
-    data-sync-storage-key="docs:preferred-tab"></script>
+<script async="" src="../_/js/vendor/highlight.js"></script>
+<script async="" src="../_/js/vendor/spring-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
 <script src="../_/js/vendor/lunr.js"></script>
 <script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
-<script async src="../search-index.js"></script>
-  </body>
-</html>
+<script async="" src="../search-index.js"></script>
+  
+
+</body></html>

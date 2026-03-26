@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Machine-Level ISA, Version 1.13 :: RISC-V Ratified Specifications Library</title>
@@ -40,8 +38,8 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img class="riscvlogo riscvlogo--light" src="../../../_/img/risc-v_logo.svg" alt="RISCV" />
-        <img class="riscvlogo riscvlogo--dark" src="../../../_/img/risc-v_logo_white.svg" alt="RISCV" />
+        <img class="riscvlogo riscvlogo--light" src="../../../_/img/risc-v_logo.svg" alt="RISCV">
+        <img class="riscvlogo riscvlogo--dark" src="../../../_/img/risc-v_logo_white.svg" alt="RISCV">
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -52,10 +50,7 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item home">
-          <a class="navbar-link"
-            href="../../../home/index.html"
-            aria-label="home"
-            title="home">
+          <a class="navbar-link" href="../../../home/index.html" aria-label="home" title="home">
             <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
               <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -65,21 +60,17 @@
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
         <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs" >
+          <input id="search-input" type="text" placeholder="Search the docs">
         </div>
         <div class="navbar-item" style="padding-left: 0;">
           <label class="theme-toggler">
-            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
-            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
-                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <path fill="currentColor"
-                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+            <input type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox">
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor" d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
                 </path>
               </svg>
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
-                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path fill="currentColor"
-                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
                 </path>
               </svg></span>
             <span class="text">light</span>
@@ -111,25 +102,13 @@
 </div>        <div class="nav-trees" data-component="isa">
           <div class="version-box">
             <select data-component="isa" class="select-version">
-                <option
-                  value="../../index.html"
-                  data-version="v20260120"
-                  
-                  >
+                <option value="../../index.html" data-version="v20260120">
                   20260120
                 </option>
-                <option
-                  value="../index.html"
-                  data-version="v20250508"
-                  
-                  selected>
+                <option value="../index.html" data-version="v20250508" selected="">
                   20250508
                 </option>
-                <option
-                  value="../../v20240411/index.html"
-                  data-version="v20240411"
-                  
-                  >
+                <option value="../../v20240411/index.html" data-version="v20240411">
                   20240411
                 </option>
             </select>
@@ -141,133 +120,133 @@
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/unpriv-index.html">Unprivileged Architecture</a>
+    <a class="nav-link" href="../unpriv/unpriv-index.html">Unprivileged Architecture</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/unpriv-contributors.html">Preamble</a>
+    <a class="nav-link" href="../unpriv/unpriv-contributors.html">Preamble</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/colophon.html">Preface</a>
+    <a class="nav-link" href="../unpriv/colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="../unpriv/intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
+    <a class="nav-link" href="../unpriv/rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+    <a class="nav-link" href="../unpriv/rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
+    <a class="nav-link" href="../unpriv/rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+    <a class="nav-link" href="../unpriv/zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link" href="../unpriv/zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+    <a class="nav-link" href="../unpriv/counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zihintntl.html">Chapter 8. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+    <a class="nav-link" href="../unpriv/zihintntl.html">Chapter 8. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zihintpause.html">Chapter 9. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
+    <a class="nav-link" href="../unpriv/zihintpause.html">Chapter 9. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zimop.html">Chapter 10. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
+    <a class="nav-link" href="../unpriv/zimop.html">Chapter 10. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zicond.html">Chapter 11. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+    <a class="nav-link" href="../unpriv/zicond.html">Chapter 11. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/m-st-ext.html">Chapter 12. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
+    <a class="nav-link" href="../unpriv/m-st-ext.html">Chapter 12. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/a-st-ext.html">Chapter 13. "A" Extension for Atomic Instructions, Version 2.1</a>
+    <a class="nav-link" href="../unpriv/a-st-ext.html">Chapter 13. "A" Extension for Atomic Instructions, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zawrs.html">Chapter 14. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+    <a class="nav-link" href="../unpriv/zawrs.html">Chapter 14. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zacas.html">Chapter 15. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+    <a class="nav-link" href="../unpriv/zacas.html">Chapter 15. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zabha.html">Chapter 16. "Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
+    <a class="nav-link" href="../unpriv/zabha.html">Chapter 16. "Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
+    <a class="nav-link" href="../unpriv/rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
+    <a class="nav-link" href="../unpriv/ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+    <a class="nav-link" href="../unpriv/cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link" href="../unpriv/f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link" href="../unpriv/d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link" href="../unpriv/q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+    <a class="nav-link" href="../unpriv/zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/bfloat16.html">Chapter 24. "BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
+    <a class="nav-link" href="../unpriv/bfloat16.html">Chapter 24. "BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zfa.html">Chapter 25. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+    <a class="nav-link" href="../unpriv/zfa.html">Chapter 25. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zfinx.html">Chapter 26. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+    <a class="nav-link" href="../unpriv/zfinx.html">Chapter 26. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/c-st-ext.html">Chapter 27. "C" Extension for Compressed Instructions, Version 2.0</a>
+    <a class="nav-link" href="../unpriv/c-st-ext.html">Chapter 27. "C" Extension for Compressed Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/zc.html">Chapter 28. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+    <a class="nav-link" href="../unpriv/zc.html">Chapter 28. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/b-st-ext.html">Chapter 29. "B" Extension for Bit Manipulation, Version 1.0.0</a>
+    <a class="nav-link" href="../unpriv/b-st-ext.html">Chapter 29. "B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/v-st-ext.html">Chapter 30. "V" Standard Extension for Vector Operations, Version 1.0</a>
+    <a class="nav-link" href="../unpriv/v-st-ext.html">Chapter 30. "V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+    <a class="nav-link" href="../unpriv/scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link" href="../unpriv/vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
+    <a class="nav-link" href="../unpriv/unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link" href="../unpriv/rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
+    <a class="nav-link" href="../unpriv/extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link" href="../unpriv/naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/history.html">Chapter 37. Document Revision History</a>
+    <a class="nav-link" href="../unpriv/history.html">Chapter 37. Document Revision History</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link" href="../unpriv/mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
+    <a class="nav-link" href="../unpriv/mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../unpriv/calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link" href="../unpriv/calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -276,73 +255,73 @@
     <span class="nav-text">Volume II: RISC-V Privileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-index.html">Privileged Architecture</a>
+    <a class="nav-link" href="priv-index.html">Privileged Architecture</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-contributors.html">Preamble</a>
+    <a class="nav-link" href="priv-contributors.html">Preamble</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-preface.html">Preface</a>
+    <a class="nav-link" href="priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="priv-intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
+    <a class="nav-link" href="priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link" href="machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link" href="smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link" href="indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link" href="smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link" href="smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link" href="rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link" href="smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link" href="smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
+    <a class="nav-link" href="smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link" href="supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link" href="sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link" href="sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link" href="hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
+    <a class="nav-link" href="priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link" href="ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
+    <a class="nav-link" href="zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link" href="priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="priv-history.html">Chapter 20. History</a>
+    <a class="nav-link" href="priv-history.html">Chapter 20. History</a>
   </li>
 </ul>
   </li>
@@ -351,7 +330,7 @@
     <span class="nav-text">Bibliography</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../biblio/bibliography.html">Bibliography</a>
+    <a class="nav-link" href="../biblio/bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -361,11 +340,7 @@
         <div class="nav-trees" data-component="rvprofile">
           <div class="version-box">
             <select data-component="rvprofile" class="select-version">
-                <option
-                  value="../../../rvprofile/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../../../rvprofile/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -379,34 +354,34 @@
     <span class="nav-text">RISC-V Profiles</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/index.html">Title Page</a>
+    <a class="nav-link" href="../../../rvprofile/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/copyright.html">Copyright and License Information</a>
+    <a class="nav-link" href="../../../rvprofile/copyright.html">Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/changelog.html">Chapter 1. Changelog</a>
+    <a class="nav-link" href="../../../rvprofile/changelog.html">Chapter 1. Changelog</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/intro.html">Chapter 2. Introduction</a>
+    <a class="nav-link" href="../../../rvprofile/intro.html">Chapter 2. Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/profilevsplat.html">Chapter 3. Profiles versus Platforms</a>
+    <a class="nav-link" href="../../../rvprofile/profilevsplat.html">Chapter 3. Profiles versus Platforms</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/components.html">Chapter 4. Components of a Profile</a>
+    <a class="nav-link" href="../../../rvprofile/components.html">Chapter 4. Components of a Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/rva20.html">Chapter 5. RVA20 Profile</a>
+    <a class="nav-link" href="../../../rvprofile/rva20.html">Chapter 5. RVA20 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/rva22.html">Chapter 6. RVA22 Profile</a>
+    <a class="nav-link" href="../../../rvprofile/rva22.html">Chapter 6. RVA22 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/extensions.html">Chapter 7. New ISA Extensions</a>
+    <a class="nav-link" href="../../../rvprofile/extensions.html">Chapter 7. New ISA Extensions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/glossary.html">Glossary</a>
+    <a class="nav-link" href="../../../rvprofile/glossary.html">Glossary</a>
   </li>
 </ul>
   </li>
@@ -418,11 +393,7 @@
         <div class="nav-trees" data-component="rva23">
           <div class="version-box">
             <select data-component="rva23" class="select-version">
-                <option
-                  value="../../../rva23/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../../../rva23/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -436,22 +407,22 @@
     <span class="nav-text">RVA23 Profile</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/index.html">Title Page</a>
+    <a class="nav-link" href="../../../rva23/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/copyright.html">Chapter 1. Copyright and License Information</a>
+    <a class="nav-link" href="../../../rva23/copyright.html">Chapter 1. Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/rva-profile-overview-body.html">Chapter 2. RVA Profiles Rationale</a>
+    <a class="nav-link" href="../../../rva23/rva-profile-overview-body.html">Chapter 2. RVA Profiles Rationale</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/rv-profile-defined-extensions.html">Chapter 3. Profile-Defined Extensions</a>
+    <a class="nav-link" href="../../../rva23/rv-profile-defined-extensions.html">Chapter 3. Profile-Defined Extensions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/rva23-profiles.html">Chapter 4. RVA23 Profile</a>
+    <a class="nav-link" href="../../../rva23/rva23-profiles.html">Chapter 4. RVA23 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/glossary-of-isa-extensions.html">Glossary of ISA Extensions</a>
+    <a class="nav-link" href="../../../rva23/glossary-of-isa-extensions.html">Glossary of ISA Extensions</a>
   </li>
 </ul>
   </li>
@@ -463,11 +434,7 @@
         <div class="nav-trees" data-component="rvb23">
           <div class="version-box">
             <select data-component="rvb23" class="select-version">
-                <option
-                  value="../../../rvb23/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../../../rvb23/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -481,22 +448,22 @@
     <span class="nav-text">RVB23 Profile</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/index.html">Title Page</a>
+    <a class="nav-link" href="../../../rvb23/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/copyright.html">Chapter 1. Copyright and License Information</a>
+    <a class="nav-link" href="../../../rvb23/copyright.html">Chapter 1. Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/intro.html">Chapter 2. Introduction</a>
+    <a class="nav-link" href="../../../rvb23/intro.html">Chapter 2. Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/profile-defined.html">Chapter 3. Profile-Defined Extensions</a>
+    <a class="nav-link" href="../../../rvb23/profile-defined.html">Chapter 3. Profile-Defined Extensions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/rvb23.html">Chapter 4. RVB23 Profile</a>
+    <a class="nav-link" href="../../../rvb23/rvb23.html">Chapter 4. RVB23 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/glossary.html">Glossary of ISA Extensions</a>
+    <a class="nav-link" href="../../../rvb23/glossary.html">Glossary of ISA Extensions</a>
   </li>
 </ul>
   </li>
@@ -533,56 +500,31 @@
 <aside class="sidebar">
   <div class="content">
     <div class="tag-toggle-container">
-      <button
-        class="tag-toggle-btn"
-        type="button"
-        onclick="document.documentElement.classList.toggle('tag-highlight-enabled');"
-      >
+      <button class="tag-toggle-btn" type="button" onclick="document.documentElement.classList.toggle('tag-highlight-enabled');">
         <div class="tag-toggle-switch"></div>
         <span id="tag-toggle-label">Normative Rules</span>
       </button>
     </div>
-    <div
-      class="toc"
-      data-title="Machine-Level ISA, Version 1.13"
-      data-levels="5"
-    >
+    <div class="toc" data-title="Machine-Level ISA, Version 1.13" data-levels="5">
       <div class="toc-menu"></div>
     </div>
     <div class="sidebar-links">
         <a href="https://github.com/riscv/riscv-isa-manual/issues/new" target="_blank" title="Issues">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          ><path
-              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
-            ></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
           Report a Problem
         </a>
         <a href="https://github.com/riscv/riscv-isa-manual" target="_blank" title="GitHub">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="512px"
-            id="Layer_1"
-            version="1.1"
-            viewBox="0 0 512 512"
-            width="512px"
-          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
-              ]]></style><g><path
-                class="st0"
-                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
-              ></path></g></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512px"><style type="text/css">&lt; .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]&gt;</style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
           GitHub Project
         </a>
 
         <a href="https://riscv.atlassian.net/wiki/external/NDdlNzQ3YTRiNWZkNDI2ZjlhY2M2YzFkMmExNjI5NTg" target="_blank" rel="noopener noreferrer" class="sidebar-link">
-          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"/><circle cx="148.5" cy="250" r="31.5" fill="currentColor"/><circle cx="250" cy="250" r="31.5" fill="currentColor"/><circle cx="351.5" cy="250" r="31.5" fill="currentColor"/></svg>
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"></circle><circle cx="148.5" cy="250" r="31.5" fill="currentColor"></circle><circle cx="250" cy="250" r="31.5" fill="currentColor"></circle><circle cx="351.5" cy="250" r="31.5" fill="currentColor"></circle></svg>
           More Details
         </a>
 
-          <a href="../_attachments/riscv-privileged.pdf" target="_blank" rel="noopener noreferrer" class="sidebar-link" download>
+          <a href="../_attachments/riscv-privileged.pdf" target="_blank" rel="noopener noreferrer" class="sidebar-link" download="">
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -647,13 +589,13 @@ code can access all CSRs at lower privilege levels.</p>
 </div>
 <div class="paragraph">
 <p>The MXL (Machine XLEN) field encodes the native base integer ISA width as
-shown in <a href="#misabase">Table 1</a>. The MXL field is read-only.  If <code>misa</code> is nonzero, the
+shown in <a href="#misabase">Table 9</a>. The MXL field is read-only.  If <code>misa</code> is nonzero, the
 MXL field indicates the effective XLEN in M-mode, a constant termed <em>MXLEN</em>.
 XLEN is never greater than MXLEN, but XLEN might be smaller than MXLEN in
 less-privileged modes.</p>
 </div>
 <table id="misabase" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 1. Encoding of MXL field in <code>misa</code></caption>
+<caption class="title">Table 9. Encoding of MXL field in <code>misa</code></caption>
 <colgroup>
 <col>
 <col>
@@ -680,7 +622,7 @@ less-privileged modes.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -699,7 +641,7 @@ If zero, the hart is RV32, else it is RV64.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The Extensions field encodes the presence of the standard extensions,
@@ -720,7 +662,7 @@ implemented.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -738,7 +680,7 @@ ISA defines for F execute as specified.</p>
 clearing its bit in <code>misa</code> results in the extension being considered
 <em>not implemented</em> in M-mode. For example, setting <code>misa</code>.F=0 results in
 the F extension being not implemented for M-mode, because the F
-extension&#8217;s instructions will not act as the Unprivileged ISA requires
+extension’s instructions will not act as the Unprivileged ISA requires
 but may instead raise an illegal-instruction exception.</p>
 </div>
 <div class="paragraph">
@@ -753,7 +695,7 @@ the same vein, "implemented and enabled" is redundant here;
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <table class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 2. Encoding of Extensions field in <code>misa</code>.  All bits that are reserved for future use must return zero when read.</caption>
@@ -878,7 +820,7 @@ When the "U" bit is 0, the implementation might not support user mode.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -898,7 +840,7 @@ without burdening hardware designs.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The "E" bit is read-only. Unless <code>misa</code> is all read-only zero, the
@@ -922,7 +864,7 @@ collectively as a single <strong>WARL</strong> field. An attempt to write an uns
 <div class="paragraph">
 <p>Writing <code>misa</code> may increase IALIGN, e.g., by disabling the "C"
 extension. If an instruction that would write <code>misa</code> increases IALIGN,
-and the subsequent instruction&#8217;s address is not IALIGN-bit aligned, the
+and the subsequent instruction’s address is not IALIGN-bit aligned, the
 write to <code>misa</code> is suppressed, leaving <code>misa</code> unchanged.</p>
 </div>
 <div class="paragraph">
@@ -931,12 +873,12 @@ all state uniquely associated with that extension is UNSPECIFIED, unless otherwi
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Although one of the bits 25&#8212;&#8203;0 in <code>misa</code> being set to 1 implies that
+Although one of the bits 25—​0 in <code>misa</code> being set to 1 implies that
 the corresponding feature is implemented, the inverse is not necessarily
 true: one of these bits being clear does not necessarily imply that the
 corresponding feature is not implemented.  This follows from the fact that,
@@ -944,7 +886,7 @@ when a feature is not implemented, the corresponding opcodes and CSRs become
 reserved, not necessarily illegal.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -975,13 +917,13 @@ the parity bit. For example, the JEDEC manufacturer ID
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>In JEDEC&#8217;s parlance, the bank number is one greater than the number of
+<p>In JEDEC’s parlance, the bank number is one greater than the number of
 continuation codes; hence, the <code>mvendorid</code> Bank field encodes a value
 that is one less than the JEDEC bank number.</p>
 </div>
@@ -994,7 +936,7 @@ ID with JEDEC has a one-time cost of $500.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -1022,7 +964,7 @@ cannot contain zero in the remaining MXLEN-1 bits.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1049,7 +991,7 @@ variants of a design.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -1069,7 +1011,7 @@ design of the RISC-V processor itself and not any surrounding system.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1084,7 +1026,7 @@ boundaries to ease human readability.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -1105,7 +1047,7 @@ execution environment.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1120,15 +1062,15 @@ of the largest hart ID used in a system.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
 <h3 id="3-1-6-machine-status-mstatus-and-mstatush-registers"><a class="anchor" href="#3-1-6-machine-status-mstatus-and-mstatush-registers"></a>3.1.6. Machine Status (<code>mstatus</code> and <code>mstatush</code>) Registers</h3>
 <div class="paragraph">
 <p>The <code>mstatus</code> register is an MXLEN-bit read/write register formatted as
-shown in <a href="#mstatusreg-rv32">Figure 6</a> for RV32 and
-<a href="#mstatusreg">Figure 7</a> for RV64. The <code>mstatus</code> register
+shown in <a href="#mstatusreg-rv32">Figure 2</a> for RV32 and
+<a href="#mstatusreg">Figure 3</a> for RV64. The <code>mstatus</code> register
 keeps track of and controls the hart’s current operating state. A
 restricted view of <code>mstatus</code> appears as the <code>sstatus</code> register in the
 S-level ISA.</p>
@@ -1137,23 +1079,23 @@ S-level ISA.</p>
 <div class="content">
 <img src="_images/svg-f9f82fa39c51771f2754bd4db2c720b4e72901c5.svg" alt="Machine-mode status (`mstatus`) register for RV32">
 </div>
-<div class="title">Figure 6. Machine-mode status (<code>mstatus</code>) register for RV32</div>
+<div class="title">Figure 2. Machine-mode status (<code>mstatus</code>) register for RV32</div>
 </div>
 <div id="mstatusreg" class="imageblock kroki">
 <div class="content">
 <img src="_images/svg-c4c6c230ca7f061db767de8401b8409554823c5c.svg" alt="Machine-mode status (`mstatus`) register for RV64">
 </div>
-<div class="title">Figure 7. Machine-mode status (<code>mstatus</code>) register for RV64</div>
+<div class="title">Figure 3. Machine-mode status (<code>mstatus</code>) register for RV64</div>
 </div>
 <div class="paragraph">
 <p>For RV32 only, <code>mstatush</code> is a 32-bit read/write register formatted as
-shown in <a href="#mstatushreg">Figure 8</a>. Bits 30:4 of <code>mstatush</code> generally contain the same fields found in bits 62:36 of <code>mstatus</code> for RV64. Fields SD, SXL, and UXL do not exist in <code>mstatush</code>.</p>
+shown in <a href="#mstatushreg">Figure 4</a>. Bits 30:4 of <code>mstatush</code> generally contain the same fields found in bits 62:36 of <code>mstatus</code> for RV64. Fields SD, SXL, and UXL do not exist in <code>mstatush</code>.</p>
 </div>
 <div id="mstatushreg" class="imageblock kroki">
 <div class="content">
 <img src="_images/svg-7c2313b1d75ab45bd84f0e6a0926363eb8fe1668.svg" alt="Additional machine-mode status (`mstatush`) register  for RV32.">
 </div>
-<div class="title">Figure 8. Additional machine-mode status (<code>mstatush</code>) register  for RV32.</div>
+<div class="title">Figure 4. Additional machine-mode status (<code>mstatush</code>) register  for RV32.</div>
 </div>
 <div class="sect3">
 <h4 id="privstack"><a class="anchor" href="#privstack"></a>3.1.6.1. Privilege and Global Interrupt-Enable Stack in <code>mstatus</code> register</h4>
@@ -1165,7 +1107,7 @@ mode.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1177,7 +1119,7 @@ instruction.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>When a hart is executing in privilege mode <em>x</em>, interrupts are globally
@@ -1194,7 +1136,7 @@ If supervisor mode is not implemented, then SIE and SPIE are read-only 0.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1207,7 +1149,7 @@ means to regain control of the hart.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>To support nested traps, each privilege mode <em>x</em> that can respond to
@@ -1221,7 +1163,7 @@ set to 0; and <em>x</em>PP is set to <em>y</em>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1236,7 +1178,7 @@ re-enabling interrupts, so only one entry per stack is required.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>An MRET or SRET instruction is used to return from a trap in M-mode or
@@ -1244,11 +1186,11 @@ S-mode respectively. When executing an <em>x</em>RET instruction, supposing
 <em>x</em>PP holds the value <em>y</em>, <em>x</em>IE is set to <em>x</em>PIE; the privilege mode is
 changed to <em>y</em>; <em>x</em>PIE is set to 1; and <em>x</em>PP is set to the
 least-privileged supported mode (U if U-mode is implemented, else M). If
-<em>y</em>&#8800;M, <em>x</em>RET also sets MPRV=0.</p>
+<em>y</em>≠M, <em>x</em>RET also sets MPRV=0.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1258,11 +1200,11 @@ least-privileged supported mode (U if U-mode is implemented, else M). If
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1280,14 +1222,14 @@ and safely manage exceptions within their operational flow.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p><em>x</em>PP fields are <strong>WARL</strong> fields that can hold only privilege mode <em>x</em> and any implemented privilege mode lower than <em>x</em>. If privilege mode <em>x</em> is not implemented, then <em>x</em>PP must be read-only 0.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1302,14 +1244,14 @@ storage bit is required to represent either 00 or 11 in MPP.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect3">
 <h4 id="machine-double-trap"><a class="anchor" href="#machine-double-trap"></a>3.1.6.2. Double Trap Control in <code>mstatus</code> Register</h4>
 <div class="paragraph">
 <p>A double trap typically arises during a sensitive phase in trap handling
-operations&#8201;&#8212;&#8201;when an exception or interrupt occurs while the trap handler (the
+operations — when an exception or interrupt occurs while the trap handler (the
 component responsible for managing these events) is in a non-reentrant state.
 This non-reentrancy usually occurs in the early phase of trap handling, wherein
 the trap handler has not yet preserved the necessary state to handle and resume
@@ -1358,7 +1300,7 @@ M-mode and its <code>NMIE</code> field is set to 0.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1372,7 +1314,7 @@ examining its source register contents.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="ulist">
 <ul>
@@ -1387,7 +1329,7 @@ asserting a <code>critical-error</code> signal to the platform.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1399,7 +1341,7 @@ the affected hart or restarting the entire platform, among others.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The <code>MRET</code> and <code>SRET</code> instructions, when executed in M-mode, set the <code>MDT</code> bit
@@ -1418,7 +1360,7 @@ also set to 0. Additionally, if it is VU, then <code>vsstatus.SDT</code> is also
 <p>For RV64 harts, the SXL and UXL fields are <strong>WARL</strong> fields that control the
 value of XLEN for S-mode and U-mode, respectively. The encoding of these
 fields is the same as the MXL field of <code>misa</code>, shown in
-<a href="#misabase">Table 1</a>. The effective XLEN in S-mode and
+<a href="#misabase">Table 9</a>. The effective XLEN in S-mode and
 U-mode are termed <em>SXLEN</em> and <em>UXLEN</em>, respectively.</p>
 </div>
 <div class="paragraph">
@@ -1451,7 +1393,7 @@ sign-extended to fill the widest supported XLEN.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1469,7 +1411,7 @@ this case.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Some HINT instructions are encoded as integer computational instructions that
@@ -1482,7 +1424,7 @@ overwritten with copies of bit XLEN-1.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1495,7 +1437,7 @@ setting greater than the current XLEN; it is invisible to the current
 privilege mode.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect3">
@@ -1524,7 +1466,7 @@ not in effect. MXR is read-only 0 if S-mode is not supported.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1544,7 +1486,7 @@ following the rules in <a href="#xlen-control">3.1.6.3. Base ISA Control in <cod
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The SUM (permit Supervisor User Memory access) bit modifies the
@@ -1554,7 +1496,7 @@ SUM=0, S-mode memory accesses to pages that are accessible by U-mode
 accesses are permitted. SUM has no effect when page-based virtual memory
 is not in effect. Note that, while SUM is ordinarily ignored when not
 executing in S-mode, it <em>is</em> in effect when MPRV=1 and MPP=S. SUM is
-read-only 0 if S-mode is not supported or if <code>satp</code>.MODE is read-only 0.</p>
+read-only 0 if S-mode is not supported or if <code>satp</code>.MODE is read-only&nbsp;0.</p>
 </div>
 <div class="paragraph">
 <p>The MXR and SUM mechanisms only affect the interpretation of permissions
@@ -1594,7 +1536,7 @@ executing an SFENCE.VMA instruction with <em>rs1</em>=<code>x0</code> and <em>rs
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1610,7 +1552,7 @@ world switch.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If S-mode is supported, an implementation may make SBE be a read-only
@@ -1619,7 +1561,7 @@ read-only copy of either MBE or SBE.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1672,7 +1614,7 @@ stores.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect3">
@@ -1687,7 +1629,7 @@ read-only 0 when S-mode is not supported.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1704,7 +1646,7 @@ provides the hooks necessary to lazily populate shadow page tables.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The TW (Timeout Wait) bit is a <strong>WARL</strong> field that supports intercepting the WFI
@@ -1721,7 +1663,7 @@ privileged than M.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1732,7 +1674,7 @@ OS, rather than wastefully idling in the current guest.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>When S-mode is implemented, then executing WFI in U-mode causes an
@@ -1750,7 +1692,7 @@ read-only 0 when S-mode is not supported.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1762,7 +1704,7 @@ provide it.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect3">
@@ -1775,7 +1717,7 @@ arbitrary user-mode state extensions.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1786,7 +1728,7 @@ additional state beyond the floating-point CSR and data registers.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The FS[1:0] and VS[1:0] <strong>WARL</strong> fields and the XS[1:0] read-only field are used
@@ -1806,7 +1748,7 @@ optimize the process.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1818,15 +1760,15 @@ extensions, so provides a fast check via the SD bit.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The FS, VS, and XS fields use the same status encoding as shown in
-<a href="#fsxsencoding">Table 3</a>, with the four possible status
+<a href="#fsxsencoding">Table 10</a>, with the four possible status
 values being Off, Initial, Clean, and Dirty.</p>
 </div>
 <table id="fsxsencoding" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 3. Encoding of FS[1:0], VS[1:0], and XS[1:0] status fields</caption>
+<caption class="title">Table 10. Encoding of FS[1:0], VS[1:0], and XS[1:0] status fields</caption>
 <colgroup>
 <col>
 <col>
@@ -1867,7 +1809,7 @@ may optionally be read-only zero.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1881,7 +1823,7 @@ U-mode via invisible traps into M-mode.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If the <code>v</code> registers are implemented, the VS field shall not be
@@ -1897,11 +1839,11 @@ VS may optionally be read-only zero.</p>
 XS field is read-only zero. Every additional extension with state
 provides a CSR field that encodes the equivalent of the XS states. The
 XS field represents a summary of all extensions' status as shown in
-<a href="#fsxsencoding">Table 3</a>.</p>
+<a href="#fsxsencoding">Table 10</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1913,7 +1855,7 @@ different encoding than XS.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The SD bit is a read-only bit that summarizes whether either the FS, VS,
@@ -1922,7 +1864,7 @@ saving extended user context to memory. If FS, XS, and VS are all
 read-only zero, then SD is also always zero.</p>
 </div>
 <div class="paragraph">
-<p>When an extension&#8217;s status is set to Off, any instruction that attempts
+<p>When an extension’s status is set to Off, any instruction that attempts
 to read or write the corresponding state will cause an
 illegal-instruction exception. When the status is Initial, the corresponding
 state should have an initial constant value. When the status is Clean,
@@ -1934,7 +1876,7 @@ last context save.</p>
 <div class="paragraph">
 <p>During a context save, the responsible privileged code need only write
 out the corresponding state if its status is Dirty, and can then reset
-the extension&#8217;s status to Clean. During a context restore, the context
+the extension’s status to Clean. During a context restore, the context
 need only be loaded from memory if the status is Clean (it should never
 be Dirty at restore). If the status is Initial, the context must be set
 to an initial constant value on context restore to avoid a security
@@ -1975,7 +1917,7 @@ context restore, not at every unconfigure.</p>
 the Off state will cause an illegal-instruction exception to be raised
 if any subsequent instruction tries to use the unit before it is turned
 back on. A user-mode instruction to turn a unit on must also ensure the
-unit&#8217;s state is properly initialized, as the unit might have been used
+unit’s state is properly initialized, as the unit might have been used
 by another context meantime.</p>
 </div>
 <div class="paragraph">
@@ -1998,7 +1940,7 @@ it to be set to Dirty.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2010,7 +1952,7 @@ speculatively writing FS to close a potential side channel.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If an instruction explicitly or implicitly writes a floating-point
@@ -2027,14 +1969,14 @@ instruction that writes a vector register or vector CSR but does not
 alter its contents causes VS to transition to Dirty.</p>
 </div>
 <div class="paragraph">
-<p><a href="#fsxsstates">Table 4</a> shows all the possible state
+<p><a href="#fsxsstates">Table 11</a> shows all the possible state
 transitions for the FS, VS, or XS status bits. Note that the standard
 floating-point and vector extensions do not support user-mode
 unconfigure or disable/enable instructions.</p>
 </div>
 <div style="page-break-after: always;"></div>
 <table id="fsxsstates" class="tableblock frame-all grid-all center" style="width: 75%;">
-<caption class="title">Table 4. FS, VS, and XS state transitions.</caption>
+<caption class="title">Table 11. FS, VS, and XS state transitions.</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2255,7 +2197,7 @@ the added extension state by treating the state as an opaque object.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2273,7 +2215,7 @@ know when it is safe to disable the floating-point unit.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The XS field provides a summary of all added extension state, but
@@ -2302,7 +2244,7 @@ context.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2316,7 +2258,7 @@ interrupts, unless the interrupt results in a user-level context swap.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect3">
@@ -2363,7 +2305,7 @@ an XLEN-bit address that is always aligned on a 4-byte boundary.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2376,10 +2318,10 @@ hand, we wish to allow flexibility for larger systems.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <table id="mtvec-mode" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 5. Encoding of mtvec MODE field.</caption>
+<caption class="title">Table 12. Encoding of mtvec MODE field.</caption>
 <colgroup>
 <col>
 <col>
@@ -2396,25 +2338,25 @@ hand, we wish to allow flexibility for larger systems.</p>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">0<br>
 1<br>
-&#8805;2</p></td>
+≥2</p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">Direct<br>
 Vectored<br>
 ---</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All traps set <code>pc</code> to BASE.<br>
-Asynchronous interrupts set <code>pc</code> to BASE+4&#215;cause.<br>
+Asynchronous interrupts set <code>pc</code> to BASE+4×cause.<br>
 <em>Reserved</em></p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
 <p>The encoding of the MODE field is shown in
-<a href="#mtvec-mode">Table 5</a>. When MODE=Direct, all traps into
+<a href="#mtvec-mode">Table 12</a>. When MODE=Direct, all traps into
 machine mode cause the <code>pc</code> to be set to the address in the BASE field.
 When MODE=Vectored, all synchronous exceptions into machine mode cause
 the <code>pc</code> to be set to the address in the BASE field, whereas interrupts
 cause the <code>pc</code> to be set to the address in the BASE field plus four
 times the interrupt cause number. For example, a machine-mode timer
-interrupt (see <a href="#mcauses">Table 6</a>) causes the <code>pc</code>
+interrupt (see <a href="#mcauses">Table 13</a>) causes the <code>pc</code>
 to be set to BASE+<code>0x1c</code>.</p>
 </div>
 <div class="paragraph">
@@ -2424,7 +2366,7 @@ constraints than MODE=Direct.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2439,7 +2381,7 @@ implemented without a hardware adder circuit.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -2465,7 +2407,7 @@ registers should not exist.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2478,7 +2420,7 @@ register indicates whether they exist.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>When a trap is delegated to S-mode, the <code>scause</code> register is written
@@ -2506,7 +2448,7 @@ do so for lower-level interrupts).</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2517,7 +2459,7 @@ read-only one. Platform standards may always add such restrictions.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Traps never transition from a more-privileged mode to a less-privileged
@@ -2545,7 +2487,7 @@ will transfer control to M-mode.</p>
 </div>
 <div class="paragraph">
 <p><code>medeleg</code> has a bit position allocated for every synchronous exception
-shown in <a href="#mcauses">Table 6</a>, with the index of the
+shown in <a href="#mcauses">Table 13</a>, with the index of the
 bit position equal to the value returned in the <code>mcause</code> register (i.e.,
 setting bit 8 allows user-mode environment calls to be delegated to a
 lower-privilege trap handler).</p>
@@ -2588,16 +2530,16 @@ bits 16 and above are designated for platform use.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 Interrupts designated for platform use may be designated for custom use
-at the platform&#8217;s discretion.
+at the platform’s discretion.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="imageblock kroki">
 <div class="content">
@@ -2645,23 +2587,23 @@ zero.</p>
 </div>
 <div class="paragraph">
 <p>The standard portions (bits 15:0) of the <code>mip</code> and <code>mie</code> registers are
-formatted as shown in <a href="#mipreg-standard">Figure 14</a> and <a href="#miereg-standard">Figure 15</a> respectively.</p>
+formatted as shown in <a href="#mipreg-standard">Figure 5</a> and <a href="#miereg-standard">Figure 6</a> respectively.</p>
 </div>
 <div id="mipreg-standard" class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-a03f8e279d0d147d26d21fc1cef245a484dc37d7.svg" alt="Standard portion (bits 15:0) of `mip`.">
 </div>
-<div class="title">Figure 14. Standard portion (bits 15:0) of <code>mip</code>.</div>
+<div class="title">Figure 5. Standard portion (bits 15:0) of <code>mip</code>.</div>
 </div>
 <div id="miereg-standard" class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-613d070c4b9cacabf218a68377e1ea9eac58eaef.svg" alt="Standard portion (bits 15:0) of `mie`.">
 </div>
-<div class="title">Figure 15. Standard portion (bits 15:0) of <code>mie</code>.</div>
+<div class="title">Figure 6. Standard portion (bits 15:0) of <code>mie</code>.</div>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2680,7 +2622,7 @@ its presence is implicitly known when executing the NMI trap handler.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Bits <code>mip</code>.MEIP and <code>mie</code>.MEIE are the interrupt-pending and
@@ -2728,7 +2670,7 @@ instruction.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2749,7 +2691,7 @@ from regular CSR accesses as a result.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If supervisor mode is implemented, bits <code>mip</code>.STIP and <code>mie</code>.STIE are
@@ -2779,7 +2721,7 @@ following decreasing priority order: MEI, MSI, MTI, SEI, SSI, STI, LCOFI.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2816,7 +2758,7 @@ CSR instruction with a five-bit immediate.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Restricted views of the <code>mip</code> and <code>mie</code> registers appear as the <code>sip</code>
@@ -2900,7 +2842,7 @@ privilege mode (S-mode if implemented, otherwise U-mode).</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2915,7 +2857,7 @@ counters, the counters can be directly exposed to lower privilege modes.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The <code>cycle</code>, <code>instret</code>, and <code>hpmcountern</code> CSRs are read-only shadows of
@@ -2929,7 +2871,7 @@ shadows only the lower 32 bits of <code>mtime</code>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2941,7 +2883,7 @@ functionality on behalf of less-privileged modes in M-mode software.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>In harts with U-mode, the <code>mcounteren</code> must be implemented, but all
@@ -2983,7 +2925,7 @@ behaves as though the register were set to zero.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3000,7 +2942,7 @@ cannot be inhibited with the <code>mcountinhibit</code> mechanism.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -3019,7 +2961,7 @@ upon entry to an M-mode trap handler.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3042,14 +2984,14 @@ while the user context is running.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
 <h3 id="3-1-14-machine-exception-program-counter-mepc-register"><a class="anchor" href="#3-1-14-machine-exception-program-counter-mepc-register"></a>3.1.14. Machine Exception Program Counter (<code>mepc</code>) Register</h3>
 <div class="paragraph">
 <p><code>mepc</code> is an MXLEN-bit read/write register formatted as shown in
-<a href="#mepcreg">Figure 20</a>. The low bit of <code>mepc</code> (<code>mepc[0]</code>) is
+<a href="#mepcreg">Figure 7</a>. The low bit of <code>mepc</code> (<code>mepc[0]</code>) is
 always zero. On implementations that support only IALIGN=32, the two low
 bits (<code>mepc[1:0]</code>) are always zero.</p>
 </div>
@@ -3069,7 +3011,7 @@ of holding.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3082,7 +3024,7 @@ used as a valid <code>pc</code> or effective address.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>When a trap is taken into M-mode, <code>mepc</code> is written with the virtual
@@ -3094,14 +3036,14 @@ though it may be explicitly written by software.</p>
 <div class="content">
 <img src="_images/diag-21324859acbdecfe58dcf2d235c2bc6a931bdc39.svg" alt="Machine exception program counter register.">
 </div>
-<div class="title">Figure 20. Machine exception program counter register.</div>
+<div class="title">Figure 7. Machine exception program counter register.</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="mcause"><a class="anchor" href="#mcause"></a>3.1.15. Machine Cause (<code>mcause</code>) Register</h3>
 <div class="paragraph">
 <p>The <code>mcause</code> register is an MXLEN-bit read-write register formatted as
-shown in <a href="#mcausereg">Figure 21</a>. When a trap is taken into
+shown in <a href="#mcausereg">Figure 8</a>. When a trap is taken into
 M-mode, <code>mcause</code> is written with a code indicating the event that
 caused the trap. Otherwise, <code>mcause</code> is never written by the
 implementation, though it may be explicitly written by software.</p>
@@ -3109,7 +3051,7 @@ implementation, though it may be explicitly written by software.</p>
 <div class="paragraph">
 <p>The Interrupt bit in the <code>mcause</code> register is set if the trap was caused
 by an interrupt. The Exception Code field contains a code identifying
-the last exception or interrupt. <a href="#mcauses">Table 6</a> lists
+the last exception or interrupt. <a href="#mcauses">Table 13</a> lists
 the possible machine-level exception codes. The Exception Code is a
 <strong>WLRL</strong> field, so is only guaranteed to hold supported exception codes.</p>
 </div>
@@ -3117,7 +3059,7 @@ the possible machine-level exception codes. The Exception Code is a
 <div class="content">
 <img src="_images/diag-e87033a78ba0f8b999614e888bf9440de7ac48e3.svg" alt="Machine Cause (`mcause`) register.">
 </div>
-<div class="title">Figure 21. Machine Cause (<code>mcause</code>) register.</div>
+<div class="title">Figure 8. Machine Cause (<code>mcause</code>) register.</div>
 </div>
 <div class="paragraph">
 <p>Note that load and load-reserved instructions generate load exceptions,
@@ -3126,7 +3068,7 @@ store/AMO exceptions.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3148,18 +3090,18 @@ given opcode should be treated as illegal or privileged.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If an instruction may raise multiple synchronous exceptions, the
 decreasing priority order of
-<a href="#exception-priority">Table 7</a> indicates which
+<a href="#exception-priority">Table 14</a> indicates which
 exception is taken and reported in <code>mcause</code>. The priority of any custom
 synchronous exceptions is implementation-defined.</p>
 </div>
 <div style="page-break-after: always;"></div>
 <table id="mcauses" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 6. Machine cause (<code>mcause</code>) register values after trap.</caption>
+<caption class="title">Table 13. Machine cause (<code>mcause</code>) register values after trap.</caption>
 <colgroup>
 <col>
 <col>
@@ -3223,7 +3165,7 @@ Machine external interrupt</p></td>
 <td class="tableblock halign-right valign-top"><p class="tableblock">12<br>
 13<br>
 14-15<br>
-&#8805;16</p></td>
+≥16</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Reserved</em><br>
 Counter-overflow interrupt<br>
 <em>Reserved</em><br>
@@ -3279,7 +3221,7 @@ Counter-overflow interrupt<br>
 24-31<br>
 32-47<br>
 48-63<br>
-&#8805;64</p></td>
+≥64</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Instruction address misaligned<br>
 Instruction access fault<br>
 Illegal instruction<br>
@@ -3310,7 +3252,7 @@ Hardware error<br>
 </table>
 <div style="page-break-after: always;"></div>
 <table id="exception-priority" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 7. Synchronous exception priority in decreasing priority order.</caption>
+<caption class="title">Table 14. Synchronous exception priority in decreasing priority order.</caption>
 <colgroup>
 <col>
 <col>
@@ -3392,7 +3334,7 @@ exceptions.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3424,11 +3366,11 @@ other instruction address exceptions.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3457,14 +3399,14 @@ priority order at which the hardware error is discovered.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
 <h3 id="3-1-16-machine-trap-value-mtval-register"><a class="anchor" href="#3-1-16-machine-trap-value-mtval-register"></a>3.1.16. Machine Trap Value (<code>mtval</code>) Register</h3>
 <div class="paragraph">
 <p>The <code>mtval</code> register is an MXLEN-bit read-write register formatted as
-shown in <a href="#mtvalreg">Figure 22</a>. When a trap is taken into
+shown in <a href="#mtvalreg">Figure 9</a>. When a trap is taken into
 M-mode, <code>mtval</code> is either set to zero or written with exception-specific
 information to assist software in handling the trap. Otherwise, <code>mtval</code>
 is never written by the implementation, though it may be explicitly
@@ -3491,7 +3433,7 @@ particularly those with hardware page-table walkers.</p>
 <div class="content">
 <img src="_images/diag-0b751462b0916d0f3cd85852847c56a51229b057.svg" alt="Machine Trap Value (`mtval`) register.">
 </div>
-<div class="title">Figure 22. Machine Trap Value (<code>mtval</code>) register.</div>
+<div class="title">Figure 9. Machine Trap Value (<code>mtval</code>) register.</div>
 </div>
 <div class="paragraph">
 <p>If <code>mtval</code> is written with a nonzero value when a misaligned load or
@@ -3532,7 +3474,7 @@ right-justified and all unused upper bits are cleared to zero.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3562,7 +3504,7 @@ interrogated to install the appropriate trap handling before runtime).</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>On a trap caused by a software-check exception, the <code>mtval</code> register holds
@@ -3600,7 +3542,7 @@ be able to hold all values less than 2<sup><em>N</em></sup>, where
 <h3 id="3-1-17-machine-configuration-pointer-mconfigptr-register"><a class="anchor" href="#3-1-17-machine-configuration-pointer-mconfigptr-register"></a>3.1.17. Machine Configuration Pointer (<code>mconfigptr</code>) Register</h3>
 <div class="paragraph">
 <p>The <code>mconfigptr</code> register is an MXLEN-bit read-only CSR, formatted as shown in
-<a href="#mconfigptrreg">Figure 23</a>, that holds the physical
+<a href="#mconfigptrreg">Figure 10</a>, that holds the physical
 address of a configuration data structure. Software can traverse this
 data structure to discover information about the harts, the platform,
 and their configuration.</p>
@@ -3609,7 +3551,7 @@ and their configuration.</p>
 <div class="content">
 <img src="_images/diag-dd5c5621f81af7317c5ee6373df90ba9a8eab2d0.svg" alt="Machine Configuration Pointer (`mconfigptr`) register.">
 </div>
-<div class="title">Figure 23. Machine Configuration Pointer (<code>mconfigptr</code>) register.</div>
+<div class="title">Figure 10. Machine Configuration Pointer (<code>mconfigptr</code>) register.</div>
 </div>
 <div class="paragraph">
 <p>The pointer alignment in bits must be no smaller than MXLEN:
@@ -3624,7 +3566,7 @@ mechanism must be used to locate it.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3643,14 +3585,14 @@ M-mode software towards the beginning of the boot process.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
 <h3 id="sec:menvcfg"><a class="anchor" href="#sec:menvcfg"></a>3.1.18. Machine Environment Configuration (<code>menvcfg</code>) Register</h3>
 <div class="paragraph">
 <p>The <code>menvcfg</code> CSR is a 64-bit read/write register, formatted
-as shown in <a href="#menvcfgreg">Figure 24</a>, that controls
+as shown in <a href="#menvcfgreg">Figure 11</a>, that controls
 certain characteristics of the execution environment for modes less
 privileged than M.</p>
 </div>
@@ -3658,13 +3600,13 @@ privileged than M.</p>
 <div class="content">
 <img src="_images/svg-aa3b907eab4c05b396e4d4c97629cb609f1d3199.svg" alt="Machine environment configuration (`menvcfg`) register.">
 </div>
-<div class="title">Figure 24. Machine environment configuration (<code>menvcfg</code>) register.</div>
+<div class="title">Figure 11. Machine environment configuration (<code>menvcfg</code>) register.</div>
 </div>
 <div class="paragraph">
 <p>If bit FIOM (Fence of I/O implies Memory) is set to one in <code>menvcfg</code>,
 FENCE instructions executed in modes less privileged than M are modified
 so the requirement to order accesses to device I/O implies also the
-requirement to order main memory accesses. <a href="#menvcfg-FIOM">Table 8</a>
+requirement to order main memory accesses. <a href="#menvcfg-FIOM">Table 15</a>
 details the modified interpretation of FENCE instruction bits PI, PO,
 SI, and SO for modes less privileged than M when FIOM=1.</p>
 </div>
@@ -3679,7 +3621,7 @@ accesses both device I/O and memory.</p>
 Bare), the implementation may make FIOM read-only zero.</p>
 </div>
 <table id="menvcfg-FIOM" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 8. Modified interpretation of FENCE predecessor and successor sets for modes less privileged than M when FIOM=1.</caption>
+<caption class="title">Table 15. Modified interpretation of FENCE predecessor and successor sets for modes less privileged than M when FIOM=1.</caption>
 <colgroup>
 <col>
 <col>
@@ -3707,7 +3649,7 @@ Successor device output and memory writes (SW implied)</p></td>
 </table>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3719,7 +3661,7 @@ equivalent FIOM bit in the hypervisor CSR <code>henvcfg</code>.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The PBMTE bit controls whether the Svpbmt extension is available for use
@@ -3757,7 +3699,7 @@ is read-only zero if <code>menvcfg</code>.ADUE is zero.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3766,7 +3708,7 @@ The Svade extension requires page-fault exceptions be raised when PTE
 A/D bits need be set, hence Svade is implemented when ADUE=0.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If the Smcdeleg extension is implemented, the CDE (Counter Delegation Enable) bit controls whether Zicntr and Zihpm counters can be delegated to S-mode. When CDE=1, the Smcdeleg extension is enabled, see <a href="smcdeleg.html#smcdeleg" class="xref page">"Smcdeleg/Ssccfg" Counter Delegation Extensions</a>. When CDE=0, the Smcdeleg and Ssccfg extensions appear to be not implemented. If Smcdeleg is not implemented, CDE is read-only zero.</p>
@@ -3846,13 +3788,13 @@ not exist.</p>
 <h3 id="3-1-19-machine-security-configuration-mseccfg-register"><a class="anchor" href="#3-1-19-machine-security-configuration-mseccfg-register"></a>3.1.19. Machine Security Configuration (<code>mseccfg</code>) Register</h3>
 <div class="paragraph">
 <p><code>mseccfg</code> is an optional 64-bit read/write register, formatted as
-shown in <a href="#mseccfg">Figure 25</a>, that controls security features.</p>
+shown in <a href="#mseccfg">Figure 12</a>, that controls security features.</p>
 </div>
 <div id="mseccfg" class="imageblock kroki">
 <div class="content">
 <img src="_images/svg-db9eb47611a251c510fac50abede75105db116f5.svg" alt="Machine security configuration (`mseccfg`) register.">
 </div>
-<div class="title">Figure 25. Machine security configuration (<code>mseccfg</code>) register.</div>
+<div class="title">Figure 12. Machine security configuration (<code>mseccfg</code>) register.</div>
 </div>
 <div class="paragraph">
 <p>The definitions of the SSEED and USEED fields are furnished by the
@@ -3925,7 +3867,7 @@ enabled and the MTIE bit is set in the <code>mie</code> register.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3958,7 +3900,7 @@ counting and wall-clock time.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If the result of the comparison between <code>mtime</code> and <code>mtimecmp</code> changes, it is
@@ -3967,7 +3909,7 @@ immediately.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3982,7 +3924,7 @@ occasional spurious timer interrupt than to poll MTIP until it falls.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>In RV32, memory-mapped writes to <code>mtimecmp</code> modify only one 32-bit part
@@ -4035,7 +3977,7 @@ exception, respectively, and performs no other operation.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4048,7 +3990,7 @@ S-mode the environment-call-from-U-mode exception but not the others.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The EBREAK instruction is used by debuggers to cause control to be
@@ -4058,7 +4000,7 @@ a breakpoint exception and performs no other operation.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4070,7 +4012,7 @@ operation as the EBREAK instruction.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>ECALL and EBREAK cause the receiving privilege mode’s <code>epc</code> register to
@@ -4114,7 +4056,7 @@ by using a dummy SC) before executing the <em>x</em>RET.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4125,7 +4067,7 @@ impossible to single-step through LR/SC sequences using a debugger.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -4153,7 +4095,7 @@ instruction, i.e., execution resumes in the trap handler and <code>mepc</code> =
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4165,7 +4107,7 @@ instruction.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Implementations are permitted to resume execution for any reason, even if an
@@ -4174,7 +4116,7 @@ simply implement the WFI instruction as a NOP.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4187,7 +4129,7 @@ the idle loop will resume execution.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The WFI instruction can also be executed when interrupts are disabled.
@@ -4209,7 +4151,7 @@ WFI if there was no actionable event.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4244,20 +4186,20 @@ extensions that wait on memory locations changing, or message arrival.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
 <h3 id="3-3-4-custom-system-instructions"><a class="anchor" href="#3-3-4-custom-system-instructions"></a>3.3.4. Custom SYSTEM Instructions</h3>
 <div class="paragraph">
-<p>The subspace of the SYSTEM major opcode shown in <a href="#customsys">Figure 28</a> is designated for custom use. It is recommended that these instructions use bits 29:28 to designate the
+<p>The subspace of the SYSTEM major opcode shown in <a href="#customsys">Figure 13</a> is designated for custom use. It is recommended that these instructions use bits 29:28 to designate the
 minimum required privilege mode, as do other SYSTEM instructions.</p>
 </div>
 <div id="customsys" class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-fafa0fd77a5374e88a36eafd69a63aadfd3dc794.svg" alt="SYSTEM instruction encodings designated for custom use.">
 </div>
-<div class="title">Figure 28. SYSTEM instruction encodings designated for custom use.</div>
+<div class="title">Figure 13. SYSTEM instruction encodings designated for custom use.</div>
 </div>
 </div>
 </div>
@@ -4292,7 +4234,7 @@ most complete reset.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4310,7 +4252,7 @@ the <code>pc</code> is typically set to a different value than on other traps.</
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -4353,7 +4295,7 @@ different memory models. Similarly, memory-mapped control registers vary
 in their supported access widths, support for atomic operations, and
 whether read and write accesses have associated side effects. In RISC-V
 systems, these properties and capabilities of each region of the
-machine&#8217;s physical address space are termed <em>physical memory attributes</em>
+machine’s physical address space are termed <em>physical memory attributes</em>
 (PMAs). This section describes RISC-V PMA terminology and how RISC-V
 systems implement and check PMAs.</p>
 </div>
@@ -4440,7 +4382,7 @@ example, device scratchpad RAMs, are categorized as I/O regions.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4451,7 +4393,7 @@ not accessible (i.e. lacking read, write, and execute permissions).
 Main memory regions that are not accessible are also allowed.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -4463,7 +4405,7 @@ are supported for each access width.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4476,7 +4418,7 @@ supported.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Main memory regions always support read and write of all access widths
@@ -4485,7 +4427,7 @@ fetch is supported.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4503,7 +4445,7 @@ supported by the main memory.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>I/O regions can specify which combinations of read, write, or execute
@@ -4516,7 +4458,7 @@ page-table writes are supported.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4527,7 +4469,7 @@ memory supports page-table walks.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -4539,7 +4481,7 @@ categories: <em>LR/SC</em> and <em>AMOs</em>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4550,7 +4492,7 @@ all atomic operations required by the attached processors.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="sect3">
 <h4 id="3-6-3-1-amo-pma"><a class="anchor" href="#3-6-3-1-amo-pma"></a>3.6.3.1. AMO PMA</h4>
@@ -4594,7 +4536,7 @@ above + <code>amoadd</code>, <code>amomin</code>, <code>amomax</code>, <code>amo
 </table>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4605,7 +4547,7 @@ possible.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect3">
@@ -4623,7 +4565,7 @@ guarantee.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4642,7 +4584,7 @@ progress is detected.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -4663,7 +4605,7 @@ defined in the F, D, and Q extensions.
 For an instruction in that set, if all accessed bytes lie within the same
 misaligned atomicity granule, the instruction will not raise an exception for
 reasons of address alignment, and the instruction will give rise to only one
-memory operation for the purposes of RVWMO&#8212;&#8203;i.e., it will execute atomically.</p>
+memory operation for the purposes of RVWMO—​i.e., it will execute atomically.</p>
 </div>
 <div class="paragraph">
 <p>If a misaligned AMO accesses a region that does not specify a misaligned
@@ -4678,7 +4620,7 @@ instruction should not be emulated by a trap handler.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4689,7 +4631,7 @@ might execute non-atomically even when contained within a misaligned atomicity
 granule.  Implicit accesses are similarly unaffected by this PMA.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -4747,7 +4689,7 @@ each memory region.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4770,7 +4712,7 @@ same interconnect path and the path does not reorder requests.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -4802,7 +4744,7 @@ state should not be visible to lower privilege levels.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4852,7 +4794,7 @@ cache-coherent, or only accessed by one agent.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If a PMA indicates non-cacheability, then accesses to that region must
@@ -4860,7 +4802,7 @@ be satisfied by the memory itself, not by any caches.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4875,7 +4817,7 @@ modes’ uncacheable accesses.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -4895,7 +4837,7 @@ effect.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4915,7 +4857,7 @@ could cause unexpected side effects.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>For non-idempotent regions, implicit reads and writes must not be
@@ -4957,7 +4899,7 @@ layers.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4969,7 +4911,7 @@ instead of the scheme described in this section.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>PMP checks are applied to all accesses whose effective privilege mode is
@@ -5002,16 +4944,16 @@ accessible to M-mode.</p>
 <p>The PMP configuration registers are densely packed into CSRs to minimize
 context-switch time. For RV32, sixteen CSRs, <code>pmpcfg0</code>–<code>pmpcfg15</code>, hold
 the configurations <code>pmp0cfg</code>–<code>pmp63cfg</code> for the 64 PMP entries, as shown
-in <a href="#pmpcfg-rv32">Figure 29</a>. For RV64, eight
+in <a href="#pmpcfg-rv32">Figure 14</a>. For RV64, eight
 even-numbered CSRs, <code>pmpcfg0</code>, <code>pmpcfg2</code>, …, <code>pmpcfg14</code>, hold the
 configurations for the 64 PMP entries, as shown in
-<a href="#pmpcfg-rv64">Figure 30</a>. For RV64, the odd-numbered
+<a href="#pmpcfg-rv64">Figure 15</a>. For RV64, the odd-numbered
 configuration registers, <code>pmpcfg1</code>, <code>pmpcfg3</code>, …, <code>pmpcfg15</code>, are
 illegal.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5024,32 +4966,32 @@ entries 8-11 appear in <code>pmpcfg2</code>[31:0] for both RV32 and RV64.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div id="pmpcfg-rv32" class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-efd252c46c30d454fa34f34e22da6366e5c313c2.svg" alt="RV32 PMP configuration CSR layout.">
 </div>
-<div class="title">Figure 29. RV32 PMP configuration CSR layout.</div>
+<div class="title">Figure 14. RV32 PMP configuration CSR layout.</div>
 </div>
 <div id="pmpcfg-rv64" class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-b47bcbc11126ed099881aa16d91f134279156f98.svg" alt="RV64 PMP configuration CSR layout.">
 </div>
-<div class="title">Figure 30. RV64 PMP configuration CSR layout.</div>
+<div class="title">Figure 15. RV64 PMP configuration CSR layout.</div>
 </div>
 <div class="paragraph">
 <p>The PMP address registers are CSRs named <code>pmpaddr0</code>-<code>pmpaddr63</code>. Each
 PMP address register encodes bits 33-2 of a 34-bit physical address for
-RV32, as shown in <a href="#pmpaddr-rv32">Figure 31</a>. For RV64,
+RV32, as shown in <a href="#pmpaddr-rv32">Figure 16</a>. For RV64,
 each PMP address register encodes bits 55-2 of a 56-bit physical
-address, as shown in <a href="#pmpaddr-rv64">Figure 32</a>. Not all
+address, as shown in <a href="#pmpaddr-rv64">Figure 17</a>. Not all
 physical address bits may be implemented, and so the <code>pmpaddr</code> registers
 are <strong>WARL</strong>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5065,22 +5007,22 @@ the same limit.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div id="pmpaddr-rv32" class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-ec67b4b34dae76306144656520ff9981f801f1cb.svg" alt="PMP address register format, RV32.">
 </div>
-<div class="title">Figure 31. PMP address register format, RV32.</div>
+<div class="title">Figure 16. PMP address register format, RV32.</div>
 </div>
 <div id="pmpaddr-rv64" class="imageblock kroki">
 <div class="content">
 <img src="_images/diag-9855fd151b9d924dfc27737cdee72a35b7d4f7cf.svg" alt="PMP address register format, RV64.">
 </div>
-<div class="title">Figure 32. PMP address register format, RV64.</div>
+<div class="title">Figure 17. PMP address register format, RV64.</div>
 </div>
 <div class="paragraph">
-<p><a href="#pmpcfg">Figure 33</a> shows the layout of a PMP configuration
+<p><a href="#pmpcfg">Figure 18</a> shows the layout of a PMP configuration
 register. The R, W, and X bits, when set, indicate that the PMP entry
 permits read, write, and instruction execution, respectively. When one
 of these bits is clear, the corresponding access type is denied. The R,
@@ -5090,7 +5032,7 @@ W, and X fields form a collective <strong>WARL</strong> field for which the comb
 <div class="content">
 <img src="_images/diag-87e49044797677d35392804a47489c59fb69ce26.svg" alt="PMP configuration register format.">
 </div>
-<div class="title">Figure 33. PMP configuration register format.</div>
+<div class="title">Figure 18. PMP configuration register format.</div>
 </div>
 <div class="paragraph">
 <p>Attempting to fetch an instruction from a PMP region that does not have
@@ -5105,9 +5047,9 @@ access-fault exception.</p>
 <div class="sect3">
 <h4 id="3-7-1-1-address-matching"><a class="anchor" href="#3-7-1-1-address-matching"></a>3.7.1.1. Address Matching</h4>
 <div class="paragraph">
-<p>The A field in a PMP entry&#8217;s configuration register encodes the
+<p>The A field in a PMP entry’s configuration register encodes the
 address-matching mode of the associated PMP address register. The
-encoding of this field is shown in <a href="#pmpcfg-a">Table 10</a>.
+encoding of this field is shown in <a href="#pmpcfg-a">Table 16</a>.
 When A=0, this PMP entry is disabled and matches no addresses. Two other
 address-matching modes are supported: naturally aligned power-of-2
 regions (NAPOT), including the special case of naturally aligned
@@ -5115,7 +5057,7 @@ four-byte regions (NA4); and the top boundary of an arbitrary range
 (TOR). These modes support four-byte granularity.</p>
 </div>
 <table id="pmpcfg-a" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 10. Encoding of A field in PMP configuration registers.</caption>
+<caption class="title">Table 16. Encoding of A field in PMP configuration registers.</caption>
 <colgroup>
 <col>
 <col>
@@ -5141,7 +5083,7 @@ NAPOT</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Null region (disabled)<br>
 Top of range<br>
 Naturally aligned four-byte region<br>
-Naturally aligned power-of-two region, &#8805;8
+Naturally aligned power-of-two region, ≥8
 bytes</p></td>
 </tr>
 </tbody>
@@ -5149,10 +5091,10 @@ bytes</p></td>
 <div class="paragraph">
 <p>NAPOT ranges make use of the low-order bits of the associated address
 register to encode the size of the range, as shown in
-<a href="#pmpcfg-napot">Table 11</a>.</p>
+<a href="#pmpcfg-napot">Table 17</a>.</p>
 </div>
 <table id="pmpcfg-napot" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 11. <code>NAPOT</code> range encoding in PMP address and configuration registers.</caption>
+<caption class="title">Table 17. <code>NAPOT</code> range encoding in PMP address and configuration registers.</caption>
 <colgroup>
 <col>
 <col>
@@ -5167,20 +5109,20 @@ register to encode the size of the range, as shown in
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock"><code>yyyy&#8230;&#8203;yyyy</code><br>
-<code>yyyy&#8230;&#8203;yyy0</code><br>
-<code>yyyy&#8230;&#8203;yy01</code><br>
-<code>yyyy&#8230;&#8203;y011</code><br>
-&#8230;&#8203;<br>
-<code>yy01&#8230;&#8203;1111</code><br>
-<code>y011&#8230;&#8203;1111</code><br>
-<code>0111&#8230;&#8203;1111</code><br>
-<code>1111&#8230;&#8203;1111</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>yyyy…​yyyy</code><br>
+<code>yyyy…​yyy0</code><br>
+<code>yyyy…​yy01</code><br>
+<code>yyyy…​y011</code><br>
+…​<br>
+<code>yy01…​1111</code><br>
+<code>y011…​1111</code><br>
+<code>0111…​1111</code><br>
+<code>1111…​1111</code></p></td>
 <td class="tableblock halign-center valign-top"><p class="tableblock">NA4<br>
 NAPOT<br>
 NAPOT<br>
 NAPOT<br>
-&#8230;&#8203;<br>
+…​<br>
 NAPOT<br>
 NAPOT<br>
 NAPOT<br>
@@ -5201,22 +5143,22 @@ NAPOT</p></td>
 <p>If TOR is selected, the associated address register forms the top of the
 address range, and the preceding PMP address register forms the bottom
 of the address range. If PMP entry <em>i</em>'s A field is set to
-TOR, the entry matches any address <em>y</em> such that <code>pmpaddr<sub>i-1</sub></code>&#8804;<em>y</em>&lt;<code>pmpaddr<sub>i</sub></code> (irrespective of the value of <code>pmpcfg<sub>i-1</sub></code>). If PMP entry 0&#8217;s A field is set to TOR, zero is used for the lower bound, and so it matches
+TOR, the entry matches any address <em>y</em> such that <code>pmpaddr<sub>i-1</sub></code>≤<em>y</em>&lt;<code>pmpaddr<sub>i</sub></code> (irrespective of the value of <code>pmpcfg<sub>i-1</sub></code>). If PMP entry 0’s A field is set to TOR, zero is used for the lower bound, and so it matches
 any address <code>y&lt;pmpaddr<sub>0</sub></code>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>If  <code>pmpaddr<sub>i-1</sub>&#8805;<code>pmpaddr<sub>i</sub></code></code> and <code>pmpcfg<sub>i</sub>.A</code>=TOR, then PMP entry <em>i</em> matches no addresses.</p>
+<p>If  <code>pmpaddr<sub>i-1</sub>≥<code>pmpaddr<sub>i</sub></code></code> and <code>pmpcfg<sub>i</sub>.A</code>=TOR, then PMP entry <em>i</em> matches no addresses.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Although the PMP mechanism supports regions as small as four bytes,
@@ -5239,7 +5181,7 @@ back to NAPOT.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5249,7 +5191,7 @@ back to NAPOT.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If the current XLEN is greater than MXLEN, the PMP address registers are
@@ -5269,7 +5211,7 @@ to TOR, writes to <code>pmpaddr</code><em>i</em>-1 are ignored.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5280,7 +5222,7 @@ OFF.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>In addition to locking the PMP entry, the L bit indicates whether the
@@ -5317,7 +5259,7 @@ implemented, the access fails.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5328,7 +5270,7 @@ are set to OFF, then all S-mode and U-mode memory accesses will fail.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Failed accesses generate an instruction, load, or store access-fault
@@ -5405,21 +5347,20 @@ the PMP settings synchronously, so no SFENCE.VMA is needed.</p>
     </div>
 
     <div id="social-icons" class="flex jc-between">
-        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
-        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
-        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"/></svg></a>
-        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"/><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
+        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
+        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"></path></svg></a>
+        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"></circle><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"></path></svg></a>
         <a href="https://risc-v-international.slack.com/join/shared_invite/zt-2y1w69wde-PdoN3fXovLlzoni~UaPrBA" title="Slack" target="_blank" rel="noopener noreferrer" class="slack-icon-link"><i class="fa fa-slack" aria-hidden="true"></i></a>
     </div>
 </footer>
 <script src="../../../_/js/vendor/import.js"></script>
 <script src="../../../_/js/site.js"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
-<script async
-    src="../../../_/js/vendor/spring-tabs.js"
-    data-sync-storage-key="docs:preferred-tab"></script>
+<script async="" src="../../../_/js/vendor/highlight.js"></script>
+<script async="" src="../../../_/js/vendor/spring-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
 <script src="../../../_/js/vendor/lunr.js"></script>
 <script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
-<script async src="../../../search-index.js"></script>
-  </body>
-</html>
+<script async="" src="../../../search-index.js"></script>
+  
+
+</body></html>

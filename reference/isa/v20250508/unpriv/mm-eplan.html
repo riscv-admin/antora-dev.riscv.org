@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>RVWMO Explanatory Material, Version 0.1 :: RISC-V Ratified Specifications Library</title>
@@ -40,8 +38,8 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img class="riscvlogo riscvlogo--light" src="../../../_/img/risc-v_logo.svg" alt="RISCV" />
-        <img class="riscvlogo riscvlogo--dark" src="../../../_/img/risc-v_logo_white.svg" alt="RISCV" />
+        <img class="riscvlogo riscvlogo--light" src="../../../_/img/risc-v_logo.svg" alt="RISCV">
+        <img class="riscvlogo riscvlogo--dark" src="../../../_/img/risc-v_logo_white.svg" alt="RISCV">
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -52,10 +50,7 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item home">
-          <a class="navbar-link"
-            href="../../../home/index.html"
-            aria-label="home"
-            title="home">
+          <a class="navbar-link" href="../../../home/index.html" aria-label="home" title="home">
             <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
               <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -65,21 +60,17 @@
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
         <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs" >
+          <input id="search-input" type="text" placeholder="Search the docs">
         </div>
         <div class="navbar-item" style="padding-left: 0;">
           <label class="theme-toggler">
-            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
-            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
-                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <path fill="currentColor"
-                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+            <input type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox">
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor" d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
                 </path>
               </svg>
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
-                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path fill="currentColor"
-                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
                 </path>
               </svg></span>
             <span class="text">light</span>
@@ -111,25 +102,13 @@
 </div>        <div class="nav-trees" data-component="isa">
           <div class="version-box">
             <select data-component="isa" class="select-version">
-                <option
-                  value="../../index.html"
-                  data-version="v20260120"
-                  
-                  >
+                <option value="../../index.html" data-version="v20260120">
                   20260120
                 </option>
-                <option
-                  value="../index.html"
-                  data-version="v20250508"
-                  
-                  selected>
+                <option value="../index.html" data-version="v20250508" selected="">
                   20250508
                 </option>
-                <option
-                  value="../../v20240411/index.html"
-                  data-version="v20240411"
-                  
-                  >
+                <option value="../../v20240411/index.html" data-version="v20240411">
                   20240411
                 </option>
             </select>
@@ -141,133 +120,133 @@
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="unpriv-index.html">Unprivileged Architecture</a>
+    <a class="nav-link" href="unpriv-index.html">Unprivileged Architecture</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="unpriv-contributors.html">Preamble</a>
+    <a class="nav-link" href="unpriv-contributors.html">Preamble</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="colophon.html">Preface</a>
+    <a class="nav-link" href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
+    <a class="nav-link" href="rv32.html">Chapter 2. RV32I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+    <a class="nav-link" href="rv32e.html">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
+    <a class="nav-link" href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+    <a class="nav-link" href="zifencei.html">Chapter 5. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link" href="zicsr.html">Chapter 6. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+    <a class="nav-link" href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintntl.html">Chapter 8. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+    <a class="nav-link" href="zihintntl.html">Chapter 8. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintpause.html">Chapter 9. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
+    <a class="nav-link" href="zihintpause.html">Chapter 9. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zimop.html">Chapter 10. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
+    <a class="nav-link" href="zimop.html">Chapter 10. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicond.html">Chapter 11. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+    <a class="nav-link" href="zicond.html">Chapter 11. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="m-st-ext.html">Chapter 12. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
+    <a class="nav-link" href="m-st-ext.html">Chapter 12. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="a-st-ext.html">Chapter 13. "A" Extension for Atomic Instructions, Version 2.1</a>
+    <a class="nav-link" href="a-st-ext.html">Chapter 13. "A" Extension for Atomic Instructions, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zawrs.html">Chapter 14. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+    <a class="nav-link" href="zawrs.html">Chapter 14. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zacas.html">Chapter 15. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+    <a class="nav-link" href="zacas.html">Chapter 15. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zabha.html">Chapter 16. "Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
+    <a class="nav-link" href="zabha.html">Chapter 16. "Zabha" Extension for Byte and Halfword Atomic Memory Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
+    <a class="nav-link" href="rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
+    <a class="nav-link" href="ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+    <a class="nav-link" href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link" href="f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link" href="d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link" href="q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+    <a class="nav-link" href="zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="bfloat16.html">Chapter 24. "BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
+    <a class="nav-link" href="bfloat16.html">Chapter 24. "BF16" Extensions for for BFloat16-precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfa.html">Chapter 25. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+    <a class="nav-link" href="zfa.html">Chapter 25. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfinx.html">Chapter 26. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+    <a class="nav-link" href="zfinx.html">Chapter 26. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="c-st-ext.html">Chapter 27. "C" Extension for Compressed Instructions, Version 2.0</a>
+    <a class="nav-link" href="c-st-ext.html">Chapter 27. "C" Extension for Compressed Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zc.html">Chapter 28. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+    <a class="nav-link" href="zc.html">Chapter 28. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="b-st-ext.html">Chapter 29. "B" Extension for Bit Manipulation, Version 1.0.0</a>
+    <a class="nav-link" href="b-st-ext.html">Chapter 29. "B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="v-st-ext.html">Chapter 30. "V" Standard Extension for Vector Operations, Version 1.0</a>
+    <a class="nav-link" href="v-st-ext.html">Chapter 30. "V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+    <a class="nav-link" href="scalar-crypto.html">Chapter 31. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link" href="vector-crypto.html">Chapter 32. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
+    <a class="nav-link" href="unpriv-cfi.html">Chapter 33. Control-flow Integrity (CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link" href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
+    <a class="nav-link" href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link" href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">Chapter 37. Document Revision History</a>
+    <a class="nav-link" href="history.html">Chapter 37. Document Revision History</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link" href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
+    <a class="nav-link" href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link" href="calling-convention.html">Appendix C. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -276,73 +255,73 @@
     <span class="nav-text">Volume II: RISC-V Privileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-index.html">Privileged Architecture</a>
+    <a class="nav-link" href="../priv/priv-index.html">Privileged Architecture</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-contributors.html">Preamble</a>
+    <a class="nav-link" href="../priv/priv-contributors.html">Preamble</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
+    <a class="nav-link" href="../priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="../priv/priv-intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
+    <a class="nav-link" href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link" href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link" href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link" href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link" href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link" href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link" href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link" href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link" href="../priv/smdbltrp.html">Chapter 10. "Smdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
+    <a class="nav-link" href="../priv/smctr.html">Chapter 11. "Smctr" Control Transfer Records Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link" href="../priv/supervisor.html">Chapter 12. Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link" href="../priv/sstc.html">Chapter 13. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link" href="../priv/sscofpmf.html">Chapter 14. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link" href="../priv/hypervisor.html">Chapter 15. "H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
+    <a class="nav-link" href="../priv/priv-cfi.html">Chapter 16. Control-flow Integrity(CFI)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
+    <a class="nav-link" href="../priv/ssdbltrp.html">Chapter 17. "Ssdbltrp" Double Trap Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
+    <a class="nav-link" href="../priv/zpm.html">Chapter 18. Pointer Masking Extensions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link" href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
+    <a class="nav-link" href="../priv/priv-history.html">Chapter 20. History</a>
   </li>
 </ul>
   </li>
@@ -351,7 +330,7 @@
     <span class="nav-text">Bibliography</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../biblio/bibliography.html">Bibliography</a>
+    <a class="nav-link" href="../biblio/bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -361,11 +340,7 @@
         <div class="nav-trees" data-component="rvprofile">
           <div class="version-box">
             <select data-component="rvprofile" class="select-version">
-                <option
-                  value="../../../rvprofile/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../../../rvprofile/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -379,34 +354,34 @@
     <span class="nav-text">RISC-V Profiles</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/index.html">Title Page</a>
+    <a class="nav-link" href="../../../rvprofile/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/copyright.html">Copyright and License Information</a>
+    <a class="nav-link" href="../../../rvprofile/copyright.html">Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/changelog.html">Chapter 1. Changelog</a>
+    <a class="nav-link" href="../../../rvprofile/changelog.html">Chapter 1. Changelog</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/intro.html">Chapter 2. Introduction</a>
+    <a class="nav-link" href="../../../rvprofile/intro.html">Chapter 2. Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/profilevsplat.html">Chapter 3. Profiles versus Platforms</a>
+    <a class="nav-link" href="../../../rvprofile/profilevsplat.html">Chapter 3. Profiles versus Platforms</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/components.html">Chapter 4. Components of a Profile</a>
+    <a class="nav-link" href="../../../rvprofile/components.html">Chapter 4. Components of a Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/rva20.html">Chapter 5. RVA20 Profile</a>
+    <a class="nav-link" href="../../../rvprofile/rva20.html">Chapter 5. RVA20 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/rva22.html">Chapter 6. RVA22 Profile</a>
+    <a class="nav-link" href="../../../rvprofile/rva22.html">Chapter 6. RVA22 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/extensions.html">Chapter 7. New ISA Extensions</a>
+    <a class="nav-link" href="../../../rvprofile/extensions.html">Chapter 7. New ISA Extensions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/glossary.html">Glossary</a>
+    <a class="nav-link" href="../../../rvprofile/glossary.html">Glossary</a>
   </li>
 </ul>
   </li>
@@ -418,11 +393,7 @@
         <div class="nav-trees" data-component="rva23">
           <div class="version-box">
             <select data-component="rva23" class="select-version">
-                <option
-                  value="../../../rva23/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../../../rva23/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -436,22 +407,22 @@
     <span class="nav-text">RVA23 Profile</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/index.html">Title Page</a>
+    <a class="nav-link" href="../../../rva23/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/copyright.html">Chapter 1. Copyright and License Information</a>
+    <a class="nav-link" href="../../../rva23/copyright.html">Chapter 1. Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/rva-profile-overview-body.html">Chapter 2. RVA Profiles Rationale</a>
+    <a class="nav-link" href="../../../rva23/rva-profile-overview-body.html">Chapter 2. RVA Profiles Rationale</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/rv-profile-defined-extensions.html">Chapter 3. Profile-Defined Extensions</a>
+    <a class="nav-link" href="../../../rva23/rv-profile-defined-extensions.html">Chapter 3. Profile-Defined Extensions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/rva23-profiles.html">Chapter 4. RVA23 Profile</a>
+    <a class="nav-link" href="../../../rva23/rva23-profiles.html">Chapter 4. RVA23 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/glossary-of-isa-extensions.html">Glossary of ISA Extensions</a>
+    <a class="nav-link" href="../../../rva23/glossary-of-isa-extensions.html">Glossary of ISA Extensions</a>
   </li>
 </ul>
   </li>
@@ -463,11 +434,7 @@
         <div class="nav-trees" data-component="rvb23">
           <div class="version-box">
             <select data-component="rvb23" class="select-version">
-                <option
-                  value="../../../rvb23/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../../../rvb23/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -481,22 +448,22 @@
     <span class="nav-text">RVB23 Profile</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/index.html">Title Page</a>
+    <a class="nav-link" href="../../../rvb23/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/copyright.html">Chapter 1. Copyright and License Information</a>
+    <a class="nav-link" href="../../../rvb23/copyright.html">Chapter 1. Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/intro.html">Chapter 2. Introduction</a>
+    <a class="nav-link" href="../../../rvb23/intro.html">Chapter 2. Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/profile-defined.html">Chapter 3. Profile-Defined Extensions</a>
+    <a class="nav-link" href="../../../rvb23/profile-defined.html">Chapter 3. Profile-Defined Extensions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/rvb23.html">Chapter 4. RVB23 Profile</a>
+    <a class="nav-link" href="../../../rvb23/rvb23.html">Chapter 4. RVB23 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/glossary.html">Glossary of ISA Extensions</a>
+    <a class="nav-link" href="../../../rvb23/glossary.html">Glossary of ISA Extensions</a>
   </li>
 </ul>
   </li>
@@ -533,56 +500,31 @@
 <aside class="sidebar">
   <div class="content">
     <div class="tag-toggle-container">
-      <button
-        class="tag-toggle-btn"
-        type="button"
-        onclick="document.documentElement.classList.toggle('tag-highlight-enabled');"
-      >
+      <button class="tag-toggle-btn" type="button" onclick="document.documentElement.classList.toggle('tag-highlight-enabled');">
         <div class="tag-toggle-switch"></div>
         <span id="tag-toggle-label">Normative Rules</span>
       </button>
     </div>
-    <div
-      class="toc"
-      data-title="RVWMO Explanatory Material, Version 0.1"
-      data-levels="5"
-    >
+    <div class="toc" data-title="RVWMO Explanatory Material, Version 0.1" data-levels="5">
       <div class="toc-menu"></div>
     </div>
     <div class="sidebar-links">
         <a href="https://github.com/riscv/riscv-isa-manual/issues/new" target="_blank" title="Issues">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          ><path
-              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
-            ></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
           Report a Problem
         </a>
         <a href="https://github.com/riscv/riscv-isa-manual" target="_blank" title="GitHub">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="512px"
-            id="Layer_1"
-            version="1.1"
-            viewBox="0 0 512 512"
-            width="512px"
-          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
-              ]]></style><g><path
-                class="st0"
-                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
-              ></path></g></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512px"><style type="text/css">&lt; .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]&gt;</style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
           GitHub Project
         </a>
 
         <a href="https://riscv.atlassian.net/wiki/external/MzM1NWFmYmFjNzlkNGMyMDg0NThjM2ZlODVkZTA3MDE" target="_blank" rel="noopener noreferrer" class="sidebar-link">
-          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"/><circle cx="148.5" cy="250" r="31.5" fill="currentColor"/><circle cx="250" cy="250" r="31.5" fill="currentColor"/><circle cx="351.5" cy="250" r="31.5" fill="currentColor"/></svg>
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"></circle><circle cx="148.5" cy="250" r="31.5" fill="currentColor"></circle><circle cx="250" cy="250" r="31.5" fill="currentColor"></circle><circle cx="351.5" cy="250" r="31.5" fill="currentColor"></circle></svg>
           More Details
         </a>
 
-          <a href="../_attachments/riscv-unprivileged.pdf" target="_blank" rel="noopener noreferrer" class="sidebar-link" download>
+          <a href="../_attachments/riscv-unprivileged.pdf" target="_blank" rel="noopener noreferrer" class="sidebar-link" download="">
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -691,7 +633,7 @@ shows the litmus test code on the left, and a visualization of one
 particular valid or invalid execution on the right.</p>
 </div>
 <table id="litmus-sample" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 1. A sample litmus test and one forbidden execution (<code>a0=1</code>).</caption>
+<caption class="title">Table 32. A sample litmus test and one forbidden execution (<code>a0=1</code>).</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -714,9 +656,9 @@ particular valid or invalid execution on the right.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#8942;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">⋮</p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#8942;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">⋮</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
@@ -732,9 +674,9 @@ particular valid or invalid execution on the right.</p>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#8942;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">⋮</p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#8942;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">⋮</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
@@ -750,9 +692,9 @@ particular valid or invalid execution on the right.</p>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#8942;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">⋮</p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#8942;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">⋮</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock">(c)</p></td>
@@ -762,9 +704,9 @@ particular valid or invalid execution on the right.</p>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#8942;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">⋮</p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#8942;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">⋮</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
@@ -780,9 +722,9 @@ particular valid or invalid execution on the right.</p>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#8942;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">⋮</p></td>
 <td class="tableblock halign-center valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&#8942;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">⋮</p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -806,7 +748,7 @@ particular valid or invalid execution on the right.</p>
 <div class="paragraph">
 <p>Litmus tests are used to understand the implications of the memory model
 in specific concrete situations. For example, in the litmus test of
-<a href="#litmus-sample">Table 1</a>, the final value of <code>a0</code>
+<a href="#litmus-sample">Table 32</a>, the final value of <code>a0</code>
 in the first hart can be either 2, 4, or 5, depending on the dynamic
 interleaving of the instruction stream from each hart at runtime.
 However, in this example, the final value of <code>a0</code> in Hart 0 will never
@@ -816,7 +758,7 @@ time the load executes. We analyze this test and many others below.</p>
 </div>
 <div style="page-break-after: always;"></div>
 <table id="litmus-key" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 2. A key for the litmus test diagrams drawn in this appendix</caption>
+<caption class="title">Table 33. A key for the litmus test diagrams drawn in this appendix</caption>
 <colgroup>
 <col>
 <col>
@@ -871,14 +813,14 @@ These diagrams use a notation that is common in the memory model
 literature for constraining the set of possible global memory orders
 that could produce the execution in question. It is also the basis for
 the <em>herd</em> models presented in <a href="mm-formal.html#sec:herd" class="xref page">Formal Axiomatic Specification in Herd</a>. This notation is explained in
-<a href="#litmus-key">Table 2</a>. Of the listed relations, rf edges between
+<a href="#litmus-key">Table 33</a>. Of the listed relations, rf edges between
 harts, co edges, fr edges, and ppo edges directly constrain the global
 memory order (as do fence, addr, data, and some ctrl edges, via ppo).
 Other edges (such as intra-hart rf edges) are informative but do not
 constrain the global memory order.</p>
 </div>
 <div class="paragraph">
-<p>For example, in <a href="#litmus-sample">Table 1</a>, <code>a0=1</code>
+<p>For example, in <a href="#litmus-sample">Table 32</a>, <code>a0=1</code>
 could occur only if one of the following were true:</p>
 </div>
 <div class="ulist">
@@ -886,7 +828,7 @@ could occur only if one of the following were true:</p>
 <li>
 <p>(b) appears before (a) in global memory order (and in the
 coherence order co). However, this violates RVWMO PPO
-rule <code>ppo:&#8594;st</code>. The co edge from (b) to (a) highlights this
+rule <code>ppo:→st</code>. The co edge from (b) to (a) highlights this
 contradiction.</p>
 </li>
 <li>
@@ -909,7 +851,7 @@ thousand litmus tests is available at
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -925,7 +867,7 @@ use as part of the RISC-V compliance test suite as well.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -982,7 +924,7 @@ described below.</p>
 <h3 id="loadvalueaxiom"><a class="anchor" href="#loadvalueaxiom"></a>Load value axiom</h3>
 <div class="admonitionblock important">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-important" title="Important"></i>
 </td>
@@ -1005,7 +947,7 @@ order</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Preserved program order is <em>not</em> required to respect the ordering of a
@@ -1018,11 +960,11 @@ visible memory). Any other hart will therefore observe the load as
 performing before the store.</p>
 </div>
 <div class="paragraph">
-<p>Consider the <a href="#litms_sb_forward">Table 3</a>. When running this program on an implementation with
+<p>Consider the <a href="#litms_sb_forward">Table 34</a>. When running this program on an implementation with
 store buffers, it is possible to arrive at the final outcome <code>a0=1, a1=0, a2=1, a3=0</code> as follows:</p>
 </div>
 <table id="litms_sb_forward" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 3. A store buffer forwarding litmus test (outcome permitted)</caption>
+<caption class="title">Table 34. A store buffer forwarding litmus test (outcome permitted)</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1088,7 +1030,7 @@ store buffers, it is possible to arrive at the final outcome <code>a0=1, a1=0, a
 <div class="ulist">
 <ul>
 <li>
-<p>(a) executes and enters the first hart&#8217;s private store buffer</p>
+<p>(a) executes and enters the first hart’s private store buffer</p>
 </li>
 <li>
 <p>(b) executes and forwards its return value 1 from (a) in the
@@ -1102,7 +1044,7 @@ completed</p>
 <p>(d) executes and reads the value 0 from memory</p>
 </li>
 <li>
-<p>(e) executes and enters the second hart&#8217;s private store buffer</p>
+<p>(e) executes and enters the second hart’s private store buffer</p>
 </li>
 <li>
 <p>(f) executes and forwards its return value 1 from (e) in the
@@ -1116,10 +1058,10 @@ completed</p>
 <p>(h) executes and reads the value 0 from memory</p>
 </li>
 <li>
-<p>(a) drains from the first hart&#8217;s store buffer to memory</p>
+<p>(a) drains from the first hart’s store buffer to memory</p>
 </li>
 <li>
-<p>(e) drains from the second hart&#8217;s store buffer to memory</p>
+<p>(e) drains from the second hart’s store buffer to memory</p>
 </li>
 </ul>
 </div>
@@ -1147,7 +1089,7 @@ Call this "Rule X". Then we get the following:</p>
 <li>
 <p>(d) precedes (e): by the load value axiom. Otherwise, if (e)
 preceded (d), then (d) would be required to return the value 1. (This is
-a perfectly legal execution; it&#8217;s just not the one in question)</p>
+a perfectly legal execution; it’s just not the one in question)</p>
 </li>
 <li>
 <p>(e) precedes (f): by rule X</p>
@@ -1181,7 +1123,7 @@ should return the value written by (a) because (a) precedes (b) in
 program order. Likewise for (e) and (f).</p>
 </div>
 <table id="litmus_ppoca" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 4. The "PPOCA" store buffer forwarding litmus test (outcome permitted)</caption>
+<caption class="title">Table 35. The "PPOCA" store buffer forwarding litmus test (outcome permitted)</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1275,7 +1217,7 @@ program order. Likewise for (e) and (f).</p>
 </table>
 <div class="paragraph">
 <p>Another test that highlights the behavior of store buffers is shown in
-<a href="#litmus_ppoca">Table 4</a>. In this example, (d) is
+<a href="#litmus_ppoca">Table 35</a>. In this example, (d) is
 ordered before (e) because of the control dependency, and (f) is ordered
 before (g) because of the address dependency. However, (e) is <em>not</em>
 necessarily ordered before (f), even though (f) returns the value
@@ -1285,7 +1227,7 @@ events:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>(e) executes speculatively and enters the second hart&#8217;s private
+<p>(e) executes speculatively and enters the second hart’s private
 store buffer (but does not drain to memory)</p>
 </li>
 <li>
@@ -1296,14 +1238,14 @@ store buffer (but does not drain to memory)</p>
 <p>(g) executes speculatively and reads the value 0 from memory</p>
 </li>
 <li>
-<p>(a) executes, enters the first hart&#8217;s private store buffer, and
+<p>(a) executes, enters the first hart’s private store buffer, and
 drains to memory</p>
 </li>
 <li>
 <p>(b) executes and retires</p>
 </li>
 <li>
-<p>(c) executes, enters the first hart&#8217;s private store buffer, and
+<p>(c) executes, enters the first hart’s private store buffer, and
 drains to memory</p>
 </li>
 <li>
@@ -1323,7 +1265,7 @@ correct</p>
 <h3 id="atomicityaxiom"><a class="anchor" href="#atomicityaxiom"></a>Atomicity axiom</h3>
 <div class="admonitionblock important">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-important" title="Important"></i>
 </td>
@@ -1338,7 +1280,7 @@ memory order.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The RISC-V architecture decouples the notion of atomicity from the
@@ -1429,7 +1371,7 @@ store may simply fall onto the same cache line.</p>
 <h3 id="mm-progress"><a class="anchor" href="#mm-progress"></a>Progress axiom</h3>
 <div class="admonitionblock important">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-important" title="Important"></i>
 </td>
@@ -1440,7 +1382,7 @@ memory order by an infinite sequence of other memory operations.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The progress axiom ensures a minimal forward progress guarantee. It
@@ -1469,7 +1411,7 @@ harts.</p>
 <h3 id="mm-overlap"><a class="anchor" href="#mm-overlap"></a>Overlapping-Address Orderings (<a href="#overlapping-ordering">Rules 1-3</a>)</h3>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1488,7 +1430,7 @@ returns a value written by a</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Same-address orderings where the latter is a store are straightforward:
@@ -1519,7 +1461,7 @@ requirements in terms of the global memory order requires a bit of
 indirection.</p>
 </div>
 <table id="frirfi" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 5. Litmus test MP+fence.w.w+fre-rfi-addr (outcome permitted)</caption>
+<caption class="title">Table 36. Litmus test MP+fence.w.w+fre-rfi-addr (outcome permitted)</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1605,7 +1547,7 @@ indirection.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Consider the litmus test of <a href="#frirfi">Table 5</a>, which is one particular
+<p>Consider the litmus test of <a href="#frirfi">Table 36</a>, which is one particular
 instance of the more general "fri-rfi" pattern. The term "fri-rfi"
 refers to the sequence (d), (e), (f): (d) "from-reads" (i.e., reads
 from an earlier write than) (e) which is the same hart, and (f) reads
@@ -1619,7 +1561,7 @@ following would produce the outcome in question:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>(d) stalls (for whatever reason; perhaps it&#8217;s stalled waiting
+<p>(d) stalls (for whatever reason; perhaps it’s stalled waiting
 for some other preceding instruction)</p>
 </li>
 <li>
@@ -1658,7 +1600,7 @@ that the two loads return the same value, since two different stores may
 write the same value.</p>
 </div>
 <table id="litmus-rsw" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 6. Litmus test RSW (outcome permitted)</caption>
+<caption class="title">Table 37. Litmus test RSW (outcome permitted)</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1749,7 +1691,7 @@ write the same value.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Consider the litmus test of <a href="#litmus-rsw">Table 6</a>.
+<p>Consider the litmus test of <a href="#litmus-rsw">Table 37</a>.
 The outcome <code>a0=1</code>, <code>a1=v</code>, <code>a2=v</code>, <code>a3=0</code> (where <em>v</em> is
 some value written by another hart) can be observed by allowing (g) and
 (h) to be reordered. This might be done speculatively, and the
@@ -1762,7 +1704,7 @@ memory order corresponding to this execution would be
 (h),(k),(a),(c),(d),(g).</p>
 </div>
 <div class="paragraph">
-<p>Executions of the test in <a href="#litmus-rsw">Table 6</a> in
+<p>Executions of the test in <a href="#litmus-rsw">Table 37</a> in
 which <code>a1</code> does not equal <code>a2</code> do in fact require that (g) appears
 before (h) in the global memory order. Allowing (h) to appear before (g)
 in the global memory order would in that case result in a violation of
@@ -1801,7 +1743,7 @@ rules apply to each of the component memory accesses independently.</p>
 <h3 id="mm-fence"><a class="anchor" href="#mm-fence"></a>Fences (<a href="#overlapping-ordering">Rule 4</a>)</h3>
 <div class="admonitionblock important">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-important" title="Important"></i>
 </td>
@@ -1811,7 +1753,7 @@ rules apply to each of the component memory accesses independently.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>By default, the FENCE instruction ensures that all memory accesses from
@@ -1873,7 +1815,7 @@ memory models that are not multi-copy atomic.</p>
 <h3 id="sec:memory:acqrel"><a class="anchor" href="#sec:memory:acqrel"></a>Explicit Synchronization (<a href="#overlapping-ordering">Rules 5-8</a>)</h3>
 <div class="admonitionblock important">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-important" title="Important"></i>
 </td>
@@ -1892,7 +1834,7 @@ memory models that are not multi-copy atomic.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>An <em>acquire</em> operation, as would be used at the start of a critical
@@ -2005,7 +1947,7 @@ about "cumulativity" when analyzing ordering annotations.</p>
 <h3 id="sec:memory:dependencies"><a class="anchor" href="#sec:memory:dependencies"></a>Syntactic Dependencies (<a href="#overlapping-ordering">Rules 9-11</a>)</h3>
 <div id="ppo-addr" class="admonitionblock important">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-important" title="Important"></i>
 </td>
@@ -2021,7 +1963,7 @@ about "cumulativity" when analyzing ordering annotations.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Dependencies from a load to a later memory operation in the same hart
@@ -2158,7 +2100,7 @@ registers to <em>rd</em> only when the SC is successful, an unsuccessful SC has
 no effect on the global memory order.</p>
 </div>
 <table id="litmus_lb_lrsc" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 7. A variant of the LB litmus test (outcome forbidden)</caption>
+<caption class="title">Table 38. A variant of the LB litmus test (outcome forbidden)</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2233,7 +2175,7 @@ no effect on the global memory order.</p>
 <p>In addition, the choice to respect dependencies originating at
 store-conditional instructions ensures that certain out-of-thin-air-like
 behaviors will be prevented. Consider
-<a href="#litmus_lb_lrsc">Table 7</a>. Suppose a
+<a href="#litmus_lb_lrsc">Table 38</a>. Suppose a
 hypothetical implementation could occasionally make some early guarantee
 that a store-conditional operation will succeed. In this case, (c) could
 return 0 to <code>a2</code> early (before actually executing), allowing the
@@ -2260,7 +2202,7 @@ flag in question.</p>
 <h3 id="memory-ppopipeline"><a class="anchor" href="#memory-ppopipeline"></a>Pipeline Dependencies (<a href="#overlapping-ordering">Rules 12-13</a>)</h3>
 <div id="addrdatarfi" class="admonitionblock important">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-important" title="Important"></i>
 </td>
@@ -2276,10 +2218,10 @@ b in program order such that m has an address dependency on a</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <table id="litmus_datarfi" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 8. Because of PPO <a href="#overlapping-ordering">rule 12</a> and the data dependency from (d) to (e), (d) must also precede (f) in the global memory order (outcome forbidden)</caption>
+<caption class="title">Table 39. Because of PPO <a href="#overlapping-ordering">rule 12</a> and the data dependency from (d) to (e), (d) must also precede (f) in the global memory order (outcome forbidden)</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2362,7 +2304,7 @@ b in program order such that m has an address dependency on a</p>
 <p>PPO rules <a href="#overlapping-ordering">12</a> and <a href="#overlapping-ordering">13</a> reflect behaviors of almost all real processor
 pipeline implementations. Rule <a href="#overlapping-ordering">12</a>
 states that a load cannot forward from a store until the address and
-data for that store are known. Consider <a href="#litmus_datarfi">Table 8</a> (f) cannot be
+data for that store are known. Consider <a href="#litmus_datarfi">Table 39</a> (f) cannot be
 executed until the data for (e) has been resolved, because (f) must
 return the value written by (e) (or by something even later in the
 global memory order), and the old value must not be clobbered by the
@@ -2370,7 +2312,7 @@ writeback of (e) before (d) has had a chance to perform. Therefore, (f)
 will never perform before (d) has performed.</p>
 </div>
 <table id="litmus_datacorfi_no" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 9. Because of the extra store between (e) and (g), (d) no longer necessarily precedes (g) (outcome permitted)</caption>
+<caption class="title">Table 40. Because of the extra store between (e) and (g), (d) no longer necessarily precedes (g) (outcome permitted)</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2461,7 +2403,7 @@ will never perform before (d) has performed.</p>
 </table>
 <div class="paragraph">
 <p>If there were another store to the same address in between (e) and (f),
-as in <a href="#litmus:addrdatarfi_no">Table 10</a>,
+as in <a href="#litmus:addrdatarfi_no">Table 41</a>,
 then (f) would no longer be dependent on the data of (e) being resolved,
 and hence the dependency of (f) on (d), which produces the data for (e),
 would be broken.</p>
@@ -2479,7 +2421,7 @@ rule 13 can be seen as somewhat of a special case
 of rule <a href="#overlapping-ordering">11</a>.</p>
 </div>
 <table id="litmus:addrdatarfi_no" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 10. Because of the address dependency from (d) to (e), (d) also precedes (f) (outcome forbidden)</caption>
+<caption class="title">Table 41. Because of the address dependency from (d) to (e), (d) also precedes (f) (outcome forbidden)</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2543,7 +2485,7 @@ of rule <a href="#overlapping-ordering">11</a>.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Consider <a href="#litmus:addrdatarfi_no">Table 10</a> (f) cannot be
+<p>Consider <a href="#litmus:addrdatarfi_no">Table 41</a> (f) cannot be
 executed until the address for (e) is resolved, because it may turn out
 that the addresses match; i.e., that <code>a1=s0</code>. Therefore, (f) cannot be
 sent to memory before (d) has executed and confirmed whether the
@@ -2728,7 +2670,7 @@ those external devices and buses.</p>
 <h2 id="memory_porting"><a class="anchor" href="#memory_porting"></a>Code Porting and Mapping Guidelines</h2>
 <div class="sectionbody">
 <table id="tsomappings" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 11. Mappings from TSO operations to RISC-V operations</caption>
+<caption class="title">Table 42. Mappings from TSO operations to RISC-V operations</caption>
 <colgroup>
 <col>
 <col>
@@ -2760,7 +2702,7 @@ those external devices and buses.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><a href="#tsomappings">Table 11</a> provides a mapping from TSO memory
+<p><a href="#tsomappings">Table 42</a> provides a mapping from TSO memory
 operations onto RISC-V memory instructions. Normal x86 loads and stores
 are all inherently acquire-RCpc and release-RCpc operations: TSO
 enforces all load-load, load-store, and store-store ordering by default.
@@ -2775,7 +2717,7 @@ condition. In the latter case, the <em>rl</em> annotation on the LR turns out
 (for non-obvious reasons) to be redundant and can be omitted.</p>
 </div>
 <div class="paragraph">
-<p>Alternatives to <a href="#tsomappings">Table 11</a> are also possible. A TSO
+<p>Alternatives to <a href="#tsomappings">Table 42</a> are also possible. A TSO
 store can be mapped onto AMOSWAP with <em>rl</em> set. However, since RVWMO PPO
 Rule <a href="#overlapping-ordering">3</a> forbids forwarding of values from
 AMOs to subsequent loads, the use of AMOSWAP for stores may negatively
@@ -2786,7 +2728,7 @@ may also negatively affect performance if it puts more pressure on the
 reservation mechanism than was originally intended.</p>
 </div>
 <table id="powermappings" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 12. Mappings from Power operations to RISC-V operations</caption>
+<caption class="title">Table 43. Mappings from Power operations to RISC-V operations</caption>
 <colgroup>
 <col>
 <col>
@@ -2829,14 +2771,14 @@ reservation mechanism than was originally intended.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><a href="#powermappings">Table 12</a> provides a mapping from Power memory
+<p><a href="#powermappings">Table 43</a> provides a mapping from Power memory
 operations onto RISC-V memory instructions. Power ISYNC maps on RISC-V
 to a FENCE.I followed by a FENCE R,R; the latter fence is needed because
 ISYNC is used to define a "control+control fence" dependency that is
 not present in RVWMO.</p>
 </div>
 <table id="armmappings" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 13. Mappings from ARM operations to RISC-V operations</caption>
+<caption class="title">Table 44. Mappings from ARM operations to RISC-V operations</caption>
 <colgroup>
 <col>
 <col>
@@ -2899,13 +2841,13 @@ not present in RVWMO.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><a href="#armmappings">Table 13</a> provides a mapping from ARM memory
+<p><a href="#armmappings">Table 44</a> provides a mapping from ARM memory
 operations onto RISC-V memory instructions. Since RISC-V does not
 currently have plain load and store opcodes with <em>aq</em> or <em>rl</em>
 annotations, ARM load-acquire and store-release operations should be
 mapped using fences instead. Furthermore, in order to enforce
 store-release-to-load-acquire ordering, there must be a FENCE RW,RW
-between the store-release and load-acquire; <a href="#armmappings">Table 13</a>
+between the store-release and load-acquire; <a href="#armmappings">Table 44</a>
 enforces this by always placing the fence in front of each acquire
 operation. ARM load-exclusive and store-exclusive instructions can
 likewise map onto their RISC-V LR and SC equivalents, but instead of
@@ -2914,7 +2856,7 @@ set <em>rl</em> instead. ARM ISB maps on RISC-V to FENCE.I followed by
 FENCE R,R similarly to how ISYNC maps for Power.</p>
 </div>
 <table id="linuxmappings" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 14. Mappings from Linux memory primitives to RISC-V primitives.</caption>
+<caption class="title">Table 45. Mappings from Linux memory primitives to RISC-V primitives.</caption>
 <colgroup>
 <col>
 <col>
@@ -2971,56 +2913,56 @@ FENCE R,R similarly to how ISYNC maps for Power.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RVWMO AMO Mapping</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &#60;op&#62; relaxed</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>amo &#60;op&#62;.{w|d}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &lt;op&gt; relaxed</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>amo &lt;op&gt;.{w|d}</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &#60;op&#62; acquire</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>amo &#60;op&#62;.{w|d}.aq</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &lt;op&gt; acquire</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>amo &lt;op&gt;.{w|d}.aq</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &#60;op&#62; release</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>amo &#60;op&#62;.{w|d}.rl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &lt;op&gt; release</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>amo &lt;op&gt;.{w|d}.rl</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &#60;op&#62;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>amo &#60;op&#62;.{w|d}.aqrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &lt;op&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>amo &lt;op&gt;.{w|d}.aqrl</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Linux Construct</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RVWMO LR/SC Mapping</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &#60;op&#62; relaxed</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loop:lr.{w|d}; &#60;op&#62;; sc.{w|d}; bnez loop</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &lt;op&gt; relaxed</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loop:lr.{w|d}; &lt;op&gt;; sc.{w|d}; bnez loop</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &#60;op&#62; acquire</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loop:lr.{w|d}.aq; &#60;op&#62;; sc.{w|d}; bnez loop</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &lt;op&gt; acquire</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loop:lr.{w|d}.aq; &lt;op&gt;; sc.{w|d}; bnez loop</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &#60;op&#62; release</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loop:lr.{w|d}; &#60;op&#62;; sc.{w|d}.aqrl^&#42;; bnez loop OR</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &lt;op&gt; release</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loop:lr.{w|d}; &lt;op&gt;; sc.{w|d}.aqrl^*; bnez loop OR</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fence.tso; loop:lr.{w|d}; &#60;op &#62;; sc.{w|d}^&#42;; bnez loop</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fence.tso; loop:lr.{w|d}; &lt;op &gt;; sc.{w|d}^*; bnez loop</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &#60;op&#62;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loop:lr.{w|d}.aq;</code> <code>&#60;op&#62;; sc.{w|d}.aqrl; bnez loop</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>atomic &lt;op&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loop:lr.{w|d}.aq;</code> <code>&lt;op&gt;; sc.{w|d}.aqrl; bnez loop</code></p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>With regards to <a href="#linuxmappings">Table 14</a>, other
+<p>With regards to <a href="#linuxmappings">Table 45</a>, other
 constructs (such as spinlocks) should follow accordingly. Platforms or
 devices with non-coherent DMA may need additional synchronization (such
 as cache flush or invalidate mechanisms); currently any such extra
 synchronization will be device-specific.</p>
 </div>
 <div class="paragraph">
-<p><a href="#linuxmappings">Table 14</a> provides a mapping of Linux memory
+<p><a href="#linuxmappings">Table 45</a> provides a mapping of Linux memory
 ordering macros onto RISC-V memory instructions. The Linux fences
 <code>dma_rmb()</code> and <code>dma_wmb()</code> map onto FENCE R,R and FENCE W,W,
 respectively, since the RISC-V Unix Platform requires coherent DMA, but
@@ -3059,13 +3001,13 @@ and <em>rl</em> modifiers.</p>
 <p>Strengthen the mappings of release operations such that they would
 enforce sufficient orderings in the presence of either type of acquire
 mapping. This is the currently recommended solution, and the one shown
-in <a href="#linuxmappings">Table 14</a>.</p>
+in <a href="#linuxmappings">Table 45</a>.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
 <p>RVWMO Mapping: (a) lw a0, 0(s0) (b) fence.tso // vs. fence rw,w (c) sd
-x0,0(s1) &#8230;&#8203; loop: (d) amoswap.d.aq a1,t1,0(s1) bnez a1,loop (e) lw
+x0,0(s1) …​ loop: (d) amoswap.d.aq a1,t1,0(s1) bnez a1,loop (e) lw
 a2,0(s2)</p>
 </div>
 <div class="paragraph">
@@ -3101,21 +3043,21 @@ bnez a1,loop
 </div>
 </div>
 <div class="paragraph">
-<p><a href="#c11mappings">Table 15</a> provides a mapping of C11/C++11 atomic
+<p><a href="#c11mappings">Table 46</a> provides a mapping of C11/C++11 atomic
 operations onto RISC-V memory instructions. If load and store opcodes
 with <em>aq</em> and <em>rl</em> modifiers are introduced, then the mappings in
-<a href="#c11mappings_hypothetical">Table 16</a> will suffice. Note however that
+<a href="#c11mappings_hypothetical">Table 47</a> will suffice. Note however that
 the two mappings only interoperate correctly if
 <code>atomic_&lt;op&gt;(memory_order_seq_cst)</code> is mapped using an LR that has both
 <em>aq</em> and <em>rl</em> set.
-Even more importantly, a <a href="#c11mappings">Table 15</a> sequentially consistent store,
-followed by a <a href="#c11mappings_hypothetical">Table 16</a> sequentially consistent load
-can be reordered unless the <a href="#c11mappings">Table 15</a> mapping of stores is
+Even more importantly, a <a href="#c11mappings">Table 46</a> sequentially consistent store,
+followed by a <a href="#c11mappings_hypothetical">Table 47</a> sequentially consistent load
+can be reordered unless the <a href="#c11mappings">Table 46</a> mapping of stores is
 strengthened by either adding a second fence or mapping the store
 to <code>amoswap.rl</code> instead.</p>
 </div>
 <table id="c11mappings" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 15. Mappings from C/C++ primitives to RISC-V primitives.</caption>
+<caption class="title">Table 46. Mappings from C/C++ primitives to RISC-V primitives.</caption>
 <colgroup>
 <col>
 <col>
@@ -3246,7 +3188,7 @@ to <code>amoswap.rl</code> instead.</p>
 </tbody>
 </table>
 <table id="c11mappings_hypothetical" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 16. Hypothetical mappings from C/C++ primitives to RISC-V primitives, if native load-acquire and store-release opcodes are introduced.</caption>
+<caption class="title">Table 47. Hypothetical mappings from C/C++ primitives to RISC-V primitives, if native load-acquire and store-release opcodes are introduced.</caption>
 <colgroup>
 <col>
 <col>
@@ -3355,7 +3297,7 @@ to <code>amoswap.rl</code> instead.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>lr.{w|d}.aq* &lt;op&gt;; sc.{w|d}.rl</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code>*</code> must be <code>lr.{w|d}.aqrl</code> in order to interoperate with code mapped per <a href="#c11mappings">Table 15</a></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><code>*</code> must be <code>lr.{w|d}.aqrl</code> in order to interoperate with code mapped per <a href="#c11mappings">Table 46</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -3433,7 +3375,7 @@ coherence protocol, or it might hold due to some other mechanism.</p>
 <p>Although multi-copy atomicity does impose some restrictions on the
 microarchitecture, it is one of the key properties keeping the memory
 model from becoming extremely complicated. For example, a hart may not
-legally forward a value from a neighbor hart&#8217;s private store buffer
+legally forward a value from a neighbor hart’s private store buffer
 (unless of course it is done in such a way that no new illegal behaviors
 become architecturally visible). Nor may a cache coherence protocol
 forward a value from one hart to another until the coherence protocol
@@ -3582,7 +3524,7 @@ does not otherwise violate the memory model semantics.</p>
 example:</p>
 </div>
 <table id="subsumption" class="tableblock frame-none grid-none stretch center">
-<caption class="title">Table 17. Write subsumption litmus test, allowed execution</caption>
+<caption class="title">Table 48. Write subsumption litmus test, allowed execution</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -3719,7 +3661,7 @@ would be compatible with the RVWMO memory model:</p>
 <div class="sect2">
 <h3 id="mixedrsw"><a class="anchor" href="#mixedrsw"></a>Mixed-size RSW</h3>
 <table id="rsw1" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 18. Mixed-size discrepancy (permitted by axiomatic models, forbidden by operational model)</caption>
+<caption class="title">Table 49. Mixed-size discrepancy (permitted by axiomatic models, forbidden by operational model)</caption>
 <colgroup>
 <col>
 <col>
@@ -3785,7 +3727,7 @@ would be compatible with the RVWMO memory model:</p>
 </tbody>
 </table>
 <table id="rsw2" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 19. Mixed-size discrepancy (permitted by axiomatic models, forbidden by operational model)</caption>
+<caption class="title">Table 50. Mixed-size discrepancy (permitted by axiomatic models, forbidden by operational model)</caption>
 <colgroup>
 <col>
 <col>
@@ -3839,7 +3781,7 @@ would be compatible with the RVWMO memory model:</p>
 </tbody>
 </table>
 <table id="rsw3" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 20. Mixed-size discrepancy (permitted by axiomatic models, forbidden by operational model)</caption>
+<caption class="title">Table 51. Mixed-size discrepancy (permitted by axiomatic models, forbidden by operational model)</caption>
 <colgroup>
 <col>
 <col>
@@ -3901,7 +3843,7 @@ would be compatible with the RVWMO memory model:</p>
 <div class="paragraph">
 <p>There is a known discrepancy between the operational and axiomatic
 specifications within the family of mixed-size RSW variants shown in
-<a href="#rsw1">Table 18</a>-<a href="#rsw3">Table 20</a>.
+<a href="#rsw1">Table 49</a>-<a href="#rsw3">Table 51</a>.
 To address this, we may choose to add something like the following new
 PPO rule: Memory operation <em>a</em> precedes memory operation
 <em>b</em> in preserved program order (and hence also in the global
@@ -3944,21 +3886,20 @@ of this rule to RVWMO.</p>
     </div>
 
     <div id="social-icons" class="flex jc-between">
-        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
-        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
-        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"/></svg></a>
-        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"/><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
+        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
+        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"></path></svg></a>
+        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"></circle><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"></path></svg></a>
         <a href="https://risc-v-international.slack.com/join/shared_invite/zt-2y1w69wde-PdoN3fXovLlzoni~UaPrBA" title="Slack" target="_blank" rel="noopener noreferrer" class="slack-icon-link"><i class="fa fa-slack" aria-hidden="true"></i></a>
     </div>
 </footer>
 <script src="../../../_/js/vendor/import.js"></script>
 <script src="../../../_/js/site.js"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
-<script async
-    src="../../../_/js/vendor/spring-tabs.js"
-    data-sync-storage-key="docs:preferred-tab"></script>
+<script async="" src="../../../_/js/vendor/highlight.js"></script>
+<script async="" src="../../../_/js/vendor/spring-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
 <script src="../../../_/js/vendor/lunr.js"></script>
 <script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
-<script async src="../../../search-index.js"></script>
-  </body>
-</html>
+<script async="" src="../../../search-index.js"></script>
+  
+
+</body></html>

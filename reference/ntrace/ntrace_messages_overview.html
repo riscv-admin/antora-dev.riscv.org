@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
@@ -40,8 +38,8 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV" />
-        <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV" />
+        <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV">
+        <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV">
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -52,10 +50,7 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item home">
-          <a class="navbar-link"
-            href="../home/index.html"
-            aria-label="home"
-            title="home">
+          <a class="navbar-link" href="../home/index.html" aria-label="home" title="home">
             <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
               <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -65,21 +60,17 @@
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
         <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs" >
+          <input id="search-input" type="text" placeholder="Search the docs">
         </div>
         <div class="navbar-item" style="padding-left: 0;">
           <label class="theme-toggler">
-            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
-            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
-                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <path fill="currentColor"
-                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+            <input type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox">
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor" d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
                 </path>
               </svg>
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
-                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path fill="currentColor"
-                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
                 </path>
               </svg></span>
             <span class="text">light</span>
@@ -111,11 +102,7 @@
 </div>        <div class="nav-trees" data-component="techtrace">
           <div class="version-box">
             <select data-component="techtrace" class="select-version">
-                <option
-                  value="../techtrace/index.html"
-                  data-version="v2.0"
-                  
-                  selected>
+                <option value="../techtrace/index.html" data-version="v2.0" selected="">
                   v2.0
                 </option>
             </select>
@@ -127,55 +114,55 @@
     <span class="nav-text">Efficient Trace</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/index.html">Title Page</a>
+    <a class="nav-link" href="../techtrace/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/preamble.html">Copyright and license information</a>
+    <a class="nav-link" href="../techtrace/preamble.html">Copyright and license information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/preface.html">Preface</a>
+    <a class="nav-link" href="../techtrace/preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/introduction.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="../techtrace/introduction.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/control.html">Chapter 2. Control Interface</a>
+    <a class="nav-link" href="../techtrace/control.html">Chapter 2. Control Interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/branchTrace.html">Chapter 3. Branch Trace</a>
+    <a class="nav-link" href="../techtrace/branchTrace.html">Chapter 3. Branch Trace</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/ingressPort.html">Chapter 4. Ingress Port Requirements</a>
+    <a class="nav-link" href="../techtrace/ingressPort.html">Chapter 4. Ingress Port Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/filtering.html">Chapter 5. Filtering</a>
+    <a class="nav-link" href="../techtrace/filtering.html">Chapter 5. Filtering</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/timestamping.html">Chapter 6. Timestamping</a>
+    <a class="nav-link" href="../techtrace/timestamping.html">Chapter 6. Timestamping</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/payload.html">Chapter 7. Trace Payload Format</a>
+    <a class="nav-link" href="../techtrace/payload.html">Chapter 7. Trace Payload Format</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/dataTracePayload.html">Chapter 8. Data Trace Payload Format</a>
+    <a class="nav-link" href="../techtrace/dataTracePayload.html">Chapter 8. Data Trace Payload Format</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/exampleAlgorithm.html">Chapter 9. Example Reference Encoding Algorithm</a>
+    <a class="nav-link" href="../techtrace/exampleAlgorithm.html">Chapter 9. Example Reference Encoding Algorithm</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/discovery.html">Chapter 10. Trace Discovery and Configuration</a>
+    <a class="nav-link" href="../techtrace/discovery.html">Chapter 10. Trace Discovery and Configuration</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/decoder.html">Chapter 11. Example Trace Decoder</a>
+    <a class="nav-link" href="../techtrace/decoder.html">Chapter 11. Example Trace Decoder</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/exampleCodeSnippets.html">Chapter 12. Example Code Snippets</a>
+    <a class="nav-link" href="../techtrace/exampleCodeSnippets.html">Chapter 12. Example Code Snippets</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/fragmentCodeAndTransport.html">Chapter 13. Fragment Code and Transport</a>
+    <a class="nav-link" href="../techtrace/fragmentCodeAndTransport.html">Chapter 13. Fragment Code and Transport</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../techtrace/future.html">Chapter 14. Future Work</a>
+    <a class="nav-link" href="../techtrace/future.html">Chapter 14. Future Work</a>
   </li>
 </ul>
   </li>
@@ -185,11 +172,7 @@
         <div class="nav-trees" data-component="ntrace">
           <div class="version-box">
             <select data-component="ntrace" class="select-version">
-                <option
-                  value="index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -201,55 +184,55 @@
     <span class="nav-text">N-Trace</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="index.html">Title Page</a>
+    <a class="nav-link" href="index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_changelog.html">Change Log</a>
+    <a class="nav-link" href="ntrace_changelog.html">Change Log</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_copyright.html">Copyright and License</a>
+    <a class="nav-link" href="ntrace_copyright.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_contributors.html">Contributors</a>
+    <a class="nav-link" href="ntrace_contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_introduction.html">Chapter 1. Introduction to N-Trace</a>
+    <a class="nav-link" href="ntrace_introduction.html">Chapter 1. Introduction to N-Trace</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_ingress_port.html">Chapter 2. Trace Ingress Port</a>
+    <a class="nav-link" href="ntrace_ingress_port.html">Chapter 2. Trace Ingress Port</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_transmission.html">Chapter 3. Transmission Protocol</a>
+    <a class="nav-link" href="ntrace_transmission.html">Chapter 3. Transmission Protocol</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_controls.html">Chapter 4. Trace Controls</a>
+    <a class="nav-link" href="ntrace_controls.html">Chapter 4. Trace Controls</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_modes.html">Chapter 5. Trace Modes</a>
+    <a class="nav-link" href="ntrace_modes.html">Chapter 5. Trace Modes</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="ntrace_messages_overview.html">Chapter 6. Messages Overview</a>
+    <a class="nav-link" href="ntrace_messages_overview.html">Chapter 6. Messages Overview</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_messages_details.html">Chapter 7. Messages Details</a>
+    <a class="nav-link" href="ntrace_messages_details.html">Chapter 7. Messages Details</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_field_encoding.html">Chapter 8. Field Encoding</a>
+    <a class="nav-link" href="ntrace_field_encoding.html">Chapter 8. Field Encoding</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_optimizations.html">Chapter 9. Optimization Extensions</a>
+    <a class="nav-link" href="ntrace_optimizations.html">Chapter 9. Optimization Extensions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_generation_rules.html">Chapter 10. Message Generation Rules</a>
+    <a class="nav-link" href="ntrace_generation_rules.html">Chapter 10. Message Generation Rules</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_decoding.html">Chapter 11. Decoding Guidelines</a>
+    <a class="nav-link" href="ntrace_decoding.html">Chapter 11. Decoding Guidelines</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_nexus_compliance.html">Chapter 12. Nexus Compliance</a>
+    <a class="nav-link" href="ntrace_nexus_compliance.html">Chapter 12. Nexus Compliance</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ntrace_additional.html">Chapter 13. Additional Material</a>
+    <a class="nav-link" href="ntrace_additional.html">Chapter 13. Additional Material</a>
   </li>
 </ul>
   </li>
@@ -259,11 +242,7 @@
         <div class="nav-trees" data-component="qos">
           <div class="version-box">
             <select data-component="qos" class="select-version">
-                <option
-                  value="../qos/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../qos/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -275,34 +254,34 @@
     <span class="nav-text">QoS Register Interface</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../qos/index.html">Title Page</a>
+    <a class="nav-link" href="../qos/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../qos/qos_preamble.html">Copyright and license information</a>
+    <a class="nav-link" href="../qos/qos_preamble.html">Copyright and license information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../qos/qos_contributors.html">Contributors</a>
+    <a class="nav-link" href="../qos/qos_contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../qos/qos_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="../qos/qos_intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../qos/qos_identifiers.html">Chapter 2. QoS Identifiers</a>
+    <a class="nav-link" href="../qos/qos_identifiers.html">Chapter 2. QoS Identifiers</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../qos/qos_capacity.html">Chapter 3. Capacity-controller QoS Register Interface</a>
+    <a class="nav-link" href="../qos/qos_capacity.html">Chapter 3. Capacity-controller QoS Register Interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../qos/qos_bandwidth.html">Chapter 4. Bandwidth-controller QoS Register Interface</a>
+    <a class="nav-link" href="../qos/qos_bandwidth.html">Chapter 4. Bandwidth-controller QoS Register Interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../qos/qos_iommu.html">Chapter 5. IOMMU Extension for QoS ID</a>
+    <a class="nav-link" href="../qos/qos_iommu.html">Chapter 5. IOMMU Extension for QoS ID</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../qos/qos_hw_guidelines.html">Chapter 6. Hardware Guidelines</a>
+    <a class="nav-link" href="../qos/qos_hw_guidelines.html">Chapter 6. Hardware Guidelines</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../qos/qos_sw_guidelines.html">Chapter 7. Software Guidelines</a>
+    <a class="nav-link" href="../qos/qos_sw_guidelines.html">Chapter 7. Software Guidelines</a>
   </li>
 </ul>
   </li>
@@ -312,11 +291,7 @@
         <div class="nav-trees" data-component="reri">
           <div class="version-box">
             <select data-component="reri" class="select-version">
-                <option
-                  value="../reri/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../reri/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -328,22 +303,22 @@
     <span class="nav-text">RERI Architecture</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../reri/index.html">Title Page</a>
+    <a class="nav-link" href="../reri/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../reri/reri_copyright.html">Copyright and License Information</a>
+    <a class="nav-link" href="../reri/reri_copyright.html">Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../reri/reri_contributors.html">Contributors</a>
+    <a class="nav-link" href="../reri/reri_contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../reri/reri_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="../reri/reri_intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../reri/reri_err_reporting.html">Chapter 2. Error Reporting</a>
+    <a class="nav-link" href="../reri/reri_err_reporting.html">Chapter 2. Error Reporting</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../reri/reri_bibliography.html">Chapter 3. Bibliography</a>
+    <a class="nav-link" href="../reri/reri_bibliography.html">Chapter 3. Bibliography</a>
   </li>
 </ul>
   </li>
@@ -353,11 +328,7 @@
         <div class="nav-trees" data-component="connectors">
           <div class="version-box">
             <select data-component="connectors" class="select-version">
-                <option
-                  value="../connectors/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../connectors/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -369,31 +340,31 @@
     <span class="nav-text">Trace Connectors</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../connectors/index.html">Title Page</a>
+    <a class="nav-link" href="../connectors/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../connectors/connectors_changelog.html">Change Log</a>
+    <a class="nav-link" href="../connectors/connectors_changelog.html">Change Log</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../connectors/connectors_copyright.html">Copyright and License</a>
+    <a class="nav-link" href="../connectors/connectors_copyright.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../connectors/connectors_contributors.html">Contributors</a>
+    <a class="nav-link" href="../connectors/connectors_contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../connectors/connectors_debug_trace.html">Chapter 1. Debug and Trace Extensions</a>
+    <a class="nav-link" href="../connectors/connectors_debug_trace.html">Chapter 1. Debug and Trace Extensions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../connectors/connectors_mipi20.html">Chapter 2. MIPI20 Connector</a>
+    <a class="nav-link" href="../connectors/connectors_mipi20.html">Chapter 2. MIPI20 Connector</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../connectors/connectors_mictor38.html">Chapter 3. Mictor-38 Connector</a>
+    <a class="nav-link" href="../connectors/connectors_mictor38.html">Chapter 3. Mictor-38 Connector</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../connectors/connectors_adapters.html">Chapter 4. Adapters and On-Board Debug</a>
+    <a class="nav-link" href="../connectors/connectors_adapters.html">Chapter 4. Adapters and On-Board Debug</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../connectors/connectors_rationale.html">Chapter 5. Rationale and Standards</a>
+    <a class="nav-link" href="../connectors/connectors_rationale.html">Chapter 5. Rationale and Standards</a>
   </li>
 </ul>
   </li>
@@ -403,11 +374,7 @@
         <div class="nav-trees" data-component="tci">
           <div class="version-box">
             <select data-component="tci" class="select-version">
-                <option
-                  value="../tci/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../tci/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -419,49 +386,49 @@
     <span class="nav-text">Trace Control Interface</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/index.html">Title Page</a>
+    <a class="nav-link" href="../tci/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/tci_changelog.html">Change Log</a>
+    <a class="nav-link" href="../tci/tci_changelog.html">Change Log</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/tci_copyright.html">Copyright and License</a>
+    <a class="nav-link" href="../tci/tci_copyright.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/tci_contributors.html">Contributors</a>
+    <a class="nav-link" href="../tci/tci_contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/tci_introduction.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="../tci/tci_introduction.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/tci_protocols.html">Chapter 2. Trace Protocols and Control</a>
+    <a class="nav-link" href="../tci/tci_protocols.html">Chapter 2. Trace Protocols and Control</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/tci_system_overview.html">Chapter 3. Trace System Overview</a>
+    <a class="nav-link" href="../tci/tci_system_overview.html">Chapter 3. Trace System Overview</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/tci_control_interface.html">Chapter 4. Trace Control Interface Overview</a>
+    <a class="nav-link" href="../tci/tci_control_interface.html">Chapter 4. Trace Control Interface Overview</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/tci_versioning.html">Chapter 5. Versioning of Components</a>
+    <a class="nav-link" href="../tci/tci_versioning.html">Chapter 5. Versioning of Components</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/tci_encoder_control.html">Chapter 6. Trace Encoder Control Interface</a>
+    <a class="nav-link" href="../tci/tci_encoder_control.html">Chapter 6. Trace Encoder Control Interface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/tci_ram_sink.html">Chapter 7. Trace RAM Sink</a>
+    <a class="nav-link" href="../tci/tci_ram_sink.html">Chapter 7. Trace RAM Sink</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/tci_funnel.html">Chapter 8. Trace Funnel</a>
+    <a class="nav-link" href="../tci/tci_funnel.html">Chapter 8. Trace Funnel</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/tci_pib_sink.html">Chapter 9. Trace PIB Sink</a>
+    <a class="nav-link" href="../tci/tci_pib_sink.html">Chapter 9. Trace PIB Sink</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/tci_atb_bridge.html">Chapter 10. Trace ATB Bridge</a>
+    <a class="nav-link" href="../tci/tci_atb_bridge.html">Chapter 10. Trace ATB Bridge</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../tci/tci_additional.html">Chapter 11. Additional Material</a>
+    <a class="nav-link" href="../tci/tci_additional.html">Chapter 11. Additional Material</a>
   </li>
 </ul>
   </li>
@@ -471,11 +438,7 @@
         <div class="nav-trees" data-component="etrace">
           <div class="version-box">
             <select data-component="etrace" class="select-version">
-                <option
-                  value="../etrace/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../etrace/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -485,22 +448,22 @@
   <li class="nav-item" data-depth="5">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/index.html">Title Page</a>
+    <a class="nav-link" href="../etrace/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/etrace-copyright.html">Copyright</a>
+    <a class="nav-link" href="../etrace/etrace-copyright.html">Copyright</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="../etrace/intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/contributors.html">Chapter 2. Contributors</a>
+    <a class="nav-link" href="../etrace/contributors.html">Chapter 2. Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/encapsulation.html">Chapter 3. Encapsulation Format</a>
+    <a class="nav-link" href="../etrace/encapsulation.html">Chapter 3. Encapsulation Format</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/e-trace-specifics.html">Chapter 4. E-Trace Specifics</a>
+    <a class="nav-link" href="../etrace/e-trace-specifics.html">Chapter 4. E-Trace Specifics</a>
   </li>
 </ul>
   </li>
@@ -535,57 +498,32 @@
 <aside class="sidebar">
   <div class="content">
     <div class="tag-toggle-container">
-      <button
-        class="tag-toggle-btn"
-        type="button"
-        onclick="document.documentElement.classList.toggle('tag-highlight-enabled');"
-      >
+      <button class="tag-toggle-btn" type="button" onclick="document.documentElement.classList.toggle('tag-highlight-enabled');">
         <div class="tag-toggle-switch"></div>
         <span id="tag-toggle-label">Normative Rules</span>
       </button>
     </div>
-    <div
-      class="toc"
-      data-title=""
-      data-levels="5"
-    >
+    <div class="toc" data-title="" data-levels="5">
       <div class="toc-menu"></div>
     </div>
     <div class="sidebar-links">
         <a href="https://github.com/riscv-non-isa/tg-nexus-trace/issues/new" target="_blank" title="Issues">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          ><path
-              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
-            ></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
           Report a Problem
         </a>
         <a href="https://github.com/riscv-non-isa/tg-nexus-trace" target="_blank" title="GitHub">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="512px"
-            id="Layer_1"
-            version="1.1"
-            viewBox="0 0 512 512"
-            width="512px"
-          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
-              ]]></style><g><path
-                class="st0"
-                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
-              ></path></g></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512px"><style type="text/css">&lt; .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]&gt;</style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
           GitHub Project
         </a>
 
         <a href="https://riscv.atlassian.net/wiki/external/ZTUxYTJmNWRkYzhmNDM4ZDg5OWNlMmQxODMyYjY3YjI" target="_blank" rel="noopener noreferrer" class="sidebar-link">
-          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"/><circle cx="148.5" cy="250" r="31.5" fill="currentColor"/><circle cx="250" cy="250" r="31.5" fill="currentColor"/><circle cx="351.5" cy="250" r="31.5" fill="currentColor"/></svg>
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"></circle><circle cx="148.5" cy="250" r="31.5" fill="currentColor"></circle><circle cx="250" cy="250" r="31.5" fill="currentColor"></circle><circle cx="351.5" cy="250" r="31.5" fill="currentColor"></circle></svg>
           More Details
         </a>
       
 
-          <a href="_attachments/RISC-V-N-Trace.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
+          <a href="_attachments/RISC-V-N-Trace.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download="">
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -605,7 +543,7 @@
 <div class="sectionbody">
 <div class="admonitionblock important">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-important" title="Important"></i>
 </td>
@@ -613,7 +551,7 @@
 The terminology <code>Indirect Branch</code> as used by the IEEE-5001 Nexus Standard may lead to confusion, given that the RISC-V ISA exclusively permits direct conditional branches, which are always relative. Furthermore, the RISC-V ISA makes a distinction between 'jump' (unconditional flow change) and 'branch' (conditional flow change), a differentiation not observed in Nexus terminology, where any flow change, including exceptions and interrupts, is uniformly referred to as a 'branch'. This specification employs the terms 'branch' and 'jump' as defined by RISC-V ISA.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="sect2">
 <h3 id="6-1-1-fields-in-messages"><a class="anchor" href="#6-1-1-fields-in-messages"></a>6.1.1. Fields in Messages</h3>
@@ -825,7 +763,7 @@ The terminology <code>Indirect Branch</code> as used by the IEEE-5001 Nexus Stan
 </table>
 <div class="admonitionblock important">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-important" title="Important"></i>
 </td>
@@ -833,11 +771,11 @@ The terminology <code>Indirect Branch</code> as used by the IEEE-5001 Nexus Stan
 Any message may include the optional <a href="#field_TSTAMP">TSTAMP</a> <strong>[Var,Cfg]</strong> field as the very last field of a message. It must be enabled by <a href="#trTsEnable">trTsEnable</a> control bit. Timestamp field always starts at byte-boundary (as it is always preceded by variable-length field). See <a href="#Timestamp Reporting">Timestamp Reporting</a> chapter for more details.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div id="msg_other" class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -847,7 +785,7 @@ However, decoders should provide an option to display/dump them and/or generate 
 <strong>Vendor Defined</strong> messages can be used for prototyping, debugging, validation and maintenance purposes.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Reference code header <a href="https://github.com/riscv-non-isa/tg-nexus-trace/blob/main/refcode/c/NexRvMsg.h">NexRvMsg.h</a> defines all N-Trace messages in machine-readable format. Here is small snipped from this file as an example:</p>
@@ -889,7 +827,7 @@ However, decoders should provide an option to display/dump them and/or generate 
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -897,7 +835,7 @@ However, decoders should provide an option to display/dump them and/or generate 
 Reference code is using plain C-style identifiers, so the field name as <strong>B-TYPE</strong> will become <strong>BTYPE</strong>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -1005,7 +943,7 @@ The U-ADDR field is always sent together with the <a href="#field_B-TYPE">B-TYPE
 <p>IEEE-5001 Nexus Standard does not define limits for variable-length fields, but N-Trace provides some limits. It will help to write efficient decoding software but is not limiting hardware in any way.</p>
 </div>
 <table id="Max_Field_Sizes" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. Maximum Field Sizes</caption>
+<caption class="title">Table 9. Maximum Field Sizes</caption>
 <colgroup>
 <col style="width: 10%;">
 <col style="width: 25%;">
@@ -1096,21 +1034,20 @@ The U-ADDR field is always sent together with the <a href="#field_B-TYPE">B-TYPE
     </div>
 
     <div id="social-icons" class="flex jc-between">
-        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
-        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
-        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"/></svg></a>
-        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"/><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
+        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
+        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"></path></svg></a>
+        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"></circle><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"></path></svg></a>
         <a href="https://risc-v-international.slack.com/join/shared_invite/zt-2y1w69wde-PdoN3fXovLlzoni~UaPrBA" title="Slack" target="_blank" rel="noopener noreferrer" class="slack-icon-link"><i class="fa fa-slack" aria-hidden="true"></i></a>
     </div>
 </footer>
 <script src="../_/js/vendor/import.js"></script>
 <script src="../_/js/site.js"></script>
-<script async src="../_/js/vendor/highlight.js"></script>
-<script async
-    src="../_/js/vendor/spring-tabs.js"
-    data-sync-storage-key="docs:preferred-tab"></script>
+<script async="" src="../_/js/vendor/highlight.js"></script>
+<script async="" src="../_/js/vendor/spring-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
 <script src="../_/js/vendor/lunr.js"></script>
 <script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
-<script async src="../search-index.js"></script>
-  </body>
-</html>
+<script async="" src="../search-index.js"></script>
+  
+
+</body></html>

@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>"V" Standard Extension for Vector Operations, Version 1.0 :: RISC-V Ratified Specifications Library</title>
@@ -40,8 +38,8 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://riscv.org">
-        <img class="riscvlogo riscvlogo--light" src="../../../_/img/risc-v_logo.svg" alt="RISCV" />
-        <img class="riscvlogo riscvlogo--dark" src="../../../_/img/risc-v_logo_white.svg" alt="RISCV" />
+        <img class="riscvlogo riscvlogo--light" src="../../../_/img/risc-v_logo.svg" alt="RISCV">
+        <img class="riscvlogo riscvlogo--dark" src="../../../_/img/risc-v_logo_white.svg" alt="RISCV">
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -52,10 +50,7 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item home">
-          <a class="navbar-link"
-            href="../../../home/index.html"
-            aria-label="home"
-            title="home">
+          <a class="navbar-link" href="../../../home/index.html" aria-label="home" title="home">
             <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
               <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -65,21 +60,17 @@
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
         <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs" >
+          <input id="search-input" type="text" placeholder="Search the docs">
         </div>
         <div class="navbar-item" style="padding-left: 0;">
           <label class="theme-toggler">
-            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
-            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
-                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <path fill="currentColor"
-                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+            <input type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox">
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon" class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor" d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
                 </path>
               </svg>
-              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
-                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path fill="currentColor"
-                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun" class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor" d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
                 </path>
               </svg></span>
             <span class="text">light</span>
@@ -111,25 +102,13 @@
 </div>        <div class="nav-trees" data-component="isa">
           <div class="version-box">
             <select data-component="isa" class="select-version">
-                <option
-                  value="../../index.html"
-                  data-version="v20260120"
-                  
-                  >
+                <option value="../../index.html" data-version="v20260120">
                   20260120
                 </option>
-                <option
-                  value="../../v20250508/index.html"
-                  data-version="v20250508"
-                  
-                  >
+                <option value="../../v20250508/index.html" data-version="v20250508">
                   20250508
                 </option>
-                <option
-                  value="../index.html"
-                  data-version="v20240411"
-                  
-                  selected>
+                <option value="../index.html" data-version="v20240411" selected="">
                   20240411
                 </option>
             </select>
@@ -141,136 +120,136 @@
     <span class="nav-text">Volume I: RISC-V Unprivileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="unpriv-index.html">Unprivileged Architecture</a>
+    <a class="nav-link" href="unpriv-index.html">Unprivileged Architecture</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="unpriv-contributors.html">Preamble</a>
+    <a class="nav-link" href="unpriv-contributors.html">Preamble</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="colophon.html">Preface</a>
+    <a class="nav-link" href="colophon.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32.html#sec:rv32">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link" href="rv32.html#sec:rv32">Chapter 2. RV32I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv32e.html#sec:rv32e">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
+    <a class="nav-link" href="rv32e.html#sec:rv32e">Chapter 3. RV32E and RV64E Base Integer Instruction Sets, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
+    <a class="nav-link" href="rv64.html">Chapter 4. RV64I Base Integer Instruction Set, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv128.html">Chapter 5. RV128I Base Integer Instruction Set, Version 1.7</a>
+    <a class="nav-link" href="rv128.html">Chapter 5. RV128I Base Integer Instruction Set, Version 1.7</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zifencei.html">Chapter 6. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
+    <a class="nav-link" href="zifencei.html">Chapter 6. "Zifencei" Extension for Instruction-Fetch Fence, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicsr.html#zicsr">Chapter 7. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
+    <a class="nav-link" href="zicsr.html#zicsr">Chapter 7. "Zicsr", Extension for Control and Status Register (CSR) Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="counters.html#sec:counters">Chapter 8. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
+    <a class="nav-link" href="counters.html#sec:counters">Chapter 8. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintntl.html">Chapter 9. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+    <a class="nav-link" href="zihintntl.html">Chapter 9. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zihintpause.html">Chapter 10. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
+    <a class="nav-link" href="zihintpause.html">Chapter 10. "Zihintpause" Extension for Pause Hint, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zimop.html">Chapter 11. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
+    <a class="nav-link" href="zimop.html">Chapter 11. "Zimop" Extension for May-Be-Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zicond.html">Chapter 12. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
+    <a class="nav-link" href="zicond.html">Chapter 12. "Zicond" Extension for Integer Conditional Operations, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="m-st-ext.html">Chapter 13. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
+    <a class="nav-link" href="m-st-ext.html">Chapter 13. "M" Extension for Integer Multiplication and Division, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="a-st-ext.html">Chapter 14. "A" Extension for Atomic Instructions, Version 2.1</a>
+    <a class="nav-link" href="a-st-ext.html">Chapter 14. "A" Extension for Atomic Instructions, Version 2.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zawrs.html">Chapter 15. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
+    <a class="nav-link" href="zawrs.html">Chapter 15. "Zawrs" Extension for Wait-on-Reservation-Set instructions, Version 1.01</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zacas.html">Chapter 16. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
+    <a class="nav-link" href="zacas.html">Chapter 16. "Zacas" Extension for Atomic Compare-and-Swap (CAS) Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
+    <a class="nav-link" href="rvwmo.html">Chapter 17. RVWMO Memory Consistency Model, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
+    <a class="nav-link" href="ztso-st-ext.html">Chapter 18. "Ztso" Extension for Total Store Ordering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
+    <a class="nav-link" href="cmo.html">Chapter 19. "CMO" Extensions for Base Cache Management Operation ISA, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link" href="f-st-ext.html">Chapter 20. "F" Extension for Single-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link" href="d-st-ext.html">Chapter 21. "D" Extension for Double-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
+    <a class="nav-link" href="q-st-ext.html">Chapter 22. "Q" Extension for Quad-Precision Floating-Point, Version 2.2</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
+    <a class="nav-link" href="zfh.html">Chapter 23. "Zfh" and "Zfhmin" Extensions for Half-Precision Floating-Point, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfa.html">Chapter 24. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
+    <a class="nav-link" href="zfa.html">Chapter 24. "Zfa" Extension for Additional Floating-Point Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zfinx.html">Chapter 25. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
+    <a class="nav-link" href="zfinx.html">Chapter 25. "Zfinx", "Zdinx", "Zhinx", "Zhinxmin" Extensions for Floating-Point in Integer Registers, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="c-st-ext.html">Chapter 26. "C" Extension for Compressed Instructions, Version 2.0</a>
+    <a class="nav-link" href="c-st-ext.html">Chapter 26. "C" Extension for Compressed Instructions, Version 2.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="zc.html">Chapter 27. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
+    <a class="nav-link" href="zc.html">Chapter 27. "Zc*" Extension for Code Size Reduction, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="b-st-ext.html">Chapter 28. "B" Extension for Bit Manipulation, Version 1.0.0</a>
+    <a class="nav-link" href="b-st-ext.html">Chapter 28. "B" Extension for Bit Manipulation, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="j-st-ext.html">Chapter 29. "J" Extension for Dynamically Translated Languages, Version 1.0.0</a>
+    <a class="nav-link" href="j-st-ext.html">Chapter 29. "J" Extension for Dynamically Translated Languages, Version 1.0.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="p-st-ext.html">Chapter 30. "P" Extension for Packed SIMD Instructions, Version 1.0.0</a>
+    <a class="nav-link" href="p-st-ext.html">Chapter 30. "P" Extension for Packed SIMD Instructions, Version 1.0.0</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="v-st-ext.html">Chapter 31. "V" Standard Extension for Vector Operations, Version 1.0</a>
+    <a class="nav-link" href="v-st-ext.html">Chapter 31. "V" Standard Extension for Vector Operations, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="scalar-crypto.html">Chapter 32. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
+    <a class="nav-link" href="scalar-crypto.html">Chapter 32. Cryptography Extensions: Scalar &amp; Entropy Source Instructions, Version 1.0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-crypto.html">Chapter 33. Cryptography Extensions: Vector Instructions, Version 1.0</a>
+    <a class="nav-link" href="vector-crypto.html">Chapter 33. Cryptography Extensions: Vector Instructions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
+    <a class="nav-link" href="rv-32-64g.html">Chapter 34. RV32/64G Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
+    <a class="nav-link" href="extending.html">Chapter 35. Appendix: Extending the RISC-V ISA</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
+    <a class="nav-link" href="naming.html">Chapter 36. ISA Extension Naming Conventions</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="history.html">Chapter 37. Document Revision History</a>
+    <a class="nav-link" href="history.html">Chapter 37. Document Revision History</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
+    <a class="nav-link" href="mm-eplan.html">Appendix A. RVWMO Explanatory Material, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
+    <a class="nav-link" href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="vector-examples.html">Appendix C. Vector Assembly Code Examples</a>
+    <a class="nav-link" href="vector-examples.html">Appendix C. Vector Assembly Code Examples</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="calling-convention.html">Appendix D. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
+    <a class="nav-link" href="calling-convention.html">Appendix D. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a>
   </li>
 </ul>
   </li>
@@ -279,73 +258,73 @@
     <span class="nav-text">Volume II: RISC-V Privileged ISA Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-index.html">Privileged Architecture</a>
+    <a class="nav-link" href="../priv/priv-index.html">Privileged Architecture</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-contributors.html">Preamble</a>
+    <a class="nav-link" href="../priv/priv-contributors.html">Preamble</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-preface.html">Preface</a>
+    <a class="nav-link" href="../priv/priv-preface.html">Preface</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link" href="../priv/priv-intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
+    <a class="nav-link" href="../priv/priv-csrs.html">Chapter 2. Control and Status Registers (CSRs)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
+    <a class="nav-link" href="../priv/machine.html">Chapter 3. Machine-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
+    <a class="nav-link" href="../priv/smstateen.html">Chapter 4. "Smstateen/Ssstateen" Extensions, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
+    <a class="nav-link" href="../priv/indirect-csr.html">Chapter 5. "Smcsrind/Sscsrind" Indirect CSR Access, version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
+    <a class="nav-link" href="../priv/smepmp.html">Chapter 6. "Smepmp" Extension for PMP Enhancements, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
+    <a class="nav-link" href="../priv/smcntrpmf.html">Chapter 7. "Smcntrpmf" Cycke and Instret Privilege Mode Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
+    <a class="nav-link" href="../priv/rnmi.html">Chapter 8. "Smrnmi" Extension for Resumable Non-Maskable Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
+    <a class="nav-link" href="../priv/smcdeleg.html">Chapter 9. "Smcdeleg" Counter Delegation Extension, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/supervisor.html">Chapter 10. Supervisor-Level ISA, Version 1.13</a>
+    <a class="nav-link" href="../priv/supervisor.html">Chapter 10. Supervisor-Level ISA, Version 1.13</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svnapot.html">Chapter 11. "Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a>
+    <a class="nav-link" href="../priv/svnapot.html">Chapter 11. "Svnapot" Extension for NAPOT Translation Contiguity, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svpbmt.html">Chapter 12. "Svpbmt" Extension for Page-Based Memory Types, Version 1.0</a>
+    <a class="nav-link" href="../priv/svpbmt.html">Chapter 12. "Svpbmt" Extension for Page-Based Memory Types, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svinval.html">Chapter 13. "Svinval" Extension for Fine-Grained Address-Translation Cache Invalidation, Version 1.0</a>
+    <a class="nav-link" href="../priv/svinval.html">Chapter 13. "Svinval" Extension for Fine-Grained Address-Translation Cache Invalidation, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svadu.html">Chapter 14. "Svadu" Extension for Hardware Updating of A/D Bits, Version 1.0</a>
+    <a class="nav-link" href="../priv/svadu.html">Chapter 14. "Svadu" Extension for Hardware Updating of A/D Bits, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/svvptc.html">Chapter 15. "Svvptc" Extension for Obviating Memory-Management Instructions after Marking PTEs Valid, Version 1.0</a>
+    <a class="nav-link" href="../priv/svvptc.html">Chapter 15. "Svvptc" Extension for Obviating Memory-Management Instructions after Marking PTEs Valid, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sstc.html">Chapter 16. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
+    <a class="nav-link" href="../priv/sstc.html">Chapter 16. "Sstc" Extension for Supervisor-mode Timer Interrupts, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/sscofpmf.html">Chapter 17. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
+    <a class="nav-link" href="../priv/sscofpmf.html">Chapter 17. "Sscofpmf" Extension for Count Overflow and Mode-Based Filtering, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/hypervisor.html">Chapter 18. "H" Extension for Hypervisor Support, Version 1.0</a>
+    <a class="nav-link" href="../priv/hypervisor.html">Chapter 18. "H" Extension for Hypervisor Support, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
+    <a class="nav-link" href="../priv/priv-insns.html">Chapter 19. RISC-V Privileged Instruction Set Listings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../priv/priv-history.html">Chapter 20. History</a>
+    <a class="nav-link" href="../priv/priv-history.html">Chapter 20. History</a>
   </li>
 </ul>
   </li>
@@ -354,7 +333,7 @@
     <span class="nav-text">Bibliography</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../biblio/bibliography.html">Bibliography</a>
+    <a class="nav-link" href="../biblio/bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -364,11 +343,7 @@
         <div class="nav-trees" data-component="rvprofile">
           <div class="version-box">
             <select data-component="rvprofile" class="select-version">
-                <option
-                  value="../../../rvprofile/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../../../rvprofile/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -382,34 +357,34 @@
     <span class="nav-text">RISC-V Profiles</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/index.html">Title Page</a>
+    <a class="nav-link" href="../../../rvprofile/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/copyright.html">Copyright and License Information</a>
+    <a class="nav-link" href="../../../rvprofile/copyright.html">Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/changelog.html">Chapter 1. Changelog</a>
+    <a class="nav-link" href="../../../rvprofile/changelog.html">Chapter 1. Changelog</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/intro.html">Chapter 2. Introduction</a>
+    <a class="nav-link" href="../../../rvprofile/intro.html">Chapter 2. Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/profilevsplat.html">Chapter 3. Profiles versus Platforms</a>
+    <a class="nav-link" href="../../../rvprofile/profilevsplat.html">Chapter 3. Profiles versus Platforms</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/components.html">Chapter 4. Components of a Profile</a>
+    <a class="nav-link" href="../../../rvprofile/components.html">Chapter 4. Components of a Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/rva20.html">Chapter 5. RVA20 Profile</a>
+    <a class="nav-link" href="../../../rvprofile/rva20.html">Chapter 5. RVA20 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/rva22.html">Chapter 6. RVA22 Profile</a>
+    <a class="nav-link" href="../../../rvprofile/rva22.html">Chapter 6. RVA22 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/extensions.html">Chapter 7. New ISA Extensions</a>
+    <a class="nav-link" href="../../../rvprofile/extensions.html">Chapter 7. New ISA Extensions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvprofile/glossary.html">Glossary</a>
+    <a class="nav-link" href="../../../rvprofile/glossary.html">Glossary</a>
   </li>
 </ul>
   </li>
@@ -421,11 +396,7 @@
         <div class="nav-trees" data-component="rva23">
           <div class="version-box">
             <select data-component="rva23" class="select-version">
-                <option
-                  value="../../../rva23/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../../../rva23/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -439,22 +410,22 @@
     <span class="nav-text">RVA23 Profile</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/index.html">Title Page</a>
+    <a class="nav-link" href="../../../rva23/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/copyright.html">Chapter 1. Copyright and License Information</a>
+    <a class="nav-link" href="../../../rva23/copyright.html">Chapter 1. Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/rva-profile-overview-body.html">Chapter 2. RVA Profiles Rationale</a>
+    <a class="nav-link" href="../../../rva23/rva-profile-overview-body.html">Chapter 2. RVA Profiles Rationale</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/rv-profile-defined-extensions.html">Chapter 3. Profile-Defined Extensions</a>
+    <a class="nav-link" href="../../../rva23/rv-profile-defined-extensions.html">Chapter 3. Profile-Defined Extensions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/rva23-profiles.html">Chapter 4. RVA23 Profile</a>
+    <a class="nav-link" href="../../../rva23/rva23-profiles.html">Chapter 4. RVA23 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rva23/glossary-of-isa-extensions.html">Glossary of ISA Extensions</a>
+    <a class="nav-link" href="../../../rva23/glossary-of-isa-extensions.html">Glossary of ISA Extensions</a>
   </li>
 </ul>
   </li>
@@ -466,11 +437,7 @@
         <div class="nav-trees" data-component="rvb23">
           <div class="version-box">
             <select data-component="rvb23" class="select-version">
-                <option
-                  value="../../../rvb23/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
+                <option value="../../../rvb23/index.html" data-version="v1.0" selected="">
                   v1.0
                 </option>
             </select>
@@ -484,22 +451,22 @@
     <span class="nav-text">RVB23 Profile</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/index.html">Title Page</a>
+    <a class="nav-link" href="../../../rvb23/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/copyright.html">Chapter 1. Copyright and License Information</a>
+    <a class="nav-link" href="../../../rvb23/copyright.html">Chapter 1. Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/intro.html">Chapter 2. Introduction</a>
+    <a class="nav-link" href="../../../rvb23/intro.html">Chapter 2. Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/profile-defined.html">Chapter 3. Profile-Defined Extensions</a>
+    <a class="nav-link" href="../../../rvb23/profile-defined.html">Chapter 3. Profile-Defined Extensions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/rvb23.html">Chapter 4. RVB23 Profile</a>
+    <a class="nav-link" href="../../../rvb23/rvb23.html">Chapter 4. RVB23 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../../rvb23/glossary.html">Glossary of ISA Extensions</a>
+    <a class="nav-link" href="../../../rvb23/glossary.html">Glossary of ISA Extensions</a>
   </li>
 </ul>
   </li>
@@ -536,56 +503,31 @@
 <aside class="sidebar">
   <div class="content">
     <div class="tag-toggle-container">
-      <button
-        class="tag-toggle-btn"
-        type="button"
-        onclick="document.documentElement.classList.toggle('tag-highlight-enabled');"
-      >
+      <button class="tag-toggle-btn" type="button" onclick="document.documentElement.classList.toggle('tag-highlight-enabled');">
         <div class="tag-toggle-switch"></div>
         <span id="tag-toggle-label">Normative Rules</span>
       </button>
     </div>
-    <div
-      class="toc"
-      data-title=""V" Standard Extension for Vector Operations, Version 1.0"
-      data-levels="5"
-    >
+    <div class="toc" data-title="" v"="" standard="" extension="" for="" vector="" operations,="" version="" 1.0"="" data-levels="5">
       <div class="toc-menu"></div>
     </div>
     <div class="sidebar-links">
         <a href="https://github.com/riscv/riscv-isa-manual/issues/new" target="_blank" title="Issues">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          ><path
-              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
-            ></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"></path></svg>
           Report a Problem
         </a>
         <a href="https://github.com/riscv/riscv-isa-manual" target="_blank" title="GitHub">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="512px"
-            id="Layer_1"
-            version="1.1"
-            viewBox="0 0 512 512"
-            width="512px"
-          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
-              ]]></style><g><path
-                class="st0"
-                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
-              ></path></g></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512px"><style type="text/css">&lt; .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]&gt;</style><g><path class="st0" d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"></path></g></svg>
           GitHub Project
         </a>
 
         <a href="https://riscv.atlassian.net/wiki/external/MzM1NWFmYmFjNzlkNGMyMDg0NThjM2ZlODVkZTA3MDE" target="_blank" rel="noopener noreferrer" class="sidebar-link">
-          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"/><circle cx="148.5" cy="250" r="31.5" fill="currentColor"/><circle cx="250" cy="250" r="31.5" fill="currentColor"/><circle cx="351.5" cy="250" r="31.5" fill="currentColor"/></svg>
+          <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><circle cx="250" cy="250" r="193" fill="none" stroke="currentColor" stroke-width="23" stroke-miterlimit="10"></circle><circle cx="148.5" cy="250" r="31.5" fill="currentColor"></circle><circle cx="250" cy="250" r="31.5" fill="currentColor"></circle><circle cx="351.5" cy="250" r="31.5" fill="currentColor"></circle></svg>
           More Details
         </a>
 
-          <a href="../_attachments/riscv-unprivileged.pdf" target="_blank" rel="noopener noreferrer" class="sidebar-link" download>
+          <a href="../_attachments/riscv-unprivileged.pdf" target="_blank" rel="noopener noreferrer" class="sidebar-link" download="">
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -620,7 +562,7 @@
 <div class="sectionbody">
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -633,7 +575,7 @@ domains.</em></p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -645,7 +587,7 @@ domains.</em></p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -655,7 +597,7 @@ public review.  The spec will have a final update to version 2.0 at
 time of ratification.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>This spec includes the complete set of currently frozen vector
@@ -677,11 +619,11 @@ supported by each extension.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The maximum size in bits of a vector element that any operation can produce or consume, <em>ELEN</em> &#8805; 8, which
+<p>The maximum size in bits of a vector element that any operation can produce or consume, <em>ELEN</em> ≥ 8, which
 must be a power of 2.</p>
 </li>
 <li>
-<p>The number of bits in a single vector register, <em>VLEN</em> &#8805; ELEN, which must be a power of 2, and must be no greater than 2<sup>16</sup>.</p>
+<p>The number of bits in a single vector register, <em>VLEN</em> ≥ ELEN, which must be a power of 2, and must be no greater than 2<sup>16</sup>.</p>
 </li>
 </ol>
 </div>
@@ -691,21 +633,21 @@ architecture profiles may set further constraints on <em>ELEN</em> and <em>VLEN<
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Future extensions may allow ELEN > VLEN by holding one
+Future extensions may allow ELEN &gt; VLEN by holding one
 element using bits from multiple vector registers, but this current
 proposal does not include this option.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -718,7 +660,7 @@ software using the old configuration instructions does not see greater
 vector lengths.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The vector extension supports writing binary code that under certain
@@ -728,7 +670,7 @@ types and instructions.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -737,11 +679,11 @@ Code can be written that will expose differences in
 implementation parameters.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -751,12 +693,12 @@ migrated during execution between harts that have any difference in
 VLEN or ELEN parameters.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="31-3-vector-extension-programmers-model"><a class="anchor" href="#31-3-vector-extension-programmers-model"></a>31.3. Vector Extension Programmer&#8217;s Model</h2>
+<h2 id="31-3-vector-extension-programmers-model"><a class="anchor" href="#31-3-vector-extension-programmers-model"></a>31.3. Vector Extension Programmer’s Model</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The vector extension adds 32 vector registers, and seven unprivileged
@@ -826,7 +768,7 @@ base scalar RISC-V ISA.</p>
 </table>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -835,7 +777,7 @@ The four CSR numbers <code>0x00B</code>-<code>0x00E</code> are tentatively reser
 for future vector CSRs, some of which may be mirrored into <code>vcsr</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="sect2">
 <h3 id="31-3-1-vector-registers"><a class="anchor" href="#31-3-1-vector-registers"></a>31.3.1. Vector Registers</h3>
@@ -868,7 +810,7 @@ at any time, even when there is no change in vector state.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -877,7 +819,7 @@ Accurate setting of <code>mstatus.VS</code> is an optimization.  Software
 will typically use VS to reduce context-swap overhead.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If <code>mstatus.VS</code> is Dirty, <code>mstatus.SD</code> is 1;
@@ -890,7 +832,7 @@ field may exist even if <code>misa.V</code> is clear.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -900,7 +842,7 @@ vector emulation and simplifies handling of <code>mstatus.VS</code> in systems
 with writable <code>misa.V</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -948,7 +890,7 @@ past the current vector length in a vector result are handled.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -957,7 +899,7 @@ Allowing updates only via the <code>vset{i}vl{i}</code> instructions
 simplifies maintenance of the <code>vtype</code> register state.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The <code>vtype</code> register has five fields, <code>vill</code>, <code>vma</code>, <code>vta</code>,
@@ -971,7 +913,7 @@ written with zero, and non-zero values in this field are reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -980,7 +922,7 @@ This diagram shows the layout for RV32 systems, whereas in
 general <code>vill</code> should be at bit XLEN-1.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <table class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 2. <code>vtype</code> register layout</caption>
@@ -1031,7 +973,7 @@ general <code>vill</code> should be at bit XLEN-1.
 </table>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1044,11 +986,11 @@ combination in <code>vsew[1:0]</code> without requiring an additional storage
 bit to hold <code>vill</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1057,11 +999,11 @@ Further standard and custom vector extensions may extend these
 fields to support a greater variety of data types.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1079,7 +1021,7 @@ would allow these fields to be specified statically in the instruction
 encoding.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="sect3">
 <h4 id="31-3-4-1-vector-selected-element-width-vsew20"><a class="anchor" href="#31-3-4-1-vector-selected-element-width-vsew20"></a>31.3.4.1. Vector selected element width <code>vsew[2:0]</code></h4>
@@ -1137,7 +1079,7 @@ VLEN/SEW elements.</p>
 </table>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1147,7 +1089,7 @@ While it is anticipated the larger <code>vsew[2:0]</code> encodings
 formally <em>reserved</em> at this point.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <table class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 4. Example VLEN = 128 bits</caption>
@@ -1185,7 +1127,7 @@ formally <em>reserved</em> at this point.
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1202,7 +1144,7 @@ code path should be provided if it is not. Alternatively, a profile
 can mandate the minimum SEW at each LMUL setting.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect3">
@@ -1223,7 +1165,7 @@ register group.  Implementations must support LMUL integer values of
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1237,7 +1179,7 @@ add 32-bit values to produce 64-bit results, a double-width result
 requires twice the LMUL of the single-width inputs.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>LMUL can also be a fractional value, reducing the number of bits used
@@ -1247,7 +1189,7 @@ mixed-width values.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1267,14 +1209,14 @@ register-resident vectors improves efficiency relative to fewer longer
 register-resident vectors.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Implementations must provide fractional LMUL settings that allow the
 narrowest supported type to occupy a fraction of a vector register
-corresponding to the ratio of the narrowest supported type&#8217;s width to
-that of the largest supported type&#8217;s width.  In general, the
-requirement is to support LMUL &#8805; SEW<sub>MIN</sub>/ELEN, where SEW<sub>MIN</sub> is
+corresponding to the ratio of the narrowest supported type’s width to
+that of the largest supported type’s width.  In general, the
+requirement is to support LMUL ≥ SEW<sub>MIN</sub>/ELEN, where SEW<sub>MIN</sub> is
 the narrowest supported SEW value and ELEN is the widest supported SEW
 value.  In the standard extensions, SEW<sub>MIN</sub>=8.  For
 standard vector extensions with ELEN=32, fractional LMULs of 1/2 and
@@ -1283,7 +1225,7 @@ fractional LMULs of 1/2, 1/4, and 1/8 must be supported.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1296,7 +1238,7 @@ and SEW<sub>MIN</sub>=8, an LMUL of 1/8 would only provide four bits of
 storage in a vector register.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>For a given supported fractional LMUL setting, implementations must support
@@ -1309,7 +1251,7 @@ support these configurations.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1320,11 +1262,11 @@ future definition of LMUL&lt;SEW<sub>MIN</sub>/ELEN behavior, we
 consider the use of this case to be <em>reserved</em>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1333,7 +1275,7 @@ It is recommended that assemblers provide a warning (not an
 error) if a <code>vsetvli</code> instruction attempts to write an LMUL &lt; SEW<sub>MIN</sub>/ELEN.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>LMUL is set by the signed <code>vlmul</code> field in <code>vtype</code> (i.e., LMUL =
@@ -1425,7 +1367,7 @@ given the current SEW and LMUL settings as shown in the table below.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4*VLEN/SEW</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>v</code> <em>n</em>, &#8230;&#8203;, <code>v</code> <em>n</em>+3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>v</code> <em>n</em>, …​, <code>v</code> <em>n</em>+3</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
@@ -1434,7 +1376,7 @@ given the current SEW and LMUL settings as shown in the table below.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">8*VLEN/SEW</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>v</code> <em>n</em>, &#8230;&#8203;, <code>v</code> <em>n</em>+7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>v</code> <em>n</em>, …​, <code>v</code> <em>n</em>+7</p></td>
 </tr>
 </tbody>
 </table>
@@ -1533,7 +1475,7 @@ when the instruction is executed with the same inputs.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1546,11 +1488,11 @@ register.  This causes an inefficiency when these inactive or tail
 values are not required for subsequent calculations.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1560,11 +1502,11 @@ overwrite value to discourage software developers from depending on
 the value written.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1575,11 +1517,11 @@ policy. The <code>vta</code> and <code>vma</code> state bits must still be provi
 <code>vtype</code> for compatibility and to support thread migration.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1589,11 +1531,11 @@ tail-agnostic + mask-agnostic using tail-agnostic + mask-undisturbed
 to reduce implementation complexity.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1611,7 +1553,7 @@ using undisturbed within a granule that is actively operated on but
 renaming to all 1s for granules in the tail.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>In addition, except for mask load instructions, any element in the
@@ -1625,7 +1567,7 @@ bits of the mask register can be overwritten).</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1640,7 +1582,7 @@ destination mask tails as this would imply accessing memory past
 software intent.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The assembly syntax adds two mandatory flags to the <code>vsetvli</code> instruction:</p>
@@ -1660,7 +1602,7 @@ software intent.
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1675,7 +1617,7 @@ historical meaning of the instruction prior to introduction of these
 flags, it was decided to always require them in future assembly code.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect3">
@@ -1686,7 +1628,7 @@ instruction attempted to write an unsupported value to <code>vtype</code>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1695,7 +1637,7 @@ The <code>vill</code> bit is held in bit XLEN-1 of the CSR to support
 checking for illegal values with a branch on the sign bit.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If the <code>vill</code> bit is set, then any attempt to execute a vector instruction
@@ -1703,7 +1645,7 @@ that depends upon <code>vtype</code> will raise an illegal-instruction exception
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1712,7 +1654,7 @@ that depends upon <code>vtype</code> will raise an illegal-instruction exception
 upon <code>vtype</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>When the <code>vill</code> bit is set, the other XLEN-1 bits in <code>vtype</code> shall be
@@ -1734,19 +1676,19 @@ further detailed in Section <a href="#sec-inactive-defs">31.5.4. Prestart, Activ
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 The number of bits implemented in <code>vl</code> depends on the
-implementation&#8217;s maximum vector length of the smallest supported
+implementation’s maximum vector length of the smallest supported
 type. The smallest vector implementation with VLEN=32 and supporting
 SEW=8 would need at least six bits in <code>vl</code> to hold the values 0-32
 (VLEN=32, with LMUL=8 and SEW=8, yields VLMAX=32).
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -1757,7 +1699,7 @@ i.e., the vector register length in bytes.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1766,11 +1708,11 @@ The value in <code>vlenb</code> is a design-time constant in any
 implementation.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1780,7 +1722,7 @@ VLEN in bytes, and the code has to disturb current <code>vl</code> and <code>vty
 settings which require them to be saved and restored.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -1805,7 +1747,7 @@ zero at the end of execution.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1814,7 +1756,7 @@ All vector instructions, including <code>vset{i}vl{i}</code>, reset the <code>vs
 CSR to zero.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p><code>vstart</code> is not modified by vector instructions that raise illegal-instruction
@@ -1826,7 +1768,7 @@ the largest element index (one less than the maximum VLMAX).</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1836,7 +1778,7 @@ setting (8) and the smallest SEW setting (8), so VLMAX_max = 8*VLEN/8 = VLEN.  F
 represent indices from 0 through 255.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The use of <code>vstart</code> values greater than the largest element index for
@@ -1844,7 +1786,7 @@ the current <code>vtype</code> setting is reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1854,7 +1796,7 @@ of bounds.  It is not required to trap, as a possible future use of
 upper <code>vstart</code> bits is to store imprecise trap information.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The <code>vstart</code> CSR is writable by unprivileged code, but non-zero
@@ -1866,7 +1808,7 @@ instruction exception as defined below.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1875,7 +1817,7 @@ Making <code>vstart</code> visible to unprivileged code supports user-level
 threading libraries.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Implementations are permitted to raise illegal instruction exceptions when
@@ -1885,7 +1827,7 @@ the same <code>vtype</code> setting.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1897,11 +1839,11 @@ permitted to raise an illegal instruction exception when attempting to execute
 a vector arithmetic instruction when <code>vstart</code> is nonzero.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1915,7 +1857,7 @@ can be constrained to only occur at mutually supported <code>vstart</code>
 locations.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -1933,7 +1875,7 @@ to allow independent access, but is also reflected as a field in
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -1942,7 +1884,7 @@ A new rounding mode can be set while saving the original
 rounding mode using a single <code>csrwi</code> instruction.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The fixed-point rounding algorithm is specified as follows.
@@ -1981,7 +1923,7 @@ mode as specified in the following table.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rne</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">round-to-nearest-even</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>v[d-1] &amp; (v[d-2:0]&#8800;0 | v[d])</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>v[d-1] &amp; (v[d-2:0]≠0 | v[d])</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
@@ -1995,7 +1937,7 @@ mode as specified in the following table.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rod</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">round-to-odd (OR bits into LSB, aka "jam")</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>!v[d] &amp; v[d-1:0]&#8800;0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>!v[d] &amp; v[d-1:0]≠0</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -2072,7 +2014,7 @@ then restored with a single <code>vsetvl</code> instruction.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2081,14 +2023,14 @@ It is recommended that at reset, <code>vtype.vill</code> is set, the
 remaining bits in <code>vtype</code> are zero, and <code>vl</code> is set to zero.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The <code>vstart</code>, <code>vxrm</code>, <code>vxsat</code> CSRs can have arbitrary values at reset.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2098,7 +2040,7 @@ which will reset <code>vstart</code>.  The <code>vxrm</code> and <code>vxsat</co
 reset explicitly in software before use.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The vector registers can have arbitrary values at reset.</p>
@@ -2126,7 +2068,7 @@ costs, while externally preserving the simple software model.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2137,7 +2079,7 @@ operations to rearrange data if the register is accessed with a
 different EEW.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="sect2">
 <h3 id="31-4-1-mapping-for-lmul-1"><a class="anchor" href="#31-4-1-mapping-for-lmul-1"></a>31.4.1. Mapping for LMUL = 1</h3>
@@ -2147,7 +2089,7 @@ least-significant to most-significant bits of the vector register.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2159,7 +2101,7 @@ increasing bit index from right to left corresponding to increasing
 magnitude.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2334,7 +2276,7 @@ v4*n+3                  7               6</pre>
 <p>The following table shows each possible constant SEW/LMUL operating
 point for loops with mixed-width operations.  Each column represents a
 constant SEW/LMUL operating point.  Entries in table are the LMUL
-values that yield that column&#8217;s SEW/LMUL value for the datawidth on
+values that yield that column’s SEW/LMUL value for the datawidth on
 that row.  In each column, an LMUL setting for a datawidth indicates
 that it can be aligned with the other datawidths in the same column
 that also have an LMUL setting, such that all have the same VLMAX.</p>
@@ -2555,7 +2497,7 @@ of the current LMUL setting.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2567,11 +2509,11 @@ where the Zfinx vector extension has vector-scalar floating-point
 instructions taking their scalar argument from the <code>x</code> registers.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2586,7 +2528,7 @@ some implementations, but complicates high-performance designs and
 would prevent compatibility with the Zfinx ISA option.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -2625,7 +2567,7 @@ reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2636,7 +2578,7 @@ constraint reduces complexity for implementations that internally
 rearrange data dependent on EEW.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>A destination vector register group can overlap a source vector register
@@ -2666,7 +2608,7 @@ mask elements have EEW=1.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2675,7 +2617,7 @@ The overlap constraints are designed to support resumable
 exceptions in machines without register renaming.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Any instruction encoding that violates the overlap constraints is reserved.</p>
@@ -2687,7 +2629,7 @@ instruction is mask- and tail-agnostic, regardless of the setting of the
 </div>
 <div class="paragraph">
 <p>The largest vector register group used by an instruction can not be
-greater than 8 vector registers (i.e., EMUL&#8804;8), and if a vector
+greater than 8 vector registers (i.e., EMUL≤8), and if a vector
 instruction would require greater than 8 vector registers in a group,
 the instruction encoding is reserved.  For example, a widening
 operation that produces a widened vector register group result when
@@ -2715,7 +2657,7 @@ instruction is always supplied by vector register <code>v0</code>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2724,11 +2666,11 @@ Masks are held in vector registers, rather than in a separate mask
 register file, to reduce total architectural state and to simplify the ISA.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2737,7 +2679,7 @@ Future vector extensions may provide longer instruction
 encodings with space for a full mask register specifier.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The destination vector register group for a masked vector instruction
@@ -2748,7 +2690,7 @@ reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2756,7 +2698,7 @@ reserved.</p>
 This constraint supports restart with a non-zero <code>vstart</code> value.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Other vector registers can be used to hold working mask values, and
@@ -2809,7 +2751,7 @@ specified, unmasked vector execution (<code>vm=1</code>) is assumed.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2822,11 +2764,11 @@ complement mask values. The <code>.t</code> suffix on the masking operand also h
 to visually encode the use of a mask.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2836,7 +2778,7 @@ We only append it in contexts where a mask vector is subscripted,
 e.g., <code>v0.mask[i]</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -2844,7 +2786,7 @@ e.g., <code>v0.mask[i]</code>.
 <h3 id="sec-inactive-defs"><a class="anchor" href="#sec-inactive-defs"></a>31.5.4. Prestart, Active, Inactive, Body, and Tail Element Definitions</h3>
 <div class="paragraph">
 <p>The destination element indices operated on during a vector
-instruction&#8217;s execution can be divided into three disjoint subsets.</p>
+instruction’s execution can be divided into three disjoint subsets.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2860,7 +2802,7 @@ vector length setting in <code>vl</code>. The body can be split into two disjoin
 <div class="ulist">
 <ul>
 <li>
-<p>The <em>active</em> elements during a vector instruction&#8217;s execution are the
+<p>The <em>active</em> elements during a vector instruction’s execution are the
 elements within the body and where the current mask is enabled at that element
 position.  The active elements can raise exceptions and update the destination
 vector register group.</p>
@@ -2877,7 +2819,7 @@ overwritten with 1s.</p>
 </div>
 </li>
 <li>
-<p>The <em>tail</em> elements during a vector instruction&#8217;s execution are the
+<p>The <em>tail</em> elements during a vector instruction’s execution are the
 elements past the current vector length setting specified in <code>vl</code>.
 The tail elements do not raise exceptions, and do not update any
 destination vector register group unless tail agnostic is specified
@@ -2901,13 +2843,13 @@ register.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>When <code>vstart</code> &#8805; <code>vl</code>, there are no body elements, and no elements
+<p>When <code>vstart</code> ≥ <code>vl</code>, there are no body elements, and no elements
 are updated in any destination vector register group, including that
 no tail elements are updated with agnostic values.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2917,15 +2859,15 @@ elements, are updated in the destination vector register group
 regardless of <code>vstart</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Instructions that write an <code>x</code> register or <code>f</code> register
-do so even when <code>vstart</code> &#8805; <code>vl</code>, including when <code>vl</code>=0.</p>
+do so even when <code>vstart</code> ≥ <code>vl</code>, including when <code>vl</code>=0.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -2936,7 +2878,7 @@ general policy is to return the value 0 when the index is greater than
 VLMAX in the source vector register group.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -2998,7 +2940,7 @@ their arguments, and write the new value of <code>vl</code> into <code>rd</code>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3007,7 +2949,7 @@ This diagram shows the layout for RV32 systems, whereas in
 general <code>vill</code> should be at bit XLEN-1.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <table class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 7. <code>vtype</code> register layout</caption>
@@ -3096,7 +3038,7 @@ set to zero, and the <code>vl</code> register is also set to zero.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3111,7 +3053,7 @@ runtime interrogation of the supported vector unit configurations by
 checking if <code>vill</code> is clear for a given setting.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>A <code>vtype</code> value with <code>vill</code> set is treated as an unsupported
@@ -3124,7 +3066,7 @@ any location within the <code>vtype</code> value must result in <code>vill</code
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3136,7 +3078,7 @@ ensure that new code assuming unsupported vector features in <code>vtype</code>
 traps instead of executing incorrectly on an older implementation.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -3206,7 +3148,7 @@ Implementations may set <code>vill</code> in either case.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3222,15 +3164,15 @@ useful operation, and implementations can otherwise assume <code>vl</code> is no
 changed by this instruction to optimize their microarchitecture.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>For the <code>vsetivli</code> instruction, the AVL is encoded as a 5-bit
-zero-extended immediate (0&#8212;&#8203;31) in the <code>rs1</code> field.</p>
+zero-extended immediate (0—​31) in the <code>rs1</code> field.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3239,11 +3181,11 @@ The encoding of AVL for <code>vsetivli</code> is the same as for regular
 CSR immediate values.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3253,7 +3195,7 @@ dimensions of vectors are small and known to fit inside the vector
 registers, in which case there is no stripmining overhead.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -3265,13 +3207,13 @@ argument, then set <code>vl</code> obeying the following constraints:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>vl = AVL</code> if <code>AVL &#8804; VLMAX</code></p>
+<p><code>vl = AVL</code> if <code>AVL ≤ VLMAX</code></p>
 </li>
 <li>
-<p><code>ceil(AVL / 2) &#8804; vl &#8804; VLMAX</code> if <code>AVL &lt; (2 * VLMAX)</code></p>
+<p><code>ceil(AVL / 2) ≤ vl ≤ VLMAX</code> if <code>AVL &lt; (2 * VLMAX)</code></p>
 </li>
 <li>
-<p><code>vl = VLMAX</code> if <code>AVL &#8805; (2 * VLMAX)</code></p>
+<p><code>vl = VLMAX</code> if <code>AVL ≥ (2 * VLMAX)</code></p>
 </li>
 <li>
 <p>Deterministic on any given implementation for same input AVL and VLMAX values</p>
@@ -3287,10 +3229,10 @@ argument, then set <code>vl</code> obeying the following constraints:</p>
 <p><code>vl &gt; 0</code> if <code>AVL &gt; 0</code></p>
 </li>
 <li>
-<p><code>vl &#8804; VLMAX</code></p>
+<p><code>vl ≤ VLMAX</code></p>
 </li>
 <li>
-<p><code>vl &#8804; AVL</code></p>
+<p><code>vl ≤ AVL</code></p>
 </li>
 <li>
 <p>a value read from <code>vl</code> when used as the AVL argument to <code>vset{i}vl{i}</code> results in the same
@@ -3303,7 +3245,7 @@ value in <code>vl</code>, provided the resultant VLMAX equals the value of VLMAX
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3311,7 +3253,7 @@ value in <code>vl</code>, provided the resultant VLMAX equals the value of VLMAX
 <div class="paragraph">
 <p>The <code>vl</code> setting rules are designed to be sufficiently strict to
 preserve <code>vl</code> behavior across register spills and context swaps for
-<code>AVL &#8804; VLMAX</code>, yet flexible enough to enable implementations to improve
+<code>AVL ≤ VLMAX</code>, yet flexible enough to enable implementations to improve
 vector lane utilization for <code>AVL &gt; VLMAX</code>.</p>
 </div>
 <div class="paragraph">
@@ -3327,7 +3269,7 @@ Requirement 2 also allows an implementation to set vl to VLMAX for <code>VLMAX &
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -3526,7 +3468,7 @@ offsets.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3539,7 +3481,7 @@ operations were not defined to scale the element indices by the data
 EEW.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If the vector offset elements are narrower than XLEN, they are
@@ -3551,7 +3493,7 @@ offset elements.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3560,7 +3502,7 @@ A profile may place an upper limit on the maximum supported index
 EEW (e.g., only up to XLEN) smaller than ELEN.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The vector addressing modes are encoded using the 2-bit <code>mop[1:0]</code>
@@ -3664,7 +3606,7 @@ region, the element accesses can be initiated in any order.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -3673,7 +3615,7 @@ To provide ordered vector accesses to a strongly ordered IO
 region, the ordered indexed instructions should be used.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>For implementations with precise vector traps, exceptions on
@@ -4062,7 +4004,7 @@ policy.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4071,11 +4013,11 @@ policy.</p>
 they depend on <code>vtype</code> indirectly through its constraints on <code>vl</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4086,11 +4028,11 @@ versus other element load/store instructions.  To avoid software
 churn, these older assembly mnemonics are being retained as aliases.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4103,7 +4045,7 @@ and also reduce the cost of mask spill/fill by reducing need to change
 <code>vl</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -4140,7 +4082,7 @@ different dynamic executions of the same static instruction.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4150,7 +4092,7 @@ the immediate stride is <code>0</code> if the intent is to require all memory
 accesses are performed.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>When <code>rs2!=x0</code> and the value of <code>x[rs2]=0</code>, the implementation must
@@ -4159,7 +4101,7 @@ will not be ordered).</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4172,11 +4114,11 @@ non-idempotent memory regions, where by definition each access can be
 observed by a device, the optimization would not be possible.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4185,7 +4127,7 @@ When repeating ordered vector accesses to the same memory
 address are required, then an ordered indexed operation can be used.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -4225,7 +4167,7 @@ address are required, then an ordered indexed operation can be used.
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4235,11 +4177,11 @@ The assembler syntax for indexed loads and stores uses
 is of the index not the data.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4252,7 +4194,7 @@ software, as VSXEI previously meant "ordered" - and the opcode can be
 retained as an alias during transition to help reduce software churn.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -4317,7 +4259,7 @@ loop:
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4336,7 +4278,7 @@ without experiencing a trap.  This standard does not address possible
 security mitigations for fault-only-first instructions.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Even when an exception is not raised, implementations are permitted to process
@@ -4350,7 +4292,7 @@ set a <code>vstart</code> value.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4361,7 +4303,7 @@ should not reduce <code>vl</code> but instead should trigger the debug trap as
 otherwise the event might be lost.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -4372,7 +4314,7 @@ fields in memory to and from consecutively numbered vector registers.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4384,7 +4326,7 @@ arrays between memory and registers, and can support operations on
 into a separate vector register.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The three-bit <code>nf</code> field in the vector instruction encoding is an
@@ -4392,7 +4334,7 @@ unsigned integer that contains one less than the number of fields per
 segment, <em>NFIELDS</em>.</p>
 </div>
 <table id="fig-nf" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 14. NFIELDS Encoding</caption>
+<caption class="title">Table 26. NFIELDS Encoding</caption>
 <colgroup>
 <col style="width: 6.25%;">
 <col style="width: 6.25%;">
@@ -4457,12 +4399,12 @@ segment, <em>NFIELDS</em>.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The EMUL setting must be such that EMUL * NFIELDS &#8804; 8, otherwise
+<p>The EMUL setting must be such that EMUL * NFIELDS ≤ 8, otherwise
 the instruction encoding is reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4474,7 +4416,7 @@ the architectural register file, and the same as for regular
 operations with EMUL=8.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Each field will be held in successively numbered vector register
@@ -4482,7 +4424,7 @@ groups.  When EMUL&gt;1, each field will occupy a vector register group
 held in multiple successively numbered vector registers, and the
 vector register group for each field must follow the usual vector
 register alignment constraints (e.g., when EMUL=2 and NFIELDS=4, each
-field&#8217;s vector register group must start at an even vector register,
+field’s vector register group must start at an even vector register,
 but does not have to start at a multiple of 8 vector register number).</p>
 </div>
 <div class="paragraph">
@@ -4491,7 +4433,7 @@ would increment past 31, then the instruction encoding is reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4501,7 +4443,7 @@ a possible future longer instruction encoding that has more
 addressable vector registers.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The <code>vl</code> register gives the number of segments to move, which is
@@ -4516,7 +4458,7 @@ other even for ordered indexed segment loads and stores.</p>
 <div class="paragraph">
 <p>The <code>vstart</code> value is in units of whole segments.  If a trap occurs during
 access to a segment, it is implementation-defined whether a subset
-of the faulting segment&#8217;s accesses are performed before the trap is taken.</p>
+of the faulting segment’s accesses are performed before the trap is taken.</p>
 </div>
 <div class="sect3">
 <h4 id="31-7-8-1-vector-unit-stride-segment-loads-and-stores"><a class="anchor" href="#31-7-8-1-vector-unit-stride-segment-loads-and-stores"></a>31.7.8.1. Vector Unit-Stride Segment Loads and Stores</h4>
@@ -4526,7 +4468,7 @@ contiguous segments into multiple destination vector register groups.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4537,7 +4479,7 @@ additional instructions after the segment load brings data into the
 vector registers.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The assembler prefixes <code>vlseg</code>/<code>vsseg</code> are used for unit-stride
@@ -4607,7 +4549,7 @@ GPR argument.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4615,7 +4557,7 @@ GPR argument.</p>
 Negative and zero strides are supported.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4656,7 +4598,7 @@ with respect to each other.</p>
 <p>The data vector register group has EEW=SEW, EMUL=LMUL, while the index
 vector register group has EEW encoded in the instruction with
 EMUL=(EEW/SEW)*LMUL.
-The EMUL * NFIELDS &#8804; 8 constraint applies to the data vector register group.</p>
+The EMUL * NFIELDS ≤ 8 constraint applies to the data vector register group.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4685,7 +4627,7 @@ groups cannot overlap the source vector register group (specified by
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4694,7 +4636,7 @@ This constraint supports restart of indexed segment loads
 that raise exceptions partway through loading a structure.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -4721,7 +4663,7 @@ that raise exceptions partway through loading a structure.
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4735,7 +4677,7 @@ handlers, and OS context switches.  Software can determine the number
 of bytes transferred by reading the <code>vlenb</code> register.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The load instructions have an EEW encoded in the <code>mew</code> and <code>width</code>
@@ -4743,7 +4685,7 @@ fields following the pattern of regular unit-stride loads.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4757,14 +4699,14 @@ as a hint to indicate the destination register group will next be accessed
 with this EEW, which aids implementations that rearrange data internally.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The vector whole register store instructions are encoded similar to
 unmasked unit-stride store of elements with EEW=8.</p>
 </div>
 <div class="paragraph">
-<p>The <code>nf</code> field encodes how many vector registers to load and store using the NFIELDS encoding (Figure <a href="#fig-nf">Table 14</a>).
+<p>The <code>nf</code> field encodes how many vector registers to load and store using the NFIELDS encoding (Figure <a href="#fig-nf">Table 26</a>).
 The encoded number of registers must be a power of 2 and the vector
 register numbers must be aligned as with a vector register group,
 otherwise the instruction encoding is reserved.  NFIELDS
@@ -4779,8 +4721,8 @@ numbers are placed contiguously in memory.</p>
 <p>The instructions operate with an effective vector length,
 <code>evl</code>=NFIELDS*VLEN/EEW, regardless of current settings in <code>vtype</code> and
 <code>vl</code>.  The usual property that no elements are written if <code>vstart</code>
-&#8805; <code>vl</code> does not apply to these instructions.  Instead, no elements
-are written if <code>vstart</code> &#8805; <code>evl</code>.</p>
+≥ <code>vl</code> does not apply to these instructions.  Instead, no elements
+are written if <code>vstart</code> ≥ <code>evl</code>.</p>
 </div>
 <div class="paragraph">
 <p>The instructions operate similarly to unmasked unit-stride load and
@@ -4791,12 +4733,12 @@ register specified by <code>rs1</code>.</p>
 <p>Implementations are allowed to raise a misaligned address exception on
 whole register loads and stores if the base address is not naturally
 aligned to the larger of the size of the encoded EEW in bytes (EEW/8)
-or the implementation&#8217;s smallest supported SEW size in bytes
+or the implementation’s smallest supported SEW size in bytes
 (SEW<sub>MIN</sub>/8).</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4811,7 +4753,7 @@ environments can mandate the minimum alignment requirements to support
 an ABI.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4852,7 +4794,7 @@ an ABI.
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4861,11 +4803,11 @@ Implementations should raise illegal instruction exceptions on
 <code>vl&lt;nf&gt;r</code> instructions for EEW values that are not supported.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4882,7 +4824,7 @@ only two instructions (of which only one performs vector operations) are needed 
 dedicated instruction:
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -4906,11 +4848,11 @@ element.</p>
 </div>
 <div class="paragraph">
 <p>Support for misaligned vector memory accesses is independent of an
-implementation&#8217;s support for misaligned scalar memory accesses.</p>
+implementation’s support for misaligned scalar memory accesses.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4921,7 +4863,7 @@ hardware.  A separate PMA should be defined to determine if vector
 misaligned accesses are supported in the associated address range.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Vector misaligned memory accesses follow the same rules for atomicity
@@ -4952,7 +4894,7 @@ obeying RVWMO at the element level.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4961,11 +4903,11 @@ Ztso only imposes RVTSO at the instruction level; intra-instruction
 ordering follows RVWMO regardless of whether Ztso is implemented.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4973,7 +4915,7 @@ ordering follows RVWMO regardless of whether Ztso is implemented.
 More formal definitions required.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Instructions affected by the vector length register <code>vl</code> have a control
@@ -4983,7 +4925,7 @@ mask register, rather than a data dependency.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -4996,7 +4938,7 @@ memory before the mask value is known, without the need for
 a misspeculation-recovery mechanism.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -5137,12 +5079,12 @@ used to define sub-categories of vector instructions.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Integer operations are performed using unsigned or two&#8217;s-complement
+<p>Integer operations are performed using unsigned or two’s-complement
 signed integer arithmetic depending on the opcode.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5151,19 +5093,19 @@ In this discussion, fixed-point operations are
 considered to be integer operations.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>All standard vector floating-point arithmetic operations follow the
 IEEE-754/2008 standard.  All vector floating-point operations use the
 dynamic rounding mode in the <code>frm</code> register.  Use of the <code>frm</code> field
 when it contains an invalid rounding mode by any vector floating-point
-instruction&#8212;&#8203;even those that do not depend on the rounding mode, or
-when <code>vl</code>=0, or when <code>vstart</code> &#8805; <code>vl</code>--is reserved.</p>
+instruction—​even those that do not depend on the rounding mode, or
+when <code>vl</code>=0, or when <code>vstart</code> ≥ <code>vl</code>--is reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5174,7 +5116,7 @@ exceptions when the rounding mode is invalid to simplify control
 logic.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Vector-vector operations take two vectors of operands from vector
@@ -5205,14 +5147,14 @@ bits.</p>
 checked for a valid NaN-boxed value, in which case the
 least-significant SEW bits of the <code>f</code> register are used, else the
 canonical NaN value is used.  Vector instructions where any
-floating-point vector operand&#8217;s EEW is not a supported floating-point
+floating-point vector operand’s EEW is not a supported floating-point
 type width (which includes when FLEN &lt; SEW) are reserved.</p>
 </li>
 </ol>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5221,11 +5163,11 @@ Some instructions <em>zero</em>-extend the 5-bit immediate, and denote this
 by naming the immediate <code>uimm</code> in the assembly syntax.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5238,7 +5180,7 @@ rules as for an integer scalar operand (i.e., when XLEN &gt; SEW use the
 lowest SEW bits, when XLEN &lt; SEW use the sign-extended value).
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Vector arithmetic instructions are masked under control of the <code>vm</code>
@@ -5259,7 +5201,7 @@ vfop.vf  vd, vs2, rs1, vm # FP vector-scalar operation vd[i] = vs2[i] fop f[rs1]
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5271,7 +5213,7 @@ that instructions that read only one scalar register, read it from
 <code>rs1</code>, and that 5-bit immediates are sourced from the <code>rs1</code> field.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -5296,7 +5238,7 @@ vfop.vf vd, rs1, vs2, vm  # vd[i] = f[rs1] * vd[i] + vs2[i]</pre>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5308,7 +5250,7 @@ of the assembler for these ternary operations, as the multiply
 operands are always next to each other.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -5338,7 +5280,7 @@ vwop.wx  vd, vs2, rs1, vm  # integer vector-scalar      vd[i] = vs2[i] op x[rs1]
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5348,11 +5290,11 @@ confused with the use of a <code>w</code> suffix to mean word-sized operations i
 doubleword integers, so the <code>w</code> was moved to prefix.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5362,7 +5304,7 @@ from <code>vwf*</code> to be more consistent with any scalar widening
 floating-point operations that will be written as <code>fw*</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Widening instruction encodings must follow the constraints in Section
@@ -5381,7 +5323,7 @@ source vector register group (specified by <code>vs1</code>), this has the same
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5392,11 +5334,11 @@ here is motivated by the belief the chosen approach will require fewer
 <code>vtype</code> changes.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5405,7 +5347,7 @@ Compare operations that set a mask register are also
 implicitly a narrowing operation.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>A <code>vn*</code> prefix on the opcode is used to distinguish these instructions
@@ -5461,7 +5403,7 @@ vrsub.vi vd, vs2, imm, vm   # vd[i] = imm - vs2[i]</pre>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5471,7 +5413,7 @@ reverse-subtract instruction with a scalar operand of <code>x0</code>. An
 assembly pseudoinstruction <code>vneg.v vd,vs</code> = <code>vrsub.vx vd,vs,x0</code> is provided.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -5510,7 +5452,7 @@ vwsub.wx  vd, vs2, rs1, vm  # vector-scalar</pre>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5521,7 +5463,7 @@ pseudoinstructions <code>vwcvt.x.x.v vd,vs,vm</code> = <code>vwadd.vx vd,vs,x0,v
 <code>vwcvtu.x.x.v vd,vs,vm</code> = <code>vwaddu.vx vd,vs,x0,vm</code> are provided.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -5549,7 +5491,7 @@ below the minimum legal LMUL, the instruction encoding is reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5565,7 +5507,7 @@ extension instructions that can be used if an appropriate widening
 arithmetic instruction is not available.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -5687,7 +5629,7 @@ destination vector register is <code>v0</code>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5696,7 +5638,7 @@ This constraint corresponds to the constraint on masked vector
 operations that overwrite the mask register.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -5719,7 +5661,7 @@ vxor.vi vd, vs2, imm, vm    # vector-immediate</pre>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5729,7 +5671,7 @@ instruction provide a bitwise NOT operation.  This is provided as
 an assembler pseudoinstruction <code>vnot.v vd,vs,vm</code> = <code>vxor.vi vd,vs,-1,vm</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -5787,7 +5729,7 @@ operation).</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5796,11 +5738,11 @@ Future extensions might add support for versions that narrow to
 a destination that is 1/4 the width of the source.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5810,7 +5752,7 @@ shift instructions with a scalar operand of <code>x0</code>. An assembly
 pseudoinstruction is provided <code>vncvt.x.x.w vd,vs,vm</code> = <code>vnsrl.wx vd,vs,x0,vm</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -5898,7 +5840,7 @@ i      immediate</pre>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5912,11 +5854,11 @@ to 15 giving an effective <code>vmsltu.vi</code> range of 1 to 16 (Note,
 false).
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5930,7 +5872,7 @@ unsigned immediates in the range <code>2<sup>SEW</sup>-15</code> to <code>2<sup>
 true.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Similarly, <code>vmsge{u}.vi</code> is not provided and the compare is
@@ -5941,7 +5883,7 @@ immediate 0 is not useful as it is always true).</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5952,15 +5894,15 @@ polarity of mask value without using additional mask logical
 instructions.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>To reduce encoding space, the <code>vmsge{u}.vx</code> form is not directly
-provided, and so the <code>va &#8805; x</code> case requires special treatment.</p>
+provided, and so the <code>va ≥ x</code> case requires special treatment.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -5975,7 +5917,7 @@ current PoR is to omit these instructions and to synthesize where
 needed as described below.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The <code>vmsge{u}.vx</code> operation can be synthesized by reducing the
@@ -6094,7 +6036,7 @@ vmulhsu.vx vd, vs2, rs1, vm   # vector-scalar</pre>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6104,11 +6046,11 @@ unsigned-vector * signed-scalar product.  The scalar can be splatted
 to a vector, then a <code>vmulhsu.vv</code> used.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6121,7 +6063,7 @@ low half of product.  There is no possibility of overflow in these
 cases.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -6152,7 +6094,7 @@ extreme inputs.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6164,11 +6106,11 @@ operation, which would likely perform poorly on some
 microarchitectures versus others.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6177,7 +6119,7 @@ There is no instruction to perform a "scalar divide by vector"
 operation.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -6215,7 +6157,7 @@ in two forms, one that overwrites the addend or minuend
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6226,7 +6168,7 @@ floating-point <code>fnmsub</code> instruction definition.  Similarly for the
 <code>vnmsub</code> opcode.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -6323,7 +6265,7 @@ vmv.v.i vd, imm # vd[i] = imm</pre>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6332,11 +6274,11 @@ Mask values can be widened into SEW-width elements using a
 sequence <code>vmv.v.i vd, 0; vmerge.vim vd, vd, 1, v0</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6345,7 +6287,7 @@ The vector integer move instructions share the encoding with the vector
 merge instructions, but with <code>vm=1</code> and <code>vs2=v0</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The form <code>vmv.v.v vd, vd</code>, which leaves body elements unchanged,
@@ -6354,7 +6296,7 @@ with an EEW equal to SEW.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6365,11 +6307,11 @@ Implementations that do not internally reorganize data can dynamically
 elide this instruction, and treat as a NOP.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6379,7 +6321,7 @@ tail-agnostic setting may cause an architectural state change on some
 implementations.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -6392,19 +6334,19 @@ implementations.
 fixed-point arithmetic.</p>
 </div>
 <div class="paragraph">
-<p>A fixed-point number is a two&#8217;s-complement signed or unsigned integer
+<p>A fixed-point number is a two’s-complement signed or unsigned integer
 interpreted as the numerator in a fraction with an implicit denominator.
 The fixed-point instructions are intended to be applied to the numerators;
 it is the responsibility of software to manage the denominators.
-An N-bit element can hold two&#8217;s-complement signed integers in the
-range -2<sup>N-1</sup>&#8230;&#8203;+2<sup>N-1</sup>-1, and unsigned integers in the range 0
-&#8230;&#8203; +2<sup>N</sup>-1.  The fixed-point instructions help preserve precision in
+An N-bit element can hold two’s-complement signed integers in the
+range -2<sup>N-1</sup>…​+2<sup>N-1</sup>-1, and unsigned integers in the range 0
+…​ +2<sup>N</sup>-1.  The fixed-point instructions help preserve precision in
 narrow operands by supporting scaling and rounding, and can handle
 overflow by saturating results into the destination format range.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6413,7 +6355,7 @@ The widening integer operations described above can also be used
 to avoid overflow.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="sect2">
 <h3 id="31-12-1-vector-single-width-saturating-add-and-subtract"><a class="anchor" href="#31-12-1-vector-single-width-saturating-add-and-subtract"></a>31.12.1. Vector Single-Width Saturating Add and Subtract</h3>
@@ -6456,7 +6398,7 @@ For <code>vasub</code> and <code>vasubu</code>, overflow is ignored and the resu
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6465,7 +6407,7 @@ For <code>vasub</code>, overflow occurs only when subtracting the smallest numbe
 from the largest number under <code>rnu</code> or <code>rne</code> rounding.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -6510,7 +6452,7 @@ vsmul.vx vd, vs2, rs1, vm  # vd[i] = clip(roundoff_signed(vs2[i]*x[rs1], SEW-1))
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6524,11 +6466,11 @@ saturating the largest magnitude result but increasing result
 precision by one bit for all other products.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6540,7 +6482,7 @@ not need to saturate.  This operation is partly covered by the
 simply truncation (<code>rdn</code>).
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -6608,7 +6550,7 @@ destination viewed as an unsigned integer.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6622,7 +6564,7 @@ negative numbers is not required.  A <code>vsetvli</code> is required inbetween
 these two instructions to change SEW.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>For <code>vnclip</code>, the shifted rounded source value is treated as a signed
@@ -6647,7 +6589,7 @@ floating-point type, the instruction encoding is reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6660,7 +6602,7 @@ also be treated as IEEE-754/2008-compatible values.  Other
 floating-point formats may be supported in future extensions.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Vector floating-point instructions require the presence of base scalar
@@ -6669,7 +6611,7 @@ floating-point element widths.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6679,7 +6621,7 @@ half-precision floating-point values will also require some scalar
 half-precision floating-point support.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>If the floating-point unit status field <code>mstatus.FS</code> is <code>Off</code> then any
@@ -6817,7 +6759,7 @@ vfnmsub.vf vd, rs1, vs2, vm   # vd[i] = -(f[rs1] * vd[i]) + vs2[i]</pre>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6828,7 +6770,7 @@ these would complicate microarchitectures by being the only maskable
 operation with three inputs and separate output.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -6884,7 +6826,7 @@ vfwnmsac.vf vd, rs1, vs2, vm   # vd[i] = -(f[rs1] * vs2[i]) + vd[i]</pre>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6895,10 +6837,10 @@ width.  The earlier name can be retained as alias in tool chains for
 backward compatibility.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
-<p>The following table describes the instruction&#8217;s behavior for all
+<p>The following table describes the instruction’s behavior for all
 classes of floating-point inputs:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content center">
@@ -6916,27 +6858,27 @@ classes of floating-point inputs:</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-&#8734; &#8804; <em>x</em> &lt; -0.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-∞ ≤ <em>x</em> &lt; -0.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">canonical NaN</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NV</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-0.0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-&#8734;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-∞</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DZ</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">+0.0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">+&#8734;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+∞</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DZ</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">+0.0 &lt; <em>x</em> &lt; +&#8734;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+0.0 &lt; <em>x</em> &lt; +∞</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>estimate of 1/sqrt(x)</em></p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">+&#8734;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+∞</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">+0.0</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -6954,7 +6896,7 @@ classes of floating-point inputs:</p>
 </table>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6962,11 +6904,11 @@ classes of floating-point inputs:</p>
 All positive normal and subnormal inputs produce normal outputs.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -6974,7 +6916,7 @@ All positive normal and subnormal inputs produce normal outputs.
 The output value is independent of the dynamic rounding mode.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>For the non-exceptional cases, the low bit of the exponent and the six high
@@ -7662,19 +7604,19 @@ normalized input significand; the other bits of the output significand are zero.
 </table>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-For example, when SEW=32, vfrsqrt7(0x00718abc (&#8776; 1.043e-38)) = 0x5f080000 (&#8776; 9.800e18), and vfrsqrt7(0x7f765432 (&#8776; 3.274e38)) = 0x1f820000 (&#8776; 5.506e-20).
+For example, when SEW=32, vfrsqrt7(0x00718abc (≈ 1.043e-38)) = 0x5f080000 (≈ 9.800e18), and vfrsqrt7(0x7f765432 (≈ 3.274e38)) = 0x1f820000 (≈ 5.506e-20).
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -7685,7 +7627,7 @@ FP32, FP64 accuracy respectively.   Future instructions can be defined
 with greater estimate accuracy.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -7698,7 +7640,7 @@ with greater estimate accuracy.
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -7709,14 +7651,14 @@ width.  The earlier name can be retained as alias in tool chains for
 backward compatibility.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>This is a unary vector-vector instruction that returns an estimate of
 1/x accurate to 7 bits.</p>
 </div>
 <div class="paragraph">
-<p>The following table describes the instruction&#8217;s behavior for all
+<p>The following table describes the instruction’s behavior for all
 classes of floating-point inputs, where <em>B</em> is the exponent bias:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content center">
@@ -7730,115 +7672,115 @@ classes of floating-point inputs, where <em>B</em> is the exponent bias:</p>
 <tr>
 <th class="tableblock halign-left valign-top">Input (<em>x</em>)</th>
 <th class="tableblock halign-left valign-top">Rounding Mode</th>
-<th class="tableblock halign-left valign-top">Output (<em>y</em> &#8776; <em>1/x</em>)</th>
+<th class="tableblock halign-left valign-top">Output (<em>y</em> ≈ <em>1/x</em>)</th>
 <th class="tableblock halign-left valign-top">Exceptions raised</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-&#8734;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-∞</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-0.0</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B+1</sup> &lt; <em>x</em> &#8804; -2<sup>B</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B+1</sup> &lt; <em>x</em> ≤ -2<sup>B</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-(B+1)</sup> &#8805; <em>y</em> &gt; -2<sup>-B</sup> (subnormal, sig=01&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-(B+1)</sup> ≥ <em>y</em> &gt; -2<sup>-B</sup> (subnormal, sig=01…​)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B</sup> &lt; <em>x</em> &#8804; -2<sup>B-1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B</sup> &lt; <em>x</em> ≤ -2<sup>B-1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B</sup> &#8805; <em>y</em> &gt; -2<sup>-B+1</sup> (subnormal, sig=1&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B</sup> ≥ <em>y</em> &gt; -2<sup>-B+1</sup> (subnormal, sig=1…​)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B-1</sup> &lt; <em>x</em> &#8804; -2<sup>-B+1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B-1</sup> &lt; <em>x</em> ≤ -2<sup>-B+1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B+1</sup> &#8805; <em>y</em> &gt; -2<sup>B-1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B+1</sup> ≥ <em>y</em> &gt; -2<sup>B-1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B+1</sup> &lt; <em>x</em> &#8804; -2<sup>-B</sup> (subnormal, sig=1&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B+1</sup> &lt; <em>x</em> ≤ -2<sup>-B</sup> (subnormal, sig=1…​)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B-1</sup> &#8805; <em>y</em> &gt; -2<sup>B</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B-1</sup> ≥ <em>y</em> &gt; -2<sup>B</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B</sup> &lt; <em>x</em> &#8804; -2<sup>-(B+1)</sup> (subnormal, sig=01&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-B</sup> &lt; <em>x</em> ≤ -2<sup>-(B+1)</sup> (subnormal, sig=01…​)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B</sup> &#8805; <em>y</em> &gt; -2<sup>B+1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>B</sup> ≥ <em>y</em> &gt; -2<sup>B+1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-(B+1)</sup> &lt; <em>x</em> &lt; -0.0 (subnormal, sig=00&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-(B+1)</sup> &lt; <em>x</em> &lt; -0.0 (subnormal, sig=00…​)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RUP, RTZ</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">greatest-mag. negative finite value</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NX, OF</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-(B+1)</sup> &lt; <em>x</em> &lt; -0.0 (subnormal, sig=00&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-2<sup>-(B+1)</sup> &lt; <em>x</em> &lt; -0.0 (subnormal, sig=00…​)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RDN, RNE, RMM</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-&#8734;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-∞</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NX, OF</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-0.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-&#8734;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-∞</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DZ</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">+0.0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">+&#8734;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+∞</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DZ</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">+0.0 &lt; <em>x</em> &lt; 2<sup>-(B+1)</sup> (subnormal, sig=00&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+0.0 &lt; <em>x</em> &lt; 2<sup>-(B+1)</sup> (subnormal, sig=00…​)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RUP, RNE, RMM</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">+&#8734;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+∞</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NX, OF</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">+0.0 &lt; <em>x</em> &lt; 2<sup>-(B+1)</sup> (subnormal, sig=00&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+0.0 &lt; <em>x</em> &lt; 2<sup>-(B+1)</sup> (subnormal, sig=00…​)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RDN, RTZ</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">greatest finite value</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">NX, OF</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-(B+1)</sup> &#8804; <em>x</em> &lt; 2<sup>-B</sup> (subnormal, sig=01&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-(B+1)</sup> ≤ <em>x</em> &lt; 2<sup>-B</sup> (subnormal, sig=01…​)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B+1</sup> &gt; <em>y</em> &#8805; 2<sup>B</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B+1</sup> &gt; <em>y</em> ≥ 2<sup>B</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B</sup> &#8804; <em>x</em> &lt; 2<sup>-B+1</sup> (subnormal, sig=1&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B</sup> ≤ <em>x</em> &lt; 2<sup>-B+1</sup> (subnormal, sig=1…​)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B</sup> &gt; <em>y</em> &#8805; 2<sup>B-1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B</sup> &gt; <em>y</em> ≥ 2<sup>B-1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B+1</sup> &#8804; <em>x</em> &lt; 2<sup>B-1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B+1</sup> ≤ <em>x</em> &lt; 2<sup>B-1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B-1</sup> &gt; <em>y</em> &#8805; 2<sup>-B+1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B-1</sup> &gt; <em>y</em> ≥ 2<sup>-B+1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B-1</sup> &#8804; <em>x</em> &lt; 2<sup>B</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B-1</sup> ≤ <em>x</em> &lt; 2<sup>B</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B+1</sup> &gt; <em>y</em> &#8805; 2<sup>-B</sup> (subnormal, sig=1&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B+1</sup> &gt; <em>y</em> ≥ 2<sup>-B</sup> (subnormal, sig=1…​)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B</sup> &#8804; <em>x</em> &lt; 2<sup>B+1</sup> (normal)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>B</sup> ≤ <em>x</em> &lt; 2<sup>B+1</sup> (normal)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B</sup> &gt; <em>y</em> &#8805; 2<sup>-(B+1)</sup> (subnormal, sig=01&#8230;&#8203;)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>-B</sup> &gt; <em>y</em> ≥ 2<sup>-(B+1)</sup> (subnormal, sig=01…​)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">+&#8734;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+∞</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>any</em></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">+0.0</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -7859,7 +7801,7 @@ classes of floating-point inputs, where <em>B</em> is the exponent bias:</p>
 </table>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -7870,11 +7812,11 @@ Normal inputs with magnitude at least 2<sup>B-1</sup> produce subnormal outputs;
 other normal inputs produce normal outputs.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -7883,7 +7825,7 @@ The output value depends on the dynamic rounding mode when
 the overflow exception is raised.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>For the non-exceptional cases, the seven high bits of significand (after the
@@ -8451,19 +8393,19 @@ The output sign equals the input sign.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-For example, when SEW=32, vfrec7(0x00718abc (&#8776; 1.043e-38)) = 0x7e900000 (&#8776; 9.570e37), and vfrec7(0x7f765432 (&#8776; 3.274e38)) = 0x00214000 (&#8776; 3.053e-39).
+For example, when SEW=32, vfrec7(0x00718abc (≈ 1.043e-38)) = 0x7e900000 (≈ 9.570e37), and vfrec7(0x7f765432 (≈ 3.274e38)) = 0x00214000 (≈ 3.053e-39).
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -8474,7 +8416,7 @@ FP32, FP64 accuracy respectively.   Future instructions can be defined
 with greater estimate accuracy.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -8517,7 +8459,7 @@ takes all bits except the sign bit from the vector <code>vs2</code> operands.</p
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -8527,11 +8469,11 @@ sign-injection instruction with both source operands set to the same
 vector operand.  An assembly pseudoinstruction is provided: <code>vfneg.v vd,vs</code> = <code>vfsgnjn.vv vd,vs,vs</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -8542,7 +8484,7 @@ operands set to the same vector operand.  An assembly
 pseudoinstruction is provided: <code>vfabs.v vd,vs</code> = <code>vfsgnjx.vv vd,vs,vs</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -8611,7 +8553,7 @@ f      scalar floating-point register</pre>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -8620,11 +8562,11 @@ Providing all forms is necessary to correctly handle unordered
 compares for NaNs.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -8635,7 +8577,7 @@ the comparand is a non-NaN constant, the middle two instructions can be
 omitted.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -8648,7 +8590,7 @@ omitted.
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -8660,7 +8602,7 @@ element of <code>va</code> contains a quiet NaN and the corresponding element in
 <code>vb</code> contains a signaling NaN.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -8718,7 +8660,7 @@ values for <code>vs2</code> reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -8727,7 +8669,7 @@ The <code>vfmv.v.f</code> instruction shares the encoding with the <code>vfmerge
 instruction, but with <code>vm=1</code> and <code>vs2=v0</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -8757,7 +8699,7 @@ variants, which round towards zero.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -8766,7 +8708,7 @@ The <code>rtz</code> variants are provided to accelerate truncating conversions
 from floating-point to integer, as is common in languages like C and Java.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -8796,7 +8738,7 @@ as other widening instructions (see <a href="#sec-widening">31.10.2. Widening Ve
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -8805,11 +8747,11 @@ A double-width IEEE floating-point value can always represent a
 single-width integer exactly.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -8818,11 +8760,11 @@ A double-width IEEE floating-point value can always represent a
 single-width IEEE floating-point value exactly.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -8833,7 +8775,7 @@ implemented as several doubling steps with equivalent results and no
 additional exception flags raised.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -8864,7 +8806,7 @@ as other narrowing instructions (see <a href="#sec-narrowing">31.10.3. Narrowing
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -8877,20 +8819,20 @@ use round-towards-odd (<code>vfncvt.rod.f.f.w</code>).  Only the final step
 should use the desired rounding mode.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 For <code>vfncvt.rod.f.f.w</code>, a finite value that exceeds the range of the
-destination format is converted to the destination format&#8217;s largest finite value with the same sign.
+destination format is converted to the destination format’s largest finite value with the same sign.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -8913,7 +8855,7 @@ including the mask register.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -8925,7 +8867,7 @@ future polymorphic use with future types not supported in the scalar
 unit.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Inactive elements from the source vector register group are excluded
@@ -8943,7 +8885,7 @@ not updated.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -8962,7 +8904,7 @@ copied to the destination (e.g., by explicitly setting <code>vl</code>=1 and
 performing a register-register copy).
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Traps on vector reduction instructions are always reported with a
@@ -9032,7 +8974,7 @@ elements before summing them.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9040,7 +8982,7 @@ elements before summing them.</p>
 Older assembler mnemonic <code>vfredsum</code> is retained as alias for <code>vfredusum</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="sect3">
 <h4 id="31-14-3-1-vector-ordered-single-width-floating-point-sum-reduction"><a class="anchor" href="#31-14-3-1-vector-ordered-single-width-floating-point-sum-reduction"></a>31.14.3.1. Vector Ordered Single-Width Floating-Point Sum Reduction</h4>
@@ -9061,7 +9003,7 @@ propagating special values.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9070,7 +9012,7 @@ The ordered reduction supports compiler autovectorization, while
 the unordered FP sum allows for faster implementations.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>When the operation is masked (<code>vm=0</code>), the masked-off elements do not
@@ -9078,7 +9020,7 @@ affect the result or the exception flags.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9090,7 +9032,7 @@ the handling of NaNs, exceptions, and rounding when autovectorizing a scalar
 summation loop.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect3">
@@ -9123,7 +9065,7 @@ An implementation
 is allowed to add an additional additive identity to the final result.</p>
 </div>
 <div class="paragraph">
-<p>The additive identity is +0.0 when rounding down (towards -&#8734;) or
+<p>The additive identity is +0.0 when rounding down (towards -∞) or
 -0.0 for all other rounding modes.</p>
 </div>
 <div class="paragraph">
@@ -9132,7 +9074,7 @@ in <code>vtype</code> and <code>vl</code>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9146,11 +9088,11 @@ permitted to pass through the original NaN and set no exception flags, as with
 <code>vfredosum</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9159,7 +9101,7 @@ The <code>vfredosum</code> instruction is a valid implementation of the
 <code>vfredusum</code> instruction.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect3">
@@ -9171,7 +9113,7 @@ The <code>vfredosum</code> instruction is a valid implementation of the
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9181,11 +9123,11 @@ final value and raise the same exception flags regardless of operation
 order.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9195,7 +9137,7 @@ the destination register, without canonicalizing NaN values and without
 setting any exception flags.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -9214,7 +9156,7 @@ read and write a double-width reduction result.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9222,7 +9164,7 @@ read and write a double-width reduction result.</p>
 Older assembler mnemonic <code>vfwredsum</code> is retained as alias for <code>vfwredusum</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The reduction of the SEW-width elements is performed as in the
@@ -9231,7 +9173,7 @@ to 2*SEW bits before adding to the 2*SEW-bit accumulator.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9240,7 +9182,7 @@ to 2*SEW bits before adding to the 2*SEW-bit accumulator.</p>
 to <code>vfredosum.vs</code>; <code>vfwredusum.vs</code> does so analogously to <code>vfredusum.vs</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -9284,7 +9226,7 @@ always updated with a tail-agnostic policy.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9295,7 +9237,7 @@ equivalent scalar instructions.  The old <code>vmandnot</code> and <code>vmornot
 mnemonics can be retained as assembler aliases for compatibility.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Several assembler pseudoinstructions are defined as shorthand for
@@ -9311,7 +9253,7 @@ common uses of mask logical operations:</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9325,7 +9267,7 @@ implementations that internally rearrange bits according to EEW, a
 idiom to force an internal reformat into a mask vector.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The set of eight mask logical instructions can generate any of the 16
@@ -9511,7 +9453,7 @@ possibly binary logical functions of the two input masks:</p>
 </table>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9522,7 +9464,7 @@ the number of predicate registers by moving values into <code>v0</code> before
 use.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -9534,7 +9476,7 @@ use.
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9545,7 +9487,7 @@ assembler instruction alias <code>vpopc.m</code> is being retained for software
 compatibility.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The source operand is a single vector register holding mask register
@@ -9584,13 +9526,13 @@ value 0, since no mask elements are active).</p>
 </div>
 <div class="paragraph">
 <p>The <code>vfirst</code> instruction finds the lowest-numbered active element of
-the source mask vector that has the value 1 and writes that element&#8217;s
+the source mask vector that has the value 1 and writes that element’s
 index to a GPR.  If no active element has the value 1, -1 is written
 to the GPR.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9600,7 +9542,7 @@ corresponds to no element found, as vector lengths will never reach
 2<sup>(XLEN-1)</sup> on any implementation.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The <code>vfirst.m</code> instruction writes <code>x[rd]</code> even if <code>vl</code>=0 (with the
@@ -9912,7 +9854,7 @@ loop:
 <div class="sect2">
 <h3 id="31-15-9-vector-element-index-instruction"><a class="anchor" href="#31-15-9-vector-element-index-instruction"></a>31.15.9. Vector Element Index Instruction</h3>
 <div class="paragraph">
-<p>The <code>vid.v</code> instruction writes each element&#8217;s index to the
+<p>The <code>vid.v</code> instruction writes each element’s index to the
 destination vector register group, from 0 to <code>vl</code>-1.</p>
 </div>
 <div class="listingblock">
@@ -9935,7 +9877,7 @@ destination SEW, the least-significant SEW bits are retained.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -9944,7 +9886,7 @@ Microarchitectures can implement <code>vid.v</code> instruction using the
 same datapath as <code>viota.m</code> but with an implicit set mask source.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -9977,27 +9919,27 @@ ignored.  If SEW &lt; XLEN, the value is sign-extended to XLEN bits.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<code>vmv.x.s</code> performs its operation even if <code>vstart</code> &#8805; <code>vl</code> or <code>vl</code>=0.
+<code>vmv.x.s</code> performs its operation even if <code>vstart</code> ≥ <code>vl</code> or <code>vl</code>=0.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The <code>vmv.s.x</code> instruction copies the scalar integer register to element 0 of
 the destination vector register.  If SEW &lt; XLEN, the least-significant bits
 are copied and the upper XLEN-SEW bits are ignored.  If SEW &gt; XLEN, the value
 is sign-extended to SEW bits.  The other elements in the destination vector
-register ( 0 &lt; index &lt; VLEN/SEW) are treated as tail elements using the current tail agnostic/undisturbed policy.  If <code>vstart</code> &#8805; <code>vl</code>, no
+register ( 0 &lt; index &lt; VLEN/SEW) are treated as tail elements using the current tail agnostic/undisturbed policy.  If <code>vstart</code> ≥ <code>vl</code>, no
 operation is performed and the destination register is not updated.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10006,7 +9948,7 @@ As a consequence, when <code>vl</code>=0, no elements are updated in the
 destination vector register group, regardless of <code>vstart</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The encodings corresponding to the masked versions (<code>vm=0</code>) of <code>vmv.x.s</code>
@@ -10033,27 +9975,27 @@ register.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<code>vfmv.f.s</code> performs its operation even if <code>vstart</code> &#8805; <code>vl</code> or <code>vl</code>=0.
+<code>vfmv.f.s</code> performs its operation even if <code>vstart</code> ≥ <code>vl</code> or <code>vl</code>=0.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The <code>vfmv.s.f</code> instruction copies the scalar floating-point register
 to element 0 of the destination vector register.  The other elements
 in the destination vector register ( 0 &lt; index &lt; VLEN/SEW) are treated
 as tail elements using the current tail agnostic/undisturbed policy.
-If <code>vstart</code> &#8805; <code>vl</code>, no operation is performed and the destination
+If <code>vstart</code> ≥ <code>vl</code>, no operation is performed and the destination
 register is not updated.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10062,7 +10004,7 @@ As a consequence, when <code>vl</code>=0, no elements are updated in the
 destination vector register group, regardless of <code>vstart</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The encodings corresponding to the masked versions (<code>vm=0</code>) of <code>vfmv.f.s</code>
@@ -10077,7 +10019,7 @@ group.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10089,16 +10031,16 @@ In particular, power-of-2 offsets may operate substantially faster
 than other offsets.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>For all of the <code>vslideup</code>, <code>vslidedown</code>, <code>v[f]slide1up</code>, and
-<code>v[f]slide1down</code> instructions, if <code>vstart</code> &#8805; <code>vl</code>, the instruction performs no
+<code>v[f]slide1down</code> instructions, if <code>vstart</code> ≥ <code>vl</code>, the instruction performs no
 operation and leaves the destination vector register unchanged.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10107,7 +10049,7 @@ As a consequence, when <code>vl</code>=0, no elements are updated in the
 destination vector register group, regardless of <code>vstart</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The tail agnostic/undisturbed policy is followed for tail elements.</p>
@@ -10152,7 +10094,7 @@ is reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10162,7 +10104,7 @@ input vectors during execution, and enables restart with non-zero
 <code>vstart</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect3">
@@ -10296,7 +10238,7 @@ SEW-XLEN bits are ignored.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10308,7 +10250,7 @@ contents of a vector register, albeit slowly, with multiple repeated
 <code>vslide1down</code> invocations.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect3">
@@ -10350,7 +10292,7 @@ indices. The <code>vrgatherei16.vv</code> form uses SEW/LMUL for the data in
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10361,10 +10303,10 @@ be used to reduce the register capacity needed to hold indices when
 SEW &gt; 16.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
-<p>If an element index is out of range ( <code>vs1[i]</code> &#8805; VLMAX )
+<p>If an element index is out of range ( <code>vs1[i]</code> ≥ VLMAX )
 then zero is returned for the element value.</p>
 </div>
 <div class="paragraph">
@@ -10378,7 +10320,7 @@ to SEW bits.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10386,7 +10328,7 @@ to SEW bits.</p>
 These forms allow any vector element to be "splatted" to an entire vector.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -10451,7 +10393,7 @@ encoding is reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10463,7 +10405,7 @@ element 0.  This does mean elements in destination register after
 <code>vstart</code> will already have been updated.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="sect3">
 <h4 id="31-16-5-1-synthesizing-vdecompress"><a class="anchor" href="#31-16-5-1-synthesizing-vdecompress"></a>31.16.5.1. Synthesizing <code>vdecompress</code></h4>
@@ -10515,7 +10457,7 @@ length <code>evl</code>= EMUL * VLEN/SEW.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10524,25 +10466,25 @@ These instructions are intended to aid compilers to shuffle
 vector registers without needing to know or change <code>vl</code> or <code>vtype</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The usual property that no elements are written if <code>vstart</code> &#8805; <code>vl</code>
+The usual property that no elements are written if <code>vstart</code> ≥ <code>vl</code>
 does not apply to these instructions.
-Instead, no elements are written if <code>vstart</code> &#8805; <code>evl</code>.
+Instead, no elements are written if <code>vstart</code> ≥ <code>evl</code>.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10553,13 +10495,13 @@ internally that the register group will next be accessed with an EEW
 equal to SEW.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The instruction is encoded as an OPIVI instruction.  The number of
 vector registers to copy is encoded in the low three bits of the
 <code>simm</code> field (<code>simm[2:0]</code>) using the same encoding as the <code>nf[2:0]</code> field for memory
-instructions (Figure <a href="#fig-nf">Table 14</a>), i.e., <code>simm[2:0]</code> = NREG-1.</p>
+instructions (Figure <a href="#fig-nf">Table 26</a>), i.e., <code>simm[2:0]</code> = NREG-1.</p>
 </div>
 <div class="paragraph">
 <p>The value of NREG must be 1, 2, 4, or 8, and values of <code>simm[4:0]</code>
@@ -10567,7 +10509,7 @@ other than 0, 1, 3, and 7 are reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10575,11 +10517,11 @@ other than 0, 1, 3, and 7 are reserved.</p>
 A future extension may support other numbers of registers to be moved.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10591,7 +10533,7 @@ related <code>vmerge</code> encoding, and it is unlikely the <code>vsmul</code> 
 would benefit from an immediate form.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -10610,7 +10552,7 @@ other vector register numbers are reserved.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10619,7 +10561,7 @@ A future extension may relax the vector register alignment
 restrictions.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -10636,7 +10578,7 @@ taken.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10652,13 +10594,13 @@ presence of strided or scatter/gather operations and demand-paged
 virtual memory.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="sect2">
 <h3 id="31-17-1-precise-vector-traps"><a class="anchor" href="#31-17-1-precise-vector-traps"></a>31.17.1. Precise vector traps</h3>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10667,7 +10609,7 @@ We assume most supervisor-mode environments with demand-paging
 will require precise vector traps.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Precise vector traps require that:</p>
@@ -10726,7 +10668,7 @@ response.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10737,7 +10679,7 @@ generate only imprecise traps for vector instructions on fatal errors,
 as they will not require resumable traps.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>Imprecise traps shall report the faulting element in <code>vstart</code> for
@@ -10774,7 +10716,7 @@ correctly around imprecise traps.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10784,7 +10726,7 @@ restoring opaque microarchitectural state from a vector unit
 implementation to support context switching with imprecise traps.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -10814,7 +10756,7 @@ increase the minimum vector length of a vector extension.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10824,7 +10766,7 @@ additional software or architecture profile requirements, or to
 advertise hardware capabilities.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <table class="tableblock frame-all grid-all fit-content center">
 <caption class="title">Table 18. Vector length extensions</caption>
@@ -10867,7 +10809,7 @@ advertise hardware capabilities.
 </table>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10875,11 +10817,11 @@ advertise hardware capabilities.
 Longer vector length extensions should follow the same pattern.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10888,11 +10830,11 @@ Every vector length extension effectively includes all shorter
 vector length extensions.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10902,11 +10844,11 @@ are subject to change.  The trailing "b" will be required to
 disambiguate numeric fields from version numbers.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -10917,7 +10859,7 @@ this minimum, but the string can be useful when stating hardware
 capabilities.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -10996,7 +10938,7 @@ The Zve64d extension depends on the Zve64f extension.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -11005,7 +10947,7 @@ There is currently no standard support for handling imprecise
 traps, so standard extensions have to provide precise traps.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>All Zve* extensions provide support for EEW of 8, 16, and 32, and
@@ -11029,7 +10971,7 @@ not included for EEW=64 in Zve64*.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -11038,7 +10980,7 @@ Producing the high-word of a product can take substantial
 additional gates for large EEW.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>All Zve* extensions support all vector fixed-point arithmetic
@@ -11047,7 +10989,7 @@ instructions (<a href="#sec-vector-fixed-point"><em>31.12. Vector Fixed-Point Ar
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -11056,7 +10998,7 @@ As with <code>vmulh</code>, <code>vsmul</code> requires a large amount of additi
 logic, and 64-bit fixed-point multiplies are relatively rare.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>All Zve* extensions support all vector integer single-width and
@@ -11110,7 +11052,7 @@ supporting V.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -11125,7 +11067,7 @@ LMUL of 8 allows vectors of up to sixteen 64-bit elements to be
 processed without stripmining using four vector register groups.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>The V extension supports EEW of 8, 16, and 32, and 64.</p>
@@ -11171,7 +11113,7 @@ well as widening reductions from FP32 to FP64.</p>
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
@@ -11184,7 +11126,7 @@ as is RV64GCV_Zve64f_Zve32x_Zvl128b.</p>
 </div>
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 <div class="sect2">
@@ -11225,19 +11167,19 @@ widening conversions (<code>vfwcvt.f.x[u].v</code>) become defined when SEW=8.</
 </div>
 <div class="admonitionblock note">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Requiring basic scalar half-precision support makes Zvfh&#8217;s
+Requiring basic scalar half-precision support makes Zvfh’s
 vector-scalar instructions substantially more useful.
 We considered requiring more complete scalar half-precision support, but we
 reasoned that, for many half-precision vector workloads, performing the scalar
 computation in single-precision will suffice.
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 </div>
 </div>
@@ -11290,7 +11232,7 @@ computation in single-precision will suffice.
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OPMVV&#160;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPMVV&nbsp;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">V</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -11305,7 +11247,7 @@ computation in single-precision will suffice.
 <td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OPMVX&#160;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPMVX&nbsp;</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -12769,21 +12711,20 @@ computation in single-precision will suffice.
     </div>
 
     <div id="social-icons" class="flex jc-between">
-        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
-        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
-        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"/></svg></a>
-        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"/><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UC5gLmcFuvdGbajs4VL-WU3g" title="Youtube" target="_blank" rel="noopener noreferrer"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"></circle><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"></path></svg></a>
+        <a href="https://github.com/riscv" title="GitHub" target="_blank" rel="noopener noreferrer"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"></path><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"></path></svg></a>
+        <a href="https://x.com/risc_v" title="X" target="_blank" rel="noopener noreferrer"><svg id="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"></circle><path class="cls-2" d="M42.28,35.52l11.88-13.82h-2.82l-10.31,12-8.23-12h-9.51l12.46,18.13L23.02,54.27h2.82l10.89-12.67,8.69,12.67h9.51L42.28,35.52h0Zm-3.85,4.48l-1.26-1.8L27.59,22.94h4.32l8.09,11.57,1.26,1.8,10.53,15.06h-4.32l-8.58-12.27h0Z"></path></svg></a>
+        <a href="https://www.linkedin.com/company/risc-v-international" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle class="cls-1" cx="12" cy="12" r="12"></circle><path class="cls-2" d="M6.5,8.5 a1.5,1.5 0 1 1 3,0 a1.5,1.5 0 0 1 -3,0 Z M6.5,10 L6.5,17 L9.5,17 L9.5,10 Z M11,10 L11,17 L14,17 L14,13.5 C14,12 14.5,11 16,11 C17.5,11 17.5,12 17.5,13.5 L17.5,17 L20.5,17 L20.5,13 C20.5,10 19,9 17,9 C15.5,9 14.5,9.8 14,10.5 L14,10 Z"></path></svg></a>
         <a href="https://risc-v-international.slack.com/join/shared_invite/zt-2y1w69wde-PdoN3fXovLlzoni~UaPrBA" title="Slack" target="_blank" rel="noopener noreferrer" class="slack-icon-link"><i class="fa fa-slack" aria-hidden="true"></i></a>
     </div>
 </footer>
 <script src="../../../_/js/vendor/import.js"></script>
 <script src="../../../_/js/site.js"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
-<script async
-    src="../../../_/js/vendor/spring-tabs.js"
-    data-sync-storage-key="docs:preferred-tab"></script>
+<script async="" src="../../../_/js/vendor/highlight.js"></script>
+<script async="" src="../../../_/js/vendor/spring-tabs.js" data-sync-storage-key="docs:preferred-tab"></script>
 <script src="../../../_/js/vendor/lunr.js"></script>
 <script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
-<script async src="../../../search-index.js"></script>
-  </body>
-</html>
+<script async="" src="../../../search-index.js"></script>
+  
+
+</body></html>
