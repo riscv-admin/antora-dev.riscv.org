@@ -233,31 +233,31 @@
     <span class="nav-text">IO Mapping Table</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../rimt/index.html">Chapter 1. Title Page</a>
+    <a class="nav-link"  href="../rimt/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../rimt/copyright.html">Chapter 2. Copyright and License</a>
+    <a class="nav-link"  href="../rimt/copyright.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../rimt/contributors.html">Chapter 3. Contributors</a>
+    <a class="nav-link"  href="../rimt/contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../rimt/changelog.html">Chapter 4. Changelog</a>
+    <a class="nav-link"  href="../rimt/changelog.html">Changelog</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../rimt/terms.html">Chapter 5. Terms and Abbreviations</a>
+    <a class="nav-link"  href="../rimt/terms.html">Terms and Abbreviations</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../rimt/intro.html">Chapter 6. Introduction</a>
+    <a class="nav-link"  href="../rimt/intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../rimt/rimt-main.html">Chapter 7. RISC-V IO Mapping Table (RIMT)</a>
+    <a class="nav-link"  href="../rimt/rimt-main.html">Chapter 2. RISC-V IO Mapping Table (RIMT)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../rimt/mapping-example.html">Chapter 8. ID Mapping Examples</a>
+    <a class="nav-link"  href="../rimt/mapping-example.html">Chapter 3. ID Mapping Examples</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../rimt/bibliography.html">Chapter 9. Bibliography</a>
+    <a class="nav-link"  href="../rimt/bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -657,7 +657,7 @@ RISC-V systems.  Refer to the ACPI specification for all remaining fields.</p>
 <h4 id="3-1-1-1-entry-method"><a class="anchor" href="#3-1-1-1-entry-method"></a>3.1.1.1. Entry Method</h4>
 <div class="paragraph">
 <p>The _LPI object uses a “Resource Descriptor”, which is formatted per
-<a href="#resource_descriptor_encoding">[resource_descriptor_encoding]</a>, to specify the entry method for a lower
+<a href="ffh_introduction.html#resource_descriptor_encoding" class="xref page">Chapter 2</a>, to specify the entry method for a lower
 power state.  RISC-V systems set the resource descriptor as specified in
 <a href="#table_lpi_entry_method">Table 2</a>:</p>
 </div>
@@ -773,7 +773,7 @@ specified in <a href="#table_lpi_arch_context_lost_flags">Table 4</a>:</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><a href="#lpi_examples">[lpi_examples]</a> provides examples for both a WFI entry method and SBI HSM
+<p><a href="#lpi_examples">Appemdix A</a> provides examples for both a WFI entry method and SBI HSM
 hart suspend entry methods.</p>
 </div>
 </div>
@@ -798,7 +798,7 @@ Descriptor” for the _CPC object.</p>
 <h4 id="3-1-2-1-_cpc-object-resource-descriptor"><a class="anchor" href="#3-1-2-1-_cpc-object-resource-descriptor"></a>3.1.2.1. _CPC Object Resource Descriptor</h4>
 <div class="paragraph">
 <p>The _CPC object may use a “Resource Descriptor”, which is formatted per
-<a href="#resource_descriptor_encoding">[resource_descriptor_encoding]</a>, for many of its fields.  When using an FFH
+<a href="ffh_introduction.html#resource_descriptor_encoding" class="xref page">Chapter 2</a>, for many of its fields.  When using an FFH
 Resource Descriptor for a _CPC field, it must be formatted as specified in
 <a href="#table_cpc_resource_descriptor">Table 5</a>:</p>
 </div>
@@ -880,7 +880,7 @@ Resource Descriptor for a _CPC field, it must be formatted as specified in
 set to <em>FFixedHW</em> (0x7f) are reserved for future use.</p>
 </div>
 <div class="paragraph">
-<p><a href="#cppc_examples">[cppc_examples]</a> provides examples for both a CSR access and an SBI CPPC
+<p><a href="ffh_lpi_examples.html#cppc_examples" class="xref page">Appendix B</a> provides examples for both a CSR access and an SBI CPPC
 access.</p>
 </div>
 </div>
