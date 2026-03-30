@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="1e3bdf4582dca02475f3f53b754ac156974abeca"> 
+    <meta name="antora-ui-version" content="208a16ca600869d471072d04aa4d634680239f0c"> 
     <meta name="version" content="v1.0.0">
     <meta name="component" content="plic">
     <meta name="latest-version" content="false">
@@ -43,6 +43,15 @@
         <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV" />
         <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV" />
       </a>
+      <div class="navbar-item home">
+        <a class="navbar-link"
+          href="../home/index.html"
+          aria-label="home"
+          title="home">
+          <img class="home-icon riscvlogo--light" src="../_/img/riscv-library.svg" alt="Home" />
+          <img class="home-icon riscvlogo--dark" src="../_/img/riscv-library_white.svg" alt="Home" />
+        </a>
+      </div>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -51,16 +60,6 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item home">
-          <a class="navbar-link"
-            href="../home/index.html"
-            aria-label="home"
-            title="home">
-            <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-              <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg></a>
-        </div>
       </div>
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
@@ -198,28 +197,31 @@
     <a class="nav-link"  href="contributor.html">Contributors</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="introduction.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a>
+    <a class="nav-link"  href="plic-op-parms.html">RISC-V PLIC Operation Parameters</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="plic-memory-map.html">Chapter 3. Memory Map</a>
+    <a class="nav-link"  href="plic-memory-map.html">Memory Map</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="plic-priority.html">Chapter 4. Interrupt Priorities</a>
+    <a class="nav-link"  href="plic-priority.html">Interrupt Priorities</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="plic-interrupts.html">Chapter 5. Interrupt Pending Bits</a>
+    <a class="nav-link"  href="plic-interrupts.html">Interrupt Pending Bits</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="plic-enables.html">Chapter 6. Interrupt Enables</a>
+    <a class="nav-link"  href="plic-enables.html">Interrupt Enables</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="plic-claims.html">Chapter 7. Interrupt Claim Process</a>
+    <a class="nav-link"  href="plic-thresholds.html">Priority Thresholds</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="plic-completion.html">Chapter 8. Interrupt Completion</a>
+    <a class="nav-link"  href="plic-claims.html">Interrupt Claim Process</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="plic-completion.html">Interrupt Completion</a>
   </li>
 </ul>
   </li>
@@ -316,10 +318,10 @@
     <a class="nav-link"  href="../soc/server_soc_contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../soc/server_soc_intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
+    <a class="nav-link"  href="../soc/server_soc_requirements.html">Server SoC Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../soc/server_soc_bibliography.html">Bibliography</a>
@@ -397,7 +399,7 @@
         </a>
       
 
-          <a href="_attachments/riscv-plic-1.0.0.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
+          <a href="_attachments/riscv-plic-1.0.0.pdf" title="PDF" class="sidebar-link" download>
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -409,11 +411,11 @@
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
       <li>Platform-Level Interrupt Controller</li>
-      <li><a href="introduction.html">Chapter 1. Introduction</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="1-1-introduction"><a class="anchor" href="#1-1-introduction"></a>1.1. Introduction</h2>
+<h2 id="introduction"><a class="anchor" href="#introduction"></a>Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This specification delineates the operation parameters according the general PLIC
@@ -428,201 +430,11 @@ must adhere to the offset of each register within the PLIC operation parameters.
 The PLIC which claimed as PLIC-Compliant standard PLIC should follow the
 implementations mentioned in sections below.</p>
 </div>
-<div class="sect2">
-<h3 id="1-1-1-interrupt-targets-and-hart-contexts"><a class="anchor" href="#1-1-1-interrupt-targets-and-hart-contexts"></a>1.1.1. Interrupt Targets and Hart Contexts</h3>
-<div class="paragraph">
-<p>Interrupt targets are usually hart contexts, where a hart context is a given
-privilege mode on a given hart (though there are other possible interrupt targets,
-such as DMA engines). For example, in an 4-core system with 2-way SMT, you have 8
-harts and probably at least two privilege modes per hart: machine mode and
-supervisor mode (<a href="https://github.com/torvalds/linux/blob/5bfc75d92efd494db37f5c4c173d3639d4772966/Documentation/devicetree/bindings/interrupt-controller/sifive%2Cplic-1.0.0.yaml">Ref</a>).<br>
-Not all hart contexts need be interrupt targets, in
-particular, if a processor core does not support delegating external interrupts to
-lower-privilege modes, then the lower-privilege hart contexts will not be interrupt
-targets. Interrupt notifications generated by the PLIC appear in the meip/seip bits
-of the mip/sip registers for M/S modes respectively.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Previous versions of this specification indicated that the PLIC
-supports U-mode interrupts.  This text was removed because the
-privileged architecture does not define U-mode interrupts.  If a
-future privileged architecture specifies U-mode interrupts, this PLIC
-specification can be straightforwardly extended to support them.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The notification only appear in lower-privilege xip registers if external interrupts
-have been delegated to the lower-privilege modes.<br>
-Each processor core must define a
-policy on how simultaneous active interrupts are taken by multiple hart contexts
-on the core. For the simple case of a single stack of hart contexts, one for each
-supported privileged mode, interrupts for higher-privilege contexts can preempt
-execution of interrupt handlers for lower-privilege contexts. A multithreaded
-processor core could run multiple independent interrupt handlers on different hart
-contexts at the same time. A processor core could also provide hart contexts that
-are only used for interrupt handling to reduce interrupt service latency, and
-these might preempt interrupt handlers for other harts on the same core.<br>
-The PLIC treats each interrupt target independently and does not take into account
-any interrupt prioritization scheme used by a component that contains multiple
-interrupt targets. As a result, the PLIC provides no concept of interrupt
-preemption or nesting so this must be handled by the cores hosting multiple
-interrupt target contexts.</p>
-</div>
-<div class="paragraph">
-<div class="title">RISC-V PLIC Interrupt Architecture Block Diagram</div>
-<p><span class="image"><img src="_images/PLIC.jpg" alt="400" width="432"></span></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="1-1-2-interrupt-gateways"><a class="anchor" href="#1-1-2-interrupt-gateways"></a>1.1.2. Interrupt Gateways</h3>
-<div class="paragraph">
-<p>The interrupt gateways are responsible for converting global interrupt signals
-into a common interrupt request format, and for controlling the flow of interrupt
-requests to the PLIC core. At most one interrupt request per interrupt source can
-be pending in the PLIC core at any time, indicated by setting the source&#8217;s IP bit.
-The gateway only forwards a new interrupt request to the PLIC core after receiving
-notification that the interrupt handler servicing the previous interrupt request
-from the same source has completed.<br></p>
-</div>
-<div class="paragraph">
-<p>If the global interrupt source uses level-sensitive interrupts, the gateway will
-convert the first assertion of the interrupt level into an interrupt request, but
-thereafter the gateway will not forward an additional interrupt request until it
-receives an interrupt completion message. On receiving an interrupt completion
-message, if the interrupt is level-triggered and the interrupt is still asserted, a
-new interrupt request will be forwarded to the PLIC core. The gateway does not
-have the facility to retract an interrupt request once forwarded to the PLIC core.
-If a level-sensitive interrupt source deasserts the interrupt after the PLIC core
-accepts the request and before the interrupt is serviced, the interrupt request
-remains present in the IP bit of the PLIC core and will be serviced by a handler,
-which will then have to determine that the interrupt device no longer requires
-service.<br></p>
-</div>
-<div class="paragraph">
-<p>If the global interrupt source was edge-triggered, the gateway will convert the
-first matching signal edge into an interrupt request. Depending on the design of
-the device and the interrupt handler, in between sending an interrupt request and
-receiving notice of its handler&#8217;s completion, the gateway might either ignore
-additional matching edges or increment a counter of pending interrupts. In either
-case, the next interrupt request will not be forwarded to the PLIC core until the
-previous completion message has been received. If the gateway has a pending
-interrupt counter, the counter will be decremented when the interrupt request is
-accepted by the PLIC core. Unlike dedicated-wire interrupt signals,
-message-signalled interrupts (MSIs) are sent over the system interconnect via a
-message packet that describes which interrupt is being asserted. The message
-is decoded to select an interrupt gateway, and the relevant gateway then handles
-the MSI similar to an edge-triggered interrupt.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="1-1-3-interrupt-notifications"><a class="anchor" href="#1-1-3-interrupt-notifications"></a>1.1.3. Interrupt Notifications</h3>
-<div class="paragraph">
-<p>Each interrupt target has an external interrupt pending (EIP) bit in the PLIC core
-that indicates that the corresponding target has a pending interrupt waiting for
-service. The value in EIP can change as a result of changes to state in the PLIC
-core, brought on by interrupt sources, interrupt targets, or other agents
-manipulating register values in the PLIC. The value in EIP is communicated
-to the destination target as an interrupt notification. If the target is a RISC-V
-hart context, the interrupt notifications arrive on the meip/seip bits
-depending on the privilege level of the hart context.<br></p>
-</div>
-<div class="paragraph">
-<p>(<em>In simple systems, the
-interrupt notifications will be simple wires connected to the processor
-implementing a hart. In more complex platforms, the notifications might be routed
-as messages across a system interconnect.</em>)<br></p>
-</div>
-<div class="paragraph">
-<p>The PLIC hardware only supports multicasting of interrupts, such that all enabled
-targets will receive interrupt notifications for a given active interrupt.<br></p>
-</div>
-<div class="paragraph">
-<p>(<em>Multicasting provides rapid response since the fastest responder claims the
-interrupt, but can be wasteful in high-interrupt-rate scenarios if multiple harts
-take a trap for an interrupt that only one can successfully claim. Software can
-modulate the PLIC IE bits as part of each interrupt handler to provide alternate
-policies, such as interrupt affinity or round-robin unicasting.</em>)<br></p>
-</div>
-<div class="paragraph">
-<p>Depending on the platform architecture and the method used to transport interrupt
-notifications, these might take some time to be received at the targets. The PLIC
-is guaranteed to eventually deliver all state changes in EIP to all targets,
-provided there is no intervening activity in the PLIC core.<br>
-(<em>The value in an interrupt notification is only guaranteed to hold an EIP value
-that was valid at some point in the past. In particular, a second target can
-respond and claim an interrupt while a notification to the first target is still in
-flight, such that when the first target tries to claim the interrupt it finds it has
-no active interrupts in the PLIC core.</em>)</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="1-1-4-interrupt-identifiers-ids"><a class="anchor" href="#1-1-4-interrupt-identifiers-ids"></a>1.1.4. Interrupt Identifiers (IDs)</h3>
-<div class="paragraph">
-<p>Global interrupt sources are assigned small unsigned integer identifiers, beginning
-at the value 1. An interrupt ID of 0 is reserved to mean “no interrupt”.<br>
-Interrupt identifiers are also used to break ties when two or more interrupt
-sources have the same assigned priority. Smaller values of interrupt ID take precedence over larger values of interrupt ID.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="1-1-5-interrupt-flow"><a class="anchor" href="#1-1-5-interrupt-flow"></a>1.1.5. Interrupt Flow</h3>
-<div class="paragraph">
-<p>Below figure shows the messages flowing between agents when handling interrupts
-via the PLIC.<br></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Global interrupts are sent from their source to an interrupt gateway that
-processes the interrupt signal from each source</p>
-</li>
-<li>
-<p>Interrupt gateway then sends a single interrupt request to the PLIC core, which
-latches these in the core interrupt pending bits (IP).</p>
-</li>
-<li>
-<p>The PLIC core forwards an interrupt notification to one or more targets if
-the targets have any pending interrupts enabled, and the priority of the pending
-interrupts exceeds a per-target threshold.</p>
-</li>
-<li>
-<p>When the target takes the external interrupt, it sends an interrupt claim
-request to retrieve the identifier of the highest priority global interrupt
-source pending for that target from the PLIC core.</p>
-</li>
-<li>
-<p>PLIC core then clears the corresponding interrupt source pending bit.</p>
-</li>
-<li>
-<p>After the target has serviced the interrupt, it sends the associated interrupt
-gateway an interrupt completion message</p>
-</li>
-<li>
-<p>The interrupt gateway can now forward another interrupt request for the same
-source to the PLIC.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">PLIC Interrupt Flow</div>
-<p><span class="image"><img src="_images/PLICInterruptFlow.jpg" alt="PLICInterruptFlow"></span></p>
-</div>
-</div>
 </div>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="contributor.html">Contributors</a></span>
-  <span class="next"><a href="plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a></span>
+  <span class="next"><a href="plic-op-parms.html">RISC-V PLIC Operation Parameters</a></span>
 </nav>
 </article>  </div>
 </main>

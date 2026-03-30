@@ -6,7 +6,7 @@
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
     <link rel="canonical" href="https://docs.riscv.org/reference/plic/plic-enables.html">
     <link rel="prev" href="plic-interrupts.html">
-    <link rel="next" href="plic-claims.html">
+    <link rel="next" href="plic-thresholds.html">
     <meta name="generator" content="Antora 3.1.14">
     <script>
 !function (theme, navWidth) {
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="1e3bdf4582dca02475f3f53b754ac156974abeca"> 
+    <meta name="antora-ui-version" content="208a16ca600869d471072d04aa4d634680239f0c"> 
     <meta name="version" content="v1.0.0">
     <meta name="component" content="plic">
     <meta name="latest-version" content="false">
@@ -43,6 +43,15 @@
         <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV" />
         <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV" />
       </a>
+      <div class="navbar-item home">
+        <a class="navbar-link"
+          href="../home/index.html"
+          aria-label="home"
+          title="home">
+          <img class="home-icon riscvlogo--light" src="../_/img/riscv-library.svg" alt="Home" />
+          <img class="home-icon riscvlogo--dark" src="../_/img/riscv-library_white.svg" alt="Home" />
+        </a>
+      </div>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -51,16 +60,6 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item home">
-          <a class="navbar-link"
-            href="../home/index.html"
-            aria-label="home"
-            title="home">
-            <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-              <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg></a>
-        </div>
       </div>
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
@@ -198,28 +197,31 @@
     <a class="nav-link"  href="contributor.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="introduction.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a>
+    <a class="nav-link"  href="plic-op-parms.html">RISC-V PLIC Operation Parameters</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="plic-memory-map.html">Chapter 3. Memory Map</a>
+    <a class="nav-link"  href="plic-memory-map.html">Memory Map</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="plic-priority.html">Chapter 4. Interrupt Priorities</a>
+    <a class="nav-link"  href="plic-priority.html">Interrupt Priorities</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="plic-interrupts.html">Chapter 5. Interrupt Pending Bits</a>
+    <a class="nav-link"  href="plic-interrupts.html">Interrupt Pending Bits</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="plic-enables.html">Chapter 6. Interrupt Enables</a>
+    <a class="nav-link"  href="plic-enables.html">Interrupt Enables</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="plic-claims.html">Chapter 7. Interrupt Claim Process</a>
+    <a class="nav-link"  href="plic-thresholds.html">Priority Thresholds</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="plic-completion.html">Chapter 8. Interrupt Completion</a>
+    <a class="nav-link"  href="plic-claims.html">Interrupt Claim Process</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="plic-completion.html">Interrupt Completion</a>
   </li>
 </ul>
   </li>
@@ -316,10 +318,10 @@
     <a class="nav-link"  href="../soc/server_soc_contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../soc/server_soc_intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../soc/server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
+    <a class="nav-link"  href="../soc/server_soc_requirements.html">Server SoC Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../soc/server_soc_bibliography.html">Bibliography</a>
@@ -397,7 +399,7 @@
         </a>
       
 
-          <a href="_attachments/riscv-plic-1.0.0.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
+          <a href="_attachments/riscv-plic-1.0.0.pdf" title="PDF" class="sidebar-link" download>
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -409,11 +411,11 @@
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
       <li>Platform-Level Interrupt Controller</li>
-      <li><a href="plic-enables.html">Chapter 6. Interrupt Enables</a></li>
+      <li><a href="plic-enables.html">Interrupt Enables</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="6-1-interrupt-enables"><a class="anchor" href="#6-1-interrupt-enables"></a>6.1. Interrupt Enables</h2>
+<h2 id="interrupt-enables"><a class="anchor" href="#interrupt-enables"></a>Interrupt Enables</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Each global interrupt can be enabled by setting the corresponding bit in the
@@ -485,60 +487,9 @@ Enable Bit blocks</p></td>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="6-2-priority-thresholds"><a class="anchor" href="#6-2-priority-thresholds"></a>6.2. Priority Thresholds</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>PLIC provides context based <code>threshold register</code> for the settings of a interrupt priority
-threshold of each context. The <code>threshold register</code> is a WARL field. The PLIC will mask all
-PLIC interrupts of a priority less than or equal to <code>threshold</code>.  For example,
-a <code>threshold</code> value of zero permits all interrupts with non-zero priority.<br>
-<br>
-The base address of Priority Thresholds register block is located at 4K alignment starts
-from offset 0x200000.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 15%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 45%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>PLIC Register Block Name</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Function</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Register Block Size in Byte</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Priority Threshold</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Priority Threshold for 15872 contexts</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4096 * 15872 = 65011712(0x3e00000) bytes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This is the register of Priority Thresholds setting for each context</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>PLIC Interrupt Priority Thresholds Memory Map</strong><br></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>0x200000: Priority threshold for context 0
-0x201000: Priority threshold for context 1
-0x202000: Priority threshold for context 2
-0x203000: Priority threshold for context 3
-...
-...
-...
-0x3FFF000: Priority threshold for context 15871</pre>
-</div>
-</div>
-</div>
-</div>
 <nav class="pagination">
-  <span class="prev"><a href="plic-interrupts.html">Chapter 5. Interrupt Pending Bits</a></span>
-  <span class="next"><a href="plic-claims.html">Chapter 7. Interrupt Claim Process</a></span>
+  <span class="prev"><a href="plic-interrupts.html">Interrupt Pending Bits</a></span>
+  <span class="next"><a href="plic-thresholds.html">Priority Thresholds</a></span>
 </nav>
 </article>  </div>
 </main>

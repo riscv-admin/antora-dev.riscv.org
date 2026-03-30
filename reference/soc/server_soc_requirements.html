@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="1e3bdf4582dca02475f3f53b754ac156974abeca"> 
+    <meta name="antora-ui-version" content="208a16ca600869d471072d04aa4d634680239f0c"> 
     <meta name="version" content="v1.0">
     <meta name="component" content="soc">
     <meta name="latest-version" content="false">
@@ -43,6 +43,15 @@
         <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV" />
         <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV" />
       </a>
+      <div class="navbar-item home">
+        <a class="navbar-link"
+          href="../home/index.html"
+          aria-label="home"
+          title="home">
+          <img class="home-icon riscvlogo--light" src="../_/img/riscv-library.svg" alt="Home" />
+          <img class="home-icon riscvlogo--dark" src="../_/img/riscv-library_white.svg" alt="Home" />
+        </a>
+      </div>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -51,16 +60,6 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item home">
-          <a class="navbar-link"
-            href="../home/index.html"
-            aria-label="home"
-            title="home">
-            <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-              <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg></a>
-        </div>
       </div>
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
@@ -198,28 +197,31 @@
     <a class="nav-link"  href="../plic/contributor.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/introduction.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../plic/introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a>
+    <a class="nav-link"  href="../plic/plic-op-parms.html">RISC-V PLIC Operation Parameters</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-memory-map.html">Chapter 3. Memory Map</a>
+    <a class="nav-link"  href="../plic/plic-memory-map.html">Memory Map</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-priority.html">Chapter 4. Interrupt Priorities</a>
+    <a class="nav-link"  href="../plic/plic-priority.html">Interrupt Priorities</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-interrupts.html">Chapter 5. Interrupt Pending Bits</a>
+    <a class="nav-link"  href="../plic/plic-interrupts.html">Interrupt Pending Bits</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-enables.html">Chapter 6. Interrupt Enables</a>
+    <a class="nav-link"  href="../plic/plic-enables.html">Interrupt Enables</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-claims.html">Chapter 7. Interrupt Claim Process</a>
+    <a class="nav-link"  href="../plic/plic-thresholds.html">Priority Thresholds</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-completion.html">Chapter 8. Interrupt Completion</a>
+    <a class="nav-link"  href="../plic/plic-claims.html">Interrupt Claim Process</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../plic/plic-completion.html">Interrupt Completion</a>
   </li>
 </ul>
   </li>
@@ -316,10 +318,10 @@
     <a class="nav-link"  href="server_soc_contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="server_soc_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="server_soc_intro.html">Introduction</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
+    <a class="nav-link"  href="server_soc_requirements.html">Server SoC Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="server_soc_bibliography.html">Bibliography</a>
@@ -397,7 +399,7 @@
         </a>
       
 
-          <a href="_attachments/riscv-server-soc.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
+          <a href="_attachments/riscv-server-soc.pdf" title="PDF" class="sidebar-link" download>
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -409,14 +411,14 @@
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
       <li>Server SoC</li>
-      <li><a href="server_soc_requirements.html">Chapter 2. Server SoC Requirements</a></li>
+      <li><a href="server_soc_requirements.html">Server SoC Requirements</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="2-1-server-soc-requirements"><a class="anchor" href="#2-1-server-soc-requirements"></a>2.1. Server SoC Requirements</h2>
+<h2 id="server-soc-requirements"><a class="anchor" href="#server-soc-requirements"></a>Server SoC Requirements</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="2-1-1-clocks-and-timers"><a class="anchor" href="#2-1-1-clocks-and-timers"></a>2.1.1. Clocks and Timers</h3>
+<h3 id="clocks-and-timers"><a class="anchor" href="#clocks-and-timers"></a>Clocks and Timers</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -437,7 +439,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p><em>The Zicntr extension cite:[UNPRIV] requires the real-time clocks of all
+<p><em>The Zicntr extension [<a href="server_soc_bibliography.html#bib-unpriv" class="xref page">7</a>] requires the real-time clocks of all
      harts to be synchronized to within one tick of the real-time clock.</em></p>
 </div></div></td>
 </tr>
@@ -466,7 +468,7 @@
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="2-1-2-interrupt-controllers"><a class="anchor" href="#2-1-2-interrupt-controllers"></a>2.1.2. Interrupt Controllers</h3>
+<h3 id="interrupt-controllers"><a class="anchor" href="#interrupt-controllers"></a>Interrupt Controllers</h3>
 <div class="paragraph">
 <p>This section specifies the requirements on the interrupt controllers used to
 deliver external interrupts to the RISC-V application processor harts.</p>
@@ -485,7 +487,7 @@ deliver external interrupts to the RISC-V application processor harts.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IIC_010</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The RISC-V Advanced Interrupt Architecture cite:[AIA] MUST be
+<td class="tableblock halign-left valign-top"><p class="tableblock">The RISC-V Advanced Interrupt Architecture [<a href="server_soc_bibliography.html#bib-aia" class="xref page">8</a>] MUST be
              supported.</p></td>
 </tr>
 <tr>
@@ -591,7 +593,7 @@ deliver external interrupts to the RISC-V application processor harts.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="IOMMU"><a class="anchor" href="#IOMMU"></a>2.1.3. Input-Output Memory Management Unit (IOMMU)</h3>
+<h3 id="IOMMU"><a class="anchor" href="#IOMMU"></a>Input-Output Memory Management Unit (IOMMU)</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -607,7 +609,7 @@ deliver external interrupts to the RISC-V application processor harts.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IOM_010</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">All IOMMUs in the SoC MUST support the RISC-V IOMMU specification
-             cite:[IOMMU].</p></td>
+             [<a href="server_soc_bibliography.html#bib-iommu" class="xref page">9</a>].</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IOM_020</p></td>
@@ -824,7 +826,7 @@ they access resources reserved for their use.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IOM_250</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An IOMMU that is implemented as an RCiEP MUST use base class 08H
-             and subclass 06H cite:[PCI-CLS].</p></td>
+             and subclass 06H [<a href="server_soc_bibliography.html#bib-pci-cls" class="xref page">10</a>].</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>The base class 08H and sub-class 06H are designated by PCIe for use by an
@@ -922,7 +924,7 @@ they access resources reserved for their use.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="2-1-4-pcie-subsystem"><a class="anchor" href="#2-1-4-pcie-subsystem"></a>2.1.4. PCIe Subsystem</h3>
+<h3 id="pcie-subsystem"><a class="anchor" href="#pcie-subsystem"></a>PCIe Subsystem</h3>
 <div class="paragraph">
 <p>A PCIe subsystem consists of a root complex with a collection of root ports,
 root complex event collectors (RCECs), root complex register blocks (RCRBs),
@@ -997,7 +999,7 @@ translate the IOVA to Supervisor Physical Addresses (SPA).</p>
 </thead>
 </table>
 <div class="sect3">
-<h4 id="2-1-4-1-enhanced-configuration-access-method-ecam"><a class="anchor" href="#2-1-4-1-enhanced-configuration-access-method-ecam"></a>2.1.4.1. Enhanced Configuration Access Method (ECAM)</h4>
+<h4 id="enhanced-configuration-access-method-ecam"><a class="anchor" href="#enhanced-configuration-access-method-ecam"></a>Enhanced Configuration Access Method (ECAM)</h4>
 <div class="paragraph">
 <p>Each PCIe endpoint and the PCIe root port itself implement a set of memory
 mapped configuration registers that are accessed using the PCIe enhanced
@@ -1190,7 +1192,7 @@ each retry of the configuration read.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-2-pcie-memory-space"><a class="anchor" href="#2-1-4-2-pcie-memory-space"></a>2.1.4.2. PCIe Memory Space</h4>
+<h4 id="pcie-memory-space"><a class="anchor" href="#pcie-memory-space"></a>PCIe Memory Space</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -1405,7 +1407,7 @@ containment state.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-3-access-control-services-acs"><a class="anchor" href="#2-1-4-3-access-control-services-acs"></a>2.1.4.3. Access Control Services (ACS)</h4>
+<h4 id="access-control-services-acs"><a class="anchor" href="#access-control-services-acs"></a>Access Control Services (ACS)</h4>
 <div class="paragraph">
 <p>The PCIe ACS provides controls on routing of PCIe TLPs. ACS controls may be used
 to determine whether the TLP should be routed normally, blocked, or redirected.
@@ -1498,7 +1500,7 @@ devices, and SR-IOV capable devices.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-4-address-routed-transactions"><a class="anchor" href="#2-1-4-4-address-routed-transactions"></a>2.1.4.4. Address Routed Transactions</h4>
+<h4 id="address-routed-transactions"><a class="anchor" href="#address-routed-transactions"></a>Address Routed Transactions</h4>
 <div class="paragraph">
 <p>The rules in this section apply to treatment in the root complex of TLPs that
 are routed by address. An address carried in such transactions may be the
@@ -1601,7 +1603,7 @@ space of an endpoint or RCiEP.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-5-id-routed-transactions"><a class="anchor" href="#2-1-4-5-id-routed-transactions"></a>2.1.4.5. ID Routed Transactions</h4>
+<h4 id="id-routed-transactions"><a class="anchor" href="#id-routed-transactions"></a>ID Routed Transactions</h4>
 <div class="paragraph">
 <p>The rules in this section apply to treatment in the root complex of TLPs that
 are routed by ID. Such requests may be Configuration requests, ID routed
@@ -1644,7 +1646,7 @@ messages or completions.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-6-cacheability-and-coherence"><a class="anchor" href="#2-1-4-6-cacheability-and-coherence"></a>2.1.4.6. Cacheability and Coherence</h4>
+<h4 id="cacheability-and-coherence"><a class="anchor" href="#cacheability-and-coherence"></a>Cacheability and Coherence</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -1739,7 +1741,7 @@ messages or completions.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-7-message-signaled-interrupts"><a class="anchor" href="#2-1-4-7-message-signaled-interrupts"></a>2.1.4.7. Message signaled interrupts</h4>
+<h4 id="message-signaled-interrupts"><a class="anchor" href="#message-signaled-interrupts"></a>Message signaled interrupts</h4>
 <div class="paragraph">
 <p>A message signaled interrupt (MSI or MSI-X) is the preferred interrupt signaling
 mechanism in PCIe.</p>
@@ -1773,7 +1775,7 @@ mechanism in PCIe.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-8-precision-time-measurement-ptm"><a class="anchor" href="#2-1-4-8-precision-time-measurement-ptm"></a>2.1.4.8. Precision Time Measurement (PTM)</h4>
+<h4 id="precision-time-measurement-ptm"><a class="anchor" href="#precision-time-measurement-ptm"></a>Precision Time Measurement (PTM)</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -1824,7 +1826,7 @@ mechanism in PCIe.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-9-errorevent-reporting"><a class="anchor" href="#2-1-4-9-errorevent-reporting"></a>2.1.4.9. Error/Event Reporting</h4>
+<h4 id="errorevent-reporting"><a class="anchor" href="#errorevent-reporting"></a>Error/Event Reporting</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -1898,7 +1900,7 @@ mechanism in PCIe.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-10-vendor-specific-registers"><a class="anchor" href="#2-1-4-10-vendor-specific-registers"></a>2.1.4.10. Vendor Specific Registers</h4>
+<h4 id="vendor-specific-registers"><a class="anchor" href="#vendor-specific-registers"></a>Vendor Specific Registers</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -1955,7 +1957,7 @@ mechanism in PCIe.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-11-soc-integrated-pcie-devices"><a class="anchor" href="#2-1-4-11-soc-integrated-pcie-devices"></a>2.1.4.11. SoC-Integrated PCIe Devices</h4>
+<h4 id="soc-integrated-pcie-devices"><a class="anchor" href="#soc-integrated-pcie-devices"></a>SoC-Integrated PCIe Devices</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -2072,7 +2074,7 @@ mechanism in PCIe.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="2-1-5-reliability-availability-and-serviceability-ras"><a class="anchor" href="#2-1-5-reliability-availability-and-serviceability-ras"></a>2.1.5. Reliability, Availability, and Serviceability (RAS)</h3>
+<h3 id="reliability-availability-and-serviceability-ras"><a class="anchor" href="#reliability-availability-and-serviceability-ras"></a>Reliability, Availability, and Serviceability (RAS)</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -2166,7 +2168,7 @@ mechanism in PCIe.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RAS_040</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The SoC SHOULD support the RISC-V RAS error record register
-             interface (RERI) cite:[RERI] for error logging and signaling.</p></td>
+             interface (RERI) [<a href="server_soc_bibliography.html#bib-reri" class="xref page">11</a>] for error logging and signaling.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RAS_050</p></td>
@@ -2250,7 +2252,7 @@ mechanism in PCIe.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="2-1-6-quality-of-service"><a class="anchor" href="#2-1-6-quality-of-service"></a>2.1.6. Quality of Service</h3>
+<h3 id="quality-of-service"><a class="anchor" href="#quality-of-service"></a>Quality of Service</h3>
 <div class="paragraph">
 <p>Quality of Service (QoS) refers to the minimum end-to-end performance that a
 service level agreement (SLA) guarantees to an application in advance. QoS
@@ -2281,7 +2283,7 @@ and more.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">QOS_020</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The SoC SHOULD integrate support for the RISC-V capacity and
-             bandwidth controller register interface (CBQRI) cite:[CBQRI] in
+             bandwidth controller register interface (CBQRI) [<a href="server_soc_bibliography.html#bib-cbqri" class="xref page">12</a>] in
              significant shared caches and the memory controllers.</p></td>
 </tr>
 <tr>
@@ -2293,7 +2295,7 @@ and more.</p>
              SoC SHOULD scale with the number of RISC-V harts in the SoC.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>The <code>srmcfg</code> CSR is provided by the Ssqosid extension cite:[PRIV].</em></p></td>
+<td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>The <code>srmcfg</code> CSR is provided by the Ssqosid extension [<a href="server_soc_bibliography.html#bib-priv" class="xref page">13</a>].</em></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">QOS_040</p></td>
@@ -2357,7 +2359,7 @@ and more.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="2-1-7-manageability"><a class="anchor" href="#2-1-7-manageability"></a>2.1.7. Manageability</h3>
+<h3 id="manageability"><a class="anchor" href="#manageability"></a>Manageability</h3>
 <div class="paragraph">
 <p>This section outlines the guidelines for RISC-V server SoCs to incorporate a
 standardized set of protocols and standards for server management. The SoC
@@ -2378,14 +2380,14 @@ processor harts.</p>
 </div>
 <div class="paragraph">
 <p>This specification strongly recommends the use of the DMTF Redfish
-cite:[DSP0266], DMTF Platform Level Data Model (PLDM) cite:[DSP0240], and DMTF
-Management Component Transport Protocol (MCTP) cite:[DSP0236]) protocols for
+[<a href="server_soc_bibliography.html#bib-dsp0266" class="xref page">14</a>], DMTF Platform Level Data Model (PLDM) [<a href="server_soc_bibliography.html#bib-dsp0240" class="xref page">15</a>], and DMTF
+Management Component Transport Protocol (MCTP) [<a href="server_soc_bibliography.html#bib-dsp0236" class="xref page">16</a>]) protocols for
 in-band and out-of-band server management.</p>
 </div>
 <div class="paragraph">
 <p>This specification strongly recommends the use of DMTF specified Security
-Protocol and Data Model (SPDM) cite:[DSP0274] for device attestation and
-using SPDM encrypted messages cite:[DSP0277] for secure in-band and out-of-band
+Protocol and Data Model (SPDM) [<a href="server_soc_bibliography.html#bib-dsp0274" class="xref page">17</a>] for device attestation and
+using SPDM encrypted messages [<a href="server_soc_bibliography.html#bib-dsp0277" class="xref page">18</a>] for secure in-band and out-of-band
 communication with the BMC. SPDM authentication protocols support establishing a
 trust relationship between the manageability agents in the SoC and the BMC. Use
 of SPDM secured messages enables preserving the confidentiality and integrity of
@@ -2393,14 +2395,14 @@ data exchanged between the BMC and the manageability agents in the SoC.</p>
 </div>
 <div class="paragraph">
 <p>The specification recommends supporting Intelligent Platform Management
-Interface (IPMI) cite:[IPMI20] due to the widespread use of this protocol
+Interface (IPMI) [<a href="server_soc_bibliography.html#bib-ipmi20" class="xref page">19</a>] due to the widespread use of this protocol
 for server management functions such as credentials provisioning and remote
 power control.</p>
 </div>
 <div class="paragraph">
 <p>This specification recommends the RISC-V server SoC to support open standards
 for server management through supporting integration with technologies such as
-the datacenter-ready secure control module (DC-SCM) cite:[DC-SCM] specified by
+the datacenter-ready secure control module (DC-SCM) [<a href="server_soc_bibliography.html#bib-dc-scm" class="xref page">20</a>] specified by
 the Open Compute Project for server management, security, and control features.</p>
 </div>
 <div class="paragraph">
@@ -2462,7 +2464,7 @@ data centers and enterprises.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="2-1-8-performance-monitoring"><a class="anchor" href="#2-1-8-performance-monitoring"></a>2.1.8. Performance Monitoring</h3>
+<h3 id="performance-monitoring"><a class="anchor" href="#performance-monitoring"></a>Performance Monitoring</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -2571,7 +2573,7 @@ data centers and enterprises.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="2-1-9-security-requirements"><a class="anchor" href="#2-1-9-security-requirements"></a>2.1.9. Security Requirements</h3>
+<h3 id="security-requirements"><a class="anchor" href="#security-requirements"></a>Security Requirements</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -2631,7 +2633,7 @@ data centers and enterprises.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SEC_050</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The SoC SHOULD have the capability of interfacing with a Trusted
              Platform Module (TPM) that adheres to the TPM 2.0 Library
-             specification cite:[TPM20].</p></td>
+             specification [<a href="server_soc_bibliography.html#bib-tpm20" class="xref page">21</a>].</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="2"><p class="tableblock"><em>A TPM enhances security by providing secure storage for sensitive
@@ -2644,7 +2646,7 @@ data centers and enterprises.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="server_soc_intro.html">Chapter 1. Introduction</a></span>
+  <span class="prev"><a href="server_soc_intro.html">Introduction</a></span>
   <span class="next"><a href="server_soc_bibliography.html">Bibliography</a></span>
 </nav>
 </article>  </div>

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="1e3bdf4582dca02475f3f53b754ac156974abeca"> 
+    <meta name="antora-ui-version" content="208a16ca600869d471072d04aa4d634680239f0c"> 
     <meta name="version" content="v1.0">
     <meta name="component" content="soc">
     <meta name="latest-version" content="false">
@@ -43,6 +43,15 @@
         <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV" />
         <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV" />
       </a>
+      <div class="navbar-item home">
+        <a class="navbar-link"
+          href="../home/index.html"
+          aria-label="home"
+          title="home">
+          <img class="home-icon riscvlogo--light" src="../_/img/riscv-library.svg" alt="Home" />
+          <img class="home-icon riscvlogo--dark" src="../_/img/riscv-library_white.svg" alt="Home" />
+        </a>
+      </div>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -51,16 +60,6 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item home">
-          <a class="navbar-link"
-            href="../home/index.html"
-            aria-label="home"
-            title="home">
-            <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-              <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg></a>
-        </div>
       </div>
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
@@ -198,28 +197,31 @@
     <a class="nav-link"  href="../plic/contributor.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/introduction.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../plic/introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a>
+    <a class="nav-link"  href="../plic/plic-op-parms.html">RISC-V PLIC Operation Parameters</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-memory-map.html">Chapter 3. Memory Map</a>
+    <a class="nav-link"  href="../plic/plic-memory-map.html">Memory Map</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-priority.html">Chapter 4. Interrupt Priorities</a>
+    <a class="nav-link"  href="../plic/plic-priority.html">Interrupt Priorities</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-interrupts.html">Chapter 5. Interrupt Pending Bits</a>
+    <a class="nav-link"  href="../plic/plic-interrupts.html">Interrupt Pending Bits</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-enables.html">Chapter 6. Interrupt Enables</a>
+    <a class="nav-link"  href="../plic/plic-enables.html">Interrupt Enables</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-claims.html">Chapter 7. Interrupt Claim Process</a>
+    <a class="nav-link"  href="../plic/plic-thresholds.html">Priority Thresholds</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-completion.html">Chapter 8. Interrupt Completion</a>
+    <a class="nav-link"  href="../plic/plic-claims.html">Interrupt Claim Process</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../plic/plic-completion.html">Interrupt Completion</a>
   </li>
 </ul>
   </li>
@@ -316,10 +318,10 @@
     <a class="nav-link"  href="server_soc_contributors.html">Contributors</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="server_soc_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="server_soc_intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
+    <a class="nav-link"  href="server_soc_requirements.html">Server SoC Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="server_soc_bibliography.html">Bibliography</a>
@@ -397,7 +399,7 @@
         </a>
       
 
-          <a href="_attachments/riscv-server-soc.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
+          <a href="_attachments/riscv-server-soc.pdf" title="PDF" class="sidebar-link" download>
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -409,11 +411,11 @@
   <nav class="breadcrumbs" aria-label="breadcrumbs">
     <ul>
       <li>Server SoC</li>
-      <li><a href="server_soc_intro.html">Chapter 1. Introduction</a></li>
+      <li><a href="server_soc_intro.html">Introduction</a></li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="intro"><a class="anchor" href="#intro"></a>1.1. Introduction</h2>
+<h2 id="intro"><a class="anchor" href="#intro"></a>Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The RISC-V server SoC specification defines a standardized set of capabilities
@@ -442,7 +444,7 @@ computing systems that may be used for one or more of these purposes.</p>
 hardware, platform firmware, boot/runtime services, and security services. The
 platform provides hardware interfaces (e.g., harts, timers, interrupt
 controllers, PCIe root ports, etc.) to portable system software. It also offers
-a set of standardized RISC-V boot and runtime services cite:[BRS] based on the
+a set of standardized RISC-V boot and runtime services [<a href="server_soc_bibliography.html#bib-brs" class="xref page">1</a>] based on the
 UEFI and ACPI standards. To support provisioning and platform management, it
 interfaces with a baseboard management controller (BMC) through both in-band and
 out-of-band (OOB) management interfaces. The in-band management interfaces
@@ -451,7 +453,7 @@ and Redfish for provisioning and management of the operating system executing on
 the platform. The OOB interface supports the use of standard manageability
 specifications like MCTP, PLDM, Redfish, and IPMI for functions such as power
 management, telemetry, debug, and provisioning. The RISC-V security model
-cite:[SEC] includes guidelines and requirements for aspects such as debug
+[<a href="server_soc_bibliography.html#bib-sec" class="xref page">2</a>] includes guidelines and requirements for aspects such as debug
 authorization, secure/measured boot, firmware updates, firmware resilience, and
 confidential computing, among others.</p>
 </div>
@@ -504,7 +506,7 @@ specification.</p>
              The rules use the key words "MUST", "MUST NOT", "REQUIRED",
              "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",
              "NOT RECOMMENDED", "MAY", and "OPTIONAL" that are to be
-             interpreted as described in RFC 2119 cite:[RFC_2119] when, and
+             interpreted as described in RFC 2119 [<a href="server_soc_bibliography.html#bib-rfc_2119" class="xref page">3</a>] when, and
              only when, they appear in all capitals, as shown here. When
              these words are not capitalized, they have their normal English
              meanings.</p></td>
@@ -549,11 +551,11 @@ specification.</p>
 </div>
 <div style="page-break-after: always;"></div>
 <div class="sect2">
-<h3 id="1-1-1-glossary"><a class="anchor" href="#1-1-1-glossary"></a>1.1.1. Glossary</h3>
+<h3 id="glossary"><a class="anchor" href="#glossary"></a>Glossary</h3>
 <div class="paragraph">
 <p>Most terminology has the standard RISC-V meaning. This table captures other
 terms used in the document. Terms in the document prefixed by 'PCIe' have the
-meaning defined in the PCI Express (PCIe) Base Specification cite:[PCI] (even
+meaning defined in the PCI Express (PCIe) Base Specification [<a href="server_soc_bibliography.html#bib-pci" class="xref page">4</a>] (even
 if they are not in this table).</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
@@ -571,7 +573,7 @@ if they are not in this table).</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ACPI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Advanced Configuration and Power Interface cite:[ACPI].</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Advanced Configuration and Power Interface [<a href="server_soc_bibliography.html#bib-acpi" class="xref page">5</a>].</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ACS</p></td>
@@ -815,7 +817,7 @@ if they are not in this table).</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UEFI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unified Extensible Firmware Interface. cite:[UEFI]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unified Extensible Firmware Interface. [<a href="server_soc_bibliography.html#bib-uefi" class="xref page">6</a>]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UR, CA</p></td>
@@ -833,7 +835,7 @@ if they are not in this table).</p>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="server_soc_contributors.html">Contributors</a></span>
-  <span class="next"><a href="server_soc_requirements.html">Chapter 2. Server SoC Requirements</a></span>
+  <span class="next"><a href="server_soc_requirements.html">Server SoC Requirements</a></span>
 </nav>
 </article>  </div>
 </main>

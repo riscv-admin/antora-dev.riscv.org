@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="1e3bdf4582dca02475f3f53b754ac156974abeca"> 
+    <meta name="antora-ui-version" content="208a16ca600869d471072d04aa4d634680239f0c"> 
     <meta name="version" content="v1.0">
     <meta name="component" content="soc">
     <meta name="latest-version" content="false">
@@ -42,6 +42,15 @@
         <img class="riscvlogo riscvlogo--light" src="../_/img/risc-v_logo.svg" alt="RISCV" />
         <img class="riscvlogo riscvlogo--dark" src="../_/img/risc-v_logo_white.svg" alt="RISCV" />
       </a>
+      <div class="navbar-item home">
+        <a class="navbar-link"
+          href="../home/index.html"
+          aria-label="home"
+          title="home">
+          <img class="home-icon riscvlogo--light" src="../_/img/riscv-library.svg" alt="Home" />
+          <img class="home-icon riscvlogo--dark" src="../_/img/riscv-library_white.svg" alt="Home" />
+        </a>
+      </div>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -50,16 +59,6 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item home">
-          <a class="navbar-link"
-            href="../home/index.html"
-            aria-label="home"
-            title="home">
-            <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-              <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg></a>
-        </div>
       </div>
       </div>
       <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
@@ -197,28 +196,31 @@
     <a class="nav-link"  href="../plic/contributor.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/introduction.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../plic/introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-op-parms.html">Chapter 2. RISC-V PLIC Operation Parameters</a>
+    <a class="nav-link"  href="../plic/plic-op-parms.html">RISC-V PLIC Operation Parameters</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-memory-map.html">Chapter 3. Memory Map</a>
+    <a class="nav-link"  href="../plic/plic-memory-map.html">Memory Map</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-priority.html">Chapter 4. Interrupt Priorities</a>
+    <a class="nav-link"  href="../plic/plic-priority.html">Interrupt Priorities</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-interrupts.html">Chapter 5. Interrupt Pending Bits</a>
+    <a class="nav-link"  href="../plic/plic-interrupts.html">Interrupt Pending Bits</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-enables.html">Chapter 6. Interrupt Enables</a>
+    <a class="nav-link"  href="../plic/plic-enables.html">Interrupt Enables</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-claims.html">Chapter 7. Interrupt Claim Process</a>
+    <a class="nav-link"  href="../plic/plic-thresholds.html">Priority Thresholds</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../plic/plic-completion.html">Chapter 8. Interrupt Completion</a>
+    <a class="nav-link"  href="../plic/plic-claims.html">Interrupt Claim Process</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../plic/plic-completion.html">Interrupt Completion</a>
   </li>
 </ul>
   </li>
@@ -315,10 +317,10 @@
     <a class="nav-link"  href="server_soc_contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="server_soc_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="server_soc_intro.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
+    <a class="nav-link"  href="server_soc_requirements.html">Server SoC Requirements</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link"  href="server_soc_bibliography.html">Bibliography</a>
@@ -396,7 +398,7 @@
         </a>
       
 
-          <a href="_attachments/riscv-server-soc.pdf" target="_blank" rel="noopener noreferrer" title="PDF" class="sidebar-link" download>
+          <a href="_attachments/riscv-server-soc.pdf" title="PDF" class="sidebar-link" download>
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -415,12 +417,72 @@
 <h2 id="bibliography"><a class="anchor" href="#bibliography"></a>Bibliography</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>bibliography::[]</p>
+<p><a id="bib-brs"></a>[1]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-sec"></a>[2]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-rfc_2119"></a>[3]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-pci"></a>[4]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-acpi"></a>[5]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-uefi"></a>[6]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-unpriv"></a>[7]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-aia"></a>[8]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-iommu"></a>[9]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-pci-cls"></a>[10]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-reri"></a>[11]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-cbqri"></a>[12]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-priv"></a>[13]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-dsp0266"></a>[14]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-dsp0240"></a>[15]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-dsp0236"></a>[16]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-dsp0274"></a>[17]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-dsp0277"></a>[18]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-ipmi20"></a>[19]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-dc-scm"></a>[20]</p>
+</div>
+<div class="paragraph">
+<p><a id="bib-tpm20"></a>[21]</p>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="server_soc_requirements.html">Chapter 2. Server SoC Requirements</a></span>
+  <span class="prev"><a href="server_soc_requirements.html">Server SoC Requirements</a></span>
 </nav>
 </article>  </div>
 </main>
