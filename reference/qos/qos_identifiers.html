@@ -303,6 +303,9 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="qos_sw_guidelines.html">Chapter 7. Software Guidelines</a>
   </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="qos_biblio.html">Bibliography</a>
+  </li>
 </ul>
   </li>
 </ul>
@@ -643,9 +646,9 @@ register of the controller. Software should use the effective <code>MCID</code> 
 <div class="sect3">
 <h4 id="2-1-1-1-risc-v-hart-initiated-requests-ssqosid"><a class="anchor" href="#2-1-1-1-risc-v-hart-initiated-requests-ssqosid"></a>2.1.1.1. RISC-V hart initiated requests (Ssqosid)</h4>
 <div class="paragraph">
-<p>The Ssqosid extension cite:[SSQOSID] introduces a read/write S/HS-mode register
+<p>The Ssqosid extension [<a href="qos_biblio.html#bib-ssqosid" class="xref page">3</a>] introduces a read/write S/HS-mode register
 (<code>srmcfg</code>) to configure QoS Identifiers to be used with requests made by the
-hart to shared resources. If Smstateen cite:[STATEEN] is implemented then bit 55
+hart to shared resources. If Smstateen [<a href="qos_biblio.html#bib-stateen" class="xref page">4</a>] is implemented then bit 55
 of <code>mstateen0</code> controls access to <code>srmcfg</code> from privilege modes less than M.</p>
 </div>
 <div style="page-break-after: always;"></div>
@@ -653,7 +656,7 @@ of <code>mstateen0</code> controls access to <code>srmcfg</code> from privilege 
 <div class="sect3">
 <h4 id="2-1-1-2-device-initiated-requests"><a class="anchor" href="#2-1-1-2-device-initiated-requests"></a>2.1.1.2. Device initiated requests</h4>
 <div class="paragraph">
-<p>A RISC-V IOMMU cite:[IOMMU] extension to support configuring QoS identifiers is
+<p>A RISC-V IOMMU [<a href="qos_biblio.html#bib-iommu" class="xref page">5</a>] extension to support configuring QoS identifiers is
 specified in <a href="#QOS_IOMMU">[QOS_IOMMU]</a>. If the system supports an IOMMU with this extension,
 the IOMMU can be configured with the <code>RCID</code> and <code>MCID</code> to associate with requests
 from devices and from the IOMMU itself.</p>

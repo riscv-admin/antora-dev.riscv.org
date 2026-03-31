@@ -303,6 +303,9 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="qos_sw_guidelines.html">Chapter 7. Software Guidelines</a>
   </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="qos_biblio.html">Bibliography</a>
+  </li>
 </ul>
   </li>
 </ul>
@@ -609,13 +612,13 @@ of a computing system that runs multiple workloads concurrently. Furthermore,
 during arbitration for shared resources, the prioritization of the
 workloads' requests against other competing requests might also affect the
 performance of the workload. Such interference due to resource sharing can lead
-to unpredictable workload performance cite:[PTCAMP].</p>
+to unpredictable workload performance [<a href="qos_biblio.html#bib-ptcamp" class="xref page">1</a>].</p>
 </div>
 <div class="paragraph">
 <p>When multiple workloads are running concurrently on modern processors with large
 core counts, multiple cache hierarchies, and multiple memory controllers, the
 performance of a workload can become less deterministic or even non-deterministic.
-This situation occurs because the workload performance depends on the behavior of the
+This situation occurs because the worload performance depends on the behavior of the
 other workloads in the machine that contend for the shared resources, which can lead to
 interference. In many deployment scenarios, such as public cloud servers, the
 workload owner might not be in control of the type and placement of other
@@ -635,7 +638,7 @@ interconnect bandwidth usage, and so on through a resource allocation capability
 The resource allocation capability enables system software to reserve capacity
 and/or bandwidth to meet the performance goals of the workload. Such controls
 can improve the utilization of the system by co-locating workloads while
-minimizing the interference caused by one workload to another cite:[HERACLES].</p>
+minimizing the interference caused by one workload to another [<a href="qos_biblio.html#bib-heracles" class="xref page">2</a>].</p>
 </div>
 <div class="paragraph">
 <p>Effective use of the resource allocation capability requires the hardware to provide
