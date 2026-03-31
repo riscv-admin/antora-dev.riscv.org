@@ -465,7 +465,7 @@
 <h2 id="availability"><a class="anchor" href="#availability"></a>1.4. Availability</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>With <code>&lt;riscv_vector.h&gt;</code> included, availability of intrinsic variants depends on the required architecture of their corresponding vector instructions. The supported architecture is specified to the compiler using the <code>-march</code> option cite:[riscv-guide-llvm,riscv-v-gcc].</p>
+<p>With <code>&lt;riscv_vector.h&gt;</code> included, availability of intrinsic variants depends on the required architecture of their corresponding vector instructions. The supported architecture is specified to the compiler using the <code>-march</code> option [<a href="bibliography.html#bib-riscv-guide-llvm" class="xref page">3</a>][<a href="bibliography.html#bib-riscv-v-gcc" class="xref page">4</a>].</p>
 </div>
 <div class="paragraph">
 <p>The standard vector extensions [<a href="bibliography.html#bib-riscv-v-spec" class="xref page">1</a>] provides a set of smaller extensions for embedded use. Please check out the <code>Zve</code> extensions [<a href="bibliography.html#bib-riscv-v-spec" class="xref page">1</a>] for the varying degree of support.</p>
@@ -597,7 +597,7 @@ Rounding mode does not affect the computations of <code>vsadd</code>, <code>vsad
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The RISC-V psABI [<a href="bibliography.html#bib-riscv-cc-vector" class="xref page">3</a>] states that <code>vxrm</code> is not preserved across calls. Optimization for reducing the number of redundant writes to <code>vxrm</code> is a compiler and system specific issue.
+The RISC-V psABI [<a href="bibliography.html#bib-riscv-cc-vector" class="xref page">5</a>] states that <code>vxrm</code> is not preserved across calls. Optimization for reducing the number of redundant writes to <code>vxrm</code> is a compiler and system specific issue.
 </td>
 </tr>
 </table>
@@ -632,7 +632,7 @@ The RISC-V psABI [<a href="bibliography.html#bib-riscv-cc-vector" class="xref pa
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Control of the floating-point accrued exceptions flag fields (<code>fflag</code>) [<a href="bibliography.html#bib-riscv-f-spec" class="xref page">4</a>] is not yet covered in the vector intrinsics v1.0. We plan to support it in follow-up versions in a compatible way with existing intrinsics in v1.0.
+Control of the floating-point accrued exceptions flag fields (<code>fflag</code>) [<a href="bibliography.html#bib-riscv-f-spec" class="xref page">6</a>] is not yet covered in the vector intrinsics v1.0. We plan to support it in follow-up versions in a compatible way with existing intrinsics in v1.0.
 </td>
 </tr>
 </table>
@@ -649,7 +649,7 @@ Control of the floating-point accrued exceptions flag fields (<code>fflag</code>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Both GNU and LLVM compilers generate scalar floating-point instructions using dynamic rounding mode, relying on the environment initialization to set <code>frm</code> to <code>RNE</code> (specified as "roundTiesToEven" in IEEE-754 (a.k.a. IEC 60559)) [<a href="bibliography.html#bib-ieee754-2008" class="xref page">5</a>].
+Both GNU and LLVM compilers generate scalar floating-point instructions using dynamic rounding mode, relying on the environment initialization to set <code>frm</code> to <code>RNE</code> (specified as "roundTiesToEven" in IEEE-754 (a.k.a. IEC 60559)) [<a href="bibliography.html#bib-ieee754-2008" class="xref page">7</a>].
 </td>
 </tr>
 </table>
@@ -670,10 +670,10 @@ The implicit FP rounding mode intrinsics are intended to be used regardless of <
 <div class="sect3">
 <h4 id="explicit-frm"><a class="anchor" href="#explicit-frm"></a>1.5.6.2. Explicit FP rounding mode intrinsics</h4>
 <div class="paragraph">
-<p>The explicit FP rounding mode intrinsics contain the <code>frm</code> argument which indicates the rounding mode (<code>frm</code>) [<a href="bibliography.html#bib-riscv-f-spec" class="xref page">4</a>] control. The floating-point intrinsics with the <code>frm</code> argument are followed by an <code>_rm</code> suffix in the function name.</p>
+<p>The explicit FP rounding mode intrinsics contain the <code>frm</code> argument which indicates the rounding mode (<code>frm</code>) [<a href="bibliography.html#bib-riscv-f-spec" class="xref page">6</a>] control. The floating-point intrinsics with the <code>frm</code> argument are followed by an <code>_rm</code> suffix in the function name.</p>
 </div>
 <div class="paragraph">
-<p>The <code>frm</code> argument is required to be a constant integer expression. The implementation should provide the following <code>enum</code> that maps to the defined rounding mode values under RISC-V ISA Manual Table 8.1 [<a href="bibliography.html#bib-riscv-cc-vector" class="xref page">3</a>].</p>
+<p>The <code>frm</code> argument is required to be a constant integer expression. The implementation should provide the following <code>enum</code> that maps to the defined rounding mode values under RISC-V ISA Manual Table 8.1 [<a href="bibliography.html#bib-riscv-cc-vector" class="xref page">5</a>].</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2292,7 +2292,7 @@ dest = __riscv_vset_v_f32m2_f32m4(dest, 1, v1);</code></pre>
 <div class="sect2">
 <h3 id="1-9-6-bookkeeping-of-configurations"><a class="anchor" href="#1-9-6-bookkeeping-of-configurations"></a>1.9.6. Bookkeeping of configurations</h3>
 <div class="paragraph">
-<p>Control of <code>vl</code>, <code>vtype</code>, <code>vxrm</code>, and <code>frm</code> is not directly exposed to the user. The implementation is responsible for setting the correct values into these CSRs to achieve the expected semantics of the intrinsic functions with respect to the conventions defined in the ISA specification [<a href="bibliography.html#bib-riscv-v-spec" class="xref page">1</a>] and ABI specification [<a href="bibliography.html#bib-riscv-cc-vector" class="xref page">3</a>].</p>
+<p>Control of <code>vl</code>, <code>vtype</code>, <code>vxrm</code>, and <code>frm</code> is not directly exposed to the user. The implementation is responsible for setting the correct values into these CSRs to achieve the expected semantics of the intrinsic functions with respect to the conventions defined in the ISA specification [<a href="bibliography.html#bib-riscv-v-spec" class="xref page">1</a>] and ABI specification [<a href="bibliography.html#bib-riscv-cc-vector" class="xref page">5</a>].</p>
 </div>
 </div>
 <div class="sect2">
