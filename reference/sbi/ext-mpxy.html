@@ -282,76 +282,37 @@
     <span class="nav-text">Platform Management Interface (RPMI)</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../rpmi/index.html">Chapter 1. Title Page)</a>
+    <a class="nav-link"  href="../rpmi/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../rpmi/copyright.html">Chapter 2. Copyright and License</a>
+    <a class="nav-link"  href="../rpmi/copyright.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#contributors.adoc">Chapter 3. Contributors</a>
+    <a class="nav-link"  href="../rpmi/contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#changelog.adoc">Chapter 4. Changelog</a>
+    <a class="nav-link"  href="../rpmi/changelog.html">Changelog</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#terms.adoc">Chapter 5. Terms and Abbreviations</a>
+    <a class="nav-link"  href="../rpmi/terms.html">Terms and Abbreviations</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#intro.adoc">Chapter 6. Introduction</a>
+    <a class="nav-link"  href="../rpmi/intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#transport.adoc">Chapter 7. Transport</a>
+    <a class="nav-link"  href="../rpmi/transport.html">Chapter 2. Transport</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../rpmi/message-protocol.html">Chapter 8. Messaging Protocol</a>
+    <a class="nav-link"  href="../rpmi/message-protocol.html">Chapter 3. Messaging Protocol</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#service-groups.adoc">Chapter 9. Service Groups</a>
+    <a class="nav-link"  href="../rpmi/service-groups.html">Chapter 4. Service Groups</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#srvgrp-base.adoc">Chapter 10. Service Group: BASE (SERVICEGROUP_ID: 0x0001)</a>
+    <a class="nav-link"  href="../rpmi/rpmi-mpxy.html">Chapter 5. Integration with SBI MPXY Extension</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#srvgrp-system-msi.adoc">Chapter 11. Service Group - SYSTEM_MSI (SERVICEGROUP_ID: 0x0002)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#srvgrp-system-reset.adoc">Chapter 12. Service Group - SYSTEM_RESET (SERVICEGROUP_ID: 0x0003)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#srvgrp-system-suspend.adoc">Chapter 13. Service Group - SYSTEM_SUSPEND (SERVICEGROUP_ID: 0x0004)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#srvgrp-hart-state-management.adoc">Chapter 14. Service Group - HART_STATE_MANAGEMENT (SERVICEGROUP_ID: 0x0005)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#srvgrp-cppc.adoc">Chapter 15. Service Group - CPPC (SERVICEGROUP_ID: 0x0006)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#srvgrp-voltage.adoc">Chapter 16. Service Group - VOLTAGE (SERVICEGROUP_ID: 0x0007)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#srvgrp-clock.adoc">Chapter 17. Service Group - CLOCK (SERVICEGROUP_ID: 0x0008)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#srvgrp-device-power.adoc">Chapter 18. Service Group - DEVICE_POWER (SERVICEGROUP_ID: 0x0009)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#srvgrp-performance.adoc">Chapter 19. Service Group - PERFORMANCE (SERVICEGROUP_ID: 0x000A)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#srvgrp-management.adoc">Chapter 20. Service Group - MANAGEMENT_MODE (SERVICEGROUP_ID: 0x000B)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#srvgrp-ras-agent.adoc">Chapter 21. Service Group - RAS_AGENT (SERVICEGROUP_ID: 0x000C)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#srvgrp-request-forward.adoc">Chapter 22. Service Group - REQUEST_FORWARD (SERVICEGROUP_ID: 0x000D)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#rpmi-mpxy.adoc">Chapter 23. Integration with SBI MPXY Extension</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../rpmi/bibliography.html">Chapter 24. Bibliography</a>
+    <a class="nav-link"  href="../rpmi/bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -653,7 +614,7 @@ that implements the message protocol. The remote entity can be implemented as a
 system-level partition on the same hart or as firmware running on a platform
 microcontroller or emulated by an SBI implementation. The supervisor software
 MUST call the <code>sbi_mpxy_set_shmem</code> function to set up the shared memory before
-calling any other function which uses shared memory for any kind of data transfer.</p>
+calling any other function defined in the extension.</p>
 </div>
 <div class="sect2">
 <h3 id="21-1-1-sbi-mpxy-and-dedicated-sbi-extension-rule"><a class="anchor" href="#21-1-1-sbi-mpxy-and-dedicated-sbi-extension-rule"></a>21.1.1. SBI MPXY and Dedicated SBI extension rule</h3>
@@ -1057,19 +1018,6 @@ attribute value across all MPXY channels</p>
 <p>This function always returns SBI_SUCCESS in <code>sbiret.error</code> and it will return
 the shared memory size in <code>sbiret.uvalue</code>.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This function does not require the prior setup of shared memory using the
-<code>sbi_mpxy_set_shmem</code> function.
-</td>
-</tr>
-</table>
-</div>
 </div>
 <div class="sect2">
 <h3 id="21-1-6-function-set-shared-memory-fid-1"><a class="anchor" href="#21-1-6-function-set-shared-memory-fid-1"></a>21.1.6. Function: Set shared memory (FID #1)</h3>
@@ -1106,7 +1054,7 @@ flags[1:0]: Shared memory setup mode (Refer table below).</code></pre>
 </div>
 </div>
 <table id="table_sbi_mpxy_set_shmem_setup_mode" class="tableblock frame-all grid-all" style="width: 95%;">
-<caption class="title">Table 3. MPXY Shared Memory Setup Mode</caption>
+<caption class="title">Table 91. MPXY Shared Memory Setup Mode</caption>
 <colgroup>
 <col style="width: 27.7777%;">
 <col style="width: 27.7777%;">
@@ -1212,8 +1160,7 @@ parameters does not satisfy the requirements described in
 </td>
 <td class="content">
 The supervisor software MUST call this function to setup the shared
-memory first before calling any other function which uses shared memory for any
-kind of data transfer.
+memory first before calling any other function in this extension.
 </td>
 </tr>
 </table>
@@ -1292,7 +1239,7 @@ get the complete list of channel IDs depending on the <code>RETURNED</code> and
 returned in <code>sbiret.error</code> are below.</p>
 </div>
 <table id="table_sbi_mpxy_get_channel_ids_errors" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 91. MPXY Get Channel IDs Errors</caption>
+<caption class="title">Table 92. MPXY Get Channel IDs Errors</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -1361,7 +1308,7 @@ available at the shared memory offset <code>4 * i</code>.</p>
 <p>The possible error codes returned in <code>sbiret.error</code> are shown below.</p>
 </div>
 <table id="table_sbi_mpxy_read_attributes_errors" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 92. MPXY Read Channel Attributes Errors</caption>
+<caption class="title">Table 93. MPXY Read Channel Attributes Errors</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -1439,7 +1386,7 @@ the corresponding value MUST be placed at the shared memory offset 4 * i.</p>
 <p>The possible error codes returned in <code>sbiret.error</code> are shown below.</p>
 </div>
 <table id="table_sbi_mpxy_write_attributes_errors" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 93. MPXY Write Channel Attributes Errors</caption>
+<caption class="title">Table 94. MPXY Write Channel Attributes Errors</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -1533,7 +1480,7 @@ bit in the <code>CHANNEL_CAPABILITY</code> attribute is set to <code>1</code>.</
 <p>The possible error codes returned in <code>sbiret.error</code> are below.</p>
 </div>
 <table id="table_sbi_mpxy_send_message_with_response_errors" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 94. MPXY Send Message with Response Errors</caption>
+<caption class="title">Table 95. MPXY Send Message with Response Errors</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -1831,7 +1778,7 @@ Or this function is not supported.</p></td>
 <div class="sect2">
 <h3 id="21-1-13-function-listing"><a class="anchor" href="#21-1-13-function-listing"></a>21.1.13. Function Listing</h3>
 <table id="table_mpxy_function_list" class="tableblock frame-all grid-all" style="width: 80%;">
-<caption class="title">Table 95. MPXY Function List</caption>
+<caption class="title">Table 96. MPXY Function List</caption>
 <colgroup>
 <col style="width: 58.3333%;">
 <col style="width: 16.6666%;">
