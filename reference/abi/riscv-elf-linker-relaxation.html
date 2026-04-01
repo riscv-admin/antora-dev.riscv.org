@@ -174,7 +174,7 @@
     <a class="nav-link"  href="riscv-elf-object-files.html">Chapter 8. ELF Object Files</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="riscv-elf-linker-relaxation.html">Linker Relaxation</a>
+    <a class="nav-link"  href="riscv-elf-linker-relaxation.html">Chapter 9. Linker Relaxation</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="elf-bib.html">References</a>
@@ -186,10 +186,10 @@
     <span class="nav-text">RISC-V DWARF Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-dwarf-debugging-format.html">DWARF Debugging Format</a>
+    <a class="nav-link"  href="riscv-dwarf-debugging-format.html">Chapter 10. DWARF Debugging Format</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-dwarf-register-numbers.html">DWARF Register Numbers</a>
+    <a class="nav-link"  href="riscv-dwarf-register-numbers.html">Chapter 11. DWARF Register Numbers</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="dwarf-bib.html">References</a>
@@ -454,12 +454,12 @@
       <li><a href="../home/index.html">RISC-V Specifications</a></li>
             <li><a href="index.html">Application Binary Interface</a></li>
                     <li>
-            <a href="riscv-elf-linker-relaxation.html">Linker Relaxation</a>
+            <a href="riscv-elf-linker-relaxation.html">Chapter 9. Linker Relaxation</a>
           </li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="linker-relaxation"><a class="anchor" href="#linker-relaxation"></a>Linker Relaxation</h2>
+<h2 id="9-1-linker-relaxation"><a class="anchor" href="#9-1-linker-relaxation"></a>9.1. Linker Relaxation</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>At link time, when all the memory objects have been resolved, the code sequence
@@ -483,7 +483,7 @@ generators must in general ensure that relocations are always emitted when
 relaxation is enabled.</p>
 </div>
 <div class="sect2">
-<h3 id="linker-relaxation-types"><a class="anchor" href="#linker-relaxation-types"></a>Linker Relaxation Types</h3>
+<h3 id="9-1-1-linker-relaxation-types"><a class="anchor" href="#9-1-1-linker-relaxation-types"></a>9.1.1. Linker Relaxation Types</h3>
 <div class="paragraph">
 <p>The purpose of this section is to describe all types of linker relaxation,
 the linker may implement a part of linker relaxation type, and can be skipped
@@ -523,7 +523,7 @@ which made the load instruction reference to an unspecified address.
 </table>
 </div>
 <div class="sect3">
-<h4 id="function-call-relaxation"><a class="anchor" href="#function-call-relaxation"></a>Function Call Relaxation</h4>
+<h4 id="9-1-1-1-function-call-relaxation"><a class="anchor" href="#9-1-1-1-function-call-relaxation"></a>9.1.1.1. Function Call Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -597,7 +597,7 @@ symbol.
 </div>
 </div>
 <div class="sect3">
-<h4 id="compressed-function-call-relaxation"><a class="anchor" href="#compressed-function-call-relaxation"></a>Compressed Function Call Relaxation</h4>
+<h4 id="9-1-1-2-compressed-function-call-relaxation"><a class="anchor" href="#9-1-1-2-compressed-function-call-relaxation"></a>9.1.1.2. Compressed Function Call Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -659,7 +659,7 @@ location of relocation and target symbol.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="compressed-tail-call-relaxation"><a class="anchor" href="#compressed-tail-call-relaxation"></a>Compressed Tail Call Relaxation</h4>
+<h4 id="9-1-1-3-compressed-tail-call-relaxation"><a class="anchor" href="#9-1-1-3-compressed-tail-call-relaxation"></a>9.1.1.3. Compressed Tail Call Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -721,7 +721,7 @@ location of relocation and target symbol.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="gp-relax"><a class="anchor" href="#gp-relax"></a>Global-pointer Relaxation</h4>
+<h4 id="gp-relax"><a class="anchor" href="#gp-relax"></a>9.1.1.4. Global-pointer Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -842,7 +842,7 @@ optimize code size and performance of the symbol accessing.
 </div>
 </div>
 <div class="sect3">
-<h4 id="zero-page-relaxation"><a class="anchor" href="#zero-page-relaxation"></a>Zero-page Relaxation</h4>
+<h4 id="9-1-1-5-zero-page-relaxation"><a class="anchor" href="#9-1-1-5-zero-page-relaxation"></a>9.1.1.5. Zero-page Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -904,7 +904,7 @@ relaxed into x0-relative access.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="compressed-lui-relaxation"><a class="anchor" href="#compressed-lui-relaxation"></a>Compressed LUI Relaxation</h4>
+<h4 id="9-1-1-6-compressed-lui-relaxation"><a class="anchor" href="#9-1-1-6-compressed-lui-relaxation"></a>9.1.1.6. Compressed LUI Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>
@@ -965,7 +965,7 @@ unchanged.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="thread-pointer-relaxation"><a class="anchor" href="#thread-pointer-relaxation"></a>Thread-pointer Relaxation</h4>
+<h4 id="9-1-1-7-thread-pointer-relaxation"><a class="anchor" href="#9-1-1-7-thread-pointer-relaxation"></a>9.1.1.7. Thread-pointer Relaxation</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Target Relocation</dt>

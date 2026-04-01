@@ -174,7 +174,7 @@
     <a class="nav-link"  href="riscv-elf-object-files.html">Chapter 8. ELF Object Files</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-elf-linker-relaxation.html">Linker Relaxation</a>
+    <a class="nav-link"  href="riscv-elf-linker-relaxation.html">Chapter 9. Linker Relaxation</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="elf-bib.html">References</a>
@@ -186,10 +186,10 @@
     <span class="nav-text">RISC-V DWARF Specification</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-dwarf-debugging-format.html">DWARF Debugging Format</a>
+    <a class="nav-link"  href="riscv-dwarf-debugging-format.html">Chapter 10. DWARF Debugging Format</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-dwarf-register-numbers.html">DWARF Register Numbers</a>
+    <a class="nav-link"  href="riscv-dwarf-register-numbers.html">Chapter 11. DWARF Register Numbers</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="dwarf-bib.html">References</a>
@@ -463,7 +463,7 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>The ELF object file format for RISC-V follows the
-<em>Generic System V Application Binary Interface</em> <a href="#gabi">[gabi]</a>
+<em>Generic System V Application Binary Interface</em> <a href="elf-bib.html#gabi" class="xref page">elf-bib.adoc#gabi</a>
 ("gABI"); this specification only describes RISC-V-specific definitions.</p>
 </div>
 <div class="sect2">
@@ -1397,7 +1397,7 @@ purpose.  These relocations may conflict with other nonstandard extensions.</p>
 <div class="paragraph">
 <p>This section and later ones contain fragments written in assembler. The precise
 assembler syntax, including that of the relocations, is described in the
-<em>RISC-V Assembly Programmer&#8217;s Manual</em> <a href="#rv-asm">[rv-asm]</a>.</p>
+<em>RISC-V Assembly Programmer&#8217;s Manual</em> <a href="elf-bib.html#rv-asm" class="xref page">elf-bib.adoc#rv-asm</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="8-1-4-1-calculation-symbols"><a class="anchor" href="#8-1-4-1-calculation-symbols"></a>8.1.4.1. Calculation Symbols</h4>
@@ -1927,7 +1927,7 @@ def align(addend):
 TLS "initialization images" for new threads. The <code>.tbss</code> and <code>.tdata</code> sections
 are not referenced directly like regular segments, rather they are copied or
 allocated to the thread local storage space of newly created threads.
-See <em>ELF Handling For Thread-Local Storage</em> <a href="#tls">[tls]</a>.</p>
+See <em>ELF Handling For Thread-Local Storage</em> <a href="elf-bib.html#tls" class="xref page">elf-bib.adoc#tls</a>.</p>
 </div>
 <div class="paragraph">
 <p>In The ELF Thread Local Storage Model, TLS offsets are used instead of pointers.
@@ -2419,7 +2419,7 @@ default versions of the standard extensions.</p>
 <div class="paragraph">
 <p>The toolchain should normalized the architecture string into canonical order
 whcih defined in
-<em>The RISC-V Instruction Set Manual, Volume I: User-Level ISA, Document</em> <a href="#riscv-unpriv">[riscv-unpriv]</a>
+<em>The RISC-V Instruction Set Manual, Volume I: User-Level ISA, Document</em> <a href="elf-bib.html#riscv-unpriv" class="xref page">elf-bib.adoc#riscv-unpriv</a>
 , expanded with all required extension and should add shorthand extension into
 architecture string if all expanded extensions are included in architecture
 string.</p>
@@ -2573,7 +2573,7 @@ specification versions are merged.</p>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="riscv-elf-cpp-name-mangling.html">Chapter 7. C++ Name Mangling</a></span>
-  <span class="next"><a href="riscv-elf-linker-relaxation.html">Linker Relaxation</a></span>
+  <span class="next"><a href="riscv-elf-linker-relaxation.html">Chapter 9. Linker Relaxation</a></span>
 </nav>
 </article>  </div>
 </main>
