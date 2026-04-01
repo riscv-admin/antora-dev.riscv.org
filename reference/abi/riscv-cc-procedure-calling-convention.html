@@ -153,31 +153,31 @@
     <a class="nav-link"  href="riscv-cc-c-cpp-type-details.html">Chapter 4. C/C++ type details</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-cc-linux-specific-abi.html">Chapter 5. Linux-specific ABI</a>
+    <a class="nav-link"  href="riscv-cc-linux-specific-abi.html">Appendix A. Linux-specific ABI</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-elf-code-models.html">Chapter 6. Code Models</a>
+    <a class="nav-link"  href="riscv-elf-code-models.html">Chapter 5. Code Models</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-elf-dynamic-linking.html">Chapter 7. Dynamic Linking</a>
+    <a class="nav-link"  href="riscv-elf-dynamic-linking.html">Chapter 6. Dynamic Linking</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-elf-cpp-name-mangling.html">Chapter 8. C++ Name Mangling</a>
+    <a class="nav-link"  href="riscv-elf-cpp-name-mangling.html">Chapter 7. C++ Name Mangling</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-elf-object-files.html">Chapter 9. ELF Object Files</a>
+    <a class="nav-link"  href="riscv-elf-object-files.html">Chapter 8. ELF Object Files</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-elf-linker-relaxation.html">Chapter 10. Linker Relaxation</a>
+    <a class="nav-link"  href="riscv-elf-linker-relaxation.html">Chapter 9. Linker Relaxation</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="elf-bib.html">Chapter 11. References</a>
+    <a class="nav-link"  href="elf-bib.html">References</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-dwarf-debugging-format.html">Chapter 12. DWARF Debugging Format</a>
+    <a class="nav-link"  href="riscv-dwarf-debugging-format.html">Chapter 10. DWARF Debugging Format</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-dwarf-register-numbers.html">Chapter 13. DWARF Register Numbers</a>
+    <a class="nav-link"  href="riscv-dwarf-register-numbers.html">Chapter 11. DWARF Register Numbers</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="dwarf-bib.html">References</a>
@@ -447,7 +447,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="2-1-procedure-calling-convention"><a class="anchor" href="#2-1-procedure-calling-convention"></a>2.1. Procedure Calling Convention</h2>
+<h2 id="procedure-calling-convention"><a class="anchor" href="#procedure-calling-convention"></a>Procedure Calling Convention</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This chapter defines standard calling conventions, and describes how to pass
@@ -476,7 +476,7 @@ yet, we intend to define that in future version of this specification.
 </table>
 </div>
 <div class="sect2">
-<h3 id="2-1-1-integer-calling-convention"><a class="anchor" href="#2-1-1-integer-calling-convention"></a>2.1.1. Integer Calling Convention</h3>
+<h3 id="integer-calling-convention"><a class="anchor" href="#integer-calling-convention"></a>Integer Calling Convention</h3>
 <div class="paragraph">
 <p>The base integer calling convention provides eight argument registers,
 a0-a7, the first two of which are also used to return values.</p>
@@ -613,7 +613,7 @@ hardware floating-point calling convention.)</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="2-1-2-hardware-floating-point-calling-convention"><a class="anchor" href="#2-1-2-hardware-floating-point-calling-convention"></a>2.1.2. Hardware Floating-point Calling Convention</h3>
+<h3 id="hardware-floating-point-calling-convention"><a class="anchor" href="#hardware-floating-point-calling-convention"></a>Hardware Floating-point Calling Convention</h3>
 <div class="paragraph">
 <p>The hardware floating-point calling convention adds eight floating-point
 argument registers, fa0-fa7, the first two of which are also used to return
@@ -691,7 +691,7 @@ provided they hold values no more than ABI_FLEN bits wide.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="2-1-3-ilp32e-calling-convention"><a class="anchor" href="#2-1-3-ilp32e-calling-convention"></a>2.1.3. ILP32E Calling Convention</h3>
+<h3 id="ilp32e-calling-convention"><a class="anchor" href="#ilp32e-calling-convention"></a>ILP32E Calling Convention</h3>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -726,7 +726,7 @@ calling convention must not be used with the D ISA extension.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="2-1-4-named-abis"><a class="anchor" href="#2-1-4-named-abis"></a>2.1.4. Named ABIs</h3>
+<h3 id="named-abis"><a class="anchor" href="#named-abis"></a>Named ABIs</h3>
 <div class="paragraph">
 <p>This specification defines the following named ABIs:</p>
 </div>
@@ -764,7 +764,7 @@ convention for ABI_FLEN=64 (i.e. <a href="#ELFCLASS32">ELFCLASS32</a> and
 <dl>
 <dt class="hdlist1">ILP32E</dt>
 <dd>
-<p><a href="#ILP32E Calling Convention">ILP32E calling-convention</a> only,
+<p><a href="#ilp32e-calling-convention">ILP32E calling-convention</a> only,
 hardware floating-point calling convention is not used (i.e. <a href="#ELFCLASS32">ELFCLASS32</a>,
 <a href="#EF_RISCV_FLOAT_ABI_SOFT">EF_RISCV_FLOAT_ABI_SOFT</a>, and <a href="#EF_RISCV_RVE">EF_RISCV_RVE</a>).</p>
 </dd>
@@ -836,7 +836,7 @@ hardware floating-point register file.
 </div>
 </div>
 <div class="sect2">
-<h3 id="2-1-5-default-abis"><a class="anchor" href="#2-1-5-default-abis"></a>2.1.5. Default ABIs</h3>
+<h3 id="default-abis"><a class="anchor" href="#default-abis"></a>Default ABIs</h3>
 <div class="paragraph">
 <p>While various different ABIs are technically possible, for software
 compatibility reasons it is strongly recommended to use the following
