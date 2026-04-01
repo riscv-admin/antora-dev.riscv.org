@@ -492,19 +492,19 @@
     <a class="nav-link"  href="../etrace/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/etrace-copyright.html">Copyright</a>
+    <a class="nav-link"  href="#etrace-copyright.adoc">Copyright</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../etrace/contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../etrace/intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/contributors.html">Chapter 2. Contributors</a>
+    <a class="nav-link"  href="../etrace/encapsulation.html">Chapter 2. Encapsulation Format</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/encapsulation.html">Chapter 3. Encapsulation Format</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/e-trace-specifics.html">Chapter 4. E-Trace Specifics</a>
+    <a class="nav-link"  href="../etrace/e-trace-specifics.html">Chapter 3. E-Trace Specifics</a>
   </li>
 </ul>
   </li>
@@ -610,7 +610,7 @@ the system, etc. to recover from the errors. Additionally, this specification
 shall support software-initiated error logging, reporting, and testing of RAS
 handlers. Lastly, this specification shall provide maximal flexibility to
 implement error handling and coexists with RAS frameworks defined by other
-standards such as PCIe cite:[PCI] and CXL cite:[CXL].</p>
+standards such as PCIe [<a href="reri_bibliography.html#bib-pci" class="xref page">1</a>] and CXL [<a href="reri_bibliography.html#bib-cxl" class="xref page">2</a>].</p>
 </div>
 <div class="paragraph">
 <p>A system is an entity that interacts with other entities such as other systems,
@@ -692,7 +692,7 @@ to errors.</p>
 </div>
 <div class="paragraph">
 <p>A reliable system deals with errors through one or more of the following
-techniques cite:[RAS_TAX] cite:[EXA_RAS]:</p>
+techniques [<a href="reri_bibliography.html#bib-ras_tax" class="xref page">3</a>] [<a href="reri_bibliography.html#bib-exa_ras" class="xref page">4</a>]:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -717,7 +717,7 @@ the use of high quality in product design, technology selection, materials
 selection, and manufacturing time screening for defects. Through the use of
 systematic design, technology selection, and manufacturing tests many errors
 such as those induced by electric fields, temperature stress, switching/coupling
-noise (e.g. DRAM RowHammer cite:[RHAM] effect), incorrect V/F operating points,
+noise (e.g. DRAM RowHammer [<a href="reri_bibliography.html#bib-rham" class="xref page">5</a>] effect), incorrect V/F operating points,
 insufficient guard bands, meta-stability, etc. can be prevented.</p>
 </div>
 <div class="paragraph">
@@ -740,7 +740,7 @@ possible by implementing error detection capabilities.</p>
 <h3 id="1-1-3-error-detection-and-correction"><a class="anchor" href="#1-1-3-error-detection-and-correction"></a>1.1.3. Error Detection and Correction</h3>
 <div class="paragraph">
 <p>Error detection involves the use of coding and protocols to detect errors
-cite:[EU_HPC] cite:[EXA_2014]. For example, caches with error correcting codes,
+[<a href="reri_bibliography.html#bib-eu_hpc" class="xref page">6</a>] [<a href="reri_bibliography.html#bib-exa_2014" class="xref page">7</a>]. For example, caches with error correcting codes,
 TLB entries with parity protection, buses with parity protection on transaction
 fields, circuitry to detect unexpected and/or illegal encodings, gray codes,
 voltage sensors, clock/PLL monitors, timing margin sensors, etc. Some components
@@ -835,16 +835,16 @@ service failures.</p>
 </div>
 <div class="paragraph">
 <p>Studies indicate that the probability of an uncorrected DRAM error is elevated
-if the DIMM previously experienced corrected errors cite:[DRAM_WILD]
-cite:[SRI_2012] cite:[ZIV_2019]. Such reasoning is used by system protection
+if the DIMM previously experienced corrected errors [<a href="reri_bibliography.html#bib-dram_wild" class="xref page">8</a>]
+[<a href="reri_bibliography.html#bib-sri_2012" class="xref page">9</a>] [<a href="reri_bibliography.html#bib-ziv_2019" class="xref page">10</a>]. Such reasoning is used by system protection
 mechanisms, which utilize simple heuristics for offlining potentially failing
-memory pages cite:[HWA_2012] cite:[MEZ_2015] cite:[TANG_2006] cite:[DU_2021] or
-for replacing compromised DIMMs cite:[MAR_2014] cite:[DRAM_WILD] cite:[DU_2020].</p>
+memory pages [<a href="reri_bibliography.html#bib-hwa_2012" class="xref page">11</a>] [<a href="reri_bibliography.html#bib-mez_2015" class="xref page">12</a>] [<a href="reri_bibliography.html#bib-tang_2006" class="xref page">13</a>] [<a href="reri_bibliography.html#bib-du_2021" class="xref page">14</a>] or
+for replacing compromised DIMMs [<a href="reri_bibliography.html#bib-mar_2014" class="xref page">15</a>] [<a href="reri_bibliography.html#bib-dram_wild" class="xref page">8</a>] [<a href="reri_bibliography.html#bib-du_2020" class="xref page">16</a>].</p>
 </div>
 <div class="paragraph">
 <p>Reporting of detected and corrected hardware errors is requisite for any
 quantitative analysis of system resilience and for the prediction of future
-uncorrected errors cite:[EU_HPC]. This prediction capability facilitates the
+uncorrected errors [<a href="reri_bibliography.html#bib-eu_hpc" class="xref page">6</a>]. This prediction capability facilitates the
 deployment of preventive mechanisms, such as pre-failure alerts in
 High-Performance Computing (HPC) cluster management software, thus mitigating
 the costs associated with unscheduled outages and system repairs.</p>

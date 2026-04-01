@@ -492,19 +492,19 @@
     <a class="nav-link"  href="../etrace/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/etrace-copyright.html">Copyright</a>
+    <a class="nav-link"  href="#etrace-copyright.adoc">Copyright</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../etrace/contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../etrace/intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/contributors.html">Chapter 2. Contributors</a>
+    <a class="nav-link"  href="../etrace/encapsulation.html">Chapter 2. Encapsulation Format</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/encapsulation.html">Chapter 3. Encapsulation Format</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/e-trace-specifics.html">Chapter 4. E-Trace Specifics</a>
+    <a class="nav-link"  href="../etrace/e-trace-specifics.html">Chapter 3. E-Trace Specifics</a>
   </li>
 </ul>
   </li>
@@ -1348,7 +1348,7 @@ The <code>c</code> bit is WARL. For error classes other than UEC, the interpreta
 the <code>c</code> bit may be specified in a future standard extension.</p>
 </div>
 <div class="paragraph">
-<p>For a RISC-V hart, some UEC may cause a Hardware Error exception cite:[PRIV].
+<p>For a RISC-V hart, some UEC may cause a Hardware Error exception [<a href="reri_bibliography.html#bib-priv" class="xref page">17</a>].
 A Hardware Error is a synchronous exception, triggered when corrupted or
 uncorrectable data is accessed, either explicitly or implicitly, by an
 instruction. In this context, "data" encompasses all types of information used
@@ -1500,7 +1500,7 @@ to 0.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>For a RISC-V hart, the Unprivileged specification cite:[UPRIV] defines memory
+<p>For a RISC-V hart, the Unprivileged specification [<a href="reri_bibliography.html#bib-upriv" class="xref page">18</a>] defines memory
 accesses by instructions as either explicit or implicit. An Implicit read or
 write is an access that may be implicitly performed by hardware to perform an
 explicit operation. For example, a load or store instruction executed by the
@@ -1866,7 +1866,7 @@ determined by implementation specific rules.</p>
 <div class="sect2">
 <h3 id="2-1-6-error-reporting-defined-by-other-standards"><a class="anchor" href="#2-1-6-error-reporting-defined-by-other-standards"></a>2.1.6. Error Reporting Defined by Other Standards</h3>
 <div class="paragraph">
-<p>Standards such as PCIe cite:[PCI] and CXL cite:[CXL] define standardized error
+<p>Standards such as PCIe [<a href="reri_bibliography.html#bib-pci" class="xref page">1</a>] and CXL [<a href="reri_bibliography.html#bib-cxl" class="xref page">2</a>] define standardized error
 reporting architectures such as the PCIe Advanced Error Reporting (AER).
 Specifications such as CXL define a standardized set of RAS requirements for
 hosts and devices.</p>
