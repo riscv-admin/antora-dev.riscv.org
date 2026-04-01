@@ -3,10 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>RISC-V DWARF Specification :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://docs.riscv.org/reference/abi/riscv-dwarf.html">
-    <link rel="prev" href="riscv-elf.html">
-    <link rel="next" href="riscv-rtabi.html">
+    <title>Untitled :: RISC-V Ratified Specifications Library</title>
+    <link rel="canonical" href="https://docs.riscv.org/reference/abi/riscv-dwarf-register-numbers.html">
     <meta name="generator" content="Antora 3.1.14">
     <script>
 !function (theme, navWidth) {
@@ -107,230 +105,7 @@
           </ul>
 <div class="context">
   <span class="title">Application Enablement</span>
-</div>        <div class="nav-trees" data-component="abi">
-          <div class="version-box">
-            <select data-component="abi" class="select-version">
-                <option
-                  value="index.html"
-                  data-version="v1.0"
-                  
-                  selected>
-                  v1.0
-                </option>
-            </select>
-          </div>
-              <div data-component="abi" data-version="v1.0" class="nav-version-group">
-                <ul class="nav-list">
-  <li class="nav-item" data-depth="5">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Application Binary Interface</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="index.html">Title Page</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="copyright.html">Chapter 1. Copyright and License</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="contributors.html">Chapter 2. Contributors</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="introduction.html">Chapter 3. Introduction</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-cc.html">Chapter 4. Calling Conventions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-elf.html">Chapter 5. ELF Specification</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="riscv-dwarf.html">Chapter 6. DWARF Specification</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-rtabi.html">Runtime ABI</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="riscv-atomic.html">Atomic Operations</a>
-  </li>
-</ul>
-  </li>
-</ul>
-              </div>
-        </div>
-        <div class="nav-trees" data-component="intrinsic">
-          <div class="version-box">
-            <select data-component="intrinsic" class="select-version">
-                <option
-                  value="../intrinsic/index.html"
-                  data-version="v1.0"
-                  
-                  selected>
-                  v1.0
-                </option>
-            </select>
-          </div>
-              <div data-component="intrinsic" data-version="v1.0" class="nav-version-group">
-                <ul class="nav-list">
-  <li class="nav-item" data-depth="5">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Vector C Intrinsic</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../intrinsic/index.html">Title Page</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../intrinsic/copyright.html">Copyright and license information</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../intrinsic/contributors.html">Contributors</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../intrinsic/rvv-intrinsic-spec.html">Chapter 1. Introduction</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../intrinsic/rvv-intrinsic-examples.html">Appendix A. Examples</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Appendix A: Explicit (Non-overloaded) intrinsics</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/00_vector_loads_and_stores_intrinsics.html">Appendix B. Vector Loads and Stores Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.html">Appendix C. Vector Loads and Stores Segment Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.html">Appendix D. Vector Integer Arithmetic Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/03_vector_fixed-point_arithmetic_intrinsics.html">Appendix E. Vector Fixed-Point Arithmetic Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/04_vector_floating-point_intrinsics.html">Appendix F. Vector Floating-Point Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/05_vector_reduction_operations.html">Appendix G. Vector Reduction Operations</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/06_vector_mask_intrinsics.html">Appendix H. Vector Mask Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/07_vector_permutation_intrinsics.html">Appendix I. Vector Permutation Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.html">Appendix J. Miscellaneous Vector Utility Intrinsics</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Appendix B: Explicit (Non-overloaded) intrinsics, policy variants</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/00_vector_loads_and_stores_intrinsics.html">Appendix K. Vector Loads and Stores Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.html">Appendix L. Vector Loads and Stores Segment Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.html">Appendix M. Vector Integer Arithmetic Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/03_vector_fixed-point_arithmetic_intrinsics.html">Appendix N. Vector Fixed-Point Arithmetic Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/04_vector_floating-point_intrinsics.html">Appendix O. Vector Floating-Point Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/05_vector_reduction_operations.html">Appendix P. Vector Reduction Operations</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/06_vector_mask_intrinsics.html">Appendix Q. Vector Mask Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/07_vector_permutation_intrinsics.html">Appendix R. Vector Permutation Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.html">Appendix S. Miscellaneous Vector Utility Intrinsics</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Appendix C: Implicit (Overloaded) intrinsics</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/00_vector_loads_and_stores_intrinsics.html">Appendix T. Vector Loads and Stores Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.html">Appendix U. Vector Loads and Stores Segment Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.html">Appendix V. Vector Integer Arithmetic Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/03_vector_fixed-point_arithmetic_intrinsics.html">Appendix W. Vector Fixed-Point Arithmetic Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/04_vector_floating-point_intrinsics.html">Appendix X. Vector Floating-Point Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/05_vector_reduction_operations.html">Appendix Y. Vector Reduction Operations</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/06_vector_mask_intrinsics.html">Appendix Z. Vector Mask Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/07_vector_permutation_intrinsics.html">Appendix [. Vector Permutation Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/overloaded_intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.html">Appendix \. Miscellaneous Vector Utility Intrinsics</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Appendix D: Implicit (Overloaded) intrinsics, policy variants</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/00_vector_loads_and_stores_intrinsics.html">Appendix </a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/01_vector_loads_and_stores_segment_intrinsics.html">Appendix ^. Vector Loads and Stores Segment Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/02_vector_integer_arithmetic_intrinsics.html">Appendix _. Vector Integer Arithmetic Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/03_vector_fixed-point_arithmetic_intrinsics.html">Appendix `. Vector Fixed-Point Arithmetic Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/04_vector_floating-point_intrinsics.html">Vector Floating-Point Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/05_vector_reduction_operations.html">Vector Reduction Operations</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/06_vector_mask_intrinsics.html">Vector Mask Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/07_vector_permutation_intrinsics.html">Vector Permutation Intrinsics</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../intrinsic/policy_funcs/overloaded_intrinsic_funcs/08_miscellaneous_vector_utility_intrinsics.html">Miscellaneous Vector Utility Intrinsics</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../intrinsic/bibliography.html">Bibliography</a>
-  </li>
-</ul>
-  </li>
-</ul>
-              </div>
-        </div>
-          <div class="toggle-sm">
+</div>          <div class="toggle-sm">
             <button id="nav-toggle-2" class="nav-toggle"></button>
           </div>
         </nav>
@@ -359,7 +134,7 @@
   <div class="content">
     <div
       class="toc"
-      data-title="RISC-V DWARF Specification"
+      data-title=""
       data-levels="5"
     >
       <div class="toc-menu"></div>
@@ -408,24 +183,9 @@
 <article class="doc">
 <div class="breadcrumbs-container">
   <nav class="breadcrumbs" aria-label="breadcrumbs">
-    <ul>
-      <li>Application Binary Interface</li>
-      <li><a href="riscv-dwarf.html">Chapter 6. DWARF Specification</a></li>
-    </ul>
   </nav>
-</div><h1 id="page-title" class="page">RISC-V DWARF Specification</h1>
-<div class="sect1">
-<h2 id="6-1-dwarf-debugging-format"><a class="anchor" href="#6-1-dwarf-debugging-format"></a>6.1. DWARF Debugging Format</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The DWARF debugging format for RISC-V follows the
-<a href="https://dwarfstd.org/">standard DWARF specification</a>; this specification only
-describes RISC-V-specific definitions.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="6-2-dwarf-register-numbers"><a class="anchor" href="#6-2-dwarf-register-numbers"></a>6.2. DWARF Register Numbers</h2>
+</div><div class="sect1">
+<h2 id="13-1-dwarf-register-numbers"><a class="anchor" href="#13-1-dwarf-register-numbers"></a>13.1. DWARF Register Numbers</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The table below lists the mapping from DWARF register numbers to machine
@@ -500,24 +260,6 @@ number plus 4096.</p>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="6-3-references"><a class="anchor" href="#6-3-references"></a>6.3. References</h2>
-<div class="sectionbody">
-<div class="ulist bibliography">
-<ul class="bibliography">
-<li>
-<p><a id="riscv-priv"></a>[riscv-priv] "The RISC-V Instruction Set Manual, Volume II: Privileged
-Architecture, Document", Editors Andrew Waterman, Krste Asanovi´c, and
-John Hauser, RISC-V International.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<nav class="pagination">
-  <span class="prev"><a href="riscv-elf.html">Chapter 5. ELF Specification</a></span>
-  <span class="next"><a href="riscv-rtabi.html">Runtime ABI</a></span>
-</nav>
 </article>  </div>
 </main>
 </div>
