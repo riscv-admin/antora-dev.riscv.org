@@ -447,7 +447,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="code-models"><a class="anchor" href="#code-models"></a>Code models</h2>
+<h2 id="5-1-code-models"><a class="anchor" href="#5-1-code-models"></a>5.1. Code models</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The RISC-V architecture constrains the addressing of positions in the
@@ -464,7 +464,7 @@ raise an error if it cannot adjust the instructions to access the target address
 in the current code model.</p>
 </div>
 <div class="sect2">
-<h3 id="medium-low-code-model"><a class="anchor" href="#medium-low-code-model"></a>Medium low code model</h3>
+<h3 id="5-1-1-medium-low-code-model"><a class="anchor" href="#5-1-1-medium-low-code-model"></a>5.1.1. Medium low code model</h3>
 <div class="paragraph">
 <p>The medium low code model, or <code>medlow</code>, allows the code to address the whole RV32
 address space or the lower 2 GiB and highest 2 GiB of the RV64 address space
@@ -519,7 +519,7 @@ addi a0, a0, -0x800 # a0 = a0 + -2048 = 0xFFFFFFFF7FFFF800</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="medium-any-code-model"><a class="anchor" href="#medium-any-code-model"></a>Medium any code model</h3>
+<h3 id="5-1-2-medium-any-code-model"><a class="anchor" href="#5-1-2-medium-any-code-model"></a>5.1.2. Medium any code model</h3>
 <div class="paragraph">
 <p>The medium any code model, or <code>medany</code>, allows the code to address the range
 between -2 GiB and +2 GiB from its position.  By using <code>auipc</code>
@@ -585,7 +585,7 @@ for that, please use the medium position independent code model below.
 </div>
 </div>
 <div class="sect2">
-<h3 id="medium-position-independent-code-model"><a class="anchor" href="#medium-position-independent-code-model"></a>Medium position independent code model</h3>
+<h3 id="5-1-3-medium-position-independent-code-model"><a class="anchor" href="#5-1-3-medium-position-independent-code-model"></a>5.1.3. Medium position independent code model</h3>
 <div class="paragraph">
 <p>This model is similar to the medium any code model, but uses the
 <a href="#Global Offset Table">global offset table</a> (GOT) for non-local symbol addresses.</p>

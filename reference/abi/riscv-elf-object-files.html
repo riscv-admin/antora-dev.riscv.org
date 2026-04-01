@@ -447,7 +447,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="elf-object-files"><a class="anchor" href="#elf-object-files"></a>ELF Object Files</h2>
+<h2 id="8-1-elf-object-files"><a class="anchor" href="#8-1-elf-object-files"></a>8.1. ELF Object Files</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The ELF object file format for RISC-V follows the
@@ -455,7 +455,7 @@
 ("gABI"); this specification only describes RISC-V-specific definitions.</p>
 </div>
 <div class="sect2">
-<h3 id="file-header"><a class="anchor" href="#file-header"></a>File Header</h3>
+<h3 id="8-1-1-file-header"><a class="anchor" href="#8-1-1-file-header"></a>8.1.1. File Header</h3>
 <div class="paragraph">
 <p>The section below lists the defined RISC-V-specific values for several ELF
 header fields; any fields not listed in this section have no RISC-V-specific
@@ -658,7 +658,7 @@ different syscall ABI.
 </table>
 </div>
 <div class="paragraph">
-<p>==== Policy for Merge Objects With Different File Headers</p>
+<p>==== 8.1.1.1. Policy for Merge Objects With Different File Headers</p>
 </div>
 <div class="paragraph">
 <p>This section describe the behavior when the inputs files come with different
@@ -717,13 +717,13 @@ sections.
 </div>
 </div>
 <div class="sect2">
-<h3 id="string-tables"><a class="anchor" href="#string-tables"></a>String Tables</h3>
+<h3 id="8-1-2-string-tables"><a class="anchor" href="#8-1-2-string-tables"></a>8.1.2. String Tables</h3>
 <div class="paragraph">
 <p>There are no RISC-V specific definitions relating to ELF string tables.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="symbol-table"><a class="anchor" href="#symbol-table"></a>Symbol Table</h3>
+<h3 id="8-1-3-symbol-table"><a class="anchor" href="#8-1-3-symbol-table"></a>8.1.3. Symbol Table</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">st_other</dt>
@@ -766,7 +766,7 @@ executables if there are any GP-relative accesses present in the executable.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="relocations"><a class="anchor" href="#relocations"></a>Relocations</h3>
+<h3 id="8-1-4-relocations"><a class="anchor" href="#8-1-4-relocations"></a>8.1.4. Relocations</h3>
 <div class="paragraph">
 <p>RISC-V is a classical RISC architecture that has densely packed non-word
 sized instruction immediate values. While the linker can make relocations on
@@ -814,12 +814,12 @@ column is given below:</p>
 </dd>
 <dt class="hdlist1">Field</dt>
 <dd>
-<p>Describes the set of bits affected by this relocation; see <a href="#field-symbols">Field Symbols</a> for the definitions of the individual types</p>
+<p>Describes the set of bits affected by this relocation; see <a href="#Field Symbols">[Field Symbols]</a> for the definitions of the individual types</p>
 </dd>
 <dt class="hdlist1">Calculation</dt>
 <dd>
 <p>Formula for how to resolve the relocation value; definitions of the
-symbols can be found in <a href="#calculation-symbols">Calculation Symbols</a></p>
+symbols can be found in <a href="#Calculation Symbols">[Calculation Symbols]</a></p>
 </dd>
 <dt class="hdlist1">Description</dt>
 <dd>
@@ -1388,7 +1388,7 @@ assembler syntax, including that of the relocations, is described in the
 <em>RISC-V Assembly Programmer&#8217;s Manual</em> <a href="#rv-asm">[rv-asm]</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="calculation-symbols"><a class="anchor" href="#calculation-symbols"></a>Calculation Symbols</h4>
+<h4 id="8-1-4-1-calculation-symbols"><a class="anchor" href="#8-1-4-1-calculation-symbols"></a>8.1.4.1. Calculation Symbols</h4>
 <div class="paragraph">
 <p><a href="#var-reloc-calc">Table 2</a> provides details on the variables used in relocation
 calculation:</p>
@@ -1454,7 +1454,7 @@ of the <code>__global_pointer$</code> symbol into register <code>gp</code> (aka 
 </div>
 </div>
 <div class="sect3">
-<h4 id="field-symbols"><a class="anchor" href="#field-symbols"></a>Field Symbols</h4>
+<h4 id="8-1-4-2-field-symbols"><a class="anchor" href="#8-1-4-2-field-symbols"></a>8.1.4.2. Field Symbols</h4>
 <div class="paragraph">
 <p><a href="#var-reloc-field">Table 3</a> provides details on the variables used in relocation fields:</p>
 </div>
@@ -1535,7 +1535,7 @@ of the <code>__global_pointer$</code> symbol into register <code>gp</code> (aka 
 </table>
 </div>
 <div class="sect3">
-<h4 id="constants"><a class="anchor" href="#constants"></a>Constants</h4>
+<h4 id="8-1-4-3-constants"><a class="anchor" href="#8-1-4-3-constants"></a>8.1.4.3. Constants</h4>
 <div class="paragraph">
 <p><a href="#const-reloc-field">Table 4</a> provides details on the constants used in relocation fields:</p>
 </div>
@@ -1560,7 +1560,7 @@ of the <code>__global_pointer$</code> symbol into register <code>gp</code> (aka 
 </table>
 </div>
 <div class="sect3">
-<h4 id="absolute-addresses"><a class="anchor" href="#absolute-addresses"></a>Absolute Addresses</h4>
+<h4 id="8-1-4-4-absolute-addresses"><a class="anchor" href="#8-1-4-4-absolute-addresses"></a>8.1.4.4. Absolute Addresses</h4>
 <div class="paragraph">
 <p>32-bit absolute addresses in position dependent code are loaded with a pair
 of instructions which have an associated pair of relocations:
@@ -1606,7 +1606,7 @@ LO12
 </div>
 </div>
 <div class="sect3">
-<h4 id="global-offset-table"><a class="anchor" href="#global-offset-table"></a>Global Offset Table</h4>
+<h4 id="8-1-4-5-global-offset-table"><a class="anchor" href="#8-1-4-5-global-offset-table"></a>8.1.4.5. Global Offset Table</h4>
 <div class="paragraph">
 <p>For position independent code in dynamically linked objects, each shared
 object contains a GOT (Global Offset Table), which contains addresses of
@@ -1623,7 +1623,7 @@ a slightly higher runtime overhead for access to extern objects and functions.</
 </div>
 </div>
 <div class="sect3">
-<h4 id="program-linkage-table"><a class="anchor" href="#program-linkage-table"></a>Program Linkage Table</h4>
+<h4 id="8-1-4-6-program-linkage-table"><a class="anchor" href="#8-1-4-6-program-linkage-table"></a>8.1.4.6. Program Linkage Table</h4>
 <div class="paragraph">
 <p>The PLT (Program Linkage Table) exists to allow function calls between
 dynamically linked shared objects. Each dynamic object has its own
@@ -1668,7 +1668,7 @@ and fills in the GOT entry for subsequent calls to the function:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="procedure-calls"><a class="anchor" href="#procedure-calls"></a>Procedure Calls</h4>
+<h4 id="8-1-4-7-procedure-calls"><a class="anchor" href="#8-1-4-7-procedure-calls"></a>8.1.4.7. Procedure Calls</h4>
 <div class="paragraph">
 <p><code>R_RISCV_CALL</code> and <code>R_RISCV_CALL_PLT</code> relocations are associated with
 pairs of instructions (<code>AUIPC+JALR</code>) generated by the <code>CALL</code> or <code>TAIL</code>
@@ -1716,7 +1716,7 @@ to the <code>JAL</code> instruction when the procedure or PLT entry is within (-
 </div>
 </div>
 <div class="sect3">
-<h4 id="pc-relative-jumps-and-branches"><a class="anchor" href="#pc-relative-jumps-and-branches"></a>PC-Relative Jumps and Branches</h4>
+<h4 id="8-1-4-8-pc-relative-jumps-and-branches"><a class="anchor" href="#8-1-4-8-pc-relative-jumps-and-branches"></a>8.1.4.8. PC-Relative Jumps and Branches</h4>
 <div class="paragraph">
 <p>Unconditional jump (J-Type) instructions have a <code>R_RISCV_JAL</code> relocation
 that can represent an even signed 21-bit offset (-1MiB to +1MiB-2).</p>
@@ -1727,7 +1727,7 @@ can represent an even signed 13-bit offset (-4096 to +4094).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="pc-relative-symbol-addresses"><a class="anchor" href="#pc-relative-symbol-addresses"></a>PC-Relative Symbol Addresses</h4>
+<h4 id="8-1-4-9-pc-relative-symbol-addresses"><a class="anchor" href="#8-1-4-9-pc-relative-symbol-addresses"></a>8.1.4.9. PC-Relative Symbol Addresses</h4>
 <div class="paragraph">
 <p>32-bit PC-relative relocations for symbol addresses on sequences of
 instructions such as the <code>AUIPC+ADDI</code> instruction pair expanded from
@@ -1810,7 +1810,7 @@ the symbol.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="relocation-for-alignment"><a class="anchor" href="#relocation-for-alignment"></a>Relocation for Alignment</h4>
+<h4 id="8-1-4-10-relocation-for-alignment"><a class="anchor" href="#8-1-4-10-relocation-for-alignment"></a>8.1.4.10. Relocation for Alignment</h4>
 <div class="paragraph">
 <p>The relocation type <code>R_RISCV_ALIGN</code> marks a location that must be aligned to
 <code>N</code>-bytes, where <code>N</code> is the smallest power of two that is greater than the value
@@ -1908,7 +1908,7 @@ def align(addend):
 </div>
 </div>
 <div class="sect2">
-<h3 id="thread-local-storage"><a class="anchor" href="#thread-local-storage"></a>Thread Local Storage</h3>
+<h3 id="8-1-5-thread-local-storage"><a class="anchor" href="#8-1-5-thread-local-storage"></a>8.1.5. Thread Local Storage</h3>
 <div class="paragraph">
 <p>RISC-V adopts the ELF Thread Local Storage Model in which ELF objects define
 <code>.tbss</code> and <code>.tdata</code> sections and <code>PT_TLS</code> program headers that contain the
@@ -1974,7 +1974,7 @@ of dynamic TLS allocate TLS offsets for storage of thread local variables.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="local-exec"><a class="anchor" href="#local-exec"></a>Local Exec</h4>
+<h4 id="8-1-5-1-local-exec"><a class="anchor" href="#8-1-5-1-local-exec"></a>8.1.5.1. Local Exec</h4>
 <div class="paragraph">
 <p>Local exec is a form of static thread local storage. This model is used
 when static linking as the TLS offsets are resolved during program linking.</p>
@@ -2007,7 +2007,7 @@ to associate the <code>R_RISCV_TPREL_ADD</code> relocation with the <code>add</c
 </div>
 </div>
 <div class="sect3">
-<h4 id="initial-exec"><a class="anchor" href="#initial-exec"></a>Initial Exec</h4>
+<h4 id="8-1-5-2-initial-exec"><a class="anchor" href="#8-1-5-2-initial-exec"></a>8.1.5.2. Initial Exec</h4>
 <div class="paragraph">
 <p>Initial exec is is a form of static thread local storage that can be used in
 shared libraries that use thread local storage. TLS relocations are performed
@@ -2060,7 +2060,7 @@ be resolved at load time. This model uses the GOT to resolve TLS offsets.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="global-dynamic"><a class="anchor" href="#global-dynamic"></a>Global Dynamic</h4>
+<h4 id="8-1-5-3-global-dynamic"><a class="anchor" href="#8-1-5-3-global-dynamic"></a>8.1.5.3. Global Dynamic</h4>
 <div class="paragraph">
 <p>RISC-V local dynamic and global dynamic TLS models generate equivalent object code.
 The Global dynamic thread local storage model is used for PIC Shared libraries and
@@ -2132,9 +2132,9 @@ In the global dynamic model, application code calls the dynamic linker function
 </div>
 </div>
 <div class="sect2">
-<h3 id="sections"><a class="anchor" href="#sections"></a>Sections</h3>
+<h3 id="8-1-6-sections"><a class="anchor" href="#8-1-6-sections"></a>8.1.6. Sections</h3>
 <div class="sect3">
-<h4 id="section-types"><a class="anchor" href="#section-types"></a>Section Types</h4>
+<h4 id="8-1-6-1-section-types"><a class="anchor" href="#8-1-6-1-section-types"></a>8.1.6.1. Section Types</h4>
 <div class="paragraph">
 <p>The defined processor-specific section types are listed in <a href="#rv-section-type">Table 8</a>.</p>
 </div>
@@ -2162,7 +2162,7 @@ In the global dynamic model, application code calls the dynamic linker function
 </table>
 </div>
 <div class="sect3">
-<h4 id="special-sections"><a class="anchor" href="#special-sections"></a>Special Sections</h4>
+<h4 id="8-1-6-2-special-sections"><a class="anchor" href="#8-1-6-2-special-sections"></a>8.1.6.2. Special Sections</h4>
 <div class="paragraph">
 <p><a href="#rv-section">Table 5</a> lists the special sections defined by this ABI.</p>
 </div>
@@ -2194,7 +2194,7 @@ In the global dynamic model, application code calls the dynamic linker function
 </div>
 </div>
 <div class="sect2">
-<h3 id="program-header-table"><a class="anchor" href="#program-header-table"></a>Program Header Table</h3>
+<h3 id="8-1-7-program-header-table"><a class="anchor" href="#8-1-7-program-header-table"></a>8.1.7. Program Header Table</h3>
 <div class="paragraph">
 <p>The defined processor-specific segment types are listed in <a href="#rv-seg-type">Table 6</a>.</p>
 </div>
@@ -2225,13 +2225,13 @@ In the global dynamic model, application code calls the dynamic linker function
 </div>
 </div>
 <div class="sect2">
-<h3 id="note-sections"><a class="anchor" href="#note-sections"></a>Note Sections</h3>
+<h3 id="8-1-8-note-sections"><a class="anchor" href="#8-1-8-note-sections"></a>8.1.8. Note Sections</h3>
 <div class="paragraph">
 <p>There are no RISC-V specific definitions relating to ELF note sections.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="dynamic-section"><a class="anchor" href="#dynamic-section"></a>Dynamic Section</h3>
+<h3 id="8-1-9-dynamic-section"><a class="anchor" href="#8-1-9-dynamic-section"></a>8.1.9. Dynamic Section</h3>
 <div class="paragraph">
 <p>The defined processor-specific dynamic array tags are listed in <a href="#rv-dyn-tag">Table 7</a>.</p>
 </div>
@@ -2274,13 +2274,13 @@ in favour of <code>DT_PREINIT_ARRAY</code>, <code>DT_INIT_ARRAY</code> and <code
 </div>
 </div>
 <div class="sect2">
-<h3 id="hash-table"><a class="anchor" href="#hash-table"></a>Hash Table</h3>
+<h3 id="8-1-10-hash-table"><a class="anchor" href="#8-1-10-hash-table"></a>8.1.10. Hash Table</h3>
 <div class="paragraph">
 <p>There are no RISC-V specific definitions relating to ELF hash tables.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="attributes"><a class="anchor" href="#attributes"></a>Attributes</h3>
+<h3 id="8-1-11-attributes"><a class="anchor" href="#8-1-11-attributes"></a>8.1.11. Attributes</h3>
 <div class="paragraph">
 <p>Attributes are used to record information about an object file/binary that a
 linker or runtime loader needs to check compatibility.</p>
@@ -2295,7 +2295,7 @@ encoded in the uleb128 format or a null-terminated byte string (NTBS).</p>
 value if the tag number is even.</p>
 </div>
 <div class="sect3">
-<h4 id="list-of-attributes"><a class="anchor" href="#list-of-attributes"></a>List of attributes</h4>
+<h4 id="8-1-11-1-list-of-attributes"><a class="anchor" href="#8-1-11-1-list-of-attributes"></a>8.1.11.1. List of attributes</h4>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 12. RISC-V attributes</caption>
 <colgroup>
@@ -2359,16 +2359,16 @@ value if the tag number is even.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="detailed-attribute-description"><a class="anchor" href="#detailed-attribute-description"></a>Detailed attribute description</h4>
+<h4 id="8-1-11-2-detailed-attribute-description"><a class="anchor" href="#8-1-11-2-detailed-attribute-description"></a>8.1.11.2. Detailed attribute description</h4>
 <div class="sect4">
-<h5 id="how-does-this-specification-describe-public-attributes"><a class="anchor" href="#how-does-this-specification-describe-public-attributes"></a>How does this specification describe public attributes?</h5>
+<h5 id="8-1-11-2-1-how-does-this-specification-describe-public-attributes"><a class="anchor" href="#8-1-11-2-1-how-does-this-specification-describe-public-attributes"></a>8.1.11.2.1. How does this specification describe public attributes?</h5>
 <div class="paragraph">
 <p>Each attribute is described in the following structure:
 <code>&lt;Tag name&gt;, &lt;Value&gt;, &lt;Parameter type 1&gt;=&lt;Parameter name 1&gt;[, &lt;Parameter type 2&gt;=&lt;Parameter name 2&gt;]</code></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="tag_riscv_stack_align-4-uleb128value"><a class="anchor" href="#tag_riscv_stack_align-4-uleb128value"></a>Tag_RISCV_stack_align, 4, uleb128=value</h5>
+<h5 id="8-1-11-2-2-tag_riscv_stack_align-4-uleb128value"><a class="anchor" href="#8-1-11-2-2-tag_riscv_stack_align-4-uleb128value"></a>8.1.11.2.2. Tag_RISCV_stack_align, 4, uleb128=value</h5>
 <div class="paragraph">
 <p>Tag_RISCV_stack_align records the N-byte stack alignment for this object. The
 default value is 16 for RV32I or RV64I, and 4 for RV32E.</p>
@@ -2383,7 +2383,7 @@ default value is 16 for RV32I or RV64I, and 4 for RV32E.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="tag_riscv_arch-5-ntbssubarch"><a class="anchor" href="#tag_riscv_arch-5-ntbssubarch"></a>Tag_RISCV_arch, 5, NTBS=subarch</h5>
+<h5 id="8-1-11-2-3-tag_riscv_arch-5-ntbssubarch"><a class="anchor" href="#8-1-11-2-3-tag_riscv_arch-5-ntbssubarch"></a>8.1.11.2.3. Tag_RISCV_arch, 5, NTBS=subarch</h5>
 <div class="paragraph">
 <p>Tag_RISCV_arch contains a string for the target architecture taken from
 the option <code>-march</code>. Different architectures will be integrated into a superset
@@ -2477,7 +2477,7 @@ be merged into <code>RV32IFZfinx</code>, which is an invalid architecture since 
 </div>
 </div>
 <div class="sect4">
-<h5 id="tag_riscv_unaligned_access-6-uleb128value"><a class="anchor" href="#tag_riscv_unaligned_access-6-uleb128value"></a>Tag_RISCV_unaligned_access, 6, uleb128=value</h5>
+<h5 id="8-1-11-2-4-tag_riscv_unaligned_access-6-uleb128value"><a class="anchor" href="#8-1-11-2-4-tag_riscv_unaligned_access-6-uleb128value"></a>8.1.11.2.4. Tag_RISCV_unaligned_access, 6, uleb128=value</h5>
 <div class="paragraph">
 <p>Tag_RISCV_unaligned_access denotes the code generation policy for this object
 file. Its values are defined as follows:</p>
@@ -2518,15 +2518,15 @@ been set.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="tag_riscv_priv_spec-8-uleb128version"><a class="anchor" href="#tag_riscv_priv_spec-8-uleb128version"></a>Tag_RISCV_priv_spec, 8, uleb128=version</h5>
+<h5 id="8-1-11-2-5-tag_riscv_priv_spec-8-uleb128version"><a class="anchor" href="#8-1-11-2-5-tag_riscv_priv_spec-8-uleb128version"></a>8.1.11.2.5. Tag_RISCV_priv_spec, 8, uleb128=version</h5>
 
 </div>
 <div class="sect4">
-<h5 id="tag_riscv_priv_spec_minor-10-uleb128version"><a class="anchor" href="#tag_riscv_priv_spec_minor-10-uleb128version"></a>Tag_RISCV_priv_spec_minor, 10, uleb128=version</h5>
+<h5 id="8-1-11-2-6-tag_riscv_priv_spec_minor-10-uleb128version"><a class="anchor" href="#8-1-11-2-6-tag_riscv_priv_spec_minor-10-uleb128version"></a>8.1.11.2.6. Tag_RISCV_priv_spec_minor, 10, uleb128=version</h5>
 
 </div>
 <div class="sect4">
-<h5 id="tag_riscv_priv_spec_revision-12-uleb128version"><a class="anchor" href="#tag_riscv_priv_spec_revision-12-uleb128version"></a>Tag_RISCV_priv_spec_revision, 12, uleb128=version</h5>
+<h5 id="8-1-11-2-7-tag_riscv_priv_spec_revision-12-uleb128version"><a class="anchor" href="#8-1-11-2-7-tag_riscv_priv_spec_revision-12-uleb128version"></a>8.1.11.2.7. Tag_RISCV_priv_spec_revision, 12, uleb128=version</h5>
 <div class="admonitionblock warning">
 <table>
 <tr>
