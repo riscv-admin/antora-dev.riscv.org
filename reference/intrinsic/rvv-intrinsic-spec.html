@@ -155,6 +155,12 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../abi/riscv-cc-linux-specific-abi.html">Appendix A. Linux-specific ABI</a>
   </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">RISC-V ELF Specification</span>
+<ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../abi/riscv-elf-code-models.html">Chapter 5. Code Models</a>
   </li>
@@ -168,16 +174,22 @@
     <a class="nav-link"  href="../abi/riscv-elf-object-files.html">Chapter 8. ELF Object Files</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../abi/riscv-elf-linker-relaxation.html">Chapter 9. Linker Relaxation</a>
+    <a class="nav-link"  href="../abi/riscv-elf-linker-relaxation.html">Linker Relaxation</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../abi/elf-bib.html">References</a>
   </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">RISC-V DWARF Specification</span>
+<ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../abi/riscv-dwarf-debugging-format.html">Chapter 10. DWARF Debugging Format</a>
+    <a class="nav-link"  href="../abi/riscv-dwarf-debugging-format.html">DWARF Debugging Format</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../abi/riscv-dwarf-register-numbers.html">Chapter 11. DWARF Register Numbers</a>
+    <a class="nav-link"  href="../abi/riscv-dwarf-register-numbers.html">DWARF Register Numbers</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="../abi/dwarf-bib.html">References</a>
@@ -447,7 +459,7 @@
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="intro"><a class="anchor" href="#intro"></a>1.1. Introduction</h2>
+<h2 id="1-1-introduction"><a class="anchor" href="#1-1-introduction"></a>1.1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The RISC-V vector C intrinsics provide users interfaces in the C language level to directly leverage the RISC-V "V" extension [<a href="bibliography.html#bib-riscv-v-spec" class="xref page">1</a>] (also abbreviated as "RVV"), with assistance from the compiler in handling instruction scheduling and register allocation. The intrinsics also aim to free users from responsibility of maintaining the correct configuration settings for the vector instruction executions.</p>
@@ -458,7 +470,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="tesst-macro"><a class="anchor" href="#tesst-macro"></a>1.2. Test macro</h2>
+<h2 id="1-2-test-macro"><a class="anchor" href="#1-2-test-macro"></a>1.2. Test macro</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <code>__riscv_v_intrinsic</code> macro is the C macro to test the compiler&#8217;s support for the RISC-V "V" extension intrinsics.</p>
@@ -480,7 +492,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="header-file-inclusion"><a class="anchor" href="#header-file-inclusion"></a>1.3. Header file inclusion</h2>
+<h2 id="1-3-header-file-inclusion"><a class="anchor" href="#1-3-header-file-inclusion"></a>1.3. Header file inclusion</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To leverage the intrinsics in the toolchain, the header <code>&lt;riscv_vector.h&gt;</code> needs to be included. We suggest guarding the inclusion with the test macro.</p>
@@ -495,7 +507,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="availability"><a class="anchor" href="#availability"></a>1.4. Availability</h2>
+<h2 id="1-4-availability"><a class="anchor" href="#1-4-availability"></a>1.4. Availability</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>With <code>&lt;riscv_vector.h&gt;</code> included, availability of intrinsic variants depends on the required architecture of their corresponding vector instructions. The supported architecture is specified to the compiler using the <code>-march</code> option [<a href="bibliography.html#bib-riscv-guide-llvm" class="xref page">3</a>][<a href="bibliography.html#bib-riscv-v-gcc" class="xref page">4</a>].</p>
@@ -754,7 +766,7 @@ The explicit FP rounding mode intrinsics are intended to be used when <code>FENV
 <p>The implicit (overloaded) intrinsics, on the contrary, omit the explicit specifications for <code>vtype</code> control. The implicit (overloaded) intrinsics aim to provide a generic interface to let users put values of different EEW and EMUL as the input argument.</p>
 </div>
 <div class="paragraph">
-<p>This section covers the general naming rule of the two types of intrinsics accordingly. Then, this section also enumerates the exceptions and the rationales behind them in <a href="#explicit-exception-naming">1.6.3. Exceptions in the explicit (non-overloaded) naming scheme</a> and <a href="#implicit-exception-naming">1.6.6. Exceptions in the implicit (overloaded) naming scheme</a>.</p>
+<p>This section covers the general naming rule of the two types of intrinsics accordingly. Then, this section also enumerates the exceptions and the rationales behind them in <a href="#explicit-exception-naming">1.6.3. Exceptions in the explicit (non-overloaded) naming scheme</a> and <a href="#implicit-exception-naming">1.6.5. Exceptions in the implicit (overloaded) naming scheme</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="policy-and-masked-naming-scheme"><a class="anchor" href="#policy-and-masked-naming-scheme"></a>1.6.1. Policy and masked naming scheme</h3>
@@ -836,7 +848,7 @@ Pseudo intrinsics mentioned under <a href="#pseudo-intrinsics"><em>1.8. Pseudo i
 <div class="sect2">
 <h3 id="explicit-naming-scheme"><a class="anchor" href="#explicit-naming-scheme"></a>1.6.2. Explicit (Non-overloaded) naming scheme</h3>
 <div class="paragraph">
-<p>In general, the intrinsics are encoded as the following. The intrinsics under this naming scheme are the "non-overloaded intrinsics", which in parallel we have the "overloaded intrinsics" defined under <a href="#implicit-naming-scheme">1.6.5. Implicit (Overloaded) naming scheme</a>.</p>
+<p>In general, the intrinsics are encoded as the following. The intrinsics under this naming scheme are the "non-overloaded intrinsics", which in parallel we have the "overloaded intrinsics" defined under <a href="#implicit-naming-scheme">1.6.4. Implicit (Overloaded) naming scheme</a>.</p>
 </div>
 <div class="paragraph">
 <p>The naming rules are as follows.</p>
@@ -907,7 +919,7 @@ Pseudo intrinsics mentioned under <a href="#pseudo-intrinsics"><em>1.8. Pseudo i
 <div class="sect3">
 <h4 id="1-6-3-1-scalar-move-instructions"><a class="anchor" href="#1-6-3-1-scalar-move-instructions"></a>1.6.3.1. Scalar move instructions</h4>
 <div class="paragraph">
-<p>Only encoding the return type will cause naming collisions for the scalar move instruction intrinsics. The intrinsics encode the input vector type and the output scalar type in the suffix.</p>
+<p>Only encoding the return type will cause naming collisions for the permutation instruction intrinsics. The intrinsics encode the input vector type and the output scalar type in the suffix.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -935,7 +947,7 @@ vint8m1_t __riscv_vredsum_vs_i8m8_i8m1(vint8m8_t vs2, vint8m1_t vs1, size_t vl);
 <div class="sect3">
 <h4 id="1-6-3-3-add-with-carry-subtract-with-borrow-instructions"><a class="anchor" href="#1-6-3-3-add-with-carry-subtract-with-borrow-instructions"></a>1.6.3.3. Add-with-carry / Subtract-with-borrow instructions</h4>
 <div class="paragraph">
-<p>Only encoding the return type will cause naming collisions for the carry/borrow instruction intrinsics. The intrinsics encode the input vector type and the output mask vector type in the suffix.</p>
+<p>Only encoding the return type will cause naming collisions for the reduction instruction intrinsics. The intrinsics encode the input vector type and the output mask vector type in the suffix.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -975,73 +987,7 @@ vbool4_t __riscv_vreinterpret_v_i32m1_b4 (vint32m1_t src);</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="1-6-4-vector-bfloat-instructions"><a class="anchor" href="#1-6-4-vector-bfloat-instructions"></a>1.6.4. Vector BFloat instructions</h3>
-<div class="paragraph">
-<p>For vector bfloat instructions, appending additional input type before output type to disambiguate between <code>zvfhmin</code> instructions, e.g. <code>vfloat32mf2_t __riscv_vfwadd_vv_f32mf2(vfloat16mf4_t vs2, vfloat16mf4_t vs1, size_t vl);</code>.</p>
-</div>
-<div class="sect3">
-<h4 id="1-6-4-1-vector-widening-bfloat-add-instruction"><a class="anchor" href="#1-6-4-1-vector-widening-bfloat-add-instruction"></a>1.6.4.1. Vector Widening BFloat Add instruction</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat32mf2_t __riscv_vfwadd_vv_bf16mf4_f32mf2(vbfloat16mf4_t vs2, vbfloat16mf4_t vs1, size_t vl);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="1-6-4-2-vector-widening-bfloat-sub-instruction"><a class="anchor" href="#1-6-4-2-vector-widening-bfloat-sub-instruction"></a>1.6.4.2. Vector Widening BFloat Sub instruction</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat32mf2_t __riscv_vfwsub_vv_bf16mf4_f32mf2(vbfloat16mf4_t vs2, vbfloat16mf4_t vs1, size_t vl);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="1-6-4-3-vector-widening-bfloat-mul-instruction"><a class="anchor" href="#1-6-4-3-vector-widening-bfloat-mul-instruction"></a>1.6.4.3. Vector Widening BFloat Mul instruction</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat32mf2_t __riscv_vfwmul_vv_bf16mf4_f32mf2(vbfloat16mf4_t vs2, vbfloat16mf4_t vs1, size_t vl);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="1-6-4-4-vector-widening-bfloat-fused-multiply-add-instructions"><a class="anchor" href="#1-6-4-4-vector-widening-bfloat-fused-multiply-add-instructions"></a>1.6.4.4. Vector Widening BFloat Fused Multiply-Add instructions</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat32mf2_t __riscv_vfwmacc_vv_bf16mf4_f32mf2(vfloat32mf2_t vd, vbfloat16mf4_t vs1, vbfloat16mf4_t vs2, size_t vl);
-vfloat32mf2_t __riscv_vfwnmacc_vv_bf16mf4_f32mf2(vfloat32mf2_t vd, vbfloat16mf4_t vs1, vbfloat16mf4_t vs2, size_t vl);
-vfloat32mf2_t __riscv_vfwmsac_vv_bf16mf4_f32mf2(vfloat32mf2_t vd, vbfloat16mf4_t vs1, vbfloat16mf4_t vs2, size_t vl);
-vfloat32mf2_t __riscv_vfwnmsac_vv_bf16mf4_f32mf2(vfloat32mf2_t vd, vbfloat16mf4_t vs1, vbfloat16mf4_t vs2, size_t vl);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="1-6-4-5-vector-widening-bfloat-type-convert-instruction"><a class="anchor" href="#1-6-4-5-vector-widening-bfloat-type-convert-instruction"></a>1.6.4.5. Vector Widening BFloat Type-Convert instruction</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat32mf2_t __riscv_vfwcvt_f_f_v_bf16mf4_f32mf2(vbfloat16mf4_t vs2, size_t vl);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="1-6-4-6-vector-narrowing-bfloat-type-convert-instruction"><a class="anchor" href="#1-6-4-6-vector-narrowing-bfloat-type-convert-instruction"></a>1.6.4.6. Vector Narrowing BFloat Type-Convert instruction</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vfncvt_x_f_w_bf16mf4_i8mf8(vbfloat16mf4_t vs2, size_t vl);
-vint8mf8_t __riscv_vfncvt_rtz_x_f_w_bf16mf4_i8mf8(vbfloat16mf4_t vs2, size_t vl);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="1-6-4-7-vector-bfloat-classify-instruction"><a class="anchor" href="#1-6-4-7-vector-bfloat-classify-instruction"></a>1.6.4.7. Vector BFloat Classify instruction</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vuint16mf4_t __riscv_vfclass_v_bf16mf4_u16mf4(vbfloat16mf4_t vs2, size_t vl);</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="implicit-naming-scheme"><a class="anchor" href="#implicit-naming-scheme"></a>1.6.5. Implicit (Overloaded) naming scheme</h3>
+<h3 id="implicit-naming-scheme"><a class="anchor" href="#implicit-naming-scheme"></a>1.6.4. Implicit (Overloaded) naming scheme</h3>
 <div class="paragraph">
 <p>The implicit (overloaded) interface aims to provide a generic interface that takes values of different EEW and EMUL as the input. Therefore, the implicit intrinsics omit the EEW and EMUL encoded in the function name. The <code>_rm</code> prefix for explicit FP rounding mode intrinsics (<a href="#control-of-frm">1.5.6. Control of floating-point rounding mode</a>) is also omitted. The intrinsics under this scheme are the "overloaded intrinsics", which in parallel we have the "non-overloaded intrinsics" defined under <a href="#explicit-naming-scheme">1.6.2. Explicit (Non-overloaded) naming scheme</a>.</p>
 </div>
@@ -1091,19 +1037,19 @@ vfloat32m1_t __riscv_vfadd_mu(vbool32_t vm, vfloat32m1_t vd, vfloat32m1_t vs2,
 </div>
 </div>
 <div class="paragraph">
-<p>The naming scheme to prune everything except the instruction mnemonics is not available for all the intrinsics. Please see <a href="#implicit-exception-naming">1.6.6. Exceptions in the implicit (overloaded) naming scheme</a> for overloaded intrinsics with irregular naming patterns.</p>
+<p>The naming scheme to prune everything except the instruction mnemonics is not available for all the intrinsics. Please see <a href="#implicit-exception-naming">1.6.5. Exceptions in the implicit (overloaded) naming scheme</a> for overloaded intrinsics with irregular naming patterns.</p>
 </div>
 <div class="paragraph">
-<p>Due to the limitations of the C language (without the aid of features like C++ templates), some intrinsics do not have an overloaded version. Therefore these intrinsics do not possess a simplified, EEW/EMUL-omitted interface. Please see <a href="#unsupported-implicit-naming">1.6.7. Un-supported intrinsics for implicit (overloaded) naming scheme</a> for more detail.</p>
+<p>Due to the limitations of the C language (without the aid of features like C++ templates), some intrinsics do not have an overloaded version. Therefore these intrinsics do not possess a simplified, EEW/EMUL-omitted interface. Please see <a href="#unsupported-implicit-naming">1.6.6. Un-supported intrinsics for implicit (overloaded) naming scheme</a> for more detail.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="implicit-exception-naming"><a class="anchor" href="#implicit-exception-naming"></a>1.6.6. Exceptions in the implicit (overloaded) naming scheme</h3>
+<h3 id="implicit-exception-naming"><a class="anchor" href="#implicit-exception-naming"></a>1.6.5. Exceptions in the implicit (overloaded) naming scheme</h3>
 <div class="paragraph">
 <p>The following intrinsics have an irregular naming pattern.</p>
 </div>
 <div class="sect3">
-<h4 id="1-6-6-1-widening-instructions"><a class="anchor" href="#1-6-6-1-widening-instructions"></a>1.6.6.1. Widening instructions</h4>
+<h4 id="1-6-5-1-widening-instructions"><a class="anchor" href="#1-6-5-1-widening-instructions"></a>1.6.5.1. Widening instructions</h4>
 <div class="paragraph">
 <p>Widening instruction intrinsics (e.g. <code>vwadd</code>) have the same return type but different types of arguments. The operand mnemonics are encoded into their overloaded versions to help distinguish them.</p>
 </div>
@@ -1117,30 +1063,7 @@ vint32m1_t __riscv_vwadd_wx(vint32m1_t vs2, int16_t rs1, size_t vl);</code></pre
 </div>
 </div>
 <div class="sect3">
-<h4 id="1-6-6-2-widening-bfloat-type-convert-instructions"><a class="anchor" href="#1-6-6-2-widening-bfloat-type-convert-instructions"></a>1.6.6.2. Widening BFloat Type-Convert instructions</h4>
-<div class="paragraph">
-<p>Add <code>_bf16</code> suffix to disambiguate between <code>zvfhmin</code> instructions, e.g. <code>vfloat16mf4_t __riscv_vfwcvt_f(vint8mf8_t vs2, size_t vl);</code>.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vbfloat16mf4_t __riscv_vfwcvt_f_bf16(vint8mf8_t vs2, size_t vl);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="1-6-6-3-narrowing-bfloat-type-convert-instructions"><a class="anchor" href="#1-6-6-3-narrowing-bfloat-type-convert-instructions"></a>1.6.6.3. Narrowing BFloat Type-Convert instructions</h4>
-<div class="paragraph">
-<p>Add <code>_bf16</code> suffix to disambiguate between <code>zvfhmin</code> instructions, e.g. <code>vfloat16mf4_t __riscv_vfncvt_f(vfloat32mf2_t vs2, size_t vl);</code>.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vbfloat16mf4_t __riscv_vfncvt_f_bf16(vfloat32mf2_t vs2, size_t vl);
-vbfloat16mf4_t __riscv_vfncvt_rod_f_bf16(vfloat32mf2_t vs2, size_t vl);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="1-6-6-4-type-convert-instructions"><a class="anchor" href="#1-6-6-4-type-convert-instructions"></a>1.6.6.4. Type-convert instructions</h4>
+<h4 id="1-6-5-2-type-convert-instructions"><a class="anchor" href="#1-6-5-2-type-convert-instructions"></a>1.6.5.2. Type-convert instructions</h4>
 <div class="paragraph">
 <p>Type-convert instruction intrinsics (e.g. <code>vfcvt.x.f</code>, <code>vfcvt.xu.f</code>, <code>vfcvt.rtz.xu.f</code>) encode the returning type mnemonics into their overloaded variants to help distinguish them.</p>
 </div>
@@ -1157,7 +1080,7 @@ vuint32m1_t __riscv_vfcvt_rtz_xu (vfloat32m1_t src, size_t vl);</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="1-6-6-5-vreinterpret-lmul-truncateextension-and-vsetvget"><a class="anchor" href="#1-6-6-5-vreinterpret-lmul-truncateextension-and-vsetvget"></a>1.6.6.5. <code>vreinterpret</code>, LMUL truncate/extension, and <code>vset</code>/<code>vget</code></h4>
+<h4 id="1-6-5-3-vreinterpret-lmul-truncateextension-and-vsetvget"><a class="anchor" href="#1-6-5-3-vreinterpret-lmul-truncateextension-and-vsetvget"></a>1.6.5.3. <code>vreinterpret</code>, LMUL truncate/extension, and <code>vset</code>/<code>vget</code></h4>
 <div class="paragraph">
 <p>These pseudo intrinsics encode the return type (e.g. <code>__riscv_vreinterpret_b8</code>) into their overloaded variants to help distinguish them.</p>
 </div>
@@ -1181,7 +1104,7 @@ vbool4_t __riscv_vreinterpret_b4 (vint32m1_t src);</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="unsupported-implicit-naming"><a class="anchor" href="#unsupported-implicit-naming"></a>1.6.7. Un-supported intrinsics for implicit (overloaded) naming scheme</h3>
+<h3 id="unsupported-implicit-naming"><a class="anchor" href="#unsupported-implicit-naming"></a>1.6.6. Un-supported intrinsics for implicit (overloaded) naming scheme</h3>
 <div class="paragraph">
 <p>Due to the limitation of the C language (without the aid of features like C++ templates), some intrinsics do not have an overloaded version. Intrinsics with characteristics of either of the following do not possess an overloaded version.</p>
 </div>
@@ -1484,7 +1407,7 @@ This specification uses <code>_Float16</code> to designate IEEE-754 binary16, <c
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Non-tuple Types (NFIELD=1)</th>
+<th class="tableblock halign-left valign-top">Non-tuple Types (NFILED=1)</th>
 <th class="tableblock halign-left valign-top">NFIELD=2</th>
 <th class="tableblock halign-left valign-top">NFIELD=3</th>
 <th class="tableblock halign-left valign-top">NFIELD=4</th>
@@ -1531,7 +1454,7 @@ This specification uses <code>_Float16</code> to designate IEEE-754 binary16, <c
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Non-tuple Types (NFIELD=1)</th>
+<th class="tableblock halign-left valign-top">Non-tuple Types (NFILED=1)</th>
 <th class="tableblock halign-left valign-top">NFIELD=2</th>
 <th class="tableblock halign-left valign-top">NFIELD=3</th>
 <th class="tableblock halign-left valign-top">NFIELD=4</th>
@@ -1608,7 +1531,7 @@ This specification uses <code>_Float16</code> to designate IEEE-754 binary16, <c
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Non-tuple Types (NFIELD=1)</th>
+<th class="tableblock halign-left valign-top">Non-tuple Types (NFILED=1)</th>
 <th class="tableblock halign-left valign-top">NFIELD=2</th>
 <th class="tableblock halign-left valign-top">NFIELD=3</th>
 <th class="tableblock halign-left valign-top">NFIELD=4</th>
@@ -1715,7 +1638,7 @@ This specification uses <code>_Float16</code> to designate IEEE-754 binary16, <c
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Non-tuple Types (NFIELD=1)</th>
+<th class="tableblock halign-left valign-top">Non-tuple Types (NFILED=1)</th>
 <th class="tableblock halign-left valign-top">NFIELD=2</th>
 <th class="tableblock halign-left valign-top">NFIELD=3</th>
 <th class="tableblock halign-left valign-top">NFIELD=4</th>
@@ -1852,7 +1775,7 @@ This specification uses <code>_Float16</code> to designate IEEE-754 binary16, <c
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Non-tuple Types (NFIELD=1)</th>
+<th class="tableblock halign-left valign-top">Non-tuple Types (NFILED=1)</th>
 <th class="tableblock halign-left valign-top">NFIELD=2</th>
 <th class="tableblock halign-left valign-top">NFIELD=3</th>
 <th class="tableblock halign-left valign-top">NFIELD=4</th>
@@ -1989,7 +1912,7 @@ This specification uses <code>_Float16</code> to designate IEEE-754 binary16, <c
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Non-tuple Types (NFIELD=1)</th>
+<th class="tableblock halign-left valign-top">Non-tuple Types (NFILED=1)</th>
 <th class="tableblock halign-left valign-top">NFIELD=2</th>
 <th class="tableblock halign-left valign-top">NFIELD=3</th>
 <th class="tableblock halign-left valign-top">NFIELD=4</th>
@@ -2243,7 +2166,7 @@ dest = __riscv_vset_v_f32m2_f32m4(dest, 1, v1);</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="programming-notes"><a class="anchor" href="#programming-notes"></a>1.9. Programming Notes</h2>
+<h2 id="1-9-programming-notes"><a class="anchor" href="#1-9-programming-notes"></a>1.9. Programming Notes</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="1-9-1-agnostic-value-in-the-rvv-c-intrinsics"><a class="anchor" href="#1-9-1-agnostic-value-in-the-rvv-c-intrinsics"></a>1.9.1. Agnostic value in the RVV C intrinsics</h3>
