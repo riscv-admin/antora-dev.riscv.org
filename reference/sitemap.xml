@@ -16,6 +16,9 @@
 <loc>https://docs.riscv.org/reference/sitemap-connectors.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://docs.riscv.org/reference/sitemap-debug.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-etrace.xml</loc>
 </sitemap>
 <sitemap>
