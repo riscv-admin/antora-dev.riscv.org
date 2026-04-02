@@ -7,7 +7,7 @@
 <loc>https://docs.riscv.org/reference/sitemap-aia.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.riscv.org/reference/sitemap-app-enablement.xml</loc>
+<loc>https://docs.riscv.org/reference/sitemap-app-enablement-overview.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-brs.xml</loc>
@@ -22,7 +22,7 @@
 <loc>https://docs.riscv.org/reference/sitemap-ffh.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.riscv.org/reference/sitemap-hardware.xml</loc>
+<loc>https://docs.riscv.org/reference/sitemap-hardware-overview.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-home.xml</loc>
@@ -40,13 +40,13 @@
 <loc>https://docs.riscv.org/reference/sitemap-ntrace.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.riscv.org/reference/sitemap-platform-software.xml</loc>
+<loc>https://docs.riscv.org/reference/sitemap-platform-software-overview.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-plic.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.riscv.org/reference/sitemap-profiles.xml</loc>
+<loc>https://docs.riscv.org/reference/sitemap-profiles-overview.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-qos.xml</loc>
@@ -85,7 +85,7 @@
 <loc>https://docs.riscv.org/reference/sitemap-tech-trace.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.riscv.org/reference/sitemap-trace-debug-ras.xml</loc>
+<loc>https://docs.riscv.org/reference/sitemap-trace-debug-ras-overview.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-uefi.xml</loc>
