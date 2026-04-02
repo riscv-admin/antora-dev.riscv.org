@@ -667,14 +667,7 @@
           </li>
     </ul>
   </nav>
-</div><div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/implementations.adoc - include::partial$register-attrs.adoc[]</p>
-</div>
-</div>
-</div>
-<div class="sect1">
+</div><div class="sect1">
 <h2 id="sec:implementations"><a class="anchor" href="#sec:implementations"></a>Appendix A: Hardware Implementations</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -714,7 +707,7 @@ interrupt to the selected harts. This interrupt causes each hart to
 enter Debug Mode and jump to a defined memory region that is serviced by
 the DM and is only accessible to the harts in Debug Mode. Accesses to
 this memory should be uncached to avoid side effects from debugging
-operations. When taking this jump, <code>pc</code> is saved to {csr-dpc} and {dcsr-cause} is updated in {csr-dcsr}. This
+operations. When taking this jump, <code>pc</code> is saved to <a href="Sdext.html#csr-dpc" class="xref page">dpc</a> and <a href="Sdext.html#dcsr-cause" class="xref page">cause</a> is updated in <a href="Sdext.html#csr-dcsr" class="xref page">dcsr</a>. This
 jump is similar to a trap but it is not architecturally considered a
 trap, so for instance doesn&#8217;t count as a trap for trigger behavior.</p>
 </div>
@@ -728,10 +721,10 @@ debugger wants it to execute the Program Buffer or perform a resume.</p>
 </div>
 <div class="paragraph">
 <p>To execute an abstract command, the DM first populates some internal
-words of program buffer according to {dm-command}. When {accessregister-transfer} is set, the DM populates
+words of program buffer according to <a href="debug_module.html#dm-command" class="xref page">command</a>. When <a href="debug_module.html#accessregister-transfer" class="xref page">transfer</a> is set, the DM populates
 these words with <code>lw &lt;gpr&gt;, 0x400(zero)</code> or <code>sw &lt;gpr&gt;, 0x400(zero)</code>. 64-
-and 128-bit accesses use <code>ld</code>/<code>sd</code> and <code>lq</code>/<code>sq</code> respectively. If {accessregister-transfer} is not
-set, the DM populates these instructions as <code>nop&#8217;s</code>. If {accessregister-postexec} is set, execution
+and 128-bit accesses use <code>ld</code>/<code>sd</code> and <code>lq</code>/<code>sq</code> respectively. If <a href="debug_module.html#accessregister-transfer" class="xref page">transfer</a> is not
+set, the DM populates these instructions as <code>nop&#8217;s</code>. If <a href="debug_module.html#accessregister-postexec" class="xref page">postexec</a> is set, execution
 continues to the debugger-controlled Program Buffer, otherwise the DM
 causes an <code>ebreak</code> to execute immediately.</p>
 </div>
@@ -741,28 +734,28 @@ code) the hart returns to its park loop. If an exception is encountered,
 the hart jumps to an address within the Debug Module. The code there
 causes the hart to write to the Debug Module indicating an exception.
 Then the hart jumps back to the park loop. The DM infers from the write
-that there was an exception, and sets {abstractcs-cmderr} appropriately. Typically the hart
+that there was an exception, and sets <a href="debug_module.html#abstractcs-cmderr" class="xref page">cmderr</a> appropriately. Typically the hart
 will execute a <code>fence</code> instruction before entering the park loop, to
-ensure that any effects from the abstract command, such as a write to {dm-data0},
-take effect before the DM returns {abstractcs-busy} to 0.</p>
+ensure that any effects from the abstract command, such as a write to <a href="debug_module.html#dm-data0" class="xref page">data0</a>,
+take effect before the DM returns <a href="debug_module.html#abstractcs-busy" class="xref page">busy</a> to 0.</p>
 </div>
 <div class="paragraph">
 <p>To resume execution, the debug module sets a flag which causes the hart
 to execute a <code>dret</code>. <code>dret</code> is an instruction that only has meaning
 while in Debug Mode and not executing from the Program Buffer. Its
 recommended encoding is 0x7b200073. When <code>dret</code> is executed, <code>pc</code> is restored
-from {csr-dpc} and normal execution resumes at the privilege set by {dcsr-prv} and {dcsr-v},
-and the ELP state set by {dcsr-pelp}.</p>
+from <a href="Sdext.html#csr-dpc" class="xref page">dpc</a> and normal execution resumes at the privilege set by <a href="Sdext.html#dcsr-prv" class="xref page">prv</a> and <a href="Sdext.html#dcsr-v" class="xref page">v</a>,
+and the ELP state set by <a href="Sdext.html#dcsr-pelp" class="xref page">pelp</a>.</p>
 </div>
 <div class="paragraph">
-<p>{dm-data0} etc. are mapped into regular memory at an address relative to with only
+<p><a href="debug_module.html#dm-data0" class="xref page">data0</a> etc. are mapped into regular memory at an address relative to with only
 a 12-bit <code>imm</code>. The exact address is an implementation detail that a
 debugger must not rely on. For example, the <code>data</code> registers might be
 mapped to <code>0x400</code>.</p>
 </div>
 <div class="paragraph">
-<p>For additional flexibility, {dm-progbuf0}, etc. are mapped into regular memory
-immediately preceding {dm-data0}, in order to form a contiguous region of memory
+<p>For additional flexibility, <a href="debug_module.html#dm-progbuf0" class="xref page">progbuf0</a>, etc. are mapped into regular memory
+immediately preceding <a href="debug_module.html#dm-data0" class="xref page">data0</a>, in order to form a contiguous region of memory
 which can be used for either program execution or data transfer.</p>
 </div>
 <div class="paragraph">
@@ -793,7 +786,7 @@ pending.</p>
 </div>
 <div class="paragraph">
 <p>The DM must respond to a request from the DTM when RSP_READY is high.
-The status of the response is indicated by the RSP_OP signal (see {dmi-op}). The
+The status of the response is indicated by the RSP_OP signal (see <a href="dtm.html#dmi-op" class="xref page">op</a>). The
 data of the response is driven to RSP_DATA. A pending response is
 signalled by setting RSP_VALID.</p>
 </div>
@@ -828,7 +821,7 @@ signalled by setting RSP_VALID.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">REQ_ADDRESS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dtmcs-abits}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="dtm.html#dtmcs-abits" class="xref page">abits</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DTM</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Requested address</p></td>
 </tr>
@@ -842,7 +835,7 @@ signalled by setting RSP_VALID.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">REQ_OP</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DTM</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Same meaning as the {dmi-op} field</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Same meaning as the <a href="dtm.html#dmi-op" class="xref page">op</a> field</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RSP_VALID</p></td>
@@ -866,7 +859,7 @@ signalled by setting RSP_VALID.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RSP_OP</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DM</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Same meaning as the {dmi-op} field</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Same meaning as the <a href="dtm.html#dmi-op" class="xref page">op</a> field</p></td>
 </tr>
 </tbody>
 </table>

@@ -668,14 +668,7 @@
           </li>
     </ul>
   </nav>
-</div><div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/dtm.adoc - include::partial$register-attrs.adoc[]</p>
-</div>
-</div>
-</div>
-<div class="sect1">
+</div><div class="sect1">
 <h2 id="dtm"><a class="anchor" href="#dtm"></a>6.1. Debug Transport Module (DTM) (non-ISA extension)</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -762,67 +755,67 @@ the BYPASS register.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x00</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dtm-bypass}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-bypass">bypass</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">JTAG recommends this encoding</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dtm-idcode}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-idcode">idcode</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To identify a specific silicon version</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-idcode"><code>IDCODE</code> (at 0x01)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DTM Control and Status ({dtm-dtmcs})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DTM Control and Status (<a href="#dtm-dtmcs">dtmcs</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For Debugging</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-dtmcs">DTM Control and Status (dtmcs, at 0x10)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x11</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Debug Module Interface Access ({dtm-dmi})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debug Module Interface Access (<a href="#dtm-dmi">dmi</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For Debugging</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-dmi">Debug Module Interface Access (dmi, at 0x11)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dtm-reserved_bypass}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">reserved (bypass)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reserved for future RISC-V debugging</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x13</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dtm-reserved_bypass}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">reserved (bypass)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reserved for future RISC-V debugging</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x14</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dtm-reserved_bypass}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">reserved (bypass)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reserved for future RISC-V debugging</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x15</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dtm-reserved_bypass}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">reserved (bypass)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reserved for future RISC-V standards</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x16</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dtm-reserved_bypass}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">reserved (bypass)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reserved for future RISC-V standards</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x17</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dtm-reserved_bypass}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">reserved (bypass)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reserved for future RISC-V standards</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x1f</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dtm-bypass}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-bypass">bypass</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">JTAG requires this encoding</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-bypass"><code>BYPASS</code> (at 0x1f)</a></p></td>
 </tr>
@@ -934,8 +927,8 @@ that a debugger can always determine the version of the DTM.</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>This optional field may provide additional detail about an error
 that occurred when communicating with a DM. It is updated whenever
-{dmi-op} is updated by the hardware or when 1 is written to
-{dtmcs-dmireset}.</p>
+<a href="#dmi-op">op</a> is updated by the hardware or when 1 is written to
+<a href="#dtmcs-dmireset">dmireset</a>.</p>
 </div>
 <div class="paragraph">
 <p>0 (not implemented): This field is not implemented.</p>
@@ -985,7 +978,7 @@ be cancelled).</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dtmcs-dmireset"></a> <code>dmireset</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Writing 1 to this bit clears the sticky error state and resets
-{dtmcs-errinfo}, but does not affect outstanding DMI transactions.</p>
+<a href="#dtmcs-errinfo">errinfo</a>, but does not affect outstanding DMI transactions.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>W1</strong></p>
@@ -1000,8 +993,8 @@ be cancelled).</p>
 <p>This is a hint to the debugger of the minimum number of
 cycles a debugger should spend in
 Run-Test/Idle after every DMI scan to avoid a `busy'
-return code ({dtmcs-dmistat} of 3). A debugger must still
-check {dtmcs-dmistat} when necessary.</p>
+return code (<a href="#dtmcs-dmistat">dmistat</a> of 3). A debugger must still
+check <a href="#dtmcs-dmistat">dmistat</a> when necessary.</p>
 </div>
 <div class="paragraph">
 <p>0: It is not necessary to enter Run-Test/Idle at all.</p>
@@ -1025,7 +1018,7 @@ check {dtmcs-dmistat} when necessary.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dtmcs-dmistat"></a> <code>dmistat</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Read-only alias of {dmi-op}.</p>
+<p>Read-only alias of <a href="#dmi-op">op</a>.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>R</strong></p>
@@ -1037,7 +1030,7 @@ check {dtmcs-dmistat} when necessary.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dtmcs-abits"></a> <code>abits</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The size of {dmi-address} in {dtm-dmi}.</p>
+<p>The size of <a href="#dmi-address">address</a> in <a href="#dtm-dmi">dmi</a>.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>R</strong></p>
@@ -1073,12 +1066,12 @@ check {dtmcs-dmistat} when necessary.</p>
 <p>This register allows access to the Debug Module Interface (DMI).</p>
 </div>
 <div class="paragraph">
-<p>In Update-DR, the DTM starts the operation specified in {dmi-op} unless the
-current status reported in {dmi-op} is sticky.</p>
+<p>In Update-DR, the DTM starts the operation specified in <a href="#dmi-op">op</a> unless the
+current status reported in <a href="#dmi-op">op</a> is sticky.</p>
 </div>
 <div class="paragraph">
-<p>In Capture-DR, the DTM updates {sbdata0-data} with the result from that
-operation, updating {dmi-op} if the current {dmi-op} isn&#8217;t sticky.</p>
+<p>In Capture-DR, the DTM updates <a href="debug_module.html#sbdata0-data" class="xref page">data</a> with the result from that
+operation, updating <a href="#dmi-op">op</a> if the current <a href="#dmi-op">op</a> isn&#8217;t sticky.</p>
 </div>
 <div class="paragraph">
 <p>See <a href="#dmiaccess">[dmiaccess]</a> for examples of how this is used.</p>
@@ -1130,7 +1123,7 @@ Debug Program may hang or have other unexpected side effects.</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Address used for DMI access. In Update-DR this value is used
 to access the DM over the DMI.
-{dmi-op} defines what this register contains after every possible
+<a href="#dmi-op">op</a> defines what this register contains after every possible
 operation.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
@@ -1159,7 +1152,7 @@ the data returned from the DM as a result of the previous operation.</p>
 <p>When the debugger writes this field, it has the following meaning:</p>
 </div>
 <div class="paragraph">
-<p>0 (nop): Ignore {sbdata0-data} and {sbaddress0-address}.</p>
+<p>0 (nop): Ignore <a href="debug_module.html#sbdata0-data" class="xref page">data</a> and <a href="debug_module.html#sbaddress0-address" class="xref page">address</a>.</p>
 </div>
 <div class="paragraph">
 <p>Don&#8217;t send anything over the DMI during Update-DR.
@@ -1168,22 +1161,22 @@ The address and data reported in the following Capture-DR
 are undefined.</p>
 </div>
 <div class="paragraph">
-<p>This operation leaves the values in {dmi-address} and {dmi-data}
+<p>This operation leaves the values in <a href="#dmi-address">address</a> and <a href="#dmi-data">data</a>
 UNSPECIFIED.</p>
 </div>
 <div class="paragraph">
-<p>1 (read): Read from {dmi-address}.</p>
+<p>1 (read): Read from <a href="#dmi-address">address</a>.</p>
 </div>
 <div class="paragraph">
-<p>When this operation succeeds, {dmi-address} contains the address
-that was read from, and {dmi-data} contains the value that was
+<p>When this operation succeeds, <a href="#dmi-address">address</a> contains the address
+that was read from, and <a href="#dmi-data">data</a> contains the value that was
 read.</p>
 </div>
 <div class="paragraph">
-<p>2 (write): Write {dmi-data} to {dmi-address}.</p>
+<p>2 (write): Write <a href="#dmi-data">data</a> to <a href="#dmi-address">address</a>.</p>
 </div>
 <div class="paragraph">
-<p>This operation leaves the values in {dmi-address} and {dmi-data}
+<p>This operation leaves the values in <a href="#dmi-address">address</a> and <a href="#dmi-data">data</a>
 UNSPECIFIED.</p>
 </div>
 <div class="paragraph">
@@ -1199,9 +1192,9 @@ UNSPECIFIED.</p>
 <p>1 (reserved): Reserved.</p>
 </div>
 <div class="paragraph">
-<p>2 (failed): A previous operation failed.  The data scanned into {dtm-dmi} in
+<p>2 (failed): A previous operation failed.  The data scanned into <a href="#dtm-dmi">dmi</a> in
 this access will be ignored.  This status is sticky and can be
-cleared by writing {dtmcs-dmireset} in {dtm-dtmcs}.</p>
+cleared by writing <a href="#dtmcs-dmireset">dmireset</a> in <a href="#dtm-dtmcs">dtmcs</a>.</p>
 </div>
 <div class="paragraph">
 <p>This indicates that the DM itself or the DMI responded with an error.
@@ -1211,13 +1204,13 @@ returning errors.</p>
 </div>
 <div class="paragraph">
 <p>If a debugger sees this status, there might be additional
-information in {dtmcs-errinfo}.</p>
+information in <a href="#dtmcs-errinfo">errinfo</a>.</p>
 </div>
 <div class="paragraph">
 <p>3 (busy): A DMI operation was attempted while a prior DMI operation was still in
-progress. The data scanned into {dtm-dmi} in this access will be
+progress. The data scanned into <a href="#dtm-dmi">dmi</a> in this access will be
 ignored. This status is sticky and can be cleared by writing
-{dtmcs-dmireset} in {dtm-dtmcs}. If a debugger sees this status, it
+<a href="#dtmcs-dmireset">dmireset</a> in <a href="#dtm-dtmcs">dtmcs</a>. If a debugger sees this status, it
 needs to give the target more TCK edges between Update-DR and
 Capture-DR. The simplest way to do that is to add extra transitions
 in Run-Test/Idle.</p>

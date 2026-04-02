@@ -668,14 +668,7 @@
           </li>
     </ul>
   </nav>
-</div><div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/debug_module.adoc - include::partial$register-attrs.adoc[]</p>
-</div>
-</div>
-</div>
-<div class="sect1">
+</div><div class="sect1">
 <h2 id="dm"><a class="anchor" href="#dm"></a>3.1. Debug Module (DM) (non-ISA extension)</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -762,7 +755,7 @@ running on the hart including all the registers that are present on the
 hart and listed in <a href="#tab:regno">Table 1</a>.</p>
 </li>
 <li>
-<p>Implement abstract access to at least all GPRs, {csr-dcsr}, and {csr-dpc}, and advertise the implementation as conforming to the "Minimal RISC-V Debug
+<p>Implement abstract access to at least all GPRs, <a href="Sdext.html#csr-dcsr" class="xref page">dcsr</a>, and <a href="Sdext.html#csr-dpc" class="xref page">dpc</a>, and advertise the implementation as conforming to the "Minimal RISC-V Debug
 Specification", instead of the "RISC-V Debug Specification".</p>
 </li>
 </ol>
@@ -789,7 +782,7 @@ single 32-bit register that can be read or written. The bottom of the
 address space is used for the first (and usually only) DM. Extra space
 can be used for custom debug devices, other cores, additional DMs, etc.
 If there are additional DMs on this DMI, the base address of the next DM
-in the DMI address space is given in {dm-nextdm}.</p>
+in the DMI address space is given in <a href="#dm-nextdm">nextdm</a>.</p>
 </div>
 <div class="paragraph">
 <p>The Debug Module is controlled via register accesses to its DMI address
@@ -799,15 +792,15 @@ space.</p>
 <div class="sect2">
 <h3 id="reset"><a class="anchor" href="#reset"></a>3.1.2. Reset Control</h3>
 <div class="paragraph">
-<p>There are two methods that allow a debugger to reset harts. {dmcontrol-ndmreset} resets all
+<p>There are two methods that allow a debugger to reset harts. <a href="#dmcontrol-ndmreset">ndmreset</a> resets all
 the harts in the hardware platform, as well as all other parts of the
 hardware platform except for the Debug Modules, Debug Transport Modules,
 and Debug Module Interface. Exactly what is affected by this reset is
 implementation dependent, but it must be possible to debug programs from
-the first instruction executed. {dmcontrol-hartreset} resets all the currently selected harts.
+the first instruction executed. <a href="#dmcontrol-hartreset">hartreset</a> resets all the currently selected harts.
 In this case an implementation may reset more harts than just the ones
 that are selected. The debugger can discover which other harts are reset
-(if any) by selecting them and checking {dmstatus-anyhavereset} and {dmstatus-allhavereset}.</p>
+(if any) by selecting them and checking <a href="#dmstatus-anyhavereset">anyhavereset</a> and <a href="#dmstatus-allhavereset">allhavereset</a>.</p>
 </div>
 <div class="paragraph">
 <p>To perform either of these resets, the debugger first asserts the bit,
@@ -818,7 +811,7 @@ While the reset is on-going, harts are either in the running state,
 indicating it&#8217;s possible to perform some abstract commands during this
 time, or in the unavailable state, indicating it&#8217;s not possible to
 perform any abstract commands during this time. Once a hart&#8217;s reset is
-complete, <code>havereset</code> becomes set. When a hart comes out of reset and {dmcontrol-haltreq} or <code>resethaltreq</code>
+complete, <code>havereset</code> becomes set. When a hart comes out of reset and <a href="#dmcontrol-haltreq">haltreq</a> or <code>resethaltreq</code>
 are set, the hart will immediately enter Debug Mode (halted state).
 Otherwise, if the hart was initially running it will execute normally
 (running state) and if the hart was initially halted it should now be
@@ -841,21 +834,21 @@ has actually begun.</p>
 </div>
 <div class="paragraph">
 <p>The Debug Module&#8217;s own state and registers should only be reset at
-power-up and while {dmcontrol-dmactive} in {dm-dmcontrol} is 0. If there is another mechanism to reset the DM, this mechanism must also reset all the harts accessible to the DM.</p>
+power-up and while <a href="#dmcontrol-dmactive">dmactive</a> in <a href="#dm-dmcontrol">dmcontrol</a> is 0. If there is another mechanism to reset the DM, this mechanism must also reset all the harts accessible to the DM.</p>
 </div>
 <div class="paragraph">
 <p>Due to clock and power domain crossing issues, it might not be possible
 to perform arbitrary DMI accesses across hardware platform reset. While
-{dmcontrol-ndmreset}  or any external reset is asserted, the only supported DM
-operations are reading/writing {dm-dmcontrol} and reading
-{dmstatus-ndmresetpending}. The behavior of other accesses is undefined.</p>
+<a href="#dmcontrol-ndmreset">ndmreset</a>  or any external reset is asserted, the only supported DM
+operations are reading/writing <a href="#dm-dmcontrol">dmcontrol</a> and reading
+<a href="#dmstatus-ndmresetpending">ndmresetpending</a>. The behavior of other accesses is undefined.</p>
 </div>
 <div class="paragraph">
 <p>When harts have been reset, they must set a sticky <code>havereset</code> state
 bit. The conceptual <code>havereset</code> state bits can be read for selected
-harts in {dmstatus-anyhavereset} and {dmstatus-allhavereset} in {dm-dmstatus}. These bits must be set regardless of the cause of the
+harts in <a href="#dmstatus-anyhavereset">anyhavereset</a> and <a href="#dmstatus-allhavereset">allhavereset</a> in <a href="#dm-dmstatus">dmstatus</a>. These bits must be set regardless of the cause of the
 reset. The <code>havereset</code> bits for the selected harts can be cleared by
-writing 1 to {dmcontrol-ackhavereset} in {dm-dmcontrol}. The <code>havereset</code> bits might or might not be cleared when {dmcontrol-dmactive} is low.</p>
+writing 1 to <a href="#dmcontrol-ackhavereset">ackhavereset</a> in <a href="#dm-dmcontrol">dmcontrol</a>. The <code>havereset</code> bits might or might not be cleared when <a href="#dmcontrol-dmactive">dmactive</a> is low.</p>
 </div>
 </div>
 <div class="sect2">
@@ -868,7 +861,7 @@ Commands issued to the DM only apply to the currently selected harts.</p>
 <p>To enumerate all the harts, a debugger must first determine <code>HARTSELLEN</code>
 by writing all ones to {hartsel} (assuming the maximum size) and reading back the
 value to see which bits were actually set. Then it selects each hart
-starting from 0 until either {dmstatus-anynonexistent} in {dm-dmstatus} is 1, or the highest index (depending on <code>HARTSELLEN</code>) is reached.</p>
+starting from 0 until either <a href="#dmstatus-anynonexistent">anynonexistent</a> in <a href="#dm-dmstatus">dmstatus</a> is 1, or the highest index (depending on <code>HARTSELLEN</code>) is reached.</p>
 </div>
 <div class="paragraph">
 <p>The debugger can discover the mapping between hart indices and <code>mhartid</code> by using
@@ -894,11 +887,11 @@ Array Mask register exactly wide enough to select all the harts it
 supports, but it&#8217;s allowed to tie any of these bits to 0.</p>
 </div>
 <div class="paragraph">
-<p>The debugger can set bits in the hart array mask register using {dm-hawindowsel} and {dm-hawindow},
-then apply actions to all selected harts by setting {dmcontrol-hasel}. If this feature is
+<p>The debugger can set bits in the hart array mask register using <a href="#dm-hawindowsel">hawindowsel</a> and <a href="#dm-hawindow">hawindow</a>,
+then apply actions to all selected harts by setting <a href="#dmcontrol-hasel">hasel</a>. If this feature is
 supported, multiple harts can be halted, resumed, and reset
 simultaneously. The state of the hart array mask register is not
-affected by setting or clearing {dmcontrol-hasel}.</p>
+affected by setting or clearing <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div>
 <div class="paragraph">
 <p>Execution of Abstract Commands ignores this mechanism and only applies
@@ -911,7 +904,7 @@ to the hart selected by {hartsel}.</p>
 <div class="paragraph">
 <p>Every hart that can be selected is in exactly one of the following four
 DM states: non-existent, unavailable, running, or halted. Which state
-the selected harts are in is reflected by {dmstatus-allnonexistent}, {dmstatus-anynonexistent}, {dmstatus-allunavail}, {dmstatus-anyunavail}, {dmstatus-allrunning}, {dmstatus-anyrunning}, {dmstatus-allhalted}, and {dmstatus-anyhalted}.</p>
+the selected harts are in is reflected by <a href="#dmstatus-allnonexistent">allnonexistent</a>, <a href="#dmstatus-anynonexistent">anynonexistent</a>, <a href="#dmstatus-allunavail">allunavail</a>, <a href="#dmstatus-anyunavail">anyunavail</a>, <a href="#dmstatus-allrunning">allrunning</a>, <a href="#dmstatus-anyrunning">anyrunning</a>, <a href="#dmstatus-allhalted">allhalted</a>, and <a href="#dmstatus-anyhalted">anyhalted</a>.</p>
 </div>
 <div class="paragraph">
 <p>Harts are nonexistent if they will never be part of this hardware
@@ -952,7 +945,7 @@ behalf of the debugger.</p>
 dependent. Harts may be unavailable while reset is asserted, and some
 time after reset is deasserted. They might transition to running for
 some time after reset is deasserted. Finally they end up either running
-or halted, depending on {dmcontrol-haltreq} and <code>resethaltreq</code>.</p>
+or halted, depending on <a href="#dmcontrol-haltreq">haltreq</a> and <code>resethaltreq</code>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -963,21 +956,21 @@ request, resume ack, halt-on-reset request, and hart reset. (The hart
 reset and halt-on-reset request bits are optional.) These 4 bits reset
 to 0, except for resume ack, which may reset to either 0 or 1. The DM
 receives halted, running, and havereset signals from each hart. The
-debugger can observe the state of resume ack in {dmstatus-allresumeack} and {dmstatus-anyresumeack}, and the state of halted, running, and havereset signals in {dmstatus-allhalted}, {dmstatus-anyhalted}, {dmstatus-allrunning}, {dmstatus-anyrunning}, {dmstatus-allhavereset}, and {dmstatus-anyhavereset}. The state of the other bits cannot be observed directly.</p>
+debugger can observe the state of resume ack in <a href="#dmstatus-allresumeack">allresumeack</a> and <a href="#dmstatus-anyresumeack">anyresumeack</a>, and the state of halted, running, and havereset signals in <a href="#dmstatus-allhalted">allhalted</a>, <a href="#dmstatus-anyhalted">anyhalted</a>, <a href="#dmstatus-allrunning">allrunning</a>, <a href="#dmstatus-anyrunning">anyrunning</a>, <a href="#dmstatus-allhavereset">allhavereset</a>, and <a href="#dmstatus-anyhavereset">anyhavereset</a>. The state of the other bits cannot be observed directly.</p>
 </div>
 <div class="paragraph">
-<p>When a debugger writes 1 to {dmcontrol-haltreq}, each selected hart&#8217;s halt request bit is
+<p>When a debugger writes 1 to <a href="#dmcontrol-haltreq">haltreq</a>, each selected hart&#8217;s halt request bit is
 set. When a running hart, or a hart just coming out of reset, sees its
 halt request bit high, it responds by halting, deasserting its running
 signal, and asserting its halted signal. Halted harts ignore their halt
 request bit.</p>
 </div>
 <div class="paragraph">
-<p>When a debugger writes 1 to {dmcontrol-resumereq}, each selected hart&#8217;s resume ack bit is
+<p>When a debugger writes 1 to <a href="#dmcontrol-resumereq">resumereq</a>, each selected hart&#8217;s resume ack bit is
 cleared and each selected, halted hart is sent a resume request. Harts
 respond by resuming, clearing their halted signal, and asserting their
 running signal. At the end of this process the resume ack bit is set.
-These status signals of all selected harts are reflected in {dmstatus-allresumeack}, {dmstatus-anyresumeack}, {dmstatus-allrunning}, and {dmstatus-anyrunning}. Resume requests are ignored by running harts.</p>
+These status signals of all selected harts are reflected in <a href="#dmstatus-allresumeack">allresumeack</a>, <a href="#dmstatus-anyresumeack">anyresumeack</a>, <a href="#dmstatus-allrunning">allrunning</a>, and <a href="#dmstatus-anyrunning">anyrunning</a>. Resume requests are ignored by running harts.</p>
 </div>
 <div class="paragraph">
 <p>When halt or resume is requested, a hart must respond in less than one
@@ -986,15 +979,15 @@ further specified. A few clock cycles will be a more typical latency).</p>
 </div>
 <div class="paragraph">
 <p>The DM can implement optional halt-on-reset bits for each hart, which it
-indicates by setting {dmstatus-hasresethaltreq} to 1. This means the DM implements the {dmcontrol-setresethaltreq} and {dmcontrol-clrresethaltreq} bits.  Writing 1 to {dmcontrol-setresethaltreq} sets the halt-on-reset request bit for each selected hart.
+indicates by setting <a href="#dmstatus-hasresethaltreq">hasresethaltreq</a> to 1. This means the DM implements the <a href="#dmcontrol-setresethaltreq">setresethaltreq</a> and <a href="#dmcontrol-clrresethaltreq">clrresethaltreq</a> bits.  Writing 1 to <a href="#dmcontrol-setresethaltreq">setresethaltreq</a> sets the halt-on-reset request bit for each selected hart.
 When a hart&#8217;s halt-on-reset request bit is set, the hart will
 immediately enter debug mode on the next deassertion of its reset. This
 is true regardless of the reset&#8217;s cause. The hart&#8217;s halt-on-reset
-request bit remains set until cleared by the debugger writing 1 to {dmcontrol-clrresethaltreq} while the hart is selected, or by DM reset.</p>
+request bit remains set until cleared by the debugger writing 1 to <a href="#dmcontrol-clrresethaltreq">clrresethaltreq</a> while the hart is selected, or by DM reset.</p>
 </div>
 <div class="paragraph">
 <p>If the DM is reset while a hart is halted, it is UNSPECIFIED whether that hart
-resumes. Debuggers should use {dmcontrol-resumereq} to explicitly resume harts before clearing {dmcontrol-dmactive} and disconnecting.</p>
+resumes. Debuggers should use <a href="#dmcontrol-resumereq">resumereq</a> to explicitly resume harts before clearing <a href="#dmcontrol-dmactive">dmactive</a> and disconnecting.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1016,12 +1009,12 @@ halt/resume as if groups aren’t implemented at all.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>That hart halts normally, with {dcsr-cause} reflecting the original cause of the
+<p>That hart halts normally, with <a href="Sdext.html#dcsr-cause" class="xref page">cause</a> reflecting the original cause of the
 halt.</p>
 </li>
 <li>
 <p>All the other harts in the halt group that are running will quickly
-halt. {dcsr-cause} for those harts should be set to 6, but may be set to 3. Other
+halt. <a href="Sdext.html#dcsr-cause" class="xref page">cause</a> for those harts should be set to 6, but may be set to 3. Other
 harts in the halt group that are halted but have started the process of
 resuming must also quickly become halted, even if they do resume
 briefly.</p>
@@ -1041,7 +1034,7 @@ even if other harts in the group are already halted.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>All the harts in the halt group that are running will quickly halt. {dcsr-cause} for
+<p>All the harts in the halt group that are running will quickly halt. <a href="Sdext.html#dcsr-cause" class="xref page">cause</a> for
 those harts should be set to 6, but may be set to 3. Other harts in the
 halt group that are halted but have started the process of resuming must
 also quickly become halted, even if they do resume briefly.</p>
@@ -1085,7 +1078,7 @@ halted.</p>
 </div>
 <div class="paragraph">
 <p>External triggers are abstract concepts that can signal the DM and/or
-receive signals from the DM. This configuration is done through {dm-dmcs2}, where
+receive signals from the DM. This configuration is done through <a href="#dm-dmcs2">dmcs2</a>, where
 external triggers are referred to by a number. Commonly, external
 triggers are capable of sending a signal from the hardware platform into
 the DM, as well as receiving a signal from the DM to take their own
@@ -1119,7 +1112,7 @@ halt and resume groups that they can be in. (This will usually be group
 <p>Some designs may choose to hardcode hart groups to a group other than
 group 0, meaning it is never possible to halt or resume just a single
 hart. This is explicitly allowed. In that case it must be possible to
-discover the groups by using {dm-dmcs2} even if it&#8217;s not possible to change the
+discover the groups by using <a href="#dm-dmcs2">dmcs2</a> even if it&#8217;s not possible to change the
 configuration.</p>
 </div>
 </div>
@@ -1131,9 +1124,9 @@ Depending on the implementation, the debugger may be able to perform
 some abstract commands even when the selected hart is not halted.
 Debuggers can only determine which abstract commands are supported by a
 given hart in a given state (running, halted, or held in reset) by
-attempting them and then looking at {abstractcs-cmderr} in {dm-abstractcs} to see if they were successful. Commands may be supported with some options set, but not with other
+attempting them and then looking at <a href="#abstractcs-cmderr">cmderr</a> in <a href="#dm-abstractcs">abstractcs</a> to see if they were successful. Commands may be supported with some options set, but not with other
 options set. If a command has unsupported options set or if bits that
-are defined as 0 aren&#8217;t 0, then the DM must set {abstractcs-cmderr} to 2 (not supported).</p>
+are defined as 0 aren&#8217;t 0, then the DM must set <a href="#abstractcs-cmderr">cmderr</a> to 2 (not supported).</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1152,18 +1145,18 @@ that case, the command will return "not supported".</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Debuggers execute abstract commands by writing them to {dm-command}. They can
-determine whether an abstract command is complete by reading {abstractcs-busy} in {dm-abstractcs}. If the debugger starts a new command while {abstractcs-busy} is set, {abstractcs-cmderr} becomes 1 (busy), the
+<p>Debuggers execute abstract commands by writing them to <a href="#dm-command">command</a>. They can
+determine whether an abstract command is complete by reading <a href="#abstractcs-busy">busy</a> in <a href="#dm-abstractcs">abstractcs</a>. If the debugger starts a new command while <a href="#abstractcs-busy">busy</a> is set, <a href="#abstractcs-cmderr">cmderr</a> becomes 1 (busy), the
 currently executing command still gets to run to completion, but any
 error generated by the currently executing command is lost. After
-completion, {abstractcs-cmderr} indicates whether the command was successful or not.
+completion, <a href="#abstractcs-cmderr">cmderr</a> indicates whether the command was successful or not.
 Commands may fail because a hart is not halted, not running,
 unavailable, or because they encounter an error during execution.</p>
 </div>
 <div class="paragraph">
 <p>If the command takes arguments, the debugger must write them to the
-<code>data</code> registers before writing to {dm-command}. If a command returns results, the
-Debug Module must ensure they are placed in the <code>data</code> registers before {abstractcs-busy}
+<code>data</code> registers before writing to <a href="#dm-command">command</a>. If a command returns results, the
+Debug Module must ensure they are placed in the <code>data</code> registers before <a href="#abstractcs-busy">busy</a>
 is cleared. Which <code>data</code> registers are used for the arguments is
 described in <a href="#tab:datareg">Table 1</a>. In all cases the
 least-significant word is placed in the lowest-numbered <code>data</code> register.
@@ -1189,19 +1182,19 @@ where not explicitly specified.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock">32</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dm-data0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-data0">data0</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>data1</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>data2</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock">64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dm-data0}, <code>data1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-data0">data0</a>, <code>data1</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>data2</code>, <code>data3</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>data4</code>, <code>data5</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock">128</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dm-data0}-<code>data3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-data0">data0</a>-<code>data3</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>data4</code>-<code>data7</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>data8</code>-<code>data11</code></p></td>
 </tr>
@@ -1222,49 +1215,49 @@ slower than the target and commands succeed, which allows for maximum
 throughput. If there is a failure, the interface ensures that no
 commands execute after the failing one. To discover which command
 failed, the debugger has to look at the state of the DM (e.g. contents
-of {dm-data0}) or hart (e.g. contents of a register modified by a Program Buffer program) to determine which one failed.</p>
+of <a href="#dm-data0">data0</a>) or hart (e.g. contents of a register modified by a Program Buffer program) to determine which one failed.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>While an abstract command is executing ({abstractcs-busy} in {dm-abstractcs} is high), a debugger must not change {hartsel}, and must not write 1 to {dmcontrol-haltreq}, {dmcontrol-resumereq}, {dmcontrol-ackhavereset}, {dmcontrol-setresethaltreq}, or {dmcontrol-clrresethaltreq}.
+<p>While an abstract command is executing (<a href="#abstractcs-busy">busy</a> in <a href="#dm-abstractcs">abstractcs</a> is high), a debugger must not change {hartsel}, and must not write 1 to <a href="#dmcontrol-haltreq">haltreq</a>, <a href="#dmcontrol-resumereq">resumereq</a>, <a href="#dmcontrol-ackhavereset">ackhavereset</a>, <a href="#dmcontrol-setresethaltreq">setresethaltreq</a>, or <a href="#dmcontrol-clrresethaltreq">clrresethaltreq</a>.
 The hardware should not rely on this debugger behavior, but should enforce it by
-ignoring writes to these bits while {abstractcs-busy} is high.</p>
+ignoring writes to these bits while <a href="#abstractcs-busy">busy</a> is high.</p>
 </div>
 <div class="paragraph">
 <p>If an abstract command does not complete in the expected time and
-appears to be hung, the debugger can try to reset the hart (using {dmcontrol-hartreset} or {dmcontrol-ndmreset}).
-If that doesn&#8217;t clear {abstractcs-busy}, then it can try resetting the Debug Module
-(using {dmcontrol-dmactive}).</p>
+appears to be hung, the debugger can try to reset the hart (using <a href="#dmcontrol-hartreset">hartreset</a> or <a href="#dmcontrol-ndmreset">ndmreset</a>).
+If that doesn&#8217;t clear <a href="#abstractcs-busy">busy</a>, then it can try resetting the Debug Module
+(using <a href="#dmcontrol-dmactive">dmactive</a>).</p>
 </div>
 <div class="paragraph">
 <p>If an abstract command is started while the selected hart is unavailable
 or if a hart becomes unavailable while executing an abstract command,
-then the Debug Module may terminate the abstract command, setting {abstractcs-busy} low,
-and {abstractcs-cmderr} to 4 (halt/resume). Alternatively, the command could just appear to
-be hung ({abstractcs-busy} never goes low).</p>
+then the Debug Module may terminate the abstract command, setting <a href="#abstractcs-busy">busy</a> low,
+and <a href="#abstractcs-cmderr">cmderr</a> to 4 (halt/resume). Alternatively, the command could just appear to
+be hung (<a href="#abstractcs-busy">busy</a> never goes low).</p>
 </div>
 <div class="sect3">
 <h4 id="3-1-7-1-abstract-command-listing"><a class="anchor" href="#3-1-7-1-abstract-command-listing"></a>3.1.7.1. Abstract Command Listing</h4>
 <div class="paragraph">
 <p>This section describes each of the different abstract commands and how
-their fields should be interpreted when they are written to {dm-command}.</p>
+their fields should be interpreted when they are written to <a href="#dm-command">command</a>.</p>
 </div>
 <div class="paragraph">
-<p>Each abstract command is a 32-bit value. The top 8 bits contain {command-cmdtype} which
+<p>Each abstract command is a 32-bit value. The top 8 bits contain <a href="#command-cmdtype">cmdtype</a> which
 determines the kind of command. <a href="#tab:cmdtype">Table 2</a> lists all commands.</p>
 </div>
 <table id="tab:cmdtype" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 2. Meaning of {command-cmdtype}</caption>
+<caption class="title">Table 2. Meaning of <a href="#command-cmdtype">cmdtype</a></caption>
 <colgroup>
 <col>
 <col>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-right valign-top">{command-cmdtype}</th>
+<th class="tableblock halign-right valign-top"><a href="#command-cmdtype">cmdtype</a></th>
 <th class="tableblock halign-left valign-top">Command</th>
 </tr>
 </thead>
@@ -1293,35 +1286,35 @@ It performs the following sequence of operations:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>If {accessregister-write} is clear and {accessregister-transfer} is set, then copy data from
-the register specified by {accessregister-regno} into the <code>arg0</code> region of
+<p>If <a href="#accessregister-write">write</a> is clear and <a href="#accessregister-transfer">transfer</a> is set, then copy data from
+the register specified by <a href="#accessregister-regno">regno</a> into the <code>arg0</code> region of
 <code>data</code>, and perform any side effects that occur when this
 register is read from M-mode.</p>
 </li>
 <li>
-<p>If {accessregister-write} is set and {accessregister-transfer} is set, then copy data from the
+<p>If <a href="#accessregister-write">write</a> is set and <a href="#accessregister-transfer">transfer</a> is set, then copy data from the
 <code>arg0</code> region of <code>data</code> into the register specified by
-{accessregister-regno}, and perform any side effects that occur when this register
+<a href="#accessregister-regno">regno</a>, and perform any side effects that occur when this register
 is written from M-mode.</p>
 </li>
 <li>
-<p>If {accessregister-aarpostincrement} and
-{accessregister-transfer} are set, increment
-{accessregister-regno}. {accessregister-regno} may also be
-incremented if {accessregister-aarpostincrement} is set and
-{accessregister-transfer} is clear.</p>
+<p>If <a href="#accessregister-aarpostincrement">aarpostincrement</a> and
+<a href="#accessregister-transfer">transfer</a> are set, increment
+<a href="#accessregister-regno">regno</a>. <a href="#accessregister-regno">regno</a> may also be
+incremented if <a href="#accessregister-aarpostincrement">aarpostincrement</a> is set and
+<a href="#accessregister-transfer">transfer</a> is clear.</p>
 </li>
 <li>
-<p>Execute the Program Buffer, if {accessregister-postexec} is set.</p>
+<p>Execute the Program Buffer, if <a href="#accessregister-postexec">postexec</a> is set.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>If any of these operations fail, {abstractcs-cmderr} is set and none of the
+<p>If any of these operations fail, <a href="#abstractcs-cmderr">cmderr</a> is set and none of the
 remaining steps are executed. An implementation may detect an upcoming
 failure early, and fail the overall command before it reaches the step
 that would cause failure. If the failure is that the requested register
-does not exist in the hart, {abstractcs-cmderr} must be set to 3 (exception).</p>
+does not exist in the hart, <a href="#abstractcs-cmderr">cmderr</a> must be set to 3 (exception).</p>
 </div>
 <div class="paragraph">
 <p>Debug Modules must implement this command
@@ -1356,7 +1349,7 @@ abstract CSR access is implemented.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x0000&#8201;&#8212;&#8201;0x0fff</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CSRs. The ``PC'' can be accessed here through {csr-dpc}.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CSRs. The ``PC'' can be accessed here through <a href="Sdext.html#csr-dpc" class="xref page">dpc</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x1000&#8201;&#8212;&#8201;0x101f</p></td>
@@ -1380,7 +1373,7 @@ abstract CSR access is implemented.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The encoding of {accessregister-aarsize} was chosen to match {sbcs-sbaccess} in {dm-sbcs}.</p>
+<p>The encoding of <a href="#accessregister-aarsize">aarsize</a> was chosen to match <a href="#sbcs-sbaccess">sbaccess</a> in <a href="#dm-sbcs">sbcs</a>.</p>
 </div>
 </td>
 </tr>
@@ -1425,8 +1418,8 @@ other <code>data</code> registers are not changed.</p>
 <p>4 (128bit): Access the lowest 128 bits of the register.</p>
 </div>
 <div class="paragraph">
-<p>If {accessregister-aarsize} specifies a size larger than the register&#8217;s actual size,
-then the access must fail. If a register is accessible, then reads of {accessregister-aarsize}
+<p>If <a href="#accessregister-aarsize">aarsize</a> specifies a size larger than the register&#8217;s actual size,
+then the access must fail. If a register is accessible, then reads of <a href="#accessregister-aarsize">aarsize</a>
 less than or equal to the register&#8217;s actual size must be supported.
 Writing less than the full register may be supported, but what
 happens to the high bits in that case is UNSPECIFIED.</p>
@@ -1442,18 +1435,18 @@ happens to the high bits in that case is UNSPECIFIED.</p>
 <p>0 (disabled): No effect. This variant must be supported.</p>
 </div>
 <div class="paragraph">
-<p>1 (enabled): After a successful register access, {accessregister-regno} is
+<p>1 (enabled): After a successful register access, <a href="#accessregister-regno">regno</a> is
 incremented. Incrementing past the highest supported value
-causes {accessregister-regno} to become UNSPECIFIED.  Supporting
+causes <a href="#accessregister-regno">regno</a> to become UNSPECIFIED.  Supporting
 this variant is optional. It is undefined whether the increment
-happens when {accessregister-transfer} is 0.</p>
+happens when <a href="#accessregister-transfer">transfer</a> is 0.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="accessregister-postexec"></a> <code>postexec</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>0 (disabled): No effect. This variant must be supported, and is the only
-supported one if {abstractcs-progbufsize} is 0.</p>
+supported one if <a href="#abstractcs-progbufsize">progbufsize</a> is 0.</p>
 </div>
 <div class="paragraph">
 <p>1 (enabled): Execute the program in the Program Buffer exactly once after
@@ -1464,20 +1457,20 @@ optional.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="accessregister-transfer"></a> <code>transfer</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>0 (disabled): Don&#8217;t do the operation specified by {accessregister-write}.</p>
+<p>0 (disabled): Don&#8217;t do the operation specified by <a href="#accessregister-write">write</a>.</p>
 </div>
 <div class="paragraph">
-<p>1 (enabled): Do the operation specified by {accessregister-write}.</p>
+<p>1 (enabled): Do the operation specified by <a href="#accessregister-write">write</a>.</p>
 </div>
 <div class="paragraph">
 <p>This bit can be used to just execute the Program Buffer without
-having to worry about placing valid values into {accessregister-aarsize} or {accessregister-regno}.</p>
+having to worry about placing valid values into <a href="#accessregister-aarsize">aarsize</a> or <a href="#accessregister-regno">regno</a>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="accessregister-write"></a> <code>write</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>When {accessregister-transfer} is set:</p>
+<p>When <a href="#accessregister-transfer">transfer</a> is set:</p>
 </div>
 <div class="paragraph">
 <p>0 (arg0): Copy data from the specified register into <code>arg0</code> portion
@@ -1493,7 +1486,7 @@ specified register.</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Number of the register to access, as described in
 <a href="#tab:regno">Table 1</a>.
-{csr-dpc} may be used as an alias for PC if this command is
+<a href="Sdext.html#csr-dpc" class="xref page">dpc</a> may be used as an alias for PC if this command is
 supported on a non-halted hart.</p>
 </div></div></td>
 </tr>
@@ -1508,17 +1501,17 @@ supported on a non-halted hart.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>If the hart is halted, the command  sets {abstractcs-cmderr} to ``halt/resume'' and does not continue.</p>
+<p>If the hart is halted, the command  sets <a href="#abstractcs-cmderr">cmderr</a> to ``halt/resume'' and does not continue.</p>
 </li>
 <li>
 <p>Halt the hart. If the hart halts for some other reason (e.g. breakpoint), the command
-sets {abstractcs-cmderr} to ``halt/resume'' and does not continue.</p>
+sets <a href="#abstractcs-cmderr">cmderr</a> to ``halt/resume'' and does not continue.</p>
 </li>
 <li>
 <p>Execute the Program Buffer.
-If an exception occurs, {abstractcs-cmderr} is set to
+If an exception occurs, <a href="#abstractcs-cmderr">cmderr</a> is set to
 ``exception,'' the Program Buffer execution ends, and the hart is
-halted with {dcsr-cause} set to 3.</p>
+halted with <a href="Sdext.html#dcsr-cause" class="xref page">cause</a> set to 3.</p>
 </li>
 <li>
 <p>If the Program Buffer executed without an exception, then
@@ -1572,19 +1565,19 @@ operations:</p>
 <ol class="arabic">
 <li>
 <p>Copy data from the memory location specified in <code>arg1</code> into the
-<code>arg0</code> portion of <code>data</code>, if {accessregister-write} is clear.</p>
+<code>arg0</code> portion of <code>data</code>, if <a href="#accessregister-write">write</a> is clear.</p>
 </li>
 <li>
 <p>Copy data from the <code>arg0</code> portion of <code>data</code> into the
-memory location specified in <code>arg1</code>, if {accessregister-write} is set.</p>
+memory location specified in <code>arg1</code>, if <a href="#accessregister-write">write</a> is set.</p>
 </li>
 <li>
-<p>If {accessmemory-aampostincrement} is set, increment <code>arg1</code>.</p>
+<p>If <a href="#accessmemory-aampostincrement">aampostincrement</a> is set, increment <code>arg1</code>.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>If any of these operations fail, {abstractcs-cmderr} is set and none of the
+<p>If any of these operations fail, <a href="#abstractcs-cmderr">cmderr</a> is set and none of the
 remaining steps are executed. An access may only fail if the hart,
 running M-mode code, might encounter that same failure when it attempts
 the same access.
@@ -1607,7 +1600,7 @@ support memory accesses while the hart is halted.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The encoding of {accessmemory-aamsize} was chosen to match {sbcs-sbaccess} in {dm-sbcs}.</p>
+<p>The encoding of <a href="#accessmemory-aamsize">aamsize</a> was chosen to match <a href="#sbcs-sbaccess">sbaccess</a> in <a href="#dm-sbcs">sbcs</a>.</p>
 </div>
 </td>
 </tr>
@@ -1615,7 +1608,7 @@ support memory accesses while the hart is halted.</p>
 </div>
 <div class="paragraph">
 <p>This command modifies <code>arg0</code> only when memory is read. It modifies
-<code>arg1</code> only if {accessmemory-aampostincrement} is set.  The other <code>data</code>
+<code>arg1</code> only if <a href="#accessmemory-aampostincrement">aampostincrement</a> is set.  The other <code>data</code>
 registers are not changed.</p>
 </div>
 <div class="imageblock kroki">
@@ -1657,8 +1650,8 @@ M-mode, with <code>MPRV</code> set.</p>
 </div>
 <div class="paragraph">
 <p>Debug Modules on systems without address translation (i.e. virtual addresses equal physical)
-may optionally allow {accessmemory-aamvirtual} set to 1, which would produce the same result as
-that same abstract command with {accessmemory-aamvirtual} cleared.</p>
+may optionally allow <a href="#accessmemory-aamvirtual">aamvirtual</a> set to 1, which would produce the same result as
+that same abstract command with <a href="#accessmemory-aamvirtual">aamvirtual</a> cleared.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1684,7 +1677,7 @@ that same abstract command with {accessmemory-aamvirtual} cleared.</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>After a memory access has completed, if this bit is 1, increment
 <code>arg1</code> (which contains the address used) by the number of bytes
-encoded in {accessmemory-aamsize}.</p>
+encoded in <a href="#accessmemory-aamsize">aamsize</a>.</p>
 </div>
 <div class="paragraph">
 <p>Supporting this variant is optional, but highly recommended for
@@ -1725,29 +1718,29 @@ commands only may choose to omit the Program Buffer.</p>
 <div class="paragraph">
 <p>A debugger can write a small program to the Program Buffer, and then
 execute it exactly once with the Access Register Abstract Command,
-setting the {accessregister-postexec} bit in {dm-command}. The debugger can write whatever program it likes
+setting the <a href="#accessregister-postexec">postexec</a> bit in <a href="#dm-command">command</a>. The debugger can write whatever program it likes
 (including jumps out of the Program Buffer), but the program must end
 with <code>ebreak</code> or <code>c.ebreak</code>. An implementation may support an implicit
 <code>ebreak</code> that is executed when a hart runs off the end of the Program
-Buffer. This is indicated by {dmstatus-impebreak}. With this feature, a Program Buffer of
+Buffer. This is indicated by <a href="#dmstatus-impebreak">impebreak</a>. With this feature, a Program Buffer of
 just 2 32-bit words can offer efficient debugging.</p>
 </div>
 <div class="paragraph">
 <p>While these programs are executed, the hart does not leave Debug Mode
 (see <a href="Sdext.html#debugmode" class="xref page">Sdext.adoc#debugmode</a>). If an exception is
 encountered during execution of the Program Buffer, no more instructions
-are executed, the hart remains in Debug Mode, and {abstractcs-cmderr} is set to 3
+are executed, the hart remains in Debug Mode, and <a href="#abstractcs-cmderr">cmderr</a> is set to 3
 (<code>exception error</code>). If the debugger executes a program that doesn’t
 terminate with an <code>ebreak</code> instruction, the hart will remain in Debug
 Mode and the debugger will lose control of the hart.</p>
 </div>
 <div class="paragraph">
-<p>If {abstractcs-progbufsize} is 1 then the following apply:</p>
+<p>If <a href="#abstractcs-progbufsize">progbufsize</a> is 1 then the following apply:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>{dmstatus-impebreak} must be 1.</p>
+<p><a href="#dmstatus-impebreak">impebreak</a> must be 1.</p>
 </li>
 <li>
 <p>If the debugger writes a compressed instruction into the Program Buffer,
@@ -1764,7 +1757,7 @@ it must be placed into the lower 16 bits and accompanied by a compressed
 </td>
 <td class="content">
 <div class="paragraph">
-<p>This requirement on the debugger for the case of {abstractcs-progbufsize} equal to 1 is to
+<p>This requirement on the debugger for the case of <a href="#abstractcs-progbufsize">progbufsize</a> equal to 1 is to
 accommodate hardware designs that prefer to stuff instructions directly
 into the pipeline when halted, instead of having the Program Buffer
 exist in the address space somewhere.</p>
@@ -1786,7 +1779,7 @@ what it can do with the program buffer.</p>
 <div class="paragraph">
 <p><a href="#abstract_sm">Figure 1</a> shows a conceptual view of the states
 passed through by a hart during run/halt debugging as influenced by the
-different fields of {dm-dmcontrol}, {dm-abstractcs}, {dm-abstractauto}, and {dm-command}.</p>
+different fields of <a href="#dm-dmcontrol">dmcontrol</a>, <a href="#dm-abstractcs">abstractcs</a>, <a href="#dm-abstractauto">abstractauto</a>, and <a href="#dm-command">command</a>.</p>
 </div>
 <div id="abstract_sm" class="imageblock unresolved">
 <div class="content">
@@ -1825,23 +1818,23 @@ accesses. <a href="#sbdatabits">Table 4</a> shows which bits in <code>sbdata</co
 <tbody>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">8</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dm-sbdata0} bits 7:0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-sbdata0">sbdata0</a> bits 7:0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">16</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dm-sbdata0} bits 15:0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-sbdata0">sbdata0</a> bits 15:0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">32</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dm-sbdata0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-sbdata0">sbdata0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">64</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dm-sbdata1}, {dm-sbdata0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-sbdata1">sbdata1</a>, <a href="#dm-sbdata0">sbdata0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">128</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">{dm-sbdata3}, {dm-sbdata2}, {dm-sbdata1}, {dm-sbdata0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-sbdata3">sbdata3</a>, <a href="#dm-sbdata2">sbdata2</a>, <a href="#dm-sbdata1">sbdata1</a>, <a href="#dm-sbdata0">sbdata0</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1888,7 +1881,7 @@ without halting the hart.</p>
 <p>Second, the Quick Access abstract command can be used to halt a hart,
 quickly execute the contents of the Program Buffer, and let the hart run
 again. Combined with instructions that allow Program Buffer code to
-access the <code>data</code> registers, as described in {dm-hartinfo}, this can be used to
+access the <code>data</code> registers, as described in <a href="#dm-hartinfo">hartinfo</a>, this can be used to
 quickly perform a memory or register access. For some hardware platforms
 this will be too intrusive, but many hardware platforms that can&#8217;t be
 halted can bear an occasional hiccup of a hundred or less cycles.</p>
@@ -1909,8 +1902,8 @@ is technology specific, it is not further addressed in this spec.</p>
 </div>
 <div class="paragraph">
 <p>Another option is to allow the DM to be unlocked only by users who have
-an access key. Between {dmstatus-authenticated}, {dmstatus-authbusy}, and {dm-authdata} arbitrarily complex authentication
-mechanism can be supported. When {dmstatus-authenticated} is clear, the DM must not interact with
+an access key. Between <a href="#dmstatus-authenticated">authenticated</a>, <a href="#dmstatus-authbusy">authbusy</a>, and <a href="#dm-authdata">authdata</a> arbitrarily complex authentication
+mechanism can be supported. When <a href="#dmstatus-authenticated">authenticated</a> is clear, the DM must not interact with
 the rest of the hardware platform, nor expose details about the harts
 connected to the DM. All DM registers should read 0, while writes should
 be ignored, with the following mandatory exceptions:</p>
@@ -1918,24 +1911,24 @@ be ignored, with the following mandatory exceptions:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>{dmstatus-authenticated} in {dm-dmstatus} is readable.</p>
+<p><a href="#dmstatus-authenticated">authenticated</a> in <a href="#dm-dmstatus">dmstatus</a> is readable.</p>
 </li>
 <li>
-<p>{dmstatus-authbusy} in {dm-dmstatus} is readable.</p>
+<p><a href="#dmstatus-authbusy">authbusy</a> in <a href="#dm-dmstatus">dmstatus</a> is readable.</p>
 </li>
 <li>
-<p>{tinfo-version} in {dm-dmstatus} is readable.</p>
+<p><a href="Sdtrig.html#tinfo-version" class="xref page">version</a> in <a href="#dm-dmstatus">dmstatus</a> is readable.</p>
 </li>
 <li>
-<p>{dmcontrol-dmactive} in {dm-dmcontrol} is readable and writable.</p>
+<p><a href="#dmcontrol-dmactive">dmactive</a> in <a href="#dm-dmcontrol">dmcontrol</a> is readable and writable.</p>
 </li>
 <li>
-<p>{dm-authdata} is readable and writable.</p>
+<p><a href="#dm-authdata">authdata</a> is readable and writable.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Implementations where it&#8217;s not possible to unlock the DM by using {dm-authdata} should not implement that register.</p>
+<p>Implementations where it&#8217;s not possible to unlock the DM by using <a href="#dm-authdata">authdata</a> should not implement that register.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1947,51 +1940,51 @@ effects, use the following procedure:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Read {dm-dmcontrol}.</p>
+<p>Read <a href="#dm-dmcontrol">dmcontrol</a>.</p>
 </li>
 <li>
-<p>If {dmcontrol-dmactive} is 0 or {dmcontrol-ndmreset} is 1:</p>
+<p>If <a href="#dmcontrol-dmactive">dmactive</a> is 0 or <a href="#dmcontrol-ndmreset">ndmreset</a> is 1:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Write {dm-dmcontrol}, preserving {dmcontrol-hartreset}, {dmcontrol-hasel}, {dmcontrol-hartsello}, and {dmcontrol-hartselhi} from the value that was read, setting {dmcontrol-dmactive}, and clearing all the other bits.</p>
+<p>Write <a href="#dm-dmcontrol">dmcontrol</a>, preserving <a href="#dmcontrol-hartreset">hartreset</a>, <a href="#dmcontrol-hasel">hasel</a>, <a href="#dmcontrol-hartsello">hartsello</a>, and <a href="#dmcontrol-hartselhi">hartselhi</a> from the value that was read, setting <a href="#dmcontrol-dmactive">dmactive</a>, and clearing all the other bits.</p>
 </li>
 <li>
-<p>Read {dm-dmcontrol} until {dmcontrol-dmactive} is high.</p>
+<p>Read <a href="#dm-dmcontrol">dmcontrol</a> until <a href="#dmcontrol-dmactive">dmactive</a> is high.</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>Read {dm-dmstatus}, which contains {dmstatus-version}.</p>
+<p>Read <a href="#dm-dmstatus">dmstatus</a>, which contains <a href="#dmstatus-version">version</a>.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>If it was necessary to clear {dmcontrol-ndmreset}, this might have the following
+<p>If it was necessary to clear <a href="#dmcontrol-ndmreset">ndmreset</a>, this might have the following
 side effects:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>{dmcontrol-haltreq} is cleared, potentially preventing a halt request made by a previous debugger from taking effect.</p>
+<p><a href="#dmcontrol-haltreq">haltreq</a> is cleared, potentially preventing a halt request made by a previous debugger from taking effect.</p>
 </li>
 <li>
-<p>{dmcontrol-resumereq} is cleared, potentially preventing a resume request made by a previous debugger from taking effect.</p>
+<p><a href="#dmcontrol-resumereq">resumereq</a> is cleared, potentially preventing a resume request made by a previous debugger from taking effect.</p>
 </li>
 <li>
-<p>{dmcontrol-ndmreset} is deasserted, releasing the hardware platform from reset if a previous debugger had set it.</p>
+<p><a href="#dmcontrol-ndmreset">ndmreset</a> is deasserted, releasing the hardware platform from reset if a previous debugger had set it.</p>
 </li>
 <li>
-<p>{dmcontrol-dmactive} is asserted, releasing the DM from reset. This in itself is not
+<p><a href="#dmcontrol-dmactive">dmactive</a> is asserted, releasing the DM from reset. This in itself is not
 observable by any harts.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
 <p>This procedure is guaranteed to work in future versions of this spec.
-The meaning of the {dm-dmcontrol} bits where {dmcontrol-hartreset}, {dmcontrol-hasel}, {dmcontrol-hartsello}, and {dmcontrol-hartselhi} currently reside might change,
-but preserving them will have no side effects. Clearing the bits of {dm-dmcontrol} not explicitly mentioned here will have no side effects beyond the ones mentioned above.</p>
+The meaning of the <a href="#dm-dmcontrol">dmcontrol</a> bits where <a href="#dmcontrol-hartreset">hartreset</a>, <a href="#dmcontrol-hasel">hasel</a>, <a href="#dmcontrol-hartsello">hartsello</a>, and <a href="#dmcontrol-hartselhi">hartselhi</a> currently reside might change,
+but preserving them will have no side effects. Clearing the bits of <a href="#dm-dmcontrol">dmcontrol</a> not explicitly mentioned here will have no side effects beyond the ones mentioned above.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2022,367 +2015,367 @@ the table below return 0 when read. Writing them has no effect.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x04</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 0 ({dm-data0})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 0 (<a href="#dm-data0">data0</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-data0">Abstract Data 0 (data0, at 0x04)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x05</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 1 ({dm-data1})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 1 (data1)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x06</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 2 ({dm-data2})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 2 (data2)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x07</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 3 ({dm-data3})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 3 (data3)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x08</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 4 ({dm-data4})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 4 (data4)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x09</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 5 ({dm-data5})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 5 (data5)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x0a</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 6 ({dm-data6})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 6 (data6)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x0b</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 7 ({dm-data7})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 7 (data7)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x0c</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 8 ({dm-data8})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 8 (data8)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x0d</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 9 ({dm-data9})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 9 (data9)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x0e</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 10 ({dm-data10})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 10 (data10)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x0f</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 11 ({dm-data11})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Data 11 (data11)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Debug Module Control ({dm-dmcontrol})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debug Module Control (<a href="#dm-dmcontrol">dmcontrol</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-dmcontrol">Debug Module Control (dmcontrol, at 0x10)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x11</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Debug Module Status ({dm-dmstatus})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debug Module Status (<a href="#dm-dmstatus">dmstatus</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-dmstatus">Debug Module Status (dmstatus, at 0x11)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hart Info ({dm-hartinfo})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hart Info (<a href="#dm-hartinfo">hartinfo</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-hartinfo">Hart Info (hartinfo, at 0x12)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x13</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Halt Summary 1 ({dm-haltsum1})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Halt Summary 1 (<a href="#dm-haltsum1">haltsum1</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-haltsum1">Halt Summary 1 (haltsum1, at 0x13)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x14</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hart Array Window Select ({dm-hawindowsel})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hart Array Window Select (<a href="#dm-hawindowsel">hawindowsel</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-hawindowsel">Hart Array Window Select (hawindowsel, at 0x14)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x15</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hart Array Window  ({dm-hawindow})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hart Array Window  (<a href="#dm-hawindow">hawindow</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-hawindow">Hart Array Window  (hawindow, at 0x15)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x16</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Control and Status ({dm-abstractcs})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Control and Status (<a href="#dm-abstractcs">abstractcs</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-abstractcs">Abstract Control and Status (abstractcs, at 0x16)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x17</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Command ({dm-command})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Command (<a href="#dm-command">command</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-command">Abstract Command (command, at 0x17)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x18</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Command Autoexec ({dm-abstractauto})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Command Autoexec (<a href="#dm-abstractauto">abstractauto</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-abstractauto">Abstract Command Autoexec (abstractauto, at 0x18)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x19</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration Structure Pointer 0 ({dm-confstrptr0})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration Structure Pointer 0 (<a href="#dm-confstrptr0">confstrptr0</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-confstrptr0">Configuration Structure Pointer 0 (confstrptr0, at 0x19)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x1a</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration Structure Pointer 1 ({dm-confstrptr1})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration Structure Pointer 1 (<a href="#dm-confstrptr1">confstrptr1</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-confstrptr1">Configuration Structure Pointer 1 (confstrptr1, at 0x1a)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x1b</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration Structure Pointer 2 ({dm-confstrptr2})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration Structure Pointer 2 (<a href="#dm-confstrptr2">confstrptr2</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-confstrptr2">Configuration Structure Pointer 2 (confstrptr2, at 0x1b)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x1c</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration Structure Pointer 3 ({dm-confstrptr3})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration Structure Pointer 3 (<a href="#dm-confstrptr3">confstrptr3</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-confstrptr3">Configuration Structure Pointer 3 (confstrptr3, at 0x1c)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x1d</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Next Debug Module ({dm-nextdm})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Next Debug Module (<a href="#dm-nextdm">nextdm</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-nextdm">Next Debug Module (nextdm, at 0x1d)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x1f</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features ({dm-custom})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features (<a href="#dm-custom">custom</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-custom">Custom Features (custom, at 0x1f)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x20</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 0 ({dm-progbuf0})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 0 (<a href="#dm-progbuf0">progbuf0</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-progbuf0">Program Buffer 0 (progbuf0, at 0x20)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x21</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 1 ({dm-progbuf1})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 1 (progbuf1)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x22</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 2 ({dm-progbuf2})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 2 (progbuf2)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x23</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 3 ({dm-progbuf3})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 3 (progbuf3)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x24</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 4 ({dm-progbuf4})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 4 (progbuf4)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x25</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 5 ({dm-progbuf5})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 5 (progbuf5)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x26</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 6 ({dm-progbuf6})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 6 (progbuf6)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x27</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 7 ({dm-progbuf7})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 7 (progbuf7)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x28</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 8 ({dm-progbuf8})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 8 (progbuf8)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x29</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 9 ({dm-progbuf9})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 9 (progbuf9)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x2a</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 10 ({dm-progbuf10})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 10 (progbuf10)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x2b</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 11 ({dm-progbuf11})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 11 (progbuf11)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x2c</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 12 ({dm-progbuf12})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 12 (progbuf12)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x2d</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 13 ({dm-progbuf13})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 13 (progbuf13)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x2e</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 14 ({dm-progbuf14})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 14 (progbuf14)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x2f</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 15 ({dm-progbuf15})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Program Buffer 15 (progbuf15)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x30</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Authentication Data ({dm-authdata})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Authentication Data (<a href="#dm-authdata">authdata</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-authdata">Authentication Data (authdata, at 0x30)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x32</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Debug Module Control and Status 2 ({dm-dmcs2})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debug Module Control and Status 2 (<a href="#dm-dmcs2">dmcs2</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-dmcs2">Debug Module Control and Status 2 (dmcs2, at 0x32)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x34</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Halt Summary 2 ({dm-haltsum2})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Halt Summary 2 (<a href="#dm-haltsum2">haltsum2</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-haltsum2">Halt Summary 2 (haltsum2, at 0x34)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x35</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Halt Summary 3 ({dm-haltsum3})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Halt Summary 3 (<a href="#dm-haltsum3">haltsum3</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-haltsum3">Halt Summary 3 (haltsum3, at 0x35)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x37</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Address 127:96 ({dm-sbaddress3})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Address 127:96 (<a href="#dm-sbaddress3">sbaddress3</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-sbaddress3">System Bus Address 127:96 (sbaddress3, at 0x37)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x38</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Access Control and Status ({dm-sbcs})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Access Control and Status (<a href="#dm-sbcs">sbcs</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-sbcs">System Bus Access Control and Status (sbcs, at 0x38)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x39</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Address 31:0 ({dm-sbaddress0})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Address 31:0 (<a href="#dm-sbaddress0">sbaddress0</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-sbaddress0">System Bus Address 31:0 (sbaddress0, at 0x39)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x3a</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Address 63:32 ({dm-sbaddress1})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Address 63:32 (<a href="#dm-sbaddress1">sbaddress1</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-sbaddress1">System Bus Address 63:32 (sbaddress1, at 0x3a)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x3b</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Address 95:64 ({dm-sbaddress2})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Address 95:64 (<a href="#dm-sbaddress2">sbaddress2</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-sbaddress2">System Bus Address 95:64 (sbaddress2, at 0x3b)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x3c</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Data 31:0 ({dm-sbdata0})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Data 31:0 (<a href="#dm-sbdata0">sbdata0</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-sbdata0">System Bus Data 31:0 (sbdata0, at 0x3c)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x3d</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Data 63:32 ({dm-sbdata1})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Data 63:32 (<a href="#dm-sbdata1">sbdata1</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-sbdata1">System Bus Data 63:32 (sbdata1, at 0x3d)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x3e</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Data 95:64 ({dm-sbdata2})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Data 95:64 (<a href="#dm-sbdata2">sbdata2</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-sbdata2">System Bus Data 95:64 (sbdata2, at 0x3e)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x3f</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Data 127:96 ({dm-sbdata3})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System Bus Data 127:96 (<a href="#dm-sbdata3">sbdata3</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-sbdata3">System Bus Data 127:96 (sbdata3, at 0x3f)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x40</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Halt Summary 0 ({dm-haltsum0})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Halt Summary 0 (<a href="#dm-haltsum0">haltsum0</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-haltsum0">Halt Summary 0 (haltsum0, at 0x40)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x70</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 0 ({dm-custom0})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 0 (<a href="#dm-custom0">custom0</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dm-custom0">Custom Features 0 (custom0, at 0x70)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x71</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 1 ({dm-custom1})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 1 (custom1)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x72</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 2 ({dm-custom2})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 2 (custom2)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x73</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 3 ({dm-custom3})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 3 (custom3)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x74</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 4 ({dm-custom4})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 4 (custom4)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x75</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 5 ({dm-custom5})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 5 (custom5)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x76</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 6 ({dm-custom6})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 6 (custom6)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x77</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 7 ({dm-custom7})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 7 (custom7)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x78</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 8 ({dm-custom8})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 8 (custom8)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x79</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 9 ({dm-custom9})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 9 (custom9)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x7a</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 10 ({dm-custom10})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 10 (custom10)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x7b</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 11 ({dm-custom11})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 11 (custom11)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x7c</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 12 ({dm-custom12})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 12 (custom12)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x7d</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 13 ({dm-custom13})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 13 (custom13)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x7e</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 14 ({dm-custom14})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 14 (custom14)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x7f</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 15 ({dm-custom15})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom Features 15 (custom15)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
@@ -2391,8 +2384,8 @@ the table below return 0 when read. Writing them has no effect.</p>
 <h4 id="dm-dmstatus"><a class="anchor" href="#dm-dmstatus"></a>Debug Module Status (dmstatus, at 0x11)</h4>
 <div class="paragraph">
 <p>This register reports status for the overall Debug Module as well as
-the currently selected harts, as defined in {dmcontrol-hasel}.  Its address will
-not change in the future, because it contains {dmstatus-version}.</p>
+the currently selected harts, as defined in <a href="#dmcontrol-hasel">hasel</a>.  Its address will
+not change in the future, because it contains <a href="#dmstatus-version">version</a>.</p>
 </div>
 <div class="paragraph">
 <p>This entire register is read-only.</p>
@@ -2431,11 +2424,11 @@ not change in the future, because it contains {dmstatus-version}.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmstatus-ndmresetpending"></a> <code>ndmresetpending</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>0 (false): Unimplemented, or {dmcontrol-ndmreset} is zero and no ndmreset is currently
+<p>0 (false): Unimplemented, or <a href="#dmcontrol-ndmreset">ndmreset</a> is zero and no ndmreset is currently
 in progress.</p>
 </div>
 <div class="paragraph">
-<p>1 (true): {dmcontrol-ndmreset} is currently nonzero, or there is an ndmreset in progress.</p>
+<p>1 (true): <a href="#dmcontrol-ndmreset">ndmreset</a> is currently nonzero, or there is an ndmreset in progress.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>R</strong></p>
@@ -2451,7 +2444,7 @@ in progress.</p>
 </div>
 <div class="paragraph">
 <p>1 (sticky): The per-hart <code>unavail</code> bits are sticky. Once they are set, they will
-not clear until the debugger acknowledges them using {dmcontrol-ackunavail}.</p>
+not clear until the debugger acknowledges them using <a href="#dmcontrol-ackunavail">ackunavail</a>.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>R</strong></p>
@@ -2469,7 +2462,7 @@ the debugger from having to write the <code>ebreak</code> itself, and
 allows the Program Buffer to be one word smaller.</p>
 </div>
 <div class="paragraph">
-<p>This must be 1 when {abstractcs-progbufsize} is 1.</p>
+<p>This must be 1 when <a href="#abstractcs-progbufsize">progbufsize</a> is 1.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>R</strong></p>
@@ -2560,7 +2553,7 @@ this hardware platform.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmstatus-allunavail"></a> <code>allunavail</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>This field is 1 when all currently selected harts are
-unavailable, or (if {dmstatus-stickyunavail} is 1) were
+unavailable, or (if <a href="#dmstatus-stickyunavail">stickyunavail</a> is 1) were
 unavailable without that being acknowledged.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
@@ -2574,7 +2567,7 @@ unavailable without that being acknowledged.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmstatus-anyunavail"></a> <code>anyunavail</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>This field is 1 when any currently selected hart is unavailable,
-or (if {dmstatus-stickyunavail} is 1) was unavailable without
+or (if <a href="#dmstatus-stickyunavail">stickyunavail</a> is 1) was unavailable without
 that being acknowledged.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
@@ -2655,15 +2648,15 @@ preset as 1.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmstatus-authbusy"></a> <code>authbusy</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>0 (ready): The authentication module is ready to process the next
-read/write to {dm-authdata}.</p>
+read/write to <a href="#dm-authdata">authdata</a>.</p>
 </div>
 <div class="paragraph">
-<p>1 (busy): The authentication module is busy. Accessing {dm-authdata} results
+<p>1 (busy): The authentication module is busy. Accessing <a href="#dm-authdata">authdata</a> results
 in unspecified behavior.</p>
 </div>
 <div class="paragraph">
-<p>{dmstatus-authbusy} only becomes set in immediate response to an access to
-{dm-authdata}.</p>
+<p><a href="#dmstatus-authbusy">authbusy</a> only becomes set in immediate response to an access to
+<a href="#dm-authdata">authdata</a>.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>R</strong></p>
@@ -2676,7 +2669,7 @@ in unspecified behavior.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmstatus-hasresethaltreq"></a> <code>hasresethaltreq</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>1 if this Debug Module supports halt-on-reset functionality
-controllable by the {dmcontrol-setresethaltreq} and {dmcontrol-clrresethaltreq} bits.
+controllable by the <a href="#dmcontrol-setresethaltreq">setresethaltreq</a> and <a href="#dmcontrol-clrresethaltreq">clrresethaltreq</a> bits.
 0 otherwise.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
@@ -2689,11 +2682,11 @@ controllable by the {dmcontrol-setresethaltreq} and {dmcontrol-clrresethaltreq} 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmstatus-confstrptrvalid"></a> <code>confstrptrvalid</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>0 (invalid): {dm-confstrptr0}--{dm-confstrptr3} hold information which
+<p>0 (invalid): <a href="#dm-confstrptr0">confstrptr0</a>--<a href="#dm-confstrptr3">confstrptr3</a> hold information which
 is not relevant to the configuration structure.</p>
 </div>
 <div class="paragraph">
-<p>1 (valid): {dm-confstrptr0}--{dm-confstrptr3} hold the address of the
+<p>1 (valid): <a href="#dm-confstrptr0">confstrptr0</a>--<a href="#dm-confstrptr3">confstrptr3</a> hold the address of the
 configuration structure.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
@@ -2738,19 +2731,19 @@ available version of this spec.</p>
 <h4 id="dm-dmcontrol"><a class="anchor" href="#dm-dmcontrol"></a>Debug Module Control (dmcontrol, at 0x10)</h4>
 <div class="paragraph">
 <p>This register controls the overall Debug Module
-as well as the currently selected harts, as defined in {dmcontrol-hasel}.</p>
+as well as the currently selected harts, as defined in <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div>
 <div id="hartsel" class="paragraph">
 <p>
-Throughout this document we refer to {hartsel}, which is {dmcontrol-hartselhi}
-combined with {dmcontrol-hartsello}. While the spec allows for 20 {hartsel} bits,
+Throughout this document we refer to {hartsel}, which is <a href="#dmcontrol-hartselhi">hartselhi</a>
+combined with <a href="#dmcontrol-hartsello">hartsello</a>. While the spec allows for 20 {hartsel} bits,
 an implementation may choose to implement fewer than that. The actual
 width of {hartsel} is called <code>HARTSELLEN</code>. It must be at least 0
 and at most 20. A debugger should discover <code>HARTSELLEN</code> by writing
 all ones to {hartsel} (assuming the maximum size) and reading back the
 value to see which bits were actually set. Debuggers must not change
 {hartsel} while an abstract command is executing. Hardware should enforce
-this by ignoring changes to {hartsel} while {abstractcs-busy} is set.</p>
+this by ignoring changes to {hartsel} while <a href="#abstractcs-busy">busy</a> is set.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2760,8 +2753,8 @@ this by ignoring changes to {hartsel} while {abstractcs-busy} is set.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>There are separate {dmcontrol-setresethaltreq} and {dmcontrol-clrresethaltreq} bits so that
-it is possible to write {dm-dmcontrol} without changing the halt-on-reset
+<p>There are separate <a href="#dmcontrol-setresethaltreq">setresethaltreq</a> and <a href="#dmcontrol-clrresethaltreq">clrresethaltreq</a> bits so that
+it is possible to write <a href="#dm-dmcontrol">dmcontrol</a> without changing the halt-on-reset
 request bit for each selected hart, when not all selected harts have
 the same configuration.</p>
 </div>
@@ -2771,13 +2764,13 @@ the same configuration.</p>
 </div>
 <div class="paragraph">
 <p>On any given write, a debugger may only write 1 to at most one of the
-following bits: {dmcontrol-resumereq}, {dmcontrol-hartreset}, {dmcontrol-ackhavereset},
-{dmcontrol-setresethaltreq}, and {dmcontrol-clrresethaltreq}. The others must be written 0.</p>
+following bits: <a href="#dmcontrol-resumereq">resumereq</a>, <a href="#dmcontrol-hartreset">hartreset</a>, <a href="#dmcontrol-ackhavereset">ackhavereset</a>,
+<a href="#dmcontrol-setresethaltreq">setresethaltreq</a>, and <a href="#dmcontrol-clrresethaltreq">clrresethaltreq</a>. The others must be written 0.</p>
 </div>
 <div id="resethaltreq" class="paragraph">
 <p>
 {resethaltreq} is an optional internal bit of per-hart state that cannot be
-read, but can be written with {dmcontrol-setresethaltreq} and {dmcontrol-clrresethaltreq}.</p>
+read, but can be written with <a href="#dmcontrol-setresethaltreq">setresethaltreq</a> and <a href="#dmcontrol-clrresethaltreq">clrresethaltreq</a>.</p>
 </div>
 <div id="keepalive" class="paragraph">
 <p>
@@ -2786,12 +2779,12 @@ set, it suggests that the hardware should attempt to keep the hart
 available for the debugger, e.g. by keeping it from entering a
 low-power state once powered on. Even if the bit is implemented,
 hardware might not be able to keep a hart available. The bit is
-written through {dmcontrol-setkeepalive} and
-{dmcontrol-clrkeepalive}.</p>
+written through <a href="#dmcontrol-setkeepalive">setkeepalive</a> and
+<a href="#dmcontrol-clrkeepalive">clrkeepalive</a>.</p>
 </div>
 <div class="paragraph">
-<p>For forward compatibility, {dmstatus-version} will always be readable when bit 1
-({dmcontrol-ndmreset}) is 0 and bit 0 ({dmcontrol-dmactive}) is 1.</p>
+<p>For forward compatibility, <a href="#dmstatus-version">version</a> will always be readable when bit 1
+(<a href="#dmcontrol-ndmreset">ndmreset</a>) is 0 and bit 0 (<a href="#dmcontrol-dmactive">dmactive</a>) is 1.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
@@ -2831,7 +2824,7 @@ harts. Running harts will halt whenever their halt request bit is
 set.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and {dmcontrol-hasel}.</p>
+<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div>
 <div class="paragraph">
 <p>Writes to this bit should be ignored while an abstract command is
@@ -2852,10 +2845,10 @@ they are halted when the write occurs. It also clears the resume
 ack bit for those harts.</p>
 </div>
 <div class="paragraph">
-<p>{dmcontrol-resumereq} is ignored if {dmcontrol-haltreq} is set.</p>
+<p><a href="#dmcontrol-resumereq">resumereq</a> is ignored if <a href="#dmcontrol-haltreq">haltreq</a> is set.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and {dmcontrol-hasel}.</p>
+<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div>
 <div class="paragraph">
 <p>Writes to this bit should be ignored while an abstract command is
@@ -2885,7 +2878,7 @@ after writing 1 the debugger can read the register back to see if
 the feature is supported.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and {dmcontrol-hasel}.</p>
+<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>WARL</strong></p>
@@ -2903,7 +2896,7 @@ the feature is supported.</p>
 <p>1 (ack): Clears <code>havereset</code> for any selected harts.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and {dmcontrol-hasel}.</p>
+<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div>
 <div class="paragraph">
 <p>Writes to this bit should be ignored while an abstract command is
@@ -2925,7 +2918,7 @@ executing.</p>
 <p>1 (ack): Clears <code>unavail</code> for any selected harts that are currently available.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and {dmcontrol-hasel}.</p>
+<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>W1</strong></p>
@@ -2990,11 +2983,11 @@ select. This hart is always part of the currently selected harts.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmcontrol-setkeepalive"></a> <code>setkeepalive</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>This optional field sets {keepalive} for all currently selected
-harts, unless {dmcontrol-clrkeepalive} is simultaneously set to
+harts, unless <a href="#dmcontrol-clrkeepalive">clrkeepalive</a> is simultaneously set to
 1.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and {dmcontrol-hasel}.</p>
+<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>W1</strong></p>
@@ -3010,7 +3003,7 @@ harts, unless {dmcontrol-clrkeepalive} is simultaneously set to
 harts.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and {dmcontrol-hasel}.</p>
+<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>W1</strong></p>
@@ -3023,17 +3016,17 @@ harts.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmcontrol-setresethaltreq"></a> <code>setresethaltreq</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>This optional field writes the halt-on-reset request bit for all
-currently selected harts, unless {dmcontrol-clrresethaltreq} is
+currently selected harts, unless <a href="#dmcontrol-clrresethaltreq">clrresethaltreq</a> is
 simultaneously set to 1.
 When set to 1, each selected hart will halt upon the next deassertion
 of its reset. The halt-on-reset request bit is not automatically
-cleared. The debugger must write to {dmcontrol-clrresethaltreq} to clear it.</p>
+cleared. The debugger must write to <a href="#dmcontrol-clrresethaltreq">clrresethaltreq</a> to clear it.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and {dmcontrol-hasel}.</p>
+<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div>
 <div class="paragraph">
-<p>If {dmstatus-hasresethaltreq} is 0, this field is not implemented.</p>
+<p>If <a href="#dmstatus-hasresethaltreq">hasresethaltreq</a> is 0, this field is not implemented.</p>
 </div>
 <div class="paragraph">
 <p>Writes to this bit should be ignored while an abstract command is
@@ -3053,7 +3046,7 @@ executing.</p>
 currently selected harts.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and {dmcontrol-hasel}.</p>
+<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div>
 <div class="paragraph">
 <p>Writes to this bit should be ignored while an abstract command is
@@ -3089,18 +3082,18 @@ to deassert the reset.</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>This bit serves as a reset signal for the Debug Module itself.
 After changing the value of this bit, the debugger must poll
-{dm-dmcontrol} until {dmcontrol-dmactive} has taken the requested value
-before performing any action that assumes the requested {dmcontrol-dmactive}
+<a href="#dm-dmcontrol">dmcontrol</a> until <a href="#dmcontrol-dmactive">dmactive</a> has taken the requested value
+before performing any action that assumes the requested <a href="#dmcontrol-dmactive">dmactive</a>
 state change has completed.  Hardware may
 take an arbitrarily long time to complete activation or deactivation and will
-indicate completion by setting {dmcontrol-dmactive} to the requested value.
+indicate completion by setting <a href="#dmcontrol-dmactive">dmactive</a> to the requested value.
 During this time, the DM may ignore any register writes.</p>
 </div>
 <div class="paragraph">
 <p>0 (inactive): The module&#8217;s state, including authentication mechanism,
-takes its reset values (the {dmcontrol-dmactive} bit is the only bit which can
+takes its reset values (the <a href="#dmcontrol-dmactive">dmactive</a> bit is the only bit which can
 be written to something other than its reset value). Any accesses
-to the module may fail. Specifically, {dmstatus-version} might not return
+to the module may fail. Specifically, <a href="#dmstatus-version">version</a> might not return
 correct data.</p>
 </div>
 <div class="paragraph">
@@ -3115,9 +3108,9 @@ to {dmcontrol} in the same write.</p>
 Debug Module after power up.</p>
 </div>
 <div class="paragraph">
-<p>To place the Debug Module into a known state, a debugger should write 0 to {dmcontrol-dmactive},
-poll until {dmcontrol-dmactive} is observed 0, write 1 to {dmcontrol-dmactive}, and
-poll until {dmcontrol-dmactive} is observed 1.</p>
+<p>To place the Debug Module into a known state, a debugger should write 0 to <a href="#dmcontrol-dmactive">dmactive</a>,
+poll until <a href="#dmcontrol-dmactive">dmactive</a> is observed 0, write 1 to <a href="#dmcontrol-dmactive">dmactive</a>, and
+poll until <a href="#dmcontrol-dmactive">dmactive</a> is observed 1.</p>
 </div>
 <div class="paragraph">
 <p>Implementations may pay attention to this bit to further aid
@@ -3178,7 +3171,7 @@ registers.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="hartinfo-nscratch"></a> <code>nscratch</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Number of <code>dscratch</code> registers available for the debugger
-to use during program buffer execution, starting from {csr-dscratch0}.
+to use during program buffer execution, starting from <a href="Sdext.html#csr-dscratch0" class="xref page">dscratch0</a>.
 The debugger can make no assumptions about the contents of these
 registers between commands.</p>
 </div></div></td>
@@ -3210,11 +3203,11 @@ Each register takes up 4 bytes in the memory map.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="hartinfo-datasize"></a> <code>datasize</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If {hartinfo-dataaccess} is 0: Number of CSRs dedicated to
+<p>If <a href="#hartinfo-dataaccess">dataaccess</a> is 0: Number of CSRs dedicated to
 shadowing the <code>data</code> registers.</p>
 </div>
 <div class="paragraph">
-<p>If {hartinfo-dataaccess} is 1: Number of 32-bit words in the memory map
+<p>If <a href="#hartinfo-dataaccess">dataaccess</a> is 1: Number of 32-bit words in the memory map
 dedicated to shadowing the <code>data</code> registers.</p>
 </div>
 <div class="paragraph">
@@ -3231,11 +3224,11 @@ register must be 12 or smaller.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="hartinfo-dataaddr"></a> <code>dataaddr</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If {hartinfo-dataaccess} is 0: The number of the first CSR dedicated to
+<p>If <a href="#hartinfo-dataaccess">dataaccess</a> is 0: The number of the first CSR dedicated to
 shadowing the <code>data</code> registers.</p>
 </div>
 <div class="paragraph">
-<p>If {hartinfo-dataaccess} is 1: Address of RAM where the data
+<p>If <a href="#hartinfo-dataaccess">dataaccess</a> is 1: Address of RAM where the data
 registers are shadowed. This address is sign extended giving a
 range of -2048 to 2047, easily addressed with a load or store using
 <code>x0</code> as the address register.</p>
@@ -3254,7 +3247,7 @@ range of -2048 to 2047, easily addressed with a load or store using
 <h4 id="dm-hawindowsel"><a class="anchor" href="#dm-hawindowsel"></a>Hart Array Window Select (hawindowsel, at 0x14)</h4>
 <div class="paragraph">
 <p>This register selects which of the 32-bit portion of the hart array mask
-register (see <a href="#hartarraymask">3.1.3.2. Selecting Multiple Harts</a>) is accessible in {dm-hawindow}.</p>
+register (see <a href="#hartarraymask">3.1.3.2. Selecting Multiple Harts</a>) is accessible in <a href="#dm-hawindow">hawindow</a>.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
@@ -3299,14 +3292,14 @@ of this field may actually be writable.</p>
 <div class="paragraph">
 <p>This register provides R/W access to a 32-bit portion of the
 hart array mask register (see <a href="#hartarraymask">3.1.3.2. Selecting Multiple Harts</a>).
-The position of the window is determined by {dm-hawindowsel}. I.e. bit 0
-refers to hart {dm-hawindowsel} <span class="steminline"> <svg style="vertical-align: -0.05ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="3.394ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 1500 688"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2217" d="M229 286Q216 420 216 436Q216 454 240 464Q241 464 245 464T251 465Q263 464 273 456T283 436Q283 419 277 356T270 286L328 328Q384 369 389 372T399 375Q412 375 423 365T435 338Q435 325 425 315Q420 312 357 282T289 250L355 219L425 184Q434 175 434 161Q434 146 425 136T401 125Q393 125 383 131T328 171L270 213Q283 79 283 63Q283 53 276 44T250 35Q231 35 224 44T216 63Q216 80 222 143T229 213L171 171Q115 130 110 127Q106 124 100 124Q87 124 76 134T64 161Q64 166 64 169T67 175T72 181T81 188T94 195T113 204T138 215T170 230T210 250L74 315Q65 324 65 338Q65 353 74 363T98 374Q106 374 116 368T171 328L229 286Z"></path></g><g data-mml-node="mn" transform="translate(500,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="translate(500,0)"></path></g></g></g></svg> </span>, while bit 31 refers to hart
-{dm-hawindowsel} <span class="steminline"> <svg style="vertical-align: -0.186ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="8.422ex" height="1.692ex" role="img" focusable="false" viewBox="0 -666 3722.4 748"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2217" d="M229 286Q216 420 216 436Q216 454 240 464Q241 464 245 464T251 465Q263 464 273 456T283 436Q283 419 277 356T270 286L328 328Q384 369 389 372T399 375Q412 375 423 365T435 338Q435 325 425 315Q420 312 357 282T289 250L355 219L425 184Q434 175 434 161Q434 146 425 136T401 125Q393 125 383 131T328 171L270 213Q283 79 283 63Q283 53 276 44T250 35Q231 35 224 44T216 63Q216 80 222 143T229 213L171 171Q115 130 110 127Q106 124 100 124Q87 124 76 134T64 161Q64 166 64 169T67 175T72 181T81 188T94 195T113 204T138 215T170 230T210 250L74 315Q65 324 65 338Q65 353 74 363T98 374Q106 374 116 368T171 328L229 286Z"></path></g><g data-mml-node="mn" transform="translate(500,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="translate(500,0)"></path></g><g data-mml-node="mo" transform="translate(1722.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(2722.4,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="translate(500,0)"></path></g></g></g></svg> </span>.</p>
+The position of the window is determined by <a href="#dm-hawindowsel">hawindowsel</a>. I.e. bit 0
+refers to hart <a href="#dm-hawindowsel">hawindowsel</a> <span class="steminline"> <svg style="vertical-align: -0.05ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="3.394ex" height="1.557ex" role="img" focusable="false" viewBox="0 -666 1500 688"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2217" d="M229 286Q216 420 216 436Q216 454 240 464Q241 464 245 464T251 465Q263 464 273 456T283 436Q283 419 277 356T270 286L328 328Q384 369 389 372T399 375Q412 375 423 365T435 338Q435 325 425 315Q420 312 357 282T289 250L355 219L425 184Q434 175 434 161Q434 146 425 136T401 125Q393 125 383 131T328 171L270 213Q283 79 283 63Q283 53 276 44T250 35Q231 35 224 44T216 63Q216 80 222 143T229 213L171 171Q115 130 110 127Q106 124 100 124Q87 124 76 134T64 161Q64 166 64 169T67 175T72 181T81 188T94 195T113 204T138 215T170 230T210 250L74 315Q65 324 65 338Q65 353 74 363T98 374Q106 374 116 368T171 328L229 286Z"></path></g><g data-mml-node="mn" transform="translate(500,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="translate(500,0)"></path></g></g></g></svg> </span>, while bit 31 refers to hart
+<a href="#dm-hawindowsel">hawindowsel</a> <span class="steminline"> <svg style="vertical-align: -0.186ex; overflow: visible;" xmlns="http://www.w3.org/2000/svg" width="8.422ex" height="1.692ex" role="img" focusable="false" viewBox="0 -666 3722.4 748"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2217" d="M229 286Q216 420 216 436Q216 454 240 464Q241 464 245 464T251 465Q263 464 273 456T283 436Q283 419 277 356T270 286L328 328Q384 369 389 372T399 375Q412 375 423 365T435 338Q435 325 425 315Q420 312 357 282T289 250L355 219L425 184Q434 175 434 161Q434 146 425 136T401 125Q393 125 383 131T328 171L270 213Q283 79 283 63Q283 53 276 44T250 35Q231 35 224 44T216 63Q216 80 222 143T229 213L171 171Q115 130 110 127Q106 124 100 124Q87 124 76 134T64 161Q64 166 64 169T67 175T72 181T81 188T94 195T113 204T138 215T170 230T210 250L74 315Q65 324 65 338Q65 353 74 363T98 374Q106 374 116 368T171 328L229 286Z"></path></g><g data-mml-node="mn" transform="translate(500,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="translate(500,0)"></path></g><g data-mml-node="mo" transform="translate(1722.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(2722.4,0)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z" transform="translate(500,0)"></path></g></g></g></svg> </span>.</p>
 </div>
 <div class="paragraph">
 <p>Since some bits in the hart array mask register may be constant 0, some
 bits in this register may be constant 0, depending on the current value
-of {dm-hawindowsel}.</p>
+of <a href="#dm-hawindowsel">hawindowsel</a>.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
@@ -3318,8 +3311,8 @@ of {dm-hawindowsel}.</p>
 <h4 id="dm-abstractcs"><a class="anchor" href="#dm-abstractcs"></a>Abstract Control and Status (abstractcs, at 0x16)</h4>
 <div class="paragraph">
 <p>Writing this register while an abstract command is executing causes
-{abstractcs-cmderr} to become 1 (busy) once the command completes
-({abstractcs-busy} becomes 0).</p>
+<a href="#abstractcs-cmderr">cmderr</a> to become 1 (busy) once the command completes
+(<a href="#abstractcs-busy">busy</a> becomes 0).</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3329,7 +3322,7 @@ of {dm-hawindowsel}.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>{abstractcs-datacount} must be at least 1 to support RV32 harts, 2 to support
+<p><a href="#abstractcs-datacount">datacount</a> must be at least 1 to support RV32 harts, 2 to support
 RV64 harts, or 4 to support RV128 harts.</p>
 </div>
 </td>
@@ -3378,7 +3371,7 @@ RV64 harts, or 4 to support RV128 harts.</p>
 <p>1 (busy): An abstract command is currently being executed.</p>
 </div>
 <div class="paragraph">
-<p>This bit is set as soon as {dm-command} is written, and is
+<p>This bit is set as soon as <a href="#dm-command">command</a> is written, and is
 not cleared until that command has completed.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
@@ -3419,19 +3412,19 @@ they are cleared by writing 1 to them. No abstract command is
 started until the value is reset to 0.</p>
 </div>
 <div class="paragraph">
-<p>This field only contains a valid value if {abstractcs-busy} is 0.</p>
+<p>This field only contains a valid value if <a href="#abstractcs-busy">busy</a> is 0.</p>
 </div>
 <div class="paragraph">
 <p>0 (none): No error.</p>
 </div>
 <div class="paragraph">
-<p>1 (busy): An abstract command was executing while {dm-command},
-{dm-abstractcs}, or {dm-abstractauto} was written, or when one
+<p>1 (busy): An abstract command was executing while <a href="#dm-command">command</a>,
+<a href="#dm-abstractcs">abstractcs</a>, or <a href="#dm-abstractauto">abstractauto</a> was written, or when one
 of the <code>data</code> or <code>progbuf</code> registers was read or written.
-This status is only written if {abstractcs-cmderr} contains 0.</p>
+This status is only written if <a href="#abstractcs-cmderr">cmderr</a> contains 0.</p>
 </div>
 <div class="paragraph">
-<p>2 (not supported): The command in {dm-command} is not supported.  It
+<p>2 (not supported): The command in <a href="#dm-command">command</a> is not supported.  It
 may be supported with different options set, but it will not be
 supported at a later time when the hart or system state are
 different.</p>
@@ -3485,11 +3478,11 @@ executed.</p>
 </div>
 <div class="paragraph">
 <p>Writing this register while an abstract command is executing causes
-{abstractcs-cmderr} to become 1 (busy) once the command completes
+<a href="#abstractcs-cmderr">cmderr</a> to become 1 (busy) once the command completes
 (busy becomes 0).</p>
 </div>
 <div class="paragraph">
-<p>If {abstractcs-cmderr} is non-zero, writes to this register are ignored.</p>
+<p>If <a href="#abstractcs-cmderr">cmderr</a> is non-zero, writes to this register are ignored.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3499,10 +3492,10 @@ executed.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>{abstractcs-cmderr} inhibits starting a new command to accommodate debuggers
+<p><a href="#abstractcs-cmderr">cmderr</a> inhibits starting a new command to accommodate debuggers
 that, for performance reasons, send several commands to be executed
-in a row without checking {abstractcs-cmderr} in between. They can safely do
-so and check {abstractcs-cmderr} at the end without worrying that one command
+in a row without checking <a href="#abstractcs-cmderr">cmderr</a> in between. They can safely do
+so and check <a href="#abstractcs-cmderr">cmderr</a> at the end without worrying that one command
 failed but then a later command (which might have depended on the
 previous one succeeding) passed.</p>
 </div>
@@ -3575,7 +3568,7 @@ hard-wired to 0.</p>
 <div class="paragraph">
 <p>If this register is written while an abstract command is executing
 then the write is ignored and
-{abstractcs-cmderr} becomes 1 (busy) once the command completes
+<a href="#abstractcs-cmderr">cmderr</a> becomes 1 (busy) once the command completes
 (busy becomes 0).</p>
 </div>
 <div class="imageblock kroki">
@@ -3604,7 +3597,7 @@ then the write is ignored and
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>When a bit in this field is 1, read or write accesses to the
 corresponding <code>progbuf</code> word cause the DM to act as if the
-current value in {dm-command} was written there again after the
+current value in <a href="#dm-command">command</a> was written there again after the
 access to <code>progbuf</code> completes.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
@@ -3619,7 +3612,7 @@ access to <code>progbuf</code> completes.</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>When a bit in this field is 1, read or write accesses to the
 corresponding <code>data</code> word cause the DM to act as if the current
-value in {dm-command} was written there again after the
+value in <a href="#dm-command">command</a> was written there again after the
 access to <code>data</code> completes.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
@@ -3635,7 +3628,7 @@ access to <code>data</code> completes.</p>
 <div class="sect3">
 <h4 id="dm-confstrptr0"><a class="anchor" href="#dm-confstrptr0"></a>Configuration Structure Pointer 0 (confstrptr0, at 0x19)</h4>
 <div class="paragraph">
-<p>When {dmstatus-confstrptrvalid} is set, reading this register returns bits 31:0
+<p>When <a href="#dmstatus-confstrptrvalid">confstrptrvalid</a> is set, reading this register returns bits 31:0
 of the configuration structure pointer. Reading the other <code>confstrptr</code>
 registers returns the upper bits of the address.</p>
 </div>
@@ -3646,7 +3639,7 @@ this must be an address that can be used to access the
 configuration structure from the hart with ID 0.</p>
 </div>
 <div class="paragraph">
-<p>If {dmstatus-confstrptrvalid} is 0, then the <code>confstrptr</code> registers
+<p>If <a href="#dmstatus-confstrptrvalid">confstrptrvalid</a> is 0, then the <code>confstrptr</code> registers
 hold identifier information which is not
 further specified in this document.</p>
 </div>
@@ -3667,8 +3660,8 @@ Privileged Spec.</p>
 <div class="sect3">
 <h4 id="dm-confstrptr1"><a class="anchor" href="#dm-confstrptr1"></a>Configuration Structure Pointer 1 (confstrptr1, at 0x1a)</h4>
 <div class="paragraph">
-<p>When {dmstatus-confstrptrvalid} is set, reading this register returns bits 63:32
-of the configuration structure pointer. See {dm-confstrptr0} for more details.</p>
+<p>When <a href="#dmstatus-confstrptrvalid">confstrptrvalid</a> is set, reading this register returns bits 63:32
+of the configuration structure pointer. See <a href="#dm-confstrptr0">confstrptr0</a> for more details.</p>
 </div>
 <div class="paragraph">
 <p>This entire register is read-only.</p>
@@ -3682,8 +3675,8 @@ of the configuration structure pointer. See {dm-confstrptr0} for more details.</
 <div class="sect3">
 <h4 id="dm-confstrptr2"><a class="anchor" href="#dm-confstrptr2"></a>Configuration Structure Pointer 2 (confstrptr2, at 0x1b)</h4>
 <div class="paragraph">
-<p>When {dmstatus-confstrptrvalid} is set, reading this register returns bits 95:64
-of the configuration structure pointer. See {dm-confstrptr0} for more details.</p>
+<p>When <a href="#dmstatus-confstrptrvalid">confstrptrvalid</a> is set, reading this register returns bits 95:64
+of the configuration structure pointer. See <a href="#dm-confstrptr0">confstrptr0</a> for more details.</p>
 </div>
 <div class="paragraph">
 <p>This entire register is read-only.</p>
@@ -3697,8 +3690,8 @@ of the configuration structure pointer. See {dm-confstrptr0} for more details.</
 <div class="sect3">
 <h4 id="dm-confstrptr3"><a class="anchor" href="#dm-confstrptr3"></a>Configuration Structure Pointer 3 (confstrptr3, at 0x1c)</h4>
 <div class="paragraph">
-<p>When {dmstatus-confstrptrvalid} is set, reading this register returns bits 127:96
-of the configuration structure pointer. See {dm-confstrptr0} for more details.</p>
+<p>When <a href="#dmstatus-confstrptrvalid">confstrptrvalid</a> is set, reading this register returns bits 127:96
+of the configuration structure pointer. See <a href="#dm-confstrptr0">confstrptr0</a> for more details.</p>
 </div>
 <div class="paragraph">
 <p>This entire register is read-only.</p>
@@ -3728,18 +3721,18 @@ the last one in the chain.</p>
 <div class="sect3">
 <h4 id="dm-data0"><a class="anchor" href="#dm-data0"></a>Abstract Data 0 (data0, at 0x04)</h4>
 <div class="paragraph">
-<p>{dm-data0} through {dm-data11} are registers that may
-be read or changed by abstract commands. {abstractcs-datacount} indicates how many
-of them are implemented, starting at {dm-data0}, counting up.
+<p><a href="#dm-data0">data0</a> through data11 are registers that may
+be read or changed by abstract commands. <a href="#abstractcs-datacount">datacount</a> indicates how many
+of them are implemented, starting at <a href="#dm-data0">data0</a>, counting up.
 <a href="#tab:datareg">Table 1</a> shows how abstract commands use these
 registers.</p>
 </div>
 <div class="paragraph">
 <p>Accessing these registers while an abstract command is executing causes
-{abstractcs-cmderr} to be set to 1 (busy) if it is 0.</p>
+<a href="#abstractcs-cmderr">cmderr</a> to be set to 1 (busy) if it is 0.</p>
 </div>
 <div class="paragraph">
-<p>Attempts to write them while {abstractcs-busy} is set does not change their value.</p>
+<p>Attempts to write them while <a href="#abstractcs-busy">busy</a> is set does not change their value.</p>
 </div>
 <div class="paragraph">
 <p>The values in these registers might not be preserved after an abstract
@@ -3756,21 +3749,21 @@ assumptions can be made about the contents of these registers.</p>
 <div class="sect3">
 <h4 id="dm-progbuf0"><a class="anchor" href="#dm-progbuf0"></a>Program Buffer 0 (progbuf0, at 0x20)</h4>
 <div class="paragraph">
-<p>{dm-progbuf0} through {dm-progbuf15} must provide write access to the
+<p><a href="#dm-progbuf0">progbuf0</a> through progbuf15 must provide write access to the
 optional program buffer. It may also be possible for the debugger to
 read from the program buffer through these registers. If reading
 is not supported, then all reads return 0.</p>
 </div>
 <div class="paragraph">
-<p>{abstractcs-progbufsize} indicates how many <code>progbuf</code> registers are
-implemented starting at {dm-progbuf0}, counting up.</p>
+<p><a href="#abstractcs-progbufsize">progbufsize</a> indicates how many <code>progbuf</code> registers are
+implemented starting at <a href="#dm-progbuf0">progbuf0</a>, counting up.</p>
 </div>
 <div class="paragraph">
 <p>Accessing these registers while an abstract command is executing causes
-{abstractcs-cmderr} to be set to 1 (busy) if it is 0.</p>
+<a href="#abstractcs-cmderr">cmderr</a> to be set to 1 (busy) if it is 0.</p>
 </div>
 <div class="paragraph">
-<p>Attempts to write them while {abstractcs-busy} is set does not change their value.</p>
+<p>Attempts to write them while <a href="#abstractcs-busy">busy</a> is set does not change their value.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
@@ -3785,7 +3778,7 @@ implemented starting at {dm-progbuf0}, counting up.</p>
 module.</p>
 </div>
 <div class="paragraph">
-<p>When {dmstatus-authbusy} is clear, the debugger can communicate with the
+<p>When <a href="#dmstatus-authbusy">authbusy</a> is clear, the debugger can communicate with the
 authentication module by reading or writing this register. There is no
 separate mechanism to signal overflow/underflow.</p>
 </div>
@@ -3799,14 +3792,14 @@ separate mechanism to signal overflow/underflow.</p>
 <h4 id="dm-dmcs2"><a class="anchor" href="#dm-dmcs2"></a>Debug Module Control and Status 2 (dmcs2, at 0x32)</h4>
 <div class="paragraph">
 <p>This register contains DM control and status bits that didn&#8217;t easily
-fit in {dm-dmcontrol} and {dm-dmstatus}. All are optional.</p>
+fit in <a href="#dm-dmcontrol">dmcontrol</a> and <a href="#dm-dmstatus">dmstatus</a>. All are optional.</p>
 </div>
 <div class="paragraph">
-<p>If halt groups are not implemented, then {dmcs2-group} will always
-be 0 when {dmcs2-grouptype} is 0.</p>
+<p>If halt groups are not implemented, then <a href="#dmcs2-group">group</a> will always
+be 0 when <a href="#dmcs2-grouptype">grouptype</a> is 0.</p>
 </div>
 <div class="paragraph">
-<p>If resume groups are not implemented, then {dmcs2-grouptype} will
+<p>If resume groups are not implemented, then <a href="#dmcs2-grouptype">grouptype</a> will
 remain 0 even after 1 is written there.</p>
 </div>
 <div class="paragraph">
@@ -3868,15 +3861,15 @@ change it to a valid one or 0 if no DM external triggers exist.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmcs2-group"></a> <code>group</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>When {dmcs2-hgselect} is 0, contains the group of the hart
+<p>When <a href="#dmcs2-hgselect">hgselect</a> is 0, contains the group of the hart
 specified by {hartsel}.</p>
 </div>
 <div class="paragraph">
-<p>When {dmcs2-hgselect} is 1, contains the group of the DM external
-trigger selected by {dmcs2-dmexttrigger}.</p>
+<p>When <a href="#dmcs2-hgselect">hgselect</a> is 1, contains the group of the DM external
+trigger selected by <a href="#dmcs2-dmexttrigger">dmexttrigger</a>.</p>
 </div>
 <div class="paragraph">
-<p>The value written to this field is ignored unless {dmcs2-hgwrite}
+<p>The value written to this field is ignored unless <a href="#dmcs2-hgwrite">hgwrite</a>
 is also written 1.</p>
 </div>
 <div class="paragraph">
@@ -3898,17 +3891,17 @@ writing to confirm they are using a hart group that is supported.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmcs2-hgwrite"></a> <code>hgwrite</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>When 1 is written and {dmcs2-hgselect} is 0, for every selected
-hart the DM will change its group to the value written to {dmcs2-group},
+<p>When 1 is written and <a href="#dmcs2-hgselect">hgselect</a> is 0, for every selected
+hart the DM will change its group to the value written to <a href="#dmcs2-group">group</a>,
 if the hardware supports that group for that hart.
 Implementations may also change the group of a minimal set of
 unselected harts in the same way, if that is necessary due to
 a hardware limitation.</p>
 </div>
 <div class="paragraph">
-<p>When 1 is written and {dmcs2-hgselect} is 1, the DM will change
-the group of the DM external trigger selected by {dmcs2-dmexttrigger}
-to the value written to {dmcs2-group}, if the hardware supports
+<p>When 1 is written and <a href="#dmcs2-hgselect">hgselect</a> is 1, the DM will change
+the group of the DM external trigger selected by <a href="#dmcs2-dmexttrigger">dmexttrigger</a>
+to the value written to <a href="#dmcs2-group">group</a>, if the hardware supports
 that group for that trigger.</p>
 </div>
 <div class="paragraph">
@@ -4094,7 +4087,7 @@ spec older than 1 January, 2018.</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Set when the debugger attempts to read data while a read is in
 progress, or when the debugger initiates a new access while one is
-already in progress (while {sbcs-sbbusy} is set). It remains set until
+already in progress (while <a href="#sbcs-sbbusy">sbbusy</a> is set). It remains set until
 it&#8217;s explicitly cleared by the debugger.</p>
 </div>
 <div class="paragraph">
@@ -4117,9 +4110,9 @@ bit goes high immediately when a read or write is requested for any
 reason, and does not go low until the access is fully completed.</p>
 </div>
 <div class="paragraph">
-<p>Writes to {dm-sbcs} while {sbcs-sbbusy} is high result in undefined
-behavior.  A debugger must not write to {dm-sbcs} until it reads
-{sbcs-sbbusy} as 0.</p>
+<p>Writes to <a href="#dm-sbcs">sbcs</a> while <a href="#sbcs-sbbusy">sbbusy</a> is high result in undefined
+behavior.  A debugger must not write to <a href="#dm-sbcs">sbcs</a> until it reads
+<a href="#sbcs-sbbusy">sbbusy</a> as 0.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>R</strong></p>
@@ -4131,7 +4124,7 @@ behavior.  A debugger must not write to {dm-sbcs} until it reads
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="sbcs-sbreadonaddr"></a> <code>sbreadonaddr</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>When 1, every write to {dm-sbaddress0} automatically triggers a
+<p>When 1, every write to <a href="#dm-sbaddress0">sbaddress0</a> automatically triggers a
 system bus read at the new address.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
@@ -4162,8 +4155,8 @@ system bus read at the new address.</p>
 <p>4 (128bit): 128-bit</p>
 </div>
 <div class="paragraph">
-<p>If {sbcs-sbaccess} has an unsupported value when the DM starts a bus
-access, the access is not performed and {sbcs-sberror} is set to 4.</p>
+<p>If <a href="#sbcs-sbaccess">sbaccess</a> has an unsupported value when the DM starts a bus
+access, the access is not performed and <a href="#sbcs-sberror">sberror</a> is set to 4.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>R/W</strong></p>
@@ -4176,7 +4169,7 @@ access, the access is not performed and {sbcs-sberror} is set to 4.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="sbcs-sbautoincrement"></a> <code>sbautoincrement</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>When 1, <code>sbaddress</code> is incremented by the access size (in
-bytes) selected in {sbcs-sbaccess} after every system bus access.</p>
+bytes) selected in <a href="#sbcs-sbaccess">sbaccess</a> after every system bus access.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>R/W</strong></p>
@@ -4188,7 +4181,7 @@ bytes) selected in {sbcs-sbaccess} after every system bus access.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="sbcs-sbreadondata"></a> <code>sbreadondata</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>When 1, every read from {dm-sbdata0} automatically triggers a
+<p>When 1, every read from <a href="#dm-sbdata0">sbdata0</a> automatically triggers a
 system bus read at the (possibly auto-incremented) address.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
@@ -4314,28 +4307,28 @@ access support.)</p>
 <div class="sect3">
 <h4 id="dm-sbaddress0"><a class="anchor" href="#dm-sbaddress0"></a>System Bus Address 31:0 (sbaddress0, at 0x39)</h4>
 <div class="paragraph">
-<p>If {sbcs-sbasize} is 0, then this register is not present.</p>
+<p>If <a href="#sbcs-sbasize">sbasize</a> is 0, then this register is not present.</p>
 </div>
 <div class="paragraph">
 <p>When the system bus manager is busy, writes to this register will set
-{sbcs-sbbusyerror} and don&#8217;t do anything else.</p>
+<a href="#sbcs-sbbusyerror">sbbusyerror</a> and don&#8217;t do anything else.</p>
 </div>
 <div class="paragraph">
-<p>If {sbcs-sberror} is 0, {sbcs-sbbusyerror} is 0, and {sbcs-sbreadonaddr} is set then writes to this register start the following:</p>
+<p>If <a href="#sbcs-sberror">sberror</a> is 0, <a href="#sbcs-sbbusyerror">sbbusyerror</a> is 0, and <a href="#sbcs-sbreadonaddr">sbreadonaddr</a> is set then writes to this register start the following:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Set {sbcs-sbbusy}.</p>
+<p>Set <a href="#sbcs-sbbusy">sbbusy</a>.</p>
 </li>
 <li>
 <p>Perform a bus read from the new value of <code>sbaddress</code>.</p>
 </li>
 <li>
-<p>If the read succeeded and {sbcs-sbautoincrement} is set, increment <code>sbaddress</code>.</p>
+<p>If the read succeeded and <a href="#sbcs-sbautoincrement">sbautoincrement</a> is set, increment <code>sbaddress</code>.</p>
 </li>
 <li>
-<p>Clear {sbcs-sbbusy}.</p>
+<p>Clear <a href="#sbcs-sbbusy">sbbusy</a>.</p>
 </li>
 </ol>
 </div>
@@ -4378,11 +4371,11 @@ access support.)</p>
 <div class="sect3">
 <h4 id="dm-sbaddress1"><a class="anchor" href="#dm-sbaddress1"></a>System Bus Address 63:32 (sbaddress1, at 0x3a)</h4>
 <div class="paragraph">
-<p>If {sbcs-sbasize} is less than 33, then this register is not present.</p>
+<p>If <a href="#sbcs-sbasize">sbasize</a> is less than 33, then this register is not present.</p>
 </div>
 <div class="paragraph">
 <p>When the system bus manager is busy, writes to this register will set
-{sbcs-sbbusyerror} and don&#8217;t do anything else.</p>
+<a href="#sbcs-sbbusyerror">sbbusyerror</a> and don&#8217;t do anything else.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
@@ -4424,11 +4417,11 @@ the system address bus is that wide).</p>
 <div class="sect3">
 <h4 id="dm-sbaddress2"><a class="anchor" href="#dm-sbaddress2"></a>System Bus Address 95:64 (sbaddress2, at 0x3b)</h4>
 <div class="paragraph">
-<p>If {sbcs-sbasize} is less than 65, then this register is not present.</p>
+<p>If <a href="#sbcs-sbasize">sbasize</a> is less than 65, then this register is not present.</p>
 </div>
 <div class="paragraph">
 <p>When the system bus manager is busy, writes to this register will set
-{sbcs-sbbusyerror} and don&#8217;t do anything else.</p>
+<a href="#sbcs-sbbusyerror">sbbusyerror</a> and don&#8217;t do anything else.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
@@ -4470,11 +4463,11 @@ the system address bus is that wide).</p>
 <div class="sect3">
 <h4 id="dm-sbaddress3"><a class="anchor" href="#dm-sbaddress3"></a>System Bus Address 127:96 (sbaddress3, at 0x37)</h4>
 <div class="paragraph">
-<p>If {sbcs-sbasize} is less than 97, then this register is not present.</p>
+<p>If <a href="#sbcs-sbasize">sbasize</a> is less than 97, then this register is not present.</p>
 </div>
 <div class="paragraph">
 <p>When the system bus manager is busy, writes to this register will set
-{sbcs-sbbusyerror} and don&#8217;t do anything else.</p>
+<a href="#sbcs-sbbusyerror">sbbusyerror</a> and don&#8217;t do anything else.</p>
 </div>
 <div class="imageblock kroki">
 <div class="content">
@@ -4516,7 +4509,7 @@ the system address bus is that wide).</p>
 <div class="sect3">
 <h4 id="dm-sbdata0"><a class="anchor" href="#dm-sbdata0"></a>System Bus Data 31:0 (sbdata0, at 0x3c)</h4>
 <div class="paragraph">
-<p>If all of the <code>sbaccess</code> bits in {dm-sbcs} are 0, then this register
+<p>If all of the <code>sbaccess</code> bits in <a href="#dm-sbcs">sbcs</a> are 0, then this register
 is not present.</p>
 </div>
 <div class="paragraph">
@@ -4525,10 +4518,10 @@ the read access is less than the width of <code>sbdata</code>, the contents of
 the remaining high bits may take on any value.</p>
 </div>
 <div class="paragraph">
-<p>If either {sbcs-sberror} or {sbcs-sbbusyerror} isn&#8217;t 0 then accesses do nothing.</p>
+<p>If either <a href="#sbcs-sberror">sberror</a> or <a href="#sbcs-sbbusyerror">sbbusyerror</a> isn&#8217;t 0 then accesses do nothing.</p>
 </div>
 <div class="paragraph">
-<p>If the bus manager is busy then accesses set {sbcs-sbbusyerror}, and don&#8217;t do
+<p>If the bus manager is busy then accesses set <a href="#sbcs-sbbusyerror">sbbusyerror</a>, and don&#8217;t do
 anything else.</p>
 </div>
 <div class="paragraph">
@@ -4537,17 +4530,17 @@ anything else.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Set {sbcs-sbbusy}.</p>
+<p>Set <a href="#sbcs-sbbusy">sbbusy</a>.</p>
 </li>
 <li>
 <p>Perform a bus write of the new value of <code>sbdata</code> to <code>sbaddress</code>.</p>
 </li>
 <li>
-<p>If the write succeeded and {sbcs-sbautoincrement} is set,
+<p>If the write succeeded and <a href="#sbcs-sbautoincrement">sbautoincrement</a> is set,
 increment <code>sbaddress</code>.</p>
 </li>
 <li>
-<p>Clear {sbcs-sbbusy}.</p>
+<p>Clear <a href="#sbcs-sbbusy">sbbusy</a>.</p>
 </li>
 </ol>
 </div>
@@ -4560,10 +4553,10 @@ increment <code>sbaddress</code>.</p>
 <p>"Return" the data.</p>
 </li>
 <li>
-<p>Set {sbcs-sbbusy}.</p>
+<p>Set <a href="#sbcs-sbbusy">sbbusy</a>.</p>
 </li>
 <li>
-<p>If {sbcs-sbreadondata} is set:</p>
+<p>If <a href="#sbcs-sbreadondata">sbreadondata</a> is set:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -4571,21 +4564,21 @@ increment <code>sbaddress</code>.</p>
 <code>sbaddress</code>, placing the result in <code>sbdata</code>.</p>
 </li>
 <li>
-<p>If {sbcs-sbautoincrement} is set and the read was
+<p>If <a href="#sbcs-sbautoincrement">sbautoincrement</a> is set and the read was
 successful, increment <code>sbaddress</code>.</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>Clear {sbcs-sbbusy}.</p>
+<p>Clear <a href="#sbcs-sbbusy">sbbusy</a>.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Only {dm-sbdata0} has this behavior. The other <code>sbdata</code> registers
+<p>Only <a href="#dm-sbdata0">sbdata0</a> has this behavior. The other <code>sbdata</code> registers
 have no side effects. On systems that have buses wider than 32 bits, a
-debugger should access {dm-sbdata0} after accessing the other <code>sbdata</code>
+debugger should access <a href="#dm-sbdata0">sbdata0</a> after accessing the other <code>sbdata</code>
 registers.</p>
 </div>
 <div class="imageblock kroki">
@@ -4627,11 +4620,11 @@ registers.</p>
 <div class="sect3">
 <h4 id="dm-sbdata1"><a class="anchor" href="#dm-sbdata1"></a>System Bus Data 63:32 (sbdata1, at 0x3d)</h4>
 <div class="paragraph">
-<p>If {sbcs-sbaccess64} and {sbcs-sbaccess128} are 0, then this
+<p>If <a href="#sbcs-sbaccess64">sbaccess64</a> and <a href="#sbcs-sbaccess128">sbaccess128</a> are 0, then this
 register is not present.</p>
 </div>
 <div class="paragraph">
-<p>If the bus manager is busy then accesses set {sbcs-sbbusyerror}, and don&#8217;t do
+<p>If the bus manager is busy then accesses set <a href="#sbcs-sbbusyerror">sbbusyerror</a>, and don&#8217;t do
 anything else.</p>
 </div>
 <div class="imageblock kroki">
@@ -4674,10 +4667,10 @@ wide).</p>
 <div class="sect3">
 <h4 id="dm-sbdata2"><a class="anchor" href="#dm-sbdata2"></a>System Bus Data 95:64 (sbdata2, at 0x3e)</h4>
 <div class="paragraph">
-<p>This register only exists if {sbcs-sbaccess128} is 1.</p>
+<p>This register only exists if <a href="#sbcs-sbaccess128">sbaccess128</a> is 1.</p>
 </div>
 <div class="paragraph">
-<p>If the bus manager is busy then accesses set {sbcs-sbbusyerror}, and don&#8217;t do
+<p>If the bus manager is busy then accesses set <a href="#sbcs-sbbusyerror">sbbusyerror</a>, and don&#8217;t do
 anything else.</p>
 </div>
 <div class="imageblock kroki">
@@ -4720,10 +4713,10 @@ wide).</p>
 <div class="sect3">
 <h4 id="dm-sbdata3"><a class="anchor" href="#dm-sbdata3"></a>System Bus Data 127:96 (sbdata3, at 0x3f)</h4>
 <div class="paragraph">
-<p>This register only exists if {sbcs-sbaccess128} is 1.</p>
+<p>This register only exists if <a href="#sbcs-sbaccess128">sbaccess128</a> is 1.</p>
 </div>
 <div class="paragraph">
-<p>If the bus manager is busy then accesses set {sbcs-sbbusyerror}, and don&#8217;t do
+<p>If the bus manager is busy then accesses set <a href="#sbcs-sbbusyerror">sbbusyerror</a>, and don&#8217;t do
 anything else.</p>
 </div>
 <div class="imageblock kroki">
@@ -4773,7 +4766,7 @@ version of the debug spec will not use this address.</p>
 <div class="sect3">
 <h4 id="dm-custom0"><a class="anchor" href="#dm-custom0"></a>Custom Features 0 (custom0, at 0x70)</h4>
 <div class="paragraph">
-<p>The optional {dm-custom0} through {dm-custom15} registers may
+<p>The optional <a href="#dm-custom0">custom0</a> through custom15 registers may
 be used for non-standard features. Future versions of the debug spec
 will not use these addresses.</p>
 </div>

@@ -668,14 +668,7 @@
           </li>
     </ul>
   </nav>
-</div><div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/introduction.adoc - include::partial$register-attrs.adoc[]</p>
-</div>
-</div>
-</div>
-<div class="sect1">
+</div><div class="sect1">
 <h2 id="intro"><a class="anchor" href="#intro"></a>1.1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -907,7 +900,7 @@ Version 0.13.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Fix order of operations described in {dm-sbdata0}.
+<p>Fix order of operations described in <a href="debug_module.html#dm-sbdata0" class="xref page">sbdata0</a>.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/392">#392</a></p>
 </li>
 <li>
@@ -915,18 +908,18 @@ Version 0.13.</p>
 <a href="https://github.com/riscv/riscv-debug-spec/pull/400">#400</a></p>
 </li>
 <li>
-<p>{textra32-sselect} applies to {textra32-svalue} . <a href="https://github.com/riscv/riscv-debug-spec/pull/402">#402</a></p>
+<p><a href="Sdtrig.html#textra32-sselect" class="xref page">sselect</a> applies to <a href="Sdtrig.html#textra32-svalue" class="xref page">svalue</a> . <a href="https://github.com/riscv/riscv-debug-spec/pull/402">#402</a></p>
 </li>
 <li>
-<p>{tcontrol-mte} only applies when action=0.
+<p><a href="Sdtrig.html#tcontrol-mte" class="xref page">mte</a> only applies when action=0.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/411">#411</a></p>
 </li>
 <li>
-<p>{accessmemory-aamsize} does not affect Argument Width.
+<p><a href="debug_module.html#accessmemory-aamsize" class="xref page">aamsize</a> does not affect Argument Width.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/420">#420</a></p>
 </li>
 <li>
-<p>Clarify that harts halt out of reset if {dmcontrol-haltreq} =1.
+<p>Clarify that harts halt out of reset if <a href="debug_module.html#dmcontrol-haltreq" class="xref page">haltreq</a> =1.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/419">#419</a></p>
 </li>
 </ol>
@@ -947,37 +940,37 @@ order to implement 1.0:</p>
 </li>
 <li>
 <p>System bus autoincrement only happens if an access actually takes place.
-({dm-sbdata0}) <a href="https://github.com/riscv/riscv-debug-spec/pull/507">#507</a></p>
+(<a href="debug_module.html#dm-sbdata0" class="xref page">sbdata0</a>) <a href="https://github.com/riscv/riscv-debug-spec/pull/507">#507</a></p>
 </li>
 <li>
-<p>Bump {tinfo-version} to 3. <a href="https://github.com/riscv/riscv-debug-spec/pull/512">#512</a></p>
+<p>Bump <a href="Sdtrig.html#tinfo-version" class="xref page">version</a> to 3. <a href="https://github.com/riscv/riscv-debug-spec/pull/512">#512</a></p>
 </li>
 <li>
-<p>Require debugger to poll {dmcontrol-dmactive} after lowering it.
+<p>Require debugger to poll <a href="debug_module.html#dmcontrol-dmactive" class="xref page">dmactive</a> after lowering it.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/566">#566</a></p>
 </li>
 <li>
-<p>Add {icount-pending} to {csr-icount} . <a href="https://github.com/riscv/riscv-debug-spec/pull/574">#574</a></p>
+<p>Add <a href="Sdtrig.html#icount-pending" class="xref page">pending</a> to <a href="Sdtrig.html#csr-icount" class="xref page">icount</a> . <a href="https://github.com/riscv/riscv-debug-spec/pull/574">#574</a></p>
 </li>
 <li>
-<p>When a selected trigger is disabled, {csr-tdata2} and {csr-tdata3} can be written with any value supported by any of the types this trigger supports.
+<p>When a selected trigger is disabled, <a href="Sdtrig.html#csr-tdata2" class="xref page">tdata2</a> and <a href="Sdtrig.html#csr-tdata3" class="xref page">tdata3</a> can be written with any value supported by any of the types this trigger supports.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/721">#721</a></p>
 </li>
 <li>
-<p>{csr-tcontrol} fields only apply to breakpoint traps, not any trap.
+<p><a href="Sdtrig.html#csr-tcontrol" class="xref page">tcontrol</a> fields only apply to breakpoint traps, not any trap.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/723">#723</a></p>
 </li>
 <li>
-<p>If {tinfo-version} is greater than 0, then {mcontrol6-hit0} (previously called {csr-mcontrol6}.<code>hit</code>) now contains 0 when a trigger fires more than one instruction after the
-instruction that matched. (This information is now reflected in {mcontrol6-hit1}.)
+<p>If <a href="Sdtrig.html#tinfo-version" class="xref page">version</a> is greater than 0, then <a href="Sdtrig.html#mcontrol6-hit0" class="xref page">hit0</a> (previously called <a href="Sdtrig.html#csr-mcontrol6" class="xref page">mcontrol6</a>.<code>hit</code>) now contains 0 when a trigger fires more than one instruction after the
+instruction that matched. (This information is now reflected in <a href="Sdtrig.html#mcontrol6-hit1" class="xref page">hit1</a>.)
 <a href="https://github.com/riscv/riscv-debug-spec/pull/795">#795</a></p>
 </li>
 <li>
-<p>If {tinfo-version} is greater than 0, then bit 20 of {csr-mcontrol6} is no longer used for timing information. (Previously the bit was called {csr-mcontrol6}.<code>timing</code>.)
+<p>If <a href="Sdtrig.html#tinfo-version" class="xref page">version</a> is greater than 0, then bit 20 of <a href="Sdtrig.html#csr-mcontrol6" class="xref page">mcontrol6</a> is no longer used for timing information. (Previously the bit was called <a href="Sdtrig.html#csr-mcontrol6" class="xref page">mcontrol6</a>.<code>timing</code>.)
 <a href="https://github.com/riscv/riscv-debug-spec/pull/807">#807</a></p>
 </li>
 <li>
-<p>If {tinfo-version} is greater than 0, then the encodings of {mcontrol6-size} for sizes greater than 64 bit have changed.
+<p>If <a href="Sdtrig.html#tinfo-version" class="xref page">version</a> is greater than 0, then the encodings of <a href="Sdtrig.html#mcontrol6-size" class="xref page">size</a> for sizes greater than 64 bit have changed.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/807">#807</a></p>
 </li>
 </ol>
@@ -992,29 +985,29 @@ incompatible, but unlikely to be noticeable:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>{dcsr-stopcount} only applies to hart-local counters.
+<p><a href="Sdext.html#dcsr-stopcount" class="xref page">stopcount</a> only applies to hart-local counters.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/405">#405</a></p>
 </li>
 <li>
-<p>{dmstatus-version} may be invalid when {dmcontrol-dmactive}=0.
+<p><a href="debug_module.html#dmstatus-version" class="xref page">version</a> may be invalid when <a href="debug_module.html#dmcontrol-dmactive" class="xref page">dmactive</a>=0.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/414">#414</a></p>
 </li>
 <li>
-<p>Address triggers ({csr-mcontrol}) may fire on any accessed address.
+<p>Address triggers (<a href="Sdtrig.html#csr-mcontrol" class="xref page">mcontrol</a>) may fire on any accessed address.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/421">#421</a></p>
 </li>
 <li>
 <p>All Trigger Module registers (<a href="#tab:trigger">[tab:trigger]</a>) are optional. <a href="https://github.com/riscv/riscv-debug-spec/pull/431">#431</a></p>
 </li>
 <li>
-<p>When extending IR, {dtm-bypass} still is all ones.
+<p>When extending IR, <a href="dtm.html#dtm-bypass" class="xref page">bypass</a> still is all ones.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/437">#437</a></p>
 </li>
 <li>
-<p>{dcsr-ebreaks} and {dcsr-ebreaku} are WARL. <a href="https://github.com/riscv/riscv-debug-spec/pull/458">#458</a></p>
+<p><a href="Sdext.html#dcsr-ebreaks" class="xref page">ebreaks</a> and <a href="Sdext.html#dcsr-ebreaku" class="xref page">ebreaku</a> are WARL. <a href="https://github.com/riscv/riscv-debug-spec/pull/458">#458</a></p>
 </li>
 <li>
-<p>NMIs are disabled by {dcsr-stepie}.
+<p>NMIs are disabled by <a href="Sdext.html#dcsr-stepie" class="xref page">stepie</a>.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/465">#465</a></p>
 </li>
 <li>
@@ -1026,7 +1019,7 @@ incompatible, but unlikely to be noticeable:</p>
 <a href="https://github.com/riscv/riscv-debug-spec/pull/478">#478</a></p>
 </li>
 <li>
-<p>Time may pass before {dmcontrol-dmactive} becomes high.
+<p>Time may pass before <a href="debug_module.html#dmcontrol-dmactive" class="xref page">dmactive</a> becomes high.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/500">#500</a></p>
 </li>
 <li>
@@ -1038,7 +1031,7 @@ incompatible, but unlikely to be noticeable:</p>
 <a href="https://github.com/riscv/riscv-debug-spec/pull/504">#504</a></p>
 </li>
 <li>
-<p>Hardware should clear trigger action when {tdata1-dmode} is cleared and action is 1.
+<p>Hardware should clear trigger action when <a href="Sdtrig.html#tdata1-dmode" class="xref page">dmode</a> is cleared and action is 1.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/501">#501</a></p>
 </li>
 <li>
@@ -1046,12 +1039,12 @@ incompatible, but unlikely to be noticeable:</p>
 <a href="https://github.com/riscv/riscv-debug-spec/pull/585">#585</a></p>
 </li>
 <li>
-<p>Writing 0 to {csr-tdata1} forces a state where {csr-tdata2} and {csr-tdata3} are writable.
+<p>Writing 0 to <a href="Sdtrig.html#csr-tdata1" class="xref page">tdata1</a> forces a state where <a href="Sdtrig.html#csr-tdata2" class="xref page">tdata2</a> and <a href="Sdtrig.html#csr-tdata3" class="xref page">tdata3</a> are writable.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/598">#598</a></p>
 </li>
 <li>
 <p>Solutions to deal with reentrancy in <a href="Sdtrig.html#nativetrigger" class="xref page">Sdtrig.adoc#nativetrigger</a> prevent triggers from
-<em>matching</em>, not merely <em>firing</em>. This primarily affects {csr-icount} behavior.
+<em>matching</em>, not merely <em>firing</em>. This primarily affects <a href="Sdtrig.html#csr-icount" class="xref page">icount</a> behavior.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/722">#722</a></p>
 </li>
 <li>
@@ -1073,15 +1066,15 @@ exception. <a href="https://github.com/riscv/riscv-debug-spec/pull/791">#791</a>
 <a href="https://github.com/riscv/riscv-debug-spec/pull/404">#404</a></p>
 </li>
 <li>
-<p>Reserve some DMI space for non-standard use. See {dm-custom}, and {dm-custom0} through <code>custom15</code>.
+<p>Reserve some DMI space for non-standard use. See <a href="debug_module.html#dm-custom" class="xref page">custom</a>, and <a href="debug_module.html#dm-custom0" class="xref page">custom0</a> through <code>custom15</code>.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/406">#406</a></p>
 </li>
 <li>
-<p>Reserve trigger {tdata1-type} values for non-standard use.
+<p>Reserve trigger <a href="Sdtrig.html#tdata1-type" class="xref page">type</a> values for non-standard use.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/417">#417</a></p>
 </li>
 <li>
-<p>Add {itrigger-nmi} bit to {csr-itrigger}. <a href="https://github.com/riscv/riscv-debug-spec/pull/408">#408</a>
+<p>Add <a href="Sdtrig.html#itrigger-nmi" class="xref page">nmi</a> bit to <a href="Sdtrig.html#csr-itrigger" class="xref page">itrigger</a>. <a href="https://github.com/riscv/riscv-debug-spec/pull/408">#408</a>
 and <a href="https://github.com/riscv/riscv-debug-spec/pull/709">#709</a></p>
 </li>
 <li>
@@ -1093,30 +1086,30 @@ and <a href="https://github.com/riscv/riscv-debug-spec/pull/709">#709</a></p>
 <a href="https://github.com/riscv/riscv-debug-spec/pull/506">#506</a></p>
 </li>
 <li>
-<p>Add {abstractcs-relaxedpriv} . <a href="https://github.com/riscv/riscv-debug-spec/pull/536">#536</a></p>
+<p>Add <a href="debug_module.html#abstractcs-relaxedpriv" class="xref page">relaxedpriv</a> . <a href="https://github.com/riscv/riscv-debug-spec/pull/536">#536</a></p>
 </li>
 <li>
-<p>Move {csr-scontext}, renaming original to {csr-mscontext}, and create {csr-hcontext}.
+<p>Move <a href="Sdtrig.html#csr-scontext" class="xref page">scontext</a>, renaming original to <a href="Sdtrig.html#csr-mscontext" class="xref page">mscontext</a>, and create <a href="Sdtrig.html#csr-hcontext" class="xref page">hcontext</a>.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/535">#535</a></p>
 </li>
 <li>
-<p>Add {csr-mcontrol6}, deprecating {csr-mcontrol}.
+<p>Add <a href="Sdtrig.html#csr-mcontrol6" class="xref page">mcontrol6</a>, deprecating <a href="Sdtrig.html#csr-mcontrol" class="xref page">mcontrol</a>.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/538">#538</a></p>
 </li>
 <li>
-<p>Add hypervisor support: {dcsr-ebreakvs}, {dcsr-ebreakvu}, {dcsr-v}, {csr-hcontext}, {csr-mcontrol}, {csr-mcontrol6}, and {virt-priv}.
+<p>Add hypervisor support: <a href="Sdext.html#dcsr-ebreakvs" class="xref page">ebreakvs</a>, <a href="Sdext.html#dcsr-ebreakvu" class="xref page">ebreakvu</a>, <a href="Sdext.html#dcsr-v" class="xref page">v</a>, <a href="Sdtrig.html#csr-hcontext" class="xref page">hcontext</a>, <a href="Sdtrig.html#csr-mcontrol" class="xref page">mcontrol</a>, <a href="Sdtrig.html#csr-mcontrol6" class="xref page">mcontrol6</a>, and <a href="Sdext.html#virt-priv" class="xref page">priv</a>.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/549">#549</a></p>
 </li>
 <li>
-<p>Optionally make {dmstatus-anyunavail} and {dmstatus-allunavail} sticky, controlled by {dmstatus-stickyunavail}.
+<p>Optionally make <a href="debug_module.html#dmstatus-anyunavail" class="xref page">anyunavail</a> and <a href="debug_module.html#dmstatus-allunavail" class="xref page">allunavail</a> sticky, controlled by <a href="debug_module.html#dmstatus-stickyunavail" class="xref page">stickyunavail</a>.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/520">#520</a></p>
 </li>
 <li>
-<p>Add {csr-tmexttrigger} to support trigger module external trigger inputs.
+<p>Add <a href="Sdtrig.html#csr-tmexttrigger" class="xref page">tmexttrigger</a> to support trigger module external trigger inputs.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/543">#543</a></p>
 </li>
 <li>
-<p>Describe {csr-mcontrol} and {csr-mcontrol6} behavior with atomic instructions.
+<p>Describe <a href="Sdtrig.html#csr-mcontrol" class="xref page">mcontrol</a> and <a href="Sdtrig.html#csr-mcontrol6" class="xref page">mcontrol6</a> behavior with atomic instructions.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/561">#561</a></p>
 </li>
 <li>
@@ -1124,20 +1117,20 @@ and <a href="https://github.com/riscv/riscv-debug-spec/pull/709">#709</a></p>
 <a href="https://github.com/riscv/riscv-debug-spec/pull/593">#593</a></p>
 </li>
 <li>
-<p>Add {textra32-sbytemask} and {textra32-sbytemask} to {csr-textra32} and {csr-textra64}.
+<p>Add <a href="Sdtrig.html#textra32-sbytemask" class="xref page">sbytemask</a> and <a href="Sdtrig.html#textra32-sbytemask" class="xref page">sbytemask</a> to <a href="Sdtrig.html#csr-textra32" class="xref page">textra32</a> and <a href="Sdtrig.html#csr-textra64" class="xref page">textra64</a>.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/588">#588</a></p>
 </li>
 <li>
 <p>Allow debugger to request harts stay alive with keepalive bit in
-{dmcontrol-setkeepalive}.
+<a href="debug_module.html#dmcontrol-setkeepalive" class="xref page">setkeepalive</a>.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/592">#592</a></p>
 </li>
 <li>
-<p>Add {dmstatus-ndmresetpending} to allow a debugger to determine when ndmreset is complete.
+<p>Add <a href="debug_module.html#dmstatus-ndmresetpending" class="xref page">ndmresetpending</a> to allow a debugger to determine when ndmreset is complete.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/594">#594</a></p>
 </li>
 <li>
-<p>Add {tmexttrigger-intctl} to support triggers from an interrupt controller.
+<p>Add <a href="Sdtrig.html#tmexttrigger-intctl" class="xref page">intctl</a> to support triggers from an interrupt controller.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/599">#599</a></p>
 </li>
 </ol>
@@ -1152,7 +1145,7 @@ and <a href="https://github.com/riscv/riscv-debug-spec/pull/709">#709</a></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>{itrigger-nmi} was moved from {csr-etrigger} to {csr-itrigger}, and is now subject to the mode bits in that trigger.</p>
+<p><a href="Sdtrig.html#itrigger-nmi" class="xref page">nmi</a> was moved from <a href="Sdtrig.html#csr-etrigger" class="xref page">etrigger</a> to <a href="Sdtrig.html#csr-itrigger" class="xref page">itrigger</a>, and is now subject to the mode bits in that trigger.</p>
 </li>
 <li>
 <p><a href="https://github.com/riscv/riscv-debug-spec/pull/728">#728</a> introduced
@@ -1165,7 +1158,7 @@ the <code>progbuf</code> registers.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/731">#731</a></p>
 </li>
 <li>
-<p>{csr-tcontrol} fields apply to all traps, not just breakpoint traps. This reverts
+<p><a href="Sdtrig.html#csr-tcontrol" class="xref page">tcontrol</a> fields apply to all traps, not just breakpoint traps. This reverts
 <a href="https://github.com/riscv/riscv-debug-spec/pull/723">#723</a>.
 <a href="https://github.com/riscv/riscv-debug-spec/pull/880">#880</a></p>
 </li>
@@ -1181,9 +1174,9 @@ the <code>progbuf</code> registers.
 <ol class="arabic">
 <li>
 <p><a href="https://github.com/riscv/riscv-debug-spec/pull/981">#981</a> made
-{csr-scontext}.{scontext-data}, {csr-mcontext}.{mcontext-hcontext},
-{textra64-sbytemask}, and {csr-textra64}.<code>svalue</code> narrower. This avoids confusion
-about the contents of {csr-scontext} and {csr-mcontext} when XLEN is reduced and
+<a href="Sdtrig.html#csr-scontext" class="xref page">scontext</a>.<a href="Sdtrig.html#scontext-data" class="xref page">data</a>, <a href="Sdtrig.html#csr-mcontext" class="xref page">mcontext</a>.<a href="Sdtrig.html#mcontext-hcontext" class="xref page">hcontext</a>,
+<a href="Sdtrig.html#textra64-sbytemask" class="xref page">sbytemask</a>, and <a href="Sdtrig.html#csr-textra64" class="xref page">textra64</a>.<code>svalue</code> narrower. This avoids confusion
+about the contents of <a href="Sdtrig.html#csr-scontext" class="xref page">scontext</a> and <a href="Sdtrig.html#csr-mcontext" class="xref page">mcontext</a> when XLEN is reduced and
 increased again.</p>
 </li>
 </ol>

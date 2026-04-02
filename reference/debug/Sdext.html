@@ -668,14 +668,7 @@
           </li>
     </ul>
   </nav>
-</div><div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/Sdext.adoc - include::partial$register-attrs.adoc[]</p>
-</div>
-</div>
-</div>
-<div class="sect1">
+</div><div class="sect1">
 <h2 id="core_debug"><a class="anchor" href="#core_debug"></a>4.1. Sdext (ISA Extension)</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -718,8 +711,8 @@ an exception is mentioned in this list.</p>
 <li>
 <p>All operations are executed with machine mode privilege, except that
 additional Debug Mode CSRs are accessible and <code>mprv</code> in <code>mstatus</code> may be ignored
-according to {dcsr-mprven}. Full permission checks, or a relaxed set of permission
-checks, will apply according to {abstractcs-relaxedpriv}.</p>
+according to <a href="#dcsr-mprven">mprven</a>. Full permission checks, or a relaxed set of permission
+checks, will apply according to <a href="debug_module.html#abstractcs-relaxedpriv" class="xref page">relaxedpriv</a>.</p>
 </li>
 <li>
 <p>All interrupts (including NMI) are masked.</p>
@@ -739,10 +732,10 @@ set <code>vstart</code> appropriately.</p>
 <p>Triggers don&#8217;t match or fire.</p>
 </li>
 <li>
-<p>If {dcsr-stopcount} is 0 then counters continue. If it is 1 then counters are stopped.</p>
+<p>If <a href="#dcsr-stopcount">stopcount</a> is 0 then counters continue. If it is 1 then counters are stopped.</p>
 </li>
 <li>
-<p>If {dcsr-stoptime} is 0 then <code>time</code> continues to update. If it is 1 then <code>time</code> will not update. It will resynchronize with <code>time</code> after leaving Debug Mode.</p>
+<p>If <a href="#dcsr-stoptime">stoptime</a> is 0 then <code>time</code> continues to update. If it is 1 then <code>time</code> will not update. It will resynchronize with <code>time</code> after leaving Debug Mode.</p>
 </li>
 <li>
 <p>Instructions that place the hart into a stalled state act as a <code>nop</code>.
@@ -751,7 +744,7 @@ This includes <code>wfi</code>, <code>wrs.sto</code>, and <code>wrs.nto</code>.<
 <li>
 <p>Almost all instructions that change the privilege mode have UNSPECIFIED behavior.
 This includes <code>ecall</code>, <code>mret</code>, <code>sret</code>, and <code>uret</code>. (To change the
-privilege mode, the debugger can write {dcsr-prv} and {dcsr-v} in {csr-dcsr}). The only exception is
+privilege mode, the debugger can write <a href="#dcsr-prv">prv</a> and <a href="#dcsr-v">v</a> in <a href="#csr-dcsr">dcsr</a>). The only exception is
 <code>ebreak</code>, which ends execution of the Program Buffer when executed.</p>
 </li>
 <li>
@@ -791,12 +784,12 @@ executes as a no-op.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>When {dcsr-mprven}, the external debugger can set MPRV and MPP appropriately to have
+<p>When <a href="#dcsr-mprven">mprven</a>, the external debugger can set MPRV and MPP appropriately to have
 hardware perform memory accesses with the appropriate endianness,
-address translation, permission checks, and PMP/PMA checks (subject to {abstractcs-relaxedpriv}). This is also the only way to access all of physical memory when
-34-bit physical addresses are supported on a Sv32 hart. If hardware ties {dcsr-mprven} to 0 then the external debugger is expected to simulate all the effects
+address translation, permission checks, and PMP/PMA checks (subject to <a href="debug_module.html#abstractcs-relaxedpriv" class="xref page">relaxedpriv</a>). This is also the only way to access all of physical memory when
+34-bit physical addresses are supported on a Sv32 hart. If hardware ties <a href="#dcsr-mprven">mprven</a> to 0 then the external debugger is expected to simulate all the effects
 of MPRV, including any extensions that affect memory accesses. For these
-reasons it is recommended to tie {dcsr-mprven} to 1.</p>
+reasons it is recommended to tie <a href="#dcsr-mprven">mprven</a> to 1.</p>
 </div>
 </td>
 </tr>
@@ -859,8 +852,8 @@ preferred way to single step.</p>
 </div>
 <div class="paragraph">
 <p>An external debugger can cause a halted hart to execute a single
-instruction or trap and then re-enter Debug Mode by setting {dcsr-step} before
-resuming. If {dcsr-step} is set when a hart resumes then it will single step,
+instruction or trap and then re-enter Debug Mode by setting <a href="#dcsr-step">step</a> before
+resuming. If <a href="#dcsr-step">step</a> is set when a hart resumes then it will single step,
 regardless of the reason for resuming.</p>
 </div>
 <div class="paragraph">
@@ -874,7 +867,7 @@ be executed at all.</p>
 <div class="paragraph">
 <p>If executing or fetching the instruction causes a trigger to fire with
 action=1, Debug Mode is re-entered immediately after that trigger has
-fired. In that case {dcsr-cause} is set to 2 (trigger) instead of 4 (single step).
+fired. In that case <a href="#dcsr-cause">cause</a> is set to 2 (trigger) instead of 4 (single step).
 Whether the instruction is executed or not depends on the specific
 configuration of the trigger.</p>
 </div>
@@ -894,7 +887,7 @@ then instead the instruction is treated as a <code>nop</code>. This includes <co
 <div class="sect3">
 <h4 id="stepicount"><a class="anchor" href="#stepicount"></a>4.1.5.2. Icount Trigger</h4>
 <div class="paragraph">
-<p>Native debuggers won&#8217;t have access to {csr-dcsr}, but can use the {csr-icount} trigger by setting {icount-count} to 1.</p>
+<p>Native debuggers won&#8217;t have access to <a href="#csr-dcsr">dcsr</a>, but can use the <a href="Sdtrig.html#csr-icount" class="xref page">icount</a> trigger by setting <a href="Sdtrig.html#icount-count" class="xref page">count</a> to 1.</p>
 </div>
 <div class="paragraph">
 <p>This approach does have some limitations:</p>
@@ -916,7 +909,7 @@ time to complete.</p>
 <p>This mechanism cleanly supports a system which supports multiple
 privilege levels, where the OS or a debug stub runs in M-Mode while the
 program being debugged runs in a less privileged mode. Systems that only
-support M-Mode can use {csr-icount} as well, but {icount-count} must be able to count
+support M-Mode can use <a href="Sdtrig.html#csr-icount" class="xref page">icount</a> as well, but <a href="Sdtrig.html#icount-count" class="xref page">count</a> must be able to count
 several instructions (depending on the software implementation). See
 <a href="#nativestep">[nativestep]</a>.</p>
 </div>
@@ -926,7 +919,7 @@ several instructions (depending on the software implementation). See
 <h3 id="4-1-6-reset"><a class="anchor" href="#4-1-6-reset"></a>4.1.6. Reset</h3>
 <div class="paragraph">
 <p>If the halt signal (driven by the hart&#8217;s halt request bit in the Debug
-Module) or {dmstatus-hasresethaltreq} are asserted when a hart comes out of reset, the hart must
+Module) or <a href="debug_module.html#dmstatus-hasresethaltreq" class="xref page">hasresethaltreq</a> are asserted when a hart comes out of reset, the hart must
 enter Debug Mode before executing any instructions, but after performing
 any initialization that would usually happen before the first
 instruction is executed.</p>
@@ -940,23 +933,23 @@ instruction is executed.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>{dcsr-cause} is updated.</p>
+<p><a href="#dcsr-cause">cause</a> is updated.</p>
 </li>
 <li>
-<p>{dcsr-prv} and {dcsr-v} are set to reflect current privilege mode and virtualization mode.</p>
+<p><a href="#dcsr-prv">prv</a> and <a href="#dcsr-v">v</a> are set to reflect current privilege mode and virtualization mode.</p>
 </li>
 <li>
-<p>If the Zicfilp extension is implemented, {dcsr-pelp} is set to the current
+<p>If the Zicfilp extension is implemented, <a href="#dcsr-pelp">pelp</a> is set to the current
 <code>ELP</code> state and <code>ELP</code> is set to <code>NO_LP_EXPECTED</code></p>
 </li>
 <li>
-<p>{csr-dpc} is set to the next instruction that should be executed.</p>
+<p><a href="#csr-dpc">dpc</a> is set to the next instruction that should be executed.</p>
 </li>
 <li>
 <p>If the current instruction can be partially executed and should be
 restarted to complete, then the relevant state for that is updated. E.g.
 if a halt occurs during a partially executed vector instruction, then
-<code>vstart</code> is updated, and {csr-dpc} is updated to the address of the partially
+<code>vstart</code> is updated, and <a href="#csr-dpc">dpc</a> is updated to the address of the partially
 executed instruction. This is analogous to how vector instructions behave for exceptions.</p>
 </li>
 <li>
@@ -973,16 +966,16 @@ executed instruction. This is analogous to how vector instructions behave for ex
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>pc</code> changes to the value stored in {csr-dpc}.</p>
+<p><code>pc</code> changes to the value stored in <a href="#csr-dpc">dpc</a>.</p>
 </li>
 <li>
 <p>The current privilege mode and virtualization mode are changed to that
-specified by {dcsr-prv} and {dcsr-v}.</p>
+specified by <a href="#dcsr-prv">prv</a> and <a href="#dcsr-v">v</a>.</p>
 </li>
 <li>
 <p>If the Zicfilp extension is enabled at the new privilege mode, the current
-<code>ELP</code> state is changed to that specified by {dcsr-pelp} else it is set to
-<code>NO_LP_EXPECTED</code>. {dcsr-pelp} is set to <code>NO_LP_EXPECTED</code>.</p>
+<code>ELP</code> state is changed to that specified by <a href="#dcsr-pelp">pelp</a> else it is set to
+<code>NO_LP_EXPECTED</code>. <a href="#dcsr-pelp">pelp</a> is set to <code>NO_LP_EXPECTED</code>.</p>
 </li>
 <li>
 <p>If the new privilege mode is less privileged than M-mode, <code>MPRV</code> in <code>mstatus</code> is cleared.</p>
@@ -1033,22 +1026,22 @@ instruction exception.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x7b0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Debug Control and Status ({csr-dcsr})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debug Control and Status (<a href="#csr-dcsr">dcsr</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csr-dcsr">Debug Control and Status (dcsr, at 0x7b0)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x7b1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Debug PC ({csr-dpc})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debug PC (<a href="#csr-dpc">dpc</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csr-dpc">Debug PC (dpc, at 0x7b1)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x7b2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Debug Scratch Register 0 ({csr-dscratch0})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debug Scratch Register 0 (<a href="#csr-dscratch0">dscratch0</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csr-dscratch0">Debug Scratch Register 0 (dscratch0, at 0x7b2)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x7b3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Debug Scratch Register 1 ({csr-dscratch1})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debug Scratch Register 1 (<a href="#csr-dscratch1">dscratch1</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csr-dscratch1">Debug Scratch Register 1 (dscratch1, at 0x7b3)</a></p></td>
 </tr>
 </tbody>
@@ -1056,10 +1049,10 @@ instruction exception.</p>
 <div class="sect3">
 <h4 id="csr-dcsr"><a class="anchor" href="#csr-dcsr"></a>Debug Control and Status (dcsr, at 0x7b0)</h4>
 <div class="paragraph">
-<p>Upon entry into Debug Mode, {dcsr-v} and {dcsr-prv} are updated
-with the privilege level the hart was previously in, and {dcsr-cause}
+<p>Upon entry into Debug Mode, <a href="#dcsr-v">v</a> and <a href="#dcsr-prv">prv</a> are updated
+with the privilege level the hart was previously in, and <a href="#dcsr-cause">cause</a>
 is updated with the reason for Debug Mode entry.  Other than these
-fields and {dcsr-nmip}, the other fields of {csr-dcsr} are only
+fields and <a href="#dcsr-nmip">nmip</a>, the other fields of <a href="#csr-dcsr">dcsr</a> are only
 writable by the external debugger.</p>
 </div>
 <div class="paragraph">
@@ -1086,7 +1079,7 @@ allowed to be at different positions than shown as long as:</p>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-center valign-top">{dcsr-cause} encoding</th>
+<th class="tableblock halign-center valign-top"><a href="#dcsr-cause">cause</a> encoding</th>
 <th class="tableblock halign-center valign-top">Cause</th>
 </tr>
 </thead>
@@ -1131,12 +1124,12 @@ to be high priority causes on the subsequent instruction.  Therefore,
 an execute trigger with timing=after on an ebreak instruction is lower
 priority than the ebreak itself because the trigger will fire after the
 ebreak instruction.  For the same reason, if a single instruction is
-stepped with both icount and {dcsr-step} then the {dcsr-step} has
+stepped with both icount and <a href="#dcsr-step">step</a> then the <a href="#dcsr-step">step</a> has
 priority.  See <a href="#tab:priority">[tab:priority]</a> for the relative priorities of
 triggers with respect to the ebreak instruction.</p>
 </div>
 <div class="paragraph">
-<p>Most multi-hart implementations will probably hardwire {dcsr-stoptime}
+<p>Most multi-hart implementations will probably hardwire <a href="#dcsr-stoptime">stoptime</a>
 to 0, as the implementation can get complicated and the benefit is
 small.</p>
 </div>
@@ -1195,7 +1188,7 @@ available version of this spec.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dcsr-extcause"></a> <code>extcause</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>When {dcsr-cause} is 7, this optional field contains the value of a
+<p>When <a href="#dcsr-cause">cause</a> is 7, this optional field contains the value of a
 more specific halt reason than "other." Otherwise it contains 0.</p>
 </div>
 <div class="paragraph">
@@ -1241,10 +1234,10 @@ returns the hart to the critical error state.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>When {dcsr-cetrig} is 1, resuming from Debug Mode
+<p>When <a href="#dcsr-cetrig">cetrig</a> is 1, resuming from Debug Mode
 following an entry due to a critical error will result in an
 immediate re-entry into Debug Mode due to the critical error.
-The debugger may resume with {dcsr-cetrig} set to 0 to allow the
+The debugger may resume with <a href="#dcsr-cetrig">cetrig</a> set to 0 to allow the
 platform defined actions on critical-error signal to occur.
 Other possible actions include initiating a hart or platform
 reset using the Debug Module reset control.</p>
@@ -1375,12 +1368,12 @@ Privileged Spec.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dcsr-stepie"></a> <code>stepie</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>0 (interrupts disabled): Interrupts (including NMI) are disabled during single stepping
-with {dcsr-step} set.
+with <a href="#dcsr-step">step</a> set.
 This value should be supported.</p>
 </div>
 <div class="paragraph">
 <p>1 (interrupts enabled): Interrupts (including NMI) are enabled during single stepping
-with {dcsr-step} set.</p>
+with <a href="#dcsr-step">step</a> set.</p>
 </div>
 <div class="paragraph">
 <p>Implementations may hard wire this bit to 0.
@@ -1430,7 +1423,7 @@ leaving Debug Mode, <code>time</code> will reflect the latest
 value of <code>mtime</code> again.</p>
 </div>
 <div class="paragraph">
-<p>While all harts have {dcsr-stoptime}=1 and are in Debug Mode,
+<p>While all harts have <a href="#dcsr-stoptime">stoptime</a>=1 and are in Debug Mode,
 <code>mtime</code> is allowed to stop incrementing.</p>
 </div>
 <div class="paragraph">
@@ -1450,7 +1443,7 @@ value of <code>mtime</code> again.</p>
 </div>
 <div class="paragraph">
 <p>When there are multiple reasons to enter Debug Mode in a single
-cycle, hardware should set {dcsr-cause} to the cause with the highest
+cycle, hardware should set <a href="#dcsr-cause">cause</a> to the cause with the highest
 priority.  See <a href="#tab:dcsrcausepriority">Table 2</a> for priorities.</p>
 </div>
 <div class="paragraph">
@@ -1460,10 +1453,10 @@ priority.  See <a href="#tab:dcsrcausepriority">Table 2</a> for priorities.</p>
 <p>2 (trigger): A Trigger Module trigger fired with action=1.</p>
 </div>
 <div class="paragraph">
-<p>3 (haltreq): The debugger requested entry to Debug Mode using {dmcontrol-haltreq}.</p>
+<p>3 (haltreq): The debugger requested entry to Debug Mode using <a href="debug_module.html#dmcontrol-haltreq" class="xref page">haltreq</a>.</p>
 </div>
 <div class="paragraph">
-<p>4 (step): The hart single stepped because {dcsr-step} was set.</p>
+<p>4 (step): The hart single stepped because <a href="#dcsr-step">step</a> was set.</p>
 </div>
 <div class="paragraph">
 <p>5 (resethaltreq): The hart halted directly out of reset due to {resethaltreq} It
@@ -1475,7 +1468,7 @@ Harts may report 3 for this cause instead.</p>
 </div>
 <div class="paragraph">
 <p>7 (other): The hart halted for a reason other than the ones mentioned above.
-{dcsr-extcause} may contain a more specific reason.</p>
+<a href="#dcsr-extcause">extcause</a> may contain a more specific reason.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>R</strong></p>
@@ -1578,7 +1571,7 @@ change to it, the hart may change to any supported privilege mode.</p>
 <div class="sect3">
 <h4 id="csr-dpc"><a class="anchor" href="#csr-dpc"></a>Debug PC (dpc, at 0x7b1)</h4>
 <div class="paragraph">
-<p>Upon entry to debug mode, {csr-dpc} is updated with the virtual address of
+<p>Upon entry to debug mode, <a href="#csr-dpc">dpc</a> is updated with the virtual address of
 the next instruction to be executed. The behavior is described in more
 detail in <a href="#tab:dpc">Table 3</a>.</p>
 </div>
@@ -1606,8 +1599,8 @@ detail in <a href="#tab:dpc">Table 3</a>.</p>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">trigger module</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">The address of the next instruction to be executed at the time that debug mode was entered. If the trigger is {csr-mcontrol} and {mcontrol-timing} is 0 or if the trigger is
-{csr-mcontrol6} and <code>hit1</code> is 0, this corresponds to the address of the instruction which caused the trigger to fire.</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">The address of the next instruction to be executed at the time that debug mode was entered. If the trigger is <a href="Sdtrig.html#csr-mcontrol" class="xref page">mcontrol</a> and <a href="Sdtrig.html#mcontrol-timing" class="xref page">timing</a> is 0 or if the trigger is
+<a href="Sdtrig.html#csr-mcontrol6" class="xref page">mcontrol6</a> and <code>hit1</code> is 0, this corresponds to the address of the instruction which caused the trigger to fire.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top"><p class="tableblock">halt request</p></td>
@@ -1616,11 +1609,11 @@ detail in <a href="#tab:dpc">Table 3</a>.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Executing the Program Buffer may cause the value of {csr-dpc} to become
+<p>Executing the Program Buffer may cause the value of <a href="#csr-dpc">dpc</a> to become
 UNSPECIFIED. If that is the case, it must be possible to read/write
-{csr-dpc} using an abstract command with {accessregister-postexec} not
-set.  The debugger must attempt to save {csr-dpc} between halting and
-executing a Program Buffer, and then restore {csr-dpc} before leaving
+<a href="#csr-dpc">dpc</a> using an abstract command with <a href="debug_module.html#accessregister-postexec" class="xref page">postexec</a> not
+set.  The debugger must attempt to save <a href="#csr-dpc">dpc</a> between halting and
+executing a Program Buffer, and then restore <a href="#csr-dpc">dpc</a> before leaving
 Debug Mode.</p>
 </div>
 <div class="admonitionblock note">
@@ -1631,7 +1624,7 @@ Debug Mode.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Allowing {csr-dpc} to become UNSPECIFIED upon Program Buffer
+<p>Allowing <a href="#csr-dpc">dpc</a> to become UNSPECIFIED upon Program Buffer
 execution allows for direct implementations that don&#8217;t have a
 separate PC register, and do need to use the PC when executing the
 Program Buffer.</p>
@@ -1641,24 +1634,24 @@ Program Buffer.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>If the Access Register abstract command supports reading {csr-dpc} while
+<p>If the Access Register abstract command supports reading <a href="#csr-dpc">dpc</a> while
 the hart is running, then the value read should be the address of a
 recently executed instruction.</p>
 </div>
 <div class="paragraph">
-<p>If the Access Register abstract command supports writing {csr-dpc} while
+<p>If the Access Register abstract command supports writing <a href="#csr-dpc">dpc</a> while
 the hart is running, then the executing program should jump to the
 written address shortly after the write occurs.</p>
 </div>
 <div class="paragraph">
-<p>The writability of {csr-dpc} follows the same rules as <code>mepc</code> as defined
-in the Privileged Spec.  In particular, {csr-dpc} must be able to hold
+<p>The writability of <a href="#csr-dpc">dpc</a> follows the same rules as <code>mepc</code> as defined
+in the Privileged Spec.  In particular, <a href="#csr-dpc">dpc</a> must be able to hold
 all valid virtual addresses and the writability of the low bits depends
 on IALIGN.</p>
 </div>
 <div class="paragraph">
 <p>When resuming, the hart&#8217;s PC is updated to the virtual address stored in
-{csr-dpc}. A debugger may write {csr-dpc} to change where the hart resumes.</p>
+<a href="#csr-dpc">dpc</a>. A debugger may write <a href="#csr-dpc">dpc</a> to change where the hart resumes.</p>
 </div>
 <div class="paragraph">
 <p>This CSR is read/write.</p>
@@ -1673,7 +1666,7 @@ on IALIGN.</p>
 <h4 id="csr-dscratch0"><a class="anchor" href="#csr-dscratch0"></a>Debug Scratch Register 0 (dscratch0, at 0x7b2)</h4>
 <div class="paragraph">
 <p>Optional scratch register that can be used by implementations that need
-it. A debugger must not write to this register unless {dm-hartinfo}
+it. A debugger must not write to this register unless <a href="debug_module.html#dm-hartinfo" class="xref page">hartinfo</a>
 explicitly mentions it (the Debug Module may use this register internally).</p>
 </div>
 <div class="paragraph">
@@ -1689,7 +1682,7 @@ explicitly mentions it (the Debug Module may use this register internally).</p>
 <h4 id="csr-dscratch1"><a class="anchor" href="#csr-dscratch1"></a>Debug Scratch Register 1 (dscratch1, at 0x7b3)</h4>
 <div class="paragraph">
 <p>Optional scratch register that can be used by implementations that need
-it. A debugger must not write to this register unless {dm-hartinfo}
+it. A debugger must not write to this register unless <a href="debug_module.html#dm-hartinfo" class="xref page">hartinfo</a>
 explicitly mentions it (the Debug Module may use this register internally).</p>
 </div>
 <div class="paragraph">
@@ -1729,7 +1722,7 @@ also accessing those same registers.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">virtual</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Privilege Mode ({virt-priv})</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Privilege Mode (<a href="#virt-priv">priv</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#virt-priv">Privilege Mode (priv, at virtual)</a></p></td>
 </tr>
 </tbody>
@@ -1743,8 +1736,8 @@ Users can write this register to change the privilege mode that
 the hart will run in when it resumes.</p>
 </div>
 <div class="paragraph">
-<p>This register contains {dcsr-prv} and {dcsr-v} from {csr-dcsr}, but in a place that the user
-is expected to access. The user should not access {csr-dcsr} directly,
+<p>This register contains <a href="#dcsr-prv">prv</a> and <a href="#dcsr-v">v</a> from <a href="#csr-dcsr">dcsr</a>, but in a place that the user
+is expected to access. The user should not access <a href="#csr-dcsr">dcsr</a> directly,
 because doing so might interfere with the debugger.</p>
 </div>
 <table id="tab:privmode" class="tableblock frame-all grid-all fit-content center">
