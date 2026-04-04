@@ -1003,27 +1003,27 @@ instruction exception.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x7b0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Debug Control and Status (<a href="#csr-dcsr">dcsr</a>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csr-dcsr">Debug Control and Status (dcsr, at 0x7b0)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csr-dcsr">4.1.9.1. Debug Control and Status (dcsr, at 0x7b0)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x7b1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Debug PC (<a href="#csr-dpc">dpc</a>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csr-dpc">Debug PC (dpc, at 0x7b1)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csr-dpc">4.1.9.2. Debug PC (dpc, at 0x7b1)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x7b2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Debug Scratch Register 0 (<a href="#csr-dscratch0">dscratch0</a>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csr-dscratch0">Debug Scratch Register 0 (dscratch0, at 0x7b2)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csr-dscratch0">4.1.9.3. Debug Scratch Register 0 (dscratch0, at 0x7b2)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x7b3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Debug Scratch Register 1 (<a href="#csr-dscratch1">dscratch1</a>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csr-dscratch1">Debug Scratch Register 1 (dscratch1, at 0x7b3)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#csr-dscratch1">4.1.9.4. Debug Scratch Register 1 (dscratch1, at 0x7b3)</a></p></td>
 </tr>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="csr-dcsr"><a class="anchor" href="#csr-dcsr"></a>Debug Control and Status (dcsr, at 0x7b0)</h4>
+<h4 id="csr-dcsr"><a class="anchor" href="#csr-dcsr"></a>4.1.9.1. Debug Control and Status (dcsr, at 0x7b0)</h4>
 <div class="paragraph">
 <p>Upon entry into Debug Mode, <a href="#dcsr-v">v</a> and <a href="#dcsr-prv">prv</a> are updated
 with the privilege level the hart was previously in, and <a href="#dcsr-cause">cause</a>
@@ -1545,7 +1545,7 @@ change to it, the hart may change to any supported privilege mode.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="csr-dpc"><a class="anchor" href="#csr-dpc"></a>Debug PC (dpc, at 0x7b1)</h4>
+<h4 id="csr-dpc"><a class="anchor" href="#csr-dpc"></a>4.1.9.2. Debug PC (dpc, at 0x7b1)</h4>
 <div class="paragraph">
 <p>Upon entry to debug mode, <a href="#csr-dpc">dpc</a> is updated with the virtual address of
 the next instruction to be executed. The behavior is described in more
@@ -1639,7 +1639,7 @@ on IALIGN.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="csr-dscratch0"><a class="anchor" href="#csr-dscratch0"></a>Debug Scratch Register 0 (dscratch0, at 0x7b2)</h4>
+<h4 id="csr-dscratch0"><a class="anchor" href="#csr-dscratch0"></a>4.1.9.3. Debug Scratch Register 0 (dscratch0, at 0x7b2)</h4>
 <div class="paragraph">
 <p>Optional scratch register that can be used by implementations that need
 it. A debugger must not write to this register unless <a href="debug_module.html#dm-hartinfo" class="xref page">hartinfo</a>
@@ -1655,7 +1655,7 @@ explicitly mentions it (the Debug Module may use this register internally).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="csr-dscratch1"><a class="anchor" href="#csr-dscratch1"></a>Debug Scratch Register 1 (dscratch1, at 0x7b3)</h4>
+<h4 id="csr-dscratch1"><a class="anchor" href="#csr-dscratch1"></a>4.1.9.4. Debug Scratch Register 1 (dscratch1, at 0x7b3)</h4>
 <div class="paragraph">
 <p>Optional scratch register that can be used by implementations that need
 it. A debugger must not write to this register unless <a href="debug_module.html#dm-hartinfo" class="xref page">hartinfo</a>
@@ -1699,12 +1699,12 @@ also accessing those same registers.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">virtual</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Privilege Mode (<a href="#virt-priv">priv</a>)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#virt-priv">Privilege Mode (priv, at virtual)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#virt-priv">4.1.10.1. Privilege Mode (priv, at virtual)</a></p></td>
 </tr>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="virt-priv"><a class="anchor" href="#virt-priv"></a>Privilege Mode (priv, at virtual)</h4>
+<h4 id="virt-priv"><a class="anchor" href="#virt-priv"></a>4.1.10.1. Privilege Mode (priv, at virtual)</h4>
 <div class="paragraph">
 <p>Users can read this register to inspect the privilege mode that
 the hart was running in when the hart halted.
