@@ -797,7 +797,7 @@ RPMI service groups defined by this specification.</p>
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="4-1-1-service-group-base-servicegroup_id-0x0001"><a class="anchor" href="#4-1-1-service-group-base-servicegroup_id-0x0001"></a>4.1.1. Service Group: BASE (SERVICEGROUP_ID: 0x0001)</h3>
+<h3 id="service-group-base-servicegroup_id-0x0001"><a class="anchor" href="#service-group-base-servicegroup_id-0x0001"></a>Service Group: BASE (SERVICEGROUP_ID: 0x0001)</h3>
 <div class="paragraph">
 <p>The BASE service group is mandatory and provides the following services:</p>
 </div>
@@ -874,7 +874,7 @@ microcontroller.</p>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="4-1-1-1-rpmi-implementation-ids"><a class="anchor" href="#4-1-1-1-rpmi-implementation-ids"></a>4.1.1.1. RPMI Implementation IDs</h4>
+<h4 id="rpmi-implementation-ids"><a class="anchor" href="#rpmi-implementation-ids"></a>RPMI Implementation IDs</h4>
 <div class="paragraph">
 <p>The RPMI specification defines space for standard implementation IDs and for
 experimental implementation IDs. The experimental implementation IDs can be used
@@ -919,7 +919,7 @@ are listed in the table below.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="base-notifications"><a class="anchor" href="#base-notifications"></a>4.1.1.2. Notifications</h4>
+<h4 id="base-notifications"><a class="anchor" href="#base-notifications"></a>Notifications</h4>
 <div class="paragraph">
 <p>This service is used by the platform microcontroller to send the asynchronous
 message of type notification to the application processor. The message
@@ -954,14 +954,14 @@ message requests and acknowledgements are not guaranteed.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-1-3-service-base_enable_notification-service_id-0x01"><a class="anchor" href="#4-1-1-3-service-base_enable_notification-service_id-0x01"></a>4.1.1.3. Service: BASE_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
+<h4 id="service-base_enable_notification-service_id-0x01"><a class="anchor" href="#service-base_enable_notification-service_id-0x01"></a>Service: BASE_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
 <div class="paragraph">
 <p>This service allows the application processor to subscribe to <code>BASE</code>
 service group notifications. The platform may optionally support notifications
 for events that may occur. The platform microcontroller can send these
 notification messages to the application processor if they are implemented and
 the application processor has subscribed to them. The supported events are
-described in <a href="#base-notifications">4.1.1.2. Notifications</a>.</p>
+described in <a href="#base-notifications">Notifications</a>.</p>
 </div>
 <table id="table_base_ennotification_request_data" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 7. Request Data</caption>
@@ -1097,7 +1097,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-1-4-service-base_get_implementation_version-service_id-0x02"><a class="anchor" href="#4-1-1-4-service-base_get_implementation_version-service_id-0x02"></a>4.1.1.4. Service: BASE_GET_IMPLEMENTATION_VERSION (SERVICE_ID: 0x02)</h4>
+<h4 id="service-base_get_implementation_version-service_id-0x02"><a class="anchor" href="#service-base_get_implementation_version-service_id-0x02"></a>Service: BASE_GET_IMPLEMENTATION_VERSION (SERVICE_ID: 0x02)</h4>
 <div class="paragraph">
 <p>This service is used to get the RPMI implementation version of the platform
 microcontroller. The version returned is a 32-bit composite number containing
@@ -1204,7 +1204,7 @@ the <code>MAJOR</code> and <code>MINOR</code> version numbers.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-1-5-service-base_get_implementation_id-service_id-0x03"><a class="anchor" href="#4-1-1-5-service-base_get_implementation_id-service_id-0x03"></a>4.1.1.5. Service: BASE_GET_IMPLEMENTATION_ID (SERVICE_ID: 0x03)</h4>
+<h4 id="service-base_get_implementation_id-service_id-0x03"><a class="anchor" href="#service-base_get_implementation_id-service_id-0x03"></a>Service: BASE_GET_IMPLEMENTATION_ID (SERVICE_ID: 0x03)</h4>
 <div class="paragraph">
 <p>This service is used to get a 32-bit RPMI implementation ID assigned to the
 software that implements the RPMI specification. Every implementation ID is
@@ -1285,7 +1285,7 @@ unique and listed in the <a href="#table_base_rpmi_impl_id">Table 5</a>.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-1-6-service-base_get_spec_version-service_id-0x04"><a class="anchor" href="#4-1-1-6-service-base_get_spec_version-service_id-0x04"></a>4.1.1.6. Service: BASE_GET_SPEC_VERSION (SERVICE_ID: 0x04)</h4>
+<h4 id="service-base_get_spec_version-service_id-0x04"><a class="anchor" href="#service-base_get_spec_version-service_id-0x04"></a>Service: BASE_GET_SPEC_VERSION (SERVICE_ID: 0x04)</h4>
 <div class="paragraph">
 <p>This service is used to get the implemented RPMI specification version. The
 version returned is a 32-bit composite number containing the <code>MAJOR</code> and
@@ -1392,7 +1392,7 @@ version returned is a 32-bit composite number containing the <code>MAJOR</code> 
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-1-7-service-base_get_platform_info-service_id-0x05"><a class="anchor" href="#4-1-1-7-service-base_get_platform_info-service_id-0x05"></a>4.1.1.7. Service: BASE_GET_PLATFORM_INFO (SERVICE_ID: 0x05)</h4>
+<h4 id="service-base_get_platform_info-service_id-0x05"><a class="anchor" href="#service-base_get_platform_info-service_id-0x05"></a>Service: BASE_GET_PLATFORM_INFO (SERVICE_ID: 0x05)</h4>
 <div class="paragraph">
 <p>This service is used to get additional platform information if available.</p>
 </div>
@@ -1483,7 +1483,7 @@ model, revision, or configuration of the hardware.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-1-8-service-base_probe_service_group-service_id-0x06"><a class="anchor" href="#4-1-1-8-service-base_probe_service_group-service_id-0x06"></a>4.1.1.8. Service: BASE_PROBE_SERVICE_GROUP (SERVICE_ID: 0x06)</h4>
+<h4 id="service-base_probe_service_group-service_id-0x06"><a class="anchor" href="#service-base_probe_service_group-service_id-0x06"></a>Service: BASE_PROBE_SERVICE_GROUP (SERVICE_ID: 0x06)</h4>
 <div class="paragraph">
 <p>This service is used to probe the implementation of a service group and to
 obtain the implemented service group version. The service group version is a
@@ -1611,7 +1611,7 @@ version is returned in the <code>SERVICE_GROUP_VERSION</code> field. Otherwise i
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-1-9-service-base_get_attributes-service_id-0x07"><a class="anchor" href="#4-1-1-9-service-base_get_attributes-service_id-0x07"></a>4.1.1.9. Service: BASE_GET_ATTRIBUTES (SERVICE_ID: 0x07)</h4>
+<h4 id="service-base_get_attributes-service_id-0x07"><a class="anchor" href="#service-base_get_attributes-service_id-0x07"></a>Service: BASE_GET_ATTRIBUTES (SERVICE_ID: 0x07)</h4>
 <div class="paragraph">
 <p>This service is used to discover additional features supported by the BASE
 service group.</p>
@@ -1757,7 +1757,7 @@ service group.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-2-service-group-system_msi-servicegroup_id-0x0002"><a class="anchor" href="#4-1-2-service-group-system_msi-servicegroup_id-0x0002"></a>4.1.2. Service Group - SYSTEM_MSI (SERVICEGROUP_ID: 0x0002)</h3>
+<h3 id="service-group-system_msi-servicegroup_id-0x0002"><a class="anchor" href="#service-group-system_msi-servicegroup_id-0x0002"></a>Service Group - SYSTEM_MSI (SERVICEGROUP_ID: 0x0002)</h3>
 <div class="paragraph">
 <p>The SYSTEM_MSI service group defines services to allow application processors
 to receive MSIs upon system events such as P2A doorbell, graceful shutdown/reboot
@@ -1914,20 +1914,20 @@ service group:</p>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="system-msi-notifications"><a class="anchor" href="#system-msi-notifications"></a>4.1.2.1. Notifications</h4>
+<h4 id="system-msi-notifications"><a class="anchor" href="#system-msi-notifications"></a>Notifications</h4>
 <div class="paragraph">
 <p>This service group does not support any events for notification.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-2-2-service-sysmsi_enable_notification-service_id-0x01"><a class="anchor" href="#4-1-2-2-service-sysmsi_enable_notification-service_id-0x01"></a>4.1.2.2. Service: SYSMSI_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
+<h4 id="service-sysmsi_enable_notification-service_id-0x01"><a class="anchor" href="#service-sysmsi_enable_notification-service_id-0x01"></a>Service: SYSMSI_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
 <div class="paragraph">
 <p>This service allows the application processor to subscribe to <code>SYSTEM_MSI</code>
 service group notifications. The platform may optionally support notifications
 for events that may occur. The platform microcontroller can send these
 notification messages to the application processor if they are implemented and
 the application processor has subscribed to them. The supported events are
-described in <a href="#system-msi-notifications">4.1.2.1. Notifications</a>.</p>
+described in <a href="#system-msi-notifications">Notifications</a>.</p>
 </div>
 <table id="table_sysmsi_ennotification_request_data" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 15. Request Data</caption>
@@ -2063,7 +2063,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-2-3-service-sysmsi_get_attributes-service_id-0x02"><a class="anchor" href="#4-1-2-3-service-sysmsi_get_attributes-service_id-0x02"></a>4.1.2.3. Service: SYSMSI_GET_ATTRIBUTES (SERVICE_ID: 0x02)</h4>
+<h4 id="service-sysmsi_get_attributes-service_id-0x02"><a class="anchor" href="#service-sysmsi_get_attributes-service_id-0x02"></a>Service: SYSMSI_GET_ATTRIBUTES (SERVICE_ID: 0x02)</h4>
 <div class="paragraph">
 <p>This service is used to discover attributes of the system MSI service group.</p>
 </div>
@@ -2156,7 +2156,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-2-4-service-sysmsi_get_msi_attributes-service_id-0x03"><a class="anchor" href="#4-1-2-4-service-sysmsi_get_msi_attributes-service_id-0x03"></a>4.1.2.4. Service: SYSMSI_GET_MSI_ATTRIBUTES (SERVICE_ID: 0x03)</h4>
+<h4 id="service-sysmsi_get_msi_attributes-service_id-0x03"><a class="anchor" href="#service-sysmsi_get_msi_attributes-service_id-0x03"></a>Service: SYSMSI_GET_MSI_ATTRIBUTES (SERVICE_ID: 0x03)</h4>
 <div class="paragraph">
 <p>This service is used to discover attributes of a particular system MSI.</p>
 </div>
@@ -2296,7 +2296,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="srvgrp_sysmsi_set_msi_state"><a class="anchor" href="#srvgrp_sysmsi_set_msi_state"></a>4.1.2.5. Service: SYSMSI_SET_MSI_STATE (SERVICE_ID: 0x04)</h4>
+<h4 id="srvgrp_sysmsi_set_msi_state"><a class="anchor" href="#srvgrp_sysmsi_set_msi_state"></a>Service: SYSMSI_SET_MSI_STATE (SERVICE_ID: 0x04)</h4>
 <div class="paragraph">
 <p>This service is used to update the state of a system MSI. Specifically,
 it allows application processors to enable or disable a system MSI. The
@@ -2396,7 +2396,7 @@ read-only bits of the system MSI state are not updated by this service.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="srvgrp_sysmsi_get_msi_state"><a class="anchor" href="#srvgrp_sysmsi_get_msi_state"></a>4.1.2.6. Service: SYSMSI_GET_MSI_STATE (SERVICE_ID: 0x05)</h4>
+<h4 id="srvgrp_sysmsi_get_msi_state"><a class="anchor" href="#srvgrp_sysmsi_get_msi_state"></a>Service: SYSMSI_GET_MSI_STATE (SERVICE_ID: 0x05)</h4>
 <div class="paragraph">
 <p>This service is used to get the current state of a system MSI.</p>
 </div>
@@ -2495,7 +2495,7 @@ read-only bits of the system MSI state are not updated by this service.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="srvgrp_sysmsi_set_msi_target"><a class="anchor" href="#srvgrp_sysmsi_set_msi_target"></a>4.1.2.7. Service: SYSMSI_SET_MSI_TARGET (SERVICE_ID: 0x06)</h4>
+<h4 id="srvgrp_sysmsi_set_msi_target"><a class="anchor" href="#srvgrp_sysmsi_set_msi_target"></a>Service: SYSMSI_SET_MSI_TARGET (SERVICE_ID: 0x06)</h4>
 <div class="paragraph">
 <p>This service is used to configure the target address and data of a system MSI.</p>
 </div>
@@ -2610,7 +2610,7 @@ read-only bits of the system MSI state are not updated by this service.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="srvgrp_sysmsi_get_msi_target"><a class="anchor" href="#srvgrp_sysmsi_get_msi_target"></a>4.1.2.8. Service: SYSMSI_GET_MSI_TARGET (SERVICE_ID: 0x07)</h4>
+<h4 id="srvgrp_sysmsi_get_msi_target"><a class="anchor" href="#srvgrp_sysmsi_get_msi_target"></a>Service: SYSMSI_GET_MSI_TARGET (SERVICE_ID: 0x07)</h4>
 <div class="paragraph">
 <p>This service is used to get the current target address and data of a system MSI.</p>
 </div>
@@ -2726,7 +2726,7 @@ read-only bits of the system MSI state are not updated by this service.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-3-service-group-system_reset-servicegroup_id-0x0003"><a class="anchor" href="#4-1-3-service-group-system_reset-servicegroup_id-0x0003"></a>4.1.3. Service Group - SYSTEM_RESET (SERVICEGROUP_ID: 0x0003)</h3>
+<h3 id="service-group-system_reset-servicegroup_id-0x0003"><a class="anchor" href="#service-group-system_reset-servicegroup_id-0x0003"></a>Service Group - SYSTEM_RESET (SERVICEGROUP_ID: 0x0003)</h3>
 <div class="paragraph">
 <p>This service group defines services for system-level reset or shutdown.</p>
 </div>
@@ -2784,7 +2784,7 @@ application processor has prepared itself for a successful shutdown.</p>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="section-reset-types"><a class="anchor" href="#section-reset-types"></a>4.1.3.1. Reset Types</h4>
+<h4 id="section-reset-types"><a class="anchor" href="#section-reset-types"></a>Reset Types</h4>
 <div class="paragraph">
 <p>RPMI supports reset types and their values as defined by SBI specification.
 Refer to <a href="https://github.com/riscv-non-isa/riscv-sbi-doc/blob/master/src/ext-sys-reset.adoc#table_srst_system_reset_types" target="_blank" rel="noopener"><strong>SRST System Reset Types</strong></a>
@@ -2792,20 +2792,20 @@ in the RISC-V SBI Specification [<a href="bibliography.html#bib-sbi" class="xref
 </div>
 </div>
 <div class="sect3">
-<h4 id="system-reset-notifications"><a class="anchor" href="#system-reset-notifications"></a>4.1.3.2. Notifications</h4>
+<h4 id="system-reset-notifications"><a class="anchor" href="#system-reset-notifications"></a>Notifications</h4>
 <div class="paragraph">
 <p>This service group does not support any events for notification.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-3-3-service-sysrst_enable_notification-service_id-0x01"><a class="anchor" href="#4-1-3-3-service-sysrst_enable_notification-service_id-0x01"></a>4.1.3.3. Service: SYSRST_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
+<h4 id="service-sysrst_enable_notification-service_id-0x01"><a class="anchor" href="#service-sysrst_enable_notification-service_id-0x01"></a>Service: SYSRST_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
 <div class="paragraph">
 <p>This service allows the application processor to subscribe to <code>SYSTEM_RESET</code>
 service group notifications. The platform may optionally support notifications
 for events that may occur. The platform microcontroller can send these
 notification messages to the application processor if they are implemented and
 the application processor has subscribed to them. The supported events are
-described in <a href="#system-reset-notifications">4.1.3.2. Notifications</a>.</p>
+described in <a href="#system-reset-notifications">Notifications</a>.</p>
 </div>
 <table id="table_sysreset_ennotification_request_data" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 23. Request Data</caption>
@@ -2941,7 +2941,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-3-4-service-sysrst_get_attributes-service_id-0x02"><a class="anchor" href="#4-1-3-4-service-sysrst_get_attributes-service_id-0x02"></a>4.1.3.4. Service: SYSRST_GET_ATTRIBUTES (SERVICE_ID: 0x02)</h4>
+<h4 id="service-sysrst_get_attributes-service_id-0x02"><a class="anchor" href="#service-sysrst_get_attributes-service_id-0x02"></a>Service: SYSRST_GET_ATTRIBUTES (SERVICE_ID: 0x02)</h4>
 <div class="paragraph">
 <p>This service is used to discover the attributes of a reset type. The attribute
 flags indicates if a <code>RESET_TYPE</code> is supported or not apart from the
@@ -2971,7 +2971,7 @@ default. System Warm Reset support can be discovered with this service.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Reset type.<br>
-Refer <a href="#section-reset-types">4.1.3.1. Reset Types</a> for more details.</p>
+Refer <a href="#section-reset-types">Reset Types</a> for more details.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3072,7 +3072,7 @@ Refer <a href="#section-reset-types">4.1.3.1. Reset Types</a> for more details.<
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-3-5-service-sysrst_reset-service_id-0x03"><a class="anchor" href="#4-1-3-5-service-sysrst_reset-service_id-0x03"></a>4.1.3.5. Service: SYSRST_RESET (SERVICE_ID: 0x03)</h4>
+<h4 id="service-sysrst_reset-service_id-0x03"><a class="anchor" href="#service-sysrst_reset-service_id-0x03"></a>Service: SYSRST_RESET (SERVICE_ID: 0x03)</h4>
 <div class="paragraph">
 <p>This service is used to initiate the system reset or system shutdown.
 The application processor must only request supported reset types, discovered
@@ -3104,7 +3104,7 @@ system reset fails, the resulting system state is unspecified.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Reset type.<br>
-Refer <a href="#section-reset-types">4.1.3.1. Reset Types</a> for more details.</p>
+Refer <a href="#section-reset-types">Reset Types</a> for more details.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3123,7 +3123,7 @@ Refer <a href="#section-reset-types">4.1.3.1. Reset Types</a> for more details.<
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-4-service-group-system_suspend-servicegroup_id-0x0004"><a class="anchor" href="#4-1-4-service-group-system_suspend-servicegroup_id-0x0004"></a>4.1.4. Service Group - SYSTEM_SUSPEND (SERVICEGROUP_ID: 0x0004)</h3>
+<h3 id="service-group-system_suspend-servicegroup_id-0x0004"><a class="anchor" href="#service-group-system_suspend-servicegroup_id-0x0004"></a>Service Group - SYSTEM_SUSPEND (SERVICEGROUP_ID: 0x0004)</h3>
 <div class="paragraph">
 <p>This service group defines services used to request platform microcontroller
 to transition the system into a suspend state, also called a sleep state.
@@ -3169,7 +3169,7 @@ been complete.</p>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="section-suspend-types"><a class="anchor" href="#section-suspend-types"></a>4.1.4.1. Suspend Types</h4>
+<h4 id="section-suspend-types"><a class="anchor" href="#section-suspend-types"></a>Suspend Types</h4>
 <div class="paragraph">
 <p>RPMI supports suspend types and their values as defined by SBI
 specification.
@@ -3178,20 +3178,20 @@ in the RISC-V SBI Specification [<a href="bibliography.html#bib-sbi" class="xref
 </div>
 </div>
 <div class="sect3">
-<h4 id="system-suspend-notifications"><a class="anchor" href="#system-suspend-notifications"></a>4.1.4.2. Notifications</h4>
+<h4 id="system-suspend-notifications"><a class="anchor" href="#system-suspend-notifications"></a>Notifications</h4>
 <div class="paragraph">
 <p>This service group does not support any events for notification.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-4-3-service-syssusp_enable_notification-service_id-0x01"><a class="anchor" href="#4-1-4-3-service-syssusp_enable_notification-service_id-0x01"></a>4.1.4.3. Service: SYSSUSP_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
+<h4 id="service-syssusp_enable_notification-service_id-0x01"><a class="anchor" href="#service-syssusp_enable_notification-service_id-0x01"></a>Service: SYSSUSP_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
 <div class="paragraph">
 <p>This service allows the application processor to subscribe to <code>SYSTEM_SUSPEND</code>
 service group notifications. The platform may optionally support notifications
 for events that may occur. The platform microcontroller can send these
 notification messages to the application processor if they are implemented and
 the application processor has subscribed to them. The supported events are
-described in <a href="#system-suspend-notifications">4.1.4.2. Notifications</a>.</p>
+described in <a href="#system-suspend-notifications">Notifications</a>.</p>
 </div>
 <table id="table_syssuspend_ennotification_request_data" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 28. Request Data</caption>
@@ -3327,7 +3327,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-4-4-service-syssusp_get_attributes-service_id-0x02"><a class="anchor" href="#4-1-4-4-service-syssusp_get_attributes-service_id-0x02"></a>4.1.4.4. Service: SYSSUSP_GET_ATTRIBUTES (SERVICE_ID: 0x02)</h4>
+<h4 id="service-syssusp_get_attributes-service_id-0x02"><a class="anchor" href="#service-syssusp_get_attributes-service_id-0x02"></a>Service: SYSSUSP_GET_ATTRIBUTES (SERVICE_ID: 0x02)</h4>
 <div class="paragraph">
 <p>This service is used to discover the attributes of a suspend type. The
 attribute flags for a suspend type indicate whether a <code>SUSPEND_TYPE</code> is
@@ -3357,7 +3357,7 @@ a resume address.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Suspend type.<br>
-Refer <a href="#section-suspend-types">4.1.4.1. Suspend Types</a> for more details.</p>
+Refer <a href="#section-suspend-types">Suspend Types</a> for more details.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3472,7 +3472,7 @@ which platform must configure for the resuming application processor.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-4-5-service-syssusp_suspend-service_id-0x03"><a class="anchor" href="#4-1-4-5-service-syssusp_suspend-service_id-0x03"></a>4.1.4.5. Service: SYSSUSP_SUSPEND (SERVICE_ID: 0x03)</h4>
+<h4 id="service-syssusp_suspend-service_id-0x03"><a class="anchor" href="#service-syssusp_suspend-service_id-0x03"></a>Service: SYSSUSP_SUSPEND (SERVICE_ID: 0x03)</h4>
 <div class="paragraph">
 <p>This service is used to request the platform microcontroller to transition the
 system in a suspend state. This service returns successfully when the platform
@@ -3526,7 +3526,7 @@ such as the <code>WFI</code> instruction.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Suspend type.<br>
-Refer <a href="#section-suspend-types">4.1.4.1. Suspend Types</a> for more details.</p>
+Refer <a href="#section-suspend-types">Suspend Types</a> for more details.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3616,7 +3616,7 @@ Refer <a href="#section-suspend-types">4.1.4.1. Suspend Types</a> for more detai
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-5-service-group-hart_state_management-servicegroup_id-0x0005"><a class="anchor" href="#4-1-5-service-group-hart_state_management-servicegroup_id-0x0005"></a>4.1.5. Service Group - HART_STATE_MANAGEMENT (SERVICEGROUP_ID: 0x0005)</h3>
+<h3 id="service-group-hart_state_management-servicegroup_id-0x0005"><a class="anchor" href="#service-group-hart_state_management-servicegroup_id-0x0005"></a>Service Group - HART_STATE_MANAGEMENT (SERVICEGROUP_ID: 0x0005)</h3>
 <div class="paragraph">
 <p>This service group defines services to control and manage the application
 processor (hart) power states. Hart power states include power on, power off,
@@ -3691,7 +3691,7 @@ power states defined by the RISC-V SBI Specification [<a href="bibliography.html
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="section-hart-states"><a class="anchor" href="#section-hart-states"></a>4.1.5.1. Hart States</h4>
+<h4 id="section-hart-states"><a class="anchor" href="#section-hart-states"></a>Hart States</h4>
 <div class="paragraph">
 <p>Hart HSM states and the HSM state machine supported by the RPMI
 are defined in the RISC-V SBI Specification [<a href="bibliography.html#bib-sbi" class="xref page">1</a>]. Refer to
@@ -3705,7 +3705,7 @@ just putting the hart in a platform supported low-power state.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="section-hart-suspend-types"><a class="anchor" href="#section-hart-suspend-types"></a>4.1.5.2. Hart Suspend Types</h4>
+<h4 id="section-hart-suspend-types"><a class="anchor" href="#section-hart-suspend-types"></a>Hart Suspend Types</h4>
 <div class="paragraph">
 <p>The RPMI supports the hart suspend types encoding as defined in
 RISC-V SBI Specification [<a href="bibliography.html#bib-sbi" class="xref page">1</a>].
@@ -3715,20 +3715,20 @@ this service group.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="hsm-notifications"><a class="anchor" href="#hsm-notifications"></a>4.1.5.3. Notifications</h4>
+<h4 id="hsm-notifications"><a class="anchor" href="#hsm-notifications"></a>Notifications</h4>
 <div class="paragraph">
 <p>This service group does not support any events for notification.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-5-4-service-hsm_enable_notification-service_id-0x01"><a class="anchor" href="#4-1-5-4-service-hsm_enable_notification-service_id-0x01"></a>4.1.5.4. Service: HSM_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
+<h4 id="service-hsm_enable_notification-service_id-0x01"><a class="anchor" href="#service-hsm_enable_notification-service_id-0x01"></a>Service: HSM_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
 <div class="paragraph">
 <p>This service allows the application processor to subscribe to <code>HART_STATE_MANAGEMENT</code>
 service group notifications. The platform may optionally support notifications
 for events that may occur. The platform microcontroller can send these
 notification messages to the application processor if they are implemented and
 the application processor has subscribed to them. The supported events are
-described in <a href="#hsm-notifications">4.1.5.3. Notifications</a>.</p>
+described in <a href="#hsm-notifications">Notifications</a>.</p>
 </div>
 <table id="table_hsm_ennotification_request_data" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 32. Request Data</caption>
@@ -3864,7 +3864,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-5-5-service-hsm_get_hart_status-service_id-0x02"><a class="anchor" href="#4-1-5-5-service-hsm_get_hart_status-service_id-0x02"></a>4.1.5.5. Service: HSM_GET_HART_STATUS (SERVICE_ID: 0x02)</h4>
+<h4 id="service-hsm_get_hart_status-service_id-0x02"><a class="anchor" href="#service-hsm_get_hart_status-service_id-0x02"></a>Service: HSM_GET_HART_STATUS (SERVICE_ID: 0x02)</h4>
 <div class="paragraph">
 <p>This service returns the current HSM state of a hart. If a hart is in an
 invalid state that is not a defined HSM state, an error code will be set
@@ -3965,14 +3965,14 @@ in the <code>STATUS</code> field.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Hart state.<br>
-Refer <a href="#section-hart-states">4.1.5.1. Hart States</a> for more details.</p>
+Refer <a href="#section-hart-states">Hart States</a> for more details.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-5-6-service-hsm_get_hart_list-service_id-0x03"><a class="anchor" href="#4-1-5-6-service-hsm_get_hart_list-service_id-0x03"></a>4.1.5.6. Service: HSM_GET_HART_LIST (SERVICE_ID: 0x03)</h4>
+<h4 id="service-hsm_get_hart_list-service_id-0x03"><a class="anchor" href="#service-hsm_get_hart_list-service_id-0x03"></a>Service: HSM_GET_HART_LIST (SERVICE_ID: 0x03)</h4>
 <div class="paragraph">
 <p>This service retrieves the list of Hart IDs managed by this service group.</p>
 </div>
@@ -4095,7 +4095,7 @@ may need to call this service again with the appropriate <code>START_INDEX</code
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-5-7-service-hsm_get_suspend_types-service_id-0x04"><a class="anchor" href="#4-1-5-7-service-hsm_get_suspend_types-service_id-0x04"></a>4.1.5.7. Service: HSM_GET_SUSPEND_TYPES (SERVICE_ID: 0x04)</h4>
+<h4 id="service-hsm_get_suspend_types-service_id-0x04"><a class="anchor" href="#service-hsm_get_suspend_types-service_id-0x04"></a>Service: HSM_GET_SUSPEND_TYPES (SERVICE_ID: 0x04)</h4>
 <div class="paragraph">
 <p>This service gets the list of all supported suspend types for a hart.
 The suspend types in the list must be ordered based on increasing power savings.</p>
@@ -4219,14 +4219,14 @@ items.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Suspend types.<br>
-Refer <a href="#section-hart-suspend-types">4.1.5.2. Hart Suspend Types</a> for more details.</p>
+Refer <a href="#section-hart-suspend-types">Hart Suspend Types</a> for more details.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-5-8-service-hsm_get_suspend_info-service_id-0x05"><a class="anchor" href="#4-1-5-8-service-hsm_get_suspend_info-service_id-0x05"></a>4.1.5.8. Service: HSM_GET_SUSPEND_INFO (SERVICE_ID: 0x05)</h4>
+<h4 id="service-hsm_get_suspend_info-service_id-0x05"><a class="anchor" href="#service-hsm_get_suspend_info-service_id-0x05"></a>Service: HSM_GET_SUSPEND_INFO (SERVICE_ID: 0x05)</h4>
 <div class="paragraph">
 <p>This service is used to get the attributes of a suspend type. The attributes of
 a suspend type include various associated latencies. The entry latency for a
@@ -4300,7 +4300,7 @@ shallower suspend state to minimize the wakeup latency to achieve energy savings
 <td class="tableblock halign-left valign-top"><p class="tableblock">SUSPEND_TYPE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Suspend type.<br>
-Refer <a href="#section-hart-suspend-types">4.1.5.2. Hart Suspend Types</a> for more details.</p></td>
+Refer <a href="#section-hart-suspend-types">Hart Suspend Types</a> for more details.</p></td>
 </tr>
 </tbody>
 </table>
@@ -4435,7 +4435,7 @@ Refer <a href="#section-hart-suspend-types">4.1.5.2. Hart Suspend Types</a> for 
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-5-9-service-hsm_hart_start-service_id-0x06"><a class="anchor" href="#4-1-5-9-service-hsm_hart_start-service_id-0x06"></a>4.1.5.9. Service: HSM_HART_START (SERVICE_ID: 0x06)</h4>
+<h4 id="service-hsm_hart_start-service_id-0x06"><a class="anchor" href="#service-hsm_hart_start-service_id-0x06"></a>Service: HSM_HART_START (SERVICE_ID: 0x06)</h4>
 <div class="paragraph">
 <p>This service is used to start the execution on a hart identified by <code>HART_ID</code>.
 This service requires a start address which is the physical address from which
@@ -4559,7 +4559,7 @@ that the hart has started execution from the specified start address.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-5-10-service-hsm_hart_stop-service_id-0x07"><a class="anchor" href="#4-1-5-10-service-hsm_hart_stop-service_id-0x07"></a>4.1.5.10. Service: HSM_HART_STOP (SERVICE_ID: 0x07)</h4>
+<h4 id="service-hsm_hart_stop-service_id-0x07"><a class="anchor" href="#service-hsm_hart_stop-service_id-0x07"></a>Service: HSM_HART_STOP (SERVICE_ID: 0x07)</h4>
 <div class="paragraph">
 <p>This service stops the execution on the calling hart. The mechanism for stopping
 the hart is platform specific. The hart can be powered down, if supported, or put
@@ -4676,7 +4676,7 @@ the hart quiesced state by the platform microcontroller is platform specific.</p
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-5-11-service-hsm_hart_suspend-service_id-0x08"><a class="anchor" href="#4-1-5-11-service-hsm_hart_suspend-service_id-0x08"></a>4.1.5.11. Service: HSM_HART_SUSPEND (SERVICE_ID: 0x08)</h4>
+<h4 id="service-hsm_hart_suspend-service_id-0x08"><a class="anchor" href="#service-hsm_hart_suspend-service_id-0x08"></a>Service: HSM_HART_SUSPEND (SERVICE_ID: 0x08)</h4>
 <div class="paragraph">
 <p>This service is used to put a hart in a low-power suspend state supported by the
 platform. Each suspend type is a 32-bit value which is discovered through the
@@ -4722,7 +4722,7 @@ provided resume address.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SUSPEND_TYPE</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uint32</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Suspend type.<br>
-Refer <a href="#section-hart-suspend-types">4.1.5.2. Hart Suspend Types</a> for more details.</p></td>
+Refer <a href="#section-hart-suspend-types">Hart Suspend Types</a> for more details.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
@@ -4803,7 +4803,7 @@ Only used for non-retentive suspend types.</p></td>
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-6-service-group-cppc-servicegroup_id-0x0006"><a class="anchor" href="#4-1-6-service-group-cppc-servicegroup_id-0x0006"></a>4.1.6. Service Group - CPPC (SERVICEGROUP_ID: 0x0006)</h3>
+<h3 id="service-group-cppc-servicegroup_id-0x0006"><a class="anchor" href="#service-group-cppc-servicegroup_id-0x0006"></a>Service Group - CPPC (SERVICEGROUP_ID: 0x0006)</h3>
 <div class="paragraph">
 <p>This service group defines the services to control application processor
 performance by managing a set of registers per application processor
@@ -4891,7 +4891,7 @@ and the platform to coordinate and manage the group level performance changes.</
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="4-1-6-1-cppc-fast-channel"><a class="anchor" href="#4-1-6-1-cppc-fast-channel"></a>4.1.6.1. CPPC Fast-channel</h4>
+<h4 id="cppc-fast-channel"><a class="anchor" href="#cppc-fast-channel"></a>CPPC Fast-channel</h4>
 <div class="paragraph">
 <p>The CPPC service group defines the fast-channels to be used by the application
 processor to request performance changes and to obtain performance change feedback
@@ -4911,7 +4911,7 @@ processor. If fast-channels are supported then each application processor must
 be assigned both types fast-channel.</p>
 </div>
 <div class="sect4">
-<h5 id="4-1-6-1-1-performance-request-fast-channel"><a class="anchor" href="#4-1-6-1-1-performance-request-fast-channel"></a>4.1.6.1.1. Performance Request Fast-channel</h5>
+<h5 id="performance-request-fast-channel"><a class="anchor" href="#performance-request-fast-channel"></a>Performance Request Fast-channel</h5>
 <div class="paragraph">
 <p>In this fast-channel the application processor will either write
 the desired performance level in case of normal mode or the minimum
@@ -5003,7 +5003,7 @@ service.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="4-1-6-1-2-performance-feedback-fast-channel"><a class="anchor" href="#4-1-6-1-2-performance-feedback-fast-channel"></a>4.1.6.1.2. Performance Feedback Fast-channel</h5>
+<h5 id="performance-feedback-fast-channel"><a class="anchor" href="#performance-feedback-fast-channel"></a>Performance Feedback Fast-channel</h5>
 <div class="paragraph">
 <p>In this fast-channel the application processor will read the
 supported value for estimating the delivered performance as performance feedback
@@ -5044,7 +5044,7 @@ fast-channel whenever it changes.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="4-1-6-1-3-cppc-fast-channel-shared-memory-region"><a class="anchor" href="#4-1-6-1-3-cppc-fast-channel-shared-memory-region"></a>4.1.6.1.3. CPPC Fast-channel Shared Memory Region</h5>
+<h5 id="cppc-fast-channel-shared-memory-region"><a class="anchor" href="#cppc-fast-channel-shared-memory-region"></a>CPPC Fast-channel Shared Memory Region</h5>
 <div class="paragraph">
 <p>The size of the shared memory region containing all the fast-channels for all the
 managed application processors must be a <code>power-of-2</code>. The <code>base-address</code> and <code>size</code>
@@ -5063,7 +5063,7 @@ Feedback fast-channel for an application processor.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="4-1-6-1-4-performance-request-fast-channel-doorbell"><a class="anchor" href="#4-1-6-1-4-performance-request-fast-channel-doorbell"></a>4.1.6.1.4. Performance Request Fast-channel Doorbell</h5>
+<h5 id="performance-request-fast-channel-doorbell"><a class="anchor" href="#performance-request-fast-channel-doorbell"></a>Performance Request Fast-channel Doorbell</h5>
 <div class="paragraph">
 <p>A doorbell can also be supported for this fast-channel type which is shared
 between all the application processors. The doorbell, if supported must be a
@@ -5096,20 +5096,20 @@ write to the doorbell register.
 </div>
 </div>
 <div class="sect3">
-<h4 id="cppc-notifications"><a class="anchor" href="#cppc-notifications"></a>4.1.6.2. Notifications</h4>
+<h4 id="cppc-notifications"><a class="anchor" href="#cppc-notifications"></a>Notifications</h4>
 <div class="paragraph">
 <p>This service group does not support any events for notification.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-6-3-service-cppc_enable_notification-service_id-0x01"><a class="anchor" href="#4-1-6-3-service-cppc_enable_notification-service_id-0x01"></a>4.1.6.3. Service: CPPC_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
+<h4 id="service-cppc_enable_notification-service_id-0x01"><a class="anchor" href="#service-cppc_enable_notification-service_id-0x01"></a>Service: CPPC_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
 <div class="paragraph">
 <p>This service allows the application processor to subscribe to <code>CPPC</code>
 service group notifications. The platform may optionally support notifications
 for events that may occur. The platform microcontroller can send these
 notification messages to the application processor if they are implemented and
 the application processor has subscribed to them. The supported events are
-described in <a href="#cppc-notifications">4.1.6.2. Notifications</a>.</p>
+described in <a href="#cppc-notifications">Notifications</a>.</p>
 </div>
 <table id="table_cppc_ennotification_request_data" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 69. Request Data</caption>
@@ -5245,7 +5245,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-6-4-service-cppc_probe_reg-service_id-0x02"><a class="anchor" href="#4-1-6-4-service-cppc_probe_reg-service_id-0x02"></a>4.1.6.4. Service: CPPC_PROBE_REG (SERVICE_ID: 0x02)</h4>
+<h4 id="service-cppc_probe_reg-service_id-0x02"><a class="anchor" href="#service-cppc_probe_reg-service_id-0x02"></a>Service: CPPC_PROBE_REG (SERVICE_ID: 0x02)</h4>
 <div class="paragraph">
 <p>This service is used to probe a CPPC register implementation status for a
 application processor. If the CPPC register <code>reg_id</code> is implemented then
@@ -5359,7 +5359,7 @@ supported or invalid then the <code>REG_LENGTH</code> will be <code>0</code>.</p
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-6-5-service-cppc_read_reg-service_id-0x03"><a class="anchor" href="#4-1-6-5-service-cppc_read_reg-service_id-0x03"></a>4.1.6.5. Service: CPPC_READ_REG (SERVICE_ID: 0x03)</h4>
+<h4 id="service-cppc_read_reg-service_id-0x03"><a class="anchor" href="#service-cppc_read_reg-service_id-0x03"></a>Service: CPPC_READ_REG (SERVICE_ID: 0x03)</h4>
 <div class="paragraph">
 <p>This service is used to read a CPPC register. If the fast-channels are
 supported, a read of the <code>DesiredPerformanceRegister</code> or
@@ -5478,7 +5478,7 @@ length.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-6-6-service-cppc_write_reg-service_id-0x04"><a class="anchor" href="#4-1-6-6-service-cppc_write_reg-service_id-0x04"></a>4.1.6.6. Service: CPPC_WRITE_REG (SERVICE_ID: 0x04)</h4>
+<h4 id="service-cppc_write_reg-service_id-0x04"><a class="anchor" href="#service-cppc_write_reg-service_id-0x04"></a>Service: CPPC_WRITE_REG (SERVICE_ID: 0x04)</h4>
 <div class="paragraph">
 <p>This service is used to write a CPPC register.</p>
 </div>
@@ -5600,7 +5600,7 @@ writes to these registers may be ignored.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-6-7-service-cppc_get_fast_channel_region-service_id-0x05"><a class="anchor" href="#4-1-6-7-service-cppc_get_fast_channel_region-service_id-0x05"></a>4.1.6.7. Service: CPPC_GET_FAST_CHANNEL_REGION (SERVICE_ID: 0x05)</h4>
+<h4 id="service-cppc_get_fast_channel_region-service_id-0x05"><a class="anchor" href="#service-cppc_get_fast_channel_region-service_id-0x05"></a>Service: CPPC_GET_FAST_CHANNEL_REGION (SERVICE_ID: 0x05)</h4>
 <div class="paragraph">
 <p>This service is used to get the details of the shared memory region containing
 all the fast-channels, attributes of the fast-channel and the details of the
@@ -5813,7 +5813,7 @@ equal to the doorbell register width must be used as write value.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-6-8-service-cppc_get_fast_channel_offset-service_id-0x06"><a class="anchor" href="#4-1-6-8-service-cppc_get_fast_channel_offset-service_id-0x06"></a>4.1.6.8. Service: CPPC_GET_FAST_CHANNEL_OFFSET (SERVICE_ID: 0x06)</h4>
+<h4 id="service-cppc_get_fast_channel_offset-service_id-0x06"><a class="anchor" href="#service-cppc_get_fast_channel_offset-service_id-0x06"></a>Service: CPPC_GET_FAST_CHANNEL_OFFSET (SERVICE_ID: 0x06)</h4>
 <div class="paragraph">
 <p>This service is used to get the offsets of Performance Request fast-channel and
 Performance Feedback fast-channel for an application processor in the shared
@@ -5944,7 +5944,7 @@ memory region containing all the fast-channels.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-6-9-service-cppc_get_hart_list-service_id-0x07"><a class="anchor" href="#4-1-6-9-service-cppc_get_hart_list-service_id-0x07"></a>4.1.6.9. Service: CPPC_GET_HART_LIST (SERVICE_ID: 0x07)</h4>
+<h4 id="service-cppc_get_hart_list-service_id-0x07"><a class="anchor" href="#service-cppc_get_hart_list-service_id-0x07"></a>Service: CPPC_GET_HART_LIST (SERVICE_ID: 0x07)</h4>
 <div class="paragraph">
 <p>This service retrieves the list of Hart IDs managed by this service group
 for performance control.</p>
@@ -6065,7 +6065,7 @@ may need to call this service again with the appropriate <code>START_INDEX</code
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-7-service-group-voltage-servicegroup_id-0x0007"><a class="anchor" href="#4-1-7-service-group-voltage-servicegroup_id-0x0007"></a>4.1.7. Service Group - VOLTAGE (SERVICEGROUP_ID: 0x0007)</h3>
+<h3 id="service-group-voltage-servicegroup_id-0x0007"><a class="anchor" href="#service-group-voltage-servicegroup_id-0x0007"></a>Service Group - VOLTAGE (SERVICEGROUP_ID: 0x0007)</h3>
 <div class="paragraph">
 <p>This service group is used to control the voltage level of the voltage domains.
 A voltage domain is the logical grouping of one or more devices powered by a
@@ -6135,13 +6135,13 @@ voltage levels of these voltage domains. Each voltage domain is identified by
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="voltage-level-format-section"><a class="anchor" href="#voltage-level-format-section"></a>4.1.7.1. Voltage Level Format</h4>
+<h4 id="voltage-level-format-section"><a class="anchor" href="#voltage-level-format-section"></a>Voltage Level Format</h4>
 <div class="paragraph">
 <p>There are two types of voltage level formats supported in the VOLTAGE service
 group. The voltage levels are represented as a group.</p>
 </div>
 <div class="sect4">
-<h5 id="4-1-7-1-1-discrete-format"><a class="anchor" href="#4-1-7-1-1-discrete-format"></a>4.1.7.1.1. Discrete Format</h5>
+<h5 id="discrete-format"><a class="anchor" href="#discrete-format"></a>Discrete Format</h5>
 <div class="paragraph">
 <p>A set of discrete voltage levels arranged in a sequence, starting from the
 lowest value at the lowest index and increasing sequentially to higher levels.
@@ -6178,7 +6178,7 @@ voltage0 &lt; voltage1 &lt; voltage2 &lt; ... &lt; voltage(N-1)</code></pre>
 </table>
 </div>
 <div class="sect4">
-<h5 id="4-1-7-1-2-linear-range-format"><a class="anchor" href="#4-1-7-1-2-linear-range-format"></a>4.1.7.1.2. Linear Range Format</h5>
+<h5 id="linear-range-format"><a class="anchor" href="#linear-range-format"></a>Linear Range Format</h5>
 <div class="paragraph">
 <p>A linear range of voltage levels with a constant step size. The following table
 shows the structure of the linear range voltage format.</p>
@@ -6241,20 +6241,20 @@ voltage_max1 &lt; voltage_min2</code> and so on.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="voltage-notifications"><a class="anchor" href="#voltage-notifications"></a>4.1.7.2. Notifications</h4>
+<h4 id="voltage-notifications"><a class="anchor" href="#voltage-notifications"></a>Notifications</h4>
 <div class="paragraph">
 <p>This service group does not support any events for notification.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-7-3-service-volt_enable_notification-service_id-0x01"><a class="anchor" href="#4-1-7-3-service-volt_enable_notification-service_id-0x01"></a>4.1.7.3. Service: VOLT_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
+<h4 id="service-volt_enable_notification-service_id-0x01"><a class="anchor" href="#service-volt_enable_notification-service_id-0x01"></a>Service: VOLT_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
 <div class="paragraph">
 <p>This service allows the application processor to subscribe to <code>VOLTAGE</code>
 service group notifications. The platform may optionally support notifications
 for events that may occur. The platform microcontroller can send these
 notification messages to the application processor if they are implemented and
 the application processor has subscribed to them. The supported events are
-described in <a href="#voltage-notifications">4.1.7.2. Notifications</a>.</p>
+described in <a href="#voltage-notifications">Notifications</a>.</p>
 </div>
 <table id="table_voltage_ennotification_request_data" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 84. Request Data</caption>
@@ -6390,7 +6390,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-7-4-service-volt_get_num_domains-service_id-0x02"><a class="anchor" href="#4-1-7-4-service-volt_get_num_domains-service_id-0x02"></a>4.1.7.4. Service: VOLT_GET_NUM_DOMAINS (SERVICE_ID: 0x02)</h4>
+<h4 id="service-volt_get_num_domains-service_id-0x02"><a class="anchor" href="#service-volt_get_num_domains-service_id-0x02"></a>Service: VOLT_GET_NUM_DOMAINS (SERVICE_ID: 0x02)</h4>
 <div class="paragraph">
 <p>This service is used to query the number of voltage domains available in the
 system.</p>
@@ -6468,7 +6468,7 @@ system.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-7-5-service-volt_get_attributes-service_id-0x03"><a class="anchor" href="#4-1-7-5-service-volt_get_attributes-service_id-0x03"></a>4.1.7.5. Service: VOLT_GET_ATTRIBUTES (SERVICE_ID: 0x03)</h4>
+<h4 id="service-volt_get_attributes-service_id-0x03"><a class="anchor" href="#service-volt_get_attributes-service_id-0x03"></a>Service: VOLT_GET_ATTRIBUTES (SERVICE_ID: 0x03)</h4>
 <div class="paragraph">
 <p>Each domain may support multiple voltage levels, which are permitted by the domain
 for operation. The number of levels indicates the total count of voltage levels
@@ -6585,7 +6585,7 @@ voltage formats can be accommodated in the future if required.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[3:1]</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Voltage format.<br>
-Refer to <a href="#voltage-level-format-section">4.1.7.1. Voltage Level Format</a> for more details.</p>
+Refer to <a href="#voltage-level-format-section">Voltage Level Format</a> for more details.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -6641,7 +6641,7 @@ single voltage level.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-7-6-service-volt_get_supported_levels-service_id-0x04"><a class="anchor" href="#4-1-7-6-service-volt_get_supported_levels-service_id-0x04"></a>4.1.7.6. Service: VOLT_GET_SUPPORTED_LEVELS (SERVICE_ID: 0x04)</h4>
+<h4 id="service-volt_get_supported_levels-service_id-0x04"><a class="anchor" href="#service-volt_get_supported_levels-service_id-0x04"></a>Service: VOLT_GET_SUPPORTED_LEVELS (SERVICE_ID: 0x04)</h4>
 <div class="paragraph">
 <p>Each domain may support multiple voltage levels which are allowed by the domain
 to operate. The number of voltage levels returned depends on the format of the
@@ -6780,14 +6780,14 @@ or the number of linear range tuple if the format is linear range.</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Voltage levels.<br>
 The voltage format data structure and its packing is according to the supported format.
-Refer to <a href="#voltage-level-format-section">4.1.7.1. Voltage Level Format</a> for more details.</p>
+Refer to <a href="#voltage-level-format-section">Voltage Level Format</a> for more details.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-7-7-service-volt_set_config-service_id-0x05"><a class="anchor" href="#4-1-7-7-service-volt_set_config-service_id-0x05"></a>4.1.7.7. Service: VOLT_SET_CONFIG (SERVICE_ID: 0x05)</h4>
+<h4 id="service-volt_set_config-service_id-0x05"><a class="anchor" href="#service-volt_set_config-service_id-0x05"></a>Service: VOLT_SET_CONFIG (SERVICE_ID: 0x05)</h4>
 <div class="paragraph">
 <p>This service is used to configure a voltage domain.</p>
 </div>
@@ -6916,7 +6916,7 @@ Refer to <a href="#voltage-level-format-section">4.1.7.1. Voltage Level Format</
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-7-8-service-volt_get_config-service_id-0x06"><a class="anchor" href="#4-1-7-8-service-volt_get_config-service_id-0x06"></a>4.1.7.8. Service: VOLT_GET_CONFIG (SERVICE_ID: 0x06)</h4>
+<h4 id="service-volt_get_config-service_id-0x06"><a class="anchor" href="#service-volt_get_config-service_id-0x06"></a>Service: VOLT_GET_CONFIG (SERVICE_ID: 0x06)</h4>
 <div class="paragraph">
 <p>This service is used to get the configuration of a voltage domain.</p>
 </div>
@@ -7045,7 +7045,7 @@ Refer to <a href="#voltage-level-format-section">4.1.7.1. Voltage Level Format</
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-7-9-service-volt_set_level-service_id-0x07"><a class="anchor" href="#4-1-7-9-service-volt_set_level-service_id-0x07"></a>4.1.7.9. Service: VOLT_SET_LEVEL (SERVICE_ID: 0x07)</h4>
+<h4 id="service-volt_set_level-service_id-0x07"><a class="anchor" href="#service-volt_set_level-service_id-0x07"></a>Service: VOLT_SET_LEVEL (SERVICE_ID: 0x07)</h4>
 <div class="paragraph">
 <p>This service is used to set the voltage level in microvolts of a voltage domain.</p>
 </div>
@@ -7142,7 +7142,7 @@ Refer to <a href="#voltage-level-format-section">4.1.7.1. Voltage Level Format</
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-7-10-service-volt_get_level-service_id-0x08"><a class="anchor" href="#4-1-7-10-service-volt_get_level-service_id-0x08"></a>4.1.7.10. Service: VOLT_GET_LEVEL (SERVICE_ID: 0x08)</h4>
+<h4 id="service-volt_get_level-service_id-0x08"><a class="anchor" href="#service-volt_get_level-service_id-0x08"></a>Service: VOLT_GET_LEVEL (SERVICE_ID: 0x08)</h4>
 <div class="paragraph">
 <p>This service is used to get the current voltage level in microvolts of a
 voltage domain.</p>
@@ -7241,7 +7241,7 @@ voltage domain.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-8-service-group-clock-servicegroup_id-0x0008"><a class="anchor" href="#4-1-8-service-group-clock-servicegroup_id-0x0008"></a>4.1.8. Service Group - CLOCK (SERVICEGROUP_ID: 0x0008)</h3>
+<h3 id="service-group-clock-servicegroup_id-0x0008"><a class="anchor" href="#service-group-clock-servicegroup_id-0x0008"></a>Service Group - CLOCK (SERVICEGROUP_ID: 0x0008)</h3>
 <div class="paragraph">
 <p>This service group is used to manage system clocks. Services defined in this group
 are used to enable or disable clocks, set or get clock rates, etc.</p>
@@ -7323,14 +7323,14 @@ supported hardware description mechanisms.</p>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="clock-rate-format-section"><a class="anchor" href="#clock-rate-format-section"></a>4.1.8.1. Clock Rate Format</h4>
+<h4 id="clock-rate-format-section"><a class="anchor" href="#clock-rate-format-section"></a>Clock Rate Format</h4>
 <div class="paragraph">
 <p>Each clock rate is a array of two 32-bit values <code>(uint32, uint32)</code> represented
 as <code>(clock_rate_low, clock_rate_high)</code> and packed in the same order where
 <code>clock_rate_low</code> is at the lower index than the <code>clock_rate_high</code>.</p>
 </div>
 <div class="sect4">
-<h5 id="4-1-8-1-1-discrete-format"><a class="anchor" href="#4-1-8-1-1-discrete-format"></a>4.1.8.1.1. Discrete Format</h5>
+<h5 id="discrete-format-2"><a class="anchor" href="#discrete-format-2"></a>Discrete Format</h5>
 <div class="paragraph">
 <p>A set of discrete clock rates arranged in a sequence, starting from the
 lowest value at the lowest index and increasing sequentially to higher clock
@@ -7373,7 +7373,7 @@ clock_rate0 &lt; clock_rate1 &lt; clock_rate2 &lt; ... &lt; clock_rate(N-1)</cod
 </table>
 </div>
 <div class="sect4">
-<h5 id="clock-rate-format-linear"><a class="anchor" href="#clock-rate-format-linear"></a>4.1.8.1.2. Linear Range Format</h5>
+<h5 id="clock-rate-format-linear"><a class="anchor" href="#clock-rate-format-linear"></a>Linear Range Format</h5>
 <div class="paragraph">
 <p>A linear range of clock rates represented by minimum and maximum clock rate and
 a constant step size. The following table shows the fixed structure of the linear
@@ -7451,20 +7451,20 @@ so on.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="clock-notifications"><a class="anchor" href="#clock-notifications"></a>4.1.8.2. Notifications</h4>
+<h4 id="clock-notifications"><a class="anchor" href="#clock-notifications"></a>Notifications</h4>
 <div class="paragraph">
 <p>This service group does not support any events for notification.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-8-3-service-clk_enable_notification-service_id-0x01"><a class="anchor" href="#4-1-8-3-service-clk_enable_notification-service_id-0x01"></a>4.1.8.3. Service: CLK_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
+<h4 id="service-clk_enable_notification-service_id-0x01"><a class="anchor" href="#service-clk_enable_notification-service_id-0x01"></a>Service: CLK_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
 <div class="paragraph">
 <p>This service allows the application processor to subscribe to <code>CLOCK</code>
 service group notifications. The platform may optionally support notifications
 for events that may occur. The platform microcontroller can send these
 notification messages to the application processor if they are implemented and
 the application processor has subscribed to them. The supported events are
-described in <a href="#clock-notifications">4.1.8.2. Notifications</a>.</p>
+described in <a href="#clock-notifications">Notifications</a>.</p>
 </div>
 <table id="table_clock_ennotification_request_data" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 57. Request Data</caption>
@@ -7600,7 +7600,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-8-4-service-clk_get_num_clocks-service_id-0x02"><a class="anchor" href="#4-1-8-4-service-clk_get_num_clocks-service_id-0x02"></a>4.1.8.4. Service: CLK_GET_NUM_CLOCKS (SERVICE_ID: 0x02)</h4>
+<h4 id="service-clk_get_num_clocks-service_id-0x02"><a class="anchor" href="#service-clk_get_num_clocks-service_id-0x02"></a>Service: CLK_GET_NUM_CLOCKS (SERVICE_ID: 0x02)</h4>
 <div class="paragraph">
 <p>This service is used to query the number of clocks available in the system.
 All supported clocks in the system are designated by an integer identifier
@@ -7679,7 +7679,7 @@ called <code>CLOCK_ID</code>.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-8-5-service-clk_get_attributes-service_id-0x03"><a class="anchor" href="#4-1-8-5-service-clk_get_attributes-service_id-0x03"></a>4.1.8.5. Service: CLK_GET_ATTRIBUTES (SERVICE_ID: 0x03)</h4>
+<h4 id="service-clk_get_attributes-service_id-0x03"><a class="anchor" href="#service-clk_get_attributes-service_id-0x03"></a>Service: CLK_GET_ATTRIBUTES (SERVICE_ID: 0x03)</h4>
 <div class="paragraph">
 <p>This service provides detailed attributes of a clock, including its name,
 represented as a 16-byte array of ASCII strings. It also specifies the
@@ -7797,7 +7797,7 @@ will return the number of linear ranges supported.</p>
 <p>Clock format.</p>
 </div>
 <div class="paragraph">
-<p>Refer to <a href="#clock-rate-format-section">4.1.8.1. Clock Rate Format</a> for more details.</p>
+<p>Refer to <a href="#clock-rate-format-section">Clock Rate Format</a> for more details.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -7839,7 +7839,7 @@ will return the number of linear ranges supported.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-8-6-service-clk_get_supported_rates-service_id-0x04"><a class="anchor" href="#4-1-8-6-service-clk_get_supported_rates-service_id-0x04"></a>4.1.8.6. Service: CLK_GET_SUPPORTED_RATES (SERVICE_ID: 0x04)</h4>
+<h4 id="service-clk_get_supported_rates-service_id-0x04"><a class="anchor" href="#service-clk_get_supported_rates-service_id-0x04"></a>Service: CLK_GET_SUPPORTED_RATES (SERVICE_ID: 0x04)</h4>
 <div class="paragraph">
 <p>This service is used to get the supported clock rates. The clock rate data returned
 by this service depends on the format supported by the clock.</p>
@@ -7857,7 +7857,7 @@ linear ranges are needed then this index value can be <code>0</code>.</p>
 linear ranges according to the format in one message must not exceed the total
 words available in a message DATA field. If the format is linear range and a clock
 supports multiple linear ranges, then only complete linear ranges must be returned
-as per the data format of the linear range described in <a href="#clock-rate-format-linear">4.1.8.1.2. Linear Range Format</a>.</p>
+as per the data format of the linear range described in <a href="#clock-rate-format-linear">Linear Range Format</a>.</p>
 </div>
 <div class="paragraph">
 <p>If the total number of words required to store all supported discrete clock rates
@@ -7994,14 +7994,14 @@ the number of linear ranges returned if the format is linear range.</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Clock rates.<br>
 The clock rate data structure and its packing is according to the supported format.
-Refer to <a href="#clock-rate-format-section">4.1.8.1. Clock Rate Format</a> for more details.</p>
+Refer to <a href="#clock-rate-format-section">Clock Rate Format</a> for more details.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-8-7-service-clk_set_config-service_id-0x05"><a class="anchor" href="#4-1-8-7-service-clk_set_config-service_id-0x05"></a>4.1.8.7. Service: CLK_SET_CONFIG (SERVICE_ID: 0x05)</h4>
+<h4 id="service-clk_set_config-service_id-0x05"><a class="anchor" href="#service-clk_set_config-service_id-0x05"></a>Service: CLK_SET_CONFIG (SERVICE_ID: 0x05)</h4>
 <div class="paragraph">
 <p>This service is used to configure a clock domain.</p>
 </div>
@@ -8130,7 +8130,7 @@ Refer to <a href="#clock-rate-format-section">4.1.8.1. Clock Rate Format</a> for
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-8-8-service-clk_get_config-service_id-0x06"><a class="anchor" href="#4-1-8-8-service-clk_get_config-service_id-0x06"></a>4.1.8.8. Service: CLK_GET_CONFIG (SERVICE_ID: 0x06)</h4>
+<h4 id="service-clk_get_config-service_id-0x06"><a class="anchor" href="#service-clk_get_config-service_id-0x06"></a>Service: CLK_GET_CONFIG (SERVICE_ID: 0x06)</h4>
 <div class="paragraph">
 <p>This service is used to get the configuration of a clock domain.</p>
 </div>
@@ -8259,7 +8259,7 @@ Refer to <a href="#clock-rate-format-section">4.1.8.1. Clock Rate Format</a> for
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-8-9-service-clk_set_rate-service_id-0x07"><a class="anchor" href="#4-1-8-9-service-clk_set_rate-service_id-0x07"></a>4.1.8.9. Service: CLK_SET_RATE (SERVICE_ID: 0x07)</h4>
+<h4 id="service-clk_set_rate-service_id-0x07"><a class="anchor" href="#service-clk_set_rate-service_id-0x07"></a>Service: CLK_SET_RATE (SERVICE_ID: 0x07)</h4>
 <div class="paragraph">
 <p>This service is used to set the clock rate of a specific clock.</p>
 </div>
@@ -8405,7 +8405,7 @@ In Auto mode the platform can autonomously chooses a supported rate closest to t
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-8-10-service-clk_get_rate-service_id-0x08"><a class="anchor" href="#4-1-8-10-service-clk_get_rate-service_id-0x08"></a>4.1.8.10. Service: CLK_GET_RATE (SERVICE_ID: 0x08)</h4>
+<h4 id="service-clk_get_rate-service_id-0x08"><a class="anchor" href="#service-clk_get_rate-service_id-0x08"></a>Service: CLK_GET_RATE (SERVICE_ID: 0x08)</h4>
 <div class="paragraph">
 <p>This service is used to get the current clock rate.</p>
 </div>
@@ -8511,7 +8511,7 @@ In Auto mode the platform can autonomously chooses a supported rate closest to t
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-9-service-group-device_power-servicegroup_id-0x0009"><a class="anchor" href="#4-1-9-service-group-device_power-servicegroup_id-0x0009"></a>4.1.9. Service Group - DEVICE_POWER (SERVICEGROUP_ID: 0x0009)</h3>
+<h3 id="service-group-device_power-servicegroup_id-0x0009"><a class="anchor" href="#service-group-device_power-servicegroup_id-0x0009"></a>Service Group - DEVICE_POWER (SERVICEGROUP_ID: 0x0009)</h3>
 <div class="paragraph">
 <p>This DEVICE_POWER service group provides messages to manage the power states of
 a device power domain. This service group is used only for device power
@@ -8583,7 +8583,7 @@ and start from <code>0</code>.</p>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="section-power-state"><a class="anchor" href="#section-power-state"></a>4.1.9.1. Power State Format</h4>
+<h4 id="section-power-state"><a class="anchor" href="#section-power-state"></a>Power State Format</h4>
 <div class="paragraph">
 <p>The power state is represented as a 32-bit value. The following table shows the
 encoding for the power state.</p>
@@ -8666,20 +8666,20 @@ encoding for the power state.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="device-power-notifications"><a class="anchor" href="#device-power-notifications"></a>4.1.9.2. Notifications</h4>
+<h4 id="device-power-notifications"><a class="anchor" href="#device-power-notifications"></a>Notifications</h4>
 <div class="paragraph">
 <p>This service group does not support any events for notification.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-9-3-service-dpwr_enable_notification-service_id-0x01"><a class="anchor" href="#4-1-9-3-service-dpwr_enable_notification-service_id-0x01"></a>4.1.9.3. Service: DPWR_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
+<h4 id="service-dpwr_enable_notification-service_id-0x01"><a class="anchor" href="#service-dpwr_enable_notification-service_id-0x01"></a>Service: DPWR_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
 <div class="paragraph">
 <p>This service allows the application processor to subscribe to <code>DEVICE_POWER</code>
 service group notifications. The platform may optionally support notifications
 for events that may occur. The platform microcontroller can send these
 notification messages to the application processor if they are implemented and
 the application processor has subscribed to them. The supported events are
-described in <a href="#device-power-notifications">4.1.9.2. Notifications</a>.</p>
+described in <a href="#device-power-notifications">Notifications</a>.</p>
 </div>
 <table id="table_devpower_ennotification_request_data" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 121. Request Data</caption>
@@ -8815,7 +8815,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-9-4-service-dpwr_get_num_domains-service_id-0x02"><a class="anchor" href="#4-1-9-4-service-dpwr_get_num_domains-service_id-0x02"></a>4.1.9.4. Service: DPWR_GET_NUM_DOMAINS (SERVICE_ID: 0x02)</h4>
+<h4 id="service-dpwr_get_num_domains-service_id-0x02"><a class="anchor" href="#service-dpwr_get_num_domains-service_id-0x02"></a>Service: DPWR_GET_NUM_DOMAINS (SERVICE_ID: 0x02)</h4>
 <div class="paragraph">
 <p>This service is used to query the number of device power domains available which
 can be controlled by the client. The number of domains returned may be less than
@@ -8894,7 +8894,7 @@ the actual number of domains present on the platform.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-9-5-service-dpwr_get_attributes-service_id-0x03"><a class="anchor" href="#4-1-9-5-service-dpwr_get_attributes-service_id-0x03"></a>4.1.9.5. Service: DPWR_GET_ATTRIBUTES (SERVICE_ID: 0x03)</h4>
+<h4 id="service-dpwr_get_attributes-service_id-0x03"><a class="anchor" href="#service-dpwr_get_attributes-service_id-0x03"></a>Service: DPWR_GET_ATTRIBUTES (SERVICE_ID: 0x03)</h4>
 <div class="paragraph">
 <p>This service is used to query the attributes of a device power domain.</p>
 </div>
@@ -9005,7 +9005,7 @@ the actual number of domains present on the platform.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-9-6-service-dpwr_set_state-service_id-0x04"><a class="anchor" href="#4-1-9-6-service-dpwr_set_state-service_id-0x04"></a>4.1.9.6. Service: DPWR_SET_STATE (SERVICE_ID: 0x04)</h4>
+<h4 id="service-dpwr_set_state-service_id-0x04"><a class="anchor" href="#service-dpwr_set_state-service_id-0x04"></a>Service: DPWR_SET_STATE (SERVICE_ID: 0x04)</h4>
 <div class="paragraph">
 <p>This service is used to change the power state of a device power domain.</p>
 </div>
@@ -9039,7 +9039,7 @@ the actual number of domains present on the platform.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">This field indicates the power state to which the power domain should
 transition. The specific power states and their meanings may vary depending on
 the implementation, but generally, they include values such as "ON", "OFF"
-and vendor specific power state. Refer <a href="#section-power-state">4.1.9.1. Power State Format</a>
+and vendor specific power state. Refer <a href="#section-power-state">Power State Format</a>
 for more details.</p></td>
 </tr>
 </tbody>
@@ -9110,7 +9110,7 @@ for more details.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-9-7-service-dpwr_get_state-service_id-0x05"><a class="anchor" href="#4-1-9-7-service-dpwr_get_state-service_id-0x05"></a>4.1.9.7. Service: DPWR_GET_STATE (SERVICE_ID: 0x05)</h4>
+<h4 id="service-dpwr_get_state-service_id-0x05"><a class="anchor" href="#service-dpwr_get_state-service_id-0x05"></a>Service: DPWR_GET_STATE (SERVICE_ID: 0x05)</h4>
 <div class="paragraph">
 <p>This service is used to get the current power state of a device power domain.</p>
 </div>
@@ -9200,7 +9200,7 @@ for more details.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>This field indicates the current power state of the specified domain. The
 power state can be one of several predefined values, such as ON, OFF, or vendor
-specific implementation. Refer <a href="#section-power-state">4.1.9.1. Power State Format</a>
+specific implementation. Refer <a href="#section-power-state">Power State Format</a>
 for more details.</p>
 </div></div></td>
 </tr>
@@ -9209,7 +9209,7 @@ for more details.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-10-service-group-performance-servicegroup_id-0x000a"><a class="anchor" href="#4-1-10-service-group-performance-servicegroup_id-0x000a"></a>4.1.10. Service Group - PERFORMANCE (SERVICEGROUP_ID: 0x000A)</h3>
+<h3 id="service-group-performance-servicegroup_id-0x000a"><a class="anchor" href="#service-group-performance-servicegroup_id-0x000a"></a>Service Group - PERFORMANCE (SERVICEGROUP_ID: 0x000A)</h3>
 <div class="paragraph">
 <p>This PERFORMANCE service group is used to manage the performance of a
 group of devices or application processors that operate in the same performance
@@ -9309,7 +9309,7 @@ can be turned on or off together for power management purposes.</p>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="section-perf-level-attribute"><a class="anchor" href="#section-perf-level-attribute"></a>4.1.10.1. Performance Level Attribute</h4>
+<h4 id="section-perf-level-attribute"><a class="anchor" href="#section-perf-level-attribute"></a>Performance Level Attribute</h4>
 <div class="paragraph">
 <p>The following table shows the structure of a single performance level and its'
 attribute.</p>
@@ -9353,7 +9353,7 @@ attribute.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-10-2-performance-fast-channel"><a class="anchor" href="#4-1-10-2-performance-fast-channel"></a>4.1.10.2. Performance Fast-channel</h4>
+<h4 id="performance-fast-channel"><a class="anchor" href="#performance-fast-channel"></a>Performance Fast-channel</h4>
 <div class="paragraph">
 <p>This section provides an overview of the properties associated with the fast-channel
 for PERFORMANCE service group.</p>
@@ -9498,7 +9498,7 @@ should consist of a 32-bit <code>MAX_PERF_LEVEL</code> and a 32-bit <code>MIN_PE
 </div>
 </div>
 <div class="sect3">
-<h4 id="performance-notifications"><a class="anchor" href="#performance-notifications"></a>4.1.10.3. Notifications</h4>
+<h4 id="performance-notifications"><a class="anchor" href="#performance-notifications"></a>Notifications</h4>
 <div class="paragraph">
 <p>When a client registers for performance change notifications, the platform will
 send notification to the client whenever there is a change in the performance
@@ -9625,14 +9625,14 @@ inform clients in the system about changes in the performance domain.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-10-4-service-perf_enable_notification-service_id-0x01"><a class="anchor" href="#4-1-10-4-service-perf_enable_notification-service_id-0x01"></a>4.1.10.4. Service: PERF_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
+<h4 id="service-perf_enable_notification-service_id-0x01"><a class="anchor" href="#service-perf_enable_notification-service_id-0x01"></a>Service: PERF_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
 <div class="paragraph">
 <p>This service allows the application processor to subscribe to <code>PERFORMANCE</code>
 service group notifications. The platform may optionally support notifications
 for events that may occur. The platform microcontroller can send these
 notification messages to the application processor if they are implemented and
 the application processor has subscribed to them. The supported events are
-described in <a href="#performance-notifications">4.1.10.3. Notifications</a>.</p>
+described in <a href="#performance-notifications">Notifications</a>.</p>
 </div>
 <table id="table_perf_ennotification_request_data" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 134. Request Data</caption>
@@ -9768,7 +9768,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-10-5-service-perf_get_num_domains-service_id-0x02"><a class="anchor" href="#4-1-10-5-service-perf_get_num_domains-service_id-0x02"></a>4.1.10.5. Service: PERF_GET_NUM_DOMAINS (SERVICE_ID: 0x02)</h4>
+<h4 id="service-perf_get_num_domains-service_id-0x02"><a class="anchor" href="#service-perf_get_num_domains-service_id-0x02"></a>Service: PERF_GET_NUM_DOMAINS (SERVICE_ID: 0x02)</h4>
 <div class="paragraph">
 <p>This service returns the number of performance domains supported by the system.
 The number of performance domains may vary depending on the hardware platform
@@ -9851,7 +9851,7 @@ important for optimizing system performance and power consumption.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-10-6-service-perf_get_attributes-service_id-0x03"><a class="anchor" href="#4-1-10-6-service-perf_get_attributes-service_id-0x03"></a>4.1.10.6. Service: PERF_GET_ATTRIBUTES (SERVICE_ID: 0x03)</h4>
+<h4 id="service-perf_get_attributes-service_id-0x03"><a class="anchor" href="#service-perf_get_attributes-service_id-0x03"></a>Service: PERF_GET_ATTRIBUTES (SERVICE_ID: 0x03)</h4>
 <div class="paragraph">
 <p>This service is used to retrieve the attributes of a specific performance
 domain. These attributes provide information about the performance capabilities
@@ -10039,7 +10039,7 @@ in microseconds (us).</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-10-7-service-perf_get_supported_levels-service_id-0x04"><a class="anchor" href="#4-1-10-7-service-perf_get_supported_levels-service_id-0x04"></a>4.1.10.7. Service: PERF_GET_SUPPORTED_LEVELS (SERVICE_ID: 0x04)</h4>
+<h4 id="service-perf_get_supported_levels-service_id-0x04"><a class="anchor" href="#service-perf_get_supported_levels-service_id-0x04"></a>Service: PERF_GET_SUPPORTED_LEVELS (SERVICE_ID: 0x04)</h4>
 <div class="paragraph">
 <p>This service provides a list of the available performance levels or also called
 operating performance points (OPPs) for a specific performance domain. These
@@ -10215,7 +10215,7 @@ level attributes.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-10-8-service-perf_get_level-service_id-0x05"><a class="anchor" href="#4-1-10-8-service-perf_get_level-service_id-0x05"></a>4.1.10.8. Service: PERF_GET_LEVEL (SERVICE_ID: 0x05)</h4>
+<h4 id="service-perf_get_level-service_id-0x05"><a class="anchor" href="#service-perf_get_level-service_id-0x05"></a>Service: PERF_GET_LEVEL (SERVICE_ID: 0x05)</h4>
 <div class="paragraph">
 <p>This service is used to obtain the current performance level index of a specific
 performance domain in the system.</p>
@@ -10313,7 +10313,7 @@ performance domain in the system.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-10-9-service-perf_set_level-service_id-0x06"><a class="anchor" href="#4-1-10-9-service-perf_set_level-service_id-0x06"></a>4.1.10.9. Service: PERF_SET_LEVEL (SERVICE_ID: 0x06)</h4>
+<h4 id="service-perf_set_level-service_id-0x06"><a class="anchor" href="#service-perf_set_level-service_id-0x06"></a>Service: PERF_SET_LEVEL (SERVICE_ID: 0x06)</h4>
 <div class="paragraph">
 <p>This service is used to set the current performance level index of a specific
 performance domain in the system.</p>
@@ -10419,7 +10419,7 @@ performance domain in the system.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-10-10-service-perf_get_limit-service_id-0x07"><a class="anchor" href="#4-1-10-10-service-perf_get_limit-service_id-0x07"></a>4.1.10.10. Service: PERF_GET_LIMIT (SERVICE_ID: 0x07)</h4>
+<h4 id="service-perf_get_limit-service_id-0x07"><a class="anchor" href="#service-perf_get_limit-service_id-0x07"></a>Service: PERF_GET_LIMIT (SERVICE_ID: 0x07)</h4>
 <div class="paragraph">
 <p>This service is used to obtain the current performance limit of a specific
 performance domain in the system.</p>
@@ -10525,7 +10525,7 @@ performance domain in the system.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-10-11-service-perf_set_limit-service_id-0x08"><a class="anchor" href="#4-1-10-11-service-perf_set_limit-service_id-0x08"></a>4.1.10.11. Service: PERF_SET_LIMIT (SERVICE_ID: 0x08)</h4>
+<h4 id="service-perf_set_limit-service_id-0x08"><a class="anchor" href="#service-perf_set_limit-service_id-0x08"></a>Service: PERF_SET_LIMIT (SERVICE_ID: 0x08)</h4>
 <div class="paragraph">
 <p>This service is used to set the performance limit of a specific
 performance domain in the system. The platform must ensure that any subsequent
@@ -10685,7 +10685,7 @@ application processor.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-10-12-service-perf_get_fast_channel_region-service_id-0x09"><a class="anchor" href="#4-1-10-12-service-perf_get_fast_channel_region-service_id-0x09"></a>4.1.10.12. Service: PERF_GET_FAST_CHANNEL_REGION (SERVICE_ID: 0x09)</h4>
+<h4 id="service-perf_get_fast_channel_region-service_id-0x09"><a class="anchor" href="#service-perf_get_fast_channel_region-service_id-0x09"></a>Service: PERF_GET_FAST_CHANNEL_REGION (SERVICE_ID: 0x09)</h4>
 <div class="paragraph">
 <p>This service retrieves the physical address of the fast-channel region used in
 the performance service group. The fast-channel region is grouped in a continuous
@@ -10792,7 +10792,7 @@ block of memory to ease the configuration of memory region protection.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-10-13-service-perf_get_fast_channel_attributes-service_id-0x0a"><a class="anchor" href="#4-1-10-13-service-perf_get_fast_channel_attributes-service_id-0x0a"></a>4.1.10.13. Service: PERF_GET_FAST_CHANNEL_ATTRIBUTES (SERVICE_ID: 0x0A)</h4>
+<h4 id="service-perf_get_fast_channel_attributes-service_id-0x0a"><a class="anchor" href="#service-perf_get_fast_channel_attributes-service_id-0x0a"></a>Service: PERF_GET_FAST_CHANNEL_ATTRIBUTES (SERVICE_ID: 0x0A)</h4>
 <div class="paragraph">
 <p>This service allows clients to query attributes of the fast-channel for a
 specific performance domain and performance service.</p>
@@ -10994,7 +10994,7 @@ equal to the doorbell register width must be used as write value.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-11-service-group-management_mode-servicegroup_id-0x000b"><a class="anchor" href="#4-1-11-service-group-management_mode-servicegroup_id-0x000b"></a>4.1.11. Service Group - MANAGEMENT_MODE (SERVICEGROUP_ID: 0x000B)</h3>
+<h3 id="service-group-management_mode-servicegroup_id-0x000b"><a class="anchor" href="#service-group-management_mode-servicegroup_id-0x000b"></a>Service Group - MANAGEMENT_MODE (SERVICEGROUP_ID: 0x000B)</h3>
 <div class="paragraph">
 <p>This MANAGEMENT_MODE service group provides RPMI client a mechanism to invoke the
 Management Mode (MM) in a secure execution environment. For general background on
@@ -11045,20 +11045,20 @@ with the MM service is passed via special Management Mode (MM) shared memory.</p
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="management-notifications"><a class="anchor" href="#management-notifications"></a>4.1.11.1. Notifications</h4>
+<h4 id="management-notifications"><a class="anchor" href="#management-notifications"></a>Notifications</h4>
 <div class="paragraph">
 <p>This service group does not support any events for notification.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-11-2-service-mm_enable_notification-service_id-0x01"><a class="anchor" href="#4-1-11-2-service-mm_enable_notification-service_id-0x01"></a>4.1.11.2. Service: MM_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
+<h4 id="service-mm_enable_notification-service_id-0x01"><a class="anchor" href="#service-mm_enable_notification-service_id-0x01"></a>Service: MM_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
 <div class="paragraph">
 <p>This service allows the application processor to subscribe to <code>MANAGEMENT_MODE</code>
 service group notifications. The platform may optionally support notifications
 for events that may occur. The platform microcontroller can send these
 notification messages to the application processor if they are implemented and
 the application processor has subscribed to them. The supported events are
-described in <a href="#management-notifications">4.1.11.1. Notifications</a>.</p>
+described in <a href="#management-notifications">Notifications</a>.</p>
 </div>
 <table id="table_mm_ennotification_request_data" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 82. Request Data</caption>
@@ -11194,7 +11194,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-11-3-service-mm_get_attributes-service_id-0x02"><a class="anchor" href="#4-1-11-3-service-mm_get_attributes-service_id-0x02"></a>4.1.11.3. Service: MM_GET_ATTRIBUTES (SERVICE_ID: 0x02)</h4>
+<h4 id="service-mm_get_attributes-service_id-0x02"><a class="anchor" href="#service-mm_get_attributes-service_id-0x02"></a>Service: MM_GET_ATTRIBUTES (SERVICE_ID: 0x02)</h4>
 <div class="paragraph">
 <p>This RPMI service gets the attributes about Management Mode, including MM
 version, MM shared memory location, etc.</p>
@@ -11318,7 +11318,7 @@ version, MM shared memory location, etc.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-11-4-service-mm_communicate-service_id-0x03"><a class="anchor" href="#4-1-11-4-service-mm_communicate-service_id-0x03"></a>4.1.11.4. Service: MM_COMMUNICATE (SERVICE_ID: 0x03)</h4>
+<h4 id="service-mm_communicate-service_id-0x03"><a class="anchor" href="#service-mm_communicate-service_id-0x03"></a>Service: MM_COMMUNICATE (SERVICE_ID: 0x03)</h4>
 <div class="paragraph">
 <p>The <code>MM_COMMUNICATE</code> service invokes an MM service implemented in the secure
 execution environment. The input data needed to identify and invoke the MM
@@ -11444,7 +11444,7 @@ the MM shared memory.</p></td>
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-12-service-group-ras_agent-servicegroup_id-0x000c"><a class="anchor" href="#4-1-12-service-group-ras_agent-servicegroup_id-0x000c"></a>4.1.12. Service Group - RAS_AGENT (SERVICEGROUP_ID: 0x000C)</h3>
+<h3 id="service-group-ras_agent-servicegroup_id-0x000c"><a class="anchor" href="#service-group-ras_agent-servicegroup_id-0x000c"></a>Service Group - RAS_AGENT (SERVICEGROUP_ID: 0x000C)</h3>
 <div class="paragraph">
 <p>The RAS_AGENT service group provides services to enumerate various error
 sources in a system and to retrieve their descriptors.</p>
@@ -11494,9 +11494,9 @@ referred to as <code>RAS_ERR_SRC_ID</code>.</p>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="4-1-12-1-error-source-descriptor-format"><a class="anchor" href="#4-1-12-1-error-source-descriptor-format"></a>4.1.12.1. Error Source Descriptor Format</h4>
+<h4 id="error-source-descriptor-format"><a class="anchor" href="#error-source-descriptor-format"></a>Error Source Descriptor Format</h4>
 <div class="sect4">
-<h5 id="4-1-12-1-1-acpi-systems"><a class="anchor" href="#4-1-12-1-1-acpi-systems"></a>4.1.12.1.1. ACPI Systems</h5>
+<h5 id="acpi-systems"><a class="anchor" href="#acpi-systems"></a>ACPI Systems</h5>
 <div class="paragraph">
 <p>For systems that support ACPI/APEI, the format of the error source descriptor
 is as defined in ACPI specification v6.4 or above, (GHESv2) [<a href="bibliography.html#bib-acpi" class="xref page">3</a>].
@@ -11529,7 +11529,7 @@ error source descriptor being returned.
 </div>
 </div>
 <div class="sect4">
-<h5 id="4-1-12-1-2-non-acpi-systems"><a class="anchor" href="#4-1-12-1-2-non-acpi-systems"></a>4.1.12.1.2. Non-ACPI Systems</h5>
+<h5 id="non-acpi-systems"><a class="anchor" href="#non-acpi-systems"></a>Non-ACPI Systems</h5>
 <div class="paragraph">
 <p>RAS is not standardized for non-ACPI systems. Such systems may define custom
 format for an error source descriptor. The type of custom error source
@@ -11538,20 +11538,20 @@ descriptor format can be read from <code>RAS_GET_ERR_SRC_DESC.FLAGS[3:0]</code>.
 </div>
 </div>
 <div class="sect3">
-<h4 id="ras-notifications"><a class="anchor" href="#ras-notifications"></a>4.1.12.2. Notifications</h4>
+<h4 id="ras-notifications"><a class="anchor" href="#ras-notifications"></a>Notifications</h4>
 <div class="paragraph">
 <p>This service group does not support any events for notification.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="4-1-12-3-service-ras_enable_notification-service_id-0x01"><a class="anchor" href="#4-1-12-3-service-ras_enable_notification-service_id-0x01"></a>4.1.12.3. Service: RAS_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
+<h4 id="service-ras_enable_notification-service_id-0x01"><a class="anchor" href="#service-ras_enable_notification-service_id-0x01"></a>Service: RAS_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
 <div class="paragraph">
 <p>This service allows the application processor to subscribe to <code>RAS_AGENT</code>
 service group notifications. The platform may optionally support notifications
 for events that may occur. The platform microcontroller can send these
 notification messages to the application processor if they are implemented and
 the application processor has subscribed to them. The supported events are
-described in <a href="#ras-notifications">4.1.12.2. Notifications</a>.</p>
+described in <a href="#ras-notifications">Notifications</a>.</p>
 </div>
 <table id="table_ras_ennotification_request_data" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 162. Request Data</caption>
@@ -11687,7 +11687,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-12-4-service-ras_get_num_err_srcs-service_id-0x02"><a class="anchor" href="#4-1-12-4-service-ras_get_num_err_srcs-service_id-0x02"></a>4.1.12.4. Service: RAS_GET_NUM_ERR_SRCS (SERVICE_ID: 0x02)</h4>
+<h4 id="service-ras_get_num_err_srcs-service_id-0x02"><a class="anchor" href="#service-ras_get_num_err_srcs-service_id-0x02"></a>Service: RAS_GET_NUM_ERR_SRCS (SERVICE_ID: 0x02)</h4>
 <div class="paragraph">
 <p>This service queries number of error sources available in the system.</p>
 </div>
@@ -11765,7 +11765,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-12-5-service-ras_get_err_srcs_id_list-service_id-0x03"><a class="anchor" href="#4-1-12-5-service-ras_get_err_srcs_id_list-service_id-0x03"></a>4.1.12.5. Service: RAS_GET_ERR_SRCS_ID_LIST (SERVICE_ID: 0x03)</h4>
+<h4 id="service-ras_get_err_srcs_id_list-service_id-0x03"><a class="anchor" href="#service-ras_get_err_srcs_id_list-service_id-0x03"></a>Service: RAS_GET_ERR_SRCS_ID_LIST (SERVICE_ID: 0x03)</h4>
 <div class="paragraph">
 <p>This service returns a list of <code>RAS_ERR_SRC_ID</code> for all error sources present
 in the system. The <code>RAS_ERR_SRC_ID</code> can be used to get the associated
@@ -11891,7 +11891,7 @@ source ID.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-12-6-service-ras_get_err_src_desc-service_id-0x04"><a class="anchor" href="#4-1-12-6-service-ras_get_err_src_desc-service_id-0x04"></a>4.1.12.6. Service: RAS_GET_ERR_SRC_DESC (SERVICE_ID: 0x04)</h4>
+<h4 id="service-ras_get_err_src_desc-service_id-0x04"><a class="anchor" href="#service-ras_get_err_src_desc-service_id-0x04"></a>Service: RAS_GET_ERR_SRC_DESC (SERVICE_ID: 0x04)</h4>
 <div class="paragraph">
 <p>This service retrieves the error source descriptor of an error source specified
 by <code>RAS_ERR_SRC_ID</code>.</p>
@@ -12049,7 +12049,7 @@ returned.</p></td>
 </div>
 </div>
 <div class="sect2">
-<h3 id="4-1-13-service-group-request_forward-servicegroup_id-0x000d"><a class="anchor" href="#4-1-13-service-group-request_forward-servicegroup_id-0x000d"></a>4.1.13. Service Group - REQUEST_FORWARD (SERVICEGROUP_ID: 0x000D)</h3>
+<h3 id="service-group-request_forward-servicegroup_id-0x000d"><a class="anchor" href="#service-group-request_forward-servicegroup_id-0x000d"></a>Service Group - REQUEST_FORWARD (SERVICEGROUP_ID: 0x000D)</h3>
 <div class="paragraph">
 <p>The REQUEST_FORWARD service group allows application processors to retrieve and
 process RPMI request messages which are forwarded by platform microcontroller from
@@ -12101,7 +12101,7 @@ service group:</p>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="reqfwd-notifications"><a class="anchor" href="#reqfwd-notifications"></a>4.1.13.1. Notifications</h4>
+<h4 id="reqfwd-notifications"><a class="anchor" href="#reqfwd-notifications"></a>Notifications</h4>
 <div class="paragraph">
 <p>The <a href="#table_reqfwd_notification_events">Table 89</a> below lists the notification events
 defined by the REQUEST_FORWARD service group.</p>
@@ -12137,14 +12137,14 @@ in the queue.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-13-2-service-reqfwd_enable_notification-service_id-0x01"><a class="anchor" href="#4-1-13-2-service-reqfwd_enable_notification-service_id-0x01"></a>4.1.13.2. Service: REQFWD_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
+<h4 id="service-reqfwd_enable_notification-service_id-0x01"><a class="anchor" href="#service-reqfwd_enable_notification-service_id-0x01"></a>Service: REQFWD_ENABLE_NOTIFICATION (SERVICE_ID: 0x01)</h4>
 <div class="paragraph">
 <p>This service allows the application processor to subscribe to <code>REQUEST_FORWARD</code>
 service group notifications. The platform may optionally support notifications
 for events that may occur. The platform microcontroller can send these
 notification messages to the application processor if they are implemented and
 the application processor has subscribed to them. The supported events are
-described in <a href="#reqfwd-notifications">4.1.13.1. Notifications</a>.</p>
+described in <a href="#reqfwd-notifications">Notifications</a>.</p>
 </div>
 <table id="table_reqfwd_ennotification_request_data" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 90. Request Data</caption>
@@ -12280,7 +12280,7 @@ In case of an error, the value of <code>CURRENT_STATE</code> is unspecified.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-13-3-service-reqfwd_retrieve_current_message-service_id-0x02"><a class="anchor" href="#4-1-13-3-service-reqfwd_retrieve_current_message-service_id-0x02"></a>4.1.13.3. Service: REQFWD_RETRIEVE_CURRENT_MESSAGE (SERVICE_ID: 0x02)</h4>
+<h4 id="service-reqfwd_retrieve_current_message-service_id-0x02"><a class="anchor" href="#service-reqfwd_retrieve_current_message-service_id-0x02"></a>Service: REQFWD_RETRIEVE_CURRENT_MESSAGE (SERVICE_ID: 0x02)</h4>
 <div class="paragraph">
 <p>This service allows application processors to retrieve the current forwarded RPMI
 request message. The current message may be the oldest forwarded RPMI request
@@ -12401,7 +12401,7 @@ message at byte offset specified by <code>START_INDEX</code>.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="4-1-13-4-service-reqfwd_complete_current_message-service_id-0x03"><a class="anchor" href="#4-1-13-4-service-reqfwd_complete_current_message-service_id-0x03"></a>4.1.13.4. Service: REQFWD_COMPLETE_CURRENT_MESSAGE (SERVICE_ID: 0x03)</h4>
+<h4 id="service-reqfwd_complete_current_message-service_id-0x03"><a class="anchor" href="#service-reqfwd_complete_current_message-service_id-0x03"></a>Service: REQFWD_COMPLETE_CURRENT_MESSAGE (SERVICE_ID: 0x03)</h4>
 <div class="paragraph">
 <p>This service allows the application processors to inform the platform microcontroller
 (or SBI implementation) that:</p>

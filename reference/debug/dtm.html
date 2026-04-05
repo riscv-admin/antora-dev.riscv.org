@@ -739,19 +739,19 @@ the BYPASS register.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x01</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-idcode">idcode</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">To identify a specific silicon version</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-idcode">6.1.1.3. <code>IDCODE</code> (at 0x01)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-idcode"><code>IDCODE</code> (at 0x01)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x10</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DTM Control and Status (<a href="#dtm-dtmcs">dtmcs</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For Debugging</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-dtmcs">6.1.1.4. DTM Control and Status (dtmcs, at 0x10)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-dtmcs">DTM Control and Status (dtmcs, at 0x10)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x11</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Debug Module Interface Access (<a href="#dtm-dmi">dmi</a>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">For Debugging</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-dmi">6.1.1.5. Debug Module Interface Access (dmi, at 0x11)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-dmi">Debug Module Interface Access (dmi, at 0x11)</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x12</p></td>
@@ -793,13 +793,13 @@ the BYPASS register.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0x1f</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-bypass">bypass</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">JTAG requires this encoding</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-bypass">6.1.1.6. <code>BYPASS</code> (at 0x1f)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dtm-bypass"><code>BYPASS</code> (at 0x1f)</a></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="dtm-idcode"><a class="anchor" href="#dtm-idcode"></a>6.1.1.3. <code>IDCODE</code> (at 0x01)</h4>
+<h4 id="dtm-idcode"><a class="anchor" href="#dtm-idcode"></a><code>IDCODE</code> (at 0x01)</h4>
 <div class="paragraph">
 <p>This register is selected (in IR) when the TAP state machine is reset.
 Its definition is exactly as defined in IEEE Std 1149.1-2013.</p>
@@ -872,7 +872,7 @@ Identification Code.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="dtm-dtmcs"><a class="anchor" href="#dtm-dtmcs"></a>6.1.1.4. DTM Control and Status (dtmcs, at 0x10)</h4>
+<h4 id="dtm-dtmcs"><a class="anchor" href="#dtm-dtmcs"></a>DTM Control and Status (dtmcs, at 0x10)</h4>
 <div class="paragraph">
 <p>The size of this register will remain constant in future versions so
 that a debugger can always determine the version of the DTM.</p>
@@ -1037,7 +1037,7 @@ check <a href="#dtmcs-dmistat">dmistat</a> when necessary.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="dtm-dmi"><a class="anchor" href="#dtm-dmi"></a>6.1.1.5. Debug Module Interface Access (dmi, at 0x11)</h4>
+<h4 id="dtm-dmi"><a class="anchor" href="#dtm-dmi"></a>Debug Module Interface Access (dmi, at 0x11)</h4>
 <div class="paragraph">
 <p>This register allows access to the Debug Module Interface (DMI).</p>
 </div>
@@ -1202,7 +1202,7 @@ in Run-Test/Idle.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="dtm-bypass"><a class="anchor" href="#dtm-bypass"></a>6.1.1.6. <code>BYPASS</code> (at 0x1f)</h4>
+<h4 id="dtm-bypass"><a class="anchor" href="#dtm-bypass"></a><code>BYPASS</code> (at 0x1f)</h4>
 <div class="paragraph">
 <p>1-bit register that has no effect. It is used when a debugger does not
 want to communicate with this TAP.</p>
@@ -1217,9 +1217,9 @@ want to communicate with this TAP.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="6-1-1-7-jtag-connector"><a class="anchor" href="#6-1-1-7-jtag-connector"></a>6.1.1.7. JTAG Connector</h4>
+<h4 id="6-1-1-3-jtag-connector"><a class="anchor" href="#6-1-1-3-jtag-connector"></a>6.1.1.3. JTAG Connector</h4>
 <div class="sect4">
-<h5 id="6-1-1-7-1-recommended-jtag-connector"><a class="anchor" href="#6-1-1-7-1-recommended-jtag-connector"></a>6.1.1.7.1. Recommended JTAG Connector</h5>
+<h5 id="6-1-1-3-1-recommended-jtag-connector"><a class="anchor" href="#6-1-1-3-1-recommended-jtag-connector"></a>6.1.1.3.1. Recommended JTAG Connector</h5>
 <div class="paragraph">
 <p>To make it easy to acquire debug hardware, this spec recommends a
 connector that is compatible with the MIPI-10 .05 inch connector
@@ -1285,7 +1285,7 @@ nTRST connector.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="6-1-1-7-2-alternate-jtag-connector"><a class="anchor" href="#6-1-1-7-2-alternate-jtag-connector"></a>6.1.1.7.2. Alternate JTAG Connector</h5>
+<h5 id="6-1-1-3-2-alternate-jtag-connector"><a class="anchor" href="#6-1-1-3-2-alternate-jtag-connector"></a>6.1.1.3.2. Alternate JTAG Connector</h5>
 <div class="paragraph">
 <p>The MIPI-10 connector should provide plenty of signals for all modern
 hardware. If a design does need legacy JTAG signals, then the MIPI-20
@@ -1468,7 +1468,7 @@ on this functionality.</p></td>
 </div>
 </div>
 <div class="sect3">
-<h4 id="6-1-1-8-cjtag"><a class="anchor" href="#6-1-1-8-cjtag"></a>6.1.1.8. cJTAG</h4>
+<h4 id="6-1-1-4-cjtag"><a class="anchor" href="#6-1-1-4-cjtag"></a>6.1.1.4. cJTAG</h4>
 <div class="paragraph">
 <p>This spec does not have specific recommendations on how to use the cJTAG
 protocol.</p>
