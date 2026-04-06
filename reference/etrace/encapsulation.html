@@ -563,19 +563,22 @@
     <a class="nav-link"  href="index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#etrace-copyright.adoc">Copyright</a>
+    <a class="nav-link"  href="changelog.html">Change Log</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="contributors.html">Contributors</a>
+    <a class="nav-link"  href="copyright.html">Copyright</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="contributors.html">Chapter 1. Contributors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="intro.html">Chapter 2. Introduction</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="encapsulation.html">Chapter 2. Encapsulation Format</a>
+    <a class="nav-link"  href="encapsulation.html">Chapter 3. Encapsulation Format</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="e-trace-specifics.html">Chapter 3. E-Trace Specifics</a>
+    <a class="nav-link"  href="e-trace-specifics.html">E-Trace Specifics</a>
   </li>
 </ul>
   </li>
@@ -664,18 +667,18 @@
       <li><a href="../home/index.html">RISC-V Specifications</a></li>
             <li><a href="index.html">Unformatted Trace & Data Encapsulation</a></li>
                     <li>
-            <a href="encapsulation.html">Chapter 2. Encapsulation Format</a>
+            <a href="encapsulation.html">Chapter 3. Encapsulation Format</a>
           </li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="chapter2"><a class="anchor" href="#chapter2"></a>2.1. Packet Encapsulation</h2>
+<h2 id="chapter2"><a class="anchor" href="#chapter2"></a>3.1. Packet Encapsulation</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Two types of encapsulation are defined: <em>normal</em> and <em>null</em>. A transmitted stream of encapsulated packets comprises a mixture of <em>normal</em> and <em>null</em> packets.  Each packet is atomic, and must be transmitted in its entirety before another packet can be sent.</p>
 </div>
 <div class="sect2">
-<h3 id="2-1-1-normal-encapsulation-structure"><a class="anchor" href="#2-1-1-normal-encapsulation-structure"></a>2.1.1. Normal Encapsulation Structure</h3>
+<h3 id="3-1-1-normal-encapsulation-structure"><a class="anchor" href="#3-1-1-normal-encapsulation-structure"></a>3.1.1. Normal Encapsulation Structure</h3>
 <div class="paragraph">
 <p>The normal encapsulation structure is comprised of four field-groups as shown in <a href="#_table_Groups">Table 1</a>.  In this and the following tables, the field-groups and fields are listed in transmission order: the uppermost field-group or field in a table is transmitted first, and multi-bit fields are transmitted least significant bit first.</p>
 </div>
@@ -697,22 +700,22 @@
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock"> <strong>header</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">8</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">Encapsulation header.  See <a href="#_section_Header">2.1.1.1. Header</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">Encapsulation header.  See <a href="#_section_Header">3.1.1.1. Header</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock"><strong>srcID</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">0 - 16</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">Source ID.  See <a href="#_section_srcID">2.1.1.2. srcID</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">Source ID.  See <a href="#_section_srcID">3.1.1.2. srcID</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock"><strong>timestamp</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">T*8</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">Time stamp.  See <a href="#_section_Timestamp">2.1.1.3. Timestamp</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">Time stamp.  See <a href="#_section_Timestamp">3.1.1.3. Timestamp</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock"><strong>payload</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">1-248</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">Packet payload.  See <a href="#_section_Payload">2.1.1.4. Payload</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">Packet payload.  See <a href="#_section_Payload">3.1.1.4. Payload</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -720,7 +723,7 @@
 <p>The groups are defined in the following sections:</p>
 </div>
 <div class="sect3">
-<h4 id="_section_Header"><a class="anchor" href="#_section_Header"></a>2.1.1.1. Header</h4>
+<h4 id="_section_Header"><a class="anchor" href="#_section_Header"></a>3.1.1.1. Header</h4>
 <div class="paragraph">
 <p>The header is a single byte comprising the fields defined in  <a href="#_table_Header">Table 2</a>.</p>
 </div>
@@ -742,7 +745,7 @@
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock"> <strong>length</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">5</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">Encapsulated payload length.  A value of <em>L</em> indicates an <em>L</em> byte payload.  Must be &gt; 0 - see <a href="#_section_null_encapsulation">2.1.2. Null Encapsulation</a>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">Encapsulated payload length.  A value of <em>L</em> indicates an <em>L</em> byte payload.  Must be &gt; 0 - see <a href="#_section_null_encapsulation">3.1.2. Null Encapsulation</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock"><strong>flow</strong></p></td>
@@ -759,7 +762,7 @@
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_section_srcID"><a class="anchor" href="#_section_srcID"></a>2.1.1.2. srcID</h4>
+<h4 id="_section_srcID"><a class="anchor" href="#_section_srcID"></a>3.1.1.2. srcID</h4>
 <div class="paragraph">
 <p>The <strong>srcID</strong> field identifies the source of the packet.  It can be between 0 and 16 bits in length.  This length must be fixed and discoverable for a given system.</p>
 </div>
@@ -767,11 +770,11 @@
 <p>The <strong>srcID</strong> may be omitted (i.e. zero bits in length) if there is only one source in the system, or if the transport scheme includes a sideband bus for the source ID (for example, ATB).</p>
 </div>
 <div class="paragraph">
-<p>When present, an 8-bit <strong>srcID</strong> will be sufficient for most use cases, and is simplest in terms of determining the packet length, keeping all field groups aligned to byte boundaries.  However, the length of the field can be reduced to improve efficiency for small systems, or increased if required for larger systems. This is explained in more detail in <a href="#_section_packet_length">2.1.1.5. Packet Length</a>.</p>
+<p>When present, an 8-bit <strong>srcID</strong> will be sufficient for most use cases, and is simplest in terms of determining the packet length, keeping all field groups aligned to byte boundaries.  However, the length of the field can be reduced to improve efficiency for small systems, or increased if required for larger systems. This is explained in more detail in <a href="#_section_packet_length">3.1.1.5. Packet Length</a>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_section_Timestamp"><a class="anchor" href="#_section_Timestamp"></a>2.1.1.3. Timestamp</h4>
+<h4 id="_section_Timestamp"><a class="anchor" href="#_section_Timestamp"></a>3.1.1.3. Timestamp</h4>
 <div class="paragraph">
 <p>The <strong>timestamp</strong> field provides a means to include time information with every packet.  It is included in the encapsulation if <strong>header.extend</strong> is 1.  When included, the timestamp must be T bytes in length.  The length must be discoverable, and fixed for a given system.</p>
 </div>
@@ -780,7 +783,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_section_Payload"><a class="anchor" href="#_section_Payload"></a>2.1.1.4. Payload</h4>
+<h4 id="_section_Payload"><a class="anchor" href="#_section_Payload"></a>3.1.1.4. Payload</h4>
 <div class="paragraph">
 <p>The encapsulation payload can be up to 248 bits (31 bytes) in length, and comprises the fields shown in table <a href="#_table_payload">Table 3</a>.</p>
 </div>
@@ -808,14 +811,14 @@
 <td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock"><strong>trace_payload</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">&#8804; R</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: !;"><p class="tableblock">Packet payloads such as those defined for E-Trace.<br>
-Maximum value of R is defined as 248 - Y - <strong>srcID</strong>%8, where Y is the length of the <strong>type</strong> field.  See <a href="#_section_packet_length">2.1.1.5. Packet Length</a> for details of the relationship between <strong>srcID</strong> and payload length.</p></td>
+Maximum value of R is defined as 248 - Y - <strong>srcID</strong>%8, where Y is the length of the <strong>type</strong> field.  See <a href="#_section_packet_length">3.1.1.5. Packet Length</a> for details of the relationship between <strong>srcID</strong> and payload length.</p></td>
 </tr>
 </tbody>
 </table>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_section_packet_length"><a class="anchor" href="#_section_packet_length"></a>2.1.1.5. Packet Length</h4>
+<h4 id="_section_packet_length"><a class="anchor" href="#_section_packet_length"></a>3.1.1.5. Packet Length</h4>
 <div class="paragraph">
 <p>Encapsulated packets are a number of whole bytes in length, the exact number depending on the sizes of the <strong>srcID</strong>, <strong>timestamp</strong> (if present) and <strong>header.length</strong>:</p>
 </div>
@@ -846,7 +849,7 @@ Maximum value of R is defined as 248 - Y - <strong>srcID</strong>%8, where Y is 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_section_null_encapsulation"><a class="anchor" href="#_section_null_encapsulation"></a>2.1.2. Null Encapsulation</h3>
+<h3 id="_section_null_encapsulation"><a class="anchor" href="#_section_null_encapsulation"></a>3.1.2. Null Encapsulation</h3>
 <div class="paragraph">
 <p>For <em>normal</em> encapsulation, the <strong>header.length</strong> field is at least 1, and the overall length of the encapsulated packet will be at least 2 bytes (<strong>header</strong> plus 1 byte of payload).</p>
 </div>
@@ -871,7 +874,7 @@ Maximum value of R is defined as 248 - Y - <strong>srcID</strong>%8, where Y is 
 </div>
 </div>
 <div class="sect2">
-<h3 id="2-1-3-synchronization"><a class="anchor" href="#2-1-3-synchronization"></a>2.1.3. Synchronization</h3>
+<h3 id="3-1-3-synchronization"><a class="anchor" href="#3-1-3-synchronization"></a>3.1.3. Synchronization</h3>
 <div class="paragraph">
 <p>In a data stream comprised of packets, it’s a requirement to be able to determine where packets start and end, when starting from an arbitrary point, without knowledge of the full packet history.  This can be achieved by inserting a synchronization sequence into the packet stream.  This sequence is comprised of a sufficiently long sequence of <em>null</em> packets.</p>
 </div>
@@ -880,7 +883,7 @@ Maximum value of R is defined as 248 - Y - <strong>srcID</strong>%8, where Y is 
 </div>
 <div class="paragraph text-center">
 <p>N =  31 + T + S
-(see <a href="#_section_Timestamp">2.1.1.3. Timestamp</a> and <a href="#_section_packet_length">2.1.1.5. Packet Length</a> for definitions of T and S respectively)</p>
+(see <a href="#_section_Timestamp">3.1.1.3. Timestamp</a> and <a href="#_section_packet_length">3.1.1.5. Packet Length</a> for definitions of T and S respectively)</p>
 </div>
 <div class="paragraph">
 <p>Therefore, in a sequence of N or more ‘null’ bytes, the first N 'null' bytes may actually be part of a packet.  However, any 'null' bytes after this must be <em>null</em> packets, and the 1st non-null byte seen after this must therefore be the 1st byte of a <em>normal</em> packet.</p>
@@ -921,8 +924,8 @@ Maximum value of R is defined as 248 - Y - <strong>srcID</strong>%8, where Y is 
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="intro.html">Chapter 1. Introduction</a></span>
-  <span class="next"><a href="e-trace-specifics.html">Chapter 3. E-Trace Specifics</a></span>
+  <span class="prev"><a href="intro.html">Chapter 2. Introduction</a></span>
+  <span class="next"><a href="e-trace-specifics.html">E-Trace Specifics</a></span>
 </nav>
 </article>  </div>
 </main>

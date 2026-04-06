@@ -563,19 +563,22 @@
     <a class="nav-link"  href="../etrace/index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="#etrace-copyright.adoc">Copyright</a>
+    <a class="nav-link"  href="../etrace/changelog.html">Change Log</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/contributors.html">Contributors</a>
+    <a class="nav-link"  href="../etrace/copyright.html">Copyright</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="../etrace/contributors.html">Chapter 1. Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/encapsulation.html">Chapter 2. Encapsulation Format</a>
+    <a class="nav-link"  href="../etrace/intro.html">Chapter 2. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="../etrace/e-trace-specifics.html">Chapter 3. E-Trace Specifics</a>
+    <a class="nav-link"  href="../etrace/encapsulation.html">Chapter 3. Encapsulation Format</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="../etrace/e-trace-specifics.html">E-Trace Specifics</a>
   </li>
 </ul>
   </li>
@@ -859,7 +862,7 @@ Commands issued to the DM only apply to the currently selected harts.</p>
 </div>
 <div class="paragraph">
 <p>To enumerate all the harts, a debugger must first determine <code>HARTSELLEN</code>
-by writing all ones to {hartsel} (assuming the maximum size) and reading back the
+by writing all ones to `hartsel` (assuming the maximum size) and reading back the
 value to see which bits were actually set. Then it selects each hart
 starting from 0 until either <a href="#dmstatus-anynonexistent">anynonexistent</a> in <a href="#dm-dmstatus">dmstatus</a> is 1, or the highest index (depending on <code>HARTSELLEN</code>) is reached.</p>
 </div>
@@ -872,7 +875,7 @@ configuration structure.</p>
 <h4 id="3-1-3-1-selecting-a-single-hart"><a class="anchor" href="#3-1-3-1-selecting-a-single-hart"></a>3.1.3.1. Selecting a Single Hart</h4>
 <div class="paragraph">
 <p>All debug modules must support selecting a single hart. The debugger can
-select a hart by writing its index to {hartsel}. Hart indexes start at 0 and are
+select a hart by writing its index to `hartsel`. Hart indexes start at 0 and are
 contiguous until the final index.</p>
 </div>
 </div>
@@ -895,7 +898,7 @@ affected by setting or clearing <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div>
 <div class="paragraph">
 <p>Execution of Abstract Commands ignores this mechanism and only applies
-to the hart selected by {hartsel}.</p>
+to the hart selected by `hartsel`.</p>
 </div>
 </div>
 </div>
@@ -1222,7 +1225,7 @@ of <a href="#dm-data0">data0</a>) or hart (e.g. contents of a register modified
 </table>
 </div>
 <div class="paragraph">
-<p>While an abstract command is executing (<a href="#abstractcs-busy">busy</a> in <a href="#dm-abstractcs">abstractcs</a> is high), a debugger must not change {hartsel}, and must not write 1 to <a href="#dmcontrol-haltreq">haltreq</a>, <a href="#dmcontrol-resumereq">resumereq</a>, <a href="#dmcontrol-ackhavereset">ackhavereset</a>, <a href="#dmcontrol-setresethaltreq">setresethaltreq</a>, or <a href="#dmcontrol-clrresethaltreq">clrresethaltreq</a>.
+<p>While an abstract command is executing (<a href="#abstractcs-busy">busy</a> in <a href="#dm-abstractcs">abstractcs</a> is high), a debugger must not change `hartsel`, and must not write 1 to <a href="#dmcontrol-haltreq">haltreq</a>, <a href="#dmcontrol-resumereq">resumereq</a>, <a href="#dmcontrol-ackhavereset">ackhavereset</a>, <a href="#dmcontrol-setresethaltreq">setresethaltreq</a>, or <a href="#dmcontrol-clrresethaltreq">clrresethaltreq</a>.
 The hardware should not rely on this debugger behavior, but should enforce it by
 ignoring writes to these bits while <a href="#abstractcs-busy">busy</a> is high.</p>
 </div>
@@ -2735,15 +2738,15 @@ as well as the currently selected harts, as defined in <a href="#dmcontrol-hasel
 </div>
 <div id="hartsel" class="paragraph">
 <p>
-Throughout this document we refer to {hartsel}, which is <a href="#dmcontrol-hartselhi">hartselhi</a>
-combined with <a href="#dmcontrol-hartsello">hartsello</a>. While the spec allows for 20 {hartsel} bits,
+Throughout this document we refer to `hartsel`, which is <a href="#dmcontrol-hartselhi">hartselhi</a>
+combined with <a href="#dmcontrol-hartsello">hartsello</a>. While the spec allows for 20 `hartsel` bits,
 an implementation may choose to implement fewer than that. The actual
-width of {hartsel} is called <code>HARTSELLEN</code>. It must be at least 0
+width of `hartsel` is called <code>HARTSELLEN</code>. It must be at least 0
 and at most 20. A debugger should discover <code>HARTSELLEN</code> by writing
-all ones to {hartsel} (assuming the maximum size) and reading back the
+all ones to `hartsel` (assuming the maximum size) and reading back the
 value to see which bits were actually set. Debuggers must not change
-{hartsel} while an abstract command is executing. Hardware should enforce
-this by ignoring changes to {hartsel} while <a href="#abstractcs-busy">busy</a> is set.</p>
+`hartsel` while an abstract command is executing. Hardware should enforce
+this by ignoring changes to `hartsel` while <a href="#abstractcs-busy">busy</a> is set.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -2769,12 +2772,12 @@ following bits: <a href="#dmcontrol-resumereq">resumereq</a>, <a href="#dmcontro
 </div>
 <div id="resethaltreq" class="paragraph">
 <p>
-{resethaltreq} is an optional internal bit of per-hart state that cannot be
+`resethaltreq` is an optional internal bit of per-hart state that cannot be
 read, but can be written with <a href="#dmcontrol-setresethaltreq">setresethaltreq</a> and <a href="#dmcontrol-clrresethaltreq">clrresethaltreq</a>.</p>
 </div>
 <div id="keepalive" class="paragraph">
 <p>
-{keepalive} is an optional internal bit of per-hart state. When it is
+`keepalive` is an optional internal bit of per-hart state. When it is
 set, it suggests that the hardware should attempt to keep the hart
 available for the debugger, e.g. by keeping it from entering a
 low-power state once powered on. Even if the bit is implemented,
@@ -2824,7 +2827,7 @@ harts. Running harts will halt whenever their halt request bit is
 set.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
+<p>Writes apply to the new value of `hartsel` and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div>
 <div class="paragraph">
 <p>Writes to this bit should be ignored while an abstract command is
@@ -2848,7 +2851,7 @@ ack bit for those harts.</p>
 <p><a href="#dmcontrol-resumereq">resumereq</a> is ignored if <a href="#dmcontrol-haltreq">haltreq</a> is set.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
+<p>Writes apply to the new value of `hartsel` and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div>
 <div class="paragraph">
 <p>Writes to this bit should be ignored while an abstract command is
@@ -2878,7 +2881,7 @@ after writing 1 the debugger can read the register back to see if
 the feature is supported.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
+<p>Writes apply to the new value of `hartsel` and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>WARL</strong></p>
@@ -2896,7 +2899,7 @@ the feature is supported.</p>
 <p>1 (ack): Clears <code>havereset</code> for any selected harts.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
+<p>Writes apply to the new value of `hartsel` and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div>
 <div class="paragraph">
 <p>Writes to this bit should be ignored while an abstract command is
@@ -2918,7 +2921,7 @@ executing.</p>
 <p>1 (ack): Clears <code>unavail</code> for any selected harts that are currently available.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
+<p>Writes apply to the new value of `hartsel` and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>W1</strong></p>
@@ -2933,11 +2936,11 @@ executing.</p>
 <p>Selects the definition of currently selected harts.</p>
 </div>
 <div class="paragraph">
-<p>0 (single): There is a single currently selected hart, that is selected by {hartsel}.</p>
+<p>0 (single): There is a single currently selected hart, that is selected by `hartsel`.</p>
 </div>
 <div class="paragraph">
 <p>1 (multiple): There may be multiple currently selected harts&#8201;&#8212;&#8201;the hart
-selected by {hartsel}, plus those selected by the hart array mask
+selected by `hartsel`, plus those selected by the hart array mask
 register.</p>
 </div>
 <div class="paragraph">
@@ -2956,7 +2959,7 @@ is supported.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmcontrol-hartsello"></a> <code>hartsello</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The low 10 bits of {hartsel}: the DM-specific index of the hart to
+<p>The low 10 bits of `hartsel`: the DM-specific index of the hart to
 select. This hart is always part of the currently selected harts.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
@@ -2969,7 +2972,7 @@ select. This hart is always part of the currently selected harts.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmcontrol-hartselhi"></a> <code>hartselhi</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The high 10 bits of {hartsel}: the DM-specific index of the hart to
+<p>The high 10 bits of `hartsel`: the DM-specific index of the hart to
 select. This hart is always part of the currently selected harts.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
@@ -2982,12 +2985,12 @@ select. This hart is always part of the currently selected harts.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmcontrol-setkeepalive"></a> <code>setkeepalive</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>This optional field sets {keepalive} for all currently selected
+<p>This optional field sets `keepalive` for all currently selected
 harts, unless <a href="#dmcontrol-clrkeepalive">clrkeepalive</a> is simultaneously set to
 1.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
+<p>Writes apply to the new value of `hartsel` and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>W1</strong></p>
@@ -2999,11 +3002,11 @@ harts, unless <a href="#dmcontrol-clrkeepalive">clrkeepalive</a> is simultaneous
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmcontrol-clrkeepalive"></a> <code>clrkeepalive</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>This optional field clears {keepalive} for all currently selected
+<p>This optional field clears `keepalive` for all currently selected
 harts.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
+<p>Writes apply to the new value of `hartsel` and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div></div></td>
 <td class="tableblock halign-center valign-top"><div class="content"><div class="paragraph">
 <p><strong>W1</strong></p>
@@ -3023,7 +3026,7 @@ of its reset. The halt-on-reset request bit is not automatically
 cleared. The debugger must write to <a href="#dmcontrol-clrresethaltreq">clrresethaltreq</a> to clear it.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
+<p>Writes apply to the new value of `hartsel` and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div>
 <div class="paragraph">
 <p>If <a href="#dmstatus-hasresethaltreq">hasresethaltreq</a> is 0, this field is not implemented.</p>
@@ -3046,7 +3049,7 @@ executing.</p>
 currently selected harts.</p>
 </div>
 <div class="paragraph">
-<p>Writes apply to the new value of {hartsel} and <a href="#dmcontrol-hasel">hasel</a>.</p>
+<p>Writes apply to the new value of `hartsel` and <a href="#dmcontrol-hasel">hasel</a>.</p>
 </div>
 <div class="paragraph">
 <p>Writes to this bit should be ignored while an abstract command is
@@ -3098,7 +3101,7 @@ correct data.</p>
 </div>
 <div class="paragraph">
 <p>When this value is written, the DM may ignore any other bits written
-to {dmcontrol} in the same write.</p>
+to `dmcontrol` in the same write.</p>
 </div>
 <div class="paragraph">
 <p>1 (active): The module functions normally.</p>
@@ -3131,7 +3134,7 @@ power gated while debugging is active.</p>
 <h4 id="dm-hartinfo"><a class="anchor" href="#dm-hartinfo"></a>Hart Info (hartinfo, at 0x12)</h4>
 <div class="paragraph">
 <p>This register gives information about the hart currently
-selected by {hartsel}.</p>
+selected by `hartsel`.</p>
 </div>
 <div class="paragraph">
 <p>This register is optional. If it is not present it should
@@ -3862,7 +3865,7 @@ change it to a valid one or 0 if no DM external triggers exist.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a id="dmcs2-group"></a> <code>group</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>When <a href="#dmcs2-hgselect">hgselect</a> is 0, contains the group of the hart
-specified by {hartsel}.</p>
+specified by `hartsel`.</p>
 </div>
 <div class="paragraph">
 <p>When <a href="#dmcs2-hgselect">hgselect</a> is 1, contains the group of the DM external
