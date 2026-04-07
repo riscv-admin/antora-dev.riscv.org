@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://docs.riscv.org/reference/isa/unpriv/zihintntl.html">
-    <link rel="prev" href="counters.html">
-    <link rel="next" href="zihintpause.html">
+    <link rel="canonical" href="https://docs.riscv.org/reference/isa/unpriv/vector-examples.html">
+    <link rel="prev" href="mm-formal.html">
+    <link rel="next" href="calling-convention.html">
     <meta name="generator" content="Antora 3.1.14">
     <script>
 !function (theme, navWidth) {
@@ -171,7 +171,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="zihintntl.html">Chapter 8. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -267,7 +267,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link"  href="vector-examples.html">Appendix C. Vector Assembly Code Examples</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -463,432 +463,463 @@
 
             <li><a href="../isa/unpriv-index.html">ISA Specifications</a></li>
           <li>
-            <a href="zihintntl.html">Chapter 8. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</a>
+            <a href="vector-examples.html">Appendix C. Vector Assembly Code Examples</a>
           </li>
     </ul>
   </nav>
 </div><div class="sect1">
-<h2 id="chap:zihintntl"><a class="anchor" href="#chap:zihintntl"></a>8.1. "Zihintntl" Extension for Non-Temporal Locality Hints, Version 1.0</h2>
+<h2 id="vector-assembly-code-examples"><a class="anchor" href="#vector-assembly-code-examples"></a>Appendix A: Vector Assembly Code Examples</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The NTL instructions are HINTs that indicate that the explicit memory
-accesses of the immediately subsequent instruction (henceforth "target
-instruction") exhibit poor temporal locality of reference.
-<span id="norm:NTL-target_definition">The NTL instructions do not change architectural state, nor do they alter the
-architecturally visible effects of the target instruction.</span> Four variants
-are provided:</p>
+<p>The following are provided as non-normative text to help explain the vector ISA.</p>
+</div>
+<div class="sect2">
+<h3 id="vector-vector-add-example"><a class="anchor" href="#vector-vector-add-example"></a>Vector-vector add example</h3>
+<div class="listingblock">
+<div class="content">
+<pre>    # vector-vector add routine of 32-bit integers
+    # void vvaddint32(size_t n, const int*x, const int*y, int*z)
+    # { for (size_t i=0; i&lt;n; i++) { z[i]=x[i]+y[i]; } }
+    #
+    # a0 = n, a1 = x, a2 = y, a3 = z
+    # Non-vector instructions are indented
+vvaddint32:
+    vsetvli t0, a0, e32, m1, ta, ma  # Set vector length based on 32-bit vectors
+    vle32.v v0, (a1)         # Get first vector
+      sub a0, a0, t0         # Decrement number done
+      slli t0, t0, 2         # Multiply number done by 4 bytes
+      add a1, a1, t0         # Bump pointer
+    vle32.v v1, (a2)         # Get second vector
+      add a2, a2, t0         # Bump pointer
+    vadd.vv v2, v0, v1       # Sum vectors
+    vse32.v v2, (a3)         # Store result
+      add a3, a3, t0         # Bump pointer
+      bnez a0, vvaddint32    # Loop back
+      ret                    # Finished</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="example-with-mixed-width-mask-and-compute"><a class="anchor" href="#example-with-mixed-width-mask-and-compute"></a>Example with mixed-width mask and compute.</h3>
+<div class="listingblock">
+<div class="content">
+<pre># Code using one width for predicate and different width for masked
+# compute.
+#   int8_t a[]; int32_t b[], c[];
+#   for (i=0;  i&lt;n; i++) { b[i] =  (a[i] &lt; 5) ? c[i] : 1; }
+#
+# Mixed-width code that keeps SEW/LMUL=8
+  loop:
+    vsetvli a4, a0, e8, m1, ta, ma   # Byte vector for predicate calc
+    vle8.v v1, (a1)               # Load a[i]
+      add a1, a1, a4              # Bump pointer.
+    vmslt.vi v0, v1, 5            # a[i] &lt; 5?
+
+    vsetvli x0, a0, e32, m4, ta, mu  # Vector of 32-bit values.
+      sub a0, a0, a4              # Decrement count
+    vmv.v.i v4, 1                 # Splat immediate to destination
+    vle32.v v4, (a3), v0.t        # Load requested elements of C, others undisturbed
+      sll t1, a4, 2
+      add a3, a3, t1              # Bump pointer.
+    vse32.v v4, (a2)              # Store b[i].
+      add a2, a2, t1              # Bump pointer.
+      bnez a0, loop               # Any more?</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="memcpy-example"><a class="anchor" href="#memcpy-example"></a>Memcpy example</h3>
+<div class="listingblock">
+<div class="content">
+<pre>    # void *memcpy(void* dest, const void* src, size_t n)
+    # a0=dest, a1=src, a2=n
+    #
+  memcpy:
+      mv a3, a0 # Copy destination
+  loop:
+    vsetvli t0, a2, e8, m8, ta, ma   # Vectors of 8b
+    vle8.v v0, (a1)               # Load bytes
+      add a1, a1, t0              # Bump pointer
+      sub a2, a2, t0              # Decrement count
+    vse8.v v0, (a3)               # Store bytes
+      add a3, a3, t0              # Bump pointer
+      bnez a2, loop               # Any more?
+      ret                         # Return</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="conditional-example"><a class="anchor" href="#conditional-example"></a>Conditional example</h3>
+<div class="listingblock">
+<div class="content">
+<pre># (int16) z[i] = ((int8) x[i] &lt; 5) ? (int16) a[i] : (int16) b[i];
+#
+
+loop:
+    vsetvli t0, a0, e8, m1, ta, ma # Use 8b elements.
+    vle8.v v0, (a1)         # Get x[i]
+      sub a0, a0, t0        # Decrement element count
+      add a1, a1, t0        # x[i] Bump pointer
+    vmslt.vi v0, v0, 5      # Set mask in v0
+    vsetvli x0, x0, e16, m2, ta, mu  # Use 16b elements.
+      slli t0, t0, 1        # Multiply by 2 bytes
+    vle16.v v2, (a2), v0.t  # z[i] = a[i] case
+    vmnot.m v0, v0          # Invert v0
+      add a2, a2, t0        # a[i] bump pointer
+    vle16.v v2, (a3), v0.t  # z[i] = b[i] case
+      add a3, a3, t0        # b[i] bump pointer
+    vse16.v v2, (a4)        # Store z
+      add a4, a4, t0        # z[i] bump pointer
+      bnez a0, loop</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saxpy-example"><a class="anchor" href="#saxpy-example"></a>SAXPY example</h3>
+<div class="listingblock">
+<div class="content">
+<pre># void
+# saxpy(size_t n, const float a, const float *x, float *y)
+# {
+#   size_t i;
+#   for (i=0; i&lt;n; i++)
+#     y[i] = a * x[i] + y[i];
+# }
+#
+# register arguments:
+#     a0      n
+#     fa0     a
+#     a1      x
+#     a2      y
+
+saxpy:
+    vsetvli a4, a0, e32, m8, ta, ma
+    vle32.v v0, (a1)
+    sub a0, a0, a4
+    slli a4, a4, 2
+    add a1, a1, a4
+    vle32.v v8, (a2)
+    vfmacc.vf v8, fa0, v0
+    vse32.v v8, (a2)
+    add a2, a2, a4
+    bnez a0, saxpy
+    ret</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sgemm-example"><a class="anchor" href="#sgemm-example"></a>SGEMM example</h3>
+<div class="listingblock">
+<div class="content">
+<pre># RV64IDV system
+#
+# void
+# sgemm_nn(size_t n,
+#          size_t m,
+#          size_t k,
+#          const float*a,   // m * k matrix
+#          size_t lda,
+#          const float*b,   // k * n matrix
+#          size_t ldb,
+#          float*c,         // m * n matrix
+#          size_t ldc)
+#
+#  c += a*b (alpha=1, no transpose on input matrices)
+#  matrices stored in C row-major order
+
+#define n a0
+#define m a1
+#define k a2
+#define ap a3
+#define astride a4
+#define bp a5
+#define bstride a6
+#define cp a7
+#define cstride t0
+#define kt t1
+#define nt t2
+#define bnp t3
+#define cnp t4
+#define akp t5
+#define bkp s0
+#define nvl s1
+#define ccp s2
+#define amp s3
+
+# Use args as additional temporaries
+#define ft12 fa0
+#define ft13 fa1
+#define ft14 fa2
+#define ft15 fa3
+
+# This version holds a 16*VLMAX block of C matrix in vector registers
+# in inner loop, but otherwise does not cache or TLB tiling.
+
+sgemm_nn:
+    addi sp, sp, -FRAMESIZE
+    sd s0, OFFSET(sp)
+    sd s1, OFFSET(sp)
+    sd s2, OFFSET(sp)
+
+    # Check for zero size matrices
+    beqz n, exit
+    beqz m, exit
+    beqz k, exit
+
+    # Convert elements strides to byte strides.
+    ld cstride, OFFSET(sp)   # Get arg from stack frame
+    slli astride, astride, 2
+    slli bstride, bstride, 2
+    slli cstride, cstride, 2
+
+    slti t6, m, 16
+    bnez t6, end_rows
+
+c_row_loop: # Loop across rows of C blocks
+
+    mv nt, n  # Initialize n counter for next row of C blocks
+
+    mv bnp, bp # Initialize B n-loop pointer to start
+    mv cnp, cp # Initialize C n-loop pointer
+
+c_col_loop: # Loop across one row of C blocks
+    vsetvli nvl, nt, e32, m1, ta, ma  # 32-bit vectors, LMUL=1
+
+    mv akp, ap   # reset pointer into A to beginning
+    mv bkp, bnp # step to next column in B matrix
+
+    # Initialize current C submatrix block from memory.
+    vle32.v  v0, (cnp); add ccp, cnp, cstride;
+    vle32.v  v1, (ccp); add ccp, ccp, cstride;
+    vle32.v  v2, (ccp); add ccp, ccp, cstride;
+    vle32.v  v3, (ccp); add ccp, ccp, cstride;
+    vle32.v  v4, (ccp); add ccp, ccp, cstride;
+    vle32.v  v5, (ccp); add ccp, ccp, cstride;
+    vle32.v  v6, (ccp); add ccp, ccp, cstride;
+    vle32.v  v7, (ccp); add ccp, ccp, cstride;
+    vle32.v  v8, (ccp); add ccp, ccp, cstride;
+    vle32.v  v9, (ccp); add ccp, ccp, cstride;
+    vle32.v v10, (ccp); add ccp, ccp, cstride;
+    vle32.v v11, (ccp); add ccp, ccp, cstride;
+    vle32.v v12, (ccp); add ccp, ccp, cstride;
+    vle32.v v13, (ccp); add ccp, ccp, cstride;
+    vle32.v v14, (ccp); add ccp, ccp, cstride;
+    vle32.v v15, (ccp)
+
+
+    mv kt, k # Initialize inner loop counter
+
+    # Inner loop scheduled assuming 4-clock occupancy of vfmacc instruction and single-issue pipeline
+    # Software pipeline loads
+    flw ft0, (akp); add amp, akp, astride;
+    flw ft1, (amp); add amp, amp, astride;
+    flw ft2, (amp); add amp, amp, astride;
+    flw ft3, (amp); add amp, amp, astride;
+    # Get vector from B matrix
+    vle32.v v16, (bkp)
+
+    # Loop on inner dimension for current C block
+ k_loop:
+    vfmacc.vf v0, ft0, v16
+    add bkp, bkp, bstride
+    flw ft4, (amp)
+    add amp, amp, astride
+    vfmacc.vf v1, ft1, v16
+    addi kt, kt, -1    # Decrement k counter
+    flw ft5, (amp)
+    add amp, amp, astride
+    vfmacc.vf v2, ft2, v16
+    flw ft6, (amp)
+    add amp, amp, astride
+    flw ft7, (amp)
+    vfmacc.vf v3, ft3, v16
+    add amp, amp, astride
+    flw ft8, (amp)
+    add amp, amp, astride
+    vfmacc.vf v4, ft4, v16
+    flw ft9, (amp)
+    add amp, amp, astride
+    vfmacc.vf v5, ft5, v16
+    flw ft10, (amp)
+    add amp, amp, astride
+    vfmacc.vf v6, ft6, v16
+    flw ft11, (amp)
+    add amp, amp, astride
+    vfmacc.vf v7, ft7, v16
+    flw ft12, (amp)
+    add amp, amp, astride
+    vfmacc.vf v8, ft8, v16
+    flw ft13, (amp)
+    add amp, amp, astride
+    vfmacc.vf v9, ft9, v16
+    flw ft14, (amp)
+    add amp, amp, astride
+    vfmacc.vf v10, ft10, v16
+    flw ft15, (amp)
+    add amp, amp, astride
+    addi akp, akp, 4            # Move to next column of a
+    vfmacc.vf v11, ft11, v16
+    beqz kt, 1f                 # Don't load past end of matrix
+    flw ft0, (akp)
+    add amp, akp, astride
+1:  vfmacc.vf v12, ft12, v16
+    beqz kt, 1f
+    flw ft1, (amp)
+    add amp, amp, astride
+1:  vfmacc.vf v13, ft13, v16
+    beqz kt, 1f
+    flw ft2, (amp)
+    add amp, amp, astride
+1:  vfmacc.vf v14, ft14, v16
+    beqz kt, 1f                 # Exit out of loop
+    flw ft3, (amp)
+    add amp, amp, astride
+    vfmacc.vf v15, ft15, v16
+    vle32.v v16, (bkp)            # Get next vector from B matrix, overlap loads with jump stalls
+    j k_loop
+
+1:  vfmacc.vf v15, ft15, v16
+
+    # Save C matrix block back to memory
+    vse32.v  v0, (cnp); add ccp, cnp, cstride;
+    vse32.v  v1, (ccp); add ccp, ccp, cstride;
+    vse32.v  v2, (ccp); add ccp, ccp, cstride;
+    vse32.v  v3, (ccp); add ccp, ccp, cstride;
+    vse32.v  v4, (ccp); add ccp, ccp, cstride;
+    vse32.v  v5, (ccp); add ccp, ccp, cstride;
+    vse32.v  v6, (ccp); add ccp, ccp, cstride;
+    vse32.v  v7, (ccp); add ccp, ccp, cstride;
+    vse32.v  v8, (ccp); add ccp, ccp, cstride;
+    vse32.v  v9, (ccp); add ccp, ccp, cstride;
+    vse32.v v10, (ccp); add ccp, ccp, cstride;
+    vse32.v v11, (ccp); add ccp, ccp, cstride;
+    vse32.v v12, (ccp); add ccp, ccp, cstride;
+    vse32.v v13, (ccp); add ccp, ccp, cstride;
+    vse32.v v14, (ccp); add ccp, ccp, cstride;
+    vse32.v v15, (ccp)
+
+    # Following tail instructions should be scheduled earlier in free slots during C block save.
+    # Leaving here for clarity.
+
+    # Bump pointers for loop across blocks in one row
+    slli t6, nvl, 2
+    add cnp, cnp, t6                         # Move C block pointer over
+    add bnp, bnp, t6                         # Move B block pointer over
+    sub nt, nt, nvl                          # Decrement element count in n dimension
+    bnez nt, c_col_loop                      # Any more to do?
+
+    # Move to next set of rows
+    addi m, m, -16  # Did 16 rows above
+    slli t6, astride, 4  # Multiply astride by 16
+    add ap, ap, t6         # Move A matrix pointer down 16 rows
+    slli t6, cstride, 4  # Multiply cstride by 16
+    add cp, cp, t6         # Move C matrix pointer down 16 rows
+
+    slti t6, m, 16
+    beqz t6, c_row_loop
+
+    # Handle end of matrix with fewer than 16 rows.
+    # Can use smaller versions of above decreasing in powers-of-2 depending on code-size concerns.
+end_rows:
+    # Not done.
+
+exit:
+    ld s0, OFFSET(sp)
+    ld s1, OFFSET(sp)
+    ld s2, OFFSET(sp)
+    addi sp, sp, FRAMESIZE
+    ret</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="division-approximation-example"><a class="anchor" href="#division-approximation-example"></a>Division approximation example</h3>
+<div class="listingblock">
+<div class="content">
+<pre># v1 = v1 / v2 to almost 23 bits of precision.
+
+vfrec7.v v3, v2             # Estimate 1/v2
+  li t0, 0x3f800000
+vmv.v.x v4, t0              # Splat 1.0
+vfnmsac.vv v4, v2, v3       # 1.0 - v2 * est(1/v2)
+vfmadd.vv v3, v4, v3        # Better estimate of 1/v2
+vmv.v.x v4, t0              # Splat 1.0
+vfnmsac.vv v4, v2, v3       # 1.0 - v2 * est(1/v2)
+vfmadd.vv v3, v4, v3        # Better estimate of 1/v2
+vfmul.vv v1, v1, v3         # Estimate of v1/v2</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="square-root-approximation-example"><a class="anchor" href="#square-root-approximation-example"></a>Square root approximation example</h3>
+<div class="listingblock">
+<div class="content">
+<pre># v1 = sqrt(v1) to more than 23 bits of precision.
+
+  fmv.w.x ft0, x0           # Mask off zero inputs
+vmfne.vf v0, v1, ft0        #   to avoid DZ exception
+vfrsqrt7.v v2, v1, v0.t     # Estimate r ~= 1/sqrt(v1)
+vmfne.vf v0, v2, ft0, v0.t  # Mask off +inf to avoid NV
+  li t0, 0x3f800000
+  fli.s ft0, 0.5
+vmv.v.x v5, t0              # Splat 1.0
+vfmul.vv v3, v1, v2, v0.t   # t = v1 r
+vfmul.vf v4, v2, ft0, v0.t  # 0.5 r
+vfmsub.vv v3, v2, v5, v0.t  # t r - 1
+vfnmsac.vv v2, v3, v4, v0.t # r - (0.5 r) (t r - 1)
+                            # Better estimate of 1/sqrt(v1)
+vfmul.vv v1, v1, v2, v0.t   # t = v1 r
+vfmsub.vv v2, v1, v5, v0.t  # t r - 1
+vfmul.vf v3, v1, ft0, v0.t  # 0.5 t
+vfnmsac.vv v1, v2, v3, v0.t # t - (0.5 t) (t r - 1)
+                            # ~ sqrt(v1) to about 23.3 bits</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="c-standard-library-strcmp-example"><a class="anchor" href="#c-standard-library-strcmp-example"></a>C standard library strcmp example</h3>
+<div class="listingblock">
+<div class="content">
+<pre>  # int strcmp(const char *src1, const char* src2)
+strcmp:
+    ##  Using LMUL=2, but same register names work for larger LMULs
+    li t1, 0                # Initial pointer bump
+loop:
+    vsetvli t0, x0, e8, m2, ta, ma  # Max length vectors of bytes
+    add a0, a0, t1          # Bump src1 pointer
+    vle8ff.v v8, (a0)       # Get src1 bytes
+    add a1, a1, t1          # Bump src2 pointer
+    vle8ff.v v16, (a1)      # Get src2 bytes
+
+    vmseq.vi v0, v8, 0      # Flag zero bytes in src1
+    vmsne.vv v1, v8, v16    # Flag if src1 != src2
+    vmor.mm v0, v0, v1      # Combine exit conditions
+
+    vfirst.m a2, v0         # ==0 or != ?
+    csrr t1, vl             # Get number of bytes fetched
+
+    bltz a2, loop           # Loop if all same and no zero byte
+
+    add a0, a0, a2          # Get src1 element address
+    lbu a3, (a0)            # Get src1 byte from memory
+
+    add a1, a1, a2          # Get src2 element address
+    lbu a4, (a1)            # Get src2 byte from memory
+
+    sub a0, a3, a4          # Return value.
+
+    ret</pre>
+</div>
 </div>
 <div class="paragraph">
-<p><span id="norm:NTL-P1_op">The NTL.P1 instruction indicates that the target instruction does not
-exhibit temporal locality within the capacity of the innermost level of
-private cache in the memory hierarchy.</span> <span id="norm:NTL-P1_enc">NTL.P1 is encoded as
-ADD <em>x0, x0, x2</em>.</span></p>
+<p>Unresolved include directive in modules/unpriv/pages/vector-examples.adoc - include::fraclmul.adoc[]</p>
 </div>
-<div class="paragraph">
-<p><span id="norm:NTL-PALL_op">The NTL.PALL instruction indicates that the target instruction does not
-exhibit temporal locality within the capacity of any level of private
-cache in the memory hierarchy.</span> <span id="norm:NTL-PALL_enc">NTL.PALL is encoded as ADD <em>x0, x0, x3</em>.</span></p>
-</div>
-<div class="paragraph">
-<p><span id="norm:NTL-S1_op">The NTL.S1 instruction indicates that the target instruction does not
-exhibit temporal locality within the capacity of the innermost level of
-shared cache in the memory hierarchy.</span> <span id="norm:NTL-S1_enc">NTL.S1 is encoded as
-ADD <em>x0, x0, x4</em>.</span></p>
-</div>
-<div class="paragraph">
-<p><span id="norm:NTL-ALL_op">The NTL.ALL instruction indicates that the target instruction does not
-exhibit temporal locality within the capacity of any level of cache in
-the memory hierarchy.</span> <span id="norm:NTL-ALL_enc">NTL.ALL is encoded as ADD <em>x0, x0, x5</em>.</span></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The NTL instructions can be used to avoid cache pollution when streaming
-data or traversing large data structures, or to reduce latency in
-producer-consumer interactions.</p>
-</div>
-<div class="paragraph">
-<p>A microarchitecture might use the NTL instructions to inform the cache
-replacement policy, or to decide which cache to allocate into, or to
-avoid cache allocation altogether. For example, NTL.P1 might indicate
-that an implementation should not allocate a line in a private L1 cache,
-but should allocate in L2 (whether private or shared). In another
-implementation, NTL.P1 might allocate the line in L1, but in the
-least-recently used state.</p>
-</div>
-<div class="paragraph">
-<p>NTL.ALL will typically inform implementations not to allocate anywhere
-in the cache hierarchy. Programmers should use NTL.ALL for accesses that
-have no exploitable temporal locality.</p>
-</div>
-<div class="paragraph">
-<p>Like any HINTs, these instructions may be freely ignored. Hence,
-although they are described in terms of cache-based memory hierarchies,
-they do not mandate the provision of caches.</p>
-</div>
-<div class="paragraph">
-<p>Some implementations might respect these HINTs for some memory accesses
-but not others: e.g., implementations that implement LR/SC by acquiring
-a cache line in the exclusive state in L1 might ignore NTL instructions
-on LR and SC, but might respect NTL instructions for AMOs and regular
-loads and stores.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><a href="#ntl-portable">Table 1</a> lists several software use cases and the recommended NTL variant that <em>portable</em> software—i.e., software not tuned for any specific implementation&#8217;s memory hierarchy—should use in each case.</p>
-</div>
-<table id="ntl-portable" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 1. Recommended NTL variant for portable software to employ in various scenarios.</caption>
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Scenario</th>
-<th class="tableblock halign-left valign-top">Recommended NTL variant</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access to a working set between and in size</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NTL.P1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access to a working set between and in size</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NTL.PALL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access to a working set greater than in size</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NTL.S1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access with no exploitable temporal locality (e.g., streaming)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NTL.ALL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Access to a contended synchronization variable</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NTL.PALL</p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The working-set sizes listed in <a href="#ntl-portable">Table 1</a> are not meant to
-constrain implementers' cache-sizing decisions.
-Cache sizes will obviously vary between implementations, and so software
-writers should only take these working-set sizes as rough guidelines.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><a href="#ntl">Table 2</a> lists several sample memory hierarchies and
-recommends how each NTL variant maps onto each cache level. The table
-also recommends which NTL variant that implementation-tuned software
-should use to avoid allocating in a particular cache level. For example,
-for a system with a private L1 and a shared L2, it is recommended that
-NTL.P1 and NTL.PALL indicate that temporal locality cannot be exploited
-by the L1, and that NTL.S1 and NTL.ALL indicate that temporal locality
-cannot be exploited by the L2. Furthermore, software tuned for such a
-system should use NTL.P1 to indicate a lack of temporal locality
-exploitable by the L1, or should use NTL.ALL indicate a lack of temporal
-locality exploitable by the L2.</p>
-</div>
-<div class="paragraph">
-<p><span id="norm:NTL-compressed_variants">If the C or Zca extension is provided, compressed variants of these HINTs are
-also provided: C.NTL.P1 is encoded as C.ADD <em>x0, x2</em>; C.NTL.PALL is
-encoded as C.ADD <em>x0, x3</em>; C.NTL.S1 is encoded as C.ADD <em>x0, x4</em>; and
-C.NTL.ALL is encoded as C.ADD <em>x0, x5</em>.</span></p>
-</div>
-<div class="paragraph">
-<p><span id="norm:NTL_range">The NTL instructions affect all memory-access instructions except the
-cache-management instructions in the Zicbom extension.</span></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>As of this writing, there are no other exceptions to this rule, and so
-the NTL instructions affect all memory-access instructions defined in
-the base ISAs and the A, F, D, Q, C, and V standard extensions, as well
-as those defined within the hypervisor extension in Volume II.</p>
-</div>
-<div class="paragraph">
-<p>The NTL instructions can affect cache-management operations other than
-those in the Zicbom extension. For example, NTL.PALL followed by
-CBO.ZERO might indicate that the line should be allocated in L3 and
-zeroed, but not allocated in L1 or L2.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div style="page-break-after: always;"></div>
-<table id="ntl" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 2. Mapping of NTL variants to various memory hierarchies.</caption>
-<colgroup>
-<col>
-<col>
-<col>
-<col>
-<col>
-<col>
-<col>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Memory hierarchy</th>
-<th class="tableblock halign-center valign-top" colspan="4">Recommended mapping of NTL<br>
-variant to actual cache level</th>
-<th class="tableblock halign-center valign-top" colspan="4">Recommended NTL variant for<br>
-explicit cache management</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">P1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">PALL</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">S1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">ALL</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L2</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L3</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L4/L5</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" colspan="9"><p class="tableblock">Common Scenarios</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No caches</p></td>
-<td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">---</p></td>
-<td class="tableblock halign-center valign-top" colspan="4"><p class="tableblock">none</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Private L1 only</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">ALL</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">---</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">---</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">---</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Private L1; shared L2</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L2</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L2</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">P1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">ALL</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">---</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">---</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Private L1; shared L2/L3</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L2</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L3</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">P1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">S1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">ALL</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">---</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Private L1/L2</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L2</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L2</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L2</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">P1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">ALL</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">---</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">---</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Private L1/L2; shared L3</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L2</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L3</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L3</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">P1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">PALL</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">ALL</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">---</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Private L1/L2; shared L3/L4</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L2</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L3</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L4</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">P1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">PALL</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">S1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">ALL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" colspan="9"><p class="tableblock">Uncommon Scenarios</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Private L1/L2/L3; shared L4</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L3</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L4</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L4</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">P1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">P1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">PALL</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">ALL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Private L1; shared L2/L3/L4</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L2</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L4</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">P1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">S1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">ALL</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">ALL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Private L1/L2; shared L3/L4/L5</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L2</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L3</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L5</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">P1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">PALL</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">S1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">ALL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Private L1/L2/L3; shared L4/L5</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L3</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L4</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">L5</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">P1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">P1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">PALL</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">ALL</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><span id="norm:NTL_Zicob_prefetch_outer">When an NTL instruction is applied to a prefetch hint in the Zicbop
-extension, it indicates that a cache line should be prefetched into a
-cache that is <em>outer</em> from the level specified by the NTL.</span></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>For example, in a system with a private L1 and shared L2, NTL.P1
-followed by PREFETCH.R might prefetch into L2 with read intent.</p>
-</div>
-<div class="paragraph">
-<p>To prefetch into the innermost level of cache, do not prefix the
-prefetch instruction with an NTL instruction.</p>
-</div>
-<div class="paragraph">
-<p>In some systems, NTL.ALL followed by a prefetch instruction might
-prefetch into a cache or prefetch buffer internal to a memory
-controller.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Software is discouraged from following an NTL instruction with an
-instruction that does not explicitly access memory. Nonadherence to this
-recommendation might reduce performance but otherwise has no
-architecturally visible effect.</p>
-</div>
-<div class="paragraph">
-<p><span id="norm:NTL-trap_behavior">In the event that a trap is taken on the target instruction,
-implementations are discouraged from applying the NTL to the first
-instruction in the trap handler. Instead, implementations are
-recommended to ignore the HINT in this case.</span></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If an interrupt occurs between the execution of an NTL instruction and
-its target instruction, execution will normally resume at the target
-instruction. That the NTL instruction is not re-executed does not change
-the semantics of the program.</p>
-</div>
-<div class="paragraph">
-<p>Some implementations might prefer not to process the NTL instruction
-until the target instruction is seen (e.g., so that the NTL can be fused
-with the memory access it modifies). Such implementations might
-preferentially take the interrupt before the NTL, rather than between
-the NTL and the memory access.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div id="norm:NTL-LR_SC_exception" class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Since the NTL instructions are encoded as ADDs, they can be used within
-LR/SC loops without voiding the forward-progress guarantee.
-But, since using other loads and stores within an LR/SC loop <em>does</em> void the
-forward-progress guarantee, the only reason to use an NTL within such a
-loop is to modify the LR or the SC.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="counters.html">Chapter 7. "Zicntr" and "Zihpm" Extensions for Counters, Version 2.0</a></span>
-  <span class="next"><a href="zihintpause.html">Chapter 9. "Zihintpause" Extension for Pause Hint, Version 2.0</a></span>
+  <span class="prev"><a href="mm-formal.html">Appendix B. Formal Memory Model Specifications, Version 0.1</a></span>
+  <span class="next"><a href="calling-convention.html">Appendix D. Calling Convention for Vector State (Not authoritative - Placeholder Only)</a></span>
 </nav>
 </article>  </div>
 </main>
