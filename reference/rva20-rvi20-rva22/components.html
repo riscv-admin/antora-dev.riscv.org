@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="f0880f778bcdcae07f2e0d49543c8b251f4a7bfa"> 
+    <meta name="antora-ui-version" content="667d2ad10f1df249bc9947e2c449fd637c006b93"> 
     <meta name="version" content="v1.0">
     <meta name="component" content="rva20-rvi20-rva22">
     <meta name="latest-version" content="false">
@@ -107,8 +107,8 @@
           </ul>
 <div class="context">
   <span class="title">
-      RISC-V Profiles
-      </span>
+      <a class="nav-link" href="../profiles-overview/index.html">Profiles</a>
+  </span>
 </div>        <div class="nav-trees" data-component="rva20-rvi20-rva22">
           <div class="version-box">
             <select data-component="rva20-rvi20-rva22" class="select-version">
@@ -136,25 +136,25 @@
     <a class="nav-link"  href="copyright.html">Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="changelog.html">Changelog</a>
+    <a class="nav-link"  href="changelog.html">Chapter 1. Changelog</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="intro.html">Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 2. Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="profilevsplat.html">Profiles versus Platforms</a>
+    <a class="nav-link"  href="profilevsplat.html">Chapter 3. Profiles versus Platforms</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link"  href="components.html">Components of a Profile</a>
+    <a class="nav-link"  href="components.html">Chapter 4. Components of a Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="rvi20.html">RVI20 Profile</a>
+    <a class="nav-link"  href="rvi20.html">Chapter 5. RVI20 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="rva20.html">RVA20 Profile</a>
+    <a class="nav-link"  href="rva20.html">Chapter 6. RVA20 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="rva22.html">RVA22 Profile</a>
+    <a class="nav-link"  href="rva22.html">Chapter 7. RVA22 Profile</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link"  href="extensions.html">New ISA Extensions</a>
@@ -341,18 +341,19 @@
 
       <li><a href="../home/index.html">RISC-V Specifications</a></li>
 
+        <li><a href="../profiles-overview/index.html">Profiles Overview</a></li>
               <li><a href="index.html">RISC-V Profiles</a></li>
                       <li>
-            <a href="components.html">Components of a Profile</a>
+            <a href="components.html">Chapter 4. Components of a Profile</a>
           </li>
     </ul>
   </nav>
 </div>
 <div class="sect1">
-<h2 id="components-of-a-profile"><a class="anchor" href="#components-of-a-profile"></a>Components of a Profile</h2>
+<h2 id="4-1-components-of-a-profile"><a class="anchor" href="#4-1-components-of-a-profile"></a>4.1. Components of a Profile</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="profile-family"><a class="anchor" href="#profile-family"></a>Profile Family</h3>
+<h3 id="4-1-1-profile-family"><a class="anchor" href="#4-1-1-profile-family"></a>4.1.1. Profile Family</h3>
 <div class="paragraph">
 <p>Every profile is a member of a <em>profile</em> <em>family</em>.  A profile family
 is a set of profiles that share the same base ISA but which vary in
@@ -390,7 +391,7 @@ calendar year is treated as part of the profile family name.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="profile-privilege-mode"><a class="anchor" href="#profile-privilege-mode"></a>Profile Privilege Mode</h3>
+<h3 id="4-1-2-profile-privilege-mode"><a class="anchor" href="#4-1-2-profile-privilege-mode"></a>4.1.2. Profile Privilege Mode</h3>
 <div class="paragraph">
 <p>RISC-V has a layered architecture supporting multiple privilege modes,
 and most RISC-V platforms support more than one privilege mode.
@@ -506,7 +507,7 @@ cannot be considered a subset of an S-mode profile.
 </div>
 </div>
 <div class="sect2">
-<h3 id="profile-isa-features"><a class="anchor" href="#profile-isa-features"></a>Profile ISA Features</h3>
+<h3 id="4-1-3-profile-isa-features"><a class="anchor" href="#4-1-3-profile-isa-features"></a>4.1.3. Profile ISA Features</h3>
 <div class="paragraph">
 <p>An architecture profile has a mandatory ratified base instruction set
 (RV32I or RV64I for the current profiles).  The profile also includes
@@ -611,7 +612,7 @@ non-profile extensions on an earlier profile.
 </div>
 </div>
 <div class="sect2">
-<h3 id="profile-naming-convention"><a class="anchor" href="#profile-naming-convention"></a>Profile Naming Convention</h3>
+<h3 id="4-1-4-profile-naming-convention"><a class="anchor" href="#4-1-4-profile-naming-convention"></a>4.1.4. Profile Naming Convention</h3>
 <div class="paragraph">
 <p>A profile name is a string comprised of, in order:</p>
 </div>
@@ -672,8 +673,8 @@ string.
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="profilevsplat.html">Profiles versus Platforms</a></span>
-  <span class="next"><a href="rvi20.html">RVI20 Profile</a></span>
+  <span class="prev"><a href="profilevsplat.html">Chapter 3. Profiles versus Platforms</a></span>
+  <span class="next"><a href="rvi20.html">Chapter 5. RVI20 Profile</a></span>
 </nav>
 </article>  </div>
 </main>

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="f0880f778bcdcae07f2e0d49543c8b251f4a7bfa"> 
+    <meta name="antora-ui-version" content="667d2ad10f1df249bc9947e2c449fd637c006b93"> 
     <meta name="version" content="v1.0">
     <meta name="component" content="server-soc">
     <meta name="latest-version" content="false">
@@ -107,8 +107,8 @@
           </ul>
 <div class="context">
   <span class="title">
-      Server SoC
-      </span>
+      <a class="nav-link" href="../hardware-overview/index.html">Hardware</a>
+  </span>
 </div>        <div class="nav-trees" data-component="aia">
           <div class="version-box">
             <select data-component="aia" class="select-version">
@@ -311,22 +311,22 @@
     <span class="nav-text">Server SoC</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="index.html">Chapter 1. Title Page</a>
+    <a class="nav-link"  href="index.html">Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="server_soc_preamble.html">Chapter 2. Copyright and License</a>
+    <a class="nav-link"  href="server_soc_preamble.html">Copyright and License</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="server_soc_contributors.html">Chapter 3. Contributors</a>
+    <a class="nav-link"  href="server_soc_contributors.html">Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="server_soc_intro.html">Chapter 4. Introduction</a>
+    <a class="nav-link"  href="server_soc_intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="server_soc_requirements.html">Chapter 5. Server SoC Requirements</a>
+    <a class="nav-link"  href="server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="server_soc_bibliography.html">Chapter 6. Bibliography</a>
+    <a class="nav-link"  href="server_soc_bibliography.html">Bibliography</a>
   </li>
 </ul>
   </li>
@@ -415,18 +415,19 @@
 
       <li><a href="../home/index.html">RISC-V Specifications</a></li>
 
+        <li><a href="../hardware-overview/index.html">Hardware Overview</a></li>
               <li><a href="index.html">Server SoC</a></li>
                       <li>
-            <a href="server_soc_requirements.html">Chapter 5. Server SoC Requirements</a>
+            <a href="server_soc_requirements.html">Chapter 2. Server SoC Requirements</a>
           </li>
     </ul>
   </nav>
 </div>
 <div class="sect1">
-<h2 id="5-1-server-soc-requirements"><a class="anchor" href="#5-1-server-soc-requirements"></a>5.1. Server SoC Requirements</h2>
+<h2 id="2-1-server-soc-requirements"><a class="anchor" href="#2-1-server-soc-requirements"></a>2.1. Server SoC Requirements</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="5-1-1-clocks-and-timers"><a class="anchor" href="#5-1-1-clocks-and-timers"></a>5.1.1. Clocks and Timers</h3>
+<h3 id="2-1-1-clocks-and-timers"><a class="anchor" href="#2-1-1-clocks-and-timers"></a>2.1.1. Clocks and Timers</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -476,7 +477,7 @@
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="5-1-2-interrupt-controllers"><a class="anchor" href="#5-1-2-interrupt-controllers"></a>5.1.2. Interrupt Controllers</h3>
+<h3 id="2-1-2-interrupt-controllers"><a class="anchor" href="#2-1-2-interrupt-controllers"></a>2.1.2. Interrupt Controllers</h3>
 <div class="paragraph">
 <p>This section specifies the requirements on the interrupt controllers used to
 deliver external interrupts to the RISC-V application processor harts.</p>
@@ -601,7 +602,7 @@ deliver external interrupts to the RISC-V application processor harts.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="IOMMU"><a class="anchor" href="#IOMMU"></a>5.1.3. Input-Output Memory Management Unit (IOMMU)</h3>
+<h3 id="IOMMU"><a class="anchor" href="#IOMMU"></a>2.1.3. Input-Output Memory Management Unit (IOMMU)</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -932,7 +933,7 @@ they access resources reserved for their use.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="5-1-4-pcie-subsystem"><a class="anchor" href="#5-1-4-pcie-subsystem"></a>5.1.4. PCIe Subsystem</h3>
+<h3 id="2-1-4-pcie-subsystem"><a class="anchor" href="#2-1-4-pcie-subsystem"></a>2.1.4. PCIe Subsystem</h3>
 <div class="paragraph">
 <p>A PCIe subsystem consists of a root complex with a collection of root ports,
 root complex event collectors (RCECs), root complex register blocks (RCRBs),
@@ -1007,7 +1008,7 @@ translate the IOVA to Supervisor Physical Addresses (SPA).</p>
 </thead>
 </table>
 <div class="sect3">
-<h4 id="5-1-4-1-enhanced-configuration-access-method-ecam"><a class="anchor" href="#5-1-4-1-enhanced-configuration-access-method-ecam"></a>5.1.4.1. Enhanced Configuration Access Method (ECAM)</h4>
+<h4 id="2-1-4-1-enhanced-configuration-access-method-ecam"><a class="anchor" href="#2-1-4-1-enhanced-configuration-access-method-ecam"></a>2.1.4.1. Enhanced Configuration Access Method (ECAM)</h4>
 <div class="paragraph">
 <p>Each PCIe endpoint and the PCIe root port itself implement a set of memory
 mapped configuration registers that are accessed using the PCIe enhanced
@@ -1200,7 +1201,7 @@ each retry of the configuration read.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="5-1-4-2-pcie-memory-space"><a class="anchor" href="#5-1-4-2-pcie-memory-space"></a>5.1.4.2. PCIe Memory Space</h4>
+<h4 id="2-1-4-2-pcie-memory-space"><a class="anchor" href="#2-1-4-2-pcie-memory-space"></a>2.1.4.2. PCIe Memory Space</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -1415,7 +1416,7 @@ containment state.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="5-1-4-3-access-control-services-acs"><a class="anchor" href="#5-1-4-3-access-control-services-acs"></a>5.1.4.3. Access Control Services (ACS)</h4>
+<h4 id="2-1-4-3-access-control-services-acs"><a class="anchor" href="#2-1-4-3-access-control-services-acs"></a>2.1.4.3. Access Control Services (ACS)</h4>
 <div class="paragraph">
 <p>The PCIe ACS provides controls on routing of PCIe TLPs. ACS controls may be used
 to determine whether the TLP should be routed normally, blocked, or redirected.
@@ -1508,7 +1509,7 @@ devices, and SR-IOV capable devices.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="5-1-4-4-address-routed-transactions"><a class="anchor" href="#5-1-4-4-address-routed-transactions"></a>5.1.4.4. Address Routed Transactions</h4>
+<h4 id="2-1-4-4-address-routed-transactions"><a class="anchor" href="#2-1-4-4-address-routed-transactions"></a>2.1.4.4. Address Routed Transactions</h4>
 <div class="paragraph">
 <p>The rules in this section apply to treatment in the root complex of TLPs that
 are routed by address. An address carried in such transactions may be the
@@ -1611,7 +1612,7 @@ space of an endpoint or RCiEP.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="5-1-4-5-id-routed-transactions"><a class="anchor" href="#5-1-4-5-id-routed-transactions"></a>5.1.4.5. ID Routed Transactions</h4>
+<h4 id="2-1-4-5-id-routed-transactions"><a class="anchor" href="#2-1-4-5-id-routed-transactions"></a>2.1.4.5. ID Routed Transactions</h4>
 <div class="paragraph">
 <p>The rules in this section apply to treatment in the root complex of TLPs that
 are routed by ID. Such requests may be Configuration requests, ID routed
@@ -1654,7 +1655,7 @@ messages or completions.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="5-1-4-6-cacheability-and-coherence"><a class="anchor" href="#5-1-4-6-cacheability-and-coherence"></a>5.1.4.6. Cacheability and Coherence</h4>
+<h4 id="2-1-4-6-cacheability-and-coherence"><a class="anchor" href="#2-1-4-6-cacheability-and-coherence"></a>2.1.4.6. Cacheability and Coherence</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -1749,7 +1750,7 @@ messages or completions.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="5-1-4-7-message-signaled-interrupts"><a class="anchor" href="#5-1-4-7-message-signaled-interrupts"></a>5.1.4.7. Message signaled interrupts</h4>
+<h4 id="2-1-4-7-message-signaled-interrupts"><a class="anchor" href="#2-1-4-7-message-signaled-interrupts"></a>2.1.4.7. Message signaled interrupts</h4>
 <div class="paragraph">
 <p>A message signaled interrupt (MSI or MSI-X) is the preferred interrupt signaling
 mechanism in PCIe.</p>
@@ -1783,7 +1784,7 @@ mechanism in PCIe.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="5-1-4-8-precision-time-measurement-ptm"><a class="anchor" href="#5-1-4-8-precision-time-measurement-ptm"></a>5.1.4.8. Precision Time Measurement (PTM)</h4>
+<h4 id="2-1-4-8-precision-time-measurement-ptm"><a class="anchor" href="#2-1-4-8-precision-time-measurement-ptm"></a>2.1.4.8. Precision Time Measurement (PTM)</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -1834,7 +1835,7 @@ mechanism in PCIe.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="5-1-4-9-errorevent-reporting"><a class="anchor" href="#5-1-4-9-errorevent-reporting"></a>5.1.4.9. Error/Event Reporting</h4>
+<h4 id="2-1-4-9-errorevent-reporting"><a class="anchor" href="#2-1-4-9-errorevent-reporting"></a>2.1.4.9. Error/Event Reporting</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -1908,7 +1909,7 @@ mechanism in PCIe.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="5-1-4-10-vendor-specific-registers"><a class="anchor" href="#5-1-4-10-vendor-specific-registers"></a>5.1.4.10. Vendor Specific Registers</h4>
+<h4 id="2-1-4-10-vendor-specific-registers"><a class="anchor" href="#2-1-4-10-vendor-specific-registers"></a>2.1.4.10. Vendor Specific Registers</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -1965,7 +1966,7 @@ mechanism in PCIe.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="5-1-4-11-soc-integrated-pcie-devices"><a class="anchor" href="#5-1-4-11-soc-integrated-pcie-devices"></a>5.1.4.11. SoC-Integrated PCIe Devices</h4>
+<h4 id="2-1-4-11-soc-integrated-pcie-devices"><a class="anchor" href="#2-1-4-11-soc-integrated-pcie-devices"></a>2.1.4.11. SoC-Integrated PCIe Devices</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -2082,7 +2083,7 @@ mechanism in PCIe.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="5-1-5-reliability-availability-and-serviceability-ras"><a class="anchor" href="#5-1-5-reliability-availability-and-serviceability-ras"></a>5.1.5. Reliability, Availability, and Serviceability (RAS)</h3>
+<h3 id="2-1-5-reliability-availability-and-serviceability-ras"><a class="anchor" href="#2-1-5-reliability-availability-and-serviceability-ras"></a>2.1.5. Reliability, Availability, and Serviceability (RAS)</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -2260,7 +2261,7 @@ mechanism in PCIe.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="5-1-6-quality-of-service"><a class="anchor" href="#5-1-6-quality-of-service"></a>5.1.6. Quality of Service</h3>
+<h3 id="2-1-6-quality-of-service"><a class="anchor" href="#2-1-6-quality-of-service"></a>2.1.6. Quality of Service</h3>
 <div class="paragraph">
 <p>Quality of Service (QoS) refers to the minimum end-to-end performance that a
 service level agreement (SLA) guarantees to an application in advance. QoS
@@ -2367,7 +2368,7 @@ and more.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="5-1-7-manageability"><a class="anchor" href="#5-1-7-manageability"></a>5.1.7. Manageability</h3>
+<h3 id="2-1-7-manageability"><a class="anchor" href="#2-1-7-manageability"></a>2.1.7. Manageability</h3>
 <div class="paragraph">
 <p>This section outlines the guidelines for RISC-V server SoCs to incorporate a
 standardized set of protocols and standards for server management. The SoC
@@ -2472,7 +2473,7 @@ data centers and enterprises.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="5-1-8-performance-monitoring"><a class="anchor" href="#5-1-8-performance-monitoring"></a>5.1.8. Performance Monitoring</h3>
+<h3 id="2-1-8-performance-monitoring"><a class="anchor" href="#2-1-8-performance-monitoring"></a>2.1.8. Performance Monitoring</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -2581,7 +2582,7 @@ data centers and enterprises.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="5-1-9-security-requirements"><a class="anchor" href="#5-1-9-security-requirements"></a>5.1.9. Security Requirements</h3>
+<h3 id="2-1-9-security-requirements"><a class="anchor" href="#2-1-9-security-requirements"></a>2.1.9. Security Requirements</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -2654,8 +2655,8 @@ data centers and enterprises.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="server_soc_intro.html">Chapter 4. Introduction</a></span>
-  <span class="next"><a href="server_soc_bibliography.html">Chapter 6. Bibliography</a></span>
+  <span class="prev"><a href="server_soc_intro.html">Chapter 1. Introduction</a></span>
+  <span class="next"><a href="server_soc_bibliography.html">Bibliography</a></span>
 </nav>
 </article>  </div>
 </main>
