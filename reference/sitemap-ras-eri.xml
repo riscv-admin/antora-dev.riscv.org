@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://docs.riscv.org/reference/uefi/bibliography.html</loc>
+<loc>https://docs.riscv.org/reference/ras-eri/index.html</loc>
 <lastmod>2026-04-08T16:44:45.550Z</lastmod>
 </url>
 <url>
-<loc>https://docs.riscv.org/reference/uefi/boot_protocol.html</loc>
+<loc>https://docs.riscv.org/reference/ras-eri/reri_bibliography.html</loc>
 <lastmod>2026-04-08T16:44:45.550Z</lastmod>
 </url>
 <url>
-<loc>https://docs.riscv.org/reference/uefi/contributors.html</loc>
+<loc>https://docs.riscv.org/reference/ras-eri/reri_contributors.html</loc>
 <lastmod>2026-04-08T16:44:45.550Z</lastmod>
 </url>
 <url>
-<loc>https://docs.riscv.org/reference/uefi/copyright.html</loc>
+<loc>https://docs.riscv.org/reference/ras-eri/reri_copyright.html</loc>
 <lastmod>2026-04-08T16:44:45.550Z</lastmod>
 </url>
 <url>
-<loc>https://docs.riscv.org/reference/uefi/index.html</loc>
+<loc>https://docs.riscv.org/reference/ras-eri/reri_err_reporting.html</loc>
 <lastmod>2026-04-08T16:44:45.550Z</lastmod>
 </url>
 <url>
-<loc>https://docs.riscv.org/reference/uefi/intro.html</loc>
+<loc>https://docs.riscv.org/reference/ras-eri/reri_intro.html</loc>
 <lastmod>2026-04-08T16:44:45.550Z</lastmod>
 </url>
 </urlset>

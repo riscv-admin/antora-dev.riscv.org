@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://docs.riscv.org/reference/reri/reri_err_reporting.html">
+    <link rel="canonical" href="https://docs.riscv.org/reference/ras-eri/reri_err_reporting.html">
     <link rel="prev" href="reri_intro.html">
     <link rel="next" href="reri_bibliography.html">
     <meta name="generator" content="Antora 3.1.14">
@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/spring-tabs.css">
 
-    <meta name="antora-ui-version" content="ee3492f6a770e7fe18b271d82967bdc4ebabab1b"> 
+    <meta name="antora-ui-version" content="f0880f778bcdcae07f2e0d49543c8b251f4a7bfa"> 
     <meta name="version" content="v1.0">
-    <meta name="component" content="reri">
+    <meta name="component" content="ras-eri">
     <meta name="latest-version" content="false">
     <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -95,7 +95,7 @@
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script>
 <div class="body">
-<div class="nav-container" data-component="reri" data-version="v1.0">
+<div class="nav-container" data-component="ras-eri" data-version="v1.0">
   <aside class="nav">
     <div class="panels">
       <div class="nav-panel-menu is-active" data-panel="menu">
@@ -360,9 +360,9 @@
 </ul>
               </div>
         </div>
-        <div class="nav-trees" data-component="reri">
+        <div class="nav-trees" data-component="ras-eri">
           <div class="version-box">
-            <select data-component="reri" class="select-version">
+            <select data-component="ras-eri" class="select-version">
                 <option
                   value="index.html"
                   data-version="v1.0"
@@ -372,29 +372,29 @@
                 </option>
             </select>
           </div>
-              <div data-component="reri" data-version="v1.0" class="nav-version-group">
+              <div data-component="ras-eri" data-version="v1.0" class="nav-version-group">
                 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">RERI Architecture</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="index.html">Title Page</a>
+    <a class="nav-link"  href="index.html">Chapter 1. Title Page</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="reri_copyright.html">Copyright and License Information</a>
+    <a class="nav-link"  href="reri_copyright.html">Chapter 2. Copyright and License Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="reri_contributors.html">Contributors</a>
+    <a class="nav-link"  href="reri_contributors.html">Chapter 3. Contributors</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="reri_intro.html">Chapter 1. Introduction</a>
+    <a class="nav-link"  href="reri_intro.html">Chapter 4. Introduction</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link"  href="reri_err_reporting.html">Chapter 2. Error Reporting</a>
+    <a class="nav-link"  href="reri_err_reporting.html">Chapter 5. Error Reporting</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link"  href="reri_bibliography.html">Chapter 3. Bibliography</a>
+    <a class="nav-link"  href="reri_bibliography.html">Chapter 6. Bibliography</a>
   </li>
 </ul>
   </li>
@@ -631,7 +631,7 @@
         </a>
       
 
-          <a href="https://github.com/riscv/docs.riscv.org/blob/main/static/pdf/riscv-reri.pdf" title="PDF" class="sidebar-link" download>
+          <a href="attachments/riscv-reri.pdf" title="PDF" class="sidebar-link" download>
             <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
             <span>Download PDF</span>
           </a>
@@ -646,15 +646,15 @@
       <li><a href="../home/index.html">RISC-V Specifications</a></li>
 
         <li><a href="../trace-debug-ras-overview/index.html">Debug, Trace, RAS Overview</a></li>
-            <li><a href="index.html">ISA Specification</a></li>
-                    <li>
-            <a href="reri_err_reporting.html">Chapter 2. Error Reporting</a>
+              <li><a href="index.html">RERI Architecture</a></li>
+                      <li>
+            <a href="reri_err_reporting.html">Chapter 5. Error Reporting</a>
           </li>
     </ul>
   </nav>
 </div>
 <div class="sect1">
-<h2 id="2-1-error-reporting"><a class="anchor" href="#2-1-error-reporting"></a>2.1. Error Reporting</h2>
+<h2 id="5-1-error-reporting"><a class="anchor" href="#5-1-error-reporting"></a>5.1. Error Reporting</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Components, such as a RISC-V hart or a memory controller, in a system that
@@ -751,7 +751,7 @@ with all zero data on reads and must ignore writes to unimplemented registers in
 the page.</p>
 </div>
 <div class="sect2">
-<h3 id="2-1-1-register-layout"><a class="anchor" href="#2-1-1-register-layout"></a>2.1.1. Register Layout</h3>
+<h3 id="5-1-1-register-layout"><a class="anchor" href="#5-1-1-register-layout"></a>5.1.1. Register Layout</h3>
 <div class="paragraph">
 <p>The error bank registers are organized as a 64-byte header providing information
 about the error bank followed by an array of 64-byte error records. The offset
@@ -886,7 +886,7 @@ may be hardwired to read-only zero or read-only one as appropriate.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="2-1-2-reset-behavior"><a class="anchor" href="#2-1-2-reset-behavior"></a>2.1.2. Reset Behavior</h3>
+<h3 id="5-1-2-reset-behavior"><a class="anchor" href="#5-1-2-reset-behavior"></a>5.1.2. Reset Behavior</h3>
 <div class="paragraph">
 <p>The reset value is <code>UNSPECIFIED</code> for RERI registers.</p>
 </div>
@@ -920,9 +920,9 @@ unhandled errors that occurred in a previous boot of the system.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="2-1-3-error-bank-header-registers"><a class="anchor" href="#2-1-3-error-bank-header-registers"></a>2.1.3. Error Bank Header Registers</h3>
+<h3 id="5-1-3-error-bank-header-registers"><a class="anchor" href="#5-1-3-error-bank-header-registers"></a>5.1.3. Error Bank Header Registers</h3>
 <div class="sect3">
-<h4 id="2-1-3-1-vendor-and-implementation-id-vendor_n_imp_id"><a class="anchor" href="#2-1-3-1-vendor-and-implementation-id-vendor_n_imp_id"></a>2.1.3.1. Vendor and Implementation ID (<code>vendor_n_imp_id</code>)</h4>
+<h4 id="5-1-3-1-vendor-and-implementation-id-vendor_n_imp_id"><a class="anchor" href="#5-1-3-1-vendor-and-implementation-id-vendor_n_imp_id"></a>5.1.3.1. Vendor and Implementation ID (<code>vendor_n_imp_id</code>)</h4>
 <div class="paragraph">
 <p>The <code>vendor_n_imp_id</code> register is a read-only register and its layout is:</p>
 </div>
@@ -964,7 +964,7 @@ specification.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="2-1-3-2-error-bank-information-bank_info"><a class="anchor" href="#2-1-3-2-error-bank-information-bank_info"></a>2.1.3.2. Error Bank Information (<code>bank_info</code>)</h4>
+<h4 id="5-1-3-2-error-bank-information-bank_info"><a class="anchor" href="#5-1-3-2-error-bank-information-bank_info"></a>5.1.3.2. Error Bank Information (<code>bank_info</code>)</h4>
 <div class="paragraph">
 <p>The <code>bank_info</code> is a read-only register and its layout is as follows:</p>
 </div>
@@ -1043,7 +1043,7 @@ error record at offset (64 + 63 * <code>n_err_recs</code>).</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="2-1-3-3-summary-of-valid-error-records-valid_summary"><a class="anchor" href="#2-1-3-3-summary-of-valid-error-records-valid_summary"></a>2.1.3.3. Summary of Valid Error Records (<code>valid_summary</code>)</h4>
+<h4 id="5-1-3-3-summary-of-valid-error-records-valid_summary"><a class="anchor" href="#5-1-3-3-summary-of-valid-error-records-valid_summary"></a>5.1.3.3. Summary of Valid Error Records (<code>valid_summary</code>)</h4>
 <div class="paragraph">
 <p>The <code>valid_summary</code> is a read-only register and its layout is as follows:</p>
 </div>
@@ -1080,9 +1080,9 @@ if there is a valid error logged in that error record.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="2-1-4-error-record-registers"><a class="anchor" href="#2-1-4-error-record-registers"></a>2.1.4. Error Record Registers</h3>
+<h3 id="5-1-4-error-record-registers"><a class="anchor" href="#5-1-4-error-record-registers"></a>5.1.4. Error Record Registers</h3>
 <div class="sect3">
-<h4 id="2-1-4-1-control-register-control_i"><a class="anchor" href="#2-1-4-1-control-register-control_i"></a>2.1.4.1. Control Register (<code>control_i</code>)</h4>
+<h4 id="5-1-4-1-control-register-control_i"><a class="anchor" href="#5-1-4-1-control-register-control_i"></a>5.1.4.1. Control Register (<code>control_i</code>)</h4>
 <div class="paragraph">
 <p>The <code>control_i</code> is a read/write WARL register used to control error reporting by
 the corresponding error record in the error bank. The layout of this register
@@ -1325,7 +1325,7 @@ issues.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-2-status-register-status_i"><a class="anchor" href="#2-1-4-2-status-register-status_i"></a>2.1.4.2. Status Register (<code>status_i</code>)</h4>
+<h4 id="5-1-4-2-status-register-status_i"><a class="anchor" href="#5-1-4-2-status-register-status_i"></a>5.1.4.2. Status Register (<code>status_i</code>)</h4>
 <div class="paragraph">
 <p>The <code>status_i</code> is a read-write WARL register that reports errors detected by
 the hardware unit.</p>
@@ -1356,7 +1356,7 @@ signaled using the signal configured in <code>control_i.ces</code>.</p>
 <div class="paragraph">
 <p>When <code>v</code> is 1, if more errors of the same class as the error currently logged in
 the error record occur then the multiple-occurrence (<code>mo</code>) bit is set to indicate
-the multiple occurrence of errors of the same severity. See <a href="#OVERWRITE_RULES">2.1.5. Error Record Overwrite Rules</a>
+the multiple occurrence of errors of the same severity. See <a href="#OVERWRITE_RULES">5.1.5. Error Record Overwrite Rules</a>
 for rules on overwriting the error record in such cases.</p>
 </div>
 <div class="paragraph">
@@ -1396,7 +1396,7 @@ hardwire this field to 0.</p>
 <div style="page-break-after: always;"></div>
 <div class="paragraph">
 <p>The error record overwrite rules use the error class (CE, UED, or UEC) and the
-error priority (<code>pri</code>) as specified in <a href="#OVERWRITE_RULES">2.1.5. Error Record Overwrite Rules</a>.</p>
+error priority (<code>pri</code>) as specified in <a href="#OVERWRITE_RULES">5.1.5. Error Record Overwrite Rules</a>.</p>
 </div>
 <div class="paragraph">
 <p>When an UEC occurs the containable (<code>c</code>) bit may be set to 1 to indicate
@@ -1701,7 +1701,7 @@ fields of the error record are not modified and retain their values.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-3-address-or-information-register-addr_info_i"><a class="anchor" href="#2-1-4-3-address-or-information-register-addr_info_i"></a>2.1.4.3. Address-or-Information Register (<code>addr_info_i</code>)</h4>
+<h4 id="5-1-4-3-address-or-information-register-addr_info_i"><a class="anchor" href="#5-1-4-3-address-or-information-register-addr_info_i"></a>5.1.4.3. Address-or-Information Register (<code>addr_info_i</code>)</h4>
 <div class="paragraph">
 <p>The <code>addr_info_i</code> WARL register reports the address or other information
 associated with the detected error when <code>status_i.ait</code> is not 0. If
@@ -1724,7 +1724,7 @@ interpretation of the information is component specific.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-4-information-register-info_i"><a class="anchor" href="#2-1-4-4-information-register-info_i"></a>2.1.4.4. Information Register (<code>info_i</code>)</h4>
+<h4 id="5-1-4-4-information-register-info_i"><a class="anchor" href="#5-1-4-4-information-register-info_i"></a>5.1.4.4. Information Register (<code>info_i</code>)</h4>
 <div class="paragraph">
 <p>The <code>info_i</code> WARL register provides additional information about the error when
 <code>status_i.iv</code> is 1. If <code>status_i.iv</code> is 0, the value in this register is
@@ -1759,7 +1759,7 @@ ID, etc.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-5-supplemental-information-register-suppl_info_i"><a class="anchor" href="#2-1-4-5-supplemental-information-register-suppl_info_i"></a>2.1.4.5. Supplemental Information Register (<code>suppl_info_i</code>)</h4>
+<h4 id="5-1-4-5-supplemental-information-register-suppl_info_i"><a class="anchor" href="#5-1-4-5-supplemental-information-register-suppl_info_i"></a>5.1.4.5. Supplemental Information Register (<code>suppl_info_i</code>)</h4>
 <div class="paragraph">
 <p>The <code>suppl_info_i</code> WARL register provides additional information about the error
 when <code>status_i.siv</code> is 1. This information may supplement the information
@@ -1774,7 +1774,7 @@ implementation specific and implementation defined format and rules.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="2-1-4-6-timestamp-register-timestamp_i"><a class="anchor" href="#2-1-4-6-timestamp-register-timestamp_i"></a>2.1.4.6. Timestamp Register (<code>timestamp_i</code>)</h4>
+<h4 id="5-1-4-6-timestamp-register-timestamp_i"><a class="anchor" href="#5-1-4-6-timestamp-register-timestamp_i"></a>5.1.4.6. Timestamp Register (<code>timestamp_i</code>)</h4>
 <div class="paragraph">
 <p>The <code>timestamp_i</code> WARL register provides a timestamp for the last error recorded
 in the error record if <code>status_i.tsv</code> is 1. When <code>status.tsv</code> is 0, the value in
@@ -1804,7 +1804,7 @@ global counter (e.g, mtime, etc.), or other implementation specific means.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="OVERWRITE_RULES"><a class="anchor" href="#OVERWRITE_RULES"></a>2.1.5. Error Record Overwrite Rules</h3>
+<h3 id="OVERWRITE_RULES"><a class="anchor" href="#OVERWRITE_RULES"></a>5.1.5. Error Record Overwrite Rules</h3>
 <div class="paragraph">
 <p>When a hardware unit detects an error and its error record is not valid, it
 writes the error record with the error information and marks the record as
@@ -1923,7 +1923,7 @@ determined by implementation specific rules.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="2-1-6-error-reporting-defined-by-other-standards"><a class="anchor" href="#2-1-6-error-reporting-defined-by-other-standards"></a>2.1.6. Error Reporting Defined by Other Standards</h3>
+<h3 id="5-1-6-error-reporting-defined-by-other-standards"><a class="anchor" href="#5-1-6-error-reporting-defined-by-other-standards"></a>5.1.6. Error Reporting Defined by Other Standards</h3>
 <div class="paragraph">
 <p>Standards such as PCIe [<a href="reri_bibliography.html#bib-pci" class="xref page">1</a>] and CXL [<a href="reri_bibliography.html#bib-cxl" class="xref page">2</a>] define standardized error
 reporting architectures such as the PCIe Advanced Error Reporting (AER).
@@ -1958,7 +1958,7 @@ to report errors logged in the Advanced Error Reporting (AER) log registers.</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect2">
-<h3 id="2-1-7-error-code-encodings"><a class="anchor" href="#2-1-7-error-code-encodings"></a>2.1.7. Error Code Encodings</h3>
+<h3 id="5-1-7-error-code-encodings"><a class="anchor" href="#5-1-7-error-code-encodings"></a>5.1.7. Error Code Encodings</h3>
 <table id="EC_ENCODINGS" class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 5. Error code encodings</caption>
 <colgroup>
@@ -2103,8 +2103,8 @@ to report errors logged in the Advanced Error Reporting (AER) log registers.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="reri_intro.html">Chapter 1. Introduction</a></span>
-  <span class="next"><a href="reri_bibliography.html">Chapter 3. Bibliography</a></span>
+  <span class="prev"><a href="reri_intro.html">Chapter 4. Introduction</a></span>
+  <span class="next"><a href="reri_bibliography.html">Chapter 6. Bibliography</a></span>
 </nav>
 </article>  </div>
 </main>

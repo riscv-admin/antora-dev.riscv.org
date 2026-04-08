@@ -52,7 +52,7 @@
 <loc>https://docs.riscv.org/reference/sitemap-profiles-overview.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.riscv.org/reference/sitemap-reri.xml</loc>
+<loc>https://docs.riscv.org/reference/sitemap-ras-eri.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-rpmi.xml</loc>
