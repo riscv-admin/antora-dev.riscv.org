@@ -31,9 +31,6 @@
 <loc>https://docs.riscv.org/reference/sitemap-home.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.riscv.org/reference/sitemap-intrinsic.xml</loc>
-</sitemap>
-<sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-iommu.xml</loc>
 </sitemap>
 <sitemap>
@@ -64,13 +61,13 @@
 <loc>https://docs.riscv.org/reference/sitemap-rpmi.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://docs.riscv.org/reference/sitemap-rva20-rvi20-rva22.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-rva23.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-rvb23.xml</loc>
-</sitemap>
-<sitemap>
-<loc>https://docs.riscv.org/reference/sitemap-rvprofile.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-sbi.xml</loc>
@@ -92,5 +89,8 @@
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-uefi.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.riscv.org/reference/sitemap-vector-c-intrinsics.xml</loc>
 </sitemap>
 </sitemapindex>
