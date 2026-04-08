@@ -4,6 +4,12 @@
 <loc>https://docs.riscv.org/reference/sitemap-abi.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://docs.riscv.org/reference/sitemap-acpi-ffh.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.riscv.org/reference/sitemap-acpi-rimt.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-aia.xml</loc>
 </sitemap>
 <sitemap>
@@ -13,6 +19,9 @@
 <loc>https://docs.riscv.org/reference/sitemap-brs.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://docs.riscv.org/reference/sitemap-cbqri.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-debug.xml</loc>
 </sitemap>
 <sitemap>
@@ -20,9 +29,6 @@
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-etrace.xml</loc>
-</sitemap>
-<sitemap>
-<loc>https://docs.riscv.org/reference/sitemap-ffh.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-hardware-overview.xml</loc>
@@ -49,13 +55,7 @@
 <loc>https://docs.riscv.org/reference/sitemap-profiles-overview.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.riscv.org/reference/sitemap-qos.xml</loc>
-</sitemap>
-<sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-reri.xml</loc>
-</sitemap>
-<sitemap>
-<loc>https://docs.riscv.org/reference/sitemap-rimt.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-rpmi.xml</loc>
@@ -73,7 +73,7 @@
 <loc>https://docs.riscv.org/reference/sitemap-sbi.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.riscv.org/reference/sitemap-semihost.xml</loc>
+<loc>https://docs.riscv.org/reference/sitemap-semihosting.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-server-soc.xml</loc>
