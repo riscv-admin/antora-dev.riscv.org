@@ -28,9 +28,6 @@
 <loc>https://docs.riscv.org/reference/sitemap-e-trace.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.riscv.org/reference/sitemap-etrace.xml</loc>
-</sitemap>
-<sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-hardware-overview.xml</loc>
 </sitemap>
 <sitemap>
@@ -86,6 +83,9 @@
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-trace-debug-ras-overview.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.riscv.org/reference/sitemap-trace-encap.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-uefi.xml</loc>
