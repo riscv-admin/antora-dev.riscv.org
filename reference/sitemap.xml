@@ -55,6 +55,12 @@
 <loc>https://docs.riscv.org/reference/sitemap-ras-eri.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://docs.riscv.org/reference/sitemap-riscv-p.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://docs.riscv.org/reference/sitemap-riscv-up.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-rpmi.xml</loc>
 </sitemap>
 <sitemap>
