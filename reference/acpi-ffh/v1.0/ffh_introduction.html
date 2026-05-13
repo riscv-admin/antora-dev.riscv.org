@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://docs.riscv.org/reference/acpi-ffh/ffh_changelog.html">
-    <link rel="prev" href="contributors.html">
-    <link rel="next" href="ffh_introduction.html">
+    <link rel="canonical" href="https://docs.riscv.org/reference/acpi-ffh/ffh_introduction.html">
+    <link rel="prev" href="ffh_changelog.html">
+    <link rel="next" href="ffh_resource_descriptor.html">
     <meta name="generator" content="Antora 3.1.14">
     <script>
 !function (theme, navWidth) {
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
     <meta name="antora-ui-version" content="e2cf412703784601a7da60b233ca3ba2038c3f0b"> 
-    <meta name="version" content="v1.0.0">
+    <meta name="version" content="v1.0">
     <meta name="component" content="acpi-ffh">
     <meta name="latest-version" content="false">
     <script>
@@ -102,7 +102,7 @@
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script>
 <div class="body">
-<div class="nav-container" data-component="acpi-ffh" data-version="v1.0.0"
+<div class="nav-container" data-component="acpi-ffh" data-version="v1.0"
   >
   <aside class="nav">
     <div class="panels">
@@ -183,14 +183,14 @@
                 </option>
                 <option
                   value="index.html"
-                  data-version="v1.0.0"
+                  data-version="v1.0"
                   
                   selected>
-                  v1.0.0
+                  v1.0
                 </option>
             </select>
           </div>
-              <div data-component="acpi-ffh" data-version="v1.0.0" class="nav-version-group">
+              <div data-component="acpi-ffh" data-version="v1.0" class="nav-version-group">
                 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
@@ -205,10 +205,10 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="contributors.html">Contributors</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="ffh_changelog.html">Change Log</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link"  href="ffh_introduction.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -622,7 +622,7 @@
         <li><a href="../../platform-software-overview/index.html">Platform Software Overview</a></li>
               <li><a href="index.html">Functional Fixed Hardware</a></li>
                       <li>
-            <a href="ffh_changelog.html">Change Log</a>
+            <a href="ffh_introduction.html">Chapter 1. Introduction</a>
           </li>
     </ul>
   </nav>
@@ -635,30 +635,121 @@
       </td>
       <td class="content">
         <div class="paragraph">
-          <p> For the latest stable version, please use <a href="../ffh_changelog.html">Functional Fixed Hardware v1.0.1</a>!</p>
+          <p> For the latest stable version, please use <a href="../ffh_introduction.html">Functional Fixed Hardware v1.0.1</a>!</p>
         </div>
       </td>
     </tr></tbody>
   </table>
 </div>
 <div class="sect1">
-<h2 id="change-log"><a class="anchor" href="#change-log"></a>Change Log</h2>
+<h2 id="1-1-introduction"><a class="anchor" href="#1-1-introduction"></a>1.1. Introduction</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="version-1-0-0"><a class="anchor" href="#version-1-0-0"></a>Version 1.0.0</h3>
+<div class="paragraph">
+<p>RISC-V systems which use Advanced Configuration and Power Interface (ACPI)
+require additional specifications for some ACPI object fields, typically
+those of type “Resource Descriptor”.  A Functional Fixed Hardware (FFH)
+specification provides those additional specifications.  The use cases
+addressed by this FFH are as follows:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Initial version</p>
+<p>Lower Power Idle States (LPI), [ACPI 6.5] section 8.4.3</p>
+</li>
+<li>
+<p>Collaborative Processor Performance Control (CPPC), [ACPI 6.5] section 8.4.6</p>
 </li>
 </ul>
 </div>
+<div class="sect2">
+<h3 id="1-1-1-terms-and-abbreviations"><a class="anchor" href="#1-1-1-terms-and-abbreviations"></a>1.1.1. Terms and Abbreviations</h3>
+<div class="paragraph">
+<p>This specification uses the following terms and abbreviations:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 80%;">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Term</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACPI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Advanced Configuration and Power Interface Specification</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ASL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACPI Source Language</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CPC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Continuous Performance Control</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CPPC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Collaborative Processor Performance Control</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FFH</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Functional Fixed Hardware</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HSM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hart State Management</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LPI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Low Power Idle</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OSPM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Operating System-directed configuration and Power Management</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SBI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supervisor Binary Interface</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="1-1-2-references"><a class="anchor" href="#1-1-2-references"></a>1.1.2. References</h3>
+<table class="tableblock frame-all grid-all" style="width: 80%;">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Reference</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[ACPI 6.5]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Advanced Configuration and Power Interface Specification
+               version 6.5<br>
+               <a href="https://uefi.org/specs/ACPI/6.5/" class="bare">https://uefi.org/specs/ACPI/6.5/</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[SBI]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RISC-V Supervisor Binary Interface Specification version 2.0<br>
+               <a href="https://github.com/riscv-non-isa/riscv-sbi-doc/" class="bare">https://github.com/riscv-non-isa/riscv-sbi-doc/</a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="contributors.html">Contributors</a></span>
-  <span class="next"><a href="ffh_introduction.html">Chapter 1. Introduction</a></span>
+  <span class="prev"><a href="ffh_changelog.html">Change Log</a></span>
+  <span class="next"><a href="ffh_resource_descriptor.html">Chapter 2. RISC-V FFH Resource Descriptor Encoding</a></span>
 </nav>
 </article>  </div>
 </main>

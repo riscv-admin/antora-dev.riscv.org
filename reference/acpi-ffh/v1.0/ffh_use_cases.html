@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://docs.riscv.org/reference/acpi-ffh/ffh_resource_descriptor.html">
-    <link rel="prev" href="ffh_introduction.html">
-    <link rel="next" href="ffh_use_cases.html">
+    <link rel="canonical" href="https://docs.riscv.org/reference/acpi-ffh/ffh_use_cases.html">
+    <link rel="prev" href="ffh_resource_descriptor.html">
+    <link rel="next" href="ffh_lpi_examples.html">
     <meta name="generator" content="Antora 3.1.14">
     <script>
 !function (theme, navWidth) {
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
     <meta name="antora-ui-version" content="e2cf412703784601a7da60b233ca3ba2038c3f0b"> 
-    <meta name="version" content="v1.0.0">
+    <meta name="version" content="v1.0">
     <meta name="component" content="acpi-ffh">
     <meta name="latest-version" content="false">
     <script>
@@ -102,7 +102,7 @@
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script>
 <div class="body">
-<div class="nav-container" data-component="acpi-ffh" data-version="v1.0.0"
+<div class="nav-container" data-component="acpi-ffh" data-version="v1.0"
   >
   <aside class="nav">
     <div class="panels">
@@ -183,14 +183,14 @@
                 </option>
                 <option
                   value="index.html"
-                  data-version="v1.0.0"
+                  data-version="v1.0"
                   
                   selected>
-                  v1.0.0
+                  v1.0
                 </option>
             </select>
           </div>
-              <div data-component="acpi-ffh" data-version="v1.0.0" class="nav-version-group">
+              <div data-component="acpi-ffh" data-version="v1.0" class="nav-version-group">
                 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
@@ -211,10 +211,10 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="ffh_introduction.html">Chapter 1. Introduction</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="ffh_resource_descriptor.html">Chapter 2. RISC-V FFH Resource Descriptor Encoding</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link"  href="ffh_use_cases.html">Chapter 3. Use Cases</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -622,7 +622,7 @@
         <li><a href="../../platform-software-overview/index.html">Platform Software Overview</a></li>
               <li><a href="index.html">Functional Fixed Hardware</a></li>
                       <li>
-            <a href="ffh_resource_descriptor.html">Chapter 2. RISC-V FFH Resource Descriptor Encoding</a>
+            <a href="ffh_use_cases.html">Chapter 3. Use Cases</a>
           </li>
     </ul>
   </nav>
@@ -635,74 +635,261 @@
       </td>
       <td class="content">
         <div class="paragraph">
-          <p> For the latest stable version, please use <a href="../ffh_resource_descriptor.html">Functional Fixed Hardware v1.0.1</a>!</p>
+          <p> For the latest stable version, please use <a href="../ffh_use_cases.html">Functional Fixed Hardware v1.0.1</a>!</p>
         </div>
       </td>
     </tr></tbody>
   </table>
 </div>
 <div class="sect1">
-<h2 id="resource_descriptor_encoding"><a class="anchor" href="#resource_descriptor_encoding"></a>2.1. RISC-V FFH Resource Descriptor Encoding</h2>
+<h2 id="3-1-use-cases"><a class="anchor" href="#3-1-use-cases"></a>3.1. Use Cases</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="3-1-1-lower-power-idle-states"><a class="anchor" href="#3-1-1-lower-power-idle-states"></a>3.1.1. Lower Power Idle States</h3>
 <div class="paragraph">
-<p>Resource descriptors, which are formatted per the “Generic Register Descriptor”
-definition ([ACPI 6.5] section 6.4.3.7, also see ASL Register in section
-19.6.114), are used by ACPI tables to provide the OSPM read and/or write access
-to platform-specific “registers”.  A resource descriptor may be a fixed value,
-hardware address, function or function parameter identifier, or any other
-encoding of its bits.  While encodings are specific to their applications,
-RISC-V uses a common top-level encoding whenever possible.  That encoding is:</p>
+<p>It is desirable for RISC-V system harts to transition to lower power states
+when they go idle.  ACPI provides Lower Power Idle State (_LPI) objects which
+support an operating system’s implementation of transitioning to lower power
+states.  The following subsections specify some fields of the _LPI object for
+RISC-V systems.  Refer to the ACPI specification for all remaining fields.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Register bit width is 64</p>
-</li>
-<li>
-<p>The uppermost 4 bits are used to specify the type of identifier represented
-in the remaining bits.  The possible types are described in table
-<a href="#table_ffh_resource_descriptor_identifier_type">Table 1</a></p>
-</li>
-</ul>
+<div class="sect3">
+<h4 id="3-1-1-1-entry-method"><a class="anchor" href="#3-1-1-1-entry-method"></a>3.1.1.1. Entry Method</h4>
+<div class="paragraph">
+<p>The _LPI object uses a “Resource Descriptor”, which is formatted per
+<a href="#resource_descriptor_encoding">[resource_descriptor_encoding]</a>, to specify the entry method for a lower
+power state.  RISC-V systems set the resource descriptor as specified in
+<a href="#table_lpi_entry_method">Table 1</a>:</p>
 </div>
-<table id="table_ffh_resource_descriptor_identifier_type" class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 1. RISC-V FFH Resource Descriptor Identifier Type</caption>
+<table id="table_lpi_entry_method" class="tableblock frame-all grid-all" style="width: 90%;">
+<caption class="title">Table 1. LPI Entry Method</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-center valign-top">Type</th>
+<th class="tableblock halign-center valign-top">Field</th>
+<th class="tableblock halign-center valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>Address Space</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0x7F (FFixedHW)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>Register Bit Width</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">64</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>Register Bit Offset</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>Access Size</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">4 (QWord)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>Register Address</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">As specified in the Bits[63:60],
+                                     Bits[59:32], and Bits[31:0] columns of
+                                    <a href="#table_lpi_entry_method_address">Table 1</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="table_lpi_entry_method_address" class="tableblock frame-all grid-all" style="width: 90%;">
+<caption class="title">Table 1. LPI Entry Method Address</caption>
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 28.5714%;">
+<col style="width: 28.5714%;">
+<col style="width: 28.5715%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Bits[63:60]<br>
+   (Type)</th>
+<th class="tableblock halign-center valign-top">Bits[59:32]</th>
+<th class="tableblock halign-center valign-top">Bits[31:0]</th>
 <th class="tableblock halign-center valign-top">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock">0x0</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">None / Other</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0x000_0000</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0x0000_0000</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">WFI</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top"><p class="tableblock">0x1</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">Bits[31:0] represent an SBI identifier</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top"><p class="tableblock">0x2</p></td>
-<td class="tableblock halign-center valign-top"><p class="tableblock">Bits[11:0] represent a CSR identifier</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0x000_0000</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">SBI HSM hart<br>
+                       suspend type</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Suspend the hart using<br>
+  the SBI HSM extension</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>NOTE:</strong> While it is possible for identical RISC-V FFH Resource Descriptor
-addresses to appear across ACPI tables, the addresses may not share the
-same semantics.  Each address must be interpreted per its respective
-ACPI table type.</p>
+<p>All other encodings for LPI entry methods with <em>Address Space</em> set to
+<em>FFixedHW</em> (0x7f) are reserved for future use.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="3-1-1-2-arch-context-lost-flags"><a class="anchor" href="#3-1-1-2-arch-context-lost-flags"></a>3.1.1.2. Arch. Context Lost Flags</h4>
+<div class="paragraph">
+<p>_LPI objects also provide an <em>Arch. Context Lost Flags</em> field, which is
+a 32-bit integer, and may be used to indicate what processor context is lost.
+RISC-V _LPI objects must have appropriate flags set in this field as
+specified in <a href="#table_lpi_arch_context_lost_flags">Table 2</a>:</p>
+</div>
+<table id="table_lpi_arch_context_lost_flags" class="tableblock frame-all grid-all" style="width: 90%;">
+<caption class="title">Table 2. LPI Arch. Context Lost Flags</caption>
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 66.6668%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Bit offset</th>
+<th class="tableblock halign-center valign-top">Bit width</th>
+<th class="tableblock halign-center valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Set when the hart timer context is lost.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Reserved. Must be zero.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><a href="#lpi_examples">[lpi_examples]</a> provides examples for both a WFI entry method and SBI HSM
+hart suspend entry methods.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="3-1-2-collaborative-processor-performance-control"><a class="anchor" href="#3-1-2-collaborative-processor-performance-control"></a>3.1.2. Collaborative Processor Performance Control</h3>
+<div class="paragraph">
+<p>ACPI describes the Collaborative Processor Performance Control (CPPC)
+mechanism, which is an abstract and flexible mechanism for the operating
+system to collaborate with an entity in the platform to manage the performance
+of the harts.  The platform entity may be the hart itself, the platform
+chipset, or a separate controller.</p>
+</div>
+<div class="paragraph">
+<p>The ACPI _CPC object provides a way for the operating system to transition the
+hart into a performance state selected from an abstract, continuous range of
+values.  Fields in the _CPC object may be static integers or “Resource
+Descriptors”.  The following subsection specifies a RISC-V system “Resource
+Descriptor” for the _CPC object.</p>
+</div>
+<div class="sect3">
+<h4 id="3-1-2-1-_cpc-object-resource-descriptor"><a class="anchor" href="#3-1-2-1-_cpc-object-resource-descriptor"></a>3.1.2.1. _CPC Object Resource Descriptor</h4>
+<div class="paragraph">
+<p>The _CPC object may use a “Resource Descriptor”, which is formatted per
+<a href="#resource_descriptor_encoding">[resource_descriptor_encoding]</a>, for many of its fields.  When using an FFH
+Resource Descriptor for a _CPC field, it must be formatted as specified in
+<a href="#table_cpc_resource_descriptor">Table 3</a>:</p>
+</div>
+<table id="table_cpc_resource_descriptor" class="tableblock frame-all grid-all" style="width: 90%;">
+<caption class="title">Table 3. _CPC Resource Descriptor</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Field</th>
+<th class="tableblock halign-center valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>Address Space</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0x7F (FFixedHW)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>Register Bit Width</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">64</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>Register Bit Offset</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>Access Size</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">4 (QWord)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><em>Register Address</em></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">As specified in the Bits[63:60],
+                                    Bits[59:32], Bits[31:12] and
+                                    Bits[11:0] columns of
+                                    <a href="#table_cpc_register_address">Table 4</a></p></td>
+</tr>
+</tbody>
+</table>
+<table id="table_cpc_register_address" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. _CPC Register Address</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Bits[63:60]<br>
+  (Type)</th>
+<th class="tableblock halign-center valign-top">Bits[59:32]</th>
+<th class="tableblock halign-center valign-top">Bits[31:12]</th>
+<th class="tableblock halign-center valign-top">Bits[11:0]</th>
+<th class="tableblock halign-center valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0x1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0x000_0000</p></td>
+<td class="tableblock halign-center valign-top" colspan="2"><p class="tableblock">SBI CPPC Register ID</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">SBI CPPC access</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0x2</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0x000_0000</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0x00000</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">CSR number</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">CSR access</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>All other encodings for _CPC Resource Descriptors with <em>Address Space</em>
+set to <em>FFixedHW</em> (0x7f) are reserved for future use.</p>
+</div>
+<div class="paragraph">
+<p><a href="#cppc_examples">[cppc_examples]</a> provides examples for both a CSR access and an SBI CPPC
+access.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="ffh_introduction.html">Chapter 1. Introduction</a></span>
-  <span class="next"><a href="ffh_use_cases.html">Chapter 3. Use Cases</a></span>
+  <span class="prev"><a href="ffh_resource_descriptor.html">Chapter 2. RISC-V FFH Resource Descriptor Encoding</a></span>
+  <span class="next"><a href="ffh_lpi_examples.html">Appendix A. _LPI Object Examples</a></span>
 </nav>
 </article>  </div>
 </main>

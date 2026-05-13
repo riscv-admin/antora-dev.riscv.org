@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://docs.riscv.org/reference/acpi-ffh/ffh_lpi_examples.html">
-    <link rel="prev" href="ffh_use_cases.html">
-    <link rel="next" href="ffh_cpc_examples.html">
+    <link rel="canonical" href="https://docs.riscv.org/reference/acpi-ffh/ffh_changelog.html">
+    <link rel="prev" href="contributors.html">
+    <link rel="next" href="ffh_introduction.html">
     <meta name="generator" content="Antora 3.1.14">
     <script>
 !function (theme, navWidth) {
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../../_/css/vendor/spring-tabs.css">
 
     <meta name="antora-ui-version" content="e2cf412703784601a7da60b233ca3ba2038c3f0b"> 
-    <meta name="version" content="v1.0.0">
+    <meta name="version" content="v1.0">
     <meta name="component" content="acpi-ffh">
     <meta name="latest-version" content="false">
     <script>
@@ -102,7 +102,7 @@
   }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
 </script>
 <div class="body">
-<div class="nav-container" data-component="acpi-ffh" data-version="v1.0.0"
+<div class="nav-container" data-component="acpi-ffh" data-version="v1.0"
   >
   <aside class="nav">
     <div class="panels">
@@ -183,14 +183,14 @@
                 </option>
                 <option
                   value="index.html"
-                  data-version="v1.0.0"
+                  data-version="v1.0"
                   
                   selected>
-                  v1.0.0
+                  v1.0
                 </option>
             </select>
           </div>
-              <div data-component="acpi-ffh" data-version="v1.0.0" class="nav-version-group">
+              <div data-component="acpi-ffh" data-version="v1.0" class="nav-version-group">
                 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
     <button class="nav-item-toggle"></button>
@@ -205,7 +205,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="contributors.html">Contributors</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link"  href="ffh_changelog.html">Change Log</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -217,7 +217,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="ffh_use_cases.html">Chapter 3. Use Cases</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link"  href="ffh_lpi_examples.html">Appendix A. _LPI Object Examples</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -622,7 +622,7 @@
         <li><a href="../../platform-software-overview/index.html">Platform Software Overview</a></li>
               <li><a href="index.html">Functional Fixed Hardware</a></li>
                       <li>
-            <a href="ffh_lpi_examples.html">Appendix A. _LPI Object Examples</a>
+            <a href="ffh_changelog.html">Change Log</a>
           </li>
     </ul>
   </nav>
@@ -635,112 +635,30 @@
       </td>
       <td class="content">
         <div class="paragraph">
-          <p> For the latest stable version, please use <a href="../ffh_lpi_examples.html">Functional Fixed Hardware v1.0.1</a>!</p>
+          <p> For the latest stable version, please use <a href="../ffh_changelog.html">Functional Fixed Hardware v1.0.1</a>!</p>
         </div>
       </td>
     </tr></tbody>
   </table>
 </div>
 <div class="sect1">
-<h2 id="lpi_examples"><a class="anchor" href="#lpi_examples"></a>_LPI Object Examples</h2>
+<h2 id="change-log"><a class="anchor" href="#change-log"></a>Change Log</h2>
 <div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-C hljs" data-lang="C">Device (C000) {              // HART0
-    Name (_HID, “ACPI0007”)
-    Name (_LPI,
-        Package () {
-            0,               // Revision
-            0,               // LevelID
-            3,               // Count
-
-            // LPI1
-            Package () {
-                1,           // Min Residency (us)
-                1,           // Worst case wakeup latency (us)
-                1,           // Flags
-                0,           // Arch. Context Lost Flags
-                100,         // Residency Counter Frequency
-                0,           // Enabled Parent State
-                ResourceTemplate () {
-                             // Entry Method
-                    Register(FFixedHW, 64, 0,
-                             0x0000_0000_0000_0000,
-                             QWord)
-                },
-                ResourceTemplate () {
-                             // Residency Counter Register
-                    Register(SystemMemory, 0, 0, 0, 0)  // NULL
-                },
-                ResourceTemplate () {
-                             // Usage Counter Register
-                    Register(SystemMemory, 0, 0, 0, 0)  // NULL
-                },
-                             // State Name
-                “RISC-V WFI”
-            },
-
-            // LPI2
-            Package () {
-                10,          // Min Residency (us)
-                10,          // Worst case wakeup latency (us)
-                1,           // Flags
-                0,           // Arch. Context Lost Flags
-                100,         // Residency Counter Frequency
-                1,           // Enabled Parent State
-                ResourceTemplate () {
-                             // Entry Method
-                    Register(FFixedHW, 64, 0,
-                             0x1000_0000_0000_0000,
-                             QWord)
-                },
-                ResourceTemplate () {
-                             // Residency Counter Register
-                    Register(SystemMemory, 0, 0, 0, 0)  // NULL
-                },
-                ResourceTemplate () {
-                             // Usage Counter Register
-                    Register(SystemMemory, 0, 0, 0, 0)  // NULL
-                },
-                             // State Name
-                “RISC-V RET_DEFAULT”
-            },
-
-            // LPI3
-            Package () {
-                3500,        // Min Residency (us)
-                100,         // Worst case wakeup latency (us)
-                1,           // Flags
-                0,           // Arch. Context Lost Flags
-                100,         // Residency Counter Frequency
-                1,           // Enabled Parent State
-                ResourceTemplate () {
-                             // Entry Method
-                    Register(FFixedHW, 64, 0,
-                             0x1000_0000_8000_0000,
-                             QWord)
-                },
-                ResourceTemplate () {
-                             // Residency Counter Register
-                    Register(SystemMemory, 0, 0, 0, 0)  // NULL
-                },
-                ResourceTemplate () {
-                             // Usage Counter Register
-                    Register(SystemMemory, 0, 0, 0, 0)  // NULL
-                },
-                             // State Name
-                “RISC-V NONRET_DEFAULT”
-            }
-        }
-    )
-}</code></pre>
+<div class="sect2">
+<h3 id="version-1-0-0"><a class="anchor" href="#version-1-0-0"></a>Version 1.0.0</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Initial version</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="ffh_use_cases.html">Chapter 3. Use Cases</a></span>
-  <span class="next"><a href="ffh_cpc_examples.html">Appendix B. _CPC Object Examples</a></span>
+  <span class="prev"><a href="contributors.html">Contributors</a></span>
+  <span class="next"><a href="ffh_introduction.html">Chapter 1. Introduction</a></span>
 </nav>
 </article>  </div>
 </main>
