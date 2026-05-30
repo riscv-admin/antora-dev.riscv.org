@@ -954,9 +954,9 @@ in <a href="#fig:device-isolation">Figure 1</a> the OS may configure the IOMMU w
 translate the IOVA and thereby limit the addresses that may be accessed to those
 allowed by the page table.</p>
 </div>
-<div id="fig:device-isolation" class="imageblock text-center unresolved">
+<div id="fig:device-isolation" class="imageblock text-center">
 <div class="content">
-<img src="images/non-virt-OS.svg" alt="non virt OS" width="300" height="300">
+<img src="_images/non-virt-OS.svg" alt="non virt OS" width="300" height="300">
 </div>
 <div class="title">Figure 1. Device isolation in non-virtualized OS</div>
 </div>
@@ -1006,9 +1006,9 @@ to VM-2. The VMM configures a second-stage page table to be used for each device
 and restricts the memory that can be accessed by D1 to VM-1 associated memory
 and from D2 to VM-2 associated memory.</p>
 </div>
-<div id="fig:dma-translation-direct-device-assignment" class="imageblock text-center unresolved">
+<div id="fig:dma-translation-direct-device-assignment" class="imageblock text-center">
 <div class="content">
-<img src="images/hypervisor.svg" alt="hypervisor" width="300" height="300">
+<img src="_images/hypervisor.svg" alt="hypervisor" width="300" height="300">
 </div>
 <div class="title">Figure 2. DMA translation to enable direct device assignment</div>
 </div>
@@ -1022,9 +1022,9 @@ virtual, occupies a naturally aligned 4-KiB page of address space, the required
 address translation is from a virtual (guest) page address to a physical page
 address, the same as supported by regular RISC-V page-based address translation.</p>
 </div>
-<div id="MSI_REDIR" class="imageblock text-center unresolved">
+<div id="MSI_REDIR" class="imageblock text-center">
 <div class="content">
-<img src="images/msi-imsic.svg" alt="msi imsic" width="500" height="400">
+<img src="_images/msi-imsic.svg" alt="msi imsic" width="500" height="400">
 </div>
 <div class="title">Figure 3. MSI address translation to direct guest programmed MSI to IMSIC guest interrupt files</div>
 </div>
@@ -1051,9 +1051,9 @@ hypervisor.</p>
 <div class="paragraph">
 <p><a href="#fig:iommu-for-guest-os">Figure 4</a> illustrates the concept.</p>
 </div>
-<div id="fig:iommu-for-guest-os" class="imageblock text-center unresolved">
+<div id="fig:iommu-for-guest-os" class="imageblock text-center">
 <div class="content">
-<img src="images/guest-OS.svg" alt="guest OS" width="500" height="400">
+<img src="_images/guest-OS.svg" alt="guest OS" width="500" height="400">
 </div>
 <div class="title">Figure 4. Address translation in IOMMU for Guest OS</div>
 </div>
@@ -1113,9 +1113,9 @@ to translate the IOVA to a Supervisor Physical Addresses (SPA).</p>
 <div class="paragraph">
 <p>The IOMMU is not invoked for outbound transactions.</p>
 </div>
-<div id="fig:example-soc-with-iommu" class="imageblock unresolved">
+<div id="fig:example-soc-with-iommu" class="imageblock">
 <div class="content">
-<img src="images/placement.svg" alt="placement" width="800">
+<img src="_images/placement.svg" alt="placement" width="800">
 </div>
 <div class="title">Figure 5. Example of IOMMUs integration in SoC.</div>
 </div>
@@ -1256,9 +1256,9 @@ are implementation-specific. The partitioning of responsibility between
 the IOMMU and the IO bridge for recording the incoming MSI in an MRIF and
 generating the associated <em>notice</em> MSI are implementation-specific.</p>
 </div>
-<div id="fig:iommu-interfaces" class="imageblock unresolved">
+<div id="fig:iommu-interfaces" class="imageblock">
 <div class="content">
-<img src="images/interfaces.svg" alt="interfaces" width="800">
+<img src="_images/interfaces.svg" alt="interfaces" width="800">
 </div>
 <div class="title">Figure 6. IOMMU interfaces.</div>
 </div>
