@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://docs.riscv.org/reference/aia/v1.0/AdvPLIC.html">
+    <link rel="canonical" href="https://docs.riscv.org/reference/aia/v500.0/AdvPLIC.html">
     <link rel="prev" href="IMSIC.html">
     <link rel="next" href="MSLevel.html">
     <meta name="generator" content="Antora 3.1.15">
@@ -119,6 +119,13 @@
         <div class="nav-trees" data-component="aia">
           <div class="version-box">
             <select data-component="aia" class="select-version">
+                <option
+                  value="../v500.0/index.html"
+                  data-version="v500.0"
+                  
+                  >
+                  v500.0
+                </option>
                 <option
                   value="index.html"
                   data-version="v1.0"
@@ -455,6 +462,20 @@
                 </ul>
   </nav>
 </div>
+<div class="admonitionblock important latest">
+  <table>
+    <tbody><tr>
+      <td class="icon">
+        <i class="fa icon-important" title="Important"></i>
+      </td>
+      <td class="content">
+        <div class="paragraph">
+          <p> For the latest stable version, please use <a href="../v500.0/AdvPLIC.html">Advanced Interrupt Architecture v500.0</a>!</p>
+        </div>
+      </td>
+    </tr></tbody>
+  </table>
+</div>
 <div class="sect1">
 <h2 id="AdvPLIC"><a class="anchor" href="#AdvPLIC"></a>4.1. Advanced Platform-Level Interrupt Controller (APLIC)</h2>
 <div class="sectionbody">
@@ -606,14 +627,14 @@ to control a complete, separate APLIC, though in fact all domain
 interfaces together access a single combined interrupt controller.</p>
 </div>
 <div class="paragraph">
-<p><a href="#AdvPLIC-ex-1Domain">Figure 1</a> through
-<a href="#AdvPLIC-ex-3Domains">Figure 3</a> depict some possible hierarchies of
+<p><a href="#AdvPLIC-ex-1Domain">Figure 3</a> through
+<a href="#AdvPLIC-ex-3Domains">Figure 5</a> depict some possible hierarchies of
 interrupt domains implemented by an APLIC in a RISC-V system.</p>
 </div>
 <div class="paragraph">
 <p>The first figure represents a minimal system that has a single hart not
 supporting supervisor mode, with a single interrupt domain for machine
-level on that hart. The next figure, <a href="#AdvPLIC-ex-2Domains">Figure 2</a>,
+level on that hart. The next figure, <a href="#AdvPLIC-ex-2Domains">Figure 4</a>,
 shows a basic arrangement for a larger system designed for symmetric
 multiprocessing (SMP), with multiple harts that all implement supervisor
 mode. In such cases, the APLIC will usually provide a separate interrupt
@@ -627,7 +648,7 @@ control.</p>
 <div class="content">
 <img src="_images/AdvPLIC-ex-1Domain.png" alt="AdvPLIC ex 1Domain">
 </div>
-<div class="title">Figure 1. Example of a RISC-V system that has a single hart implementing only M-mode, with a single machine-level interrupt domain for that hart.</div>
+<div class="title">Figure 3. Example of a RISC-V system that has a single hart implementing only M-mode, with a single machine-level interrupt domain for that hart.</div>
 </div>
 <div class="paragraph">
 <p>An APLIC&#8217;s interrupt domains are arranged in a tree hierarchy, with the
@@ -642,7 +663,7 @@ root, interrupt sources not delegated down to that domain appear to the
 domain as being not implemented.</p>
 </div>
 <div class="paragraph">
-<p><a href="#AdvPLIC-ex-3Domains">Figure 3</a> shows a hierarchy of three
+<p><a href="#AdvPLIC-ex-3Domains">Figure 5</a> shows a hierarchy of three
 interrupt domains, two at machine level and one at supervisor level. The
 arrangement in the figure, when combined with PMP (physical memory
 protection), allows machine-level software to isolate a selection of
@@ -653,13 +674,13 @@ application harts, even at machine level.</p>
 <div class="content">
 <img src="_images/AdvPLIC-ex-2Domains.png" alt="AdvPLIC ex 2Domains">
 </div>
-<div class="title">Figure 2. An example system with four harts that implement M-mode and S-mode, with two APLIC interrupt domains, one each for machine and supervisor levels.</div>
+<div class="title">Figure 4. An example system with four harts that implement M-mode and S-mode, with two APLIC interrupt domains, one each for machine and supervisor levels.</div>
 </div>
 <div id="AdvPLIC-ex-3Domains" class="imageblock">
 <div class="content">
 <img src="_images/AdvPLIC-ex-3Domains.png" alt="AdvPLIC ex 3Domains">
 </div>
-<div class="title">Figure 3. A RISC-V system that extends the example of <a href="#AdvPLIC-ex-2Domains">Figure 2</a> with a fifth M-mode-only "manager" hart, with a separate machine-level interrupt domain above the other domains.</div>
+<div class="title">Figure 5. A RISC-V system that extends the example of <a href="#AdvPLIC-ex-2Domains">Figure 4</a> with a fifth M-mode-only "manager" hart, with a separate machine-level interrupt domain above the other domains.</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -673,7 +694,7 @@ application harts, even at machine level.</p>
 over the interrupts from the domain, the harts must be cooperatively
 controlled by software at the same privilege level. In particular, a
 single operating system should control all of the harts associated with
-a supervisor-level interrupt domain. In the examples of <a href="#AdvPLIC-ex-2Domains">Figure 2</a> and <a href="#AdvPLIC-ex-3Domains">Figure 3</a>, control
+a supervisor-level interrupt domain. In the examples of <a href="#AdvPLIC-ex-2Domains">Figure 4</a> and <a href="#AdvPLIC-ex-3Domains">Figure 5</a>, control
 of the APLIC&#8217;s supervisor-level interrupt domain could not be safely
 split among multiple independent OSes.</p>
 </div>

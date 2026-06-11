@@ -97,6 +97,9 @@
 <loc>https://docs.riscv.org/reference/sitemap-uefi.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://docs.riscv.org/reference/sitemap-under-dev-overview.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://docs.riscv.org/reference/sitemap-vector-c-intrinsics.xml</loc>
 </sitemap>
 </sitemapindex>
