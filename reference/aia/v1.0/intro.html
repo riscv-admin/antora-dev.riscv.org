@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: RISC-V Ratified Specifications Library</title>
-    <link rel="canonical" href="https://docs.riscv.org/reference/aia/v500.0/intro.html">
+    <link rel="canonical" href="https://docs.riscv.org/reference/aia/v1.0/intro.html">
     <link rel="prev" href="copyright.html">
     <link rel="next" href="CSRs.html">
     <meta name="generator" content="Antora 3.1.15">
@@ -119,13 +119,6 @@
         <div class="nav-trees" data-component="aia">
           <div class="version-box">
             <select data-component="aia" class="select-version">
-                <option
-                  value="../v500.0/index.html"
-                  data-version="v500.0"
-                  
-                  >
-                  v500.0
-                </option>
                 <option
                   value="index.html"
                   data-version="v1.0"
@@ -462,20 +455,6 @@
                 </ul>
   </nav>
 </div>
-<div class="admonitionblock important latest">
-  <table>
-    <tbody><tr>
-      <td class="icon">
-        <i class="fa icon-important" title="Important"></i>
-      </td>
-      <td class="content">
-        <div class="paragraph">
-          <p> For the latest stable version, please use <a href="../v500.0/intro.html">Advanced Interrupt Architecture v500.0</a>!</p>
-        </div>
-      </td>
-    </tr></tbody>
-  </table>
-</div>
 <div class="sect1">
 <h2 id="ch:intro"><a class="anchor" href="#ch:intro"></a>1.1. Introduction</h2>
 <div class="sectionbody">
@@ -787,11 +766,11 @@ available for platform standards or for custom use. The Advanced
 Interrupt Architecture claims further authority over identity numbers in
 the ranges 16-23 and 32-47, leaving numbers in the range 24-31 and all
 major identities 48 and higher still free for custom use.
-<a href="#interruptIdents">Table 1</a> characterizes all
+<a href="#interruptIdents">Table 2</a> characterizes all
 major interrupt identities with this extension.</p>
 </div>
 <table id="interruptIdents" class="tableblock frame-all grid-all fit-content center">
-<caption class="title">Table 1. Major and minor identities for all interrupt causes at a hart. Major identities 0-15 are the purview of the base Privileged Architecture.</caption>
+<caption class="title">Table 2. Major and minor identities for all interrupt causes at a hart. Major identities 0-15 are the purview of the base Privileged Architecture.</caption>
 <colgroup>
 <col>
 <col>
@@ -903,7 +882,7 @@ High-priority RAS event interrupt<br>
 interrupt controller</em> for the hart, which is either the hart&#8217;s IMSIC
 (<a href="#intrsWithIMSICs">Figure 2</a>) or an APLIC
 (<a href="#intrsWithoutIMSICs">Figure 1</a>). As
-<a href="#interruptIdents">Table 1</a> shows, external
+<a href="#interruptIdents">Table 2</a> shows, external
 interrupts at a given privilege level all share a single major identity
 number: 11 for machine level, 9 for supervisor level, and 10 for
 VS-level. External interrupts from different causes are distinguished
