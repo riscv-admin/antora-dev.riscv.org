@@ -462,28 +462,28 @@
                 </ul>
   </nav>
 </div>
-<div class="sect3">
-<h4 id="vector-mask-intrinsics"><a class="anchor" href="#vector-mask-intrinsics"></a>Vector Mask Intrinsics</h4>
 <div class="sect4">
-<h5 id="policy-variant-overloadedvector-mask-register-logical"><a class="anchor" href="#policy-variant-overloadedvector-mask-register-logical"></a>Vector Mask-Register Logical</h5>
+<h5 id="vector-mask-intrinsics"><a class="anchor" href="#vector-mask-intrinsics"></a>Vector Mask Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvector-mask-register-logical"><a class="anchor" href="#policy-variant-overloadedvector-mask-register-logical"></a>Vector Mask-Register Logical</h6>
 <div class="paragraph">
 <p>Intrinsics here don&#8217;t have a policy variant.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-overloadedvector-count-population-in-mask-vcpopm"><a class="anchor" href="#policy-variant-overloadedvector-count-population-in-mask-vcpopm"></a>Vector count population in mask <code>vcpop.m</code></h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvector-count-population-in-mask-vcpopm"><a class="anchor" href="#policy-variant-overloadedvector-count-population-in-mask-vcpopm"></a>Vector count population in mask <code>vcpop.m</code></h6>
 <div class="paragraph">
 <p>Intrinsics here don&#8217;t have a policy variant.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-overloadedvfirst-find-first-set-mask-bit"><a class="anchor" href="#policy-variant-overloadedvfirst-find-first-set-mask-bit"></a><code>vfirst</code> find-first-set mask bit</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvfirst-find-first-set-mask-bit"><a class="anchor" href="#policy-variant-overloadedvfirst-find-first-set-mask-bit"></a><code>vfirst</code> find-first-set mask bit</h6>
 <div class="paragraph">
 <p>Intrinsics here don&#8217;t have a policy variant.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-overloadedvmsbfm-set-before-first-mask-bit"><a class="anchor" href="#policy-variant-overloadedvmsbfm-set-before-first-mask-bit"></a><code>vmsbf.m</code> set-before-first mask bit</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvmsbfm-set-before-first-mask-bit"><a class="anchor" href="#policy-variant-overloadedvmsbfm-set-before-first-mask-bit"></a><code>vmsbf.m</code> set-before-first mask bit</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">// masked functions
@@ -497,8 +497,8 @@ vbool64_t __riscv_vmsbf_mu (vbool64_t vm, vbool64_t vd, vbool64_t vs2, size_t vl
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-overloadedvmsifm-set-including-first-mask-bit"><a class="anchor" href="#policy-variant-overloadedvmsifm-set-including-first-mask-bit"></a><code>vmsif.m</code> set-including-first mask bit</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvmsifm-set-including-first-mask-bit"><a class="anchor" href="#policy-variant-overloadedvmsifm-set-including-first-mask-bit"></a><code>vmsif.m</code> set-including-first mask bit</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">// masked functions
@@ -512,8 +512,8 @@ vbool64_t __riscv_vmsif_mu (vbool64_t vm, vbool64_t vd, vbool64_t vs2, size_t vl
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-overloadedvmsofm-set-only-first-mask-bit"><a class="anchor" href="#policy-variant-overloadedvmsofm-set-only-first-mask-bit"></a><code>vmsof.m</code> set-only-first mask bit</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvmsofm-set-only-first-mask-bit"><a class="anchor" href="#policy-variant-overloadedvmsofm-set-only-first-mask-bit"></a><code>vmsof.m</code> set-only-first mask bit</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">// masked functions
@@ -527,8 +527,8 @@ vbool64_t __riscv_vmsof_mu (vbool64_t vm, vbool64_t vd, vbool64_t vs2, size_t vl
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-overloadedvector-iota"><a class="anchor" href="#policy-variant-overloadedvector-iota"></a>Vector Iota Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvector-iota"><a class="anchor" href="#policy-variant-overloadedvector-iota"></a>Vector Iota Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vuint8mf8_t __riscv_viota_tu (vuint8mf8_t vd, vbool64_t vs2, size_t vl);
@@ -625,8 +625,8 @@ vuint64m8_t __riscv_viota_mu (vbool8_t vm, vuint64m8_t vd, vbool8_t vs2, size_t 
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-overloadedvector-element-index"><a class="anchor" href="#policy-variant-overloadedvector-element-index"></a>Vector Element Index Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvector-element-index"><a class="anchor" href="#policy-variant-overloadedvector-element-index"></a>Vector Element Index Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vuint8mf8_t __riscv_vid_tu (vuint8mf8_t vd, size_t vl);

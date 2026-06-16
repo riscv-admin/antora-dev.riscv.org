@@ -462,22 +462,22 @@
                 </ul>
   </nav>
 </div>
-<div class="sect3">
-<h4 id="miscellaneous-vector-utility-intrinsics"><a class="anchor" href="#miscellaneous-vector-utility-intrinsics"></a>Miscellaneous Vector Utility Intrinsics</h4>
 <div class="sect4">
-<h5 id="overloaded-set-vl-and-vtype"><a class="anchor" href="#overloaded-set-vl-and-vtype"></a>Get <code>vl</code> with specific vtype</h5>
+<h5 id="miscellaneous-vector-utility-intrinsics"><a class="anchor" href="#miscellaneous-vector-utility-intrinsics"></a>Miscellaneous Vector Utility Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-set-vl-and-vtype"><a class="anchor" href="#overloaded-set-vl-and-vtype"></a>Get <code>vl</code> with specific vtype</h6>
 <div class="paragraph">
 <p>Intrinsics here don&#8217;t have an overloaded variant.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-set-vl-to-vlmax-with-specific-vtype"><a class="anchor" href="#overloaded-set-vl-to-vlmax-with-specific-vtype"></a>Get <code>VLMAX</code> with specific vtype</h5>
+<div class="sect5">
+<h6 id="overloaded-set-vl-to-vlmax-with-specific-vtype"><a class="anchor" href="#overloaded-set-vl-to-vlmax-with-specific-vtype"></a>Get <code>VLMAX</code> with specific vtype</h6>
 <div class="paragraph">
 <p>Intrinsics here don&#8217;t have an overloaded variant.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-reinterpret-cast-conversion"><a class="anchor" href="#overloaded-reinterpret-cast-conversion"></a>Reinterpret Cast Conversion Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-reinterpret-cast-conversion"><a class="anchor" href="#overloaded-reinterpret-cast-conversion"></a>Reinterpret Cast Conversion Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">// Reinterpret between different type under the same SEW/LMUL
@@ -790,8 +790,8 @@ vuint64m1_t __riscv_vreinterpret_u64m1 (vbool8_t src);</code></pre>
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-lmul-extensionn"><a class="anchor" href="#overloaded-vector-lmul-extensionn"></a>Vector LMUL Extension Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-lmul-extensionn"><a class="anchor" href="#overloaded-vector-lmul-extensionn"></a>Vector LMUL Extension Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf2_t __riscv_vlmul_ext_f16mf2 (vfloat16mf4_t value);
@@ -932,8 +932,8 @@ vuint64m8_t __riscv_vlmul_ext_u64m8 (vuint64m4_t value);</code></pre>
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-lmul-truncation"><a class="anchor" href="#overloaded-vector-lmul-truncation"></a>Vector LMUL Truncation Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-lmul-truncation"><a class="anchor" href="#overloaded-vector-lmul-truncation"></a>Vector LMUL Truncation Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vlmul_trunc_f16mf4 (vfloat16mf2_t value);
@@ -1074,14 +1074,14 @@ vuint64m4_t __riscv_vlmul_trunc_u64m4 (vuint64m8_t value);</code></pre>
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-initialization"><a class="anchor" href="#overloaded-vector-initialization"></a>Vector Initialization Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-initialization"><a class="anchor" href="#overloaded-vector-initialization"></a>Vector Initialization Intrinsics</h6>
 <div class="paragraph">
 <p>Intrinsics here don&#8217;t have an overloaded variant.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-insertion"><a class="anchor" href="#overloaded-vector-insertion"></a>Vector Insertion Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-insertion"><a class="anchor" href="#overloaded-vector-insertion"></a>Vector Insertion Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16m2_t __riscv_vset (vfloat16m2_t dest, size_t index, vfloat16m1_t value);
@@ -1379,8 +1379,8 @@ vuint64m4x2_t __riscv_vset (vuint64m4x2_t dest, size_t index, vuint64m4_t value)
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-extraction"><a class="anchor" href="#overloaded-vector-extraction"></a>Vector Extraction Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-extraction"><a class="anchor" href="#overloaded-vector-extraction"></a>Vector Extraction Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16m1_t __riscv_vget_f16m1 (vfloat16m2_t src, size_t index);
@@ -1678,8 +1678,8 @@ vuint64m4_t __riscv_vget_u64m4 (vuint64m4x2_t src, size_t index);</code></pre>
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-creation"><a class="anchor" href="#overloaded-vector-creation"></a>Vector Creation Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-creation"><a class="anchor" href="#overloaded-vector-creation"></a>Vector Creation Intrinsics</h6>
 <div class="paragraph">
 <p>Intrinsics here don&#8217;t have an overloaded variant.</p>
 </div>

@@ -462,10 +462,10 @@
                 </ul>
   </nav>
 </div>
-<div class="sect3">
-<h4 id="vector-mask-intrinsics"><a class="anchor" href="#vector-mask-intrinsics"></a>Vector Mask Intrinsics</h4>
 <div class="sect4">
-<h5 id="overloaded-vector-mask-register-logical"><a class="anchor" href="#overloaded-vector-mask-register-logical"></a>Vector Mask-Register Logical</h5>
+<h5 id="vector-mask-intrinsics"><a class="anchor" href="#vector-mask-intrinsics"></a>Vector Mask Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-mask-register-logical"><a class="anchor" href="#overloaded-vector-mask-register-logical"></a>Vector Mask-Register Logical</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vbool1_t __riscv_vmand (vbool1_t vs2, vbool1_t vs1, size_t vl);
@@ -541,8 +541,8 @@ vbool64_t __riscv_vmnot (vbool64_t vs, size_t vl);</code></pre>
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-count-population-in-mask-vcpopm"><a class="anchor" href="#overloaded-vector-count-population-in-mask-vcpopm"></a>Vector count population in mask <code>vcpop.m</code></h5>
+<div class="sect5">
+<h6 id="overloaded-vector-count-population-in-mask-vcpopm"><a class="anchor" href="#overloaded-vector-count-population-in-mask-vcpopm"></a>Vector count population in mask <code>vcpop.m</code></h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">unsigned long __riscv_vcpop (vbool1_t vs2, size_t vl);
@@ -563,8 +563,8 @@ unsigned long __riscv_vcpop (vbool64_t vm, vbool64_t vs2, size_t vl);</code></pr
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vfirst-find-first-set-mask-bit"><a class="anchor" href="#overloaded-vfirst-find-first-set-mask-bit"></a><code>vfirst</code> find-first-set mask bit</h5>
+<div class="sect5">
+<h6 id="overloaded-vfirst-find-first-set-mask-bit"><a class="anchor" href="#overloaded-vfirst-find-first-set-mask-bit"></a><code>vfirst</code> find-first-set mask bit</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">long __riscv_vfirst (vbool1_t vs2, size_t vl);
@@ -585,8 +585,8 @@ long __riscv_vfirst (vbool64_t vm, vbool64_t vs2, size_t vl);</code></pre>
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vmsbfm-set-before-first-mask-bit"><a class="anchor" href="#overloaded-vmsbfm-set-before-first-mask-bit"></a><code>vmsbf.m</code> set-before-first mask bit</h5>
+<div class="sect5">
+<h6 id="overloaded-vmsbfm-set-before-first-mask-bit"><a class="anchor" href="#overloaded-vmsbfm-set-before-first-mask-bit"></a><code>vmsbf.m</code> set-before-first mask bit</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vbool1_t __riscv_vmsbf (vbool1_t vs2, size_t vl);
@@ -607,8 +607,8 @@ vbool64_t __riscv_vmsbf (vbool64_t vm, vbool64_t vs2, size_t vl);</code></pre>
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vmsifm-set-including-first-mask-bit"><a class="anchor" href="#overloaded-vmsifm-set-including-first-mask-bit"></a><code>vmsif.m</code> set-including-first mask bit</h5>
+<div class="sect5">
+<h6 id="overloaded-vmsifm-set-including-first-mask-bit"><a class="anchor" href="#overloaded-vmsifm-set-including-first-mask-bit"></a><code>vmsif.m</code> set-including-first mask bit</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vbool1_t __riscv_vmsif (vbool1_t vs2, size_t vl);
@@ -629,8 +629,8 @@ vbool64_t __riscv_vmsif (vbool64_t vm, vbool64_t vs2, size_t vl);</code></pre>
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vmsofm-set-only-first-mask-bit"><a class="anchor" href="#overloaded-vmsofm-set-only-first-mask-bit"></a><code>vmsof.m</code> set-only-first mask bit</h5>
+<div class="sect5">
+<h6 id="overloaded-vmsofm-set-only-first-mask-bit"><a class="anchor" href="#overloaded-vmsofm-set-only-first-mask-bit"></a><code>vmsof.m</code> set-only-first mask bit</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vbool1_t __riscv_vmsof (vbool1_t vs2, size_t vl);
@@ -651,16 +651,16 @@ vbool64_t __riscv_vmsof (vbool64_t vm, vbool64_t vs2, size_t vl);</code></pre>
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-iota"><a class="anchor" href="#overloaded-vector-iota"></a>Vector Iota Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-iota"><a class="anchor" href="#overloaded-vector-iota"></a>Vector Iota Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">// masked functions</code></pre>
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-element-index"><a class="anchor" href="#overloaded-vector-element-index"></a>Vector Element Index Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-element-index"><a class="anchor" href="#overloaded-vector-element-index"></a>Vector Element Index Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">// masked functions</code></pre>

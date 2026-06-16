@@ -462,10 +462,10 @@
                 </ul>
   </nav>
 </div>
-<div class="sect3">
-<h4 id="vector-integer-arithmetic-intrinsics"><a class="anchor" href="#vector-integer-arithmetic-intrinsics"></a>Vector Integer Arithmetic Intrinsics</h4>
 <div class="sect4">
-<h5 id="vector-single-width-integer-add-and-subtract"><a class="anchor" href="#vector-single-width-integer-add-and-subtract"></a>Vector Single-Width Integer Add and Subtract Intrinsics</h5>
+<h5 id="vector-integer-arithmetic-intrinsics"><a class="anchor" href="#vector-integer-arithmetic-intrinsics"></a>Vector Integer Arithmetic Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-single-width-integer-add-and-subtract"><a class="anchor" href="#vector-single-width-integer-add-and-subtract"></a>Vector Single-Width Integer Add and Subtract Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vadd_vv_i8mf8 (vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
@@ -956,8 +956,8 @@ vuint64m8_t __riscv_vrsub_vx_u64m8_m (vbool8_t vm, vuint64m8_t vs2, uint64_t rs1
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-widening-integer-add-subtract"><a class="anchor" href="#vector-widening-integer-add-subtract"></a>Vector Widening Integer Add/Subtract Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-widening-integer-add-subtract"><a class="anchor" href="#vector-widening-integer-add-subtract"></a>Vector Widening Integer Add/Subtract Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint16mf4_t __riscv_vwadd_vv_i16mf4 (vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
@@ -1444,8 +1444,8 @@ vuint64m8_t __riscv_vwsubu_wx_u64m8_m (vbool8_t vm, vuint64m8_t vs2, uint32_t rs
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-integer-widening"><a class="anchor" href="#vector-integer-widening"></a>Vector Integer Widening Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-integer-widening"><a class="anchor" href="#vector-integer-widening"></a>Vector Integer Widening Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint16mf4_t __riscv_vwcvt_x_x_v_i16mf4 (vint8mf8_t vs2, size_t vl);
@@ -1512,8 +1512,8 @@ vuint64m8_t __riscv_vwcvtu_x_x_v_u64m8_m (vbool8_t vm, vuint32m4_t vs2, size_t v
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-integer-extension"><a class="anchor" href="#vector-integer-extension"></a>Vector Integer Extension Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-integer-extension"><a class="anchor" href="#vector-integer-extension"></a>Vector Integer Extension Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint16mf4_t __riscv_vsext_vf2_i16mf4 (vint8mf8_t vs2, size_t vl);
@@ -1632,8 +1632,8 @@ vuint64m8_t __riscv_vzext_vf2_u64m8_m (vbool8_t vm, vuint32m4_t vs2, size_t vl);
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-integer-add-with-carry-subtract-with-borrow"><a class="anchor" href="#vector-integer-add-with-carry-subtract-with-borrow"></a>Vector Integer Add-with-Carry / Subtract-with-Borrow Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-integer-add-with-carry-subtract-with-borrow"><a class="anchor" href="#vector-integer-add-with-carry-subtract-with-borrow"></a>Vector Integer Add-with-Carry / Subtract-with-Borrow Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vadc_vvm_i8mf8 (vint8mf8_t vs2, vint8mf8_t vs1, vbool64_t v0, size_t vl);
@@ -2167,8 +2167,8 @@ vbool8_t __riscv_vmsbc_vx_u64m8_b8 (vuint64m8_t vs2, uint64_t rs1, size_t vl);</
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-bitwise-binary-logical"><a class="anchor" href="#vector-bitwise-binary-logical"></a>Vector Bitwise Binary Logical Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-bitwise-binary-logical"><a class="anchor" href="#vector-bitwise-binary-logical"></a>Vector Bitwise Binary Logical Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vand_vv_i8mf8 (vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
@@ -2703,8 +2703,8 @@ vuint64m8_t __riscv_vxor_vx_u64m8_m (vbool8_t vm, vuint64m8_t vs2, uint64_t rs1,
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-bitwise-unary-logical"><a class="anchor" href="#vector-bitwise-unary-logical"></a>Vector Bitwise Unary Logical Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-bitwise-unary-logical"><a class="anchor" href="#vector-bitwise-unary-logical"></a>Vector Bitwise Unary Logical Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vnot_v_i8mf8 (vint8mf8_t vs, size_t vl);
@@ -2799,8 +2799,8 @@ vuint64m8_t __riscv_vnot_v_u64m8_m (vbool8_t vm, vuint64m8_t vs, size_t vl);</co
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-single-width-bit-shift"><a class="anchor" href="#vector-single-width-bit-shift"></a>Vector Single-Width Bit Shift Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-single-width-bit-shift"><a class="anchor" href="#vector-single-width-bit-shift"></a>Vector Single-Width Bit Shift Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vsll_vv_i8mf8 (vint8mf8_t vs2, vuint8mf8_t vs1, size_t vl);
@@ -3159,8 +3159,8 @@ vuint64m8_t __riscv_vsrl_vx_u64m8_m (vbool8_t vm, vuint64m8_t vs2, size_t rs1, s
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-narrowing-integer-right-shift"><a class="anchor" href="#vector-narrowing-integer-right-shift"></a>Vector Narrowing Integer Right Shift Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-narrowing-integer-right-shift"><a class="anchor" href="#vector-narrowing-integer-right-shift"></a>Vector Narrowing Integer Right Shift Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vnsra_wv_i8mf8 (vint16mf4_t vs2, vuint8mf8_t vs1, size_t vl);
@@ -3287,8 +3287,8 @@ vuint32m4_t __riscv_vnsrl_wx_u32m4_m (vbool8_t vm, vuint64m8_t vs2, size_t rs1, 
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-integer-narrowing"><a class="anchor" href="#vector-integer-narrowing"></a>Vector Integer Narrowing Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-integer-narrowing"><a class="anchor" href="#vector-integer-narrowing"></a>Vector Integer Narrowing Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vncvt_x_x_w_i8mf8 (vint16mf4_t vs2, size_t vl);
@@ -3355,8 +3355,8 @@ vuint32m4_t __riscv_vncvt_x_x_w_u32m4_m (vbool8_t vm, vuint64m8_t vs2, size_t vl
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-integer-comparison"><a class="anchor" href="#vector-integer-comparison"></a>Vector Integer Compare Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-integer-comparison"><a class="anchor" href="#vector-integer-comparison"></a>Vector Integer Compare Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vbool64_t __riscv_vmseq_vv_i8mf8_b64 (vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
@@ -4419,8 +4419,8 @@ vbool8_t __riscv_vmsgeu_vx_u64m8_b8_m (vbool8_t vm, vuint64m8_t vs2, uint64_t rs
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-integer-minmax"><a class="anchor" href="#vector-integer-minmax"></a>Vector Integer Min/Max Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-integer-minmax"><a class="anchor" href="#vector-integer-minmax"></a>Vector Integer Min/Max Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vmin_vv_i8mf8 (vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
@@ -4779,8 +4779,8 @@ vuint64m8_t __riscv_vmaxu_vx_u64m8_m (vbool8_t vm, vuint64m8_t vs2, uint64_t rs1
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-single-width-integer-multiply"><a class="anchor" href="#vector-single-width-integer-multiply"></a>Vector Single-Width Integer Multiply Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-single-width-integer-multiply"><a class="anchor" href="#vector-single-width-integer-multiply"></a>Vector Single-Width Integer Multiply Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vmul_vv_i8mf8 (vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
@@ -5227,8 +5227,8 @@ vuint64m8_t __riscv_vmulhu_vx_u64m8_m (vbool8_t vm, vuint64m8_t vs2, uint64_t rs
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-integer-divide"><a class="anchor" href="#vector-integer-divide"></a>Vector Integer Divide Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-integer-divide"><a class="anchor" href="#vector-integer-divide"></a>Vector Integer Divide Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vdiv_vv_i8mf8 (vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
@@ -5587,8 +5587,8 @@ vuint64m8_t __riscv_vremu_vx_u64m8_m (vbool8_t vm, vuint64m8_t vs2, uint64_t rs1
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-widening-integer-multiply"><a class="anchor" href="#vector-widening-integer-multiply"></a>Vector Widening Integer Multiply Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-widening-integer-multiply"><a class="anchor" href="#vector-widening-integer-multiply"></a>Vector Widening Integer Multiply Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint16mf4_t __riscv_vwmul_vv_i16mf4 (vint8mf8_t vs2, vint8mf8_t vs1, size_t vl);
@@ -5775,8 +5775,8 @@ vuint64m8_t __riscv_vwmulu_vx_u64m8_m (vbool8_t vm, vuint32m4_t vs2, uint32_t rs
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-single-width-integer-multiply-add"><a class="anchor" href="#vector-single-width-integer-multiply-add"></a>Vector Single-Width Integer Multiply-Add Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-single-width-integer-multiply-add"><a class="anchor" href="#vector-single-width-integer-multiply-add"></a>Vector Single-Width Integer Multiply-Add Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vmacc_vv_i8mf8 (vint8mf8_t vd, vint8mf8_t vs1, vint8mf8_t vs2, size_t vl);
@@ -6487,8 +6487,8 @@ vuint64m8_t __riscv_vnmsub_vx_u64m8_m (vbool8_t vm, vuint64m8_t vd, uint64_t rs1
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-widening-integer-multiply-add"><a class="anchor" href="#vector-widening-integer-multiply-add"></a>Vector Widening Integer Multiply-Add Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-widening-integer-multiply-add"><a class="anchor" href="#vector-widening-integer-multiply-add"></a>Vector Widening Integer Multiply-Add Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint16mf4_t __riscv_vwmacc_vv_i16mf4 (vint16mf4_t vd, vint8mf8_t vs1, vint8mf8_t vs2, size_t vl);
@@ -6705,8 +6705,8 @@ vuint64m8_t __riscv_vwmaccu_vx_u64m8_m (vbool8_t vm, vuint64m8_t vd, uint32_t rs
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-integer-merge"><a class="anchor" href="#vector-integer-merge"></a>Vector Integer Merge Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-integer-merge"><a class="anchor" href="#vector-integer-merge"></a>Vector Integer Merge Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vmerge_vvm_i8mf8 (vint8mf8_t vs2, vint8mf8_t vs1, vbool64_t v0, size_t vl);
@@ -6800,8 +6800,8 @@ vuint64m8_t __riscv_vmerge_vxm_u64m8 (vuint64m8_t vs2, uint64_t rs1, vbool8_t v0
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="vector-integer-move"><a class="anchor" href="#vector-integer-move"></a>Vector Integer Move Intrinsics</h5>
+<div class="sect5">
+<h6 id="vector-integer-move"><a class="anchor" href="#vector-integer-move"></a>Vector Integer Move Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8mf8_t __riscv_vmv_v_v_i8mf8 (vint8mf8_t vs1, size_t vl);

@@ -462,10 +462,10 @@
                 </ul>
   </nav>
 </div>
-<div class="sect3">
-<h4 id="vector-loads-and-stores-intrinsics"><a class="anchor" href="#vector-loads-and-stores-intrinsics"></a>Vector Loads and Stores Intrinsics</h4>
 <div class="sect4">
-<h5 id="overloaded-vector-unit-stride-load"><a class="anchor" href="#overloaded-vector-unit-stride-load"></a>Vector Unit-Stride Load Intrinsics</h5>
+<h5 id="vector-loads-and-stores-intrinsics"><a class="anchor" href="#vector-loads-and-stores-intrinsics"></a>Vector Loads and Stores Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-unit-stride-load"><a class="anchor" href="#overloaded-vector-unit-stride-load"></a>Vector Unit-Stride Load Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">// masked functions
@@ -531,8 +531,8 @@ vuint64m8_t __riscv_vle64 (vbool8_t vm, const uint64_t *rs1, size_t vl);</code><
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-unit-stride-store"><a class="anchor" href="#overloaded-vector-unit-stride-store"></a>Vector Unit-Stride Store Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-unit-stride-store"><a class="anchor" href="#overloaded-vector-unit-stride-store"></a>Vector Unit-Stride Store Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void __riscv_vse16 (_Float16 *rs1, vfloat16mf4_t vs3, size_t vl);
@@ -657,8 +657,8 @@ void __riscv_vse64 (vbool8_t vm, uint64_t *rs1, vuint64m8_t vs3, size_t vl);</co
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-unit-stride"><a class="anchor" href="#overloaded-vector-unit-stride"></a>Vector Mask Load/Store Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-unit-stride"><a class="anchor" href="#overloaded-vector-unit-stride"></a>Vector Mask Load/Store Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void __riscv_vsm (uint8_t *rs1, vbool1_t vs3, size_t vl);
@@ -671,8 +671,8 @@ void __riscv_vsm (uint8_t *rs1, vbool64_t vs3, size_t vl);</code></pre>
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-strided-load"><a class="anchor" href="#overloaded-vector-strided-load"></a>Vector Strided Load Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-strided-load"><a class="anchor" href="#overloaded-vector-strided-load"></a>Vector Strided Load Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">// masked functions
@@ -738,8 +738,8 @@ vuint64m8_t __riscv_vlse64 (vbool8_t vm, const uint64_t *rs1, ptrdiff_t rs2, siz
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-strided-store"><a class="anchor" href="#overloaded-vector-strided-store"></a>Vector Strided Store Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-strided-store"><a class="anchor" href="#overloaded-vector-strided-store"></a>Vector Strided Store Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void __riscv_vsse16 (_Float16 *rs1, ptrdiff_t rs2, vfloat16mf4_t vs3, size_t vl);
@@ -864,8 +864,8 @@ void __riscv_vsse64 (vbool8_t vm, uint64_t *rs1, ptrdiff_t rs2, vuint64m8_t vs3,
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-indexed-load"><a class="anchor" href="#overloaded-vector-indexed-load"></a>Vector Indexed Load Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-indexed-load"><a class="anchor" href="#overloaded-vector-indexed-load"></a>Vector Indexed Load Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vloxei8 (const _Float16 *rs1, vuint8mf8_t rs2, size_t vl);
@@ -1720,8 +1720,8 @@ vuint64m8_t __riscv_vluxei64 (vbool8_t vm, const uint64_t *rs1, vuint64m8_t rs2,
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-indexed-store"><a class="anchor" href="#overloaded-vector-indexed-store"></a>Vector Indexed Store Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-indexed-store"><a class="anchor" href="#overloaded-vector-indexed-store"></a>Vector Indexed Store Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">void __riscv_vsoxei8 (_Float16 *rs1, vuint8mf8_t rs2, vfloat16mf4_t vs3, size_t vl);
@@ -2576,8 +2576,8 @@ void __riscv_vsuxei64 (vbool8_t vm, uint64_t *rs1, vuint64m8_t rs2, vuint64m8_t 
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-unit-stride-fault-only-first-loads"><a class="anchor" href="#overloaded-unit-stride-fault-only-first-loads"></a>Unit-stride Fault-Only-First Loads Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-unit-stride-fault-only-first-loads"><a class="anchor" href="#overloaded-unit-stride-fault-only-first-loads"></a>Unit-stride Fault-Only-First Loads Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">// masked functions

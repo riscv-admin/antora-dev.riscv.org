@@ -462,10 +462,10 @@
                 </ul>
   </nav>
 </div>
-<div class="sect3">
-<h4 id="vector-reduction-operations"><a class="anchor" href="#vector-reduction-operations"></a>Vector Reduction Operations</h4>
 <div class="sect4">
-<h5 id="policy-variant-vector-single-width-integer-reduction"><a class="anchor" href="#policy-variant-vector-single-width-integer-reduction"></a>Vector Single-Width Integer Reduction Intrinsics</h5>
+<h5 id="vector-reduction-operations"><a class="anchor" href="#vector-reduction-operations"></a>Vector Reduction Operations</h5>
+<div class="sect5">
+<h6 id="policy-variant-vector-single-width-integer-reduction"><a class="anchor" href="#policy-variant-vector-single-width-integer-reduction"></a>Vector Single-Width Integer Reduction Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint8m1_t __riscv_vredsum_vs_i8mf8_i8m1_tu (vint8m1_t vd, vint8mf8_t vs2, vint8m1_t vs1, size_t vl);
@@ -1000,8 +1000,8 @@ vuint64m1_t __riscv_vredxor_vs_u64m8_u64m1_tum (vbool8_t vm, vuint64m1_t vd, vui
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-vector-widening-integer-reduction"><a class="anchor" href="#policy-variant-vector-widening-integer-reduction"></a>Vector Widening Integer Reduction Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-vector-widening-integer-reduction"><a class="anchor" href="#policy-variant-vector-widening-integer-reduction"></a>Vector Widening Integer Reduction Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vint16m1_t __riscv_vwredsum_vs_i8mf8_i16m1_tu (vint16m1_t vd, vint8mf8_t vs2, vint16m1_t vs1, size_t vl);
@@ -1080,8 +1080,8 @@ vuint64m1_t __riscv_vwredsumu_vs_u32m8_u64m1_tum (vbool4_t vm, vuint64m1_t vd, v
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-vector-single-width-floating-point-reduction"><a class="anchor" href="#policy-variant-vector-single-width-floating-point-reduction"></a>Vector Single-Width Floating-Point Reduction Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-vector-single-width-floating-point-reduction"><a class="anchor" href="#policy-variant-vector-single-width-floating-point-reduction"></a>Vector Single-Width Floating-Point Reduction Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16m1_t __riscv_vfredosum_vs_f16mf4_f16m1_tu (vfloat16m1_t vd, vfloat16mf4_t vs2, vfloat16m1_t vs1, size_t vl);
@@ -1269,8 +1269,8 @@ vfloat64m1_t __riscv_vfredusum_vs_f64m8_f64m1_rm_tum (vbool8_t vm, vfloat64m1_t 
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-vector-widening-floating-point-reduction"><a class="anchor" href="#policy-variant-vector-widening-floating-point-reduction"></a>Vector Widening Floating-Point Reduction Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-vector-widening-floating-point-reduction"><a class="anchor" href="#policy-variant-vector-widening-floating-point-reduction"></a>Vector Widening Floating-Point Reduction Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat32m1_t __riscv_vfwredosum_vs_f16mf4_f32m1_tu (vfloat32m1_t vd, vfloat16mf4_t vs2, vfloat32m1_t vs1, size_t vl);

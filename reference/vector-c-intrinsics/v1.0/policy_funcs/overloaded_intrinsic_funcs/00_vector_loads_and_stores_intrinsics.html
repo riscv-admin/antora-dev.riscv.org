@@ -462,10 +462,10 @@
                 </ul>
   </nav>
 </div>
-<div class="sect3">
-<h4 id="vector-loads-and-stores-intrinsics"><a class="anchor" href="#vector-loads-and-stores-intrinsics"></a>Vector Loads and Stores Intrinsics</h4>
 <div class="sect4">
-<h5 id="policy-variant-overloadedvector-unit-stride-load"><a class="anchor" href="#policy-variant-overloadedvector-unit-stride-load"></a>Vector Unit-Stride Load Intrinsics</h5>
+<h5 id="vector-loads-and-stores-intrinsics"><a class="anchor" href="#vector-loads-and-stores-intrinsics"></a>Vector Loads and Stores Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvector-unit-stride-load"><a class="anchor" href="#policy-variant-overloadedvector-unit-stride-load"></a>Vector Unit-Stride Load Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vle16_tu (vfloat16mf4_t vd, const _Float16 *rs1, size_t vl);
@@ -710,20 +710,20 @@ vuint64m8_t __riscv_vle64_mu (vbool8_t vm, vuint64m8_t vd, const uint64_t *rs1, 
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-overloadedvector-unit-stride-store"><a class="anchor" href="#policy-variant-overloadedvector-unit-stride-store"></a>Vector Unit-Stride Store Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvector-unit-stride-store"><a class="anchor" href="#policy-variant-overloadedvector-unit-stride-store"></a>Vector Unit-Stride Store Intrinsics</h6>
 <div class="paragraph">
 <p>Intrinsics here don&#8217;t have a policy variant.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-overloadedvector-unit-stride"><a class="anchor" href="#policy-variant-overloadedvector-unit-stride"></a>Vector Mask Load/Store Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvector-unit-stride"><a class="anchor" href="#policy-variant-overloadedvector-unit-stride"></a>Vector Mask Load/Store Intrinsics</h6>
 <div class="paragraph">
 <p>Intrinsics here don&#8217;t have a policy variant.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-overloadedvector-strided-load"><a class="anchor" href="#policy-variant-overloadedvector-strided-load"></a>Vector Strided Load Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvector-strided-load"><a class="anchor" href="#policy-variant-overloadedvector-strided-load"></a>Vector Strided Load Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vlse16_tu (vfloat16mf4_t vd, const _Float16 *rs1, ptrdiff_t rs2, size_t vl);
@@ -968,14 +968,14 @@ vuint64m8_t __riscv_vlse64_mu (vbool8_t vm, vuint64m8_t vd, const uint64_t *rs1,
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-overloadedvector-strided-store"><a class="anchor" href="#policy-variant-overloadedvector-strided-store"></a>Vector Strided Store Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvector-strided-store"><a class="anchor" href="#policy-variant-overloadedvector-strided-store"></a>Vector Strided Store Intrinsics</h6>
 <div class="paragraph">
 <p>Intrinsics here don&#8217;t have a policy variant.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-overloadedvector-indexed-load"><a class="anchor" href="#policy-variant-overloadedvector-indexed-load"></a>Vector Indexed Load Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvector-indexed-load"><a class="anchor" href="#policy-variant-overloadedvector-indexed-load"></a>Vector Indexed Load Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vloxei8_tu (vfloat16mf4_t vd, const _Float16 *rs1, vuint8mf8_t rs2, size_t vl);
@@ -2680,14 +2680,14 @@ vuint64m8_t __riscv_vluxei64_mu (vbool8_t vm, vuint64m8_t vd, const uint64_t *rs
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-overloadedvector-indexed-store"><a class="anchor" href="#policy-variant-overloadedvector-indexed-store"></a>Vector Indexed Store Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedvector-indexed-store"><a class="anchor" href="#policy-variant-overloadedvector-indexed-store"></a>Vector Indexed Store Intrinsics</h6>
 <div class="paragraph">
 <p>Intrinsics here don&#8217;t have a policy variant.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-overloadedunit-stride-fault-only-first-loads"><a class="anchor" href="#policy-variant-overloadedunit-stride-fault-only-first-loads"></a>Unit-stride Fault-Only-First Loads Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-overloadedunit-stride-fault-only-first-loads"><a class="anchor" href="#policy-variant-overloadedunit-stride-fault-only-first-loads"></a>Unit-stride Fault-Only-First Loads Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vle16ff_tu (vfloat16mf4_t vd, const _Float16 *rs1, size_t *new_vl, size_t vl);

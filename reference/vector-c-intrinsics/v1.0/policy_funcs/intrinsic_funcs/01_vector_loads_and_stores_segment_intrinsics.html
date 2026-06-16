@@ -462,10 +462,10 @@
                 </ul>
   </nav>
 </div>
-<div class="sect3">
-<h4 id="vector-loads-and-stores-segment-intrinsics"><a class="anchor" href="#vector-loads-and-stores-segment-intrinsics"></a>Vector Loads and Stores Segment Intrinsics</h4>
 <div class="sect4">
-<h5 id="policy-variant-vector-unit-stride-segment-load"><a class="anchor" href="#policy-variant-vector-unit-stride-segment-load"></a>Vector Unit-Stride Segment Load Intrinsics</h5>
+<h5 id="vector-loads-and-stores-segment-intrinsics"><a class="anchor" href="#vector-loads-and-stores-segment-intrinsics"></a>Vector Loads and Stores Segment Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-vector-unit-stride-segment-load"><a class="anchor" href="#policy-variant-vector-unit-stride-segment-load"></a>Vector Unit-Stride Segment Load Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4x2_t __riscv_vlseg2e16_v_f16mf4x2_tu (vfloat16mf4x2_t vd, const _Float16 *rs1, size_t vl);
@@ -2282,14 +2282,14 @@ vuint64m4x2_t __riscv_vlseg2e64ff_v_u64m4x2_mu (vbool16_t vm, vuint64m4x2_t vd, 
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-vecrtor-unit-stride-segment-store"><a class="anchor" href="#policy-variant-vecrtor-unit-stride-segment-store"></a>Vector Unit-Stride Segment Store Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-vecrtor-unit-stride-segment-store"><a class="anchor" href="#policy-variant-vecrtor-unit-stride-segment-store"></a>Vector Unit-Stride Segment Store Intrinsics</h6>
 <div class="paragraph">
 <p>Intrinsics here don&#8217;t have a policy variant.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-vector-strided-segment-load"><a class="anchor" href="#policy-variant-vector-strided-segment-load"></a>Vector Strided Segment Load Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-vector-strided-segment-load"><a class="anchor" href="#policy-variant-vector-strided-segment-load"></a>Vector Strided Segment Load Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4x2_t __riscv_vlsseg2e16_v_f16mf4x2_tu (vfloat16mf4x2_t vd, const _Float16 *rs1, ptrdiff_t rs2, size_t vl);
@@ -3202,14 +3202,14 @@ vuint64m4x2_t __riscv_vlsseg2e64_v_u64m4x2_mu (vbool16_t vm, vuint64m4x2_t vd, c
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-vector-strided-segment-store"><a class="anchor" href="#policy-variant-vector-strided-segment-store"></a>Vector Strided Segment Store Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-vector-strided-segment-store"><a class="anchor" href="#policy-variant-vector-strided-segment-store"></a>Vector Strided Segment Store Intrinsics</h6>
 <div class="paragraph">
 <p>Intrinsics here don&#8217;t have a policy variant.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-vector-indexed-segment-load"><a class="anchor" href="#policy-variant-vector-indexed-segment-load"></a>Vector Indexed Segment Load Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-vector-indexed-segment-load"><a class="anchor" href="#policy-variant-vector-indexed-segment-load"></a>Vector Indexed Segment Load Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4x2_t __riscv_vloxseg2ei8_v_f16mf4x2_tu (vfloat16mf4x2_t vd, const _Float16 *rs1, vuint8mf8_t rs2, size_t vl);
@@ -10346,8 +10346,8 @@ vuint64m4x2_t __riscv_vluxseg2ei64_v_u64m4x2_mu (vbool16_t vm, vuint64m4x2_t vd,
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="policy-variant-vector-indexed-segment-store"><a class="anchor" href="#policy-variant-vector-indexed-segment-store"></a>Vector Indexed Segment Store Intrinsics</h5>
+<div class="sect5">
+<h6 id="policy-variant-vector-indexed-segment-store"><a class="anchor" href="#policy-variant-vector-indexed-segment-store"></a>Vector Indexed Segment Store Intrinsics</h6>
 <div class="paragraph">
 <p>Intrinsics here don&#8217;t have a policy variant.</p>
 </div>

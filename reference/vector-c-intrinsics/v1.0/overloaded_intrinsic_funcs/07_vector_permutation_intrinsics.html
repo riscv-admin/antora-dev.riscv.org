@@ -462,10 +462,10 @@
                 </ul>
   </nav>
 </div>
-<div class="sect3">
-<h4 id="vector-permutation-intrinsics"><a class="anchor" href="#vector-permutation-intrinsics"></a>Vector Permutation Intrinsics</h4>
 <div class="sect4">
-<h5 id="overloaded-integer-scalar-move"><a class="anchor" href="#overloaded-integer-scalar-move"></a>Integer and Floating-Point Scalar Move Intrinsics</h5>
+<h5 id="vector-permutation-intrinsics"><a class="anchor" href="#vector-permutation-intrinsics"></a>Vector Permutation Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-integer-scalar-move"><a class="anchor" href="#overloaded-integer-scalar-move"></a>Integer and Floating-Point Scalar Move Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">_Float16 __riscv_vfmv_f (vfloat16mf4_t vs1);
@@ -530,8 +530,8 @@ uint64_t __riscv_vmv_x (vuint64m8_t vs1);</code></pre>
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-slideup"><a class="anchor" href="#overloaded-vector-slideup"></a>Vector Slideup Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-slideup"><a class="anchor" href="#overloaded-vector-slideup"></a>Vector Slideup Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vslideup (vfloat16mf4_t vd, vfloat16mf4_t vs2, size_t rs1, size_t vl);
@@ -656,8 +656,8 @@ vuint64m8_t __riscv_vslideup (vbool8_t vm, vuint64m8_t vd, vuint64m8_t vs2, size
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-slidedown"><a class="anchor" href="#overloaded-vector-slidedown"></a>Vector Slidedown Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-slidedown"><a class="anchor" href="#overloaded-vector-slidedown"></a>Vector Slidedown Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vslidedown (vfloat16mf4_t vs2, size_t rs1, size_t vl);
@@ -782,8 +782,8 @@ vuint64m8_t __riscv_vslidedown (vbool8_t vm, vuint64m8_t vs2, size_t rs1, size_t
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-slide1up-and-slide1down"><a class="anchor" href="#overloaded-vector-slide1up-and-slide1down"></a>Vector Slide1up and Slide1down Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-slide1up-and-slide1down"><a class="anchor" href="#overloaded-vector-slide1up-and-slide1down"></a>Vector Slide1up and Slide1down Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vfslide1up (vfloat16mf4_t vs2, _Float16 rs1, size_t vl);
@@ -1026,8 +1026,8 @@ vuint64m8_t __riscv_vslide1down (vbool8_t vm, vuint64m8_t vs2, uint64_t rs1, siz
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-register-gather"><a class="anchor" href="#overloaded-vector-register-gather"></a>Vector Register Gather Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-register-gather"><a class="anchor" href="#overloaded-vector-register-gather"></a>Vector Register Gather Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vrgather (vfloat16mf4_t vs2, vuint16mf4_t vs1, size_t vl);
@@ -1384,8 +1384,8 @@ vuint64m8_t __riscv_vrgatherei16 (vbool8_t vm, vuint64m8_t vs2, vuint16m2_t vs1,
 </div>
 </div>
 </div>
-<div class="sect4">
-<h5 id="overloaded-vector-compress"><a class="anchor" href="#overloaded-vector-compress"></a>Vector Compress Intrinsics</h5>
+<div class="sect5">
+<h6 id="overloaded-vector-compress"><a class="anchor" href="#overloaded-vector-compress"></a>Vector Compress Intrinsics</h6>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-c hljs" data-lang="c">vfloat16mf4_t __riscv_vcompress (vfloat16mf4_t vs2, vbool64_t vs1, size_t vl);
