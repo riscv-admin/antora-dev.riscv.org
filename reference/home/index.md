@@ -1,12 +1,14 @@
-# RISC-V Ratified Specifications Library
+# RISC-V Specifications Library
 
-Welcome to the RISC-V Ratified Specifications Library. This site provides access to all ratified RISC-V specifications.
+Welcome to the RISC-V Specifications Library. This site provides access to all ratified and under development RISC-V specifications.
 
 ## [](#about-riscv)About RISC-V
 
 RISC-V (pronounced "risk-five") is an open standard instruction set architecture (ISA) based on established reduced instruction set computer (RISC) principles. These specifications are maintained by RISC-V International and represent the ratified, stable specifications for the RISC-V ecosystem.
 
 For more information, visit [riscv.org](https://riscv.org).
+
+## [](#risc-v-ratified-specifications-library)RISC-V Ratified Specifications Library
 
 Core Architecture 
 
@@ -357,3 +359,311 @@ Compiler intrinsics for vector extension programming.
 [HTML](../vector-c-intrinsics/index.html)[PDF](../vector-c-intrinsics/%5Fattachments/v-intrinsic-spec.pdf)
 
 [More](https://riscv.atlassian.net/wiki/external/YTMyZTE5NDkyNTM5NDZjMjliYTVmMjBjOTBhZWM4ODY)
+
+## [](#under-development)Under Development
+
+FreezePlanningRatification-readyStabilizationUnder development 
+
+ISANon-ISA 
+
+Fast Track Sort by NameSort by State 
+
+Trigger Delegation
+
+📋 Planning ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv/ft-trigger-delegation) [📄 PDF](https://github.com/riscv/ft-trigger-delegation/releases/download/riscv-isa-release-804db27-2026-03-07/riscv-privileged.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-3102) 
+
+RVA23.1
+
+🔵 Freeze ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv/riscv-isa-manual/pull/3170) [📄 PDF](https://github.com/riscv/riscv-isa-manual/releases/download/riscv-isa-release-f89d503-2026-07-02/riscv-spec.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-4180) 
+
+Vector Unzip Instruction (Zvzip)
+
+⚙️ Stabilization ISA Fast Track 
+
+[🌐 HTML](https://github.com/ptomsich/riscv-isa-manual/tree/zvzip) 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-4161) 
+
+Event Trace
+
+📋 Planning Non-ISA 
+
+[🌐 HTML](https://github.com/riscv-non-isa/riscv-event-trace) [📄 PDF](https://github.com/riscv-non-isa/riscv-event-trace/releases/download/5-21-26/riscv-event-trace.5-21-26.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-4281) 
+
+S-mode Physical Memory Protection (SPMP)
+
+🟢 Ratification-ready ISA 
+
+[🌐 HTML](https://github.com/riscv/riscv-spmp) [📄 PDF](https://github.com/riscv/riscv-spmp/releases/download/v0.9.2/rv-spmp-spec.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-921) 
+
+Standard Support Packet extension to E-trace
+
+🔵 Freeze Non-ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv-non-isa/riscv-trace-spec/pull/276) [📄 PDF](https://github.com/riscv-non-isa/riscv-trace-spec/releases/download/v2.0-20250616/riscv-trace-spec-asciidoc.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-4600) 
+
+Implicit Return (E-Trace 2.0)
+
+🔵 Freeze Non-ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv-non-isa/riscv-trace-spec/pull/264) [📄 PDF](https://github.com/riscv-non-isa/riscv-trace-spec/releases/download/v2.0-20250616/riscv-trace-spec-asciidoc.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-4454) 
+
+RVB23.1
+
+🔵 Freeze ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv/riscv-isa-manual/pull/3170) [📄 PDF](https://github.com/riscv/riscv-isa-manual/releases/download/riscv-isa-release-f89d503-2026-07-02/riscv-spec.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-4184) 
+
+RHTI trcstate Extension
+
+🟢 Ratification-ready Non-ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv-non-isa/hart-trace-interface) [📄 PDF](https://github.com/riscv-non-isa/riscv-hart-trace-interface/releases/download/v0.9/hart-trace-interface.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-4171) 
+
+Platform Management Interface - RPMI (2.0)
+
+🔨 Under development Non-ISA 
+
+🌐 HTML 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-4146) 
+
+Long/Batched Dot-Product Extensions (Zvldot and Zvbdot)
+
+🔵 Freeze ISA Fast Track 
+
+[🌐 HTML](https://github.com/aswaterman/riscv-misc/blob/main/isa/ldot-bdot/ldot-bdot.adoc) 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-3925) 
+
+Integer Vector Absolute Difference (Zvabd)
+
+🔵 Freeze ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv/integer-vector-absolute-difference) [📄 PDF](https://github.com/riscv/integer-vector-absolute-difference/releases/download/riscv-isa-release-aa1eba3-2026-03-07/riscv-privileged.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-3896) 
+
+Branch with Immediate (Zibi)
+
+🔵 Freeze ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv/zibi) [📄 PDF](https://github.com/riscv/zibi/releases/download/riscv-isa-release-6475b5f-2026-03-07/riscv-privileged.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-3828) 
+
+RISC-V Hart Trace Interface (RHTI)
+
+🟢 Ratification-ready Non-ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv-non-isa/host-trace-interface) [📄 PDF](https://github.com/riscv-non-isa/riscv-hart-trace-interface/releases/download/v0.9/hart-trace-interface.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-3561) 
+
+High Assurance Cryptography (HAC)
+
+🔨 Under development ISA 
+
+[🌐 HTML](https://github.com/riscv/riscv-high-assurance-cryptography) 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-2362) 
+
+Post-Quantum Cryptography (Keccak)
+
+🔨 Under development ISA 
+
+[🌐 HTML](https://github.com/riscv/riscv-pqc) 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-2360) 
+
+CHERI
+
+🔵 Freeze ISA 
+
+[🌐 HTML](https://github.com/riscv/riscv-cheri) [📄 PDF](https://github.com/riscv/riscv-cheri/releases/download/v0.9.8.2/riscv-cheri-0.9.8.2.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-2141) 
+
+Dot-Product (Zvqdot/Zvdot4a8i)
+
+⚙️ Stabilization ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv/riscv-isa-manual/pull/2576) [📄 PDF](https://github.com/riscv/riscv-isa-manual/releases/download/riscv-isa-release-f89d503-2026-07-02/riscv-spec.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-1971) 
+
+Integrated Matrix Extension (IME)
+
+⚙️ Stabilization ISA 
+
+[🌐 HTML](https://github.com/riscv/integrated-matrix-extension) [📄 PDF](https://github.com/riscv/integrated-matrix-extension/releases/download/riscv-isa-release-43d6553-2026-06-29/riscv-privileged.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-1930) 
+
+Packed SIMD (P)
+
+🔨 Under development ISA 
+
+[🌐 HTML](https://github.com/riscv/riscv-p-spec) 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-1135) 
+
+Fast Interrupts (CLIC)
+
+⚙️ Stabilization ISA 
+
+[🌐 HTML](https://github.com/riscv/riscv-fast-interrupt) [📄 PDF](https://github.com/riscv/riscv-fast-interrupt/releases/download/v0.19/aclic-0.19.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-1017) 
+
+Data Trace of Multiple-Memory Access and Compare and Swap
+
+🔵 Freeze Non-ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv-non-isa/riscv-trace-spec/pull/269) [📄 PDF](https://github.com/riscv-non-isa/riscv-trace-spec/releases/download/v2.0-20250616/riscv-trace-spec-asciidoc.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-4637) 
+
+RV Worlds H-extension
+
+📋 Planning ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv/riscv-worlds) [📄 PDF](https://github.com/riscv/riscv-worlds/releases/download/riscv-isa-release-4c81a3f-2026-04-14/riscv-privileged.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-4572) 
+
+Vector Matrix Extension (VME)
+
+📋 Planning ISA 
+
+[🌐 HTML](https://github.com/riscv/riscv-vme) [📄 PDF](https://github.com/riscv/riscv-vme/releases/download/riscv-isa-release-dc8bf2a-2026-07-02/riscv-spec.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-3923) 
+
+External Debug Security (Sdsec)
+
+🔵 Freeze Non-ISA 
+
+[🌐 HTML](https://github.com/riscv-non-isa/riscv-external-debug-security) [📄 PDF](https://github.com/riscv-non-isa/riscv-external-debug-security/releases/download/v0.7.4/external-debug-security.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-1792) 
+
+Byte & Halfword LR/SC (Zabhlrsc)
+
+📋 Planning ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv/riscv-isa-manual/pull/3046) [📄 PDF](https://github.com/riscv/riscv-isa-manual/releases/download/riscv-isa-release-f89d503-2026-07-02/riscv-spec.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-4708) 
+
+Address-Independent Fault Latency (Svukte)
+
+🔵 Freeze ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv/riscv-isa-manual/pull/1564/files) [📄 PDF](https://github.com/riscv/riscv-isa-manual/releases/download/riscv-isa-release-f89d503-2026-07-02/riscv-spec.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-2977) 
+
+Data Trace of Multi-Memory Access & CAS (E-Trace 2.0)
+
+📋 Planning Non-ISA Fast Track 
+
+🌐 HTML 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-4549) 
+
+CPU Utilization Counter Extension (Sscpuutil)
+
+📋 Planning ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv/riscv-sscpuutil) 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-4802) 
+
+RVM Profile
+
+📋 Planning ISA 
+
+🌐 HTML 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-3312) 
+
+Self-hosted Trace
+
+📋 Planning ISA 
+
+[🌐 HTML](https://github.com/riscv/self-hosted-trace) [📄 PDF](https://github.com/riscv/self-hosted-trace/releases/download/riscv-isa-release-ceead1b-2026-05-28/riscv-privileged.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-3131) 
+
+Performance Event Sampling
+
+⚙️ Stabilization ISA 
+
+[🌐 HTML](https://github.com/riscv/riscv-performance-event-sampling) [📄 PDF](https://github.com/riscv/riscv-performance-event-sampling/releases/download/v0.6.0/riscv-performance-event-sampling-v0.6.0.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-2770) 
+
+Attached Matrix Extension (AME)
+
+📋 Planning ISA 
+
+[🌐 HTML](https://github.com/riscv/riscv-riscv-ame) [📄 PDF](https://github.com/riscv/riscv-ame/releases/download/AME%5Fspec/Zvame-Spec-Draft-20260615.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-1790) 
+
+Logic Analyzer Trace
+
+📋 Planning Non-ISA 
+
+[🌐 HTML](https://github.com/riscv-non-isa/riscv-logic-analyzer-trace) 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-4762) 
+
+Confidential VM Extension (CoVE)
+
+🔵 Freeze Non-ISA 
+
+[🌐 HTML](https://github.com/riscv-non-isa/riscv-ap-tee) [📄 PDF](https://github.com/riscv-non-isa/riscv-ap-tee/releases/download/v0.7/riscv-cove.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-1906) 
+
+Supervisor Domains Access Protection (Smmtt)
+
+🔵 Freeze ISA 
+
+[🌐 HTML](https://github.com/riscv/riscv-smmtt) [📄 PDF](https://github.com/riscv/riscv-smmtt/releases/download/v0.49/smmtt-spec.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-1345) 
+
+Confidential VM Extension (CoVE) with I/O
+
+🔵 Freeze Non-ISA 
+
+[🌐 HTML](https://github.com/riscv-non-isa/riscv-ap-tee-io) [📄 PDF](https://github.com/riscv-non-isa/riscv-ap-tee-io/releases/download/v0.3.0/riscv-cove-io.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-1618) 
+
+Security Model
+
+🔵 Freeze Non-ISA 
+
+[🌐 HTML](https://github.com/riscv-non-isa/riscv-security-model) [📄 PDF](https://github.com/riscv/riscv-security-model/releases/download/v0.6/riscv-platform-security-model.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-1153) 
+
+Input/Output Physical Memory Protection (IOPMP)
+
+🔵 Freeze Non-ISA 
+
+[🌐 HTML](https://github.com/riscv-non-isa/iopmp-spec) [📄 PDF](https://github.com/riscv-non-isa/riscv-iopmp/releases/download/v0.8.2/2026-0209-iopmp.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-793) 
+
+Instrumentation Trace
+
+📋 Planning Non-ISA 
+
+[🌐 HTML](https://github.com/riscv-non-isa/riscv-instrumentation-trace) 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-4752) 
+
+Timing Fences
+
+📋 Planning ISA 
+
+[🌐 HTML](https://github.com/riscv/riscv-timing-fences) [📄 PDF](https://github.com/riscv/riscv-timing-fences/releases/download/riscv-isa-release-0563138-2026-03-07/riscv-privileged.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-3569) 
+
+Sdtrig Enhancements (Sdtrigpend and Sdtrigepm)
+
+🔨 Under development ISA Fast Track 
+
+🌐 HTML 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-3982) 
+
+Speculation Barriers
+
+📋 Planning ISA 
+
+[🌐 HTML](https://github.com/riscv/spec-barrier) 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-4114) 
+
+SPMP for Hypervisor
+
+📋 Planning ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv/riscv-spmp/tree/main/spmp-for-hyp) [📄 PDF](https://github.com/riscv/riscv-spmp/releases/download/v0.9.2/rv-spmp-spec.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-4344) 
+
+Optimization Directives
+
+📋 Planning ISA Fast Track 
+
+🌐 HTML 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-4463) 
+
+A Fast Computation for Large-Integer Arithmetic Proposal
+
+📋 Planning ISA 
+
+🌐 HTML 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-4646) 
+
+PMP-based Memory Types Extension (Smpmpmt)
+
+🔵 Freeze ISA Fast Track 
+
+[🌐 HTML](https://github.com/riscv/riscv-isa-manual/blob/smpmpmt/src/smpmpmt.adoc) [📄 PDF](https://github.com/riscv/riscv-isa-manual/releases/download/riscv-isa-release-f89d503-2026-07-02/riscv-spec.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-2948) 
+
+Memory Tagging
+
+📋 Planning ISA 
+
+[🌐 HTML](https://github.com/riscv/riscv-memory-tagging) [📄 PDF](https://github.com/riscv/riscv-memory-tagging/releases/download/v0.3.0/riscv-mte.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-2706) 
+
+Composable Custom Extensions
+
+📋 Planning ISA 
+
+[🌐 HTML](https://github.com/riscv/composable-custom-extensions) 📄 PDF [→ More details](https://riscv.atlassian.net/browse/RVS-2611) 
+
+Performance Events Specification
+
+📋 Planning ISA 
+
+[🌐 HTML](https://github.com/riscv/riscv-performance-events) [📄 PDF](https://github.com/riscv/riscv-performance-events/releases/download/v0.0.2/riscv-perf-events-v0.0.2.pdf) [→ More details](https://riscv.atlassian.net/browse/RVS-1942) 
