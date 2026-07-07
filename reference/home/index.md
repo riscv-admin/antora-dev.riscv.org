@@ -362,7 +362,9 @@ Compiler intrinsics for vector extension programming.
 
 ## [](#under-development)Under Development
 
-FreezePlanningRatification-readyStabilizationUnder development 
+Browse draft specifications currently under development by the RISC-V community. These documents are updated regularly. For the most current versions and specification status, use the [RISC-V Specification Dashboard](https://riscv.github.io/adm-spec-dashboard/).
+
+PlanningUnder developmentStabilizationFreezeRatification-ready 
 
 ISANon-ISA 
 
