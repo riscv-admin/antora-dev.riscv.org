@@ -1,5 +1,0 @@
-# References
-
-## [](#references)References
-
-* \[riscv-priv\] "The RISC-V Instruction Set Manual, Volume II: Privileged Architecture, Document", Editors Andrew Waterman, Krste Asanovi´c, and John Hauser, RISC-V International.
