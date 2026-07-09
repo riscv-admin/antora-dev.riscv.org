@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../_/css/vendor/page-search.css">
     <link rel="stylesheet" href="../_/css/vendor/asciidoctor-tabs.css">
 
-    <meta name="antora-ui-version" content="36703db7bd04e7dff23a05b02c32aad67053838b"> 
+    <meta name="antora-ui-version" content="61142933f13291b321915fb93b7f04a242e354be"> 
     <meta name="version" content="">
     <meta name="component" content="home">
     <meta name="latest-version" content="false">
@@ -403,10 +403,12 @@
 <div class="dev-specs-container">
   <div class="dev-specs-filters">
     <div class="dev-specs-search"><input type="text" placeholder="Search specifications..."></div>
-    <div class="dev-specs-controls">
+    <div class="dev-specs-state-filters">
       <div class="filter-group">
-        <button class="filter-btn" data-type="status" data-value="planning">Planning</button><button class="filter-btn" data-type="status" data-value="under development">Under development</button><button class="filter-btn" data-type="status" data-value="stabilization">Stabilization</button><button class="filter-btn" data-type="status" data-value="freeze">Freeze</button><button class="filter-btn" data-type="status" data-value="ratification-ready">Ratification-ready</button>
+        <button class="filter-btn filter-all-status active" data-type="status-all">All States</button><button class="filter-btn" data-type="status" data-value="planning">Planning</button><button class="filter-btn" data-type="status" data-value="under development">Under development</button><button class="filter-btn" data-type="status" data-value="stabilization">Stabilization</button><button class="filter-btn" data-type="status" data-value="freeze">Freeze</button><button class="filter-btn" data-type="status" data-value="ratification-ready">Ratification-ready</button>
       </div>
+    </div>
+    <div class="dev-specs-controls">
       <div class="filter-group">
         <button class="filter-btn" data-type="group" data-value="ISA">ISA</button><button class="filter-btn" data-type="group" data-value="Non-ISA">Non-ISA</button>
       </div>
