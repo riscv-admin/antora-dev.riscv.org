@@ -85,6 +85,9 @@
 <loc>https://riscv-admin.github.io/antora-dev.riscv.org/sitemap-server-soc.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://riscv-admin.github.io/antora-dev.riscv.org/sitemap-spec-sample.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://riscv-admin.github.io/antora-dev.riscv.org/sitemap-trace-connectors.xml</loc>
 </sitemap>
 <sitemap>
