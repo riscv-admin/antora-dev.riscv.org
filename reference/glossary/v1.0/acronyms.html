@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>RISC-V acronyms and abbreviations :: RISC-V Ratified Specifications Library</title>
+    <link rel="canonical" href="https://riscv-admin.github.io/antora-dev.riscv.org/glossary/v1.0/acronyms.html">
+    <link rel="prev" href="glossary.html">
+    <link rel="next" href="extension-naming.html">
+    <meta name="generator" content="Antora 3.1.15">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/vendor/asciidoctor-tabs.css">
+
+    <meta name="antora-ui-version" content="e21dd7fd49019e30705d24eccc0ac051a2bd5803"> 
+    <meta name="version" content="v1.0">
+    <meta name="component" content="glossary">
+    <meta name="latest-version" content="false">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var title = document.querySelector('h2');
+      if (title && document.title.startsWith('Untitled')) {
+        document.title = title.textContent.trim() + ' :: RISC-V Ratified Specifications Library';
+      }
+    });
+    </script>
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../_/img/favicon.ico">
+  </head>
+  <body class="article">
+<div id="dev-banner" class="dev-banner">
+  Welcome to the RISC-V Library Development site. See <a href="https://docs.riscv.org/">https://docs.riscv.org/</a> for the official documentation.
+</div>
+
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://riscv.org">
+        <img class="riscvlogo riscvlogo--light" src="../../_/img/risc-v_logo.svg" alt="RISCV" />
+        <img class="riscvlogo riscvlogo--dark" src="../../_/img/risc-v_logo_white.svg" alt="RISCV" />
+      </a>
+      <div class="navbar-item home">
+        <a class="navbar-link"
+          href="../../home/index.html"
+          aria-label="home"
+          title="home">
+          <img class="home-icon riscvlogo--light" src="../../_/img/library-icon.png" alt="Home" />
+          <img class="home-icon riscvlogo--dark" src="../../_/img/library-icon_white.png" alt="Home" />
+        </a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+      </div>
+      <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs" >
+        </div>
+        <div class="navbar-item" style="padding-left: 0;">
+          <label class="theme-toggler">
+            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
+                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor"
+                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                </path>
+              </svg>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
+                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+                </path>
+              </svg></span>
+            <span class="text">light</span>
+          </label>
+        </div>
+      </div>
+  </nav>
+</header>
+<script>
+  !function (theme) {
+    if (theme === 'dark') {
+      document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+    }
+  }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="glossary" data-version="v1.0"
+  >
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+          <ul class="nav-list" style="padding-left: 0; margin: 0;">
+            <li class="nav-item" style="padding-left: 0;">
+              <a class="nav-link" href="../../home/index.html">RISC-V Specifications</a>
+            </li>
+          </ul>
+<div class="context">
+    <span class="title">RISC-V Glossary</span>
+  </div>
+    <div class="version-box">
+      <select data-component="glossary" class="select-version">
+          <option
+            value="index.html"
+            data-version="v1.0"
+            
+            selected>
+            v1.0
+          </option>
+      </select>
+    </div>
+    <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="index.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="glossary.html">Terms</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link"  href="acronyms.html">Acronyms and abbreviations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="extension-naming.html">Extension naming conventions</a>
+  </li>
+</ul>
+  </li>
+</ul>
+            <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  var isHome = window.location.pathname.includes('/home/') || window.location.pathname === '/'
+  if (isHome || sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script>
+<main class="article">
+<div class="toolbar" role="navigation">
+  <button id="nav-toggle-1" class="nav-toggle"></button>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div
+      class="toc"
+      data-title="RISC-V acronyms and abbreviations"
+      data-levels="5"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="https://github.com/riscv/riscv-glossary/issues/new" target="_blank" title="Issues">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Report a Problem
+        </a>
+        <a href="https://github.com/riscv/riscv-glossary" target="_blank" title="GitHub">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          GitHub Project
+        </a>
+
+
+
+
+          <a href="/reference/glossary/v1.0/_attachments/glossary.pdf" title="PDF" class="sidebar-link" download>
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+            <span>Download PDF</span>
+          </a>
+            
+      <hr class="sidebar-divider">
+      <a href="../../glossary/index.html" class="sidebar-link" title="Glossary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+          <path d="M19 2H5a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3zm-3 14H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V6h8v2z"/>
+        </svg>
+        Glossary
+      </a>
+    </div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+
+      <li><a href="../../home/index.html">RISC-V Specifications</a></li>
+
+              <li><a href="index.html">RISC-V Glossary</a></li>
+                </ul>
+  </nav>
+</div>
+<h1 id="page-title" class="page">RISC-V acronyms and abbreviations</h1>
+<div class="sect1">
+<h2 id="gloss-acro"><a class="anchor" href="#gloss-acro"></a>RISC-V acronyms and abbreviations</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Entries marked <sup>RV</sup> are specific to the RISC-V architecture. Unmarked entries are general computing terms or acronyms defined by other standards.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a id="ABI"></a>ABI</dt>
+<dd>
+<p>Application Binary Interface.</p>
+</dd>
+<dt class="hdlist1"><a id="ACPI"></a>ACPI</dt>
+<dd>
+<p>Advanced Configuration and Power Interface.</p>
+</dd>
+<dt class="hdlist1"><a id="ACS"></a>ACS</dt>
+<dd>
+<p>Access Control Services.</p>
+</dd>
+<dt class="hdlist1"><a id="ASID"></a>ASID</dt>
+<dd>
+<p>Address space identifier.</p>
+</dd>
+<dt class="hdlist1"><a id="AEE"></a>AEE <sup>RV</sup></dt>
+<dd>
+<p>Application Execution Environment.</p>
+</dd>
+<dt class="hdlist1"><a id="AER"></a>AER</dt>
+<dd>
+<p>Advanced Error Reporting.</p>
+</dd>
+<dt class="hdlist1"><a id="ALU"></a>ALU</dt>
+<dd>
+<p>Arithmetic Logical Unit.</p>
+</dd>
+<dt class="hdlist1"><a id="AMO"></a>AMO</dt>
+<dd>
+<p>Atomic Memory Operation.</p>
+</dd>
+<dt class="hdlist1"><a id="AP"></a>AP</dt>
+<dd>
+<p>Application Processor.</p>
+</dd>
+<dt class="hdlist1"><a id="ASIC"></a>ASIC</dt>
+<dd>
+<p>Application-Specific Integrated Circuit.</p>
+</dd>
+<dt class="hdlist1"><a id="AT"></a>AT</dt>
+<dd>
+<p>Advanced Technology.</p>
+</dd>
+<dt class="hdlist1"><a id="ATA"></a>ATA</dt>
+<dd>
+<p>Advanced Technology Attachment.</p>
+</dd>
+<dt class="hdlist1"><a id="ATM"></a>ATM</dt>
+<dd>
+<p>Asynchronous Transfer Mode.</p>
+</dd>
+<dt class="hdlist1"><a id="ATS"></a>ATS</dt>
+<dd>
+<p>Address Translation Services.</p>
+</dd>
+<dt class="hdlist1"><a id="ATX"></a>ATX</dt>
+<dd>
+<p>Advanced Technology eXtended.</p>
+</dd>
+<dt class="hdlist1"><a id="AUIPC"></a>AUIPC <sup>RV</sup></dt>
+<dd>
+<p>Add Upper Immediate to PC.</p>
+</dd>
+<dt class="hdlist1"><a id="BAR"></a>BAR</dt>
+<dd>
+<p>Base Address Register.</p>
+</dd>
+<dt class="hdlist1"><a id="BF"></a>BF</dt>
+<dd>
+<p>Brain Float or Brain Floating Point.</p>
+</dd>
+<dt class="hdlist1"><a id="BMC"></a>BMC</dt>
+<dd>
+<p>Baseboard Management Controller.</p>
+</dd>
+<dt class="hdlist1"><a id="BRS"></a>BRS</dt>
+<dd>
+<p>Boot and Runtime Services.</p>
+</dd>
+<dt class="hdlist1"><a id="BSI"></a>BSI</dt>
+<dd>
+<p>German Federal Information Security service.</p>
+</dd>
+<dt class="hdlist1"><a id="CAS"></a>CAS</dt>
+<dd>
+<p>Compare-and-swap.</p>
+</dd>
+<dt class="hdlist1"><a id="CBCFE"></a>CBCFE <sup>RV</sup></dt>
+<dd>
+<p>Cache Block Clean and Flush instruction Enable.</p>
+</dd>
+<dt class="hdlist1"><a id="CBIE"></a>CBIE <sup>RV</sup></dt>
+<dd>
+<p>Cache Block Invalidate instruction Enable.</p>
+</dd>
+<dt class="hdlist1"><a id="CBO"></a>CBO</dt>
+<dd>
+<p>Cache-block operation.</p>
+</dd>
+<dt class="hdlist1"><a id="CBZE"></a>CBZE <sup>RV</sup></dt>
+<dd>
+<p>Cache Block Zero instruction Enable.</p>
+</dd>
+<dt class="hdlist1"><a id="CDE"></a>CDE <sup>RV</sup></dt>
+<dd>
+<p>Counter Delegation Enable.</p>
+</dd>
+<dt class="hdlist1"><a id="CDI"></a>CDI</dt>
+<dd>
+<p>Compound device identifier.</p>
+</dd>
+<dt class="hdlist1"><a id="CE"></a>CE</dt>
+<dd>
+<p>Corrected Error.</p>
+</dd>
+<dt class="hdlist1"><a id="CMO"></a>CMO</dt>
+<dd>
+<p>Cache-management operation.</p>
+</dd>
+<dt class="hdlist1"><a id="CLIC"></a>CLIC <sup>RV</sup></dt>
+<dd>
+<p>Core-Local Interrupt Controller.</p>
+</dd>
+<dt class="hdlist1"><a id="COFF"></a>COFF</dt>
+<dd>
+<p>The Common Object File Format.</p>
+</dd>
+<dt class="hdlist1"><a id="CPL"></a>CPL</dt>
+<dd>
+<p>Cost Per Load.</p>
+</dd>
+<dt class="hdlist1"><a id="CM"></a>CM</dt>
+<dd>
+<p>Configuration Manager.</p>
+</dd>
+<dt class="hdlist1"><a id="CMOS"></a>CMOS</dt>
+<dd>
+<p>Complementary Metal Oxide Semiconductor.</p>
+</dd>
+<dt class="hdlist1"><a id="CoVE"></a>CoVE <sup>RV</sup></dt>
+<dd>
+<p>Confidential VM extension</p>
+</dd>
+<dt class="hdlist1"><a id="CSR"></a>CSR</dt>
+<dd>
+<p>Control and Status Register.</p>
+</dd>
+<dt class="hdlist1"><a id="CXL"></a>CXL</dt>
+<dd>
+<p>Compute Express Link bus standard.</p>
+</dd>
+<dt class="hdlist1"><a id="D"></a>D <sup>RV</sup></dt>
+<dd>
+<p>Debug mode.</p>
+</dd>
+<dt class="hdlist1"><a id="DC"></a>DC</dt>
+<dd>
+<p>Device Context.</p>
+</dd>
+<dt class="hdlist1"><a id="DDI"></a>DDI</dt>
+<dd>
+<p>Device Directory Index.</p>
+</dd>
+<dt class="hdlist1"><a id="DDT"></a>DDT</dt>
+<dd>
+<p>Device Directory Table.</p>
+</dd>
+<dt class="hdlist1"><a id="DevATC"></a>DevATC</dt>
+<dd>
+<p>Device Address Translation Cache.</p>
+</dd>
+<dt class="hdlist1"><a id="DIMM"></a>DIMM</dt>
+<dd>
+<p>Dual-In-line Memory Module.</p>
+</dd>
+<dt class="hdlist1"><a id="DM"></a>DM</dt>
+<dd>
+<p>Debug Module.</p>
+</dd>
+<dt class="hdlist1"><a id="DMA"></a>DMA</dt>
+<dd>
+<p>Direct Memory Access.</p>
+</dd>
+<dt class="hdlist1"><a id="DMTF"></a>DMTF</dt>
+<dd>
+<p>Distributed Management Task Force.</p>
+</dd>
+<dt class="hdlist1"><a id="DOM"></a>DOM</dt>
+<dd>
+<p>Domain.</p>
+</dd>
+<dt class="hdlist1"><a id="DRAM"></a>DRAM</dt>
+<dd>
+<p>Dynamic Random Access Memory.</p>
+</dd>
+<dt class="hdlist1"><a id="DT"></a>DT</dt>
+<dd>
+<p>Device Tree.</p>
+</dd>
+<dt class="hdlist1"><a id="EBBR"></a>EBBR</dt>
+<dd>
+<p>Embedded Base Boot Requirements.</p>
+</dd>
+<dt class="hdlist1"><a id="ECAM"></a>ECAM</dt>
+<dd>
+<p>Enhanced Configuration Access Method.</p>
+</dd>
+<dt class="hdlist1"><a id="ECC"></a>ECC</dt>
+<dd>
+<p>Error Correcting Code.</p>
+</dd>
+<dt class="hdlist1"><a id="eDRAM"></a>eDRAM</dt>
+<dd>
+<p>Embedded Dynamic Random Access Memory (DRAM).</p>
+</dd>
+<dt class="hdlist1"><a id="ECOFF"></a>ECOFF</dt>
+<dd>
+<p>Extended Common Object File Format.</p>
+</dd>
+<dt class="hdlist1"><a id="EEI"></a></dt>
+<dd>
+<p>Execution Environment Interface.</p>
+</dd>
+<dt class="hdlist1"><a id="EEW"></a>EEW <sup>RV</sup></dt>
+<dd>
+<p>Effective Element Width.</p>
+</dd>
+<dt class="hdlist1"><a id="ELEN"></a>ELEN <sup>RV</sup></dt>
+<dd>
+<p>Element length.</p>
+</dd>
+<dt class="hdlist1"><a id="ELF"></a>ELF</dt>
+<dd>
+<p>Executable and Linkable Format.</p>
+</dd>
+<dt class="hdlist1"><a id="EP"></a>EP</dt>
+<dd>
+<p>Error/poisoned.</p>
+</dd>
+<dt class="hdlist1"><a id="ES"></a>ES</dt>
+<dd>
+<p>Entropy Source.</p>
+</dd>
+<dt class="hdlist1"><a id="FFH"></a>FFH</dt>
+<dd>
+<p>Functional Fixed Hardware.</p>
+</dd>
+<dt class="hdlist1"><a id="FIOM"></a>FIOM <sup>RV</sup></dt>
+<dd>
+<p>Fence of I/O implies Memory.</p>
+</dd>
+<dt class="hdlist1"><a id="FPCSR"></a>FPCSR <sup>RV</sup></dt>
+<dd>
+<p>Floating-point control and status register.</p>
+</dd>
+<dt class="hdlist1"><a id="FLOPS"></a>FLOPS</dt>
+<dd>
+<p>Floating Point Operations per Second.</p>
+</dd>
+<dt class="hdlist1"><a id="FMA"></a>FMA</dt>
+<dd>
+<p>Fused multiply-add.</p>
+</dd>
+<dt class="hdlist1"><a id="FSM"></a>FSM</dt>
+<dd>
+<p>Finite-State Machine.</p>
+</dd>
+<dt class="hdlist1"><a id="GAS"></a>GAS</dt>
+<dd>
+<p>Generic Address Structure.</p>
+</dd>
+<dt class="hdlist1"><a id="GE"></a>GE</dt>
+<dd>
+<p>Gate Equivalent.</p>
+</dd>
+<dt class="hdlist1"><a id="GPA"></a>GPA</dt>
+<dd>
+<p>Guest Physical Address.</p>
+</dd>
+<dt class="hdlist1"><a id="GSCID"></a>GSCID <sup>RV</sup></dt>
+<dd>
+<p>Guest soft-context identifier.</p>
+</dd>
+<dt class="hdlist1"><a id="HBI"></a>HBI <sup>RV</sup></dt>
+<dd>
+<p>Hypervisor Binary Interface.</p>
+</dd>
+<dt class="hdlist1"><a id="hcounteren"></a>hcounteren <sup>RV</sup></dt>
+<dd>
+<p>Hypervisor Counter-enable register.</p>
+</dd>
+<dt class="hdlist1"><a id="hedeleg"></a>hedeleg <sup>RV</sup></dt>
+<dd>
+<p>Hypervisor Trap Delegation register. Also <code>hideleg</code>.</p>
+</dd>
+<dt class="hdlist1"><a id="HEE"></a>HEE <sup>RV</sup></dt>
+<dd>
+<p>Hypervisor execution environment.</p>
+</dd>
+<dt class="hdlist1"><a id="hideleg"></a>hideleg <sup>RV</sup></dt>
+<dd>
+<p>Hypervisor Trap Delegation register. Also <code>hedeleg</code>.</p>
+</dd>
+<dt class="hdlist1"><a id="HPC"></a>HPC</dt>
+<dd>
+<p>High-performance Computing.</p>
+</dd>
+<dt class="hdlist1"><a id="HPET"></a>HPET</dt>
+<dd>
+<p>High Precision Event Timer.</p>
+</dd>
+<dt class="hdlist1"><a id="HPM"></a>HPM</dt>
+<dd>
+<p>Hardware Performance Monitor.</p>
+</dd>
+<dt class="hdlist1"><a id="HRET"></a>HRET <sup>RV</sup></dt>
+<dd>
+<p>Hypervisor Return from Trap.</p>
+</dd>
+<dt class="hdlist1"><a id="HRNG"></a>HRNG</dt>
+<dd>
+<p>Hardware Random Number Generator. See TRNG.</p>
+</dd>
+<dt class="hdlist1"><a id="hstatus"></a>hstatus <sup>RV</sup></dt>
+<dd>
+<p>Hypervisor Status register.</p>
+</dd>
+<dt class="hdlist1"><a id="htimedelta"></a>htimedelta <sup>RV</sup></dt>
+<dd>
+<p>Hypervisor Time Delta register.</p>
+</dd>
+<dt class="hdlist1"><a id="htinst"></a>htinst <sup>RV</sup></dt>
+<dd>
+<p>Hypervisor Trap Instruction register.</p>
+</dd>
+<dt class="hdlist1"><a id="htval"></a>htval <sup>RV</sup></dt>
+<dd>
+<p>Hypervisor Trap Value register.</p>
+</dd>
+<dt class="hdlist1"><a id="hvip"></a>hvip <sup>RV</sup></dt>
+<dd>
+<p>Hypervisor Interrupt register. Also <code>hip</code> and <code>hie</code>.</p>
+</dd>
+<dt class="hdlist1"><a id="IBFD"></a>IBFD</dt>
+<dd>
+<p>I2c Bus Frequency Divider.</p>
+</dd>
+<dt class="hdlist1"><a id="IC"></a>IC</dt>
+<dd>
+<p>Integrated Circuit.</p>
+</dd>
+<dt class="hdlist1"><a id="ICF"></a>ICF</dt>
+<dd>
+<p>Indentical Code Folding.</p>
+</dd>
+<dt class="hdlist1"><a id="IComdatF"></a>ICF</dt>
+<dd>
+<p>Identical COMDAT Folding.</p>
+</dd>
+<dt class="hdlist1"><a id="ICU"></a>ICU</dt>
+<dd>
+<p>Interrupt Consolidation Unit.</p>
+</dd>
+<dt class="hdlist1"><a id="ID"></a>ID</dt>
+<dd>
+<p>Identifier.</p>
+</dd>
+<dt class="hdlist1"><a id="IIRC"></a>IIRC</dt>
+<dd>
+<p>The International Integrated Reporting Council.</p>
+</dd>
+<dt class="hdlist1"><a id="IMSICode"></a>IMSIC</dt>
+<dd>
+<p>International Mobile Subscriber Identity Code.</p>
+</dd>
+<dt class="hdlist1"><a id="IMSIController"></a>IMSIC <sup>RV</sup></dt>
+<dd>
+<p>Incoming Message-signaled Interrupt Controller.</p>
+</dd>
+<dt class="hdlist1"><a id="IOATC"></a>IOATC</dt>
+<dd>
+<p>IOMMU Address Translation Cache.</p>
+</dd>
+<dt class="hdlist1"><a id="IOPMP"></a>IOPMP <sup>RV</sup></dt>
+<dd>
+<p>Input/Output Physical Memory Protection.</p>
+</dd>
+<dt class="hdlist1"><a id="IOVA"></a>IOVA</dt>
+<dd>
+<p>I/O Virtual Address.</p>
+</dd>
+<dt class="hdlist1"><a id="IRC"></a>IRC</dt>
+<dd>
+<p>Internet Relay Chat.</p>
+</dd>
+<dt class="hdlist1"><a id="ISA"></a>ISA</dt>
+<dd>
+<p>Instruction set architecture.</p>
+</dd>
+<dt class="hdlist1"><a id="JAL"></a>JAL <sup>RV</sup></dt>
+<dd>
+<p>Jump And Link instruction.</p>
+</dd>
+<dt class="hdlist1"><a id="JALR"></a>JALR <sup>RV</sup></dt>
+<dd>
+<p>Jump And Link Register.</p>
+</dd>
+<dt class="hdlist1"><a id="LCOFI"></a>LCOFI <sup>RV</sup></dt>
+<dd>
+<p>Local counter overflow interrupt.</p>
+</dd>
+<dt class="hdlist1"><a id="LLSC"></a>LL/SC</dt>
+<dd>
+<p>Load Link/Store Conditional or Load Locked/Store conditional. See LR/SC.</p>
+</dd>
+<dt class="hdlist1"><a id="LMA"></a>LMA</dt>
+<dd>
+<p>Load Memory Address.</p>
+</dd>
+<dt class="hdlist1"><a id="LPI"></a>LPI</dt>
+<dd>
+<p>Low Power Idle.</p>
+</dd>
+<dt class="hdlist1"><a id="LRSR"></a>LR/SC</dt>
+<dd>
+<p>Load Reserve/Store Conditional,</p>
+</dd>
+<dt class="hdlist1"><a id="LSA"></a>LSA</dt>
+<dd>
+<p>Load Store Architecture.</p>
+</dd>
+<dt class="hdlist1"><a id="LUI"></a>LUI <sup>RV</sup></dt>
+<dd>
+<p>Load Upper Immediate.</p>
+</dd>
+<dt class="hdlist1"><a id="M"></a>M <sup>RV</sup></dt>
+<dd>
+<p>Machine Mode.</p>
+</dd>
+<dt class="hdlist1"><a id="marchid"></a>marchid <sup>RV</sup></dt>
+<dd>
+<p>Machine Architecture ID register.</p>
+</dd>
+<dt class="hdlist1"><a id="MBE"></a>MBE <sup>RV</sup></dt>
+<dd>
+<p>Machine Big Endian.</p>
+</dd>
+<dt class="hdlist1"><a id="mcause"></a>mcause <sup>RV</sup></dt>
+<dd>
+<p>Machine Cause register.</p>
+</dd>
+<dt class="hdlist1"><a id="mconfigptr"></a>mconfigptr <sup>RV</sup></dt>
+<dd>
+<p>Machine Configuration Pointer register.</p>
+</dd>
+<dt class="hdlist1"><a id="mcounteren"></a>mcounteren <sup>RV</sup></dt>
+<dd>
+<p>Machine Counter-enable register.</p>
+</dd>
+<dt class="hdlist1"><a id="mcountinhibit"></a>mvountinhibit <sup>RV</sup></dt>
+<dd>
+<p>Machine Counter-inhibit register.</p>
+</dd>
+<dt class="hdlist1"><a id="MCTP"></a>MCTP</dt>
+<dd>
+<p>Management Component Transport Protocol</p>
+</dd>
+<dt class="hdlist1"><a id="medeleg"></a>medeleg <sup>RV</sup></dt>
+<dd>
+<p>Machine Trap Delegation register. Also MIDELEG.</p>
+</dd>
+<dt class="hdlist1"><a id="menvcfg"></a>menvcfg <sup>RV</sup></dt>
+<dd>
+<p>Machine Environment Configuration register.</p>
+</dd>
+<dt class="hdlist1"><a id="mepc"></a>mepc <sup>RV</sup></dt>
+<dd>
+<p>Machine Exception Program register.</p>
+</dd>
+<dt class="hdlist1"><a id="mie"></a>mie <sup>RV</sup></dt>
+<dd>
+<p>Machine Interrupt register. Also MIP.</p>
+</dd>
+<dt class="hdlist1"><a id="misa"></a>misa <sup>RV</sup></dt>
+<dd>
+<p>Machine ID register.</p>
+</dd>
+<dt class="hdlist1"><a id="MOP"></a>MOPs <sup>RV</sup></dt>
+<dd>
+<p>May-be-operations.</p>
+</dd>
+<dt class="hdlist1"><a id="MCM"></a>MCM</dt>
+<dd>
+<p>Multi-Chip Module.</p>
+</dd>
+<dt class="hdlist1"><a id="mcyclecfg"></a>mcyclecfg <sup>RV</sup></dt>
+<dd>
+<p>Machine Counter Configuration register. Also <code>minstretcfg</code>.</p>
+</dd>
+<dt class="hdlist1"><a id="mhartid"></a>mhartid <sup>RV</sup></dt>
+<dd>
+<p>Hart ID register.</p>
+</dd>
+<dt class="hdlist1"><a id="mimpid"></a>mimpid <sup>RV</sup></dt>
+<dd>
+<p>Machine Implementation ID register.</p>
+</dd>
+<dt class="hdlist1"><a id="mip"></a>mip <sup>RV</sup></dt>
+<dd>
+<p>Machine Interrupt register. Also MIE.</p>
+</dd>
+<dt class="hdlist1"><a id="MIPS"></a>MIPS</dt>
+<dd>
+<p>Microprocessor without Interlocked Pipelined Stages.</p>
+</dd>
+<dt class="hdlist1"><a id="MMIO"></a>MMIO</dt>
+<dd>
+<p>Memory mapped I/O.</p>
+</dd>
+<dt class="hdlist1"><a id="MMU"></a>MMU</dt>
+<dd>
+<p>Memory Management Unit.</p>
+</dd>
+<dt class="hdlist1"><a id="MMT"></a>MMT</dt>
+<dd>
+<p>Memory Tracking Table.</p>
+</dd>
+<dt class="hdlist1"><a id="MMWP"></a>MMWP <sup>RV</sup></dt>
+<dd>
+<p>Machine-Mode When-no-PMP-match Policy.</p>
+</dd>
+<dt class="hdlist1"><a id="MPDA"></a>MPDA</dt>
+<dd>
+<p>Memory Proximity Domain Attributes.</p>
+</dd>
+<dt class="hdlist1"><a id="MPRV"></a>MPRV <sup>RV</sup></dt>
+<dd>
+<p>Modify PRiVilege.</p>
+</dd>
+<dt class="hdlist1"><a id="MRET"></a>MRET <sup>RV</sup></dt>
+<dd>
+<p>Machine Return from Trap.</p>
+</dd>
+<dt class="hdlist1"><a id="mscratch"></a>mscratch <sup>RV</sup></dt>
+<dd>
+<p>Machine Scratch register.</p>
+</dd>
+<dt class="hdlist1"><a id="MSCI"></a>MSCI</dt>
+<dd>
+<p>Memory Side Cache Information.</p>
+</dd>
+<dt class="hdlist1"><a id="mseccfg"></a>mseccfg <sup>RV</sup></dt>
+<dd>
+<p>Machine Security Configuration register.</p>
+</dd>
+<dt class="hdlist1"><a id="MSI"></a>MSI</dt>
+<dd>
+<p>Message Signal Interrupt.</p>
+</dd>
+<dt class="hdlist1"><a id="mstatus"></a>mstatus <sup>RV</sup></dt>
+<dd>
+<p>Machine Status register. Also <code>mstatush</code>.</p>
+</dd>
+<dt class="hdlist1"><a id="mtime"></a>mtime <sup>RV</sup></dt>
+<dd>
+<p>Machine Timer register. Also <code>mtimecmp</code>.</p>
+</dd>
+<dt class="hdlist1"><a id="mtval"></a>mtval <sup>RV</sup></dt>
+<dd>
+<p>Machine Trap Value register.</p>
+</dd>
+<dt class="hdlist1"><a id="mtvec"></a>mtvec <sup>RV</sup></dt>
+<dd>
+<p>Machine Trap-Vector Base-Address register.</p>
+</dd>
+<dt class="hdlist1"><a id="mvendorid"></a>mvendorid <sup>RV</sup></dt>
+<dd>
+<p>Machine vendor ID register.</p>
+</dd>
+<dt class="hdlist1"><a id="MXLEN"></a>MXLEN <sup>RV</sup></dt>
+<dd>
+<p>Machine XLEN. A native integer width in bits.</p>
+</dd>
+<dt class="hdlist1"><a id="MXL"></a>MXL <sup>RV</sup></dt>
+<dd>
+<p>Machine XLEN field. A field in <code>misa</code> to set MXLEN.</p>
+</dd>
+<dt class="hdlist1"><a id="MXR"></a>MXR <sup>RV</sup></dt>
+<dd>
+<p>Make eXecutable Readable.</p>
+</dd>
+<dt class="hdlist1"><a id="NaN"></a>NaN</dt>
+<dd>
+<p>Not a number.</p>
+</dd>
+<dt class="hdlist1"><a id="NAPOT"></a>NAPOT <sup>RV</sup></dt>
+<dd>
+<p>Naturally aligned power-of-2.</p>
+</dd>
+<dt class="hdlist1"><a id="NIST"></a>NIST</dt>
+<dd>
+<p>National Institute of STandards.</p>
+</dd>
+<dt class="hdlist1"><a id="NMI"></a>NMI</dt>
+<dd>
+<p>Non-maskable interrupts.</p>
+</dd>
+<dt class="hdlist1"><a id="nonISA"></a>Non-ISA <sup>RV</sup></dt>
+<dd>
+<p>Non-Standard Extension.</p>
+</dd>
+<dt class="hdlist1"><a id="NOP"></a>NOP</dt>
+<dd>
+<p>No operation.</p>
+</dd>
+<dt class="hdlist1"><a id="NTL"></a>NTL</dt>
+<dd>
+<p>Non-Temporal Locality.</p>
+</dd>
+<dt class="hdlist1"><a id="NUMA"></a>NUMA</dt>
+<dd>
+<p>Non-uniform Memory Access.</p>
+</dd>
+<dt class="hdlist1"><a id="NVBITS"></a>NVBITS</dt>
+<dd>
+<p>Non-effective Virtual Address Bits.</p>
+</dd>
+<dt class="hdlist1"><a id="OBJ"></a>OBJ</dt>
+<dd>
+<p>Object.</p>
+</dd>
+<dt class="hdlist1"><a id="OCF"></a>OCF</dt>
+<dd>
+<p>Operation Code Field.</p>
+</dd>
+<dt class="hdlist1"><a id="opcode"></a>Opcode</dt>
+<dd>
+<p>Operation code.</p>
+</dd>
+<dt class="hdlist1"><a id="OS"></a>OS</dt>
+<dd>
+<p>Operating System.</p>
+</dd>
+<dt class="hdlist1"><a id="OSV"></a>OSV</dt>
+<dd>
+<p>Operating System Vendor.</p>
+</dd>
+<dt class="hdlist1"><a id="P2P"></a>P2P</dt>
+<dd>
+<p>Peer-to-peer.</p>
+</dd>
+<dt class="hdlist1"><a id="PASID"></a>PASID</dt>
+<dd>
+<p>Process Address Space Identifier.</p>
+</dd>
+<dt class="hdlist1"><a id="PBMT"></a>PBMT <sup>RV</sup></dt>
+<dd>
+<p>Page-Based Memory Types.</p>
+</dd>
+<dt class="hdlist1"><a id="PBMTE"></a>PBMTE <sup>RV</sup></dt>
+<dd>
+<p>Page Based Memory Types Extension.</p>
+</dd>
+<dt class="hdlist1"><a id="PC"></a>PC</dt>
+<dd>
+<p>Process Control.</p>
+</dd>
+<dt class="hdlist1"><a id="PCIeATS"></a>PCIe ATS</dt>
+<dd>
+<p>Peripheral Component Interconnect Express Address Translation Services.</p>
+</dd>
+<dt class="hdlist1"><a id="PDI"></a>PDI</dt>
+<dd>
+<p>Process-directory-index.</p>
+</dd>
+<dt class="hdlist1"><a id="PDT"></a>PDT</dt>
+<dd>
+<p>Process-directory-table.</p>
+</dd>
+<dt class="hdlist1"><a id="PE"></a>PE</dt>
+<dd>
+<p>The Portable Executable format.</p>
+</dd>
+<dt class="hdlist1"><a id="PEI"></a>PEI</dt>
+<dd>
+<p>The Portable Executable Image format.</p>
+</dd>
+<dt class="hdlist1"><a id="PLDM"></a>PLDM</dt>
+<dd>
+<p>Platform Level Data Model. Follows DMTF standard.</p>
+</dd>
+<dt class="hdlist1"><a id="PLIC"></a>PLIC</dt>
+<dd>
+<p>Progressive Lossless Image Coding.</p>
+</dd>
+<dt class="hdlist1"><a id="PLL"></a>PLL</dt>
+<dd>
+<p>Phase-Locked Loop.</p>
+</dd>
+<dt class="hdlist1"><a id="PM"></a>PM</dt>
+<dd>
+<p>Pointer Masking.</p>
+</dd>
+<dt class="hdlist1"><a id="PMA"></a>PMA <sup>RV</sup></dt>
+<dd>
+<p>Physical Memory Attributes.</p>
+</dd>
+<dt class="hdlist1"><a id="PMLEN"></a>PMLEN</dt>
+<dd>
+<p>Pointer Masking Length.</p>
+</dd>
+<dt class="hdlist1"><a id="PMM"></a>PMM</dt>
+<dd>
+<p>Pointer Masking Mode.</p>
+</dd>
+<dt class="hdlist1"><a id="PMP"></a>PMP <sup>RV</sup></dt>
+<dd>
+<p>Physical Memory Protection.</p>
+</dd>
+<dt class="hdlist1"><a id="PPN"></a>PPN</dt>
+<dd>
+<p>Physical Page Number.</p>
+</dd>
+<dt class="hdlist1"><a id="PPO"></a>PPO <sup>RV</sup></dt>
+<dd>
+<p>Preserved Program Order.</p>
+</dd>
+<dt class="hdlist1"><a id="PQC"></a>PQC</dt>
+<dd>
+<p>Post-Quantum Cryptography.</p>
+</dd>
+<dt class="hdlist1"><a id="POSIX"></a>POSIX</dt>
+<dd>
+<p>Portable Operating System Interface.</p>
+</dd>
+<dt class="hdlist1"><a id="PRI"></a>PRI</dt>
+<dd>
+<p>Page Request Interface.</p>
+</dd>
+<dt class="hdlist1"><a id="PSCID"></a>PSCID <sup>RV</sup></dt>
+<dd>
+<p>Process soft-context identifier.</p>
+</dd>
+<dt class="hdlist1"><a id="PT"></a>PT</dt>
+<dd>
+<p>Page Table.</p>
+</dd>
+<dt class="hdlist1"><a id="PTE"></a>PTE</dt>
+<dd>
+<p>Page Table Entry.</p>
+</dd>
+<dt class="hdlist1"><a id="PTEP"></a>PTEP</dt>
+<dd>
+<p>Parallel Telemetry Processor.</p>
+</dd>
+<dt class="hdlist1"><a id="PUD"></a>PUD</dt>
+<dd>
+<p>Patch Update.</p>
+</dd>
+<dt class="hdlist1"><a id="QEMU"></a>QEMU</dt>
+<dd>
+<p>Quick EMUlator.</p>
+</dd>
+<dt class="hdlist1"><a id="QOS"></a>QOS</dt>
+<dd>
+<p>Quality of Service.</p>
+</dd>
+<dt class="hdlist1"><a id="RAS"></a>RAS</dt>
+<dd>
+<p>Return-Address Stack.</p>
+</dd>
+<dt class="hdlist1"><a id="RelAvSe"></a>RAS</dt>
+<dd>
+<p>Reliability, Availability, and Serviceability.</p>
+</dd>
+<dt class="hdlist1"><a id="RCiEP"></a>RCiEP</dt>
+<dd>
+<p>Root Complex Integrated Endpoint.</p>
+</dd>
+<dt class="hdlist1"><a id="RCEC"></a>RCEC</dt>
+<dd>
+<p>Root Complex Event Collector.</p>
+</dd>
+<dt class="hdlist1"><a id="RERI"></a>RERI</dt>
+<dd>
+<p>Reliability, Availability, and Serviceability (RAS) error record register interface.</p>
+</dd>
+<dt class="hdlist1"><a id="RID"></a>RID</dt>
+<dd>
+<p>Requester ID.</p>
+</dd>
+<dt class="hdlist1"><a id="RC"></a>RC</dt>
+<dd>
+<p>Root Comple.</p>
+</dd>
+<dt class="hdlist1"><a id="RD"></a>RD</dt>
+<dd>
+<p>Resource Data.</p>
+</dd>
+<dt class="hdlist1"><a id="RDS"></a>RDS</dt>
+<dd>
+<p>Resource Data Small.</p>
+</dd>
+<dt class="hdlist1"><a id="RDL"></a>RDL</dt>
+<dd>
+<p>Resource Data Large.</p>
+</dd>
+<dt class="hdlist1"><a id="RID2"></a>RID</dt>
+<dd>
+<p>PCIe routing identifier. Also called PCIe RID.</p>
+</dd>
+<dt class="hdlist1"><a id="RISC"></a>RISC</dt>
+<dd>
+<p>Reduced Instruction Set Computer architecture.</p>
+</dd>
+<dt class="hdlist1"><a id="RNMI"></a>RNMI <sup>RV</sup></dt>
+<dd>
+<p>Resumable Non-Maskable Interrupts.</p>
+</dd>
+<dt class="hdlist1"><a id="RO"></a>RO</dt>
+<dd>
+<p>Read-only.</p>
+</dd>
+<dt class="hdlist1"><a id="RoT"></a>RoT</dt>
+<dd>
+<p>Root of trust.</p>
+</dd>
+<dt class="hdlist1"><a id="RP"></a>RP</dt>
+<dd>
+<p>Root Port.</p>
+</dd>
+<dt class="hdlist1"><a id="RTC"></a>RTC</dt>
+<dd>
+<p>Real-time clock.</p>
+</dd>
+<dt class="hdlist1"><a id="RV"></a>RV</dt>
+<dd>
+<p>Reliability Verification.</p>
+</dd>
+<dt class="hdlist1"><a id="RVA"></a>RVA</dt>
+<dd>
+<p>Relative Virtual Address.</p>
+</dd>
+<dt class="hdlist1"><a id="RVWMO"></a>RVWMO <sup>RV</sup></dt>
+<dd>
+<p>RISC-V Weak Memory Ordering.</p>
+</dd>
+<dt class="hdlist1"><a id="RVC"></a>RVC <sup>RV</sup></dt>
+<dd>
+<p>RISC-V compression.</p>
+</dd>
+<dt class="hdlist1"><a id="RW"></a>RW</dt>
+<dd>
+<p>Read-Write.</p>
+</dd>
+<dt class="hdlist1"><a id="RW1C"></a>RW1C</dt>
+<dd>
+<p>Read-Write-1-to-clear status.</p>
+</dd>
+<dt class="hdlist1"><a id="RW1S"></a>RW1S</dt>
+<dd>
+<p>Read-Write-1-to-set.</p>
+</dd>
+<dt class="hdlist1"><a id="S"></a>S <sup>RV</sup></dt>
+<dd>
+<p>Supervisor mode.</p>
+</dd>
+<dt class="hdlist1"><a id="SAR"></a>SAR</dt>
+<dd>
+<p>Sample At Reset.</p>
+</dd>
+<dt class="hdlist1"><a id="satp"></a>satp <sup>RV</sup></dt>
+<dd>
+<p>Supervisor Address Translation and Protection.</p>
+</dd>
+<dt class="hdlist1"><a id="SBBR"></a>SBBR</dt>
+<dd>
+<p>Server Base Boot Requirements.</p>
+</dd>
+<dt class="hdlist1"><a id="SBE"></a>SBE <sup>RV</sup></dt>
+<dd>
+<p>Supervisor Big Endian.</p>
+</dd>
+<dt class="hdlist1"><a id="SysBI"></a>SBI</dt>
+<dd>
+<p>System Binary Interface.</p>
+</dd>
+<dt class="hdlist1"><a id="SuperBI"></a>SBI <sup>RV</sup></dt>
+<dd>
+<p>Supervisor Binary Interface.</p>
+</dd>
+<dt class="hdlist1"><a id="SBSA"></a>SBSA</dt>
+<dd>
+<p>Server Base System Architecture.</p>
+</dd>
+<dt class="hdlist1"><a id="scause"></a>scause <sup>RV</sup></dt>
+<dd>
+<p>Supervisor Cause register.</p>
+</dd>
+<dt class="hdlist1"><a id="scounteren"></a>scounteren <sup>RV</sup></dt>
+<dd>
+<p>Supervisor Counter-enable register.</p>
+</dd>
+<dt class="hdlist1"><a id="scountinhibit"></a>scountinhibit <sup>RV</sup></dt>
+<dd>
+<p>Supervisor Counter Inhibit register.</p>
+</dd>
+<dt class="hdlist1"><a id="SDE"></a>SDE</dt>
+<dd>
+<p>Silent Data Error.</p>
+</dd>
+<dt class="hdlist1"><a id="SEE"></a>SEE <sup>RV</sup></dt>
+<dd>
+<p>Supervisor Execution Environment.</p>
+</dd>
+<dt class="hdlist1"><a id="senvcfg"></a>senvcfg <sup>RV</sup></dt>
+<dd>
+<p>Supervisor Environment Configuration register.</p>
+</dd>
+<dt class="hdlist1"><a id="sepc"></a>sepc <sup>RV</sup></dt>
+<dd>
+<p>Supervisor Exception Program Counter register.</p>
+</dd>
+<dt class="hdlist1"><a id="SEW"></a>SEW <sup>RV</sup></dt>
+<dd>
+<p>Selected Element Width.</p>
+</dd>
+<dt class="hdlist1"><a id="SFENCE"></a>SFENCE <sup>RV</sup></dt>
+<dd>
+<p>Store fence.</p>
+</dd>
+<dt class="hdlist1"><a id="SHA"></a>SHA</dt>
+<dd>
+<p>Secure Hash Algorithms.</p>
+</dd>
+<dt class="hdlist1"><a id="sip"></a>sip <sup>RV</sup></dt>
+<dd>
+<p>Supervisor Interrupt register. Also sie.</p>
+</dd>
+<dt class="hdlist1"><a id="SLLBI"></a>SLLBI</dt>
+<dd>
+<p>System Locality Latency and Bandwidth Information.</p>
+</dd>
+<dt class="hdlist1"><a id="SMAP"></a>SMAP</dt>
+<dd>
+<p>Supervisor Memory Access Prevention.</p>
+</dd>
+<dt class="hdlist1"><a id="SMBIOS"></a>SMBIOS</dt>
+<dd>
+<p>System Management BIOS.</p>
+</dd>
+<dt class="hdlist1"><a id="SMEP"></a>SMEP</dt>
+<dd>
+<p>Supervisor Memory Execution Prevention.</p>
+</dd>
+<dt class="hdlist1"><a id="smrnmi"></a>smrnmi <sup>RV</sup></dt>
+<dd>
+<p>Supervisor Resumable Non-Maskable Interrupts register.</p>
+</dd>
+<dt class="hdlist1"><a id="SOC"></a>SoC</dt>
+<dd>
+<p>System on Chip. Also referred as system-on-a-chip and system-on-chip.</p>
+</dd>
+<dt class="hdlist1"><a id="SP"></a>SP</dt>
+<dd>
+<p>Stack pointer.</p>
+</dd>
+<dt class="hdlist1"><a id="SPA"></a>SPA</dt>
+<dd>
+<p>Supervisor Physical Address.</p>
+</dd>
+<dt class="hdlist1"><a id="SPDM"></a>SPDM</dt>
+<dd>
+<p>Security Protocols and Data Models.</p>
+</dd>
+<dt class="hdlist1"><a id="SRAM"></a>SRAM</dt>
+<dd>
+<p>Static Random Access Memory.</p>
+</dd>
+<dt class="hdlist1"><a id="SRET"></a>SRET <sup>RV</sup></dt>
+<dd>
+<p>Supervisor Return from Trap.</p>
+</dd>
+<dt class="hdlist1"><a id="SRIOV"></a>SR-IOV</dt>
+<dd>
+<p>Single-Root I/O Virtualization. Follows PCI Express.</p>
+</dd>
+<dt class="hdlist1"><a id="sscratch"></a>sscratch <sup>RV</sup></dt>
+<dd>
+<p>Supervisor Scratch register.</p>
+</dd>
+<dt class="hdlist1"><a id="sstatus"></a>sstatus <sup>RV</sup></dt>
+<dd>
+<p>Supervisor status register.</p>
+</dd>
+<dt class="hdlist1"><a id="STCE"></a>STCE <sup>RV</sup></dt>
+<dd>
+<p>Supervisor TimeCmp Extension.</p>
+</dd>
+<dt class="hdlist1"><a id="STD"></a>STD</dt>
+<dd>
+<p>Standard.</p>
+</dd>
+<dt class="hdlist1"><a id="stval"></a>stval <sup>RV</sup></dt>
+<dd>
+<p>Supervisor Trap Value register.</p>
+</dd>
+<dt class="hdlist1"><a id="stvec"></a>stvec <sup>RV</sup></dt>
+<dd>
+<p>Supervisor trap vector base register.</p>
+</dd>
+<dt class="hdlist1"><a id="SUM"></a>SUM <sup>RV</sup></dt>
+<dd>
+<p>Supervisor User Memory access</p>
+</dd>
+<dt class="hdlist1"><a id="SVN"></a>SVN</dt>
+<dd>
+<p>Security version number.</p>
+</dd>
+<dt class="hdlist1"><a id="TAP"></a>TAP</dt>
+<dd>
+<p>TVM attestation payload.</p>
+</dd>
+<dt class="hdlist1"><a id="TCB"></a>TCB</dt>
+<dd>
+<p>Trusted Compute Base.</p>
+</dd>
+<dt class="hdlist1"><a id="TEE"></a>TEE</dt>
+<dd>
+<p>Trusted Execution Environment.</p>
+</dd>
+<dt class="hdlist1"><a id="TLB"></a>TLB</dt>
+<dd>
+<p>Translation Lookaside Buffer.</p>
+</dd>
+<dt class="hdlist1"><a id="TLP"></a>TLP</dt>
+<dd>
+<p>Transaction Layer Packet.</p>
+</dd>
+<dt class="hdlist1"><a id="TSM"></a>TSM</dt>
+<dd>
+<p>TEE security manager.</p>
+</dd>
+<dt class="hdlist1"><a id="TVM"></a>TVM</dt>
+<dd>
+<p>Trap Virtual Memory.</p>
+</dd>
+<dt class="hdlist1"><a id="TVM2"></a>TVM</dt>
+<dd>
+<p>TEE VM. See <a href="#convm">[convm]</a>.</p>
+</dd>
+<dt class="hdlist1"><a id="TW"></a>TW</dt>
+<dd>
+<p>Timeout Wait bit.</p>
+</dd>
+<dt class="hdlist1"><a id="U"></a>U <sup>RV</sup></dt>
+<dd>
+<p>User mode.</p>
+</dd>
+<dt class="hdlist1"><a id="UEC"></a>UEC</dt>
+<dd>
+<p>Uncorrected Error Critical.</p>
+</dd>
+<dt class="hdlist1"><a id="UED"></a>UED</dt>
+<dd>
+<p>Uncorrected Error Deferred.</p>
+</dd>
+<dt class="hdlist1"><a id="UBE"></a>UBE <sup>RV</sup></dt>
+<dd>
+<p>User Big Endian.</p>
+</dd>
+<dt class="hdlist1"><a id="UEIF"></a>UEIF</dt>
+<dd>
+<p>Unified Extensible Firmware Interface.</p>
+</dd>
+<dt class="hdlist1"><a id="URET"></a>URET <sup>RV</sup></dt>
+<dd>
+<p>User Return from Trap.</p>
+</dd>
+<dt class="hdlist1"><a id="VA"></a>VA</dt>
+<dd>
+<p>Virtual Address.</p>
+</dd>
+<dt class="hdlist1"><a id="VBITS"></a>VBITS</dt>
+<dd>
+<p>Virtual Address Bits.</p>
+</dd>
+<dt class="hdlist1"><a id="vcsr"></a>vcsr <sup>RV</sup></dt>
+<dd>
+<p>Vector Control and Status register.</p>
+</dd>
+<dt class="hdlist1"><a id="vill"></a>vill <sup>RV</sup></dt>
+<dd>
+<p>Virtual Type Illegal.</p>
+</dd>
+<dt class="hdlist1"><a id="vl"></a>vl <sup>RV</sup></dt>
+<dd>
+<p>Vector Length register.</p>
+</dd>
+<dt class="hdlist1"><a id="vlenb"></a>vlenb <sup>RV</sup></dt>
+<dd>
+<p>Vector Byte Length.</p>
+</dd>
+<dt class="hdlist1"><a id="VM"></a>VM</dt>
+<dd>
+<p>Virtual Machine.</p>
+</dd>
+<dt class="hdlist1"><a id="VMA"></a>VMA</dt>
+<dd>
+<p>Virtual Memory Allocation.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><a id="VMAdd"></a>Virtual Memory Address.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a id="VMM"></a>VMM</dt>
+<dd>
+<p>Virtual Machine Monitor.</p>
+</dd>
+<dt class="hdlist1"><a id="VS"></a>VS <sup>RV</sup></dt>
+<dd>
+<p>Virtual Supervisor.</p>
+</dd>
+<dt class="hdlist1"><a id="vsatp"></a>vsatp <sup>RV</sup></dt>
+<dd>
+<p>Virtual Supervisor Address Translation and Protection register.</p>
+</dd>
+<dt class="hdlist1"><a id="vscause"></a>vscause <sup>RV</sup></dt>
+<dd>
+<p>Virtual Supervisor Cause register.</p>
+</dd>
+<dt class="hdlist1"><a id="vsepc"></a>vsepc <sup>RV</sup></dt>
+<dd>
+<p>Virtual Supervisor Exception Program Counter register.</p>
+</dd>
+<dt class="hdlist1"><a id="vsew"></a>vsew <sup>RV</sup></dt>
+<dd>
+<p>Vector Selected Element Width.</p>
+</dd>
+<dt class="hdlist1"><a id="vstart"></a>vstart <sup>RV</sup></dt>
+<dd>
+<p>Vector Start Index register.</p>
+</dd>
+<dt class="hdlist1"><a id="vstatus"></a>vstatus <sup>RV</sup></dt>
+<dd>
+<p>Virtual Supervisor Status register. Also <code>vsstatus</code>.</p>
+</dd>
+<dt class="hdlist1"><a id="vsip"></a>vsip <sup>RV</sup></dt>
+<dd>
+<p>Virtual Supervisor Interrupt register. Also <code>vsie</code>.</p>
+</dd>
+<dt class="hdlist1"><a id="vsscratch"></a>vsscratch <sup>RV</sup></dt>
+<dd>
+<p>Virtual Supervisor Scratch register.</p>
+</dd>
+<dt class="hdlist1"><a id="vstimecmp"></a>vstimecmp <sup>RV</sup></dt>
+<dd>
+<p>Virtual Supervisor Timer register.</p>
+</dd>
+<dt class="hdlist1"><a id="vstval"></a>vstval <sup>RV</sup></dt>
+<dd>
+<p>Virtual Supervisor Trap Value register.</p>
+</dd>
+<dt class="hdlist1"><a id="vstvec"></a>vstvec <sup>RV</sup></dt>
+<dd>
+<p>Virtual Supervisor Trap Vector Base Address register.</p>
+</dd>
+<dt class="hdlist1"><a id="vtype"></a>vtype <sup>RV</sup></dt>
+<dd>
+<p>Vector Type register.</p>
+</dd>
+<dt class="hdlist1"><a id="vxrm"></a>vxrm <sup>RV</sup></dt>
+<dd>
+<p>Vector Fixed-Point Rounding Mode register.</p>
+</dd>
+<dt class="hdlist1"><a id="WeightedARL"></a>WARL</dt>
+<dd>
+<p>Weighted Average Run Length.</p>
+</dd>
+<dt class="hdlist1"><a id="WriteARL"></a>WARL <sup>RV</sup></dt>
+<dd>
+<p>Write Any Read Legal.</p>
+</dd>
+<dt class="hdlist1"><a id="WFI"></a>WFI <sup>RV</sup></dt>
+<dd>
+<p>Wait for Interrupt instruction.</p>
+</dd>
+<dt class="hdlist1"><a id="WLRL"></a>WLRL <sup>RV</sup></dt>
+<dd>
+<p>Write Legal Read Legal.</p>
+</dd>
+<dt class="hdlist1"><a id="WPRI"></a>WPRI <sup>RV</sup></dt>
+<dd>
+<p>Write Preserve Read Ignore.</p>
+</dd>
+<dt class="hdlist1"><a id="WRS"></a>WRS <sup>RV</sup></dt>
+<dd>
+<p>Wait-on-Reservation-Set.</p>
+</dd>
+<dt class="hdlist1"><a id="XCOFF"></a>XCOFF</dt>
+<dd>
+<p>The eXtended Common Object File Format.</p>
+</dd>
+<dt class="hdlist1"><a id="ZBT"></a>ZBT</dt>
+<dd>
+<p>Zero Bus Turnaround.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="glossary.html">Terms</a></span>
+  <span class="next"><a href="extension-naming.html">Extension naming conventions</a></span>
+</nav>
+</article>  </div>
+</main>
+</div>
+<footer class="footer flex">
+    <div id="footer-buttons" class="footer-buttons">
+        <a href="https://riscv.org/" target="_blank" rel="noopener noreferrer" class="footer-btn">riscv.org</a>
+        <a href="https://tech.riscv.org/" target="_blank" rel="noopener noreferrer" class="footer-btn">Technical Hub</a>
+        <a href="https://riscv.org/code-of-conduct/" target="_blank" rel="noopener noreferrer" class="footer-btn">Code of Conduct</a>
+        <a href="https://riscv.org/privacy-policy/" target="_blank" rel="noopener noreferrer" class="footer-btn">Privacy Policy</a>
+        <a href="https://riscv.org/members/" target="_blank" rel="noopener noreferrer" class="footer-btn">Join RISC-V</a>
+    </div>
+
+    <div id="RISC-V footer">
+     <p class="smallest antialiased">Copyright © RISC-V International®. All rights reserved. RISC-V, RISC-V International, and the RISC-V logos are trademarks of RISC-V International.</p>
+    </div>
+
+</footer>
+<script src="../../_/js/vendor/import.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async
+    src="../../_/js/vendor/asciidoctor-tabs.js"
+    data-sync-storage-key="docs:preferred-tab"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

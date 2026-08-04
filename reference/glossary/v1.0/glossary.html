@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>RISC-V terms :: RISC-V Ratified Specifications Library</title>
+    <link rel="canonical" href="https://riscv-admin.github.io/antora-dev.riscv.org/glossary/v1.0/glossary.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="acronyms.html">
+    <meta name="generator" content="Antora 3.1.15">
+    <script>
+!function (theme, navWidth) {
+  if (theme === 'dark') document.documentElement.classList.add('dark-theme')
+  if (navWidth) document.documentElement.style.setProperty('--nav-width', `${navWidth}px`)
+}(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'),
+  localStorage && localStorage.getItem('nav-width'))
+    </script>
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/vendor/asciidoctor-tabs.css">
+
+    <meta name="antora-ui-version" content="e21dd7fd49019e30705d24eccc0ac051a2bd5803"> 
+    <meta name="version" content="v1.0">
+    <meta name="component" content="glossary">
+    <meta name="latest-version" content="false">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var title = document.querySelector('h2');
+      if (title && document.title.startsWith('Untitled')) {
+        document.title = title.textContent.trim() + ' :: RISC-V Ratified Specifications Library';
+      }
+    });
+    </script>
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../_/img/favicon.ico">
+  </head>
+  <body class="article">
+<div id="dev-banner" class="dev-banner">
+  Welcome to the RISC-V Library Development site. See <a href="https://docs.riscv.org/">https://docs.riscv.org/</a> for the official documentation.
+</div>
+
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://riscv.org">
+        <img class="riscvlogo riscvlogo--light" src="../../_/img/risc-v_logo.svg" alt="RISCV" />
+        <img class="riscvlogo riscvlogo--dark" src="../../_/img/risc-v_logo_white.svg" alt="RISCV" />
+      </a>
+      <div class="navbar-item home">
+        <a class="navbar-link"
+          href="../../home/index.html"
+          aria-label="home"
+          title="home">
+          <img class="home-icon riscvlogo--light" src="../../_/img/library-icon.png" alt="Home" />
+          <img class="home-icon riscvlogo--dark" src="../../_/img/library-icon_white.png" alt="Home" />
+        </a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+      </div>
+      <div class="navbar-item search hide-for-print search-position" style="padding-left: 0;">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs" >
+        </div>
+        <div class="navbar-item" style="padding-left: 0;">
+          <label class="theme-toggler">
+            <input type="checkbox" type="checkbox" id="switch-theme-checkbox" name="switch-theme-checkbox" />
+            <span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="moon"
+                class="svg-inline--fa fa-moon moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path fill="currentColor"
+                  d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                </path>
+              </svg>
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sun"
+                class="svg-inline--fa fa-sun sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="currentColor"
+                  d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+                </path>
+              </svg></span>
+            <span class="text">light</span>
+          </label>
+        </div>
+      </div>
+  </nav>
+</header>
+<script>
+  !function (theme) {
+    if (theme === 'dark') {
+      document.getElementById('switch-theme-checkbox').parentElement.classList.add('active')
+    }
+  }(localStorage && localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)')?.matches && 'dark'))
+</script>
+<div class="body">
+<div class="nav-container" data-component="glossary" data-version="v1.0"
+  >
+  <aside class="nav">
+    <div class="panels">
+      <div class="nav-panel-menu is-active" data-panel="menu">
+        <nav class="nav-menu">
+          <ul class="nav-list" style="padding-left: 0; margin: 0;">
+            <li class="nav-item" style="padding-left: 0;">
+              <a class="nav-link" href="../../home/index.html">RISC-V Specifications</a>
+            </li>
+          </ul>
+<div class="context">
+    <span class="title">RISC-V Glossary</span>
+  </div>
+    <div class="version-box">
+      <select data-component="glossary" class="select-version">
+          <option
+            value="index.html"
+            data-version="v1.0"
+            
+            selected>
+            v1.0
+          </option>
+      </select>
+    </div>
+    <ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="index.html">Glossary</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link"  href="glossary.html">Terms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="acronyms.html">Acronyms and abbreviations</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link"  href="extension-naming.html">Extension naming conventions</a>
+  </li>
+</ul>
+  </li>
+</ul>
+            <div class="toggle-sm">
+            <button id="nav-toggle-2" class="nav-toggle"></button>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-collapse">
+        <button id="nav-collapse-toggle"><span></span></button>
+      </div>
+    </div>
+    <div class="nav-resize"></div>
+  </aside>
+</div>
+<script>
+!function (sidebar) {
+  var isHome = window.location.pathname.includes('/home/') || window.location.pathname === '/'
+  if (isHome || sidebar) {
+    document.body.classList.add('nav-sm')
+  }
+}(localStorage && localStorage.getItem('sidebar') === 'close')
+</script>
+<main class="article">
+<div class="toolbar" role="navigation">
+  <button id="nav-toggle-1" class="nav-toggle"></button>
+</div>
+  <div class="content">
+<aside class="sidebar">
+  <div class="content">
+    <div
+      class="toc"
+      data-title="RISC-V terms"
+      data-levels="5"
+    >
+      <div class="toc-menu"></div>
+    </div>
+    <div class="sidebar-links">
+        <a href="https://github.com/riscv/riscv-glossary/issues/new" target="_blank" title="Issues">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          ><path
+              d="m16 2.012 3 3L16.713 7.3l-3-3zM4 14v3h3l8.299-8.287-3-3zm0 6h16v2H4z"
+            ></path></svg>
+          Report a Problem
+        </a>
+        <a href="https://github.com/riscv/riscv-glossary" target="_blank" title="GitHub">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="512px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="512px"
+          ><style type="text/css">< .st0{fill-rule:evenodd;clip-rule:evenodd;}
+              ]]></style><g><path
+                class="st0"
+                d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"
+              ></path></g></svg>
+          GitHub Project
+        </a>
+
+
+
+
+          <a href="/reference/glossary/v1.0/_attachments/glossary.pdf" title="PDF" class="sidebar-link" download>
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+            <span>Download PDF</span>
+          </a>
+            
+      <hr class="sidebar-divider">
+      <a href="../../glossary/index.html" class="sidebar-link" title="Glossary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+          <path d="M19 2H5a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3zm-3 14H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V6h8v2z"/>
+        </svg>
+        Glossary
+      </a>
+    </div>
+  </div>
+</aside>
+<article class="doc">
+<div class="breadcrumbs-container">
+  <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ul>
+
+      <li><a href="../../home/index.html">RISC-V Specifications</a></li>
+
+              <li><a href="index.html">RISC-V Glossary</a></li>
+                </ul>
+  </nav>
+</div>
+<h1 id="page-title" class="page">RISC-V terms</h1>
+<div class="sect1">
+<h2 id="glossary"><a class="anchor" href="#glossary"></a>RISC-V terms</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This glossary includes definitions of terms specific to RISC-V as well as terms that are useful in understanding the architectures and technologies in use by RISC-V contributors and users.</p>
+</div>
+<div class="dlist glossary">
+<dl>
+<dt><a id="ABI"></a>ABI</dt>
+<dd>
+<p>Application Binary Interface. Abstractions and interfaces between applications and the AEE that control interactions. See 1.1. RISC-V Privileged Software Stack Terminology.</p>
+</dd>
+<dt><a id="accelerator"></a>Accelerator</dt>
+<dd>
+<p>Either a non-programmable fixed-function unit or a core that can operate autonomously, but is specialized for certain tasks.</p>
+</dd>
+<dt><a id="ACS"></a>ACS</dt>
+<dd>
+<p>Access Control Services. Follows PCI Express. A set of capabilities used to provide controls over routing of PCIe transactions.</p>
+</dd>
+<dt><a id="Addressfield"></a>Address field</dt>
+<dd>
+<p>Designated as a memory address or a processor register.</p>
+</dd>
+<dt><a id="AEE"></a>AEE</dt>
+<dd>
+<p>Application Execution Environment. The environment in which an application runs, from bare metal to full operating system. See 1.1. RISC-V Privileged Software Stack Terminology.</p>
+</dd>
+<dt><a id="AER"></a>AER</dt>
+<dd>
+<p>Advanced Error Reporting. A PCI Express (PCI Express) capability to support advanced error control and reporting.</p>
+</dd>
+<dt><a id="AIS31"></a>AIS 31</dt>
+<dd>
+<p>Information Security service for Europe and the global finance industry (for bank cards), written by BSI.</p>
+</dd>
+<dt><a id="AP"></a>AP</dt>
+<dd>
+<p>Application Processor. Application processors can support commodity operating systems, hypervisors/VMMs and applications software workloads. The AP subsystem may contain several processing units, on-chip caches, and other controllers for interfacing with memory, accelerators, and other fixed-function logic. Multiple APs may be used within a logical system.</p>
+</dd>
+<dt><a id="AtomicLD"></a>Atomic Layer Deposition</dt>
+<dd>
+<p>A layer-by-layer process that results in the deposition of thin films one atomic layer at a time in a highly controlled manner.</p>
+</dd>
+<dt><a id="ATS"></a>ATS</dt>
+<dd>
+<p>Address Translation Services. A PCIe protocol to support DevATC. Also called PCIe ATS.</p>
+</dd>
+<dt><a id="Attestation"></a>Attestation</dt>
+<dd>
+<p>The process by which a relying party can assess the security posture of the confidential workload based on verifying a set of HW-rooted cryptographically-protected evidence.</p>
+</dd>
+<dt><a id="BAR"></a>BAR</dt>
+<dd>
+<p>Base Address Register. Follows PCI Express. A register that is used by hardware to show the amount of system memory needed by a PCIe function and used by system software to set the base address of the allocated space.</p>
+</dd>
+<dt><a id="CDI"></a>CDI</dt>
+<dd>
+<p>Compound device identifier. A CDI is the value that represents the hardware, software and firmware combination measured by the TCB elements transitively. A CDI is the output of a DICE [R2] and is passed to the entity, which is measured by the previous TCB layer. The CDI is a secret that can be certified to use for attestation protocols.</p>
+</dd>
+<dt><a id="CLIC"></a>CLIC</dt>
+<dd>
+<p>Core-Local Interrupt Controller. A low-latency, vectored, preemptive interrupt controller for RISC-V systems.</p>
+</dd>
+<dt><a id="COFF"></a>COFF</dt>
+<dd>
+<p>The Common Object File Format. Used on Unix SVR3 and by some
+embedded targets, although ELF is normally chosen.</p>
+</dd>
+<dt><a id="confidentialComputing"></a>Confidentail computing</dt>
+<dd>
+<p>A computing paradigm that protects data in use by performing computation in a hardware-based, attested Trusted Execution Environment (TEE).</p>
+</dd>
+<dt><a id="CPUCache"></a>CPU Cache</dt>
+<dd>
+<p>Many CPUs include three kinds of caches to speed up data retrieval: an instruction cache for executable instruction fetch, a data cache for data store and fetch, and a translation lookaside buffer (TLB) for virtual-to-physical address translation for executable instructions and data.</p>
+</dd>
+<dt><a id="ChemicalVD"></a>Chemical Vapor Deposition</dt>
+<dd>
+<p>A chemical deposition process in which the wafer is exposed to one or more volatile precursors, which react and/or decompose on the substrate surface to produce the final film.</p>
+</dd>
+<dt><a id="conapp"></a>Confidential application</dt>
+<dd>
+<p>A user-mode application or library instantiation in a TVM. The user-mode application may be supported via a trusted runtime. The user-mode library may be hosted by a surrogate process runtime.</p>
+</dd>
+<dt><a id="conlib"></a>Confidentail library</dt>
+<dd>
+<p>See <a href="#conapp">Confidential application</a>.</p>
+</dd>
+<dt><a id="conmem"></a>Confidential memory</dt>
+<dd>
+<p>Memory that is subject to access-control, confidentiality and integrity mechanisms per the threat model for use in the CoVE system. Confidential memory may also be used by nonTCB/ hosting software with appropriate TCB controls on the configuration, e.g., a separate key used for TCB and non-TCB elements.</p>
+</dd>
+<dt><a id="convm"></a>Confidential VM</dt>
+<dd>
+<p>A VM instantiation of a confidential workload. Also called TEE VM (TVM).</p>
+</dd>
+<dt><a id="consistencymodel"></a>Consistency Model</dt>
+<dd>
+<p>A computing system supports a specific consistency model if operations on memory follow specific rules. For example, high level languages such as C++ and Java, partially maintain the contract by translating memory operations into low-level operations while preserving memory semantics. To hold to the contract, compilers might reorder some memory instructions, and library calls such as <code>pthread_mutex_lock()</code>, that encapsulates the required synchronization.</p>
+</dd>
+<dt><a id="coprocessor"></a>Coprocessor</dt>
+<dd>
+<p>A unit that is attached to a RISC-V core and is  sequenced by an instruction stream. It contains additional architectural state and instruction-set extensions, and possibly some limited autonomy relative to the primary RISC-V instruction stream.</p>
+</dd>
+<dt><a id="CSR"></a>CSR</dt>
+<dd>
+<p>Control and Status Register. CSRs are registers that store information. The standard RISC-V ISA sets aside a 12-bit encoding space (csr[11:0]) for up to 4,096 CSRs. By convention, the upper 4 bits of the CSR address (csr[11:8]) are used to encode the read and write accessibility of the CSRs, according to privilege level.</p>
+</dd>
+<dt><a id="custom"></a>Custom</dt>
+<dd>
+<p>A register or data structure field designated for custom use. Software that is not aware of the custom use must ignore custom fields and preserve value held in these fields when writing values to other fields in the same register.</p>
+</dd>
+<dt><a id="customextension"></a>Custom extensions</dt>
+<dd>
+<p>Custom encodings are not used for standard extensions and are made available for vendor-specific non-standard extensions. See 1.3. RISC-V ISA Overview in Unprivileged.</p>
+</dd>
+<dt><a id="D"></a>D</dt>
+<dd>
+<p>Debug mode. Provides access to more than M mode. This mode is used to debug implementations.</p>
+</dd>
+<dt><a id="DC"></a>DC</dt>
+<dd>
+<p>Device Context. A hardware representation of state that identifies a device and the VM where the device is assigned.</p>
+</dd>
+<dt><a id="DDI"></a>DDI</dt>
+<dd>
+<p>Device Directory Index. A sub-field of the unique device identifier used as a index into a leaf or non-leaf DDT structure.</p>
+</dd>
+<dt><a id="DDT"></a>DDT</dt>
+<dd>
+<p>Device Directory Table. A radix-tree structure that is traversed by using the
+unique device identifier to locate the Device Context structure.</p>
+</dd>
+<dt><a id="deviceID"></a>Device ID</dt>
+<dd>
+<p>An identification number that is up to 24-bits to identify the source of a DMA or interrupt request. For PCIe devices this is the routing identifier (RID).</p>
+</dd>
+<dt><a id="DevATC"></a>DevATC</dt>
+<dd>
+<p>Device Address Translation Cache. An address translation cache at the device.</p>
+</dd>
+<dt><a id="DIMM"></a>DIMM</dt>
+<dd>
+<p>Dual-In-line Memory Module. A packaging arrangement of memory devices on a socketable substrate.</p>
+</dd>
+<dt><a id="DMTF"></a>DMTF</dt>
+<dd>
+<p>Distributed Management Task Force. Industry association for promoting systems management and interoperability.</p>
+</dd>
+<dt><a id="dynamicobject"></a>Dynamic object</dt>
+<dd>
+<p>Another name for an ELF shared library.</p>
+</dd>
+<dt><a id="ECAM"></a>ECAM</dt>
+<dd>
+<p>Enhanced Configuration Access Method. Follows PCI Express. A mechanism to allow addressing of Configuration Registers for PCIe functions. In addition to the PCI Express Base Specification, see the detailed requirements in this document.</p>
+</dd>
+<dt><a id="ECOFF"></a>ECOFF</dt>
+<dd>
+<p>Extended Common Object File Format. Used on Alpha Digital Unix (formerly OSF/1), as well as Ultrix and Irix 4. A variant of COFF.</p>
+</dd>
+<dt><a id="effectiveaddress"></a>Effective address</dt>
+<dd>
+<p>A load or store address sent to the memory subsystem, excluding implicit accesses such as page-table walks.</p>
+</dd>
+<dt><a id="EP"></a>EP</dt>
+<dd>
+<p>Error/poisoned. Follows PCI Express. Also called Data Poisoning. EP is an error flag that accompanies data in some PCIe transactions to indicate the data is known to contain an error. Defined in PCI Express Base Specification 6.0 section 2.7.2. Unless otherwise blocked, the poison associated with the data must continue to propagate in the SoC internal interconnect.</p>
+</dd>
+<dt><a id="ES"></a>ES</dt>
+<dd>
+<p>Entropy Source. An input or a measured characteristic that supplies random bits for an I/O device on a computer, usually used to supply bits that an attacker cannot know, as part of security.</p>
+</dd>
+<dt><a id="executable"></a>Executable</dt>
+<dd>
+<p>A program, with instructions and symbols, and perhaps dynamic linking information. Normally produced by a linker.</p>
+</dd>
+<dt><a id="extension"></a>Extension</dt>
+<dd>
+<p>An instructon set that adds customization and specialization to each base integer ISA. An extension is categorized as Standard, Custom, or Non-conforming.</p>
+</dd>
+<dt><a id="FFH"></a>FFH</dt>
+<dd>
+<p>Functional Fixed Hardware, as it pertains to ACPI.</p>
+</dd>
+<dt><a id="flipflop"></a>Flip-flop</dt>
+<dd>
+<p>Electronic circuitry with two stable states for storing binary data. Data that is stored in a flip-flop is changed by applying specific inputs. Both flip-flops and latches are building blocks that are used in digital computing.</p>
+</dd>
+<dt><a id="FSM"></a>FSM</dt>
+<dd>
+<p>Finite-State Machine. An abstract machine that can be in exactly one of a finite number of states at any time.</p>
+</dd>
+<dt><a id="GPA"></a>GPA</dt>
+<dd>
+<p>Guest Physical Address. An address in the virtualized physical memory space of a virtual machine.</p>
+</dd>
+<dt><a id="GSCID"></a>GSCID</dt>
+<dd>
+<p>Guest soft-context identifier. An identification number used by software to uniquely identify a collection of devices assigned to a virtual machine. An IOMMU might tag IOATC entries with the GSCID. Device contexts programmed with the same GSCID must also be programmed with identical second-stage page tables.</p>
+</dd>
+<dt><a id="guest"></a>Guest</dt>
+<dd>
+<p>Software in a virtual machine.</p>
+</dd>
+<dt><a id="HART"></a>HART</dt>
+<dd>
+<p>An abstraction of a hardware thread that captures the important aspects of a real hardware thread for the purposes of defining the RISC-V specifications. In particular, a hart is the agent that executes instructions within an execution context.</p>
+</dd>
+<dt><a id="HBI"></a>HBI</dt>
+<dd>
+<p>Hypervisor Binary Interface. An interface for hypervisors to connect the HEE, isolating the hypervisor from details ofthe hardware platform. See 1.1. RISC-V Privileged Software Stack Terminology.</p>
+</dd>
+<dt><a id="hcounteren"></a>hcounteren</dt>
+<dd>
+<p>Hypervisor Counter-enable register.</p>
+</dd>
+<dt><a id="hedeleg"></a>hedeleg</dt>
+<dd>
+<p>Hypervisor Trap Delegation register. Also <code>hideleg</code>.</p>
+</dd>
+<dt><a id="HEE"></a>HEE</dt>
+<dd>
+<p>Hypervisor execution environment. The environment that runs the hypervisor. See 1.1. RISC-V Privileged Software Stack Terminology.</p>
+</dd>
+<dt><a id="heirarchyid"></a>Hierarchy ID</dt>
+<dd>
+<p>An identifier of a PCIe Hierarchy within which the Requester IDs are unique. Follows PCI Express. Also called Segment ID.</p>
+</dd>
+<dt><a id="hgatp"></a>hgatp</dt>
+<dd>
+<p>Hypervisor Guest Address Translation and Protection register.</p>
+</dd>
+<dt><a id="hideleg"></a>hideleg</dt>
+<dd>
+<p>Hypervisor Trap Delegation register. Also <code>hedeleg</code>.</p>
+</dd>
+<dt><a id="horizontaltrap"></a>Horizontal trap</dt>
+<dd>
+<p>A trap that stays at the current priviledge mode when triggered.</p>
+</dd>
+<dt><a id="hostbridge"></a>Host Bridge</dt>
+<dd>
+<p>Part of a SoC that connects host CPUs and memory to PCIe root ports, RCiEP, and non-PCIe devices integrated in the SoC. The host bridge is placed between the device(s) and the platform interconnect to process DMA transactions. IO Devices may perform DMA transactions using IO Virtual Addresses (VA, GVA or GPA). The host bridge invokes the associated IOMMU to translate the IOVA to Supervisor Physical Addresses (SPA). Also called IO Bridge.</p>
+</dd>
+<dt><a id="hostsoft"></a>Host Software</dt>
+<dd>
+<p>All software elements including type-1 or type-2 HS-mode VMM and OS; U-mode user-space VMM tools; ordinary VMs hosted by the VMM that emulate devices. The hosting platform is typically a multi-tenant platform that hosts multiple mutually distrusting software owned by different tenants</p>
+</dd>
+<dt><a id="HPC"></a>HPC</dt>
+<dd>
+<p>High-performance Computing. HPC refers to the use of parallel processing techniques to solve complex computational problems. It enables faster data processing and simulation by leveraging multiple processors or servers.</p>
+</dd>
+<dt><a id="hypervisor"></a>Hypervisor</dt>
+<dd>
+<p>A software entity that controls virtualization.</p>
+</dd>
+<dt><a id="IALIGN"></a>IALIGN</dt>
+<dd>
+<p>Refers to the instruction-address alignment constraint
+that the implementation enforces. Measured in bits.</p>
+</dd>
+<dt><a id="ICF"></a>ICF</dt>
+<dd>
+<p>Indentical Code Folding. ICF is an optimization to reduce output size by merging read-only sections by not only their names but by their contents. If two read-only sections happen to have the same metadata , actual contents and relocations, they are merged by ICF. It is known as an effective technique, and it usually reduces C++ program&#8217;s size by a few percent or more.</p>
+</dd>
+<dt><a id="IDsync"></a>ID Synchronization</dt>
+<dd>
+<p>The mechanisms by which code generated on a core (e.g., by a JIT compiler) is made visible to other cores.</p>
+</dd>
+<dt><a id="IEEE754"></a>IEEE 754</dt>
+<dd>
+<p>A technical standard for floating-point arithmetic established in 1985 by the Institute of Electrical and Electronics Engineers.</p>
+</dd>
+<dt><a id="IIRC"></a>IIRC</dt>
+<dd>
+<p>The International Integrated Reporting Council, previously the International Integrated Reporting Committee), was formed in August 2010 and aims to create a globally accepted framework for a process that results in communications by an organization about value creation over time.</p>
+</dd>
+<dt><a id="ignoretransformation"></a>Ignore transformation</dt>
+<dd>
+<p>A pointer-masking operation that replaces the upper PMLEN bits of an address with the sign-extended value of the most significant retained bit for virtual addresses, or with zeros for physical addresses.</p>
+</dd>
+<dt><a id="ILEN"></a>ILEN</dt>
+<dd>
+<p>Refers to the maximum instruction length supported by an
+implementation. ILEN is a multiple of IALIGN and measured in bits.</p>
+</dd>
+<dt><a id="imagebase"></a>Image base</dt>
+<dd>
+<p>An image base is the fixed address that Windows executables or DLLs  are linked against. Default image bases are 0x140000000 for executables and 0x18000000 for DLLs. For example, a executable is created, it is loaded at address 0x140000000 by the loader.</p>
+</dd>
+<dt><a id="IMSIC"></a>IMSIC</dt>
+<dd>
+<p>Incoming Message-Signaled Interrupt Controller (AIA extension). Other meanings may exist outside RISC-V context.</p>
+</dd>
+<dt><a id="instructionencodingspace"></a>Instruction encoding space</dt>
+<dd>
+<p>A number of instruction bits within which a base ISA or ISA extension is encoded. Divided into three separate spaces: Standard, Reserved, and Custom.</p>
+</dd>
+<dt><a id="IOATC"></a>IOATC</dt>
+<dd>
+<p>IOMMU Address Translation Cache. A cache in IOMMU that caches data structures that are used for address translations.</p>
+</dd>
+<dt><a id="iobridge"></a>IO Bridge</dt>
+<dd>
+<p>Part of a SoC that connects host CPUs and memory to PCIe root ports, RCiEP, and non-PCIe devices integrated in the SoC. The host bridge is placed between the device(s) and the platform interconnect to process DMA transactions. IO Devices may perform DMA transactions using IO Virtual Addresses (VA, GVA or GPA). The host bridge invokes the associated IOMMU to translate the IOVA to Supervisor Physical Addresses (SPA). Also called Host Bridge.</p>
+</dd>
+<dt><a id="IOVA"></a>IOVA</dt>
+<dd>
+<p>I/O Virtual Address. Virtual address for DMA by devices.</p>
+</dd>
+<dt><a id="IRC"></a>IRC</dt>
+<dd>
+<p>Internet Relay Chat. A protocol is for use with text based conferencing; the simplest client being any socket program capable of connecting to the server. See <a href="https://tools.ietf.org/html/rfc2812">Internet Relay Chat</a>.</p>
+</dd>
+<dt><a id="ISA"></a>ISA</dt>
+<dd>
+<p>Instruction set architecture. Programmer visible state that represence the boundary between hardware and software. Includes operations on that state.</p>
+</dd>
+<dt><a id="instructionset"></a>Instruction Set</dt>
+<dd>
+<p>A group of commands for a CPU in machine language that refers to all possible instructions for a CPU, or a subset of instructions to enhance its performance in specific situations.</p>
+</dd>
+<dt><a id="latch"></a>Latch</dt>
+<dd>
+<p>A circuit with two stable states that is used to store state information, known as a bi-stable multivibrator.</p>
+</dd>
+<dt><a id="LMA"></a>LMA</dt>
+<dd>
+<p>Load Memory Address. The address of a section when the section is loaded. Compare with VMA.</p>
+</dd>
+<dt><a id="LRSR"></a>LR/SC</dt>
+<dd>
+<p>Load Reserve/Store Conditional, also LL/SC. A pair of instructions that is used in multithreading to achieve synchronization. Load-link returns the current value of a memory location, while a subsequent store-conditional to the same memory location stores a new value only if updates did not occur to that location since the load-link. Together, these implement a lock-free atomic read-modify-write operation.</p>
+</dd>
+<dt><a id="LSA"></a>LSA</dt>
+<dd>
+<p>Load Store Architecture. A design that is architecturally neutral and that uses bit patterns in IEEE 754 floating-point to speed sign extension in ways that simplify the multiplexers in a CPU, by placing most-significant bits at a fixed location.</p>
+</dd>
+<dt><a id="M"></a>M</dt>
+<dd>
+<p>Machine Mode. A boot mode that allows access to the most trusted code. This mode is required in all RISC-V implementations. Also called M-mode. See 1.2. Privilege Levels.</p>
+</dd>
+<dt><a id="MCTP"></a>MCTP</dt>
+<dd>
+<p>Management Component Transport Protocol used for communication between components of a platform management system. Follows DMTF Standard.</p>
+</dd>
+<dt><a id="maskedbits"></a>Masked bits</dt>
+<dd>
+<p>The upper PMLEN bits of an address that are subject to pointer masking.</p>
+</dd>
+<dt><a id="MIPS"></a>MIPS</dt>
+<dd>
+<p>Microprocessor without Interlocked Pipelined Stages. A reduced instruction set computer (RISC) instruction set architecture developed by MIPS Computer Systems, now MIPS Technologies, based in the United States, that influenced later RISC architectures.</p>
+</dd>
+<dt><a id="MODE"></a>MODE</dt>
+<dd>
+<p>A field within an instruction or instruction set that specifies the way the operand or the effective address is determined.</p>
+</dd>
+<dt><a id="NIST"></a>NIST</dt>
+<dd>
+<p>National Institute of STandards. This institute maintains a set of time and measurement, and cryptographic standards for the USA, including inch.</p>
+</dd>
+<dt><a id="nonISA"></a>Non-ISA</dt>
+<dd>
+<p>Non-Standard Extension. Non-standard extensions are either custom extensions that use only custom encodings or non-conforming extensions that use any standard or reserved encoding. See 1.3. RISC-V ISA Overview in Unprivileged.</p>
+</dd>
+<dt><a id="nonprefetch"></a>Non-prefetchable</dt>
+<dd>
+<p>Follows PCI Express. Defines the property of the memory space used by a device. For details, see the PCIe Base Specification. Broadly, non-prefetchable space covers any locations where reads have side effects or where writes cannot be merged.</p>
+</dd>
+<dt><a id="NVBITS"></a>NVBITS</dt>
+<dd>
+<p>Non-effective Virtual Address Bits. Upper bits of a virtual address that have no effect on memory addressing and are used only for address-validity checks. Used by pointer masking.</p>
+</dd>
+<dt><a id="objectfile"></a>Object file</dt>
+<dd>
+<p>A binary file including machine instructions, symbols, and relocation information. Normally produced by an assembler.</p>
+</dd>
+<dt><a id="objectfileformat"></a>Object file format</dt>
+<dd>
+<p>The format of an object file.  Typically object files and executables for a specific system are in the same format, although executables do not contain any relocation information.</p>
+</dd>
+<dt><a id="OCF"></a>OCF</dt>
+<dd>
+<p>Operation Code Field. Specifies the operation to be performed.</p>
+</dd>
+<dt><a id="opcode"></a>Opcode</dt>
+<dd>
+<p>Operation code. Machine language instruction that specifies the operation to be performed.</p>
+</dd>
+<dt><a id="oslevelsb"></a>OS-level Sandboxing</dt>
+<dd>
+<p>A form of sandboxing implemented by the pointer masking proposal. There is no guarantee that sandboxed code cannot modify the pointer mask and therefore, the sandbox does not allow modifying pointer masks in user mode.</p>
+</dd>
+<dt><a id="P2P"></a>P2P</dt>
+<dd>
+<p>Peer-to-peer. Follows PCI Express. Transfer of data directly from one device to another. If the devices are under different PCIe Root Ports or are internal to the SoC this may involve data movement across the SoC internal interconnect.</p>
+</dd>
+<dt><a id="pagefault"></a>Page fault</dt>
+<dd>
+<p>A type of exception raised by computer hardware when a running program accesses a memory page that is not currently mapped by the memory management unit (MMU) into the virtual address space of a process.</p>
+</dd>
+<dt><a id="PASID"></a>PASID</dt>
+<dd>
+<p>Process Address Space Identifier. Identifies the address space of a process. The PASID value is provided in the PASID TLP prefix of the request.</p>
+</dd>
+<dt><a id="PCIeATS"></a>PCIe ATS</dt>
+<dd>
+<p>Peripheral Component Interconnect Express Address Translation Services. A PCIe protocol to support DevATC. Also called ATS.</p>
+</dd>
+<dt><a id="PDI"></a>PDI</dt>
+<dd>
+<p>Process-directory-index. A sub field of the unique process identifier used to index into a leaf or non-leaf PDT structure.</p>
+</dd>
+<dt><a id="PDT"></a>PDT</dt>
+<dd>
+<p>Process-directory-table. A radix tree data structure traversed using the unique Process identifier to locate the process context structure.</p>
+</dd>
+<dt><a id="PE"></a>PE</dt>
+<dd>
+<p>The Portable Executable format. PE is the object file format used for Windows (specifically, Win32) object files. It is based closely on COFF, but has a few significant differences.</p>
+</dd>
+<dt><a id="PEI"></a>PEI</dt>
+<dd>
+<p>The Portable Executable Image format. PEI is the object file format used for Windows (specifically, Win32) executables. It is very similar to PE, but includes additional header information.</p>
+</dd>
+<dt><a id="photolithography"></a>Photolithography</dt>
+<dd>
+<p>In microprocessor manufacturing, a process of using light to transfer a geometric pattern from a photomask (also called an optical mask) pattern parts to a photosensitive substrate on a thin film (substrate or wafer). The process can also make use of chemical photoresist on the substrate.</p>
+</dd>
+<dt><a id="platform"></a>Platform</dt>
+<dd>
+<p>A System Platform is a set of features users can depend on working together that includes things such as ISA Profiles, software components, hardware system components, standardized hardware/software interfaces, and other features. Currently RISC-V has defined two Platform types: OS/A and M (naming TBD).</p>
+</dd>
+<dt><a id="PLL"></a>PLL</dt>
+<dd>
+<p>Phase-Locked Loop. A control system that generates anoutput signal whose phase is related to the phase of an input signal. PLLs are commonly used to perform clock synthesis.</p>
+</dd>
+<dt><a id="PLIC"></a>PLIC</dt>
+<dd>
+<p>Platform-Level Interrupt Controller. Used for handling global interrupts in RISC-V systems.</p>
+</dd>
+<dt><a id="PPO"></a>PPO</dt>
+<dd>
+<p>Preserved Program Order. A strict sequential consistency that demands that operations be seen in the order in which they were issued.</p>
+</dd>
+<dt><a id="PQC"></a>PQC</dt>
+<dd>
+<p>Post-Quantum Cryptography. This standard is due to replace RSA and ECC in NIST cryptography [PQC] as well as military [NSA].</p>
+</dd>
+<dt><a id="POSIX"></a>POSIX</dt>
+<dd>
+<p>Portable Operating System Interface.</p>
+</dd>
+<dt><a id="prefetch"></a>Prefetchable</dt>
+<dd>
+<p>Follows PCI Express. Defines the property of the memory space used by a device. For details, see the PCIe Base Specification. Broadly, non-prefetchable space covers any locations where reads have side effects or where writes cannot be merged.</p>
+</dd>
+<dt><a id="PM"></a>PM</dt>
+<dd>
+<p>Pointer Masking. An operation that transforms an address by masking a number of its upper bits before the address is used to access memory.</p>
+</dd>
+<dt><a id="PMLEN"></a>PMLEN</dt>
+<dd>
+<p>Pointer Masking Length. The number of upper address bits that are masked by pointer masking.</p>
+</dd>
+<dt><a id="PMM"></a>PMM</dt>
+<dd>
+<p>Pointer Masking Mode. The CSR field that configures pointer-masking behavior.</p>
+</dd>
+<dt><a id="pointermasking"></a>Pointer masking</dt>
+<dd>
+<p>An arithmetic operation, defined by the pointer-masking extensions (Smmpm, Smnpm, Ssnpm, Sspm, and Supm), that transforms an address by masking a configurable number of its upper bits before the address is used to access memory.</p>
+</dd>
+<dt><a id="PRI"></a>PRI</dt>
+<dd>
+<p>Page Request Interface. A PCIe protocol that enables devices to requeprist OS memory manager services to make pages resident.</p>
+</dd>
+<dt><a id="privileged"></a>Privileged</dt>
+<dd>
+<p>Includes machine and supervisor mode. Privileged provides security isolation and reduces code defects because code does not have to check for illegal values. Privileged contains state, is used primarily to run applications and can be used to debug implementations. It defines CSR address space and content trap when taken increases privilege mode (say from U to S) trap when taken stays at the current privilege mode access more than even M mode. Its addresses reserved in ISA. address includes highest mode that access the CSR and if it is <code>r/w/rw/none</code> preserve bits already there when you change a field.</p>
+</dd>
+<dt><a id="processID"></a>Process ID</dt>
+<dd>
+<p>An identification number that is up to 20-bits to identify a process. context. For PCIe devices this is the PASID.</p>
+</dd>
+<dt><a id="profile"></a>Profile</dt>
+<dd>
+<p>(ISA Profile) a set of extensions (instructions, state and behaviors) that users can depend on working together. Extensions are either required, optional, unsupported, or incompatible. RISC-V has defined two Profile types: Application (RVAyy)--appropriate for Linux-class and other embedded designs with more sophisticated ISA needs&#8212;&#8203;and Micro-controller (RVMyy)--appropriate for cost-sensitive application-optimized embedded designs running bare-metal or simple RTOS environments.</p>
+</dd>
+<dt><a id="PSCID"></a>PSCID</dt>
+<dd>
+<p>Process soft-context identifier. An identification number used by software to identify a unique address space. The IOMMU may tag IOATC entries with PSCID.</p>
+</dd>
+<dt><a id="pseudoinstructions"></a>Psuedo instructions</dt>
+<dd>
+<p>In support of a core design goal for RISC-V ISAs&#8212;&#8203;high performance&#8212;&#8203;pseudo instructions often include special commands to the assembler. The use of pseudo instructions supports a policy of keeping the instruction set as small as possible, while supporting optimization and adding clarity to software programming. For example, the use of a pseudo instruction enables loading into memory with a 32-bit offset (called big) that is not directly available, because only 16-bit offsets are permitted.</p>
+</dd>
+<dt><a id="PTE"></a>PTE</dt>
+<dd>
+<p>Page Table Entry. An entry in the data structure used by virtual memory in the operating system to store the mapping between both virtual addresses and physical addresses, that enables access data in memory.</p>
+</dd>
+<dt><a id="PTEP"></a>PTEP</dt>
+<dd>
+<p>Parallel Telemetry Processor. A high- speed virtual processor architecture.</p>
+</dd>
+<dt><a id="PTG2"></a>PTG.2</dt>
+<dd>
+<p>A physical random number generator class defined in AIS 31/CC.</p>
+</dd>
+<dt><a id="QEMU"></a>QEMU</dt>
+<dd>
+<p>Quick EMUlator. QEMU is a free and open-source emulator and virtualizer that can perform hardware virtualization.</p>
+</dd>
+<dt><a id="QOS"></a>QOS</dt>
+<dd>
+<p>Quality of Service. Defined as the minimal end-to-end performance that is guaranteed in advance by a service level agreement (SLA) to a workload.</p>
+</dd>
+<dt><a id="RCiEP"></a>RCiEP</dt>
+<dd>
+<p>Root Complex Integrated Endpoint. Follows PCI Express. An internal peripheral that enumerates and behaves as specified in the PCIe standard.</p>
+</dd>
+<dt><a id="RCEC"></a>RCEC</dt>
+<dd>
+<p>Root Complex Event Collector. A block for collecting errors and PME messages in a standard way from various internal peripherals. Follows PCI Express.</p>
+</dd>
+<dt><a id="relyparty"></a>Relying party</dt>
+<dd>
+<p>An entity that depends on the validity of information about another entity, typically for purposes of authorization</p>
+</dd>
+<dt><a id="RID"></a>RID</dt>
+<dd>
+<p>Requester ID. Follows PCI Express. An identifier that uniquely identifies the requester within a PCIe Hierarchy. Needs to be extended with a Hierarchy ID to ensure it is unique across the platform.</p>
+</dd>
+<dt><a id="RC"></a>RC</dt>
+<dd>
+<p>Root Comple. Follows PCI Express. Part of the SoC that includes the Host Bridge, Root Port, and RCiEP.</p>
+</dd>
+<dt><a id="register"></a>Register</dt>
+<dd>
+<p>A group of flip-flops with each flip-flop capable of storing one bit of information. The simplest register is one that consists of only flip-flops with no external gates.</p>
+</dd>
+<dt><a id="relocation"></a>Relocations</dt>
+<dd>
+<p>Information used by the linker to adjust section contents. Also called relocs.</p>
+</dd>
+<dt><a id="relocs"></a>Relocs</dt>
+<dd>
+<p>See Relocations.</p>
+</dd>
+<dt><a id="reserved"></a>Reserved</dt>
+<dd>
+<p>A register or data structure field that is reserved for future use. Reserved fields in data structures must be set to 0 by software. Software must ignore reserved fields in registers and preserve the value held in these fields when writing values to other fields in the same register.</p>
+</dd>
+<dt><a id="RISC"></a>RISC</dt>
+<dd>
+<p>Reduced Instruction Set Computer architecture. Information processing that uses any of a family of microprocessors that are designed to execute computing tasks with the simplest instructions in the shortest amount of time. RISC-based machines execute one instruction per clock cycle as opposed to CISC (Complex Instruction Set Computer) machines that can have special instructions as well as instructions that take more than one cycle to execute.</p>
+</dd>
+<dt><a id="RO"></a>RO</dt>
+<dd>
+<p>Read-only. Register bits are read-only and cannot be altered by software. Where explicitly defined, these bits are used to reflect changing hardware state, and as a result bit values can be observed to change at run time. If the optional feature that would Set the bits is not implemented, the bits must be hardwired to Zero</p>
+</dd>
+<dt><a id="rocket"></a>Rocket</dt>
+<dd>
+<p>Parameterized SoC generator written in Chisel, designed to helps tune the design under different performance, power, area constraints, and diverse technology nodes.</p>
+</dd>
+<dt><a id="RoT"></a>RoT</dt>
+<dd>
+<p>Root of trust. The isolated hardware or software subsystem with an immutable ROM firmware and isolated compute and memory elements that form the Trusted Compute Base (TCB) of a TEE system. The RoT manages cryptographic keys and other security critical functions such as system lifecycle and debug authorization. The RoT provides trusted services to other software on the platform such as verified boot, key provisioning, and management, security lifecycle management, sealed storage, device management, crypto services, attestation etc. The RoT may be an integrated or discrete element</p>
+</dd>
+<dt><a id="RP"></a>RP</dt>
+<dd>
+<p>Root Port. Follows PCI Express. A PCIe port in a Root Complex used to map a Hierarchy Domain using a PCI-PCI bridge.</p>
+</dd>
+<dt><a id="RV"></a>RV</dt>
+<dd>
+<p>May refer to:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>RISC-V (commonly abbreviated as RV). May also refer to "Reduced Vector" in other contexts.</p>
+</li>
+<li>
+<p>Reliability Verification: A category of physical verification that helps ensure the robustness of a design by considering the context of schematic and layout information to perform user-definable checks against various electrical and physical design rules that reduce susceptibility to premature or catastrophic electrical failures, usually over time.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt><a id="RVA"></a>RVA</dt>
+<dd>
+<p>Relative Virtual Address. Windows executables or DLLs are not position-independent; they are linked against a fixed address called an image base. RVAs are offsets from an image base.</p>
+</dd>
+<dt><a id="RVWMO"></a>RVWMO</dt>
+<dd>
+<p>RISC-V Weak Memory Ordering. Default memory ordering model that loads return value written by latest store to the address of the later of in-program and memory order (see specifications for list of axiomatic and operational rules).</p>
+</dd>
+<dt><a id="RW"></a>RW</dt>
+<dd>
+<p>Read-Write. Register bits are read-write and are permitted to be either set or cleared by software to the desired state. If the optional feature that is associated with the bits is not implemented, the bits are permitted to be hardwired to zero (0).</p>
+</dd>
+<dt><a id="RW1C"></a>RW1C</dt>
+<dd>
+<p>Read-Write-1-to-clear status. Register bits that indicate status when read. A set bit indicates a status event that is Cleared by writing a 1b. Writing a 0b to RW1C bits has no effect. If the optional feature that sets the bit is not implemented, the bit must be read-only and hardwired to zero (0).</p>
+</dd>
+<dt><a id="RW1S"></a>RW1S</dt>
+<dd>
+<p>Read-Write-1-to-set. Register bits that indicate status when read. The bit can be set by writing 1b. Writing a 0b to RW1S bits has no effect. If the optional feature that introduces the bit is not implemented, the bit must be read-only and hardwired to zero (0).</p>
+</dd>
+<dt><a id="S"></a>S</dt>
+<dd>
+<p>Supervisor mode. The boot mode that provides support for operating systems, such as Linux. Also called S-mode. See 1.2. Privilege Levels.</p>
+</dd>
+<dt><a id="satp"></a>satp</dt>
+<dd>
+<p>Supervisor Address Translation and Protection. XLEN-bit read/write register that controls supervisor-mode address translation and protection and holds the physical page number (PPN) of the root page table&#8212;&#8203;an address space identifer (ASID) that facilitates address-translation fences
+on a per-address-space basis, and the MODE field, which selects the current address-translation scheme.</p>
+</dd>
+<dt><a id="SysBI"></a>SBI</dt>
+<dd>
+<p>System Binary Interface. SBI abstracts the interfaces that are required to run operating systems.</p>
+</dd>
+<dt><a id="SuperBI"></a>SBI</dt>
+<dd>
+<p>Supervisor Binary Interface. The interface that connects the operating system with the supervisor execution environment (SEE). See 1.1. RISC-V Privileged Software Stack Terminology.</p>
+</dd>
+<dt><a id="scala"></a>Scala</dt>
+<dd>
+<p>A statically-typed, general-purpose programming language that supports both object-oriented programming and functional programming. Designed to be concise, Scala&#8217;s design aims to address criticisms of Java, and it provides language interoperability with Java so that libraries written in either language can be referenced directly in both Scala and Java code. Scala source code can be compiled to Java bytecode and run on a Java virtual machine (JVM).</p>
+</dd>
+<dt><a id="section"></a>Section</dt>
+<dd>
+<p>Sections make up object files and executables and contain optional data and relocation information.</p>
+</dd>
+<dt><a id="SEE"></a>SEE</dt>
+<dd>
+<p>Supervisor Execution Environment. An environment where the operating systems run, which can be BIOS style interfaces, although it is not required. See 1.1. RISC-V Privileged Software Stack Terminology.</p>
+</dd>
+<dt><a id="segmentID"></a>Segment ID</dt>
+<dd>
+<p>An identifier of a PCIe Hierarchy within which the Requester IDs are unique. Also called Hierarchy ID.</p>
+</dd>
+<dt><a id="segfault"></a>Segmentation fault</dt>
+<dd>
+<p>A failure condition caused by a memory access violation in hardware operating with memory protection. The fault process notifies the operating system (OS) that software has attempted to access a restricted area of memory.</p>
+</dd>
+<dt><a id="SFENCE"></a>SFENCE</dt>
+<dd>
+<p>Store fence. A store fence orders the processor execution, releative to all memory stores. See 10.2.1 Supervisor Memory-Management Fence Instruction in the Priv ISA manual.</p>
+</dd>
+<dt><a id="SHA"></a>SHA</dt>
+<dd>
+<p>Secure Hash Algorithms. A family of cryptographic hash functions published by the National Institute of Standards and Technology as a U.S. Federal Information Processing Standard that started with what is now known as SHA-0, a retronym used for the original (1993) 160-bit hash function published under the name "SHA".</p>
+</dd>
+<dt><a id="sharedlibrary"></a>Shared library</dt>
+<dd>
+<p>A library of functions that can be used by many executables without requiring a link into each executable. There are several different implementations of shared libraries, each having slightly different features.</p>
+</dd>
+<dt><a id="SP800900"></a>SP 800 90B</dt>
+<dd>
+<p>Used in military and US government random security evaluations, written by NIST.</p>
+</dd>
+<dt><a id="SPA"></a>SPA</dt>
+<dd>
+<p>Supervisor Physical Address. Physical address used to to access memory and memory-mapped resources.</p>
+</dd>
+<dt><a id="SPDM"></a>SPDM</dt>
+<dd>
+<p>Security Protocols and Data Models. Follows DMTF Standard. A standard for authentication, attestation and key exchange to assist in providing infrastructure security enablement.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><a id="srmcfg"></a>srmcfg: Supervisor Resource Management Configuration register.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a id="standardextension"></a>Standard Extension</dt>
+<dd>
+<p>A category of extensions that use only standard encodings, and do not conflict with each other in their uses of these encodings. See 1.3. RISC-V ISA Overview in Unprivileged.</p>
+</dd>
+<dt class="hdlist1"><a id="stvec"></a>stvec</dt>
+<dd>
+<p>Supervisor trap vector base register. This register contains trap vector configuration, base address, and mode.</p>
+</dd>
+<dt class="hdlist1"><a id="SVN"></a>SVN</dt>
+<dd>
+<p>Security version number. SVN is the meta-data about the Trusted Compute Base (TCB) components that conveys the security posture of the TCB.</p>
+</dd>
+<dt class="hdlist1"><a id="symbol"></a>Symbol</dt>
+<dd>
+<p>A symbol is a name and an address. Each object file and executable has a list of symbols, often referred to as the symbol table. In addition, the symbol table contains additional information, such as the symbol type. Typically every global function and variable in a C program includes an associated symbol.</p>
+</dd>
+<dt class="hdlist1"><a id="targetvector"></a>Target vector</dt>
+<dd>
+<p>A set of functions which implement support for a particular object file format.</p>
+</dd>
+<dt class="hdlist1"><a id="TAP"></a>TAP</dt>
+<dd>
+<p>TVM attestation payload. TAP is a block of memory in a VM that TSM uses to perform local attestation as part of promoting a VM to a TVM.</p>
+</dd>
+<dt class="hdlist1"><a id="TCB"></a>TCB</dt>
+<dd>
+<p>Trusted Compute Base. TCB is the hardware, software, and firmware elements that are trustedby a relying party to protect the confidentiality and integrity of the relying parties' workload data and execution against a defined adversary model. In a system with separate processing elements within a package on a socket, the TCB boundary is the package. In a multi-socket system the Hardware TCB extends across the socket-tosocket interface, and is managed as one system TCB. The software TCB may also extends across multiple sockets.</p>
+</dd>
+<dt class="hdlist1"><a id="TEE"></a>TEE</dt>
+<dd>
+<p>Trusted Execution Environment. TEE is a set of hardware and software mechanisms that allow attestable creation and isolated execution
+environment.</p>
+</dd>
+<dt class="hdlist1"><a id="tenantsoft"></a>Tenant software</dt>
+<dd>
+<p>All software elements owned and deployed by a tenant in a multi-tenant hosting environment. These elements include VS-mode guest kernel and VU-mode guest user-space software.</p>
+</dd>
+<dt class="hdlist1"><a id="TLB"></a>TLB</dt>
+<dd>
+<p>Translation Lookaside Buffer. A memory buffer that enhances speed in retrieving a value by storing a memory address.</p>
+</dd>
+<dt class="hdlist1"><a id="transformedaddress"></a>Transformed address</dt>
+<dd>
+<p>An effective address after the pointer-masking ignore transformation has been applied.</p>
+</dd>
+<dt class="hdlist1"><a id="TRNG"></a>TRNG</dt>
+<dd>
+<p>True Random Number Generator. Also known as HRNG, or Hardware Random Number Generator. A device that generates random numbers from a physical process, rather than by means of an algorithm. Such devices are often based on microscopic phenomena that generate low-level, statistically random "noise" signals, like thermal noise, the photoelectric effect involving a beam splitter, and other quantum phenomena.</p>
+</dd>
+<dt class="hdlist1"><a id="TSM"></a>TSM</dt>
+<dd>
+<p>TEE security manager. TSM is a software module that enforces TEE security guarantees on a platform. It acts as the trusted intermediary between the VMM and the TVM.</p>
+</dd>
+<dt class="hdlist1"><a id="U"></a>U</dt>
+<dd>
+<p>User mode. The boot mode that runs the application code. Part of Unprivileged. Also called U-mode. See 1.2. Privilege Levels.</p>
+</dd>
+<dt class="hdlist1"><a id="unprivileged"></a>Unpriveleged</dt>
+<dd>
+<p>Unprivileged instructions are those that are generally usable in all privilege modes in all privileged architectures, though behavior can vary, depending on the specific privilege mode and privilege architecture.</p>
+</dd>
+<dt class="hdlist1"><a id="UR"></a>UR</dt>
+<dd>
+<p>Error returns to an access made to a PCIe hierarchy.</p>
+</dd>
+<dt class="hdlist1"><a id="userlevelsb"></a>User level sandboxing</dt>
+<dd>
+<p>A form of sandboxing that can be implemented by the pointer masking proposal where runtime and sandboxed code all run within the user mode and the sandboxed code was checked by the runtime to be unable to change pointer masks.</p>
+</dd>
+<dt class="hdlist1"><a id="VBITS"></a>VBITS</dt>
+<dd>
+<p>Virtual Address Bits. The bits within a virtual address that determine which memory is addressed. See <a href="#NVBITS">NVBITS</a>.</p>
+</dd>
+<dt class="hdlist1"><a id="virtualtraps"></a>Virtical traps</dt>
+<dd>
+<p>A trap that increases privilege mode when triggered. For example, increasing from U to S.</p>
+</dd>
+<dt class="hdlist1"><a id="VM"></a>VM</dt>
+<dd>
+<p>Virtual Machine. An efficient, isolated duplicate of a physical computer system.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><a id="VMAdd"></a>Virtual Memory Address. The address of a section when an executable is run. See also LMA.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a id="VMM"></a>VMM</dt>
+<dd>
+<p>Virtual Machine Monitor. Also referred to as hypervisor.</p>
+</dd>
+<dt class="hdlist1"><a id="VS"></a>VS</dt>
+<dd>
+<p>Virtual Supervisor. Supervisor privilege in virtualization mode.</p>
+</dd>
+<dt class="hdlist1"><a id="WriteARL"></a>WARL</dt>
+<dd>
+<p>Write Any Read Legal. Attribute of a register field that is defined for only a subset of bit encodings, but allows any value to be written while guaranteeing to return a legal value whenever read.</p>
+</dd>
+<dt class="hdlist1"><a id="WLRL"></a>WLRL</dt>
+<dd>
+<p>Write Legal Read Legal. Check on writes, but no exception is required. The value that is read back for illegal written values is deterministic, but up to implementation.</p>
+</dd>
+<dt class="hdlist1"><a id="WPRI"></a>WPRI</dt>
+<dd>
+<p>Write Preserve Read Ignore. Attribute of a register field that is reserved for future use.</p>
+</dd>
+<dt class="hdlist1"><a id="XCOFF"></a>XCOFF</dt>
+<dd>
+<p>The eXtended Common Object File Format that is used on AIX operating systems. XCOFF is variant of COFF, with a completely different symbol table implementation.</p>
+</dd>
+<dt class="hdlist1"><a id="XLEN"></a>XLEN</dt>
+<dd>
+<p>Register width. The word is a reference to mathematical <code>X</code> and an abbreviation of the word "length."</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">Glossary</a></span>
+  <span class="next"><a href="acronyms.html">Acronyms and abbreviations</a></span>
+</nav>
+</article>  </div>
+</main>
+</div>
+<footer class="footer flex">
+    <div id="footer-buttons" class="footer-buttons">
+        <a href="https://riscv.org/" target="_blank" rel="noopener noreferrer" class="footer-btn">riscv.org</a>
+        <a href="https://tech.riscv.org/" target="_blank" rel="noopener noreferrer" class="footer-btn">Technical Hub</a>
+        <a href="https://riscv.org/code-of-conduct/" target="_blank" rel="noopener noreferrer" class="footer-btn">Code of Conduct</a>
+        <a href="https://riscv.org/privacy-policy/" target="_blank" rel="noopener noreferrer" class="footer-btn">Privacy Policy</a>
+        <a href="https://riscv.org/members/" target="_blank" rel="noopener noreferrer" class="footer-btn">Join RISC-V</a>
+    </div>
+
+    <div id="RISC-V footer">
+     <p class="smallest antialiased">Copyright © RISC-V International®. All rights reserved. RISC-V, RISC-V International, and the RISC-V logos are trademarks of RISC-V International.</p>
+    </div>
+
+</footer>
+<script src="../../_/js/vendor/import.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async
+    src="../../_/js/vendor/asciidoctor-tabs.js"
+    data-sync-storage-key="docs:preferred-tab"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

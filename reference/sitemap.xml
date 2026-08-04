@@ -28,6 +28,9 @@
 <loc>https://riscv-admin.github.io/antora-dev.riscv.org/sitemap-e-trace.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://riscv-admin.github.io/antora-dev.riscv.org/sitemap-glossary.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://riscv-admin.github.io/antora-dev.riscv.org/sitemap-hardware-overview.xml</loc>
 </sitemap>
 <sitemap>
