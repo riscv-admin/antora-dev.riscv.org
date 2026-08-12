@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>1.1. Control and Status Registers (CSRs) Added to Harts :: RISC-V Ratified Specifications Library</title>
+    <title>2.1. Control and Status Registers (CSRs) Added to Harts :: RISC-V Ratified Specifications Library</title>
     <link rel="canonical" href="https://riscv-admin.github.io/antora-dev.riscv.org/aia/v1.0/CSRs.html">
     <link rel="prev" href="intro.html">
     <link rel="next" href="IMSIC.html">
@@ -141,28 +141,28 @@
     <a class="nav-link"  href="copyright.html">Copyright</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="intro.html">Introduction</a>
+    <a class="nav-link"  href="intro.html">Chapter 1. Introduction</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link"  href="CSRs.html">Chapter 1. CSRs Added to Harts</a>
+    <a class="nav-link"  href="CSRs.html">Chapter 2. CSRs Added to Harts</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="IMSIC.html">Chapter 2. Incoming MSI Controller (IMSIC)</a>
+    <a class="nav-link"  href="IMSIC.html">Chapter 3. Incoming MSI Controller (IMSIC)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="AdvPLIC.html">Chapter 3. Advanced PLIC (APLIC)</a>
+    <a class="nav-link"  href="AdvPLIC.html">Chapter 4. Advanced PLIC (APLIC)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="MSLevel.html">Chapter 4. Interrupts for Machine and Supervisor Levels</a>
+    <a class="nav-link"  href="MSLevel.html">Chapter 5. Interrupts for Machine and Supervisor Levels</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="VSLevel.html">Chapter 5. Interrupts for Virtual Machines (VS Level)</a>
+    <a class="nav-link"  href="VSLevel.html">Chapter 6. Interrupts for Virtual Machines (VS Level)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="IPIs.html">Chapter 6. Interprocessor Interrupts (IPIs)</a>
+    <a class="nav-link"  href="IPIs.html">Chapter 7. Interprocessor Interrupts (IPIs)</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="IOMMU.html">Chapter 7. IOMMU Support for MSIs to Virtual Machines</a>
+    <a class="nav-link"  href="IOMMU.html">Chapter 8. IOMMU Support for MSIs to Virtual Machines</a>
   </li>
 </ul>
   </li>
@@ -396,7 +396,7 @@
   <div class="content">
     <div
       class="toc"
-      data-title="1.1. Control and Status Registers (CSRs) Added to Harts"
+      data-title="2.1. Control and Status Registers (CSRs) Added to Harts"
       data-levels="5"
     >
       <div class="toc-menu"></div>
@@ -463,9 +463,9 @@
                 </ul>
   </nav>
 </div>
-<h1 id="page-title" class="page">1.1. Control and Status Registers (CSRs) Added to Harts</h1>
+<h1 id="page-title" class="page">2.1. Control and Status Registers (CSRs) Added to Harts</h1>
 <div class="sect1">
-<h2 id="CSRs"><a class="anchor" href="#CSRs"></a>1.1. Control and Status Registers (CSRs) Added to Harts</h2>
+<h2 id="CSRs"><a class="anchor" href="#CSRs"></a>2.1. Control and Status Registers (CSRs) Added to Harts</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>For each privilege level at which a RISC-V hart can take interrupt traps, the
@@ -473,7 +473,7 @@ Advanced Interrupt Architecture adds CSRs for interrupt control and
 handling.</p>
 </div>
 <div class="sect2">
-<h3 id="1-1-1-machine-level-csrs"><a class="anchor" href="#1-1-1-machine-level-csrs"></a>1.1.1. Machine-level CSRs</h3>
+<h3 id="2-1-1-machine-level-csrs"><a class="anchor" href="#2-1-1-machine-level-csrs"></a>2.1.1. Machine-level CSRs</h3>
 <div class="paragraph">
 <p><a href="#CSRs-M">Table 1</a> lists both the CSRs added for machine
 level and existing machine-level CSRs whose size is changed by the
@@ -671,7 +671,7 @@ instruction exception.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="1-1-2-supervisor-level-csrs"><a class="anchor" href="#1-1-2-supervisor-level-csrs"></a>1.1.2. Supervisor-level CSRs</h3>
+<h3 id="2-1-2-supervisor-level-csrs"><a class="anchor" href="#2-1-2-supervisor-level-csrs"></a>2.1.2. Supervisor-level CSRs</h3>
 <div class="paragraph">
 <p><a href="#CSRs-S">Table 2</a> lists the supervisor-level CSRs that are
 added and existing CSRs that are widened to 64 bits, if the hart
@@ -788,7 +788,7 @@ The subranges of values used for <code>siselect</code> are once again these:</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Because the VS CSR <code>vsiselect</code> (<a href="#hypervisor-vs-csrs">1.1.3. Hypervisor and VS CSRs</a>) always has at
+<p>Because the VS CSR <code>vsiselect</code> (<a href="#hypervisor-vs-csrs">2.1.3. Hypervisor and VS CSRs</a>) always has at
 least 9 bits, and like other VS CSRs, <code>vsiselect</code> substitutes for <code>siselect</code> when executing in
 a virtual machine (VS-mode or VU-mode), implementing a smaller range for
 <code>siselect</code> allows software to discover it is not running in a virtual machine.</p>
@@ -843,7 +843,7 @@ enabled for supervisor level, as specified in
 </div>
 </div>
 <div class="sect2">
-<h3 id="hypervisor-vs-csrs"><a class="anchor" href="#hypervisor-vs-csrs"></a>1.1.3. Hypervisor and VS CSRs</h3>
+<h3 id="hypervisor-vs-csrs"><a class="anchor" href="#hypervisor-vs-csrs"></a>2.1.3. Hypervisor and VS CSRs</h3>
 <div class="paragraph">
 <p>If a hart implements the H extension,
 then the hypervisor and VS CSRs listed in <a href="#CSRs-hypervisor">Table 3</a> are also either added or widened to 64 bits.</p>
@@ -1025,7 +1025,7 @@ Upper 32 bits of <code>vsip</code></p></td>
 <p>Other <code>vsiselect</code> values are reserved for other RISC-V extensions.</p>
 </div>
 <div class="paragraph">
-<p>For alias CSRs <code>sireg</code> and <code>vsireg</code>, the H extension&#8217;s usual rules for when to raise a virtual instruction exception (based on whether an instruction is <em>HS-qualified</em>) are not applicable. The rules given in this section for <code>sireg</code> and <code>vsireg</code> apply instead, unless overridden by the requirements of <a href="#CSRs-stateen">1.1.5. Access control by the state-enable CSRs</a>, which take precedence over this section
+<p>For alias CSRs <code>sireg</code> and <code>vsireg</code>, the H extension&#8217;s usual rules for when to raise a virtual instruction exception (based on whether an instruction is <em>HS-qualified</em>) are not applicable. The rules given in this section for <code>sireg</code> and <code>vsireg</code> apply instead, unless overridden by the requirements of <a href="#CSRs-stateen">2.1.5. Access control by the state-enable CSRs</a>, which take precedence over this section
 when extension Smstateen is also implemented.</p>
 </div>
 <div class="paragraph">
@@ -1066,7 +1066,7 @@ access <code>stopei</code> raise a virtual instruction exception.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="1-1-4-virtual-instruction-exceptions"><a class="anchor" href="#1-1-4-virtual-instruction-exceptions"></a>1.1.4. Virtual instruction exceptions</h3>
+<h3 id="2-1-4-virtual-instruction-exceptions"><a class="anchor" href="#2-1-4-virtual-instruction-exceptions"></a>2.1.4. Virtual instruction exceptions</h3>
 <div class="paragraph">
 <p>Following the default rules for the H extension, attempts from
 VS-mode to directly access a hypervisor or VS CSR other than <code>vsireg</code>, or from
@@ -1074,14 +1074,14 @@ VU-mode to access any supervisor-level CSR (including hypervisor and VS
 CSRs) other than <code>sireg</code> or <code>vsireg</code>, usually raise not an illegal instruction exception but instead a virtual instruction exception. For details, see the H extension documentation.</p>
 </div>
 <div class="paragraph">
-<p>Instructions that read/write CSR <code>stopei</code> or <code>vstopei</code> are considered to be <em>HS-qualified</em> unless all of following are true: the hart has an IMSIC, extension Smstateen is implemented, and bit 58 of <code>mstateen0</code> is zero. (See the next section, <a href="#CSRs-stateen">1.1.5. Access control by the state-enable CSRs</a>, about <code>mstateen0</code>.)</p>
+<p>Instructions that read/write CSR <code>stopei</code> or <code>vstopei</code> are considered to be <em>HS-qualified</em> unless all of following are true: the hart has an IMSIC, extension Smstateen is implemented, and bit 58 of <code>mstateen0</code> is zero. (See the next section, <a href="#CSRs-stateen">2.1.5. Access control by the state-enable CSRs</a>, about <code>mstateen0</code>.)</p>
 </div>
 <div class="paragraph">
-<p>For <code>sireg</code> and <code>vsireg</code>, see both the previous section, <a href="#hypervisor-vs-csrs">1.1.3. Hypervisor and VS CSRs</a>, and the next, <a href="#CSRs-stateen">1.1.5. Access control by the state-enable CSRs</a>, for when a virtual instruction exception is required instead of an illegal instruction exception.</p>
+<p>For <code>sireg</code> and <code>vsireg</code>, see both the previous section, <a href="#hypervisor-vs-csrs">2.1.3. Hypervisor and VS CSRs</a>, and the next, <a href="#CSRs-stateen">2.1.5. Access control by the state-enable CSRs</a>, for when a virtual instruction exception is required instead of an illegal instruction exception.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="CSRs-stateen"><a class="anchor" href="#CSRs-stateen"></a>1.1.5. Access control by the state-enable CSRs</h3>
+<h3 id="CSRs-stateen"><a class="anchor" href="#CSRs-stateen"></a>2.1.5. Access control by the state-enable CSRs</h3>
 <div class="paragraph">
 <p>If extension Smstateen is implemented together with the Advanced
 Interrupt Architecture (AIA), three bits of state-enable register <code>mstateen0</code> control access to AIA-added state from privilege modes less privileged
@@ -1159,7 +1159,7 @@ following raise a virtual instruction exception as described in <a href="#CSRs-h
 </table>
 </div>
 <div class="paragraph">
-<p>If the CSRIND bit of <code>mstateen0</code> is one, then regardless of any other <code>mstateen</code> bits (including the AIA and IMSIC bits of <code>mstateen0</code>), a virtual instruction exception is raised as described in <a href="#hypervisor-vs-csrs">1.1.3. Hypervisor and VS CSRs</a> for all attempts from VS-mode or
+<p>If the CSRIND bit of <code>mstateen0</code> is one, then regardless of any other <code>mstateen</code> bits (including the AIA and IMSIC bits of <code>mstateen0</code>), a virtual instruction exception is raised as described in <a href="#hypervisor-vs-csrs">2.1.3. Hypervisor and VS CSRs</a> for all attempts from VS-mode or
 VU-mode to directly access <code>vsireg</code>, and for all attempts from VU-mode to access <code>sireg</code>. This behavior is overridden only when <code>mstateen0</code>.CSRIND is zero.</p>
 </div>
 <div class="paragraph">
@@ -1198,8 +1198,8 @@ defined also in hypervisor CSR <code>hstateen0</code> but concern only the state
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="intro.html">Introduction</a></span>
-  <span class="next"><a href="IMSIC.html">Chapter 2. Incoming MSI Controller (IMSIC)</a></span>
+  <span class="prev"><a href="intro.html">Chapter 1. Introduction</a></span>
+  <span class="next"><a href="IMSIC.html">Chapter 3. Incoming MSI Controller (IMSIC)</a></span>
 </nav>
 </article>  </div>
 </main>
