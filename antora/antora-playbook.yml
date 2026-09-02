@@ -3,6 +3,7 @@ site:
   #url: https://docs.riscv.org/reference/
   url: https://riscv-admin.github.io/antora-dev.riscv.org
   start_page: home::index.adoc
+  dev_mode: true
   keys:
     # Top link shown above the left TOC navigation tree
     # (configured in riscv-antora-only-ui-dev/src/partials/nav.hbs)
