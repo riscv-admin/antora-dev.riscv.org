@@ -159,22 +159,28 @@ function textFor (doc, id, style) {
 }
 
 // Converted titles are HTML; the text goes back into AsciiDoc source.
+// Character references (&lt;, &#8594;, ...) are kept as they are: Asciidoctor
+// passes them through, so they render as the original characters without
+// ever being decoded here into markup that could be interpreted again.
 function plain (html) {
-  return String(html)
-    .replace(/<code>(.*?)<\/code>/g, '`$1`')
-    .replace(/<em>(.*?)<\/em>/g, '_$1_')
-    .replace(/<strong>(.*?)<\/strong>/g, '*$1*')
-    .replace(/<[^>]+>/g, '')
-    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&amp;/g, '&')
-    .trim()
+  let text = String(html)
+    .replace(/<code>([^<]*)<\/code>/g, '`$1`')
+    .replace(/<em>([^<]*)<\/em>/g, '_$1_')
+    .replace(/<strong>([^<]*)<\/strong>/g, '*$1*')
+  // Strip the remaining tags until none are left (a single pass can leave a
+  // tag behind, e.g. from "<<b>script>").
+  let previous
+  do {
+    previous = text
+    text = text.replace(/<[^<>]*>/g, '')
+  } while (text !== previous)
+  return text.replace(/[<>]/g, '').trim()
 }
 
+// Encode the characters that could end or escape the xref macro's text.
+// Backslashes first, so the encoding of "]" is not itself escaped.
 function escapeText (text) {
-  return text.replace(/]/g, '\\]')
+  return text.replace(/\\/g, '&#92;').replace(/]/g, '&#93;')
 }
 
-module.exports._test = { rewriteXrefs, textFor, plain }
+module.exports._test = { rewriteXrefs, textFor, plain, escapeText }
