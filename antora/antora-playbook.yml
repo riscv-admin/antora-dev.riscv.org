@@ -209,6 +209,11 @@ content:
     branches: v1.0-antora
     start_path: modules/tci
 
+ # HTI — component: hti | chapters
+  - url: https://github.com/riscv-non-isa/riscv-hart-trace-interface.git
+    branches: v1.0-antora
+    start_path: modules/hti
+
   # Semihosting — component: semihost | chapters 5–6
   - url: https://github.com/riscv-non-isa/riscv-semihosting.git
     branches: v1.0-antora
@@ -562,7 +567,6 @@ antora:
         chapters: {start: 6, end: 8}
         appendices: {start: 9, end: 10}
 
-
       # --- RIMT --------------------------------------------------------------
       - component: acpi-rimt
         module: ROOT
@@ -655,6 +659,13 @@ antora:
         module: ROOT
         branches: ['v1.0-antora']
         chapters: {start: 5, end: 6}
+
+      # ----- HTI ---------------------------------------------------
+      - component: hti
+        module: ROOT
+        branches: ['v1.0-antora']
+        chapters: {start: 4, end: 5}
+
 
       # docs-spec-template example spec — component: spec-sample | nav lines 7–8 (intro, chapter2)
       - component: spec-sample
