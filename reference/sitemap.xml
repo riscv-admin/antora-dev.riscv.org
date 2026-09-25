@@ -37,6 +37,9 @@
 <loc>https://riscv-admin.github.io/antora-dev.riscv.org/sitemap-home.xml</loc>
 </sitemap>
 <sitemap>
+<loc>https://riscv-admin.github.io/antora-dev.riscv.org/sitemap-hti.xml</loc>
+</sitemap>
+<sitemap>
 <loc>https://riscv-admin.github.io/antora-dev.riscv.org/sitemap-iommu.xml</loc>
 </sitemap>
 <sitemap>
