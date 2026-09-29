@@ -97,94 +97,42 @@ module.exports.register = function () {
 // ----------------------------------------------------------------
 
 function buildSpecsContainer(specs) {
-  const searchHtml = `<div class="dev-specs-search"><input type="text" placeholder="Search specifications..."></div>`
-
-  const statusOrder = ['stabilization', 'freeze', 'ratification-ready']
-  const uniqueStatuses = [...new Set(specs.map(s => s.status))].sort((a, b) => statusOrder.indexOf(a) - statusOrder.indexOf(b))
-  const allStatusBtn = '<button class="filter-btn filter-all-status active" data-type="status-all">All States</button>'
-  const statusBtns = allStatusBtn + uniqueStatuses
-    .map(status => {
-      const label = status.charAt(0).toUpperCase() + status.slice(1)
-      return `<button class="filter-btn" data-type="status" data-value="${status}">${label}</button>`
-    })
-    .join('')
-
-  const groupFilters = [...new Set(specs.map(s => s.group))].sort()
-  const groupBtns = groupFilters
-    .map(group => `<button class="filter-btn" data-type="group" data-value="${group}">${group}</button>`)
-    .join('')
-
-  const hasFastTrack = specs.some(s => s['fast-tracked'])
-  const fastTrackBtn = hasFastTrack ? '<button class="filter-btn" data-type="fasttrack" data-value="true">Fast Track</button>' : ''
-
-  const sortHtml = `<select class="sort-select"><option value="name">Sort by Name</option><option value="state">Sort by State</option></select>`
-
-  const bands = specs.map(buildBand).join('\n')
-
+  const cards = specs.map(buildDevCard).join('\n')
   return `++++
-<div class="dev-specs-container">
-  <div class="dev-specs-filters">
-    ${searchHtml}
-    <div class="dev-specs-state-filters">
-      <div class="filter-group">
-        ${statusBtns}
-      </div>
-    </div>
-    <div class="dev-specs-controls">
-      <div class="filter-group">
-        ${groupBtns}
-      </div>
-      ${fastTrackBtn}
-      ${sortHtml}
-    </div>
-  </div>
-  <div class="dev-specs-bands">
-${bands}
-  </div>
+<div class="dev-specs-grid">
+${cards}
 </div>
 ++++`
 }
 
-function buildBand(spec) {
-  const htmlButton = spec['html-url']
-    ? `<a href="${spec['html-url']}" class="spec-button">🌐 HTML</a>`
-    : `<span class="spec-button spec-button--disabled">🌐 HTML</span>`
-
-  const pdfButton = spec['pdf-url']
-    ? `<a href="${spec['pdf-url']}" class="spec-button" target="_blank" rel="noopener noreferrer">📄 PDF</a>`
-    : `<span class="spec-button spec-button--disabled">📄 PDF</span>`
-
+function buildDevCard(spec) {
+  const fastTrackPill = spec['fast-tracked']
+    ? ' • ⚡ Fast Track'
+    : ''
+  
+  const wipButton = '<button class="dev-card-btn dev-card-btn-wip" disabled>Work in Progress</button>'
+  
   const moreLink = spec['details-url']
-    ? `<a href="${spec['details-url']}" class="spec-more-link" target="_blank" rel="noopener noreferrer">→ More details</a>`
+    ? `<a href="${spec['details-url']}" class="dev-card-more" target="_blank" rel="noopener noreferrer">More</a>`
     : ''
 
-  const statusIndicator = getStatusIndicator(spec.status)
-  const fastTrackLabel = spec['fast-tracked'] ? '<span class="fast-track-label">Fast Track</span>' : ''
-
-  return `    <div class="dev-spec-band" data-status="${spec.status.toLowerCase()}" data-group="${escapeHtml(spec.group)}" data-fast-track="${spec['fast-tracked'] ? 'true' : 'false'}">
-      <div class="band-title">${escapeHtml(spec.title)}</div>
-      <div class="band-meta">
-        <span class="status-badge">${statusIndicator} ${escapeHtml(spec.status.charAt(0).toUpperCase() + spec.status.slice(1))}</span>
-        <span class="group-label">${escapeHtml(spec.group)}</span>
-        ${fastTrackLabel}
-      </div>
-      <div class="band-actions">
-        ${htmlButton}
-        ${pdfButton}
-        ${moreLink}
-      </div>
-    </div>`
-}
-
-function getStatusIndicator(status) {
-  const indicators = {
-    'planning': '📋',
-    'under development': '🔨',
-    'stabilization': '⚙️',
-    'freeze': '🔵',
-    'ratification-ready': '🟢'
-  }
-  return indicators[status.toLowerCase()] || '⭕'
+  return `<div class="dev-spec-card">
+  <div class="dev-card-banner">DRAFT</div>
+  <div class="card-header">
+    <h3 class="dev-card-title">${escapeHtml(spec.title)}</h3>
+  </div>
+  <div class="dev-card-content">
+    <div class="dev-card-meta">
+      ${escapeHtml(spec.group)}${fastTrackPill} • ${escapeHtml(capitalize(spec.status))}
+    </div>
+  </div>
+  <div class="dev-card-footer">
+    <div class="dev-card-actions">
+      ${wipButton}
+      ${moreLink}
+    </div>
+  </div>
+</div>`
 }
 
 function escapeHtml(str) {
@@ -193,4 +141,9 @@ function escapeHtml(str) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
+}
+
+function capitalize(str) {
+  if (!str) return str
+  return str.charAt(0).toUpperCase() + str.slice(1)
 }
