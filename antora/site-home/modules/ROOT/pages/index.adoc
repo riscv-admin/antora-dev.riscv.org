@@ -1,6 +1,6 @@
 = RISC-V Specifications Library
 
-Welcome to the RISC-V  Specifications Library. This site provides access to all ratified and under development RISC-V specifications.
+Welcome to the RISC-V Specifications Library. This site provides access to all ratified and under development RISC-V specifications.
 
 [#about-riscv]
 == About RISC-V
@@ -9,54 +9,10 @@ RISC-V (pronounced "risk-five") is an open standard instruction set architecture
 
 For more information, visit https://riscv.org[riscv.org].
 
-== RISC-V Ratified Specifications Library
+== RISC-V Specifications
 
-[%collapsible%open]
-.Core Architecture
-====
-// GENERATED-CARDS:isa
-====
+Browse all ratified and draft specifications below. Use the search box to find specifications by title, and use the filter buttons to narrow by status.
 
-[%collapsible]
-.Profiles
-====
-// GENERATED-CARDS:profile
-====
+// SPECS-SEARCH-FILTER
 
-[%collapsible]
-.Platforms
-====
-// GENERATED-CARDS:platforms
-====
-
-[%collapsible]
-.System Architecture
-====
-// GENERATED-CARDS:hardware
-====
-
-[%collapsible]
-.Debug, Trace, and RAS
-====
-// GENERATED-CARDS:debug-trace-ras
-====
-
-[%collapsible]
-.Platform Software
-====
-// GENERATED-CARDS:platform-software
-====
-
-[%collapsible]
-.Application Enablement
-====
-// GENERATED-CARDS:application-software
-====
-
-== Under Development
-
-Browse draft specifications currently under development by the RISC-V community. These documents are updated regularly. For the most current versions and specification status, use the link:https://riscv.github.io/adm-spec-dashboard/[RISC-V Specification Dashboard].
-
-// DEVELOPMENT-CARDS
-
-
+// ALL-SPECS-CARDS

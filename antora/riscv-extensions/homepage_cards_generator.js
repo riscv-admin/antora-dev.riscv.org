@@ -30,6 +30,10 @@
 // Components without page-group are silently skipped (e.g. home, common).
 //
 
+const fs = require('fs')
+const path = require('path')
+const yaml = require('js-yaml')
+
 module.exports.register = function () {
     this.on('contentClassified', ({ contentCatalog, playbook }) => {
         // ----------------------------------------------------------------
@@ -223,6 +227,51 @@ module.exports.register = function () {
                 }
             });
 
+            // Handle new unified search/filter markers
+            content = content.replace(/^\/\/ SPECS-SEARCH-FILTER$/gm, () => {
+                replaced++;
+                return buildSearchFilterUI();
+            });
+
+            content = content.replace(/^\/\/ ALL-SPECS-CARDS$/gm, () => {
+                // Collect all ratified specs from all groups
+                const allSpecs = [];
+                for (const specs of specsByGroup.values()) {
+                    allSpecs.push(...specs);
+                }
+                
+                // Also load under-development specs from YAML
+                const playbookDir = path.dirname(playbook.file);
+                const devSpecsPath = path.join(playbookDir, 'development-specs.yml');
+                if (fs.existsSync(devSpecsPath)) {
+                    try {
+                        const fileContent = fs.readFileSync(devSpecsPath, 'utf8');
+                        const data = yaml.load(fileContent);
+                        const devSpecs = (data && data['development-specs']) || [];
+                        if (Array.isArray(devSpecs)) {
+                            // Filter valid specs and mark them as under-dev
+                            devSpecs.forEach(spec => {
+                                if (spec.title && spec.status && spec.group) {
+                                    spec._isUnderDev = true;  // Mark as under-dev spec
+                                    allSpecs.push(spec);
+                                }
+                            });
+                        }
+                    } catch (err) {
+                        console.warn(`[homepage-cards] Error loading development-specs.yml: ${err.message}`);
+                    }
+                }
+                
+                if (allSpecs.length === 0) {
+                    console.log(`[homepage-cards] No specs found for ALL-SPECS-CARDS marker.`);
+                    return '';
+                }
+                replaced++;
+                // Sort by title for consistency
+                allSpecs.sort((a, b) => String(a.title).localeCompare(String(b.title)));
+                return buildSearchableCardGrid(allSpecs);
+            });
+
             if (replaced > 0) {
                 page.contents = Buffer.from(content);
                 console.log(`[homepage-cards] Injected card grids for ${replaced} group(s) in ${page.src?.component}:${page.src?.module}:${page.src?.relative}.`);
@@ -303,12 +352,79 @@ function buildCard(spec) {
     return `\t<div class="card shadow-tl card--xxs">
         <div class="card-ratified-banner">RATIFIED</div>
         <div class="card-header"><div style="display:flex;flex-direction:column;justify-content:center;width:100%;text-align:center;min-height:5.8rem;"><h5 style="hyphens:none;word-break:normal;overflow-wrap:normal;line-height:1.25;min-height:2.5em;">${escapeHtml(spec.title)}</h5>${meta}</div></div>
-        <div class="card-body"><div style="display:block;width:100%;"><div style="display:block;width:100%;hyphens:none;word-break:normal;overflow-wrap:normal;">${escapeHtml(spec.description)}</div></div></div>
         <div class="card-footer"><div class="card-actions"><a href="${htmlHref}" class="button button--primary">HTML</a>${pdfButton}</div>${moreLink}</div>
     </div>`
 }
 
 function buildCardMeta(spec) {
+    if (!spec.version && !spec.releaseDate) return ''
+
+    const versionLine = spec.version
+        ? `<div><strong>Version:</strong> ${escapeHtml(spec.version)}</div>`
+        : ''
+    const dateLine = spec.releaseDate
+        ? `<div>${escapeHtml(spec.releaseDate)}</div>`
+        : ''
+
+    return `<div class="card-meta" style="display:block;width:100%;box-sizing:border-box;margin-top:0.25rem;margin-bottom:0;font-size:calc(11 / var(--rem-base) * 1rem);line-height:1.25;text-align:center;border:1px solid #fdb515;padding:0.2rem 0.35rem;">${versionLine}${dateLine}</div>`
+}
+
+/**
+ * Returns the PDF button HTML.
+ * - If page-pdf_url starts with http(s), treat as an external link (no download attr).
+ * - If it looks like a relative path (e.g. _attachments/spec.pdf), prefix the
+ *   versioned component path so the path resolves correctly from home/index.html.
+ * - If absent, renders a disabled placeholder.
+ */
+function buildPdfButton(spec) {
+    if (!spec.pdfUrl) {
+        return `<span class="button button--secondary button--disabled">PDF</span>`
+    }
+    if (/^https?:\/\//i.test(spec.pdfUrl)) {
+        return `<a href="${spec.pdfUrl}" class="button button--secondary" target="_blank" rel="noopener noreferrer">PDF</a>`
+    }
+    // Relative path — use the short component path so attachment aliases can track the latest version.
+    const href = buildShortPath(spec.name, spec.pdfUrl.replace(/^\//, ''))
+    return `<a href="${href}" class="button button--secondary" target="_blank" rel="noopener noreferrer">PDF</a>`
+}
+
+/**
+ * Builds an under-development spec card
+ */
+function buildDevCard(spec) {
+  const fastTrackPill = spec['fast-tracked']
+    ? ' • ⚡ Fast Track'
+    : ''
+  
+  const wipButton = '<button class="dev-card-btn dev-card-btn-wip" disabled>Work in Progress</button>'
+  
+  const moreLink = spec['details-url']
+    ? `<a href="${spec['details-url']}" class="dev-card-more" target="_blank" rel="noopener noreferrer">More</a>`
+    : ''
+
+  return `<div class="dev-spec-card shadow-tl">
+  <div class="dev-card-banner">DRAFT</div>
+  <div class="card-header"><div style="display:flex;flex-direction:column;justify-content:center;width:100%;text-align:center;min-height:5.8rem;">
+    <h3 class="dev-card-title">${escapeHtml(spec.title)}</h3>
+    <div class="dev-card-meta">
+      ${escapeHtml(spec.group)}${fastTrackPill} • ${escapeHtml(capitalize(spec.status))}
+    </div>
+  </div></div>
+  <div class="dev-card-footer">
+    <div class="dev-card-actions">
+      ${wipButton}
+      ${moreLink}
+    </div>
+  </div>
+</div>`
+}
+
+function capitalize(str) {
+  if (!str) return str
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
+function escapeHtml(str) {
     if (!spec.version && !spec.releaseDate) return ''
 
     const versionLine = spec.version
@@ -346,6 +462,106 @@ function escapeHtml(str) {
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;')
+}
+
+/**
+ * Builds search and filter UI
+ */
+function buildSearchFilterUI() {
+    return `++++
+<div class="specs-search-filter">
+  <div class="search-box-wrapper">
+    <input type="text" id="specs-search" class="specs-search-input" placeholder="Search by title..." />
+  </div>
+  <div class="filter-buttons-wrapper">
+    <button class="filter-btn filter-btn-all active" data-filter="all">All</button>
+    <button class="filter-btn filter-btn-status" data-filter="ratified">Ratified</button>
+    <button class="filter-btn filter-btn-status" data-filter="ratification-ready">Ratification Ready</button>
+    <button class="filter-btn filter-btn-status" data-filter="freeze">Freeze</button>
+    <button class="filter-btn filter-btn-status" data-filter="stabilization">Stabilization</button>
+  </div>
+</div>
+<script>
+(function() {
+  const searchInput = document.getElementById('specs-search');
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  let currentFilter = 'all';
+  let currentSearch = '';
+  
+  function filterCards() {
+    const cards = document.querySelectorAll('.card, .dev-spec-card');
+    cards.forEach(card => {
+      const title = (card.getAttribute('data-title') || '').toLowerCase();
+      const status = (card.getAttribute('data-status') || '').toLowerCase();
+      const isRatified = card.classList.contains('card-ratified') || card.getAttribute('data-type') === 'ratified';
+      
+      let matchesSearch = currentSearch === '' || title.includes(currentSearch.toLowerCase());
+      let matchesFilter = currentFilter === 'all';
+      
+      if (!matchesFilter) {
+        if (currentFilter === 'ratified') {
+          matchesFilter = isRatified;
+        } else {
+          matchesFilter = status.includes(currentFilter);
+        }
+      }
+      
+      card.style.display = (matchesSearch && matchesFilter) ? '' : 'none';
+    });
+  }
+  
+  searchInput.addEventListener('input', (e) => {
+    currentSearch = e.target.value;
+    filterCards();
+  });
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      currentFilter = e.target.getAttribute('data-filter');
+      filterCards();
+    });
+  });
+})();
+</script>
+++++`
+}
+
+/**
+ * Builds a searchable card grid with data attributes for filtering
+ * Handles both ratified specs (using buildCard) and under-dev specs (using buildDevCard)
+ */
+function buildSearchableCardGrid(specs) {
+    const cards = specs.map(spec => {
+        let cardHtml;
+        let dataStatus;
+        
+        // Determine if spec is under-dev or ratified
+        if (spec._isUnderDev) {
+            // Under-development spec
+            cardHtml = buildDevCard(spec);
+            dataStatus = spec.status || 'unknown';
+        } else {
+            // Ratified spec
+            cardHtml = buildCard(spec);
+            dataStatus = 'ratified';
+        }
+        
+        // Add data attributes for filtering
+        const dataTitle = escapeHtml(spec.title);
+        const dataType = spec._isUnderDev ? 'under-dev' : 'ratified';
+        const dataAttr = ` data-title="${dataTitle}" data-status="${dataStatus}" data-type="${dataType}"`;
+        
+        // Insert data attributes into the card div (before the closing >)
+        if (spec._isUnderDev) {
+            return cardHtml.replace('<div class="dev-spec-card">', `<div class="dev-spec-card"${dataAttr}>`);
+        } else {
+            return cardHtml.replace('<div class="card shadow-tl card--xxs">', `<div class="card shadow-tl card--xxs"${dataAttr}>`);
+        }
+    }).join('\n');
+    
+    return `++++\n<div class="card-grid card-grid-3">\n${cards}\n</div>\n++++`;
 }
 
 function getSourceKey(url, startPath) {

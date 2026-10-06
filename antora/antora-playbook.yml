@@ -708,8 +708,8 @@ antora:
 # =============================================================================
 ui:
   bundle:
-    #url: ../../riscv-antora-only-ui-dev/build/ui-bundle.zip  # DEV: local UI bundle (requires npm run build)
-    url: https://github.com/riscv-admin/riscv-antora-only-ui-dev/releases/download/latest/ui-bundle.zip  # DEV: remote release bundle
+    url: ../../riscv-antora-only-ui-dev/build/ui-bundle.zip  # DEV: local UI bundle (requires npm run build)
+    #url: https://github.com/riscv-admin/riscv-antora-only-ui-dev/releases/download/latest/ui-bundle.zip  # DEV: remote release bundle
     #url: https://github.com/riscv-admin/riscv-antora-only-ui/releases/download/latest/ui-bundle.zip  # PROD: remote release bundle
     snapshot: true
   supplemental_files: ./supplemental-ui

@@ -1,5 +1,6 @@
 antora/build/*
 antora/build/
+antora/.cache/
 antora/node_modules/
 antora/yarn.lock
 antora/Gemfile.lock
