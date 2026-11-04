@@ -915,7 +915,7 @@ adds significant additional complexity to the encoder;</p>
 </li>
 <li>
 <p>It would complicate the algorithm shown in
-<a href="#fig:algo">[fig:algo]</a>.</p>
+<a href="exampleAlgorithm.html#fig:algo" class="xref page">Algorithm</a>.</p>
 </li>
 </ul>
 </div>
@@ -931,7 +931,7 @@ address of the trap handler, or of the exception itself - <a href="#sec:thaddr">
 </div>
 <div class="paragraph">
 <p>If the implicit exception mode is enabled (see
-<a href="#sec:implicit-exception">[sec:implicit-exception]</a>), the trap
+<a href="branchTrace.html#sec:implicit-exception" class="xref page">Implicit Exception</a>), the trap
 handler address is omitted if <strong>thaddr</strong> is 1.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch center">
@@ -1228,7 +1228,7 @@ be<br>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the Standard Support Packet extension (see <a href="#sec:ext-support">[sec:ext-support]</a>).</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the <a href="extensions.html#sec:ext-support" class="xref page">Standard Support Packet extension</a> (see <a href="extensions.html#sec:ext-support" class="xref page">Section 13.1</a>).</p>
 </div>
 </td>
 </tr>
@@ -1285,7 +1285,7 @@ indicated using <strong>ended_rep</strong>.</p>
 <p>This packet contains only an instruction address, and is used when the
 address of an instruction must be reported, and there is no unreported
 branch information. The address is in differential format unless full
-address mode is enabled (see <a href="#sec:full-address">[sec:full-address]</a>).</p>
+address mode is enabled (see <a href="branchTrace.html#sec:full-address" class="xref page">Full Address</a>).</p>
 </div>
 <table class="tableblock frame-all grid-all stretch center">
 <caption class="title">Table 5. Packet format 2</caption>
@@ -1362,7 +1362,7 @@ bits in this field will also be the same value as <strong>updiscon</strong>.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the Implicit Return extension (see <a href="#sec:ext-impret">[sec:ext-impret]</a>).  This replaces <strong>irdepth</strong> with <strong>irets</strong>.</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the <a href="extensions.html#sec:ext-impret" class="xref page">Implicit Return extension</a>.  This replaces <strong>irdepth</strong> with <strong>irets</strong>.</p>
 </div>
 </td>
 </tr>
@@ -1528,7 +1528,7 @@ is low). Using 2 separate bits results in superior compression.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p><strong>irdepth</strong> has been superseded by <strong>irets</strong> defined in the Implicit Return extension (see <a href="#sec:ext-impret">[sec:ext-impret]</a>).</p>
+<p><strong>irdepth</strong> has been superseded by <strong>irets</strong> defined in the <a href="extensions.html#sec:ext-impret" class="xref page">Implicit Return extension</a>.</p>
 </div>
 </td>
 </tr>
@@ -1599,7 +1599,7 @@ branch information must be reported (for example because the branch map
 is full), or when the address of an instruction must be reported, and
 there has been at least one branch since the previous packet. If
 included, the address is in differential format unless full address mode
-is enabled (see <a href="#sec:full-address">[sec:full-address]</a>).</p>
+is enabled (see <a href="branchTrace.html#sec:full-address" class="xref page">Full Address</a>).</p>
 </div>
 <table class="tableblock frame-all grid-all stretch center">
 <caption class="title">Table 6. Packet format 1 - address, branch map</caption>
@@ -1701,7 +1701,7 @@ bits in this field will also be the same value as <strong>updiscon</strong>.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the Implicit Return extension (see <a href="#sec:ext-impret">[sec:ext-impret]</a>).  This replaces <strong>irdepth</strong> with <strong>irets</strong>.</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the <a href="extensions.html#sec:ext-impret" class="xref page">Implicit Return extension</a>.  This replaces <strong>irdepth</strong> with <strong>irets</strong>.</p>
 </div>
 </td>
 </tr>
@@ -1963,7 +1963,7 @@ bits in this field will also be the same value as <strong>updiscon</strong>.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the Implicit Return extension (see <a href="#sec:ext-impret">[sec:ext-impret]</a>).  This replaces <strong>irdepth</strong> with <strong>irets</strong>.</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the <a href="extensions.html#sec:ext-impret" class="xref page">Implicit Return extension</a>.  This replaces <strong>irdepth</strong> with <strong>irets</strong>.</p>
 </div>
 </td>
 </tr>
@@ -2056,7 +2056,7 @@ or nested call count. If <strong>irreport</strong> is the same value as
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the Implicit Return extension (see <a href="#sec:ext-impret">[sec:ext-impret]</a>).  This replaces <strong>irdepth</strong> with <strong>irets</strong>.</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the <a href="extensions.html#sec:ext-impret" class="xref page">Implicit Return extension</a>.  This replaces <strong>irdepth</strong> with <strong>irets</strong>.</p>
 </div>
 </td>
 </tr>
@@ -2133,7 +2133,7 @@ or nested call count. If <strong>irreport</strong> is the same value as
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the Implicit Return extension (see <a href="#sec:ext-impret">[sec:ext-impret]</a>).  This replaces <strong>irdepth</strong> with <strong>irets</strong>.</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the <a href="extensions.html#sec:ext-impret" class="xref page">Implicit Return extension</a>.  This replaces <strong>irdepth</strong> with <strong>irets</strong>.</p>
 </div>
 </td>
 </tr>
@@ -2145,7 +2145,7 @@ or nested call count. If <strong>irreport</strong> is the same value as
 <p>The width of this field depends on the number of optional formats
 supported. Currently, two optional formats are defined (correctly
 predicted branches and jump target cache). The width is specified by the
-<em>f0s_width</em> discovery field (see <a href="#sec:disco">[sec:disco]</a>). If
+<em>f0s_width</em> discovery field (see <a href="discovery.html#sec:disco" class="xref page">Discovery</a>). If
 multiple optional formats are supported, the field width must be
 non-zero. However, if only one optional format is supported, the field
 can be omitted, and the value of the field inferred from the <strong>options</strong>
@@ -2184,7 +2184,7 @@ branch.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p><strong>irdepth</strong> has been superseded by <strong>irets</strong> defined in the Implicit Return extension (see <a href="#sec:ext-impret">[sec:ext-impret]</a>).</p>
+<p><strong>irdepth</strong> has been superseded by <strong>irets</strong> defined in the <a href="extensions.html#sec:ext-impret" class="xref page">Implicit Return extension</a>.</p>
 </div>
 </td>
 </tr>

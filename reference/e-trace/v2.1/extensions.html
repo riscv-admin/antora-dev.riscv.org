@@ -745,7 +745,7 @@
 </table>
 </div>
 <div class="paragraph">
-<p>The Efficient Trace for RISC-V v2.0 specification defines a support packet (see <a href="#sec:format33">[sec:format33]</a>) and when it must be sent.  The general requirements for the content of this packet are described, but the exact details of the payload is left to the implementor.  The original thinking was that this left flexibility for different encoder implementations to provide support information best suited to their specific capabilities, as well as allowing implementation-specific customizations.</p>
+<p>The Efficient Trace for RISC-V v2.0 specification defines a support packet (see <a href="payload.html#sec:format33" class="xref page">Format 3 Subformat 3</a>) and when it must be sent.  The general requirements for the content of this packet are described, but the exact details of the payload is left to the implementor.  The original thinking was that this left flexibility for different encoder implementations to provide support information best suited to their specific capabilities, as well as allowing implementation-specific customizations.</p>
 </div>
 <div class="paragraph">
 <p>However, this flexibility presents difficulties for applications such as Self-hosted Trace, where the operating system and decoding software need a single, consistent, standardized format.  Furthermore, correct trace decoding is dependent on several discoverable attributes of the trace encoder.  But in a Self-hosted context, the decoder will not be aware of which physical encoder instance is producing the trace it is decoding, and so will be unable to discover these attributes.  This issue can be addressed by including these attributes directly in the support packet.</p>
@@ -823,32 +823,32 @@ instruction</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>sijump</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When 1, targets of sequentially inferrable jumps not reported (see <a href="#sec:si-jump">[sec:si-jump]</a>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When 1, targets of sequentially inferrable jumps not reported (see <a href="branchTrace.html#sec:si-jump" class="xref page">Sequentially Inferrable Jumps</a>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>implicit_return</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When 1, implicit return mode enabled (see <a href="#sec:implicit-return">[sec:implicit-return]</a>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When 1, implicit return mode enabled (see <a href="branchTrace.html#sec:implicit-return" class="xref page">Implicit Return</a>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>branch_predictor</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When 1, branch predictor enabled (see <a href="#sec:branch-prediction">[sec:branch-prediction]</a>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When 1, branch predictor enabled (see <a href="branchTrace.html#sec:branch-prediction" class="xref page">Branch Prediction</a>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>jump_target_cache</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When 1, jump target cache enabled (see <a href="#sec:jump-cache">[sec:jump-cache]</a>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When 1, jump target cache enabled (see <a href="branchTrace.html#sec:jump-cache" class="xref page">Jump Target Cache</a>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>implicit_except</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When 1, implicit exception mode enabled (see <a href="#sec:implicit-exception">[sec:implicit-exception]</a>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When 1, implicit exception mode enabled (see <a href="branchTrace.html#sec:implicit-exception" class="xref page">Implicit Exception</a>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>full_iaddress</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When 1, <strong>te_inst</strong> packets always contain full (i.e. non-differential) addresses (see <a href="#sec:full-address">[sec:full-address]</a>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When 1, <strong>te_inst</strong> packets always contain full (i.e. non-differential) addresses (see <a href="branchTrace.html#sec:full-address" class="xref page">Full Address</a>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>resync_disabled</strong></p></td>
@@ -962,7 +962,7 @@ instruction</p></td>
 <div class="sect2">
 <h3 id="13-2-1-background"><a class="anchor" href="#13-2-1-background"></a>13.2.1. Background</h3>
 <div class="paragraph">
-<p>As described in <a href="#sec:implicit-return">[sec:implicit-return]</a>, when Implict Return mode is enabled, the target address of function returns is not usually reported.  When it <em>is</em> reported (for example because it&#8217;s the last instruction retired before a trap), there are some circumstances where the decoder cannot determine precisely which return target it is without some additional information from the encoder.</p>
+<p>As described in <a href="branchTrace.html#sec:implicit-return" class="xref page">Implicit Return</a>, when Implict Return mode is enabled, the target address of function returns is not usually reported.  When it <em>is</em> reported (for example because it&#8217;s the last instruction retired before a trap), there are some circumstances where the decoder cannot determine precisely which return target it is without some additional information from the encoder.</p>
 </div>
 <div class="paragraph">
 <p>One such circumstance occurs when decoding recursive functions.  Each recursively called function will have the same return target address, and including the depth of the return address stack allowed the decoder to determine which one has been reported.  However, it is now known that providing the stack depth results in incorrect decoding in other cases unrelated to recursive functions.  Consider the following illustration:</p>
@@ -981,7 +981,7 @@ Note that the stack depth is the same after the 1st function returns and after t
 <div class="sect2">
 <h3 id="13-2-2-revised-packet-formats"><a class="anchor" href="#13-2-2-revised-packet-formats"></a>13.2.2. Revised packet formats</h3>
 <div class="paragraph">
-<p>The following packet definitions replace those detailed in <a href="#packets">[packets]</a>.  All formats and fields are the same, except <strong>irdepth</strong> is replaced by <strong>irets</strong> throughout.</p>
+<p>The following packet definitions replace those detailed in <a href="payload.html#packets" class="xref page">Packet Formats</a>.  All formats and fields are the same, except <strong>irdepth</strong> is replaced by <strong>irets</strong> throughout.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch center">
 <caption class="title">Table 2. Packet format 2</caption>
@@ -1049,7 +1049,7 @@ bits in this field will also be the same value as <strong>updiscon</strong>.</p>
 <div class="sect3">
 <h4 id="sec:irets"><a class="anchor" href="#sec:irets"></a>13.2.2.1. Format 2 <strong>irreport</strong> and <strong>irets</strong></h4>
 <div class="paragraph">
-<p>These bits are encoded so that most of the time they will take the same value as the <strong>updiscon</strong> field, and will therefore compress away, having no impact on the encoding efficiency.  If Implicit Return mode is enabled, the encoder keeps track of function calls and returns, and does not generate <em>te_inst</em> packets for return target addresses that can be inferred by the decoder, as described in  <a href="#sec:implicit-return">[sec:implicit-return]</a>.</p>
+<p>These bits are encoded so that most of the time they will take the same value as the <strong>updiscon</strong> field, and will therefore compress away, having no impact on the encoding efficiency.  If Implicit Return mode is enabled, the encoder keeps track of function calls and returns, and does not generate <em>te_inst</em> packets for return target addresses that can be inferred by the decoder, as described in  <a href="branchTrace.html#sec:implicit-return" class="xref page">Implicit Return</a>.</p>
 </div>
 <div class="paragraph">
 <p>When reporting an address via <em>te_inst</em> when Implicit Return mode is enabled, the packet will include details of the number of implicit returns (i.e. return targets that have not been reported explicitly) since the last branch or <em>te_inst</em> packet under the following conditions:</p>
@@ -1240,7 +1240,7 @@ extensions</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>subformat</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">See <a href="#sec:f0s">[sec:f0s]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See <a href="payload.html#sec:f0s" class="xref page">Format 0 Subformat</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0 (correctly predicted
 branches)</p></td>
 </tr>
@@ -1324,7 +1324,7 @@ extensions</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>subformat</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">See <a href="#sec:f0s">[sec:f0s]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See <a href="payload.html#sec:f0s" class="xref page">Format 0 Subformat</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1 (jump target cache)</p></td>
 </tr>
 <tr>
@@ -1400,7 +1400,7 @@ extensions</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>subformat</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">See <a href="#sec:f0s">[sec:f0s]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See <a href="payload.html#sec:f0s" class="xref page">Format 0 Subformat</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1 (jump target cache)</p></td>
 </tr>
 <tr>
@@ -1485,7 +1485,7 @@ It adds <strong>dtype</strong> encodings to support data trace of multi-memory a
 <div class="sect2">
 <h3 id="13-3-1-revised-packet-formats"><a class="anchor" href="#13-3-1-revised-packet-formats"></a>13.3.1. Revised packet formats</h3>
 <div class="paragraph">
-<p>The following packet definitions replace those defined in <a href="#dataTracePackets">[dataTracePackets]</a>.  The <strong>format</strong> and <strong>subtype</strong> fields have been restructured but all other fields are the same.</p>
+<p>The following packet definitions replace those defined in <a href="dataTracePayload.html#dataTracePackets" class="xref page">Data Trace Packets</a>.  The <strong>format</strong> and <strong>subtype</strong> fields have been restructured but all other fields are the same.</p>
 </div>
 <div class="sect3">
 <h4 id="sec:dtrace-format"><a class="anchor" href="#sec:dtrace-format"></a>13.3.1.1. format field</h4>

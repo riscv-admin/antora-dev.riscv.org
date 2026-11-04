@@ -733,35 +733,35 @@
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#Interface">[Interface]</a> contents replaced with a reference to the <a href="https://docs.riscv.org/reference/hti/v1.0/_attachments/riscv-hart-trace-interface.pdf">RISC-V Hart to Trace Interface (RHTI) Specification</a>, V1.0.</p>
+<p><a href="ingressPort.html#Interface" class="xref page">Ingress Port Interface</a> contents replaced with a reference to the <a href="https://docs.riscv.org/reference/hti/v1.0/_attachments/riscv-hart-trace-interface.pdf">RISC-V Hart to Trace Interface (RHTI) Specification</a>, V1.0.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>This introduces a small normative change related to multi-memory access instructions; see <a href="#Interface">[Interface]</a> for details.</p>
+<p>This introduces a small normative change related to multi-memory access instructions; see <a href="ingressPort.html#Interface" class="xref page">Ingress Port Interface</a> for details.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Added <a href="#sec:ext-support">[sec:ext-support]</a>, which describes the Standard Support Packet extension to Version 2.0.</p>
+<p>Added <a href="extensions.html#sec:ext-support" class="xref page">Standard Support Packet extension</a>, which describes the Standard Support Packet extension to Version 2.0.</p>
 </li>
 <li>
-<p>Added <a href="#sec:ext-impret">[sec:ext-impret]</a>, which describes the Implicit Return extension to Version 2.0.</p>
+<p>Added <a href="extensions.html#sec:ext-impret" class="xref page">Implicit Return extension</a>, which describes the Implicit Return extension to Version 2.0.</p>
 </li>
 <li>
-<p>Added <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>, which describes the Data Trace of Multiple-Memory Access and Compare and Swap extension to Version 2.0.</p>
+<p>Added <a href="extensions.html#sec:ext-mmacas" class="xref page">Data Trace of Multiple-Memory Access and Compare and Swap</a>, which describes the Data Trace of Multiple-Memory Access and Compare and Swap extension to Version 2.0.</p>
 </li>
 <li>
-<p>Updated the decoder pseudo-code in <a href="#Decoder">[Decoder]</a> to include support for Implicit Return, Branch Predictor and Jump Target Cache optional modes.</p>
+<p>Updated the decoder pseudo-code in <a href="decoder.html#Decoder" class="xref page">Decoder</a> to include support for Implicit Return, Branch Predictor and Jump Target Cache optional modes.</p>
 </li>
 <li>
-<p>Corrections to <a href="#encoderControl">[encoderControl]</a>: <strong>trTeInstMode</strong> hardcoded to 6 (not 7 as previously stated), <strong>trTeContext</strong> and <strong>trTeInstImplicitReturnMode</strong> changed to optional rather than not-applicable.</p>
+<p>Corrections to <a href="control.html#encoderControl" class="xref page">Encoder Control</a>: <strong>trTeInstMode</strong> hardcoded to 6 (not 7 as previously stated), <strong>trTeContext</strong> and <strong>trTeInstImplicitReturnMode</strong> changed to optional rather than not-applicable.</p>
 </li>
 <li>
-<p>Fixed error in <strong>branch_map</strong> descriptions in tables in <a href="#sec:format1">[sec:format1]</a> introduced during earlier translation from LaTeX to asciidoc: values for branch taken or not taken were missing.</p>
+<p>Fixed error in <strong>branch_map</strong> descriptions in tables in <a href="payload.html#sec:format1" class="xref page">Format 1</a> introduced during earlier translation from LaTeX to asciidoc: values for branch taken or not taken were missing.</p>
 </li>
 <li>
-<p>Added informative recommendation regarding the use of partial timestamps in packet encapsulation to <a href="#ch:timestamping">[ch:timestamping]</a>.</p>
+<p>Added informative recommendation regarding the use of partial timestamps in packet encapsulation to <a href="timestamping.html#ch:timestamping" class="xref page">Timestamping</a>.</p>
 </li>
 <li>
 <p>Remove historical "Future directions" chapter.</p>
@@ -780,7 +780,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Updated <a href="#packets">[packets]</a> and <a href="#fragments">[fragments]</a> to reference the <a href="https://docs.riscv.org/reference/trace-encap/v1.0/_attachments/e-trace-encap.pdf">Unformatted Trace &amp; Diagnostic Data Packet Encapsulation for RISC-V Specification</a>;</p>
+<p>Updated <a href="payload.html#packets" class="xref page">Packets</a> and <a href="fragmentCodeAndTransport.html#fragments" class="xref page">Fragments</a> to reference the <a href="https://docs.riscv.org/reference/trace-encap/v1.0/_attachments/e-trace-encap.pdf">Unformatted Trace &amp; Diagnostic Data Packet Encapsulation for RISC-V Specification</a>;</p>
 </li>
 <li>
 <p>Removed ambiguity between 'last' and 'final'.  Last was previously used to mean both the instruction before the current one, and the final instruction traced;</p>
@@ -789,28 +789,28 @@
 <p>Clarified behaviour when trace-on and trace-off triggers occur both occur in the same cycle (now in <a href="https://docs.riscv.org/reference/hti/v1.0/_attachments/riscv-hart-trace-interface.pdf">RHTI Specification</a>);</p>
 </li>
 <li>
-<p>Clarified that full synchronization also takes place on a privilege change (see <a href="#sec:synchronization">[sec:synchronization]</a> and <a href="#sec:thaddr">[sec:thaddr]</a>);</p>
+<p>Clarified that full synchronization also takes place on a privilege change (see <a href="branchTrace.html#sec:synchronization" class="xref page">Synchronization</a> and <a href="payload.html#sec:thaddr" class="xref page">Thread Address</a>);</p>
 </li>
 <li>
 <p>Reworded jump classifications to align with terminology used in other specifications (now in <a href="https://docs.riscv.org/reference/hti/v1.0/_attachments/riscv-hart-trace-interface.pdf">RHTI Specification</a>);</p>
 </li>
 <li>
-<p>Clarified when to issue sync-support packet when trace is enabled (see <a href="#sec:format33">[sec:format33]</a>);</p>
+<p>Clarified when to issue sync-support packet when trace is enabled (see <a href="payload.html#sec:format33" class="xref page">Format 33</a>);</p>
 </li>
 <li>
-<p>Clarified that branch_map can be set to 31 any time an address needs to be reported and the branch map is full (see <a href="#sec:format1">[sec:format1]</a>);</p>
+<p>Clarified that branch_map can be set to 31 any time an address needs to be reported and the branch map is full (see <a href="payload.html#sec:format1" class="xref page">Format 1</a>);</p>
 </li>
 <li>
-<p>Updated reference encoding algorithm to generalize resync behaviour and add missing trap conditions (see <a href="#Algorithm">[Algorithm]</a>);</p>
+<p>Updated reference encoding algorithm to generalize resync behaviour and add missing trap conditions (see <a href="exampleAlgorithm.html#Algorithm" class="xref page">Algorithm</a>);</p>
 </li>
 <li>
-<p>Clarified that implicit returns are not stored in the jump target cache (see <a href="#sec:jump-cache">[sec:jump-cache]</a>);</p>
+<p>Clarified that implicit returns are not stored in the jump target cache (see <a href="branchTrace.html#sec:jump-cache" class="xref page">Jump Target Cache</a>);</p>
 </li>
 <li>
-<p>Updated decoder to remove ECALL, EBREAK and C.EBREAK from is_uninferrable_jump function.  Including them is harmless but unnecessary, as these instrucitons don&#8217;t retire (see <a href="#Decoder">[Decoder]</a>);</p>
+<p>Updated decoder to remove ECALL, EBREAK and C.EBREAK from is_uninferrable_jump function.  Including them is harmless but unnecessary, as these instrucitons don&#8217;t retire (see <a href="decoder.html#Decoder" class="xref page">Decoder</a>);</p>
 </li>
 <li>
-<p>Corrected description of why the EPC is not always reported (see <a href="#sec:thaddr">[sec:thaddr]</a>).</p>
+<p>Corrected description of why the EPC is not always reported (see <a href="payload.html#sec:thaddr" class="xref page">Thread Address</a>).</p>
 </li>
 <li>
 <p>Minor clarifications, formatting and typo fixes.</p>
@@ -847,10 +847,10 @@
 <p>Removed references to tail-calls in jump classifications (now in <a href="https://docs.riscv.org/reference/hti/v1.0/_attachments/riscv-hart-trace-interface.pdf">RHTI Specification</a>).</p>
 </li>
 <li>
-<p>Corrected typos where <code>lrid</code> was inadvertently refered to by an earlier name (<code>index</code>) in <a href="#sec:data-loadstore">[sec:data-loadstore]</a>.</p>
+<p>Corrected typos where <code>lrid</code> was inadvertently refered to by an earlier name (<code>index</code>) in <a href="dataTracePayload.html#sec:data-loadstore" class="xref page">Data Trace of Load/Store</a>.</p>
 </li>
 <li>
-<p>Corrected reference decoder in <a href="#Decoder">[Decoder]</a> to cover a corner-case related to trap returns.</p>
+<p>Corrected reference decoder in <a href="decoder.html#Decoder" class="xref page">Decoder</a> to cover a corner-case related to trap returns.</p>
 </li>
 </ul>
 </div>

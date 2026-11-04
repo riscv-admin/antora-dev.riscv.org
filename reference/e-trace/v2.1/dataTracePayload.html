@@ -750,7 +750,7 @@ accessed but not care about the data value. Information about whether
 address or data are omitted is not encoded in the packets themselves as
 it does not change dynamically, and to do so would reduce encoding
 efficiency. The run-time configuration should be reported in the Format
-3, subformat 3 support packet (see <a href="#sec:format33">[sec:format33]</a>). The following sections include examples for all three cases.</p>
+3, subformat 3 support packet (see <a href="payload.html#sec:format33" class="xref page">Format 3 Subformat 3</a>). The following sections include examples for all three cases.</p>
 </div>
 <div class="paragraph">
 <p>As outlined in the "Data Trace Interface requirements" section of the <a href="https://docs.riscv.org/reference/hti/v1.0/_attachments/riscv-hart-trace-interface.pdf">RHTI Specification</a>, two different signaling protocols between the RISC-V hart and the encoder are supported: <em>unified</em> and <em>split</em>. Accordingly, both unified and split trace packets are defined.  Where the <em>split</em> signalling is supported, data accesses with a load data component normally result in two packets, one each for the request and data phases.  However, if address or data are omitted as described above, such that all the required information is from a single phase, then the appropriate unified packet format will be used.  For example, if the data value is omitted then the <em>Unified load or store with address only</em> packet format will be used even if <em>split</em> signalling is used.  Similarly, if the address is omitted then <em>Unified load or store with data only</em> is used.</p>
@@ -778,7 +778,7 @@ of log2".</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The packets described in this section do not support data trace for harts that support the Zcmp, Vector or Zacas extensions, and are deprecated in favour of the packets defined in the MMA/CAS extension (see <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>)</p>
+<p>The packets described in this section do not support data trace for harts that support the Zcmp, Vector or Zacas extensions, and are deprecated in favour of the packets defined in the <a href="extensions.html#sec:ext-mmacas" class="xref page">MMA/CAS extension</a></p>
 </div>
 </td>
 </tr>
@@ -869,7 +869,7 @@ otherwise shift left by <strong>size</strong> to recover byte address</p></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>)</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="extensions.html#sec:ext-mmacas" class="xref page">MMA/CAS extension</a>)</p>
 </div>
 </td>
 </tr>
@@ -931,7 +931,7 @@ otherwise shift left by <strong>size</strong> to recover byte address</p></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>)</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="extensions.html#sec:ext-mmacas" class="xref page">MMA/CAS extension</a>)</p>
 </div>
 </td>
 </tr>
@@ -994,7 +994,7 @@ otherwise shift left by <strong>size</strong> to recover byte address</p></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>)</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="extensions.html#sec:ext-mmacas" class="xref page">MMA/CAS extension</a>)</p>
 </div>
 </td>
 </tr>
@@ -1059,7 +1059,7 @@ otherwise shift left by <strong>size</strong> to recover byte address</p></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>)</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="extensions.html#sec:ext-mmacas" class="xref page">MMA/CAS extension</a>)</p>
 </div>
 </td>
 </tr>
@@ -1255,7 +1255,7 @@ size</p></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>)</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="extensions.html#sec:ext-mmacas" class="xref page">MMA/CAS extension</a>)</p>
 </div>
 </td>
 </tr>
@@ -1327,7 +1327,7 @@ size</p></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>)</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="extensions.html#sec:ext-mmacas" class="xref page">MMA/CAS extension</a>)</p>
 </div>
 </td>
 </tr>
@@ -1411,7 +1411,7 @@ applied</p></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>)</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="extensions.html#sec:ext-mmacas" class="xref page">MMA/CAS extension</a>)</p>
 </div>
 </td>
 </tr>
@@ -1522,7 +1522,7 @@ size</p></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>)</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="extensions.html#sec:ext-mmacas" class="xref page">MMA/CAS extension</a>)</p>
 </div>
 </td>
 </tr>
@@ -1601,7 +1601,7 @@ applied</p></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>)</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="extensions.html#sec:ext-mmacas" class="xref page">MMA/CAS extension</a>)</p>
 </div>
 </td>
 </tr>
@@ -1664,7 +1664,7 @@ error (sign-extend <strong>resp</strong> MSB)</p></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>)</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="extensions.html#sec:ext-mmacas" class="xref page">MMA/CAS extension</a>)</p>
 </div>
 </td>
 </tr>
@@ -1754,7 +1754,7 @@ applied</p></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>)</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="extensions.html#sec:ext-mmacas" class="xref page">MMA/CAS extension</a>)</p>
 </div>
 </td>
 </tr>
@@ -1854,7 +1854,7 @@ these are more likely to compress away.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>)</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="extensions.html#sec:ext-mmacas" class="xref page">MMA/CAS extension</a>)</p>
 </div>
 </td>
 </tr>
@@ -1920,7 +1920,7 @@ other codes other packet formats</p></td>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="#sec:ext-mmacas">[sec:ext-mmacas]</a>)</p>
+<p>The above packet is deprecated and has been superseded by the equivalent packet defined in the MMA/CAS extension (see <a href="extensions.html#sec:ext-mmacas" class="xref page">MMA/CAS extension</a>)</p>
 </div>
 </td>
 </tr>

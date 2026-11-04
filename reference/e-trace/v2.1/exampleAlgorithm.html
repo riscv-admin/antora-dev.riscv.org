@@ -740,7 +740,7 @@
 <ul>
 <li>
 <p><em>te_inst.</em> The name of the packet type emitted by the encoder (see
-<a href="#packets">[packets]</a>);</p>
+<a href="payload.html#packets" class="xref page">Packet Formats</a>);</p>
 </li>
 <li>
 <p><em>inst.</em> Abbreviation for 'instruction';</p>
@@ -795,20 +795,20 @@ predictor disabled or not present);</p>
 </li>
 <li>
 <p><em>resync count.</em> A counter used to keep track of when it is necessary
-to send a synchronization packet (see <a href="#sec:resync">11.1.2. Resynchronisation</a>);</p>
+to send a synchronization packet (see <a href="#sec:resync">Resynchronization</a>);</p>
 </li>
 <li>
 <p><em>resync2_br.</em> The resync FSM is in state 2 and
 there are entries in the branch map that have not yet been output (see
-<a href="#sec:resync">11.1.2. Resynchronisation</a>).</p>
+<a href="#sec:resync">Resynchronization</a>).</p>
 </li>
 <li>
-<p><em>resync3.</em> The resync FSM is in state 3  (see <a href="#sec:resync">11.1.2. Resynchronisation</a>);</p>
+<p><em>resync3.</em> The resync FSM is in state 3  (see <a href="#sec:resync">Resynchronization</a>);</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><a href="#fig:algo">Figure 1</a> shows instruction by instruction behavior, as
+<p><a href="#fig:algo">Algorithm</a> shows instruction by instruction behavior, as
 would be seen in a single-retirement system only. Whilst the core to
 encoder interface allows the RISC-V hart to provide information on
 multiple retiring instructions simultaneously, the resultant packet
@@ -827,7 +827,7 @@ instruction.</p>
 <div class="paragraph">
 <p>Additionally, the encoder can generate one further packet type, not
 shown on the diagram for clarity. The <em>support</em> packet (format 3,
-subformat 3 - see <a href="#sec:format33">[sec:format33]</a>) is sent when:</p>
+subformat 3 - see <a href="payload.html#sec:format33" class="xref page">Format 3 Subformat 3</a>) is sent when:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -876,7 +876,7 @@ predicted correctly, nothing is output at this time, and the encoder
 continues to count correctly predicted branch outcomes. As soon as one
 of the branch outcomes is not correctly predicted, the encoder will
 output a format 0, subformat 0 packet. See also
-<a href="#sec:format0">[sec:format0]</a>.</p>
+<a href="payload.html#sec:format0" class="xref page">Format 0</a>.</p>
 </div>
 <div class="paragraph">
 <p>The choice between formats for the "format 0/1/2" case in the middle of
@@ -896,7 +896,7 @@ address. This will include branch information if there are any branches
 to report. However, the encoder may chose to output the equivalent
 format 1 or 2 packet (containing the differential address, with or
 without branch information) if that will result in a shorter packet (see
-<a href="#sec:format0">[sec:format0]</a>);</p>
+<a href="payload.html#sec:format0" class="xref page">Format 0</a>);</p>
 </li>
 <li>
 <p>Else, if there are branches to report, format 1 is used, otherwise
@@ -908,13 +908,13 @@ format 2.</p>
 <p>Packet formats 0, 1 and 2 are organized so that the address is usually
 the final field. Minimizing the number of bits required to represent the
 address reduces the total packet size and significantly improves
-efficiency. See <a href="#packets">[packets]</a>.</p>
+efficiency. See <a href="payload.html#packets" class="xref page">Packet Formats</a>.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="sec:resync"><a class="anchor" href="#sec:resync"></a>11.1.2. Resynchronisation</h3>
 <div class="paragraph">
-<p>Per <a href="#sec:synchronization">[sec:synchronization]</a>, a format 3
+<p>Per <a href="branchTrace.html#sec:synchronization" class="xref page">Synchronization</a>, a format 3
 synchronisation packet must be output after "a prolonged period of
 time". The exact mechanism for determining this is not specified, but
 options might be to count the number of <em>te_inst</em> packets emitted, or
@@ -959,7 +959,7 @@ reference algorithm is applied to each retired instruction. When
 instructions are retired in blocks, only the first and last instruction
 in a block need be considered, as all those in between are
 "uninteresting", and will have no effect on the encoder&#8217;s state (their
-route through <a href="#fig:algo">Figure 1</a> does not pass through any of the
+route through <a href="#fig:algo">Algorithm</a> does not pass through any of the
 rectangular boxes).</p>
 </div>
 <div class="paragraph">
