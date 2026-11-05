@@ -198,46 +198,49 @@
     <a class="nav-link"  href="../../e-trace/v2.1/introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/discovery.html">Chapter 1. Trace Discovery</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/control.html">Chapter 1. Trace Control</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/control.html">Chapter 2. Trace Control</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/branchTrace.html">Chapter 2. Branch Trace</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/payload.html">Chapter 3. Trace Payload Encoding</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/ingressPort.html">Chapter 3. Ingress Port Interface</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/branchTrace.html">Chapter 4. Branch Trace</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/filtering.html">Chapter 4. Filtering</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/dataTracePayload.html">Chapter 5. Data Trace Payload</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/timestamping.html">Chapter 5. Timestamping</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/ingressPort.html">Chapter 6. Ingress Port Interface</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/payload.html">Chapter 6. Trace Payload Encoding</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/timestamping.html">Chapter 7. Timestamping</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/dataTracePayload.html">Chapter 7. Data Trace Payload</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/filtering.html">Chapter 8. Filtering</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/exampleAlgorithm.html">Chapter 8. Example Algorithm</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/fragmentCodeAndTransport.html">Chapter 9. Fragment Code and Transport</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/discovery.html">Chapter 9. Trace Discovery</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link"  href="../../e-trace/v2.1/decoder.html">Chapter 10. Decoder</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/exampleAlgorithm.html">Chapter 11. Example Algorithm</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/exampleCodeSnippets.html">Chapter 11. Example Code Snippets</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/exampleCodeSnippets.html">Chapter 12. Example Code Snippets</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/fragmentCodeAndTransport.html">Chapter 12. Fragment Code and Transport</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/extensions.html">Chapter 13. Extensions</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/extensions.html#sec:ext-support">Chapter 13. Standard Support Packet v1.0</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/future.html">Chapter 14. Future Enhancements</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/extensions.html#sec:ext-impret">Chapter 14. Implicit Return v1.0</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../../e-trace/v2.1/extensions.html#sec:ext-mmacas">Chapter 15. Data Trace of Multiple-Memory Access and Compare and Swap v1.0</a>
   </li>
 </ul>
   </li>
@@ -727,7 +730,7 @@
 </div>
 <h1 id="page-title" class="page">2.1. N-Trace Transmission Protocol</h1>
 <div class="sect1">
-<h2 id="2-1-n-trace-transmission-protocol"><a class="anchor" href="#2-1-n-trace-transmission-protocol"></a>2.1. N-Trace Transmission Protocol</h2>
+<h2 id="sec_N-Trace_Transmission_Protocol"><a class="anchor" href="#sec_N-Trace_Transmission_Protocol"></a>2.1. N-Trace Transmission Protocol</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The IEEE-5001 Nexus Standard defines a trace messaging protocol using several <strong>MDO</strong> (Message Data Out) signals and one or two flag signals known as <strong>MSEO</strong> (Message Start/End Out). A Nexus message is sent or stored in a record composed of <strong>MDO</strong> and <strong>MSEO</strong>.</p>
@@ -797,7 +800,7 @@
 </table>
 <div class="paragraph">
 <p>The maximum standard message size of 38 bytes in this version of the specification is
- to transmit <a href="#msg_IndirectBranchHistSync">IndirectBranchHistSync</a> message which includes TCODE/ SRC/ SYNC/ B-TYPE(5 bytes total), I-CNT(30 bits, 5 bytes), F-ADDR(63 bits, 11 bytes), HIST(32 bits, 6 bytes) TSTAMP(64 bits, 11 bytes).</p>
+ to transmit <a href="ntrace_messages_overview.html#msg_IndirectBranchHistSync" class="xref page">IndirectBranchHistSync</a> message which includes TCODE/ SRC/ SYNC/ B-TYPE(5 bytes total), I-CNT(30 bits, 5 bytes), F-ADDR(63 bits, 11 bytes), HIST(32 bits, 6 bytes) TSTAMP(64 bits, 11 bytes).</p>
 </div>
 <div class="paragraph">
 <p>While implementations may have a shorter maximum message size (e.g. due to I-CNT being smaller), they must assure that the internal FIFOs are designed to hold at least two maximum sized messages that the implementation can produce.</p>
@@ -1016,9 +1019,9 @@ Above rules allow receiving trace probes to skip idle messages.
 </div>
 </div>
 <div class="sect2">
-<h3 id="2-1-4-pib-idle-cycles-explained"><a class="anchor" href="#2-1-4-pib-idle-cycles-explained"></a>2.1.4. PIB Idle Cycles Explained</h3>
+<h3 id="sec_PIB_Idle_Cycles_Explained"><a class="anchor" href="#sec_PIB_Idle_Cycles_Explained"></a>2.1.4. PIB Idle Cycles Explained</h3>
 <div class="paragraph">
-<p>This chapter describes N-Trace specific details about the transmission via a Pin Interface Block (PIB), as it is described in the <a href="#RISC-V_Trace_Control_Interface">RISC-V Trace Control Interface</a> Specification.</p>
+<p>This chapter describes N-Trace specific details about the transmission via a Pin Interface Block (PIB), as it is described in the <a href="ntrace_introduction.html#RISC-V_Trace_Control_Interface" class="xref page">RISC-V Trace Control Interface</a> Specification.</p>
 </div>
 <div class="paragraph">
 <p>Trace messages may start on any (positive or negative) edge of trace clock.</p>

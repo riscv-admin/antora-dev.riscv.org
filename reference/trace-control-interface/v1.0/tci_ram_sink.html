@@ -198,46 +198,49 @@
     <a class="nav-link"  href="../../e-trace/v2.1/introduction.html">Introduction</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/discovery.html">Chapter 1. Trace Discovery</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/control.html">Chapter 1. Trace Control</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/control.html">Chapter 2. Trace Control</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/branchTrace.html">Chapter 2. Branch Trace</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/payload.html">Chapter 3. Trace Payload Encoding</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/ingressPort.html">Chapter 3. Ingress Port Interface</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/branchTrace.html">Chapter 4. Branch Trace</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/filtering.html">Chapter 4. Filtering</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/dataTracePayload.html">Chapter 5. Data Trace Payload</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/timestamping.html">Chapter 5. Timestamping</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/ingressPort.html">Chapter 6. Ingress Port Interface</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/payload.html">Chapter 6. Trace Payload Encoding</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/timestamping.html">Chapter 7. Timestamping</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/dataTracePayload.html">Chapter 7. Data Trace Payload</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/filtering.html">Chapter 8. Filtering</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/exampleAlgorithm.html">Chapter 8. Example Algorithm</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/fragmentCodeAndTransport.html">Chapter 9. Fragment Code and Transport</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/discovery.html">Chapter 9. Trace Discovery</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link"  href="../../e-trace/v2.1/decoder.html">Chapter 10. Decoder</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/exampleAlgorithm.html">Chapter 11. Example Algorithm</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/exampleCodeSnippets.html">Chapter 11. Example Code Snippets</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/exampleCodeSnippets.html">Chapter 12. Example Code Snippets</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/fragmentCodeAndTransport.html">Chapter 12. Fragment Code and Transport</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/extensions.html">Chapter 13. Extensions</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/extensions.html#sec:ext-support">Chapter 13. Standard Support Packet v1.0</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link"  href="../../e-trace/v2.1/future.html">Chapter 14. Future Enhancements</a>
+    <a class="nav-link"  href="../../e-trace/v2.1/extensions.html#sec:ext-impret">Chapter 14. Implicit Return v1.0</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link"  href="../../e-trace/v2.1/extensions.html#sec:ext-mmacas">Chapter 15. Data Trace of Multiple-Memory Access and Compare and Swap v1.0</a>
   </li>
 </ul>
   </li>
@@ -761,14 +764,14 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamActive</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Primary activate/reset bit for Trace RAM Sink. When 0, the Trace RAM Sink may have clocks gated off or be powered
-down, and other register locations may be inaccessible. Hardware may take an arbitrarily long time to process power-up and power-down and will indicate completion when the read value of this bit matches what was written. See <a href="#Reset and Discovery">Reset and Discovery</a> chapter for more details.</p></td>
+down, and other register locations may be inaccessible. Hardware may take an arbitrarily long time to process power-up and power-down and will indicate completion when the read value of this bit matches what was written. See <a href="tci_additional.html#sec_Reset_and_Discovery" class="xref page">Reset and Discovery</a> chapter for more details.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RW</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamEnable</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1:</strong> Trace RAM Sink enabled. Setting <code>trRamEnable</code> to 0 flushes any queued trace data to memory (idle bytes/packet may be appended after the last message/packet to assure memory access alignment). See <a href="#Enabling and Disabling">Enabling and Disabling</a> chapter for more details. Enabling trace CANNOT change any of <code>trRamStart/Limit/WP/RP??</code> registers. Disabling trace may update <code>trRamWP??</code> because of flushing.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1:</strong> Trace RAM Sink enabled. Setting <code>trRamEnable</code> to 0 flushes any queued trace data to memory (idle bytes/packet may be appended after the last message/packet to assure memory access alignment). See <a href="tci_additional.html#sec_Enabling_and_Disabling" class="xref page">Enabling and Disabling</a> chapter for more details. Enabling trace CANNOT change any of <code>trRamStart/Limit/WP/RP??</code> registers. Disabling trace may update <code>trRamWP??</code> because of flushing.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RW</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
 </tr>
@@ -792,7 +795,7 @@ down, and other register locations may be inaccessible. Hardware may take an arb
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>0:</strong> This RAM Sink will operate in SRAM mode<br>
 <strong>1:</strong> This RAM Sink will operate in SMEM mode</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Undef">Undef</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#Undef" class="xref page">Undef</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">7:5</p></td>
@@ -806,7 +809,7 @@ down, and other register locations may be inaccessible. Hardware may take an arb
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamStopOnWrap</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1:</strong> Disable storing trace to RAM (<code>trRamEnable</code> &#8594; 0) when the circular buffer gets full. Sink should stop accepting new messages which may result in an overflow or stall condition at an encoder.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Undef">Undef</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#Undef" class="xref page">Undef</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">10:9</p></td>
@@ -815,7 +818,7 @@ down, and other register locations may be inaccessible. Hardware may take an arb
 <strong>1-2:</strong> Reserved for future formats<br>
 <strong>3:</strong> Reserved for custom memory format</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Undef">Undef</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#Undef" class="xref page">Undef</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
@@ -831,7 +834,7 @@ down, and other register locations may be inaccessible. Hardware may take an arb
 <strong>1-7:</strong> Different levels of alignment synchronization (bigger number, bigger distance).<br>
 Details should be defined in the specification of each trace protocol.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Undef">Undef</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#Undef" class="xref page">Undef</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">31:15</p></td>
@@ -888,14 +891,14 @@ Details should be defined in the specification of each trace protocol.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamHasSRAM</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">This RAM Sink supports SRAM mode</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RO</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#SD">SD</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#SD" class="xref page">SD</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamHasSMEM</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">This RAM Sink supports SMEM (System Memory) mode</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">RO</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#SD">SD</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#SD" class="xref page">SD</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">23:14</p></td>
@@ -909,7 +912,7 @@ Details should be defined in the specification of each trace protocol.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reserved for vendor specific implementation details</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">&#8201;&#8212;&#8201;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#SD">SD</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#SD" class="xref page">SD</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -956,7 +959,7 @@ Single RAM Sink may support both SRAM and SMEM modes, but not both may be enable
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamStartLow</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Byte address of start of trace sink circular buffer. It is always aligned on at least a 32-bit/4-byte boundary. An SRAM sink will usually have <code>trRamStartLow</code> fixed at 0.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Undef">Undef</a> or fixed to 0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#Undef" class="xref page">Undef</a> or fixed to 0</p></td>
 </tr>
 </tbody>
 </table>
@@ -987,7 +990,7 @@ Single RAM Sink may support both SRAM and SMEM modes, but not both may be enable
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamStartHigh</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">High order bits (63:32) of <code>trRamStart</code> register.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Undef">Undef</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#Undef" class="xref page">Undef</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1022,7 +1025,7 @@ Single RAM Sink may support both SRAM and SMEM modes, but not both may be enable
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamLimitLow</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Highest absolute 32-bit part of address of trace circular buffer. The <code>trRamWP</code> register is reset to <code>trRamStart</code> after a trace word has been written to this address.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Undef">Undef</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#Undef" class="xref page">Undef</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1050,7 +1053,7 @@ Single RAM Sink may support both SRAM and SMEM modes, but not both may be enable
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamLimitHigh</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">High order bits (63:32) of <code>trRamLimit</code> register.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Undef">Undef</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#Undef" class="xref page">Undef</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1078,7 +1081,7 @@ Single RAM Sink may support both SRAM and SMEM modes, but not both may be enable
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamWrap</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Set to 1 by hardware when <code>trRamWP</code> wraps. It is only set to 0 if <code>trRamWPLow</code> is written</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Undef">Undef</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#Undef" class="xref page">Undef</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
@@ -1092,7 +1095,7 @@ Single RAM Sink may support both SRAM and SMEM modes, but not both may be enable
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamWPLow</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Absolute 32-bit part of address in trace sink memory where next trace message will be written. Fixed to a natural boundary. After a trace word write occurs while <code>trRamWP</code> = <code>trRamLimit</code>, <code>trRamWP</code> is set to <code>trRamStart</code>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Undef">Undef</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#Undef" class="xref page">Undef</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1120,7 +1123,7 @@ Single RAM Sink may support both SRAM and SMEM modes, but not both may be enable
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamWPHigh</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">High order bits (63:32) of <code>trRamWP</code> register.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Undef">Undef</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#Undef" class="xref page">Undef</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1155,7 +1158,7 @@ Single RAM Sink may support both SRAM and SMEM modes, but not both may be enable
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamRPLow</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Absolute 32-bit part of address in trace circular memory buffer visible through <code>trRamData</code>. <code>trRamRP</code> auto-increments following an access to <code>trRamData</code>. After a trace word read occurs while <code>trRamRP</code> = <code>trRamLimit</code>, <code>trRamRP</code> is set to <code>trRamStart</code>. Required for SRAM mode and optional for SMEM mode.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Undef">Undef</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#Undef" class="xref page">Undef</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1183,7 +1186,7 @@ Single RAM Sink may support both SRAM and SMEM modes, but not both may be enable
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamRPHigh</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">High order bits (63:32) of <code>trRamRP</code> register.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">WARL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Undef">Undef</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#Undef" class="xref page">Undef</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1211,7 +1214,7 @@ Single RAM Sink may support both SRAM and SMEM modes, but not both may be enable
 <td class="tableblock halign-left valign-top"><p class="tableblock">trRamData</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Read (and optional write) value for trace sink memory access. SRAM is always accessed by 32-bit words through this path regardless of the actual width of the sink memory. Required for SRAM mode and optional for SMEM mode.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">R or RW</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Undef">Undef</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tci_introduction.html#Undef" class="xref page">Undef</a></p></td>
 </tr>
 </tbody>
 </table>
