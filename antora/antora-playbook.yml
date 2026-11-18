@@ -395,6 +395,8 @@ antora:
 
   - require: ./riscv-extensions/development_specs_cards_generator.js
 
+  - require: ./riscv-extensions/specs_data_exporter.js
+
   - require: ./riscv-extensions/latest_version_root_redirect_extension.js
 
   - require: ./riscv-extensions/formal_object_numbering_extension.js

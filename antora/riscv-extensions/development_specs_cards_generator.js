@@ -110,7 +110,31 @@ function buildDevCard(spec) {
     ? ' • ⚡ Fast Track'
     : ''
   
-  const wipButton = '<button class="dev-card-btn dev-card-btn-wip" disabled>Work in Progress</button>'
+  const htmlLink = spec['html-url']
+    ? `<a href="${spec['html-url']}" class="dev-card-external-link" target="_blank" rel="noopener noreferrer">
+      <svg class="dev-card-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+        <path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3h-7z"/>
+      </svg>
+      HTML
+    </a>`
+    : ''
+  
+  const pdfUrl = spec['pdf-url'] || '#'
+  const pdfClass = spec['pdf-url'] ? 'dev-card-external-link' : 'dev-card-external-link disabled'
+  const pdfAttrs = spec['pdf-url'] ? 'target="_blank" rel="noopener noreferrer"' : ''
+  const pdfLink = `<a href="${pdfUrl}" class="${pdfClass}" ${pdfAttrs}>
+    <svg class="dev-card-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-8-6zm-1 16H8v-2h5v2zm3-4H8v-2h8v2zm0-4H8V8h8v2z"/>
+    </svg>
+    PDF
+  </a>`
+  
+  const externalLinks = htmlLink || spec['pdf-url']
+    ? `<div class="dev-card-external-links">
+      ${htmlLink}
+      ${pdfLink}
+    </div>`
+    : ''
   
   const moreLink = spec['details-url']
     ? `<a href="${spec['details-url']}" class="dev-card-more" target="_blank" rel="noopener noreferrer">More</a>`
@@ -128,7 +152,7 @@ function buildDevCard(spec) {
   </div>
   <div class="dev-card-footer">
     <div class="dev-card-actions">
-      ${wipButton}
+      ${externalLinks}
       ${moreLink}
     </div>
   </div>

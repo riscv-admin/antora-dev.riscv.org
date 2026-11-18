@@ -9,6 +9,11 @@ RISC-V (pronounced "risk-five") is an open standard instruction set architecture
 
 For more information, visit https://riscv.org[riscv.org].
 
+++++
+<div id="specs-filter-container"></div>
+<div class="default-specs-view">
+++++
+
 == RISC-V Ratified Specifications Library
 
 [%collapsible%open]
@@ -59,4 +64,6 @@ Browse draft specifications currently under development by the RISC-V community.
 
 // DEVELOPMENT-CARDS
 
-
+++++
+</div>
+++++
