@@ -152,6 +152,14 @@ content:
     worktrees: true
     submodules: true
 
+  # IOPMP — component: riscv-iopmp | chapters 16–20 (line numbers in nav.adoc)
+  - url: https://github.com/riscv-non-isa/riscv-iopmp.git
+    branches: [main]
+    start_page: ROOT::index.adoc
+    start_path: /
+    worktrees: true
+    submodules: true
+
   # PLIC — component: plic | chapters 6–13
   - url: https://github.com/riscv/riscv-plic-spec.git
     branches: v1.0.0-antora
@@ -510,6 +518,14 @@ antora:
         module: ROOT
         branches: ['v20260222-antora', 'v20250828-antora', 'v20250620-antora', 'v20240911-antora', 'v20230605-antora']
         chapters: {start: 6, end: 13}
+
+      # --- IOPMP -------------------------------------------------------------
+      # chapters are LINE NUMBERS in modules/ROOT/nav.adoc of riscv-non-isa/riscv-iopmp
+      # (Introduction .. Extensions); Application Note and Bibliography are unnumbered.
+      - component: riscv-iopmp
+        module: ROOT
+        branches: ['main']
+        chapters: {start: 16, end: 20}
 
       # --- Server SOC --------------------------------------------------------
       - component: server-soc
