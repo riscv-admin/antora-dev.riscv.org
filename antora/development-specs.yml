@@ -1,203 +1,144 @@
-# Development Specifications
-# This file curates links to specs that are under development.
-# When a spec is ready for ratification, remove it from this list and add it to the playbook.
-#
-# Fields:
-#   title: Display name of the spec
-#   status: Current status (draft, frozen, review, etc.)
-#   html-url: URL to the HTML documentation
-#   pdf-url: URL to the PDF (optional)
-#   details-url: URL to project/repo page
-#   repo-url: GitHub repo URL (optional, for linking)
-
 development-specs:
-  - title: "RVA23.1"
-    status: freeze
-    group: ISA
-    html-url: "https://github.com/riscv/riscv-isa-manual/pull/3170"
-    pdf-url: "https://github.com/riscv/riscv-isa-manual/releases/download/riscv-isa-release-f89d503-2026-07-02/riscv-spec.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-4180"
-    fast-tracked: true
-
-  - title: "Vector Unzip Instruction (Zvzip)"
-    status: stabilization
-    group: ISA
-    html-url: "https://github.com/ptomsich/riscv-isa-manual/tree/zvzip"
-    pdf-url: ""
-    details-url: "https://riscv.atlassian.net/browse/RVS-4161"
-    fast-tracked: true
-
-  - title: "S-mode Physical Memory Protection (SPMP)"
-    status: ratification-ready
-    group: ISA
-    html-url: "https://github.com/riscv/riscv-spmp"
-    pdf-url: "https://github.com/riscv/riscv-spmp/releases/download/v0.9.2/rv-spmp-spec.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-921"
-
-  - title: "Standard Support Packet extension to E-trace"
-    status: freeze
-    group: Non-ISA
-    html-url: "https://github.com/riscv-non-isa/riscv-trace-spec/pull/276"
-    pdf-url: "https://github.com/riscv-non-isa/riscv-trace-spec/releases/download/v2.0-20250616/riscv-trace-spec-asciidoc.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-4600"
-    fast-tracked: true
-
-  - title: "Implicit Return (E-Trace 2.0)"
-    status: freeze
-    group: Non-ISA
-    html-url: "https://github.com/riscv-non-isa/riscv-trace-spec/pull/264"
-    pdf-url: "https://github.com/riscv-non-isa/riscv-trace-spec/releases/download/v2.0-20250616/riscv-trace-spec-asciidoc.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-4454"
-    fast-tracked: true
-
-  - title: "RVB23.1"
-    status: freeze
-    group: ISA
-    html-url: "https://github.com/riscv/riscv-isa-manual/pull/3170"
-    pdf-url: "https://github.com/riscv/riscv-isa-manual/releases/download/riscv-isa-release-f89d503-2026-07-02/riscv-spec.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-4184"
-    fast-tracked: true
-
-  - title: "RHTI trcstate Extension"
-    status: ratification-ready
-    group: Non-ISA
-    html-url: "https://github.com/riscv-non-isa/hart-trace-interface"
-    pdf-url: "https://github.com/riscv-non-isa/riscv-hart-trace-interface/releases/download/v0.9/hart-trace-interface.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-4171"
-    fast-tracked: true
-
-
-  - title: "Long/Batched Dot-Product Extensions (Zvldot and Zvbdot)"
-    status: freeze
-    group: ISA
-    html-url: "https://github.com/aswaterman/riscv-misc/blob/main/isa/ldot-bdot/ldot-bdot.adoc"
-    pdf-url: ""
-    details-url: "https://riscv.atlassian.net/browse/RVS-3925"
-    fast-tracked: true
-
-  - title: "Integer Vector Absolute Difference (Zvabd)"
-    status: freeze
-    group: ISA
-    html-url: "https://github.com/riscv/integer-vector-absolute-difference"
-    pdf-url: "https://github.com/riscv/integer-vector-absolute-difference/releases/download/riscv-isa-release-aa1eba3-2026-03-07/riscv-privileged.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-3896"
-    fast-tracked: true
-
-  - title: "Branch with Immediate (Zibi)"
-    status: freeze
-    group: ISA
-    html-url: "https://github.com/riscv/zibi"
-    pdf-url: "https://github.com/riscv/zibi/releases/download/riscv-isa-release-6475b5f-2026-03-07/riscv-privileged.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-3828"
-    fast-tracked: true
-
-  - title: "RISC-V Hart Trace Interface (RHTI)"
-    status: ratification-ready
-    group: Non-ISA
-    html-url: "https://github.com/riscv-non-isa/host-trace-interface"
-    pdf-url: "https://github.com/riscv-non-isa/riscv-hart-trace-interface/releases/download/v0.9/hart-trace-interface.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-3561"
-    fast-tracked: true
-
-  - title: "CHERI"
-    status: freeze
-    group: ISA
-    html-url: "https://github.com/riscv/riscv-cheri"
-    pdf-url: "https://github.com/riscv/riscv-cheri/releases/download/v0.9.8.2/riscv-cheri-0.9.8.2.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-2141"
-
-  - title: "Dot-Product (Zvqdot/Zvdot4a8i)"
-    status: stabilization
-    group: ISA
-    html-url: "https://github.com/riscv/riscv-isa-manual/pull/2576"
-    pdf-url: "https://github.com/riscv/riscv-isa-manual/releases/download/riscv-isa-release-f89d503-2026-07-02/riscv-spec.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-1971"
-    fast-tracked: true
-
-  - title: "Integrated Matrix Extension (IME)"
-    status: stabilization
-    group: ISA
-    html-url: "https://github.com/riscv/integrated-matrix-extension"
-    pdf-url: "https://github.com/riscv/integrated-matrix-extension/releases/download/riscv-isa-release-43d6553-2026-06-29/riscv-privileged.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-1930"
-
-  - title: "Fast Interrupts (CLIC)"
-    status: stabilization
-    group: ISA
-    html-url: "https://github.com/riscv/riscv-fast-interrupt"
-    pdf-url: "https://github.com/riscv/riscv-fast-interrupt/releases/download/v0.19/aclic-0.19.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-1017"
-
-  - title: "Data Trace of Multiple-Memory Access and Compare and Swap"
-    status: freeze
-    group: Non-ISA
-    html-url: "https://github.com/riscv-non-isa/riscv-trace-spec/pull/269"
-    pdf-url: "https://github.com/riscv-non-isa/riscv-trace-spec/releases/download/v2.0-20250616/riscv-trace-spec-asciidoc.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-4637"
-    fast-tracked: true
-
-  - title: "External Debug Security (Sdsec)"
-    status: freeze
-    group: Non-ISA
-    html-url: "https://github.com/riscv-non-isa/riscv-external-debug-security"
-    pdf-url: "https://github.com/riscv-non-isa/riscv-external-debug-security/releases/download/v0.7.4/external-debug-security.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-1792"
-
-  - title: "Address-Independent Fault Latency (Svukte)"
-    status: freeze
-    group: ISA
-    html-url: "https://github.com/riscv/riscv-isa-manual/pull/1564/files"
-    pdf-url: "https://github.com/riscv/riscv-isa-manual/releases/download/riscv-isa-release-f89d503-2026-07-02/riscv-spec.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-2977"
-    fast-tracked: true
-
-  - title: "Performance Event Sampling"
-    status: stabilization
-    group: ISA
-    html-url: "https://github.com/riscv/riscv-performance-event-sampling"
-    pdf-url: "https://github.com/riscv/riscv-performance-event-sampling/releases/download/v0.6.0/riscv-performance-event-sampling-v0.6.0.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-2770"
-
-  - title: "Confidential VM Extension (CoVE)"
-    status: freeze
-    group: Non-ISA
-    html-url: "https://github.com/riscv-non-isa/riscv-ap-tee"
-    pdf-url: "https://github.com/riscv-non-isa/riscv-ap-tee/releases/download/v0.7/riscv-cove.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-1906"
-
-  - title: "Supervisor Domains Access Protection (Smmtt)"
-    status: freeze
-    group: ISA
-    html-url: "https://github.com/riscv/riscv-smmtt"
-    pdf-url: "https://github.com/riscv/riscv-smmtt/releases/download/v0.49/smmtt-spec.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-1345"
-
-  - title: "Confidential VM Extension (CoVE) with I/O"
-    status: freeze
-    group: Non-ISA
-    html-url: "https://github.com/riscv-non-isa/riscv-ap-tee-io"
-    pdf-url: "https://github.com/riscv-non-isa/riscv-ap-tee-io/releases/download/v0.3.0/riscv-cove-io.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-1618"
-
-  - title: "Security Model"
-    status: freeze
-    group: Non-ISA
-    html-url: "https://github.com/riscv-non-isa/riscv-security-model"
-    pdf-url: "https://github.com/riscv/riscv-security-model/releases/download/v0.6/riscv-platform-security-model.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-1153"
-
-  - title: "Input/Output Physical Memory Protection (IOPMP)"
-    status: freeze
-    group: Non-ISA
-    html-url: "https://github.com/riscv-non-isa/iopmp-spec"
-    pdf-url: "https://github.com/riscv-non-isa/riscv-iopmp/releases/download/v0.8.2/2026-0209-iopmp.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-793"
-
-  - title: "PMP-based Memory Types Extension (Smpmpmt)"
-    status: freeze
-    group: ISA
-    html-url: "https://github.com/riscv/riscv-isa-manual/blob/smpmpmt/src/smpmpmt.adoc"
-    pdf-url: "https://github.com/riscv/riscv-isa-manual/releases/download/riscv-isa-release-f89d503-2026-07-02/riscv-spec.pdf"
-    details-url: "https://riscv.atlassian.net/browse/RVS-2948"
-    fast-tracked: true
-
+- title: Supervisor Domains Access Protection (Smmtt)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv/riscv-smmtt
+  details-url: https://riscv.atlassian.net/browse/RVS-1345
+- title: RISC-V Indexed Integer Load (Zilx)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv/riscv-zilx
+  details-url: https://riscv.atlassian.net/browse/RVS-4890
+  fast-tracked: true
+- title: Packed SIMD (P)
+  status: specification under stabilization
+  group: ISA
+  html-url: https://github.com/riscv/riscv-p-spec
+  details-url: https://riscv.atlassian.net/browse/RVS-1135
+- title: Branch with Immediate (Zibi)
+  status: specification in ratification-ready
+  group: ISA
+  html-url: https://github.com/riscv/zibi
+  details-url: https://riscv.atlassian.net/browse/RVS-3828
+  fast-tracked: true
+- title: Security Model
+  status: specification in ratification-ready
+  group: ISA
+  html-url: https://github.com/riscv-non-isa/riscv-security-model
+  details-url: https://riscv.atlassian.net/browse/RVS-1153
+- title: Input/Output Physical Memory Protection (IOPMP)
+  status: specification in freeze
+  group: ISA
+  html-url: ../riscv-iopmp/index.html
+  details-url: https://riscv.atlassian.net/browse/RVS-793
+- title: RV Worlds H-extension
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv/riscv-worlds
+  details-url: https://riscv.atlassian.net/browse/RVS-4572
+  fast-tracked: true
+- title: Shadow Stacks for M-mode, M+U & SPMP
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/ved-rivos/riscv-isa-manual/blob/smpmpss/src/smcfiss.adoc
+  details-url: https://riscv.atlassian.net/browse/RVS-4335
+  fast-tracked: true
+- title: Vector Unzip Instruction (Zvzip)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv/riscv-isa-manual/pull/3233
+  details-url: https://riscv.atlassian.net/browse/RVS-4161
+  fast-tracked: true
+- title: Vector Matrix Extension (VME)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv/riscv-vme
+  details-url: https://riscv.atlassian.net/browse/RVS-3923
+- title: Integer Vector Absolute Difference (Zvabd)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv/integer-vector-absolute-difference
+  details-url: https://riscv.atlassian.net/browse/RVS-3896
+  fast-tracked: true
+- title: BF16 & Minimal OFP8 Vector Compute (Zvfbfa, Zvfofp8min)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/aswaterman/riscv-misc/tree/main/isa
+  details-url: https://riscv.atlassian.net/browse/RVS-3748
+  fast-tracked: true
+- title: Address-Independent Fault Latency (Svukte)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv/riscv-isa-manual/pull/1564/files
+  details-url: https://riscv.atlassian.net/browse/RVS-2977
+  fast-tracked: true
+- title: RISC-V Worlds (Smwid, Smlwid, Smlwidlist, Smwiddeleg, Sswid)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv/wordguard
+  details-url: https://riscv.atlassian.net/browse/RVS-2940
+  fast-tracked: true
+- title: Performance Event Sampling
+  status: specification under stabilization
+  group: ISA
+  html-url: https://github.com/riscv/riscv-performance-event-sampling
+  details-url: https://riscv.atlassian.net/browse/RVS-2770
+- title: CHERI
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv/riscv-cheri
+  details-url: https://riscv.atlassian.net/browse/RVS-2141
+- title: Dot-Product (Zvdot4a8i)
+  status: specification under stabilization
+  group: ISA
+  html-url: https://github.com/riscv/riscv-isa-manual/pull/2576
+  details-url: https://riscv.atlassian.net/browse/RVS-1971
+  fast-tracked: true
+- title: Integrated Matrix Extension (IME)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv/integrated-matrix-extension
+  details-url: https://riscv.atlassian.net/browse/RVS-1930
+- title: Extra Vector Carry-Less/Crypto Extensions (Zvbc32e, Zvkgs)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv/riscv-isa-manual/pull/2369
+  details-url: https://riscv.atlassian.net/browse/RVS-1915
+  fast-tracked: true
+- title: Confidential VM Extension (CoVE)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv-non-isa/riscv-ap-tee
+  details-url: https://riscv.atlassian.net/browse/RVS-1906
+- title: External Debug Security (Sdsec)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv-non-isa/riscv-external-debug-security
+  details-url: https://riscv.atlassian.net/browse/RVS-1792
+- title: Confidential VM Extension (CoVE) with I/O
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv-non-isa/riscv-ap-tee-io
+  details-url: https://riscv.atlassian.net/browse/RVS-1618
+- title: Fast Interrupts (CLIC)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv/riscv-fast-interrupt
+  details-url: https://riscv.atlassian.net/browse/RVS-1017
+- title: Dot-Product and Batched Dot-Product Extensions (Zvdota and Zvbdota)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/aswaterman/riscv-misc/blob/main/isa/ldot-bdot/ldot-bdot.adoc
+  details-url: https://riscv.atlassian.net/browse/RVS-3925
+  fast-tracked: true
+- title: PMP-based Memory Types Extension (Smpmpmt)
+  status: specification in freeze
+  group: ISA
+  html-url: https://github.com/riscv/riscv-isa-manual/commit/8cacad662eea860f5c7d6d7844d6c4dd20c24ecb
+  details-url: https://riscv.atlassian.net/browse/RVS-2948
+  fast-tracked: true
+- title: Post-Quantum Cryptography (Keccak)
+  status: specification under stabilization
+  group: ISA
+  html-url: https://github.com/riscv/riscv-pqc
+  details-url: https://riscv.atlassian.net/browse/RVS-2360
