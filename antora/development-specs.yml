@@ -29,7 +29,7 @@ development-specs:
 - title: Input/Output Physical Memory Protection (IOPMP)
   status: specification in freeze
   group: ISA
-  html-url: https://github.com/riscv-non-isa/iopmp-spec
+  html-url: ../riscv-iopmp/index.html
   details-url: https://riscv.atlassian.net/browse/RVS-793
 - title: RV Worlds H-extension
   status: specification in freeze
